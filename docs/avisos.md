@@ -20,7 +20,7 @@ Sale por el SMTP del buzón `avisos@alertapublica.es` de Piensa (`smtp.buzondeco
 Está desactivado mientras `CORREO_ACTIVO` no sea `si`. Hace falta:
 
 - las variables `SMTP_*`, `CORREO_REMITENTE` y `CORREO_NOMBRE` (en `wrangler.jsonc`) y el secreto `SMTP_CLAVE` (`wrangler secret put SMTP_CLAVE`);
-- el formulario de la web con Turnstile (`TURNSTILE_SECRETO`);
+- el formulario de la web con Turnstile: el secreto `TURNSTILE_SECRETO` en el worker y la variable del repo `CORREO_SITEKEY` con la clave pública (sin ella, la web no ofrece el correo). El formulario envía casillas con las claves de `api/listas.json` a `/correo/alta`; la CSP se abre solo en `/avisos/`, para Turnstile y para el worker;
 - en el DNS: SPF (`include:_spf.buzondecorreo.com`), DKIM (selector `1794215374238`, el que firma Piensa) y DMARC.
 
 ### Correo de prueba

@@ -30,6 +30,15 @@ MAILTO = f'<a href="mailto:{CONTACTO}">{CONTACTO}</a>'
 DEFAULT_BASE_URL = "https://alertapublica.es/"
 # Usuario del bot de avisos (sin @). Vacío: la web no lo menciona. Se fija en actualizar.yml.
 TELEGRAM_BOT = os.environ.get("TELEGRAM_BOT", "").lstrip("@")
+# Clave pública del widget de Turnstile del formulario de avisos por correo. Vacía: la web no ofrece
+# el correo. Se fija en actualizar.yml.
+CORREO_SITEKEY = os.environ.get("CORREO_SITEKEY", "")
+AVISOS_URL = "https://empleo-avisos.empleo-publico.workers.dev"  # worker de avisos (avisos/)
+TURNSTILE = "https://challenges.cloudflare.com"
+CSP = "default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'"
+# Solo en «Recibir avisos» con el formulario de correo: el widget de Turnstile y el envío al worker.
+CSP_CORREO = (f"default-src 'none'; style-src 'self'; script-src 'self' {TURNSTILE}; frame-src {TURNSTILE}; "
+              f"img-src 'self'; base-uri 'none'; form-action 'self' {AVISOS_URL}")
 # Va en el pie de todas las páginas. Que prevalece la web oficial se dice en la ficha y en «Acerca de».
 DISCLAIMER = "Portal independiente y no oficial, sin vinculación con la Administración ni con los organismos citados."
 MONTHS = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split()
@@ -183,7 +192,8 @@ SETTINGS_BUTTON = ('<button type="button" id="btn-aa" class="btn-cab" aria-haspo
                    '<span class="aa" aria-hidden="true">Aa</span> <span class="aa-texto">Apariencia</span></button>')
 
 
-def page(title: str, body: str, root: str, current: str = "", description: str = TAGLINE, checked: str = "") -> str:
+def page(title: str, body: str, root: str, current: str = "", description: str = TAGLINE, checked: str = "",
+         csp: str = CSP) -> str:
     links = "".join(
         f'<li><a href="{root}{href}"{" aria-current=\"page\"" if key == current else ""}>{label}</a></li>'
         for key, href, label in NAV
@@ -199,7 +209,7 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="{csp}">
 <title>{e(full_title)}</title>
 <meta name="description" content="{e(description)}">
 <link rel="stylesheet" href="{root}assets/estilos.css">
@@ -878,22 +888,68 @@ def telegram_section(bot: str) -> str:
 """
 
 
+def casillas(name: str, options: list[tuple[str, str]]) -> str:
+    return "".join(f'<label class="casilla"><input type="checkbox" name="{name}" value="{e(value)}"> {e(label)}</label>\n'
+                   for value, label in options)
+
+
+def mail_section(sitekey: str, organisms: list) -> str:
+    """Formulario de avisos por correo. Lo envía el navegador al worker (POST normal, sin JavaScript
+    propio); el único script es el de Turnstile. Los valores son las claves de api/listas.json.
+    organisms: [(grupo, [(id, nombre), …]), …]."""
+    if not sitekey:
+        return ""
+    groups = "".join(
+        f'<details><summary>{e(label)} <span class="dato">({len(members)})</span></summary>\n'
+        f'<div class="opciones">\n{casillas("organismos", members)}</div></details>\n'
+        for label, members in organisms)
+    return f"""<h2 id="correo">Por correo electrónico</h2>
+<p>Recibirá un correo cada mañana, solo los días en que haya ofertas nuevas o vueltas a publicar que cumplan sus criterios. La oferta debe cumplir todos los apartados que elija y, dentro de cada uno, basta con una opción. Los apartados que deje en blanco no filtran.</p>
+<form class="form-correo" method="post" action="{AVISOS_URL}/correo/alta">
+<p><label for="correo-direccion">Correo electrónico</label>
+<input id="correo-direccion" name="correo" type="email" autocomplete="email" required></p>
+<p><label for="correo-palabras">Palabras del título <span class="dato">(separadas por comas)</span></label>
+<input id="correo-palabras" name="palabras" type="text" autocomplete="off" aria-describedby="ayuda-palabras">
+<span id="ayuda-palabras" class="dato">Se buscan por su comienzo y sin distinguir tildes: «ingenier» encuentra «Ingeniero/a» e «Ingeniera». Hasta 10.</span></p>
+<fieldset><legend>Áreas</legend>
+<div class="opciones">
+{casillas("areas", list(areas.AREAS.items()))}</div></fieldset>
+<fieldset><legend>Comunidades autónomas</legend>
+<div class="opciones">
+{casillas("ccaa", [(code, name) for name, code in CCAA.items()])}</div>
+<label class="casilla"><input type="checkbox" name="sin_ccaa" value="1" checked> Incluir también las ofertas sin comunidad concreta</label></fieldset>
+<fieldset><legend>Organismos</legend>
+{groups}<label class="casilla"><input type="checkbox" name="comunicados" value="1"> Recibir también los comunicados de los procesos selectivos de los organismos elegidos</label></fieldset>
+<fieldset><legend>Teletrabajo</legend>
+<label class="casilla"><input type="checkbox" name="teletrabajo" value="1"> Solo las ofertas cuya ficha menciona el teletrabajo</label></fieldset>
+<div class="cf-turnstile" data-sitekey="{e(sitekey)}" data-language="es"></div>
+<noscript><p class="nota">El formulario necesita JavaScript para la comprobación contra el envío automatizado. Sin él, puede usar los avisos por RSS.</p></noscript>
+<p>Le enviaremos un enlace para confirmar el aviso: sin confirmar no se activa. Para añadir otro aviso, vuelva a rellenar el formulario con el mismo correo (hasta 10). Cada correo incluye un enlace para darse de baja, que borra su dirección y todos sus avisos. Más información en <a href="../acerca/#avisos-correo">Datos personales</a>.</p>
+<p><button type="submit" class="boton">Crear el aviso</button></p>
+</form>
+<script src="{TURNSTILE}/turnstile/v0/api.js" async defer></script>
+"""
+
+
 def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str = "",
-                area_feeds: list = ()) -> str:
+                area_feeds: list = (), sitekey: str = "", mail_organisms: list = ()) -> str:
     """organism_feeds: (grupo, [(organismo, feed, [(«Solo empresa», feed), …]), …]). Las sublistas solo
     aparecen si el organismo publica ofertas de varias empresas."""
+    ways = []
     if bot:
-        intro = """<p>Puede recibir los avisos de dos formas:</p>
-<ul class="vias">
-<li><a href="#telegram"><strong>Por Telegram</strong><span>Un bot le envía un mensaje cuando se publica una oferta que cumple sus criterios.</span></a></li>
-<li><a href="#rss"><strong>Por RSS</strong><span>Siga una lista desde su lector de RSS, sin registrarse ni facilitar datos personales.</span></a></li>
-</ul>"""
+        ways.append('<li><a href="#telegram"><strong>Por Telegram</strong><span>Un bot le envía un mensaje cuando se publica una oferta que cumple sus criterios.</span></a></li>')
+    if sitekey:
+        ways.append('<li><a href="#correo"><strong>Por correo electrónico</strong><span>Un resumen diario con las ofertas que cumplen sus criterios.</span></a></li>')
+    if ways:
+        ways.append('<li><a href="#rss"><strong>Por RSS</strong><span>Siga una lista desde su lector de RSS, sin registrarse ni facilitar datos personales.</span></a></li>')
+        intro = (f'<p>Puede recibir los avisos de {"dos" if len(ways) == 2 else "tres"} formas:</p>\n'
+                 f'<ul class="vias">\n{chr(10).join(ways)}\n</ul>')
     else:
         intro = ("<p>Los avisos funcionan mediante RSS. No es necesario registrarse ni facilitar un correo electrónico: "
                  "este portal no guarda ningún dato personal.</p>")
     body = f"""<h1>Recibir avisos de ofertas nuevas</h1>
 {intro}
-{telegram_section(bot)}<h2 id="rss">{"Por RSS" if bot else "Cómo empezar"}</h2>
+{telegram_section(bot)}{mail_section(sitekey, mail_organisms)}<h2 id="rss">{"Por RSS" if ways else "Cómo empezar"}</h2>
 <p>RSS es un formato abierto para seguir las novedades de una web: un lector de RSS consulta las listas elegidas y reúne en un solo lugar lo que se va publicando. No requiere registro ni datos personales.</p>
 <ol>
 <li>Instale un lector de RSS, como Feedly o Inoreader, o la aplicación NetNewsWire en Mac y iPhone.</li>
@@ -926,14 +982,14 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <h2>Reutilización de los datos</h2>
 <p>Los datos también están disponibles en formato JSON, sin clave de acceso. La descripción de los ficheros y algunos ejemplos de uso figuran en <a href="../datos/">Datos abiertos</a>.</p>
 <script src="../assets/listas.js" defer></script>"""
-    return page("Recibir avisos", body, "../", "avisos", checked=checked)
+    return page("Recibir avisos", body, "../", "avisos", checked=checked, csp=CSP_CORREO if sitekey else CSP)
 
 
 def and_join(items: list[str]) -> str:
     return " y ".join(filter(None, [", ".join(items[:-1]), items[-1]])) if items else ""
 
 
-def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAULT_BASE_URL) -> str:
+def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAULT_BASE_URL, mail: bool = False) -> str:
     # Solo un resumen por grupo: la lista completa, con ofertas y web oficial, está en Organismos.
     groups = by_group(sources)
     links = and_join([f'<a href="../organismos/#grupo-{key}">{e(label)}</a> ({len(members)})'
@@ -942,9 +998,12 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
     webs = "1 web" if count == 1 else f"{count} webs"
     grupos = "un grupo" if len(groups) == 1 else f"{len(groups)} grupos"
     planned = f" Previstas: {e(and_join([p['name'] for p in PLANNED]))}." if PLANNED else ""
-    via = "por Telegram o por RSS" if bot else "por RSS"
+    via = "por " + and_join(["Telegram"] * bool(bot) + ["correo electrónico"] * mail + ["RSS"]).replace(" y ", " o ")
     telegram = ("<li><strong>Telegram:</strong> un bot le envía un mensaje cuando se publica una oferta que cumple "
                 "sus criterios: palabras del título, áreas, comunidades autónomas u organismos.</li>\n") if bot else ""
+    if mail:
+        telegram += ("<li><strong>Correo electrónico:</strong> un resumen diario con las ofertas que cumplen sus "
+                     "criterios, con los mismos apartados que el bot.</li>\n")
     sections = [("que-hay", "Contenido del portal"), ("organismos", "Organismos incluidos"),
                 ("antes-de-inscribirte", "Antes de inscribirse"), ("como-buscar", "Cómo buscar"),
                 ("guardar", "Guardar"), ("avisos", "Avisos"), ("de-donde", "Origen de los datos"), ("datos", "Datos abiertos"),
@@ -1004,8 +1063,8 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <p>Los enlaces llevan a webs de terceros cuyo contenido y funcionamiento no dependen de este portal. Los nombres, las marcas y los textos de las ofertas y comunicados pertenecen a sus respectivos titulares; su mención no implica relación ni respaldo.</p>
 <p>Se ruega hacer un uso responsable del portal, de sus avisos y de sus datos. Un uso abusivo, como las consultas automatizadas masivas, puede perjudicar el servicio para el resto de personas usuarias.</p>
 <h2 id="datos-personales">Datos personales</h2>
-<p>Este portal no utiliza cookies ni herramientas de analítica y no solicita datos personales. Los ajustes de apariencia y las ofertas y procesos guardados se almacenan únicamente en su navegador. Tampoco reproduce las relaciones de personas candidatas de los procesos selectivos.</p>
-<p>Las páginas se alojan en GitHub Pages (GitHub, Inc.), que registra la dirección IP de las visitas por motivos de seguridad, conforme a su propia política de privacidad.</p>{telegram_privacy(bot)}
+<p>Este portal no utiliza cookies ni herramientas de analítica y {"solo solicita datos personales para los avisos" if bot or mail else "no solicita datos personales"}. Los ajustes de apariencia y las ofertas y procesos guardados se almacenan únicamente en su navegador. Tampoco reproduce las relaciones de personas candidatas de los procesos selectivos.</p>
+<p>Las páginas se alojan en GitHub Pages (GitHub, Inc.), que registra la dirección IP de las visitas por motivos de seguridad, conforme a su propia política de privacidad.</p>{telegram_privacy(bot)}{mail_privacy(mail)}
 <h2 id="accesibilidad">Accesibilidad</h2>
 <p>Este portal pretende ser accesible para todas las personas. Las medidas adoptadas y las limitaciones conocidas se detallan en <a href="../accesibilidad/">Accesibilidad</a>. Las webs oficiales, sus bases en PDF y sus formularios de inscripción no dependen de este portal y pueden no ser accesibles.</p>
 <h2 id="contacto">Contacto</h2>
@@ -1030,13 +1089,30 @@ def telegram_privacy(bot: str) -> str:
 </ul>"""
 
 
-def accessibility_page(checked: str) -> str:
+def mail_privacy(mail: bool) -> str:
+    if not mail:
+        return ""
+    return f"""
+<h3 id="avisos-correo">Avisos por correo electrónico</h3>
+<p>Información sobre el tratamiento de datos de los avisos por correo, conforme al Reglamento General de Protección de Datos (RGPD) y a la Ley Orgánica 3/2018, de Protección de Datos Personales:</p>
+<ul>
+<li><strong>Responsable:</strong> {TITULAR} ({MAILTO}).</li>
+<li><strong>Datos:</strong> su dirección de correo, los criterios de sus avisos y la fecha de alta.</li>
+<li><strong>Finalidad:</strong> únicamente enviarle los avisos que solicite.</li>
+<li><strong>Base jurídica:</strong> su consentimiento, que presta al confirmar el aviso desde el enlace que recibe por correo (artículo 6.1.a del RGPD). Puede retirarlo en cualquier momento.</li>
+<li><strong>Conservación:</strong> hasta que se dé de baja con el enlace que incluye cada correo, que borra su dirección y todos sus avisos de inmediato. Si no confirma el aviso, sus datos se borran a las 48 horas.</li>
+<li><strong>Destinatarios:</strong> no se ceden a terceros. Prestan el servicio como encargadas del tratamiento Cloudflare, Inc., que aloja los datos y comprueba con Turnstile que el formulario no lo envía un programa automático, y Piensa Solutions, que envía los correos. Por ser Cloudflare una empresa estadounidense, los datos pueden tratarse fuera del Espacio Económico Europeo, con las garantías del Marco de Privacidad de Datos UE-EE. UU.</li>
+<li><strong>Derechos:</strong> para ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación o portabilidad, escriba a {MAILTO}. Si considera que no se han atendido, puede reclamar ante la <a href="https://www.aepd.es/">Agencia Española de Protección de Datos</a>.</li>
+</ul>"""
+
+
+def accessibility_page(checked: str, mail: bool = False) -> str:
     body = f"""<h1>Accesibilidad</h1>
 <p>Este portal pretende cumplir el nivel AA de las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2. Se trata de un objetivo de diseño, no de una certificación.</p>
 <h2>Medidas adoptadas</h2>
 <ul>
 <li>Páginas estructuradas con encabezados, listas y etiquetas, que pueden utilizarse con teclado.</li>
-<li>Toda la información está disponible sin JavaScript. Solo lo requieren los filtros y buscadores, el panel de apariencia, el menú desplegable en móvil, los botones «Copiar» de los avisos y «Guardar», y el botón flotante «Arriba» (sin él, queda el enlace «Volver arriba» al pie de página).</li>
+<li>Toda la información está disponible sin JavaScript. Solo lo requieren los filtros y buscadores,{" el formulario de avisos por correo (por la comprobación contra el envío automatizado)," if mail else ""} el panel de apariencia, el menú desplegable en móvil, los botones «Copiar» de los avisos y «Guardar», y el botón flotante «Arriba» (sin él, queda el enlace «Volver arriba» al pie de página).</li>
 <li>Texto de gran tamaño y contraste alto por defecto, con tema oscuro automático.</li>
 <li>Panel «Aa» para elegir el tema (claro, sepia, oscuro, contraste alto o colores personalizados), la letra, el tamaño, el ancho del contenido y ayudas de lectura.</li>
 <li>Revisión con la herramienta automática axe, en todos los temas y con los paneles principales abiertos.</li>
@@ -1359,8 +1435,8 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     write(out / "anuncios/index.html", announcements_page(announcements, checked, sources, today))
     write(out / "historico/index.html", history_page(closed, checked, sum(not is_live(g) for g in groups)))
     write(out / "historico/procesos/index.html", closed_processes_page(announcements, checked, sources, today))
-    write(out / "acerca/index.html", about_page(sources, checked, TELEGRAM_BOT, base_url))
-    write(out / "accesibilidad/index.html", accessibility_page(checked))
+    write(out / "acerca/index.html", about_page(sources, checked, TELEGRAM_BOT, base_url, bool(CORREO_SITEKEY)))
+    write(out / "accesibilidad/index.html", accessibility_page(checked, bool(CORREO_SITEKEY)))
     write(out / "datos/index.html", open_data_page(checked, base_url))
     write(out / "404.html", page(
         "Página no encontrada",
@@ -1419,7 +1495,9 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
             subs = [(f"Solo {name}", companies[name]) for name in names if name != source.name] if len(names) > 1 else []
             entries.append((member_name(source), organism_paths[source.id], subs))
         organism_feeds.append((label, entries))
-    write(out / "avisos/index.html", alerts_page(region_feeds, organism_feeds, checked, TELEGRAM_BOT, area_feeds))
+    mail_organisms = [(label, [(s.id, member_name(s)) for s in members]) for _, label, members in by_group(sources)]
+    write(out / "avisos/index.html", alerts_page(region_feeds, organism_feeds, checked, TELEGRAM_BOT, area_feeds,
+                                                 CORREO_SITEKEY, mail_organisms))
 
     stamp = now.isoformat(timespec="seconds")
 

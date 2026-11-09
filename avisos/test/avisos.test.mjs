@@ -242,8 +242,9 @@ const correoEnv = (db, smtp, extra = {}) => ({
   URL_PUBLICA: "https://avisos.ejemplo.es", TURNSTILE_SECRETO: "s", CONECTAR_SMTP: smtp.conectar, ...extra,
 });
 const turnstileOk = async () => Response.json({ success: true });
-const formAlta = (correo, criterios = { palabras: ["analista"] }) => new Request("https://x/correo/alta", {
-  method: "POST", body: new URLSearchParams({ correo, criterios: JSON.stringify(criterios), "cf-turnstile-response": "x" }),
+// Como lo envía el formulario de /avisos/: casillas repetidas con las claves de listas.json.
+const formAlta = (correo, campos = [["palabras", "analista"]]) => new Request("https://x/correo/alta", {
+  method: "POST", body: new URLSearchParams([["correo", correo], ...campos, ["cf-turnstile-response", "x"]]),
 });
 
 test("mensaje: cabeceras con tildes codificadas y cuerpo quoted-printable", () => {
@@ -368,6 +369,24 @@ test("correo activo: alta con doble confirmación, resumen diario y baja con un 
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 1, "abrir el enlace no da de baja");
   await baja(env, new Request(bajaUrl, { method: "POST" }), new URL(bajaUrl));
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0);
+});
+
+test("alta: los criterios llegan como casillas del formulario y se limpian", async () => {
+  const db = d1();
+  await db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
+  const env = correoEnv(db, smtpFalso());
+  const campos = [["palabras", " Analista, ingenier ,"], ["areas", "tic"], ["areas", "inventada"], ["ccaa", "12"], ["ccaa", "03"],
+    ["organismos", "tragsa"], ["comunicados", "1"], ["teletrabajo", "1"]];
+  assert.equal((await alta(env, formAlta("ana@ejemplo.es", campos), { fetcher: turnstileOk, ahora: AHORA })).status, 200);
+  const { criterios } = JSON.parse(await db.prepare("SELECT borrador FROM suscriptores").first("borrador"));
+  assert.deepEqual(criterios, {
+    palabras: ["analista", "ingenier"], areas: ["tic"], ccaa: ["12", "03"], organismos: ["tragsa"],
+    sin_ccaa: false, teletrabajo: true, comunicados: true,
+  }, "sin la casilla «sin comunidad» marcada, se excluyen");
+  const muchas = [["palabras", Array.from({ length: 11 }, (_, i) => `p${i}`).join(",")]];
+  assert.equal((await alta(env, formAlta("luis@ejemplo.es", muchas), { fetcher: turnstileOk, ahora: AHORA })).status, 400);
+  const sinListas = correoEnv(d1(), smtpFalso());
+  assert.equal((await alta(sinListas, formAlta("eva@ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA })).status, 503);
 });
 
 test("alta: espera entre confirmaciones y se deshace si no sale el correo", async () => {

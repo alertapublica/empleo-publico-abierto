@@ -25,6 +25,9 @@ jobs:
         run: python -m unittest -v
       - name: Generar la web
         run: python -m empleo.site
+        env:
+          # Clave de pruebas de Turnstile (siempre acepta): la web se genera con el formulario de correo.
+          CORREO_SITEKEY: 1x00000000000000000000AA
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

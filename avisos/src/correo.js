@@ -8,6 +8,7 @@ import { correoActivo, enlaceBaja, enviarUno } from "./envios.js";
 import { escapar, iso, leerListas, repartir } from "./novedades.js";
 
 const CADUCA_HORAS = 48;
+const PORTAL = "https://alertapublica.es/";
 const REENVIO_MINUTOS = 15; // no se manda otra confirmación a la misma dirección antes de esto
 
 // Dirección normalizada o null. La parte local, solo ASCII (el servidor no admite SMTPUTF8); el
@@ -32,7 +33,7 @@ export function pagina(titulo, cuerpo, status = 200) {
   return new Response(
     `<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">`
     + `<title>${escapar(titulo)}</title><body style="font:1.2rem/1.5 system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem">`
-    + `<h1>${escapar(titulo)}</h1>${cuerpo}</body></html>`,
+    + `<h1>${escapar(titulo)}</h1>${cuerpo}<p><a href="${PORTAL}avisos/">Volver a Empleo en Empresas Públicas</a></p></body></html>`,
     { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } },
   );
 }
@@ -46,7 +47,21 @@ async function turnstile(env, token, ip, fetcher) {
   return (await r.json()).success === true;
 }
 
-// Formulario de la web (POST, sin JavaScript propio): correo, criterios (JSON) y token de Turnstile.
+// Criterios tal como llegan del formulario de la web (casillas con las claves de api/listas.json);
+// limpiar() descarta lo que no sea válido.
+export function criteriosDelFormulario(form) {
+  return {
+    palabras: String(form.get("palabras") || "").split(",").map((p) => p.trim()).filter(Boolean),
+    areas: form.getAll("areas"),
+    ccaa: form.getAll("ccaa"),
+    sin_ccaa: form.get("sin_ccaa") === "1",
+    organismos: form.getAll("organismos"),
+    comunicados: form.get("comunicados") === "1",
+    teletrabajo: form.get("teletrabajo") === "1",
+  };
+}
+
+// Formulario de la web (POST normal, sin JavaScript propio): correo, criterios y token de Turnstile.
 // El aviso queda pendiente hasta que se confirma desde el correo; nada se activa sin confirmar.
 export async function alta(env, request, { fetcher = fetch, ahora = new Date() } = {}) {
   if (!correoActivo(env)) return pagina("Aún no disponible", "<p>Los avisos por correo todavía no están activos. Mientras tanto puedes usar el bot de Telegram o los avisos por RSS.</p>", 503);
@@ -60,8 +75,9 @@ export async function alta(env, request, { fetcher = fetch, ahora = new Date() }
   }
   const listas = await leerListas(env.DB);
   let criterios;
-  try { criterios = limpiar(JSON.parse(String(form.get("criterios") || "{}")), listas); } catch { criterios = null; }
-  if (!listas || !criterios) return pagina("Revisa el aviso", "<p>El aviso no es válido. Vuelve atrás y revísalo.</p>", 400);
+  try { criterios = listas && limpiar(criteriosDelFormulario(form), listas); } catch { criterios = null; }
+  if (!listas) return pagina("Aún no disponible", "<p>El servicio de avisos se está poniendo en marcha. Inténtalo de nuevo más tarde.</p>", 503);
+  if (!criterios) return pagina("Revisa el aviso", "<p>Puedes poner como mucho 10 palabras, de hasta 60 caracteres cada una. Vuelve atrás y revísalo.</p>", 400);
 
   const db = env.DB;
   await db.prepare(
