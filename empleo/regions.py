@@ -1,11 +1,11 @@
 """Convierte ubicaciones en texto libre a comunidad autónoma, provincia y municipio."""
 from __future__ import annotations
 
-import csv
 import re
 import unicodedata
 from functools import cache
-from pathlib import Path
+
+import territorios_es
 
 NATIONAL = "Ámbito nacional"
 SEVERAL = "Varias comunidades"
@@ -201,17 +201,19 @@ def _provinces_in(plain: str) -> set[str]:
 
 @cache
 def _municipalities() -> dict[str, list[tuple[str, str]]]:
-    """Nombre normalizado -> [(código, comunidad)], de la relación del INE (municipios.csv)."""
+    """Nombre normalizado -> [(código, comunidad)], de la relación del INE que trae territorios-es."""
+    catalog = territorios_es.load()
     names: dict[str, list[tuple[str, str]]] = {}
-    with open(Path(__file__).with_name("municipios.csv"), encoding="utf-8") as file:
-        for row in csv.DictReader(file):
-            for name in row["nombre"].split("/"):  # «Alacant/Alicante»
-                name = name.strip()
-                forms = {name}
-                if match := re.fullmatch(r"(.+), (\S+)", name):  # «Palmas de Gran Canaria, Las»
-                    forms |= {match[1], f"{match[2]} {match[1]}".replace("' ", "'")}
-                for form in forms:
-                    names.setdefault(_normalize(form), []).append((row["codigo"], row["ccaa"]))
+    for identity in catalog.ids("municipality"):
+        record = catalog.territory(identity)
+        code, ccaa = record["codes"]["ine:municipio"], record["ancestors"][1].rsplit(":", 1)[1]
+        for name in record["names"]["official"].split("/"):  # «Alacant/Alicante»
+            name = name.strip()
+            forms = {name}
+            if match := re.fullmatch(r"(.+), (\S+)", name):  # «Palmas de Gran Canaria, Las»
+                forms |= {match[1], f"{match[2]} {match[1]}".replace("' ", "'")}
+            for form in forms:
+                names.setdefault(_normalize(form), []).append((code, ccaa))
     return names
 
 

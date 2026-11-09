@@ -15,7 +15,7 @@ La documentación para quien reutiliza los datos, con cada campo, ejemplos, uso 
 
 ## Ubicación y códigos INE
 
-La ubicación se guarda tal como la da cada portal. Al publicar, `api/ofertas.json` añade los códigos del INE de comunidad, provincia y municipio solo cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital y se queda en provincia. Los municipios vienen de la [Relación de municipios del INE](https://www.ine.es/daco/daco42/codmun/codmunmapa.htm) a 1 de enero de 2026 (`empleo/municipios.csv`).
+La ubicación se guarda tal como la da cada portal. Al publicar, `api/ofertas.json` añade los códigos del INE de comunidad, provincia y municipio solo cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital y se queda en provincia. Los municipios vienen de la [Relación de municipios del INE](https://www.ine.es/daco/daco42/codmun/codmunmapa.htm) a 1 de enero de 2026, a través de [territorios-es](https://github.com/alertapublica/territorios-es).
 
 ## Para quien mantiene el código
 
