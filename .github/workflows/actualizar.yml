@@ -88,6 +88,17 @@ jobs:
       - id: despliegue
         uses: actions/deploy-pages@v4
 
+      # La web de Tragsa (alertapublica/empleo-tragsa) se genera a partir de esta API: se le avisa al
+      # publicar, con la hora de la versión que tiene que leer. Sin el secreto (token de grano fino con
+      # «Actions: escritura» solo en ese repo), la regenera su propio cron.
+      - name: Avisar a la web de Tragsa
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN_WEB_TRAGSA }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then echo "Falta el secreto TOKEN_WEB_TRAGSA: no se avisa."; exit 0; fi
+          gh workflow run publicar.yml -R alertapublica/empleo-tragsa -f generado="$(jq -r .generado _site/api/listas.json)"
+
       # Pasa las novedades al worker de avisos (avisos/), que las cruza con las suscripciones de
       # Telegram y correo. Si falla, la web ya está publicada: se señala al final.
       - name: Avisar a los suscriptores
