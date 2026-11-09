@@ -28,6 +28,8 @@ Webs oficiales → ingesta cada hora → data/ (JSON) → web estática + RSS + 
 
 GitHub Actions lee las páginas públicas una vez por hora, de una en una y con pausas, y guarda los cambios como JSON en `data/` (el histórico queda en git). La web se genera desde esos datos y se publica en GitHub Pages; no hay servidor. Si una página oficial cambia de forma, la ingesta de esa fuente se detiene sin tocar sus datos y la ejecución falla para avisar.
 
+La web del Grupo Tragsa ([`alertapublica/empleo-tragsa`](https://github.com/alertapublica/empleo-tragsa)) se genera con la API de este portal. Al publicar, `actualizar.yml` la manda regenerar si existe el secreto `TOKEN_WEB_TRAGSA`: un token de grano fino con «Actions: lectura y escritura» solo en ese repo. Sin él, se actualiza con su propio cron.
+
 ## Desarrollo
 
 ```bash
