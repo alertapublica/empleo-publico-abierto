@@ -27,8 +27,10 @@
   "vars": {
     "URL_PUBLICA": "https://empleo-avisos.empleo-publico.workers.dev",
     // Correo por el SMTP del buzón de Piensa (TLS en el 465). Con «no» no hay altas ni resumen
-    // diario, pero funciona la ruta /interno/correo-prueba.
-    "CORREO_ACTIVO": "no",
+    // diario, pero funciona la ruta /interno/correo-prueba. Con «si», las altas exigen un token de
+    // Turnstile emitido en alertapublica.es: el interruptor público es la variable CORREO_SITEKEY del
+    // repo, que hace aparecer el formulario en la web.
+    "CORREO_ACTIVO": "si",
     "CORREO_REMITENTE": "avisos@alertapublica.es",
     "CORREO_NOMBRE": "Empleo en Empresas Públicas",
     // Correos por tanda (una por minuto). Ajustar al límite de envío del buzón.

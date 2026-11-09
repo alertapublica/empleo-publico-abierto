@@ -80,6 +80,8 @@ jobs:
         env:
           # Usuario del bot de avisos: mientras la variable no exista, la web no menciona Telegram.
           TELEGRAM_BOT: ${{ vars.TELEGRAM_BOT }}
+          # Clave pública de Turnstile: mientras la variable no exista, la web no ofrece el correo.
+          CORREO_SITEKEY: ${{ vars.CORREO_SITEKEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

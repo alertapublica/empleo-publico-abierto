@@ -190,6 +190,21 @@ main > form.buscador { margin: 0 0 0.75rem; }
 }
 .buscador input::placeholder { color: var(--muted); opacity: 1; }
 .buscador button { min-height: 52px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+/* Formulario de avisos por correo (Recibir avisos). */
+.form-correo label[for] { display: block; font-weight: 700; }
+.form-correo input[type="email"], .form-correo input[type="text"] {
+  width: 100%; max-width: 32rem; min-height: 52px; padding: 0.5rem 0.9rem; font-size: 1.1rem;
+  border: 2px solid var(--muted); border-radius: 8px; background: var(--surface); color: inherit;
+}
+.form-correo fieldset { border: 1px solid var(--line); border-radius: 8px; margin: 1rem 0; padding: 0.4rem 1rem 0.8rem; min-width: 0; }
+.form-correo legend { font-weight: 700; padding: 0 0.3rem; }
+.form-correo details { margin: 0.3rem 0; }
+.form-correo summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 0.3rem; }
+.form-correo .opciones { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 0 1rem; }
+.casilla { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.35rem 0; }
+.casilla input { width: 1.2rem; height: 1.2rem; margin: 0.2rem 0 0; flex: none; accent-color: var(--accent); }
+.form-correo button.boton { border: 0; font: inherit; font-weight: 700; cursor: pointer; }
+.cf-turnstile { margin: 1rem 0; }
 .pastillas { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
 .pastillas select { min-height: 36px; padding-top: 0.2rem; padding-bottom: 0.2rem; }
 .pastillas .orden { margin-left: auto; }

@@ -448,6 +448,44 @@ class Site(unittest.TestCase):
         self.assertIn('id="rss"', avisos)
         self.assertIn("/baja", site.about_page({}, "hoy", bot="empleo_bot"))
 
+    def test_correo_solo_si_hay_clave_de_turnstile(self):
+        avisos = self.read("avisos/index.html")
+        self.assertNotIn("form-correo", avisos)
+        self.assertNotIn(site.TURNSTILE, avisos)
+        self.assertNotIn("avisos-correo", self.read("acerca/index.html"))
+
+    def test_formulario_de_correo(self):
+        organismos = [("Grupo SEPI", [("tragsa", "Grupo Tragsa"), ("enusa", "Enusa")])]
+        html = site.alerts_page([], [], "hoy", sitekey="clave-publica", mail_organisms=organismos)
+        self.assertIn(f'<form class="form-correo" method="post" action="{site.AVISOS_URL}/correo/alta">', html)
+        self.assertIn('name="correo" type="email" autocomplete="email" required', html)
+        self.assertIn('<div class="cf-turnstile" data-sitekey="clave-publica" data-language="es"></div>', html)
+        self.assertIn(f'<script src="{site.TURNSTILE}/turnstile/v0/api.js" async defer></script>', html)
+        # Las casillas llevan las claves de api/listas.json, que son las que valida el worker.
+        listas = site.lists({})
+        for area in listas["areas"]:
+            self.assertIn(f'name="areas" value="{area["id"]}"', html)
+        for comunidad in listas["comunidades"]:
+            self.assertIn(f'name="ccaa" value="{comunidad["ccaa"]}"', html)
+        self.assertIn('<input type="checkbox" name="organismos" value="tragsa"> Grupo Tragsa</label>', html)
+        self.assertIn('name="sin_ccaa" value="1" checked', html)
+        self.assertIn('href="#correo"', html)
+        self.assertIn("de dos formas", html)
+        self.assertIn("de tres formas", site.alerts_page([], [], "hoy", bot="bot", sitekey="c"))
+        # La CSP se abre solo en esta página, para Turnstile y para enviar el formulario al worker.
+        self.assertIn(f"script-src 'self' {site.TURNSTILE}; frame-src {site.TURNSTILE};", html)
+        self.assertIn(f"form-action 'self' {site.AVISOS_URL}", html)
+        self.assertIn(f'content="{site.CSP}"', site.alerts_page([], [], "hoy"))
+
+    def test_privacidad_del_correo(self):
+        acerca = site.about_page({}, "hoy", mail=True)
+        self.assertIn('id="avisos-correo"', acerca)
+        self.assertIn("Piensa Solutions", acerca)
+        self.assertIn("solo solicita datos personales para los avisos", acerca)
+        self.assertIn("por correo electrónico o RSS", acerca)
+        self.assertIn("formulario de avisos por correo", site.accessibility_page("hoy", mail=True))
+        self.assertNotIn("formulario de avisos por correo", site.accessibility_page("hoy"))
+
     def test_avisos_en_grupos_plegados_con_buscador(self):
         html = site.alerts_page([("Galicia", "feeds/comunidad-galicia.xml")],
                                 [("Grupo SEPI", [("Grupo Tragsa", "feeds/organismo-tragsa.xml", [])])], "hoy")
