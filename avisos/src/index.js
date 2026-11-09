@@ -1,10 +1,10 @@
-// Worker de avisos: bot de Telegram, avisos por correo (desactivados hasta tener dominio) y la ruta
-// interna a la que llama actualizar.yml tras publicar. Los datos de las ofertas siguen en GitHub Pages:
+// Worker de avisos: bot de Telegram, avisos por correo (desactivados mientras CORREO_ACTIVO no sea
+// «si») y la ruta interna a la que llama actualizar.yml tras publicar. Los datos de las ofertas siguen en GitHub Pages:
 // aquí solo se guardan las suscripciones y lo necesario para no avisar dos veces.
 
 import { COMANDOS, atender } from "./bot.js";
-import { alta, baja, confirmar, pagina, resumenDiario } from "./correo.js";
-import { telegram, vaciar } from "./envios.js";
+import { alta, baja, confirmar, direccion, pagina, resumenDiario } from "./correo.js";
+import { correoConfigurado, enlaceBaja, enviarUno, telegram, vaciar } from "./envios.js";
 import { recibir } from "./novedades.js";
 
 export const CRON_ENVIOS = "* * * * *";
@@ -58,6 +58,26 @@ export default {
         if (!autorizado(request, env.AVISOS_CLAVE)) return json({ error: "No autorizado" }, 401);
         if (!env.TELEGRAM_TOKEN || !env.TELEGRAM_SECRETO) return json({ error: "Faltan TELEGRAM_TOKEN o TELEGRAM_SECRETO" }, 409);
         return json(await configurar(env));
+      }
+      // Correo de prueba (aunque el correo no esté activo): comprueba el SMTP desde Cloudflare y
+      // permite revisar SPF, DKIM y DMARC con herramientas como mail-tester.com.
+      if (ruta === "POST /interno/correo-prueba") {
+        if (!autorizado(request, env.AVISOS_CLAVE)) return json({ error: "No autorizado" }, 401);
+        if (!correoConfigurado(env)) return json({ error: "Faltan SMTP_* o CORREO_REMITENTE" }, 409);
+        const para = direccion((await request.json().catch(() => ({}))).para);
+        if (!para) return json({ error: "Dirección no válida" }, 400);
+        try {
+          await enviarUno(env, {
+            para,
+            asunto: "Prueba del correo de avisos de empleo público",
+            texto: "Este es un correo de prueba del servicio de avisos de Empleo en Empresas Públicas.\n\n"
+              + "Si lo has recibido, el envío funciona. No hace falta que hagas nada.",
+            baja: enlaceBaja(env, "prueba"),
+          });
+        } catch (error) {
+          return json({ error: error.message }, 502);
+        }
+        return json({ enviado: true });
       }
       if (ruta === "POST /correo/alta") return await alta(env, request);
       if (ruta === "GET /correo/confirmar") return await confirmar(env, url);

@@ -26,12 +26,18 @@
   ],
   "vars": {
     "URL_PUBLICA": "https://empleo-avisos.empleo-publico.workers.dev",
-    // Correo desactivado hasta tener dominio y plan Workers Paid: entonces «si», CORREO_REMITENTE
-    // y el binding "send_email": [{ "name": "CORREO" }].
+    // Correo por el SMTP del buzón de Piensa (TLS en el 465). Con «no» no hay altas ni resumen
+    // diario, pero funciona la ruta /interno/correo-prueba.
     "CORREO_ACTIVO": "no",
-    "CORREO_REMITENTE": ""
+    "CORREO_REMITENTE": "avisos@alertapublica.es",
+    "CORREO_NOMBRE": "Empleo en Empresas Públicas",
+    // Correos por tanda (una por minuto). Ajustar al límite de envío del buzón.
+    "CORREO_POR_TANDA": "20",
+    "SMTP_SERVIDOR": "smtp.buzondecorreo.com",
+    "SMTP_PUERTO": "465",
+    "SMTP_USUARIO": "avisos@alertapublica.es"
   }
   // Secretos (wrangler secret put): AVISOS_CLAVE (la misma que el secreto de GitHub), TELEGRAM_TOKEN
-  // (de BotFather), TELEGRAM_SECRETO (cadena aleatoria para el webhook) y, con el correo,
-  // TURNSTILE_SECRETO.
+  // (de BotFather), TELEGRAM_SECRETO (cadena aleatoria para el webhook), SMTP_CLAVE (contraseña del
+  // buzón) y, con el formulario, TURNSTILE_SECRETO.
 }
