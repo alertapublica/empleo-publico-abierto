@@ -15,7 +15,7 @@ from urllib.parse import quote
 from . import areas, feeds, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
                     SYSTEMS, process_type)
-from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title
+from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, provinces
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
 
@@ -1185,6 +1185,7 @@ NEWS_FIELDS = [
 
 LIST_FIELDS = [
     (("comunidades",), "Comunidades autónomas: <code>ccaa</code> (código del INE) y <code>nombre</code>."),
+    (("provincias",), "Provincias: <code>provincia</code> (código del INE), <code>nombre</code> en castellano y <code>ccaa</code>, su comunidad autónoma."),
     (("organismos",), "Organismos: <code>id</code>, <code>nombre</code> y <code>grupo</code>."),
     (("areas", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
      "Áreas profesionales, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
@@ -1362,6 +1363,7 @@ def lists(sources: dict) -> dict:
     named = lambda labels: [{"id": key, "nombre": label} for key, label in labels.items()]
     return {
         "comunidades": [{"ccaa": code, "nombre": name} for name, code in CCAA.items()],
+        "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
         "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group} for s in sources.values()],
         "areas": named(areas.AREAS),
         "grupos": named(GROUPS),

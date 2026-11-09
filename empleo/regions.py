@@ -273,3 +273,15 @@ def _ccaa_provinces() -> tuple[tuple[str, str], ...]:
 
 def _ccaa_of_province(province: str) -> str:
     return dict(_ccaa_provinces())[province]
+
+
+@cache
+def provinces() -> tuple[tuple[str, str, str], ...]:
+    """(código INE, nombre en castellano, comunidad) de cada provincia, de territorios-es:
+    «Alicante» y «A Coruña», no «Alicante/Alacant» ni «Coruña, A»."""
+    catalog = territorios_es.load()
+    rows = []
+    for identity in catalog.ids("province"):
+        record = catalog.territory(identity)
+        rows.append((record["codes"]["ine:provincia"], catalog.name(identity, "es"), record["parent"].rsplit(":", 1)[1]))
+    return tuple(sorted(rows))
