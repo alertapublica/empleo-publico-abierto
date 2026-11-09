@@ -411,6 +411,9 @@ class Site(unittest.TestCase):
         self.assertNotIn("first_seen", procesos[0]["comunicados"][0])
         listas = json.loads(self.read("api/listas.json"))
         self.assertEqual(len(listas["comunidades"]), 19)
+        self.assertEqual(len(listas["provincias"]), 52)
+        self.assertIn({"provincia": "03", "nombre": "Alicante", "ccaa": "10"}, listas["provincias"])
+        self.assertIn({"provincia": "15", "nombre": "A Coruña", "ccaa": "12"}, listas["provincias"])
         self.assertIn("tragsa", {o["id"] for o in listas["organismos"]})
         self.assertIn("tic", {a["id"] for a in listas["areas"]})
 

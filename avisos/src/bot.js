@@ -1,6 +1,7 @@
 // Bot de Telegram: crear, ver y borrar avisos con una conversación guiada.
 // Pasos de /nuevo: palabras clave → áreas (→ ¿solo con teletrabajo?) → comunidades (→ ¿sin comunidad concreta?) → organismos
-// (→ ¿comunicados?) → resumen y guardar. Cada paso se puede saltar.
+// (→ ¿comunicados?) → resumen y guardar. Cada paso se puede saltar. «/start <organismo>» (enlace t.me/<bot>?start=tragsa)
+// hace lo mismo con el organismo ya elegido, sin su paso.
 
 import {
   MAX_AVISOS, MAX_PALABRAS, describir, limpiar, normalizar, reconocerComunidades, reconocerOrganismos,
@@ -73,10 +74,11 @@ async function olvidarSiVacio(db, s) {
 }
 
 function pregunta(paso, criterios, listas) {
+  const total = criterios.organismos ? 3 : 4; // con /start <organismo> no se pregunta por los organismos
   switch (paso) {
     case "palabras":
       return {
-        text: `Paso 1 de 4. Escribe palabras clave del título separadas por comas (por ejemplo: analista, ingenier), o sáltalo.`,
+        text: `Paso 1 de ${total}. Escribe palabras clave del título separadas por comas (por ejemplo: analista, ingenier), o sáltalo.`,
         reply_markup: teclado([[boton("Sin palabras clave", "saltar")], CANCELAR]),
       };
     case "areas": {
@@ -86,7 +88,7 @@ function pregunta(paso, criterios, listas) {
       for (let i = 0; i < botones.length; i += 2) filas.push(botones.slice(i, i + 2));
       filas.push([boton(elegidas.size ? "Listo" : "Todas las áreas", "saltar")], CANCELAR);
       return {
-        text: "Paso 2 de 4. Elige una o varias áreas profesionales y pulsa «Listo», o «Todas las áreas». El área es una clasificación orientativa del portal, no de la empresa.",
+        text: `Paso 2 de ${total}. Elige una o varias áreas profesionales y pulsa «Listo», o «Todas las áreas». El área es una clasificación orientativa del portal, no de la empresa.`,
         reply_markup: teclado(filas),
       };
     }
@@ -97,7 +99,7 @@ function pregunta(paso, criterios, listas) {
       };
     case "comunidades":
       return {
-        text: "Paso 3 de 4. Escribe comunidades autónomas separadas por comas (por ejemplo: Galicia, Asturias), o elige toda España.",
+        text: `Paso 3 de ${total}. Escribe comunidades autónomas separadas por comas (por ejemplo: Galicia, Asturias), o elige toda España.`,
         reply_markup: teclado([[boton("Toda España", "saltar")], CANCELAR]),
       };
     case "sin_ccaa":
@@ -128,8 +130,8 @@ function siguiente(paso, c) {
     case "palabras": return "areas";
     case "areas": return "teletrabajo";
     case "teletrabajo": return "comunidades";
-    case "comunidades": return c.ccaa?.length ? "sin_ccaa" : "organismos";
-    case "sin_ccaa": return "organismos";
+    case "comunidades": return c.ccaa?.length ? "sin_ccaa" : siguiente("sin_ccaa", c);
+    case "sin_ccaa": return c.organismos ? "comunicados" : "organismos"; // ya elegidos con /start <organismo>
     case "organismos": return c.organismos?.length ? "comunicados" : "resumen";
     default: return "resumen";
   }
@@ -161,7 +163,9 @@ export async function atender(env, update, { fetcher = fetch, ahora = new Date()
   const comando = texto.startsWith("/") ? texto.slice(1).split(/[\s@]/)[0].toLowerCase() : null;
   const dato = consulta?.data || "";
 
-  if (comando === "start" || comando === "ayuda") return enviar(chat.id, escapar(AYUDA));
+  // t.me/<bot>?start=tragsa (desde la web de Tragsa) llega como «/start tragsa»: empieza un aviso de ese organismo.
+  const inicio = comando === "start" ? listas.organismos.find((o) => o.id === texto.split(/\s+/)[1]) : null;
+  if ((comando === "start" && !inicio) || comando === "ayuda") return enviar(chat.id, escapar(AYUDA));
   if (comando === "privacidad") return enviar(chat.id, escapar(PRIVACIDAD));
 
   if (comando === "avisos" || dato.startsWith("borrar:")) {
@@ -193,14 +197,17 @@ export async function atender(env, update, { fetcher = fetch, ahora = new Date()
   }
   if (dato === "baja:no") return enviar(chat.id, "De acuerdo, no he borrado nada.");
 
-  if (comando === "nuevo") {
+  if (comando === "nuevo" || inicio) {
     const n = s ? await db.prepare("SELECT COUNT(*) AS n FROM avisos WHERE suscriptor = ?").bind(s.id).first("n") : 0;
     if (n >= MAX_AVISOS) return enviar(chat.id, `Ya tienes ${MAX_AVISOS} avisos, el máximo. Borra alguno con /avisos.`);
     s = s || (await crearSuscriptor(db, chat.id, ahora));
-    const borrador = { paso: "palabras", c: {} };
-    await guardarBorrador(db, s.id, borrador);
-    const p = pregunta("palabras", {}, listas);
-    return enviar(chat.id, p.text, { reply_markup: p.reply_markup });
+    const c = inicio ? { organismos: [inicio.id] } : {};
+    await guardarBorrador(db, s.id, { paso: "palabras", c });
+    const p = pregunta("palabras", c, listas);
+    const presentacion = inicio
+      ? `Vamos a crear un aviso de las ofertas de ${escapar(inicio.nombre)}. Con /ayuda verás cómo funciona el bot.\n\n`
+      : "";
+    return enviar(chat.id, presentacion + p.text, { reply_markup: p.reply_markup });
   }
 
   if (comando === "cancelar" || dato === "cancelar") {
