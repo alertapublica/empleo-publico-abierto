@@ -1,0 +1,10 @@
+{
+  "name": "auditoria-accesibilidad",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node axe.mjs" },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.65.0"
+  }
+}

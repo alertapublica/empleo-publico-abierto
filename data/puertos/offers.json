@@ -1,0 +1,38 @@
+{
+ "responsable-de-estadistica": {
+  "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica",
+  "category": "Dentro de Convenio",
+  "closed_at": null,
+  "code": null,
+  "company": "Puertos del Estado",
+  "deadline": "2026-11-26",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T12:38:52+00:00",
+  "id": "puertos:responsable-de-estadistica",
+  "kind": null,
+  "listed_deadline": "2026-11-26",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 1,
+  "published_on": null,
+  "ref": "responsable-de-estadistica",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.puertos.es/system/files/2026-10/report_Bases%201%20Responsable%20Estad%C3%ADstica.pdf\">Bases de la Convocatoria - 28/10/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-10/report_Fe%20de%20publicaci%C3%B3n%201_RespEstad%C3%ADstica.pdf\">Fe de Publicación - 28/10/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-10/ANEXO%20III.%20Modelo%20de%20Solicitud%20de%20Participaci%C3%B3n.pdf\">ANEXO III. Modelo de Solicitud de Participación - 28/10/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-10/ANEXO%20IV.%20Modelo%20Relaci%C3%B3n%20M%C3%A9ritos.pdf\">ANEXO IV. Modelo Relación Méritos - 28/10/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-10/ANEXO%20V.%20Modelo%20Declaraci%C3%B3n%20Jurada.pdf\">ANEXO V. Modelo Declaración Jurada - 28/10/2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "puertos",
+  "source_title": null,
+  "status": "open",
+  "title": "Responsable de Estadística",
+  "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica"
+ }
+}

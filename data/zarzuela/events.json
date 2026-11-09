@@ -1,0 +1,17 @@
+[
+ {
+  "at": "2026-11-07T09:24:22+00:00",
+  "kind": "new",
+  "offer": "zarzuela:responsable-tic"
+ },
+ {
+  "at": "2026-11-07T09:24:22+00:00",
+  "kind": "new",
+  "offer": "zarzuela:taquillero-a-apuestas-fijo-discontinuo"
+ },
+ {
+  "at": "2026-11-07T09:24:22+00:00",
+  "kind": "new",
+  "offer": "zarzuela:control-accesos-fijo-discontinuo"
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "gpex:d40b07c73b22": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-08",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-08T15:44:13+00:00",
+  "process": "GPEX convoca una oferta de empleo para un perfil de BC26364 Programador/a Senior",
+  "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=883",
+  "source": "gpex",
+  "state": "curso",
+  "system": null,
+  "title": "GPEX convoca una oferta de empleo para un perfil de BC26364 Programador/a Senior",
+  "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=883",
+  "via": "bolsa"
+ }
+}

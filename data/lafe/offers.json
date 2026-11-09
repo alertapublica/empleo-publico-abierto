@@ -1,0 +1,80 @@
+{
+ "162/2026": {
+  "apply_url": "https://www.iislafe.es/es/talento/empleo/4195/contratacion-de-tecnico-a-de-investigacion-t3-grupo-de-investigacion-biomedica-en-imagen-gibi-230#inscripcion",
+  "category": null,
+  "closed_at": null,
+  "code": "162/2026",
+  "company": "Fundación para la Investigación del Hospital La Fe",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T16:42:48+00:00",
+  "id": "lafe:162/2026",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Valencia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-10-29",
+  "ref": "162/2026",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://remote.iislafe.san.gva.es/ServicioIIS/api/convocatorias/es/4195/ficheros/17585\">Bases</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "lafe",
+  "source_title": null,
+  "status": "open",
+  "title": "Contratación de Técnico/a de investigación (T3) - Grupo de Investigación Biomédica en Imagen (GIBI-230)",
+  "url": "https://www.iislafe.es/es/talento/empleo/4195/contratacion-de-tecnico-a-de-investigacion-t3-grupo-de-investigacion-biomedica-en-imagen-gibi-230"
+ },
+ "165/2026": {
+  "apply_url": "https://www.iislafe.es/es/talento/empleo/4198/contratacion-de-tecnico-a-de-investigacion-t3-grupo-de-investigacion-hematologia-y-hemoterapia#inscripcion",
+  "category": null,
+  "closed_at": null,
+  "code": "165/2026",
+  "company": "Fundación para la Investigación del Hospital La Fe",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T16:42:48+00:00",
+  "id": "lafe:165/2026",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Valencia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-10-29",
+  "ref": "165/2026",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://remote.iislafe.san.gva.es/ServicioIIS/api/convocatorias/es/4198/ficheros/17587\">Bases</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "lafe",
+  "source_title": null,
+  "status": "open",
+  "title": "Contratación de Técnico/a de investigación (T3) - Grupo de Investigación Hematología y Hemoterapia",
+  "url": "https://www.iislafe.es/es/talento/empleo/4198/contratacion-de-tecnico-a-de-investigacion-t3-grupo-de-investigacion-hematologia-y-hemoterapia"
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.147.0/config-schema.json",
+  // Lanza cada hora la ingesta de GitHub Actions: el cron de GitHub se salta muchas ejecuciones.
+  "name": "empleo-cron",
+  "account_id": "a8183539272f1346a4e6fe05a5c5ee29",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  // Sin URL pública: este worker solo tiene cron.
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "triggers": {
+    // Mismo horario que actualizar.yml (UTC).
+    "crons": ["23 5-22 * * *"]
+  },
+  "vars": {
+    "REPO": "alertapublica/empleo-publico-abierto",
+    "WORKFLOW": "actualizar.yml",
+    "REF": "main"
+  }
+  // Secreto: GITHUB_TOKEN (token de grano fino, solo este repo, permiso «Actions: read and write»).
+}

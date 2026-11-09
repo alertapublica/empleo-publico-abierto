@@ -1,0 +1,319 @@
+
+<html>
+<head>
+	<title>GPEX - Proceso de selecci&oacute;n</title>
+<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./imagenes/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./imagenes/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./imagenes/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./imagenes/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./imagenes/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./imagenes/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./imagenes/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./imagenes/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./imagenes/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="./imagenes/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./imagenes/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="./imagenes/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon/favicon-16x16.png">
+		<link rel="manifest" href="./imagenes/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="./imagenes/favicon/ms-icon-144x144.png">
+<!-- fin favicon -->
+	<link rel="stylesheet" type="text/css" href="css/estilo_inicio.css" />
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilo_new.css" />
+	<link rel="stylesheet" href="css/fuentes.css">	
+	<link rel="stylesheet" href="css/login.css">	
+	<link href="css/jquery.alerts.css" media="all" rel="stylesheet" type="text/css" >		
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/registro.js"></script>				
+	<script language="JavaScript" type="text/JavaScript" src="js/ajax.js"></script>		
+	<script language="JavaScript" type="text/JavaScript" src="js/funciones.js"></script>		
+	<script language="JavaScript" type="text/JavaScript" src="js/openpopups.js"></script>				
+	<script language="javascript" type="text/javascript" src="js/jquery.alerts.js" ></script>		
+
+
+	<script type="text/javascript">
+	
+	/********   MENU PARA TABLET Y MOVILES ************/
+	$(document).ready(function(){
+	
+
+	   $('a#modal_cookie').click(function(evento){		   		   
+	  $('#modal').load('cookies/index.php');
+   });
+	
+
+/*************fin ready ******/		
+
+
+	ComprobarCookies();
+});
+
+
+	function ComprobarCookies() {
+	    if (localStorage.acceptCookies == 'true') {} else {
+	        $('#div-cookies').show();
+	    }
+	}
+
+	function ocultarCookies() {
+
+	    localStorage.acceptCookies = 'true';
+	    $('#div-cookies').hide();
+	}
+
+	
+	function closeModal(){
+		$('#bgmodal').remove();
+		$('#bgtransparent').remove();
+	}
+
+
+	/*******************************************************/
+
+</script>
+
+
+
+
+</head>
+<body>
+	<div id="contenedor">
+		<div class="wrapper">
+			<div id="">
+				<div id="logotipo" class="logotipo"><a href="index.php" title="Inicio" lang="es"><img border="0" src="imagenes/logotipo.png" title="Gesti&oacute;n P&uacute;blica de Extremadura"/> </a></div>
+				<div id="titulo" class="titulo">Gesti&oacute;n P&uacute;blica de Extremadura</div>
+				<div id="logojunta" class="logojunta">
+					<a href="https://www.juntaex.es/" title="Inicio" target="_blank" lang="es"><img id="img_logojunta" border="0" src="imagenes/logoLargo.png" title="Junta de Extremadura" /></a>
+				</div>
+				<div id="subtitulo" class="subtitulo">Portal Candidat<label style="font-size:40px;">@</label></div>
+
+				<div id="nav" class="menu">
+					<ul id="menu">
+						
+														<li><a class="" href="index.php" title="Inicio">Inicio</a></li>
+												
+						 <li><a class="" href="index.php?modulo=ofertas_publico&pagina=index.php" title="Procesos Abiertos">Procesos Abiertos</a></li>
+						 <li><a class="" href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php" title="Procesos Cerrados">Procesos Cerrados</a></li>
+                         <li><a class="" href="index.php?modulo=anuncios" title="Procesos Cerrados">Anuncios Ofertas de Empleo</a></li>
+						  						 <li><a class="" href="index.php?modulo=accesibilidad" title="Declaraci�n de Accesibilidad">Accesibilidad</a></li>
+						
+					</ul>
+			   </div>			
+			</div>
+
+			<div id="contenido"><!--contenido-->				
+			
+<div class="camino_migas">Procesos Cerrados</div>
+
+<div class="buscador left">	
+	<form name="form1" id="form1" method="post" action="index.php?modulo=ofertas_publico&pagina=index_cerrados.php">
+	<input type="hidden" name="limite" id="limite" value="0">
+	<input type="hidden" id="accion_buscar" name="accion_buscar" value="1" />			
+			<div class="busqueda left"><input id="texto" name="texto" class="input_texto" placeholder="B&uacute;squeda..." type="text"></div>
+			<div class="lupa"><input type="image" title="Buscar" style="border:0" src="imagenes/ver.gif" id="buscar" name="buscar" onClick="javascript: submit();"></div>
+	</form>		
+</div>
+
+<div id="ofertas">
+<tr>				<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2550" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 24/10/2026 - 30/10/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área de Desarrollo Agrario y Rural</div>					
+					<div class="texto_oferta"><b>BC26296 Personal Técnico Especialista Medio</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">1</div>
+                    					</div>									
+
+						<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2544" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 17/10/2026 - 23/10/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área TIC</div>					
+					<div class="texto_oferta"><b>BC26302 Programador/a Senior</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">1</div>
+                    					</div>									
+
+						<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2535" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 14/10/2026 - 20/10/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área TIC</div>					
+					<div class="texto_oferta"><b>BC26276 Arquitecto/a</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">1</div>
+                    					</div>									
+
+		</tr><tr>				<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2533" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 09/10/2026 - 15/10/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área de Trabajos en el Medio Natural</div>					
+					<div class="texto_oferta"><b>BC26235 Personal Técnico Especialista Superior</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">2</div>
+                    					</div>									
+
+						<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2523" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 19/09/2026 - 26/09/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área TIC</div>					
+					<div class="texto_oferta"><b>BC26230 Personal Técnico Especialista Medio</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">1</div>
+                    					</div>									
+
+						<div id="dtos_oferta_cerrada" class="left" >
+					<div class="marca_agua">
+						<div class="rotar1 transparente">CERRADA</div>
+					</div>							
+											<div id="vermas">
+							<a id="modal_modal" href="index.php?modulo=ofertas_publico&pagina=ver_cerrados.php&id_oferta=2520" title="Ver m&aacute;s">
+								<div id="vermas_off" ></div>
+								<div id="vermas_on"></div>
+							</a>
+						</div>							
+									
+					
+							
+					<div id="icono_oferta" class="ico_oferta_img_cerrada"><img  class="alLeft"   height="68px"   src="./cargar_imagen.php?archivo=////var//www//procesos_seleccion//documentos_adjuntos/logos_empresas/1&amp;nombre_archivo=sin_foto.jpg" alt="Imagen" title="Imagen sin_foto.jpgn"/></div>	
+					<div class="fecha_oferta centrado ">Plazo de la oferta:<br><br> 18/09/2026 - 25/09/2026</div>									
+					
+					<div class="titulo_oferta">GPEX / Área de Desarrollo Agrario y Rural</div>					
+					<div class="texto_oferta"><b>BC26282 Personal Técnico Especialista Superior</b></div>
+					<div class="plazas_oferta">N&#176; de plazas: </div>
+					<div class="numero">1</div>
+                    					</div>									
+
+		</div>
+
+<input type="hidden" name="modulo" id="modulo" value="ofertas_publico" />
+<center>
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr> 
+			<td align="center" valign="middle" style="text-align:right; ">
+				
+				<img src="imagenes/primero2.gif" style="vertical-align:middle; border:0; " alt="Primero" title="Primero">	
+				<img src="imagenes/anterior2.gif" style="vertical-align:middle; border:0; " alt="Anterior" title="Anterior">&nbsp;
+					</td>		
+			<td align="center" valign="middle" >
+
+		<table width='100%'><tr><td style="background-color:#CCCCCC; padding:5px; border: 1px solid #333333;"><A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=0">&nbsp;1&nbsp;</A> </td><td style="background-color:#EEF5F8; padding:5px;"><A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=6">&nbsp;2&nbsp;</A> </td><td style="background-color:#EEF5F8; padding:5px;"><A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=12">&nbsp;3&nbsp;</A> </td><td style="background-color:#EEF5F8; padding:5px;"><A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=18">&nbsp;4&nbsp;</A> </td><td style="background-color:#EEF5F8; padding:5px;"><A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=24">&nbsp;5&nbsp;</A></td></tr></table>
+
+			</td>								
+			<td align="center" valign="middle" style="text-align:left; ">					
+
+						&nbsp;<A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=6"><img src="imagenes/siguiente2.gif" style="vertical-align:middle; border:0; " alt="Siguiente" title="Siguiente"></a>
+				<A href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php&limite=20"><img src="imagenes/ultimo2.gif" style="vertical-align:middle; border:0; " alt="�ltimo" title="�ltimo"></a>
+<!--				
+				&nbsp;<A href="fcontenido.php?limite=< ? echo ($_SESSION["limit"]+$_REGISTROS_POR_PAGINA);?>&pagina=< ? echo $_SESSION["sesion_pagina"];?>"><img src="imagenes/siguiente2.gif" style="vertical-align:middle; border:0; " alt="Siguiente" title="Siguiente"></a>
+				<A href="fcontenido.php?limite=< ? echo ($num_registros-$_REGISTROS_POR_PAGINA);?>&pagina=< ? echo $_SESSION["sesion_pagina"];?>"><img src="imagenes/ultimo2.gif" style="vertical-align:middle; border:0; " alt="�ltimo" title="�ltimo"></a>
+-->
+				</td>		
+		</tr>
+	</table>	
+</center>
+			</div>
+		</div>
+		<div style="width:10%; float:left; ">&nbsp;</div>
+		<div id="modal" class="modalmask"><a href="#close" title="Close" class="close">X</a></div>		
+		<div id="pie" style="position: fixed;bottom: 0;width: 53%; z-index:1001;"><!--pie-->				
+			<script type="text/javascript">
+	function abrir(){
+		window.open("./politica_proteccion_datos2.pdf", "lpd", "location=1,status=1,scrollbars=1,width=700,height=800,left=500"); 
+	}
+	
+	</script>
+
+
+<div id="pie_enlaces" style="left:0;">
+<!--	<a href="index.php?modulo=aviso_legal"  class="enlace_pie"  title="Aviso Legal">Aviso Legal</a>-->
+<!--	<a href="./politica_proteccion_datos.pdf"  class="enlace_pie"  title="Aviso Legal">Aviso Legal</a>-->
+	<a class="enlace_pie"  title="Aviso Legal" href="javascript:abrir();" >Aviso legal</a></b>
+</div>
+<div id="copyright">
+	Gesti&oacute;n P&uacute;blica de Extremadura &copy; Extremadura 2012
+</div>
+
+
+
+		</div>
+		<div id="div-cookies" style="display: none;"><div class="texto_cookie">
+		GPEX no utiliza cookies para recoger informaci&oacute;n de las personas usuarias, ni registra las direcciones IP de acceso. &Uacute;nicamente se utilizan cookies
+		propias, de sesi&oacute;n, necesarias, con finalidad t&eacute;cnica (aquellas que permiten la navegaci&oacute;n a trav&eacute;s del sitio web y la utilizaci&oacute;n
+		de las diferentes opciones y servicios que en ella existen).<div class="clear-2"></div>
+		</div>
+		<button id="ok_cookies" type="button" class="btn-sm btn-primary" onclick="ocultarCookies()">Aceptar</button>
+		<a class="espacio-dcha negrita mi_25" hreflang="es" id="modal_cookie" href="#modal" title="Politica de Cookies">Ver Pol&iacute;tica de Cookies</a>
+		
+		</div>		
+
+	</div>
+</body>
+</html>

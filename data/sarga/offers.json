@@ -1,0 +1,42 @@
+{
+ "tecnico-a-de-asistencias-desarrollo-rural-20261030": {
+  "apply_url": "https://www.sarga.es/ofertas-de-empleo-especifico/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "SARGA",
+  "contract": "Indefinido",
+  "deadline": "2026-11-12",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-08T15:44:13+00:00",
+  "id": "sarga:tecnico-a-de-asistencias-desarrollo-rural-20261030",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-12",
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 4,
+  "published_on": "2026-10-30",
+  "ref": "tecnico-a-de-asistencias-desarrollo-rural-20261030",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.sarga.es/wp-content/uploads/2026/10/31698_Perfil_T2C_T_Asist_des_rural.pdf\">Bases de la oferta (PDF)</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "sarga",
+  "source_title": null,
+  "status": "open",
+  "title": "TÉCNICO/A DE ASISTENCIAS DESARROLLO RURAL",
+  "url": "https://www.sarga.es/wp-content/uploads/2026/10/31698_Perfil_T2C_T_Asist_des_rural.pdf"
+ }
+}

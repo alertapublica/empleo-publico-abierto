@@ -1,0 +1,90 @@
+{
+ "880": {
+  "apply_url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/880",
+  "category": null,
+  "closed_at": null,
+  "code": "2026/67 PLAZA 146 RPT",
+  "company": "FISABIO",
+  "contract": "contrato indefinido",
+  "deadline": "2026-11-21",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T16:28:39+00:00",
+  "id": "fisabio:880",
+  "kind": null,
+  "listed_deadline": "2026-11-21",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-02",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": null,
+  "published_on": null,
+  "ref": "880",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>RECOMENDACIONES A TENER EN CUENTA ANTES DE INICIAR LA INSCRIPCION:</p><p>Lea la convocatoria poniendo especial atención en la forma y documentos a presentar. Lea las instrucciones para realizar la inscripción a través de la plataforma. Recuerde que, en caso de haber algún error, las solicitudes podrán recuperarse introduciendo el mismo usuario y contraseña que indicará al presentar la solicitud (aconsejamos que recuerde estos datos). Recuerde que el único documento que debe ir firmado digitalmente es la declaración responsable de veracidad de datos. Antes de enviar su solicitud, revise la documentación presentada, ya que su candidatura será admitida únicamente cuando se compruebe que la documentación cumple con todos los requisitos expuestos en la convocatoria. Tras enviar su solicitud, recibirá un correo con un resguardo en pdf. En caso de no recibirlo, por favor, contactad en el correo electrónico: rrhh@fisabio.es</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DescargarDocumentoBases/880\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "fisabio",
+  "source_title": "2026/67 UN/A TÉCNICO/A DE INVESTIGACIÓN (T3) PLAZA 146 RPT",
+  "status": "open",
+  "title": "UN/A TÉCNICO/A DE INVESTIGACIÓN (T3)",
+  "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/880"
+ },
+ "881": {
+  "apply_url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/881",
+  "category": null,
+  "closed_at": null,
+  "code": "2026/68 PLAZA 176 RPT",
+  "company": "FISABIO",
+  "contract": "contrato indefinido",
+  "deadline": "2026-11-21",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T16:28:39+00:00",
+  "id": "fisabio:881",
+  "kind": null,
+  "listed_deadline": "2026-11-21",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-02",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": null,
+  "published_on": null,
+  "ref": "881",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>RECOMENDACIONES A TENER EN CUENTA ANTES DE INICIAR LA INSCRIPCION:</p><p>Lea la convocatoria poniendo especial atención en la forma y documentos a presentar. Lea las instrucciones para realizar la inscripción a través de la plataforma. Recuerde que, en caso de haber algún error, las solicitudes podrán recuperarse introduciendo el mismo usuario y contraseña que indicará al presentar la solicitud (aconsejamos que recuerde estos datos). Recuerde que el único documento que debe ir firmado digitalmente es la declaración responsable de veracidad de datos. Antes de enviar su solicitud, revise la documentación presentada, ya que su candidatura será admitida únicamente cuando se compruebe que la documentación cumple con todos los requisitos expuestos en la convocatoria. Tras enviar su solicitud, recibirá un correo con un resguardo en pdf. En caso de no recibirlo, por favor, contactad en el correo electrónico: rrhh@fisabio.es</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DescargarDocumentoBases/881\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "fisabio",
+  "source_title": "2026/68 PERSONAL INVESTIGADOR LÍDER O SENIOR (LEADING RESEARCHER, R4) PLAZA 176 RPT",
+  "status": "open",
+  "title": "PERSONAL INVESTIGADOR LÍDER O SENIOR (LEADING RESEARCHER, R4)",
+  "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/881"
+ }
+}

@@ -1,0 +1,96 @@
+{
+ "48a04f9e58": {
+  "apply_url": "https://www.cetarsa.es/empleo-2026/",
+  "category": "Convocatoria libre",
+  "closed_at": null,
+  "code": null,
+  "company": "Cetarsa",
+  "deadline": "2026-11-16",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "cetarsa:48a04f9e58",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": null,
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 2,
+  "published_on": null,
+  "ref": "48a04f9e58",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Convocatoria de empleo de (2) puestos de Trabajo de Técnico/a de Producción Agrícola- Clasificador/a Industrial en la Compañía Española de Tabaco en Rama, S.A., S.M.E. (CETARSA) – CONVOCATORIA LIBRE – Octubre 2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li>2026-10-06: Se establece plazo de solicitudes hasta el 16 de Noviembre las 14:00 horas del 2026 en el Centro de Trabajo de CETARSA en Navalmoral y/o en el correo recursoshumanos@cetarsa.es</li><li>2026-10-06: ANEXO V – Declaración Responsable para la la Cobertura de dos (2) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial</li><li>2026-10-06: ANEXO IV – Consentimiento y Derecho de Información para el proceso de Selección de Personal de la Convocatoria para la Cobertura dos (2) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial</li><li>2026-10-06: ANEXO III – Documentación Presentación de Candidatura para la cobertura de dos (3) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial</li><li>2026-10-06: Bases para la cobertura de dos (2) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial</li></ul>",
+    "level": 2,
+    "title": "Documentos publicados"
+   },
+   {
+    "html": "<p>Las bases de la convocatoria, en la página oficial, explican dónde y cómo presentar la candidatura y qué tipo de contrato se ofrece.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "cetarsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Producción Agrícola- Clasificador/a Industrial",
+  "url": "https://www.cetarsa.es/empleo-2026/"
+ },
+ "b4a61ab05f": {
+  "apply_url": "https://www.cetarsa.es/empleo-2026/",
+  "category": "Convocatoria libre",
+  "closed_at": null,
+  "code": null,
+  "company": "Cetarsa",
+  "deadline": "2026-11-16",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "cetarsa:b4a61ab05f",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": null,
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 1,
+  "published_on": null,
+  "ref": "b4a61ab05f",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Convocatoria de empleo de un (1) de Trabajo de Operador/a Informática en la Compañía Española de Tabaco en Rama, S.A., S.M.E. (CETARSA) – CONVOCATORIA LIBRE – Octubre 2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li>2026-10-30: Se establece plazo de solicitudes hasta el 16 de Noviembre las 14:00 horas del 2026 en el Centro de Trabajo de CETARSA en Navalmoral y/o en el correo recursoshumanos@cetarsa.es</li><li>2026-10-30: ANEXO V – Declaración Responsable para la la Cobertura temporal de un (1) puesto de trabajo de Operador/a Informática</li><li>2026-10-30: ANEXO IV – Consentimiento y Derecho de Información para el proceso de Selección de un (1) puesto de trabajo de Operador/a Informática</li><li>2026-10-30: ANEXO III – Documentación Presentación de Candidatura para la cobertura de tres un (1) puesto de trabajo de Operador/a Informática</li><li>2026-10-30: Bases para la cobertura de un (1) puesto de trabajo de Operador/a Informática</li></ul>",
+    "level": 2,
+    "title": "Documentos publicados"
+   },
+   {
+    "html": "<p>Las bases de la convocatoria, en la página oficial, explican dónde y cómo presentar la candidatura y qué tipo de contrato se ofrece.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "cetarsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Operador/a Informática",
+  "url": "https://www.cetarsa.es/empleo-2026/"
+ }
+}

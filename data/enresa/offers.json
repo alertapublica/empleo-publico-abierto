@@ -1,0 +1,84 @@
+{
+ "DO-DE-26-028": {
+  "apply_url": "https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Proyectos_de_Clausura_DO-DE-26-028.pdf",
+  "category": "Acceso libre",
+  "closed_at": null,
+  "code": "DO-DE-26-028",
+  "company": "Enresa",
+  "deadline": "2026-11-17",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "enresa:DO-DE-26-028",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-17",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-04",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 1,
+  "published_on": null,
+  "ref": "DO-DE-26-028",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DE PROCESO SELECTIVO PARA LA COBERTURA DE VACANTE DE UN PUESTO DE TRABAJO DE PERSONAL TITULADO DEL DEPARTAMENTO DE PROYECTOS DE CLAUSURA MEDIANTE ACCESO LIBRE EN LA EMPRESA NACIONAL DE RESIDUOS RADIACTIVOS, S.A., S.M.E. (ENRESA) (DO-DE-26-028)</p><p>Plazo de presentación de candidaturas: del 04/11/2026 al 17/11/2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.enresa.es/documentos/Anexo_Declaracion_de_no_estar_inhabilitado_y_de_veracidad__DO-DE-26-028_.docx\">Anexo Declaración de no estar inhabilitado y de veracidad</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_formulario_DO-DE-26-028.docx\">Anexo Formulario de presentación de candidatura</a></li><li><a href=\"https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Proyectos_de_Clausura_DO-DE-26-028.pdf\">Convocatoria de proceso selectivo</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "enresa",
+  "source_title": null,
+  "status": "open",
+  "title": "PERSONAL TITULADO DEL DEPARTAMENTO DE PROYECTOS DE CLAUSURA",
+  "url": "https://www.enresa.es/esp/empleo"
+ },
+ "DO-DE-26-048": {
+  "apply_url": "https://www.enresa.es/documentos/Convocatoria_Externa_P._Oficios_Servicio_de_Mantenimiento__DO-DE-26-048_.pdf",
+  "category": "Acceso libre",
+  "closed_at": "2026-11-08T01:36:04+00:00",
+  "code": "DO-DE-26-048",
+  "company": "Enresa",
+  "deadline": "2026-11-07",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "enresa:DO-DE-26-048",
+  "kind": "indefinido",
+  "location": "El Cabril",
+  "missed_runs": 1,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 1,
+  "published_on": null,
+  "ref": "DO-DE-26-048",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DE PROCESO SELECTIVO PARA LA COBERTURA DE VACANTE DE UN PUESTO DE TRABAJO DE PERSONAL DE OFICIOS EN EL SERVICIO DE MANTENIMIENTO DEL C.A. EL CABRIL MEDIANTE ACCESO LIBRE EN LA EMPRESA NACIONAL DE RESIDUOS RADIACTIVOS, S.A., S.M.E. (ENRESA)</p><p>Plazo de presentación de candidaturas: del 27/10/2026 al 07/11/2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.enresa.es/documentos/Anexo_Formulario__DO-DE-26-048_.docx\">Anexo Formulario de presentación de candidatura</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_Declaracion_de_no_estar_inhabilitado_y_de_veracidad__DO-DE-26-048_.docx\">Anexo Declaración de no estar inhabilitado y de veracidad</a></li><li><a href=\"https://www.enresa.es/documentos/Convocatoria_Externa_P._Oficios_Servicio_de_Mantenimiento__DO-DE-26-048_.pdf\">Convocatoria de proceso selectivo</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "enresa",
+  "source_title": null,
+  "status": "closed",
+  "title": "PERSONAL DE OFICIOS EN EL SERVICIO DE MANTENIMIENTO DEL C.A. EL CABRIL",
+  "url": "https://www.enresa.es/esp/empleo"
+ }
+}

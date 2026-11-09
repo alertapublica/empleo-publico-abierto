@@ -1,0 +1,61 @@
+{
+ "2557": {
+  "apply_url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2557",
+  "category": null,
+  "closed_at": null,
+  "code": "BC26342",
+  "company": "GPEX",
+  "contract": "Cubrir plaza temporal",
+  "deadline": "2026-11-12",
+  "deadline_time": null,
+  "department": "Área de Gestión Forestal y Medio Natural",
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T15:44:13+00:00",
+  "id": "gpex:2557",
+  "kind": null,
+  "listed_deadline": "2026-11-12",
+  "location": "Mérida (Badajoz)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-06",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": 1,
+  "published_on": null,
+  "ref": "2557",
+  "region": "Extremadura",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Emplazamiento y/o puesto de trabajo:</strong> Mérida (Badajoz)</li><li><strong>Horas semanales u horario de trabajo:</strong> 37.5 Horas semanales de lunes a viernes</li><li><strong>Causa del contrato ofertado:</strong> Cubrir plaza temporal</li><li><strong>Retribución Bruta Anual:</strong> Según II Convenio Colectivo GPEX (Anexo III)</li><li><strong>Grupo profesional:</strong> Grupo B. Diplomatura, Arquitectura Técnica, Ingeniería Técnica o Grado correspondiente.</li><li><strong>Duración estimada del contrato:</strong> Hasta incorporación de la persona sustituida, finalización de la reserva de puesto o finalización del encargo con fecha 30/09/2027</li><li><strong>Fecha de incorporación deseada:</strong> Inmediata</li></ul>",
+    "level": 2,
+    "title": "Características del puesto"
+   },
+   {
+    "html": "<ul><li>- Asistencia en la redacción de proyectos y trabajos técnicos<br/><br/>\r\n- Asistencia a la Dirección facultativa en la dirección de las obras</li></ul>",
+    "level": 2,
+    "title": "Funciones y/o tareas a desempeñar en el puesto"
+   },
+   {
+    "html": "<ul><li><strong>Titulaciones y estudios:</strong> <em>- Ingeniería Técnica Forestal y/o Grado equivalente</em><br/></li><li><strong>Experiencia profesional:</strong> <em>- Experiencia laboral acreditable de, al menos, 6 meses en tareas propias de la titulación exigida en esta publicación</em><br/></li><li><strong>Carnés de conducir:</strong> <em>- Tipo B</em><br/></li><li><strong>Otros:</strong>  Incorporación inmediata<br/>\r\nDeclaración expresa responsable\t\t\t\t\t\t\t\t</li></ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<ul><li><strong>Experiencia profesional:</strong> <em>- Experiencia laboral acreditable superior a la exigida en esta publicación<br/>- Experiencia laboral acreditable en redacción de proyectos en el ámbito forestal</em><br/></li><li>Observación: Todos los requisitos y méritos aportados por las personas candidatas deberán ser acreditados documentalmente, previa petición por GPEX, antes de la incorporación de la persona candidata seleccionada.</li></ul>",
+    "level": 2,
+    "title": "Fase de méritos"
+   },
+   {
+    "html": "<ul><li>Las personas candidatas preseleccionadas serán citadas para la realización de una o varias de las siguientes pruebas o ejercicios:<br/>\r\n- Test psicotécnico.<br/>\r\n- Examen o prueba teórica, práctica o teórico-práctica.<br/>\r\n- Redacción y/o defensa de un proyecto.<br/>\r\n- Entrevista personal y/o grupal.<br/>\r\n- Otras que así se determine.</li></ul>",
+    "level": 2,
+    "title": "Fase de conocimientos y actitudes"
+   }
+  ],
+  "source": "gpex",
+  "source_title": "BC26342 Personal Técnico Medio Ambiental",
+  "status": "open",
+  "title": "Personal Técnico Medio Ambiental",
+  "url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2557"
+ }
+}

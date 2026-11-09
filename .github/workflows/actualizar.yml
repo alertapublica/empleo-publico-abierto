@@ -1,0 +1,134 @@
+name: Actualizar y publicar
+
+on:
+  # Cada hora la lanza el worker empleo-cron (worker/) por workflow_dispatch: el cron de GitHub
+  # se saltaba muchas ejecuciones.
+  workflow_dispatch:
+    inputs:
+      fuentes:
+        description: "Ids de las fuentes que leer, separados por espacios (vacío: todas)"
+        required: false
+        default: ""
+  push:
+    branches: [main]
+    paths:
+      - "empleo/**"
+      - "data/**"
+      - "requirements.txt"
+      - ".github/workflows/actualizar.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Leer las webs oficiales
+        id: ingesta
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          FUENTES: ${{ inputs.fuentes }}
+          # Relay con IP española para los hosts de VIA_RELAY (empleo/http.py); sin clave, lectura directa.
+          RELAY_CLAVE: ${{ secrets.RELAY_CLAVE }}
+          RELAY_URL: ${{ secrets.RELAY_URL }}
+        run: python -m empleo.ingest $FUENTES
+
+      - name: Guardar los cambios en los datos
+        if: github.event_name != 'push'
+        run: |
+          git add data
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "datos: actualización automática"
+          git pull --rebase origin main
+          git push
+
+      - name: Fijar la hora de la última comprobación
+        run: |
+          # Una lectura parcial no comprueba el resto: no cuenta como comprobación de todo.
+          if [ "${{ steps.ingesta.outcome }}" = "success" ] && [ -z "${{ inputs.fuentes }}" ]; then
+            echo "CHECKED_AT=$(date -Iseconds)" >> "$GITHUB_ENV"
+          else
+            echo "CHECKED_AT=$(git log -1 --format=%cI -- data)" >> "$GITHUB_ENV"
+          fi
+
+      - run: python -m empleo.site
+        env:
+          # Usuario del bot de avisos: mientras la variable no exista, la web no menciona Telegram.
+          TELEGRAM_BOT: ${{ vars.TELEGRAM_BOT }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: despliegue
+        uses: actions/deploy-pages@v4
+
+      # Pasa las novedades al worker de avisos (avisos/), que las cruza con las suscripciones de
+      # Telegram y correo. Si falla, la web ya está publicada: se señala al final.
+      - name: Avisar a los suscriptores
+        id: avisos
+        continue-on-error: true
+        env:
+          AVISOS_CLAVE: ${{ secrets.AVISOS_CLAVE }}
+        run: |
+          if [ -z "$AVISOS_CLAVE" ]; then echo "Falta el secreto AVISOS_CLAVE: no se avisa."; exit 0; fi
+          # Solo las de los últimos 3 días: las anteriores el worker ya no las avisa.
+          jq -n --slurpfile n _site/api/novedades.json --slurpfile l _site/api/listas.json \
+            '(now - 3 * 86400 | todate) as $desde
+             | {novedades: [$n[0].novedades[] | select(.fecha >= $desde)], listas: $l[0]}' > carga.json
+          curl -fsS --retry 3 --retry-all-errors -X POST \
+            -H "Authorization: Bearer $AVISOS_CLAVE" -H "Content-Type: application/json" \
+            --data-binary @carga.json https://empleo-avisos.empleo-publico.workers.dev/interno/publicado
+
+      # Ofertas abiertas sin área (o solo con la de su organismo) que aún no están revisadas en
+      # empleo/areas_referencia.csv: un único issue que se crea, se actualiza y se cierra solo.
+      - name: Avisar de las ofertas sin área
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITULO: "Clasificador de áreas: ofertas por revisar"
+        run: |
+          python -m empleo.areas informe informe-areas.md
+          NUM=$(gh issue list --state open --label clasificador --json number,title \
+            --jq "map(select(.title == env.TITULO)) | .[0].number // empty")
+          if [ ! -s informe-areas.md ]; then
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "Ya no queda ninguna oferta abierta por revisar."
+            fi
+          elif [ -z "$NUM" ]; then
+            gh label create clasificador --color FBCA04 --description "Clasificador de áreas" 2>/dev/null || true
+            gh issue create --title "$TITULO" --label clasificador --body-file informe-areas.md
+          elif [ "$(gh issue view "$NUM" --json body --jq .body)" != "$(cat informe-areas.md)" ]; then
+            gh issue edit "$NUM" --body-file informe-areas.md
+          fi
+
+      # La web se publica igualmente, pero el fallo tiene que verse y avisar.
+      - name: Señalar si falló la lectura
+        if: steps.ingesta.outcome == 'failure'
+        run: exit 1
+
+      - name: Señalar si fallaron los avisos
+        if: steps.avisos.outcome == 'failure'
+        run: exit 1

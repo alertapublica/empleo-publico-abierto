@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Tests unitarios
+        run: python -m unittest -v
+      - name: Generar la web
+        run: python -m empleo.site
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Tests de la paleta de apariencia
+        run: node --test tests/tema/tema.test.mjs
+      - name: Tests de guardadas
+        run: node --test tests/guardadas/guardadas.test.mjs
+      # Desactivado por ahora: auditoría de accesibilidad (axe + Chromium).
+      # - name: Instalar axe y Chromium
+      #   working-directory: tests/a11y
+      #   run: |
+      #     npm ci
+      #     npx playwright install --with-deps chromium
+      # - name: Auditoría de accesibilidad
+      #   working-directory: tests/a11y
+      #   run: npm test

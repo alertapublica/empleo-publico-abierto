@@ -1,0 +1,92 @@
+{
+ "26-42": {
+  "apply_url": "https://navarrabiomed.es/es/empleo/26-42-personal-administrativo",
+  "category": null,
+  "closed_at": null,
+  "code": "26-42",
+  "company": "Fundación Miguel Servet",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-08T16:42:48+00:00",
+  "id": "navarrabiomed:26-42",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Pamplona (Navarra)",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-10-29",
+  "ref": "26-42",
+  "region": "Comunidad Foral de Navarra",
+  "sections": [
+   {
+    "html": "<p>Navarrabiomed precisa incorporar personal administrativo para prestar apoyo en la gestión económica, presupuestaria y contable de la Fundación, colaborando en la elaboración de presupuestos, seguimiento económico de la actividad investigadora, facturación, gestión de convenios y cumplimiento de las obligaciones económicas y fiscales de la entidad.</p>\n<p>La persona seleccionada se incorporará en la Unidad de Gestión de la Investigación de Navarrabiomed.<br/>\n </p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://navarrabiomed.es/sites/default/files/archivos/empleo/26-42-personal-administrativo-2.pdf\">Bases del proceso</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "navarrabiomed",
+  "source_title": "26-42 Personal administrativo",
+  "status": "open",
+  "title": "Personal administrativo",
+  "url": "https://navarrabiomed.es/es/empleo/26-42-personal-administrativo"
+ },
+ "26-43": {
+  "apply_url": "https://navarrabiomed.es/es/empleo/26-43-personal-apoyo-investigacion",
+  "category": null,
+  "closed_at": null,
+  "code": "26-43",
+  "company": "Fundación Miguel Servet",
+  "contract": null,
+  "deadline": "2026-11-20",
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-08T16:42:48+00:00",
+  "id": "navarrabiomed:26-43",
+  "kind": null,
+  "listed_deadline": "2026-11-20",
+  "location": "Pamplona (Navarra)",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-06",
+  "ref": "26-43",
+  "region": "Comunidad Foral de Navarra",
+  "sections": [
+   {
+    "html": "<p>Navarrabiomed precisa contratar personal apoyo a la investigación para trabajar en la línea de investigación \"Sistema de soporte en la toma de decisiones clínicas en la diabetes mellitus tipo 2 y enfermedades asociadas (DIABYUDA)” / proyecto “Sistema de soporte en la toma de decisiones clínicas en la diabetes mellitus tipo 2 y enfermedades asociadas (DIABYUDA) – FSED” </p>\n<p>La persona seleccionada se incorporará bajo la supervisión del Dr. Joaquín de Carlos.<br/>\n </p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://navarrabiomed.es/sites/default/files/archivos/empleo/26-43-personal-apoyo-a-la-investigacion.pdf\">Bases del proceso</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "navarrabiomed",
+  "source_title": "26-43 Personal apoyo a la investigación",
+  "status": "open",
+  "title": "Personal apoyo a la investigación",
+  "url": "https://navarrabiomed.es/es/empleo/26-43-personal-apoyo-investigacion"
+ }
+}
