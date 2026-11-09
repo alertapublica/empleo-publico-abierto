@@ -237,6 +237,23 @@
   "url": "https://www.cetarsa.es/empleo-2026/",
   "via": "otro"
  },
+ "cetarsa:6eb194359008": {
+  "access": "interna",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-05",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-09T16:23:41+00:00",
+  "process": "Técnico/a de Producción Agrícola- Clasificador/a Industrial · Promoción interna",
+  "process_url": "https://www.cetarsa.es/empleo-2026/",
+  "source": "cetarsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Examen de FASE II – Oposición 10 de Noviembre de 2026 – 10.00h en el Centro de CETARSA en Talayuela. (Recordamos que los/as candidatos/as deberán asistir con su oportuna documentación acreditativa (DNI, NIE, Pasaporte, etc.), y bolígrafo)",
+  "url": "https://www.cetarsa.es/empleo-2026/",
+  "via": "otro"
+ },
  "cetarsa:756b8173c63e": {
   "access": "interna",
   "apply_url": null,
@@ -370,6 +387,23 @@
   "state": "curso",
   "system": "concurso-oposicion",
   "title": "Fase I – Listado Provisional de Valoraciones para la cobertura de tres (3) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial",
+  "url": "https://www.cetarsa.es/empleo-2026/",
+  "via": "otro"
+ },
+ "cetarsa:9b3de56f8007": {
+  "access": "interna",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-09",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-09T16:23:41+00:00",
+  "process": "Técnico/a de Producción Agrícola- Clasificador/a Industrial · Promoción interna",
+  "process_url": "https://www.cetarsa.es/empleo-2026/",
+  "source": "cetarsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Fase I – Listado Definitivo de Valoraciones para la cobertura de tres (3) puestos de trabajo de Técnico/a de Producción Agrícola – Clasificador/a Industrial",
   "url": "https://www.cetarsa.es/empleo-2026/",
   "via": "otro"
  },
