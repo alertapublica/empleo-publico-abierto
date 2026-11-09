@@ -1,6 +1,6 @@
 # Hallazgos
 
-Lo aprendido al leer los portales oficiales. Revisado el 2026-11-08; sustituye a los documentos 01 a 06 y a `evidencias/`, que quedan en el historial de git.
+Lo aprendido al leer los portales oficiales. Revisado el 2026-11-08.
 
 | Archivo | Contenido |
 |---|---|
@@ -17,4 +17,4 @@ El detalle de cada fuente activa está en el docstring de su módulo (`empleo/so
 - Si algo no se puede leer desde GitHub Actions, se comprueba con el workflow `sondeo` (`gh workflow run sondeo.yml -f ronda=N`) antes de escribir el analizador.
 - TLS: nunca se desactiva la verificación. Si el servidor envía un intermedio equivocado, se añade el correcto en `empleo/certs/` (ver su README).
 - Un analizador solo se activa si el título, las fechas y el enlace son fiables, y se prueba con HTML real recortado. Si hoy no hay ninguna oferta abierta, la rama de oferta queda sin ver con datos reales, y se dice.
-- El estudio externo de partida (`portales_empleo_publico.md`, 2026-11-08) contiene errores: plazos de cache, una discrepancia de IDIVAL que no se reproduce y una URL de ENSA que no lleva a ningún portal. Nada de él se da por bueno sin comprobarlo.
+- Los estudios externos de partida pueden contener errores (plazos de caché, discrepancias que no se reproducen, URL que no llevan a ningún portal): nada se da por bueno sin comprobarlo.

@@ -34,9 +34,9 @@ def tls_context() -> ssl.SSLContext:
     return context
 
 
-# Hosts que no responden a las IP de GitHub Actions: se leen por el relay PHP de boletines-es,
-# en un hosting con IP española (ver hallazgos/relay.md). Cada host tiene que estar también en
-# HOSTS_PERMITIDOS de su relay.php.
+# Hosts que no responden a las IP de GitHub Actions: se leen por un relay con IP española, firmado con
+# RELAY_CLAVE y situado en RELAY_URL (secretos del repo). Cada host tiene que estar también en la lista
+# de hosts permitidos del relay.
 VIA_RELAY = {"sepi.es", "www.sepi.es"}
 
 
