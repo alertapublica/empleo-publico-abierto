@@ -1,12 +1,14 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { atender } from "../src/bot.js";
-import { confirmar, baja, resumenDiario } from "../src/correo.js";
+import { alta, baja, confirmar, direccion, resumenDiario } from "../src/correo.js";
 import { coincide, describir, empiezaPalabra, limpiar, reconocerComunidades, reconocerOrganismos } from "../src/criterios.js";
 import { vaciar } from "../src/envios.js";
 import worker from "../src/index.js";
 import { MAX_MENSAJE, mensajeTelegram, recibir } from "../src/novedades.js";
+import { abrirSesion, cabecera, componer, ErrorSmtp } from "../src/smtp.js";
 import { LISTAS, d1, oferta, telegramFalso } from "./d1.mjs";
+import { leerMensaje, smtpFalso } from "./smtp.mjs";
 
 const AHORA = new Date("2026-11-09T07:00:00Z");
 
@@ -232,30 +234,118 @@ test("el bot ignora los grupos y respeta el máximo de avisos", async () => {
   assert.match(b.ultimo(), /el máximo/);
 });
 
-// --- Correo (preparado, desactivado) -------------------------------------------------------------
+// --- Correo ------------------------------------------------------------------------------------
+
+const correoEnv = (db, smtp, extra = {}) => ({
+  DB: db, CORREO_ACTIVO: "si", CORREO_REMITENTE: "avisos@ejemplo.es", CORREO_NOMBRE: "Empleo en Empresas Públicas",
+  SMTP_SERVIDOR: "smtp.ejemplo.es", SMTP_PUERTO: "465", SMTP_USUARIO: "avisos@ejemplo.es", SMTP_CLAVE: "c,là`ve@",
+  URL_PUBLICA: "https://avisos.ejemplo.es", TURNSTILE_SECRETO: "s", CONECTAR_SMTP: smtp.conectar, ...extra,
+});
+const turnstileOk = async () => Response.json({ success: true });
+const formAlta = (correo, criterios = { palabras: ["analista"] }) => new Request("https://x/correo/alta", {
+  method: "POST", body: new URLSearchParams({ correo, criterios: JSON.stringify(criterios), "cf-turnstile-response": "x" }),
+});
+
+test("mensaje: cabeceras con tildes codificadas y cuerpo quoted-printable", () => {
+  const largo = `Analista de sistemas con experiencia en ${"administración ".repeat(8)}= fin `;
+  const crudo = componer({
+    de: "avisos@ejemplo.es", nombre: "Empleo en Empresas Públicas", para: "ana@ejemplo.es",
+    asunto: `3 novedades para tus avisos de empleo público ${"ñ".repeat(40)}\r\nBcc: otro@ejemplo.es`,
+    texto: `Hola\n${largo}\n.línea que empieza por punto`, baja: "https://avisos.ejemplo.es/correo/baja?t=abc",
+    fecha: new Date("2026-11-09T06:00:00Z"), id: "id-1",
+  });
+  for (const linea of crudo.split("\r\n")) assert.ok(linea.length <= 78, `línea demasiado larga: ${linea}`);
+  assert.doesNotMatch(crudo, /[^\x00-\x7f]/, "todo ASCII");
+  assert.doesNotMatch(crudo, /\r\nBcc:/, "el asunto no puede inyectar cabeceras");
+  const { cabeceras, texto } = leerMensaje(crudo);
+  assert.equal(cabeceras.Subject, `3 novedades para tus avisos de empleo público ${"ñ".repeat(40)} Bcc: otro@ejemplo.es`);
+  assert.equal(cabeceras.From, "Empleo en Empresas Públicas <avisos@ejemplo.es>");
+  assert.equal(cabeceras.To, "<ana@ejemplo.es>");
+  assert.equal(cabeceras.Date, "Mon, 09 Nov 2026 06:00:00 +0000");
+  assert.equal(cabeceras["Message-ID"], "<id-1@ejemplo.es>");
+  assert.equal(cabeceras["Auto-Submitted"], "auto-generated");
+  assert.equal(cabeceras["List-Unsubscribe"], "<https://avisos.ejemplo.es/correo/baja?t=abc>");
+  assert.equal(cabeceras["List-Unsubscribe-Post"], "List-Unsubscribe=One-Click");
+  assert.equal(texto, `Hola\n${largo}\n.línea que empieza por punto\n`, "el espacio final y el «=» sobreviven");
+  assert.equal(cabecera("Asunto sin tildes"), "Asunto sin tildes");
+});
+
+test("direcciones: minúsculas, dominio con tildes a punycode, nada que inyecte", () => {
+  assert.equal(direccion(" Ana.Pérez@Ejemplo.es "), null, "tilde antes de la @");
+  assert.equal(direccion("Ana@Ejemplo.ES"), "ana@ejemplo.es");
+  assert.equal(direccion("ana@españa.es"), "ana@xn--espaa-rta.es");
+  assert.equal(direccion("ana+avisos@ejemplo.es"), "ana+avisos@ejemplo.es");
+  for (const mala of ["ana", "@ejemplo.es", "ana@ejemplo", "ana@ejemplo.es>\r\nRCPT TO:<b@c.es", "a b@ejemplo.es", "ana@ejem plo.es", "ana@[1.2.3.4]"]) {
+    assert.equal(direccion(mala), null, mala);
+  }
+});
+
+test("sesión SMTP: TLS, EHLO, AUTH PLAIN en UTF-8, puntos doblados y QUIT", async () => {
+  const smtp = smtpFalso();
+  const sesion = await abrirSesion({ servidor: "smtp.ejemplo.es", usuario: "avisos@ejemplo.es", clave: "c,là`ve@", nombre: "ejemplo.es" }, smtp.conectar);
+  await sesion.enviar("avisos@ejemplo.es", "ana@ejemplo.es", "Subject: x\r\n\r\nuno\r\n.dos\r\n");
+  await sesion.enviar("avisos@ejemplo.es", "luis@ejemplo.es", "Subject: y\r\n\r\ntres\r\n");
+  await sesion.cerrar();
+  const [s] = smtp.sesiones;
+  assert.deepEqual(s.direccion, { hostname: "smtp.ejemplo.es", port: 465 });
+  assert.equal(s.opciones.secureTransport, "on");
+  assert.equal(s.ordenes[0], "EHLO ejemplo.es");
+  const plano = new TextDecoder().decode(Uint8Array.from(atob(s.ordenes[1].split(" ")[2]), (c) => c.charCodeAt(0)));
+  assert.equal(plano, "\0avisos@ejemplo.es\0c,là`ve@");
+  assert.deepEqual(s.ordenes.filter((o) => /^(MAIL|RCPT)/.test(o)), [
+    "MAIL FROM:<avisos@ejemplo.es>", "RCPT TO:<ana@ejemplo.es>", "MAIL FROM:<avisos@ejemplo.es>", "RCPT TO:<luis@ejemplo.es>",
+  ]);
+  assert.equal(s.mensajes[0], "Subject: x\r\n\r\nuno\r\n.dos\r\n");
+  assert.equal(s.ordenes.at(-1), "QUIT");
+  assert.ok(s.cerrada);
+});
+
+test("sesión SMTP: destinatario rechazado, contraseña mala y servidor mudo", async () => {
+  const smtp = smtpFalso({ RCPT: (l) => (l.includes("mala@") ? "550 5.1.1 <mala@ejemplo.es>: no existe" : "250 OK") });
+  const sesion = await abrirSesion({ servidor: "s", usuario: "u", clave: "c" }, smtp.conectar);
+  const error = await sesion.enviar("a@ejemplo.es", "mala@ejemplo.es", "x\r\n").catch((e) => e);
+  assert.ok(error instanceof ErrorSmtp && error.definitivo);
+  assert.equal(error.message, "SMTP 550 en RCPT", "sin el texto del servidor, que trae la dirección");
+  assert.ok(!sesion.rota, "tras RSET la sesión sigue sirviendo");
+  await sesion.enviar("a@ejemplo.es", "buena@ejemplo.es", "x\r\n");
+  await sesion.cerrar();
+  assert.ok(smtp.sesiones[0].ordenes.includes("RSET"));
+
+  const mala = await abrirSesion({ servidor: "s", usuario: "u", clave: "c" }, smtpFalso({ AUTH: "535 5.7.8 No" }).conectar).catch((e) => e);
+  assert.equal(mala.message, "SMTP 535 en AUTH");
+  assert.ok(!mala.definitivo);
+
+  const mudo = smtpFalso({ DATA: null });
+  const s2 = await abrirSesion({ servidor: "s", usuario: "u", clave: "c", espera: 50 }, mudo.conectar);
+  const e2 = await s2.enviar("a@ejemplo.es", "b@ejemplo.es", "x\r\n").catch((e) => e);
+  assert.equal(e2.message, "SMTP sin respuesta en DATA");
+  assert.ok(s2.rota);
+  await s2.cerrar();
+  assert.ok(mudo.sesiones[0].cerrada);
+});
 
 test("correo desactivado: el alta responde 503 y el resumen no hace nada", async () => {
   const peticion = new Request("https://x/correo/alta", { method: "POST", body: new URLSearchParams({ correo: "a@b.es" }) });
   const r = await worker.fetch(peticion, { DB: d1(), CORREO_ACTIVO: "no" }, { waitUntil() {} });
   assert.equal(r.status, 503);
   assert.equal(await resumenDiario({ DB: d1(), CORREO_ACTIVO: "no" }, AHORA), 0);
+  const sinClave = correoEnv(d1(), smtpFalso(), { SMTP_CLAVE: "" });
+  assert.equal((await worker.fetch(formAlta("a@b.es"), sinClave, { waitUntil() {} })).status, 503, "sin contraseña no está activo");
 });
 
 test("correo activo: alta con doble confirmación, resumen diario y baja con un clic", async () => {
   const db = d1();
-  const enviados = [];
-  const env = {
-    DB: db, CORREO_ACTIVO: "si", CORREO_REMITENTE: "avisos@ejemplo.es", URL_PUBLICA: "https://avisos.ejemplo.es",
-    TURNSTILE_SECRETO: "s", CORREO: { send: async (m) => enviados.push(m) },
-  };
+  const smtp = smtpFalso();
+  const env = correoEnv(db, smtp);
+  const enviados = () => smtp.sesiones.flatMap((s) => s.mensajes).map(leerMensaje);
   await db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
-  const { alta } = await import("../src/correo.js");
-  const turnstileOk = async () => Response.json({ success: true });
-  const form = new URLSearchParams({ correo: "Ana@Ejemplo.es", criterios: JSON.stringify({ palabras: ["analista"] }), "cf-turnstile-response": "x" });
-  const r = await alta(env, new Request("https://x/correo/alta", { method: "POST", body: form }), { fetcher: turnstileOk, ahora: AHORA });
+  const r = await alta(env, formAlta("Ana@Ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA });
   assert.equal(r.status, 200);
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM avisos").first("n"), 0, "sin confirmar no hay aviso");
-  const enlace = enviados[0].text.match(/https:\S+confirmar\?t=\S+/)[0];
+  const confirmacion = enviados()[0];
+  assert.equal(confirmacion.cabeceras.Subject, "Confirma tu aviso de empleo público");
+  assert.equal(confirmacion.cabeceras["List-Unsubscribe"], undefined);
+  const enlace = confirmacion.texto.match(/https:\S+confirmar\?t=\S+/)[0];
   assert.equal((await confirmar(env, new URL(enlace), { ahora: AHORA })).status, 200);
   assert.equal((await confirmar(env, new URL(enlace), { ahora: AHORA })).status, 404, "el enlace sirve una vez");
   assert.equal(await db.prepare("SELECT estado FROM suscriptores").first("estado"), "activo");
@@ -265,18 +355,84 @@ test("correo activo: alta con doble confirmación, resumen diario y baja con un 
   await recibir(env, { novedades: [oferta(1), oferta(2, { titulo: "Conductor/a" })], listas: LISTAS }, AHORA);
   assert.equal(await resumenDiario(env, AHORA), 1);
   await vaciar(env, { ahora: AHORA });
-  const resumen = enviados.at(-1);
-  assert.equal(resumen.to, "ana@ejemplo.es");
-  assert.match(resumen.text, /Analista 1/);
-  assert.doesNotMatch(resumen.text, /Conductor/);
-  const bajaUrl = resumen.headers["List-Unsubscribe"].slice(1, -1);
-  assert.equal(resumen.headers["List-Unsubscribe-Post"], "List-Unsubscribe=One-Click");
+  const resumen = enviados().at(-1);
+  assert.equal(resumen.cabeceras.To, "<ana@ejemplo.es>");
+  assert.match(resumen.texto, /Analista 1/);
+  assert.doesNotMatch(resumen.texto, /Conductor/);
+  const bajaUrl = resumen.cabeceras["List-Unsubscribe"].slice(1, -1);
+  assert.equal(resumen.cabeceras["List-Unsubscribe-Post"], "List-Unsubscribe=One-Click");
+  assert.ok(resumen.texto.includes(`Darte de baja de estos avisos: ${bajaUrl}`));
 
   const get = await baja(env, new Request(bajaUrl), new URL(bajaUrl));
   assert.match(await get.text(), /<form method="post"/);
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 1, "abrir el enlace no da de baja");
   await baja(env, new Request(bajaUrl, { method: "POST" }), new URL(bajaUrl));
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0);
+});
+
+test("alta: espera entre confirmaciones y se deshace si no sale el correo", async () => {
+  const db = d1();
+  await db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
+  const smtp = smtpFalso();
+  const env = correoEnv(db, smtp);
+  assert.equal((await alta(env, formAlta("ana@ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA })).status, 200);
+  const pronto = new Date(AHORA.getTime() + 5 * 60000);
+  assert.equal((await alta(env, formAlta("ana@ejemplo.es"), { fetcher: turnstileOk, ahora: pronto })).status, 429);
+  assert.equal(smtp.sesiones.length, 1, "no se reenvía antes de 15 minutos");
+  const luego = new Date(AHORA.getTime() + 16 * 60000);
+  assert.equal((await alta(env, formAlta("ana@ejemplo.es"), { fetcher: turnstileOk, ahora: luego })).status, 200);
+  assert.equal(smtp.sesiones.length, 2);
+  assert.equal((await alta(env, formAlta("josé@ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA })).status, 400);
+
+  const caido = correoEnv(db, smtpFalso({ AUTH: "535 No" }));
+  const r = await alta(caido, formAlta("luis@ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA });
+  assert.equal(r.status, 503);
+  assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores WHERE destino = 'luis@ejemplo.es'").first("n"), 0);
+  const repetida = await alta(correoEnv(db, smtpFalso()), formAlta("luis@ejemplo.es"), { fetcher: turnstileOk, ahora: AHORA });
+  assert.equal(repetida.status, 200, "puede repetirse enseguida");
+});
+
+test("bandeja de correo: una sesión por tanda, tope, rechazos y conexión caída", async () => {
+  const db = d1();
+  const suscriptor = async (correo) => (await db.prepare(
+    "INSERT INTO suscriptores (canal, destino, estado, token, creado) VALUES ('correo', ?, 'activo', ?, 'x')",
+  ).bind(correo, `t-${correo}`).run()).meta.last_row_id;
+  for (const correo of ["a@ejemplo.es", "mala@ejemplo.es", "c@ejemplo.es", "d@ejemplo.es"]) {
+    await db.prepare("INSERT INTO envios (suscriptor, asunto, texto, despues) VALUES (?, 'Asunto', 'Texto', '2026-11-09T06:00:00+00:00')")
+      .bind(await suscriptor(correo)).run();
+  }
+  const smtp = smtpFalso({ RCPT: (l) => (l.includes("mala@") ? "550 No existe" : "250 OK") });
+  const r = await vaciar(correoEnv(db, smtp, { CORREO_POR_TANDA: "3" }), { ahora: AHORA });
+  assert.deepEqual(r, { enviados: 2, fallidos: 1, aplazados: 1 });
+  assert.equal(smtp.sesiones.length, 1, "un solo inicio de sesión");
+  const quedan = await db.prepare("SELECT s.destino, e.intentos FROM envios e JOIN suscriptores s ON s.id = e.suscriptor").all();
+  assert.deepEqual(quedan.results, [{ destino: "d@ejemplo.es", intentos: 0 }], "rechazo descartado; el del tope, intacto");
+
+  await db.prepare("INSERT INTO envios (suscriptor, asunto, texto, despues) VALUES (1, 'Asunto', 'Texto', '2026-11-09T06:00:00+00:00')").run();
+  const caido = await vaciar(correoEnv(db, smtpFalso({ AUTH: "454 Inténtalo luego" })), { ahora: AHORA });
+  assert.deepEqual(caido, { enviados: 0, fallidos: 1, aplazados: 1 });
+  const tras = await db.prepare("SELECT intentos FROM envios ORDER BY id").all();
+  assert.deepEqual(tras.results.map((f) => f.intentos), [1, 0], "solo el primero gasta intento");
+});
+
+test("correo de prueba: exige la clave y avisa si el SMTP falla", async () => {
+  const smtp = smtpFalso();
+  const env = { ...correoEnv(d1(), smtp, { CORREO_ACTIVO: "no" }), AVISOS_CLAVE: "clave" };
+  const ctx = { waitUntil() {} };
+  const prueba = (auth, para = "ana@ejemplo.es") => new Request("https://x/interno/correo-prueba", {
+    method: "POST", headers: auth ? { Authorization: auth } : {}, body: JSON.stringify({ para }),
+  });
+  assert.equal((await worker.fetch(prueba(), env, ctx)).status, 401);
+  assert.equal((await worker.fetch(prueba("Bearer clave", "nada"), env, ctx)).status, 400);
+  const ok = await worker.fetch(prueba("Bearer clave"), env, ctx);
+  assert.deepEqual(await ok.json(), { enviado: true });
+  const { cabeceras } = leerMensaje(smtp.sesiones[0].mensajes[0]);
+  assert.equal(cabeceras.Subject, "Prueba del correo de avisos de empleo público");
+  const malo = { ...env, CONECTAR_SMTP: smtpFalso({ AUTH: "535 No" }).conectar };
+  const r = await worker.fetch(prueba("Bearer clave"), malo, ctx);
+  assert.equal(r.status, 502);
+  assert.deepEqual(await r.json(), { error: "SMTP 535 en AUTH" });
+  assert.equal((await worker.fetch(prueba("Bearer clave"), { ...env, SMTP_CLAVE: "" }, ctx)).status, 409);
 });
 
 // --- Rutas -------------------------------------------------------------------------------------

@@ -15,12 +15,33 @@ Un aviso combina palabras del título (por comienzo de palabra, sin tildes), ár
 
 ## Correo
 
-Está hecho pero desactivado (`CORREO_ACTIVO`). Para activarlo hace falta:
+Sale por el SMTP del buzón `avisos@alertapublica.es` de Piensa (`smtp.buzondecorreo.com`, TLS en el 465), con un cliente propio sobre `cloudflare:sockets` (`avisos/src/smtp.js`). No hace falta el plan Workers Paid. Cada tanda abre una sola sesión y envía como mucho `CORREO_POR_TANDA` correos; el resto espera al minuto siguiente. Un destinatario rechazado no se reintenta; un fallo temporal o de conexión, sí.
 
-- un dominio en la cuenta, con Email Sending;
-- el plan Workers Paid, para enviar a cualquier dirección;
-- el binding `send_email` llamado `CORREO` y `CORREO_REMITENTE`;
-- el formulario de la web con Turnstile (`TURNSTILE_SECRETO`).
+Está desactivado mientras `CORREO_ACTIVO` no sea `si`. Hace falta:
+
+- las variables `SMTP_*`, `CORREO_REMITENTE` y `CORREO_NOMBRE` (en `wrangler.jsonc`) y el secreto `SMTP_CLAVE` (`wrangler secret put SMTP_CLAVE`);
+- el formulario de la web con Turnstile (`TURNSTILE_SECRETO`);
+- en el DNS: SPF (`include:_spf.buzondecorreo.com`), DKIM (selector `1794215374238`, el que firma Piensa) y DMARC.
+
+### Correo de prueba
+
+Funciona aunque el correo esté desactivado: sirve para comprobar el SMTP desde Cloudflare y revisar SPF, DKIM y DMARC (por ejemplo, con mail-tester.com).
+
+```bash
+curl -X POST -H "Authorization: Bearer $AVISOS_CLAVE" -d '{"para": "direccion@ejemplo.es"}' \
+  https://empleo-avisos.empleo-publico.workers.dev/interno/correo-prueba
+```
+
+Responde `{"enviado": true}` o el fallo, sin el texto del servidor (p. ej. `SMTP 535 en AUTH`).
+
+### Rebotes
+
+Los rebotes y las respuestas llegan al buzón `avisos@`. Se revisan a mano; para borrar una dirección que ya no existe:
+
+```bash
+cd avisos && npx wrangler d1 execute empleo-avisos --remote \
+  --command "DELETE FROM suscriptores WHERE canal = 'correo' AND destino = 'direccion@ejemplo.es'"
+```
 
 ## Tests
 

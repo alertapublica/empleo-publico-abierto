@@ -1,14 +1,32 @@
 // Avisos por correo: alta con doble confirmación, baja con un clic y resumen diario.
-// Desactivado mientras CORREO_ACTIVO no sea «si». Para activarlo hacen falta un dominio en la cuenta
-// de Cloudflare (Email Sending), el plan Workers Paid para enviar a cualquier dirección, el binding
-// CORREO, CORREO_REMITENTE y el secreto TURNSTILE_SECRETO del formulario.
+// Se envían por el SMTP del buzón de alertapublica.es (src/smtp.js). Desactivado mientras
+// CORREO_ACTIVO no sea «si»; además hacen falta las variables SMTP_* y CORREO_REMITENTE, el secreto
+// SMTP_CLAVE y, para el formulario, TURNSTILE_SECRETO.
 
 import { MAX_AVISOS, describir, limpiar } from "./criterios.js";
-import { correoActivo, enlaceBaja, enviarCorreo } from "./envios.js";
+import { correoActivo, enlaceBaja, enviarUno } from "./envios.js";
 import { escapar, iso, leerListas, repartir } from "./novedades.js";
 
-const CORREO = /^[^\s@<>"]{1,64}@[^\s@<>"]+\.[^\s@<>"]{2,}$/;
 const CADUCA_HORAS = 48;
+const REENVIO_MINUTOS = 15; // no se manda otra confirmación a la misma dirección antes de esto
+
+// Dirección normalizada o null. La parte local, solo ASCII (el servidor no admite SMTPUTF8); el
+// dominio con tildes pasa a punycode. Sin espacios ni saltos: no puede inyectar órdenes ni cabeceras.
+export function direccion(texto) {
+  const valor = String(texto || "").trim().toLowerCase();
+  const arroba = valor.lastIndexOf("@");
+  if (arroba < 1) return null;
+  const local = valor.slice(0, arroba);
+  let dominio;
+  try {
+    dominio = new URL(`http://${valor.slice(arroba + 1)}`).hostname;
+  } catch {
+    return null;
+  }
+  if (!/^[a-z0-9!#$%&'*+/=?^_`{|}~.-]{1,64}$/.test(local)) return null;
+  if (!/^[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z0-9-]{2,}$/.test(dominio) || dominio.length > 253) return null;
+  return `${local}@${dominio}`;
+}
 
 export function pagina(titulo, cuerpo, status = 200) {
   return new Response(
@@ -33,8 +51,10 @@ async function turnstile(env, token, ip, fetcher) {
 export async function alta(env, request, { fetcher = fetch, ahora = new Date() } = {}) {
   if (!correoActivo(env)) return pagina("Aún no disponible", "<p>Los avisos por correo todavía no están activos. Mientras tanto puedes usar el bot de Telegram o los avisos por RSS.</p>", 503);
   const form = await request.formData();
-  const correo = String(form.get("correo") || "").trim().toLowerCase();
-  if (!CORREO.test(correo)) return pagina("Revisa el correo", "<p>La dirección no parece válida. Vuelve atrás y corrígela.</p>", 400);
+  const correo = direccion(form.get("correo"));
+  if (!correo) {
+    return pagina("Revisa el correo", "<p>La dirección no parece válida. Vuelve atrás y corrígela. La parte anterior a la @ no puede llevar tildes ni eñes.</p>", 400);
+  }
   if (!(await turnstile(env, form.get("cf-turnstile-response"), request.headers.get("CF-Connecting-IP"), fetcher))) {
     return pagina("No se pudo comprobar", "<p>No hemos podido comprobar que no eres un programa automático. Vuelve atrás e inténtalo de nuevo.</p>", 400);
   }
@@ -47,18 +67,34 @@ export async function alta(env, request, { fetcher = fetch, ahora = new Date() }
   await db.prepare(
     "INSERT OR IGNORE INTO suscriptores (canal, destino, estado, token, creado) VALUES ('correo', ?, 'pendiente', ?, ?)",
   ).bind(correo, crypto.randomUUID(), iso(ahora)).run();
-  const s = await db.prepare("SELECT id, token FROM suscriptores WHERE canal = 'correo' AND destino = ?").bind(correo).first();
+  const s = await db.prepare("SELECT id, estado, borrador FROM suscriptores WHERE canal = 'correo' AND destino = ?").bind(correo).first();
+  // Protege el buzón de otra persona (y el límite de envío) de altas repetidas.
+  const anterior = s.borrador ? JSON.parse(s.borrador).enviado : null;
+  if (anterior && anterior > iso(new Date(ahora.getTime() - REENVIO_MINUTOS * 60000))) {
+    return pagina("Revisa tu correo", `<p>Hace poco te enviamos un enlace de confirmación. Búscalo también en la carpeta de spam. Si no llega, vuelve a intentarlo dentro de ${REENVIO_MINUTOS} minutos.</p>`, 429);
+  }
   const confirmar = crypto.randomUUID();
   // Solo se guarda el último aviso pendiente: quien no controla el buzón no puede activar nada.
-  await db.prepare("UPDATE suscriptores SET borrador = ? WHERE id = ?")
-    .bind(JSON.stringify({ confirmar, criterios, hasta: iso(new Date(ahora.getTime() + CADUCA_HORAS * 3600000)) }), s.id).run();
-  await enviarCorreo(env, {
-    para: correo,
-    asunto: "Confirma tu aviso de empleo público",
-    texto: `Alguien (seguramente tú) ha pedido avisos por correo con estos criterios:\n\n${describir(criterios, listas)}\n\n`
-      + `Para activarlo, abre este enlace en las próximas ${CADUCA_HORAS} horas:\n${env.URL_PUBLICA}/correo/confirmar?t=${confirmar}\n\n`
-      + "Si no lo has pedido tú, no hagas nada: sin confirmar no se envía ningún aviso.",
-  });
+  await db.prepare("UPDATE suscriptores SET borrador = ? WHERE id = ?").bind(JSON.stringify({
+    confirmar, criterios, enviado: iso(ahora), hasta: iso(new Date(ahora.getTime() + CADUCA_HORAS * 3600000)),
+  }), s.id).run();
+  try {
+    await enviarUno(env, {
+      para: correo,
+      asunto: "Confirma tu aviso de empleo público",
+      texto: `Alguien (seguramente tú) ha pedido avisos por correo con estos criterios:\n\n${describir(criterios, listas)}\n\n`
+        + `Para activarlo, abre este enlace en las próximas ${CADUCA_HORAS} horas:\n${env.URL_PUBLICA}/correo/confirmar?t=${confirmar}\n\n`
+        + "Si no lo has pedido tú, no hagas nada: sin confirmar no se envía ningún aviso.",
+    });
+  } catch (error) {
+    console.log(`Fallo al enviar la confirmación: ${error.message}`);
+    // Sin correo no hay forma de confirmar: se deshace el alta para que pueda repetirse ya.
+    await db.batch([
+      db.prepare("DELETE FROM suscriptores WHERE id = ? AND estado = 'pendiente'").bind(s.id),
+      db.prepare("UPDATE suscriptores SET borrador = NULL WHERE id = ?").bind(s.id),
+    ]);
+    return pagina("No se pudo enviar", "<p>No hemos podido enviarte el correo de confirmación. Inténtalo de nuevo más tarde.</p>", 503);
+  }
   return pagina("Revisa tu correo", `<p>Te hemos enviado un enlace a <strong>${escapar(correo)}</strong> para confirmar el aviso. Caduca en ${CADUCA_HORAS} horas.</p>`);
 }
 
