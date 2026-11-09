@@ -1,0 +1,42 @@
+{
+ "bases-direccion-juridica-tasa-reposicion-octubre-2026": {
+  "apply_url": "https://cofivacasa.com/wp-content/uploads/2026/10/BASES-DIRECCION-JURIDICA-tasa-reposicion-octubre-2026_.pdf",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": null,
+  "company": "Cofivacasa",
+  "deadline": null,
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "cofivacasa:bases-direccion-juridica-tasa-reposicion-octubre-2026",
+  "kind": "indefinido",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": null,
+  "published_on": null,
+  "ref": "bases-direccion-juridica-tasa-reposicion-octubre-2026",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://cofivacasa.com/wp-content/uploads/2026/10/BASES-DIRECCION-JURIDICA-tasa-reposicion-octubre-2026_.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   },
+   {
+    "html": "<p>El plazo y el modo de presentación figuran en las bases: la candidatura se envía por correo electrónico a empleo@cofivacasa.com.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "cofivacasa",
+  "source_title": null,
+  "status": "open",
+  "title": "Director/a del área jurídica y responsable de cumplimiento",
+  "url": "https://cofivacasa.com/empleo-publico/"
+ }
+}

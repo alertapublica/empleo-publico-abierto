@@ -1,0 +1,125 @@
+{
+ "control-accesos-fijo-discontinuo": {
+  "apply_url": "https://www.hipodromodelazarzuela.es/sites/default/files/2026-11/PROCESO%20SELECTIVO%20Oferta%20FD%20Accesos_Noviembre%202026_v3.pdf",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": null,
+  "company": "Hipódromo de la Zarzuela",
+  "deadline": "2026-11-13",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T09:24:22+00:00",
+  "id": "zarzuela:control-accesos-fijo-discontinuo",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-13",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 4,
+  "published_on": "2026-11-03",
+  "ref": "control-accesos-fijo-discontinuo",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 13/11/2026</li></ul>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.hipodromodelazarzuela.es/sites/default/files/2026-11/PROCESO%20SELECTIVO%20Oferta%20FD%20Accesos_Noviembre%202026_v3.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "zarzuela",
+  "source_title": null,
+  "status": "open",
+  "title": "Control accesos (fijo discontinuo)",
+  "url": "https://www.hipodromodelazarzuela.es/informacion-corporativa"
+ },
+ "responsable-tic": {
+  "apply_url": "https://www.hipodromodelazarzuela.es/sites/default/files/2026-10/PROCESO%20SELECTIVO%20Oferta%20Responsable%20TIC_2026_09_v6.pdf",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": null,
+  "company": "Hipódromo de la Zarzuela",
+  "deadline": "2026-11-16",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T09:24:22+00:00",
+  "id": "zarzuela:responsable-tic",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-16",
+  "ref": "responsable-tic",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 16/11/2026</li></ul>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.hipodromodelazarzuela.es/sites/default/files/2026-10/PROCESO%20SELECTIVO%20Oferta%20Responsable%20TIC_2026_09_v6.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "zarzuela",
+  "source_title": null,
+  "status": "open",
+  "title": "Responsable TIC",
+  "url": "https://www.hipodromodelazarzuela.es/informacion-corporativa"
+ },
+ "taquillero-a-apuestas-fijo-discontinuo": {
+  "apply_url": "https://www.hipodromodelazarzuela.es/sites/default/files/2026-11/PROCESO%20SELECTIVO%20Oferta%20FD%20Apuestas_Noviembre%202026_v3.pdf",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": null,
+  "company": "Hipódromo de la Zarzuela",
+  "deadline": "2026-11-13",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T09:24:22+00:00",
+  "id": "zarzuela:taquillero-a-apuestas-fijo-discontinuo",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-13",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 7,
+  "published_on": "2026-11-03",
+  "ref": "taquillero-a-apuestas-fijo-discontinuo",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 13/11/2026</li></ul>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.hipodromodelazarzuela.es/sites/default/files/2026-11/PROCESO%20SELECTIVO%20Oferta%20FD%20Apuestas_Noviembre%202026_v3.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "zarzuela",
+  "source_title": null,
+  "status": "open",
+  "title": "Taquillero/a apuestas (fijo discontinuo)",
+  "url": "https://www.hipodromodelazarzuela.es/informacion-corporativa"
+ }
+}

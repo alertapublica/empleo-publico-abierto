@@ -1,0 +1,40 @@
+{
+ "20261107": {
+  "apply_url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "ENAIRE",
+  "deadline": "2026-11-26",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T12:38:52+00:00",
+  "id": "enaire:20261107",
+  "kind": null,
+  "listed_deadline": "2026-11-26",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-06",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-06",
+  "ref": "20261107",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Las bases, las plazas y las condiciones están en la web oficial de ENAIRE, junto a esta convocatoria en el listado.</p>",
+    "level": 2,
+    "title": "Bases e inscripción"
+   }
+  ],
+  "source": "enaire",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria externa titulados/as niveles A y B",
+  "url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0"
+ }
+}

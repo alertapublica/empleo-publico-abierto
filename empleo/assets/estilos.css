@@ -1,0 +1,444 @@
+/* Paleta. Sin JavaScript manda el tema del sistema; con él, data-theme (ver tema.js).
+   tests/test_site.py comprueba 4,5:1 en cada bloque que define --ink. */
+:root {
+  color-scheme: light;
+  --bg: #fbfaf6;
+  --surface: #ffffff;
+  --ink: #1c211e;
+  --titulos: #1c211e;
+  --muted: #47504b;
+  --line: #cfd2c9;
+  --accent: #0a5a3c;
+  --accent-ink: #ffffff;
+  --alert: #8a3100;
+  --alert-bg: #fdeedd;
+  --focus: #0b57d0;
+  /* Ajustes «Aa»: --fs es % de la letra del navegador; --ancho, el ancho máximo del contenido («none»: completo). */
+  --fs: 112.5;
+  --ancho: 1200px;
+  --lh: 1.6;
+  --ff: Atkinson Hyperlegible, Verdana, "DejaVu Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --bg: #121513;
+    --surface: #1b201d;
+    --ink: #eff1ec;
+    --titulos: #eff1ec;
+    --muted: #bcc3bd;
+    --line: #434b45;
+    --accent: #86dcb3;
+    --accent-ink: #0c1f16;
+    --alert: #ffc592;
+    --alert-bg: #3b2615;
+    --focus: #9cc2ff;
+  }
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121513;
+  --surface: #1b201d;
+  --ink: #eff1ec;
+  --titulos: #eff1ec;
+  --muted: #bcc3bd;
+  --line: #434b45;
+  --accent: #86dcb3;
+  --accent-ink: #0c1f16;
+  --alert: #ffc592;
+  --alert-bg: #3b2615;
+  --focus: #9cc2ff;
+}
+:root[data-theme="sepia"] {
+  color-scheme: light;
+  --bg: #f4ecd8;
+  --surface: #fbf6e8;
+  --ink: #3b2f1e;
+  --titulos: #3b2f1e;
+  --muted: #5f4f33;
+  --line: #c9bb98;
+  --accent: #7d3b1c;
+  --accent-ink: #ffffff;
+  --alert: #8b2020;
+  --alert-bg: #ecd9d2;
+  --focus: #2e5a8b;
+}
+:root[data-theme="contrast"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #0d0d0d;
+  --ink: #ffffff;
+  --titulos: #ffffff;
+  --muted: #ffff00;
+  --line: #ffffff;
+  --accent: #00ffff;
+  --accent-ink: #000000;
+  --alert: #ff9a9a;
+  --alert-bg: #330000;
+  --focus: #ffff00;
+}
+[data-font="serif"] { --ff: Georgia, "Times New Roman", serif; }
+[data-font="dyslexic"] { --ff: Verdana, Tahoma, "Comic Sans MS", sans-serif; letter-spacing: 0.03em; word-spacing: 0.1em; }
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { font-size: calc(var(--fs) * 1%); -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ff);
+  line-height: var(--lh);
+  overflow-wrap: anywhere;
+}
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 3px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { line-height: 1.25; text-wrap: balance; color: var(--titulos); }
+h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 0.4rem; }
+/* Encabezados de las páginas de texto (Acerca de, Datos abiertos…): línea debajo para separar apartados. */
+main > h2 { margin-top: 2.4rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.salto {
+  position: absolute; left: 1rem; top: -4rem; padding: 0.6rem 1rem;
+  background: var(--accent); color: var(--accent-ink); z-index: 30; /* por encima de la cabecera fija */
+}
+.salto:focus { top: 0.5rem; }
+.ancho { max-width: var(--ancho); margin: 0 auto; padding: 0 1rem; }
+
+/* Cabecera: marca, menú y controles en una fila. En pantallas estrechas el menú baja y se pliega.
+   En el HTML los controles van antes del menú para que, abierto en móvil, el foco pase del botón a él. */
+header.sitio { border-bottom: 1px solid var(--line); background: var(--surface); }
+.cab { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0 0.75rem; min-height: 3.25rem; container: cab / inline-size; }
+.marca { order: 1; align-self: center; font-weight: 700; font-size: 1.1rem; color: var(--titulos); text-decoration: none; padding: 0.4rem 0; }
+nav.principal { order: 2; flex: 1 1 auto; display: flex; }
+.cab-acciones { order: 3; align-self: center; display: flex; gap: 0.4rem; flex-shrink: 0; margin-left: auto; }
+.btn-cab {
+  display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; padding: 0.3rem 0.8rem;
+  font: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+  color: var(--ink); background: transparent; border: 2px solid var(--line); border-radius: 6px;
+}
+.btn-cab:hover { border-color: var(--muted); }
+.btn-cab[aria-expanded="true"] { background: var(--bg); border-color: var(--accent); }
+.aa { font-weight: 800; letter-spacing: -0.03em; }
+/* En móvil «Aa» solo, para que la marca no se parta en tres líneas; el nombre sigue para el lector de pantalla. */
+@media (max-width: 34em) {
+  .aa-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+nav.principal ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0 0.1rem; padding: 0; margin: 0; }
+nav.principal a {
+  display: flex; align-items: center; height: 100%; padding: 0.4rem 0.5rem; min-height: 44px; color: var(--ink); font-size: 0.95rem;
+  text-decoration: none; border-bottom: 4px solid transparent;
+}
+nav.principal a:hover { border-color: var(--line); }
+nav.principal a[aria-current="page"] { font-weight: 700; border-color: var(--accent); }
+/* Según el ancho del contenido (y de la letra): si no cabe, el menú baja a su propia fila. */
+@container cab (max-width: 50em) {
+  .marca { flex: 1; min-width: 0; }
+  .cab-acciones { order: 2; }
+  nav.principal { order: 3; flex-basis: 100%; }
+}
+@media (max-width: 42em) {
+  .marca { font-size: 1rem; line-height: 1.25; }
+  .cab-acciones { order: 2; }
+  nav.principal { order: 3; flex-basis: 100%; margin: 0 -1rem; }
+  .menu-js nav.principal:not(.abierto) { display: none; }
+  nav.principal ul { flex-direction: column; flex: 1; }
+  nav.principal a { display: block; padding: 0.55rem 1rem; border-bottom-width: 1px; border-left: 4px solid transparent; border-color: var(--line); }
+  nav.principal a[aria-current="page"] { border-left-color: var(--accent); }
+}
+@media (min-width: 42.01em) {
+  #btn-menu { display: none; }
+}
+/* Cabecera fija al bajar, para no tener que volver arriba a por el menú. Solo con JS (sin él, en móvil
+   el menú no se pliega y ocuparía la pantalla) y con altura de sobra: con zoom fuerte o el móvil
+   apaisado se queda como antes. ajustes.js mide la cabecera en --cab-alto para que no tape el foco
+   ni el destino de los anclas, y su fila de arriba (marca y botones) en --cab-fila para el menú abierto. */
+@media screen and (min-height: 30em) {
+  .menu-js { scroll-padding-top: calc(var(--cab-alto, 3.5rem) + 0.5rem); }
+  .menu-js header.sitio { position: sticky; top: 0; z-index: 10; }
+}
+@media screen and (min-height: 30em) and (max-width: 42em) {
+  /* Abierto en móvil, el menú se desplaza por dentro y no se sale de la pantalla. */
+  .menu-js nav.principal.abierto { max-height: calc(100dvh - var(--cab-fila, 3.5rem)); overflow-y: auto; overscroll-behavior: contain; }
+}
+
+main.ancho { padding-top: 1rem; padding-bottom: 3rem; }
+.resumen { color: var(--muted); margin: 0 0 1.25rem; }
+.nota {
+  border-left: 4px solid var(--accent); background: var(--surface);
+  padding: 0.7rem 1rem; margin: 1.25rem 0;
+}
+.nota.alerta { border-color: var(--alert); background: var(--alert-bg); }
+.nota > :first-child { margin-top: 0; }
+.nota > :last-child { margin-bottom: 0; }
+
+/* Buscador a lo ancho; debajo, una fila discreta de pastillas con «Ordenar» al final; luego el panel de filtros plegado. */
+form.filtros { display: flex; flex-direction: column; gap: 0.6rem; margin: 0 0 0.9rem; }
+form.filtros[hidden] { display: none; }
+.buscador { display: flex; gap: 0.5rem; }
+main > form.buscador { margin: 0 0 0.75rem; }
+.buscador input[type="search"] {
+  flex: 1; min-width: 0; min-height: 52px; padding: 0.5rem 0.9rem; font-size: 1.1rem;
+  border: 2px solid var(--muted); border-radius: 8px; background: var(--surface);
+}
+.buscador input::placeholder { color: var(--muted); opacity: 1; }
+.buscador button { min-height: 52px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.pastillas { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+.pastillas select { min-height: 36px; padding-top: 0.2rem; padding-bottom: 0.2rem; }
+.pastillas .orden { margin-left: auto; }
+.como-buscar { display: inline-flex; align-items: center; min-height: 36px; padding: 0 0.25rem; }
+.pastilla {
+  display: inline-flex; align-items: center; gap: 0.4rem; min-height: 36px; padding: 0.15rem 0.75rem;
+  font: inherit; cursor: pointer; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--muted); border-radius: 999px;
+}
+.pastilla input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent); }
+.pastilla:has(input:checked), .pastilla[aria-expanded="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+#btn-filtros::after { content: "▾"; margin-left: -0.15rem; }
+#btn-filtros[aria-expanded="true"]::after { content: "▴"; }
+.resultados .quitar { margin-right: auto; }
+.quitar { border: 0; padding: 0.3rem 0.5rem; color: var(--accent); text-decoration: underline; text-underline-offset: 0.18em; }
+.campo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.campo label { font-weight: 600; }
+.campo.en-linea { flex-direction: row; align-items: center; gap: 0.5rem; }
+.campo.en-linea label { white-space: nowrap; }
+.campo.en-linea select { width: auto; max-width: 16rem; }
+@media (max-width: 34em) {
+  .campo.en-linea { flex: 1 1 100%; }
+  .campo.en-linea select { flex: 1; min-width: 0; max-width: none; }
+}
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem 1rem; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem 1rem; }
+.rejilla[hidden] { display: none; }
+.filtros .ayuda { margin: 0; color: var(--muted); display: none; }
+.filtros:has(input[name="teletrabajo"]:checked) #ayuda-teletrabajo { display: block; }
+input[type="search"], select {
+  width: 100%; min-height: 44px; padding: 0.4rem 0.6rem; font: inherit;
+  color: var(--ink); background: var(--bg); border: 1px solid var(--muted); border-radius: 4px;
+}
+button {
+  min-height: 44px; padding: 0.4rem 1rem; font: inherit; font-weight: 600; cursor: pointer;
+  color: var(--ink); background: transparent; border: 2px solid var(--muted); border-radius: 6px;
+}
+@media (max-width: 34em) {
+  .buscador input[type="search"] { font-size: 1rem; padding: 0.5rem 0.6rem; }
+  .buscador button { padding: 0.4rem 0.6rem; font-size: 0.95rem; }
+  .pastillas { gap: 0.4rem; font-size: 0.9rem; }
+  .pastilla { padding: 0.15rem 0.6rem; gap: 0.35rem; }
+}
+.resultados { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.3rem 1rem; margin-bottom: 0.6rem; }
+.resultados #estado-filtros { margin: 0; }
+.orden { display: flex; align-items: center; gap: 0.5rem; }
+.orden select { width: auto; }
+#estado-filtros { font-weight: 600; min-height: 1.6em; }
+
+/* Listas de ofertas, organismos, anuncios y histórico: una tarjeta por elemento. */
+.ofertas { list-style: none; margin: 0; padding: 0; }
+.ofertas > li {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.75rem 1rem; margin-bottom: 0.6rem; transition: opacity 0.25s;
+}
+.ofertas > li[hidden] { display: none; }
+.ofertas > li.foco-atenuada { opacity: 0.5; }
+.ofertas :is(h2, h3) { font-size: 1.1rem; margin: 0 0 0.3rem; font-weight: 600; }
+.ofertas p { margin: 0.1rem 0; }
+/* «Guardar» (guardadas.js): discreto, junto al título de cada oferta, al pie de cada proceso y bajo el título de la ficha. Marcado: estrella llena y borde de acento. */
+.guardar { min-height: 36px; margin-top: 0.4rem; padding: 0.15rem 0.75rem; font-weight: 400; border-width: 1px; border-radius: 999px; }
+.guardar span { color: var(--accent); }
+.guardar[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.guardar-ficha { margin: 0 0 1rem; }
+.guardar-ficha .guardar, .tarjeta-acciones .guardar { margin-top: 0; }
+#guardadas-cerradas ul { margin: 0.3rem 0; }
+/* Ofertas: solo «Guardar» en la tarjeta («Abrir original» y «Compartir», en la ficha). Debajo en el móvil;
+   en pantallas anchas, a la derecha del título. Sin JavaScript el hueco queda vacío y no ocupa nada. */
+.ofertas .tarjeta-acciones { margin-top: 0.35rem; }
+.ofertas .tarjeta-acciones:empty { display: none; }
+.acciones a.compartir { display: inline-flex; align-items: center; min-height: 32px; }
+@media (min-width: 42.01em) {
+  .ofertas > li:not([hidden]):has(> .tarjeta-acciones:not(:empty)) { display: grid; grid-template-columns: 1fr auto; column-gap: 1.25rem; }
+  .ofertas > li:has(> .tarjeta-acciones) > * { grid-column: 1 / -1; }
+  .ofertas > li:has(> .tarjeta-acciones) > :first-child { grid-column: 1; }
+  .ofertas > li > .tarjeta-acciones { grid-column: 2; grid-row: 1; align-self: start; margin: 0; }
+}
+/* Títulos de las tarjetas sin subrayado (son encabezados, ya se distinguen); vuelve al pasar o con el foco. */
+.ofertas :is(h2, h3) a { text-decoration: none; }
+.ofertas :is(h2, h3) a:is(:hover, :focus-visible) { text-decoration: underline; }
+/* Procesos: «Guardar» en la línea del RSS. */
+.proceso-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 1.25rem; }
+.proceso-acciones .guardar { margin-top: 0; }
+.comunicados { margin-top: 0.35rem; }
+/* Procesos en la página de un organismo: debajo de las ofertas y con menos peso. */
+section.procesos { margin-top: 2rem; }
+section.procesos .ofertas > li { background: transparent; border-style: dashed; border-left: 4px solid var(--muted); }
+section.procesos .ofertas h3 { font-size: 1rem; }
+.comunicados > summary { cursor: pointer; }
+.comunicados ol { margin: 0.35rem 0 0; padding-left: 1.3rem; }
+.comunicados li { margin-bottom: 0.3rem; }
+/* Organismos: tarjetas estrechas, varias por fila. */
+.ofertas.organismos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); gap: 0.7rem; }
+.ofertas.organismos > li { margin: 0; }
+.sin-ofertas { margin: 0; padding-left: 1.2rem; }
+.dato { color: var(--muted); font-size: 0.95rem; }
+.urgente { color: var(--alert); background: var(--alert-bg); padding: 0 0.4rem; border-radius: 4px; font-weight: 700; }
+.boton {
+  display: inline-block; padding: 0.65rem 1.2rem; min-height: 44px; font-weight: 700;
+  background: var(--accent); color: var(--accent-ink); text-decoration: none; border-radius: 6px;
+}
+.boton:hover { text-decoration: underline; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.25rem; margin: 1.25rem 0; }
+dl.ficha {
+  display: grid; grid-template-columns: minmax(9rem, max-content) 1fr; gap: 0.3rem 1rem;
+  margin: 1rem 0; padding: 0.9rem 1.1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+}
+dl.ficha dt { font-weight: 600; }
+dl.ficha dd { margin: 0; }
+@media (max-width: 34em) {
+  dl.ficha { grid-template-columns: 1fr; }
+  dl.ficha dd { margin-bottom: 0.5rem; }
+  h1 { font-size: 1.6rem; }
+}
+.texto-oficial li { margin-bottom: 0.25rem; }
+footer.sitio { border-top: 1px solid var(--line); color: var(--muted); padding: 1.2rem 0 2.5rem; font-size: 0.9rem; }
+footer.sitio a { color: inherit; }
+footer.sitio p { margin: 0.4rem 0; }
+
+/* Ayudas de lectura de «Aa». */
+/* Justificar: el texto del contenido (las líneas cortas no cambian; tablas, código y tarjetas, tampoco). */
+[data-just="1"] main :is(p, li, dd):not(.ofertas *) { text-align: justify; hyphens: auto; }
+[data-bionic="1"] b { font-weight: 800; }
+
+/* Panel «Aa»: lateral en pantallas anchas; hoja inferior en móvil. */
+dialog.ajustes {
+  padding: 0; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+  width: min(26rem, 100vw); max-width: 100vw; max-height: 100dvh; margin: 0 0 0 auto; height: 100dvh;
+  border-radius: 0; box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+dialog.ajustes[open] { display: flex; flex-direction: column; }
+dialog.ajustes::backdrop { background: rgba(0, 0, 0, 0.55); }
+.aj-cab { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--line); }
+.aj-cab h2 { margin: 0; font-size: 1.2rem; }
+.aj-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 0.4rem 1.2rem 1rem; overscroll-behavior: contain; }
+.aj-pie { padding: 0.8rem 1.2rem; border-top: 1px solid var(--line); }
+dialog.ajustes fieldset { border: 0; border-top: 1px solid var(--line); margin: 0; padding: 0.9rem 0; min-width: 0; }
+dialog.ajustes fieldset:first-child { border-top: 0; }
+dialog.ajustes legend { padding: 0; margin-bottom: 0.4rem; font-weight: 700; }
+.opciones { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.opcion { position: relative; }
+.opcion input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.opcion label {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0.3rem 0.9rem; cursor: pointer;
+  border: 2px solid var(--muted); border-radius: 6px; font-weight: 600; background: transparent;
+}
+.opcion input:checked + label { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.opcion input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 3px; }
+.casilla-ajuste { display: flex; align-items: flex-start; gap: 0.7rem; padding: 0.35rem 0; }
+.casilla-ajuste input { width: 1.4rem; height: 1.4rem; margin-top: 0.2rem; accent-color: var(--accent); flex-shrink: 0; }
+.casilla-ajuste span span { display: block; color: var(--muted); font-size: 0.9rem; }
+.paso { display: flex; align-items: center; gap: 0.6rem; }
+.paso output { min-width: 5.5rem; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.paso button { min-width: 44px; }
+.colores { display: grid; gap: 0.5rem; margin-top: 0.8rem; }
+.color-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.8rem; }
+.color-fila input[type="color"] { width: 44px; height: 44px; padding: 2px; border: 1px solid var(--muted); border-radius: 6px; background: var(--surface); cursor: pointer; }
+.color-fila label { font-weight: 600; min-width: 5rem; }
+.color-fila output { color: var(--muted); font-size: 0.9rem; }
+.color-fila output.poco { color: var(--alert); font-weight: 700; }
+.aj-nota { color: var(--muted); font-size: 0.9rem; margin: 0.4rem 0 0; }
+@media (max-width: 42em) {
+  dialog.ajustes { width: 100vw; height: auto; max-height: 92dvh; margin: auto 0 0; border-radius: 14px 14px 0 0; }
+}
+
+/* Avisos: dos accesos al principio y listas de RSS en grupos plegables, en tablas. */
+.vias { list-style: none; padding: 0; margin: 1rem 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 0.8rem; }
+.vias a {
+  display: flex; flex-direction: column; gap: 0.25rem; height: 100%; padding: 0.9rem 1.1rem;
+  color: var(--ink); text-decoration: none; background: var(--surface); border: 2px solid var(--line); border-radius: 8px;
+}
+.vias a:hover { border-color: var(--accent); }
+.vias strong { color: var(--accent); font-size: 1.15rem; text-decoration: underline; text-underline-offset: 0.18em; }
+:target { scroll-margin-top: 1rem; }
+#buscar-listas { margin: 0.5rem 0 0.3rem; }
+#estado-listas { font-weight: 600; min-height: 1.6em; margin: 0 0 0.4rem; }
+.grupo-listas { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin-bottom: 0.6rem; }
+.grupo-listas > summary { cursor: pointer; padding: 0.6rem 1rem; min-height: 44px; font-weight: 700; }
+.grupo-listas > summary .dato { font-weight: 400; }
+/* Tablas de listas: el nombre a la izquierda y «Copiar» siempre en la misma columna. */
+.tabla-listas { width: calc(100% - 2rem); max-width: 36rem; margin: 0 1rem 0.8rem; border-collapse: collapse; }
+.tabla-listas[hidden], .tabla-listas tr[hidden] { display: none; }
+.tabla-listas caption { text-align: left; font-weight: 700; padding: 0.6rem 0 0.3rem; }
+.tabla-listas thead th { font-size: 0.85rem; font-weight: 600; color: var(--muted); padding-bottom: 0.2rem; }
+.tabla-listas th, .tabla-listas td { text-align: left; padding: 0 0.5rem 0 0; border-bottom: 1px solid var(--line); }
+.tabla-listas tbody th { font-weight: 400; height: 44px; }
+.tabla-listas td, .tabla-listas thead th + th { width: 1%; white-space: nowrap; }
+.tabla-listas tr.sublista th { padding-left: 1.4rem; }
+.tabla-listas tr.sublista th::before { content: "↳ "; content: "↳ " / ""; color: var(--muted); }
+ul.listas { list-style: none; padding: 0; }
+ul.listas li { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.5rem; min-height: 44px; }
+ul.listas li[hidden] { display: none; }
+button.copiar { min-height: 36px; padding: 0.1rem 0.6rem; font-size: 0.85rem; border-width: 1px; border-radius: 999px; }
+
+/* Organismos: índice de grupos, buscador y «Sin ofertas abiertas en este momento» plegado. */
+.indice-grupos { list-style: none; padding: 0; margin: 0 0 0.8rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.indice-grupos a { display: inline-flex; align-items: center; min-height: 44px; }
+#buscar-organismos { margin: 0.3rem 0; }
+#estado-organismos { font-weight: 600; min-height: 1.6em; margin: 0 0 0.4rem; }
+.sin-ofertas-grupo { margin: 0.8rem 0 0; }
+.sin-ofertas-grupo > summary { cursor: pointer; font-weight: 700; padding: 0.6rem 0; min-height: 44px; box-sizing: border-box; }
+.sin-ofertas-grupo > summary .dato { font-weight: 400; }
+
+/* «Volver arriba» en el pie: lleva a la cabecera, con el tamaño mínimo de un objetivo táctil. */
+footer.sitio .subir a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--accent); }
+
+/* Botón flotante «Arriba» (con JS, tras bajar un poco). Abajo a la derecha, sin tapar el texto central. */
+.subir-flotante {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 20;
+  display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; padding: 0 1rem;
+  background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none;
+  border: 2px solid var(--bg); border-radius: 999px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.subir-flotante:hover { text-decoration: underline; }
+@media print { .subir-flotante { display: none !important; } }
+
+/* Ejemplos de código en «Datos abiertos»: se desplazan en horizontal sin ensanchar la página. */
+pre { overflow-x: auto; padding: 0.6rem 0.8rem; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; font-size: 0.9rem; }
+
+/* «Datos abiertos»: índice compacto en una o dos líneas; los apartados de «Campos» van en la misma línea. */
+.indice-datos { margin: 0.6rem 0 1rem; }
+.indice-datos ul { list-style: none; padding: 0; margin: 0; display: inline-flex; flex-wrap: wrap; gap: 0 1rem; }
+.indice-datos > ul > li:has(ul) { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0 0.4rem; }
+.indice-datos li li a { font-size: 0.9rem; }
+.indice-datos a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* «Datos abiertos»: campos de cada fichero en tablas «Campo | Descripción»; en móvil, cada fila apilada. */
+section.campos-fichero[hidden], table.campos tr[hidden] { display: none; }
+#estado-campos { font-weight: 600; min-height: 1.6em; margin: 0 0 0.4rem; }
+table.campos { width: 100%; border-collapse: collapse; margin: 0.4rem 0 0.8rem; }
+table.campos thead th { font-size: 0.85rem; font-weight: 600; color: var(--muted); text-align: left; padding: 0 0.6rem 0.2rem 0; }
+table.campos tbody th, table.campos td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem 0.5rem 0; border-top: 1px solid var(--line); }
+table.campos tbody th { width: 11rem; overflow-wrap: anywhere; }
+@media (max-width: 34em) {
+  table.campos thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.campos tbody tr { display: block; border-top: 1px solid var(--line); padding: 0.5rem 0; }
+  table.campos tbody th, table.campos td { display: block; width: auto; border: 0; padding: 0; }
+  table.campos td { margin-top: 0.2rem; }
+}
+
+/* «Datos abiertos»: ejemplos en pestañas de solo texto (datos.js), con «Copiar» a la derecha. */
+.barra-ejemplo { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.4rem; }
+.barra-ejemplo [role="tablist"] { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+.barra-ejemplo [role="tab"], .barra-ejemplo button.copiar {
+  min-height: 44px; padding: 0 0.2rem; border: 0; border-radius: 0; background: none; font-weight: 400; font-size: 0.95rem;
+}
+.barra-ejemplo [role="tab"] { color: var(--muted); border-bottom: 3px solid transparent; }
+.barra-ejemplo [role="tab"]:hover { color: var(--ink); }
+.barra-ejemplo [role="tab"][aria-selected="true"] { color: var(--ink); font-weight: 700; border-bottom-color: var(--accent); }
+.barra-ejemplo button.copiar { color: var(--accent); text-decoration: underline; text-underline-offset: 0.2em; }
+.ejemplo-bloque .sistema { font-weight: 700; margin: 0.6rem 0 0.2rem; }
+.ejemplo-bloque[role="tabpanel"] pre { margin-top: 0.2rem; }

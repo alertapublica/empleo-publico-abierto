@@ -1,0 +1,249 @@
+[
+ {
+  "idOcupacionTipo": 26,
+  "codOcupacionTipo": "AMDE",
+  "desOcupacionTipo": "AMBIENTACIÓN DECORADOS",
+  "especialidad": null,
+  "puestos": [
+   {
+    "idPuesto": 62,
+    "proceso": {
+     "idProceso": 3,
+     "codProceso": "P3",
+     "desProceso": "Proceso Libre"
+    },
+    "numPlazas": 3,
+    "docsPuesto": [
+     {
+      "idDocPuesto": 1631,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2026-11-03",
+      "docPublico": "AMDE_P3_Adjudicación-bolsa-de-reserva-02_PUBLICO.pdf",
+      "recientementePublicado": true,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Adjudicación bolsa de reserva 02",
+       "orden": 2
+      }
+     },
+     {
+      "idDocPuesto": 1603,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2026-09-30",
+      "docPublico": "AMDE_P3_Bolsa-de-reserva-02_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Bolsa de reserva 02",
+       "orden": 2
+      }
+     },
+     {
+      "idDocPuesto": 1341,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-10-01",
+      "docPublico": "AMDE_P3_Adjudicación-bolsa-de-reserva_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Adjudicación bolsa de reserva",
+       "orden": 58
+      }
+     },
+     {
+      "idDocPuesto": 1295,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-08-21",
+      "docPublico": "AMDE_P3_Bolsa-de-reserva_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Bolsa de reserva",
+       "orden": 55
+      }
+     }
+    ],
+    "fechaInicioInscripcion": null,
+    "fechaFinInscripcion": null
+   }
+  ],
+  "basesEspecificas": [
+   {
+    "idBasesEspecificas": null,
+    "fichero": "bbee_ambientacion_de_decorados_1-2022-adaptadas.pdf",
+    "tipo": "BAS"
+   }
+  ]
+ },
+ {
+  "idOcupacionTipo": 1,
+  "codOcupacionTipo": "ARQSUP",
+  "desOcupacionTipo": "ARQUITECTURA SUPERIOR",
+  "especialidad": null,
+  "puestos": [
+   {
+    "idPuesto": 52,
+    "proceso": {
+     "idProceso": 1,
+     "codProceso": "P1",
+     "desProceso": "Proceso sólo méritos"
+    },
+    "numPlazas": 2,
+    "docsPuesto": [
+     {
+      "idDocPuesto": 303,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-01-01",
+      "docPublico": "Adjudicaciones_Definitivas-ARQUITECTURA SUPERIOR_ProcP1_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado definitivo de adjudicacion de plazas P1",
+       "orden": 120
+      }
+     },
+     {
+      "idDocPuesto": 318,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-01-01",
+      "docPublico": "Adjudicaciones_Provisionales-ARQSUP_ProcP1_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado provisional de adjudicacion de plazas P1",
+       "orden": 100
+      }
+     }
+    ],
+    "fechaInicioInscripcion": null,
+    "fechaFinInscripcion": null
+   }
+  ],
+  "basesEspecificas": [
+   {
+    "idBasesEspecificas": null,
+    "fichero": "bbee_arquitectura_superior_1-2022-adaptadas.pdf",
+    "tipo": "BAS"
+   }
+  ]
+ },
+ {
+  "idOcupacionTipo": 24,
+  "codOcupacionTipo": "IMGP",
+  "desOcupacionTipo": "IMAGEN PERSONAL",
+  "especialidad": null,
+  "puestos": [
+   {
+    "idPuesto": 71,
+    "proceso": {
+     "idProceso": 2,
+     "codProceso": "P2",
+     "desProceso": "Proceso méritos y prueba"
+    },
+    "numPlazas": 1,
+    "docsPuesto": [
+     {
+      "idDocPuesto": 440,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-01-01",
+      "docPublico": "Adjudicaciones_Definitivas-IMAGEN_PERSONAL_ProcP2_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado definitivo de adjudicacion de plazas P2",
+       "orden": 240
+      }
+     },
+     {
+      "idDocPuesto": 436,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-01-01",
+      "docPublico": "Adjudicaciones_Provisionales-IMAGEN_PERSONAL_ProcP2_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado provisional de adjudicacion de plazas P2",
+       "orden": 220
+      }
+     }
+    ],
+    "fechaInicioInscripcion": null,
+    "fechaFinInscripcion": null
+   },
+   {
+    "idPuesto": 11,
+    "proceso": {
+     "idProceso": 3,
+     "codProceso": "P3",
+     "desProceso": "Proceso Libre"
+    },
+    "numPlazas": 9,
+    "docsPuesto": [
+     {
+      "idDocPuesto": 1077,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-06-12",
+      "docPublico": "IMGP_P3_Listado-definitivo-de-adjudicacion-de-plazas-P3_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado definitivo de adjudicacion de plazas P3",
+       "orden": 360
+      }
+     },
+     {
+      "idDocPuesto": 1037,
+      "desDocumento": null,
+      "codOcupacionTipo": null,
+      "desOcupacionTipo": null,
+      "desProceso": null,
+      "fechaPublicacion": "2025-05-30",
+      "docPublico": "IMGP_P3_Listado-provisional-de-adjudicacion-de-plazas-P3_PUBLICO.pdf",
+      "recientementePublicado": false,
+      "ordenTipoDocPuesto": null,
+      "tipoDocPuesto": {
+       "desDocumento": "Listado provisional de adjudicacion de plazas P3",
+       "orden": 340
+      }
+     }
+    ],
+    "fechaInicioInscripcion": null,
+    "fechaFinInscripcion": null
+   }
+  ],
+  "basesEspecificas": [
+   {
+    "idBasesEspecificas": null,
+    "fichero": "bbee_imagen_personal_1-2022-adaptadas.pdf",
+    "tipo": "BAS"
+   }
+  ]
+ }
+]

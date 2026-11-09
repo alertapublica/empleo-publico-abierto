@@ -1,0 +1,43 @@
+{
+ "MI 2025-01-02": {
+  "apply_url": "https://agenciaefe.es/wp-content/uploads/2026/10/MI-2025-01-02-Director-Auditoria-interadministrativa_.pdf",
+  "category": "Oferta de empleo público",
+  "closed_at": null,
+  "code": "MI 2025-01-02",
+  "company": "Agencia EFE",
+  "deadline": "2026-12-15",
+  "department": "Auditoria Interna",
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:25:01+00:00",
+  "id": "efe:MI 2025-01-02",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-15",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-27",
+  "ref": "MI 2025-01-02",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://agenciaefe.es/wp-content/uploads/2026/10/MI-2025-01-02-Director-Auditoria-interadministrativa_.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   },
+   {
+    "html": "<p>Las bases de la convocatoria explican cómo y dónde presentar la candidatura. La Agencia EFE no publica una ficha propia de cada oferta.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "efe",
+  "source_title": null,
+  "status": "open",
+  "title": "Director Auditoría (interadministrativa)",
+  "url": "https://agenciaefe.es/wp-content/uploads/2026/10/MI-2025-01-02-Director-Auditoria-interadministrativa_.pdf"
+ }
+}

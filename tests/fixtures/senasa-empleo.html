@@ -1,0 +1,1002 @@
+<link rel="stylesheet" type="text/css" href="https://www.senasa.es/estilos/popup.css?v=1794150969" />
+<link rel="stylesheet" href="https://use.typekit.net/tqv0vnn.css" />
+
+<div class="modal-active">
+    <!-- Fondo semitransparente detrás del cuadro de cookies -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cookies" id="cookieBanner">
+        <div class="contCoo">
+            <div class="text">
+                SENASA utiliza únicamente cookies propias, cuya finalidad es estrictamente técnica o necesaria para la correcta funcionalidad del sitio web y su navegación, por lo que no se requiere una aceptación o consentimiento previo expreso conforme al artículo 22.2 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electronico. Para más información consulte nuestra
+                <a class="linkCookie" target="_blank" href="https://www.senasa.es/recursos/adobePDF/Guia_de_Uso_de_cookies_ES.pdf">guía sobre el uso de cookies</a>
+                y nuestra
+                <a class="linkCookie" target="_blank" href="https://www.senasa.es/recursos/adobePDF/Politica_Privacidad.pdf">política de privacidad</a>.
+            </div>
+            <div class="text italica">
+                SENASA only uses its own cookies, the purpose of which is strictly technical or necessary for the correct functionality of the website and its browsing, and therefore no prior express acceptance or consent is required in accordance with the article 22.2 of Law 34/2002, of 11 July, on services of information society and electronic commerce. For more information, please consult our
+                <a class="linkCookie" target="_blank" href="https://www.senasa.es/recursos/adobePDF/Guide_to_the_Use_of_Cookies_EN.pdf">guide to the use of cookies</a>
+                and our
+                <a class="linkCookie" target="_blank" href="https://www.senasa.es/recursos/adobePDF/Política_de_privacidad_EN_RET.pdf">privacy policy</a>.
+            </div>
+        </div>
+        <div class="botonCerrar">cerrar / close</div>
+    </div>
+</div>
+<script>
+    document.querySelector('.botonCerrar').addEventListener('click', function() {
+        var cookieBanner = document.getElementById('cookieBanner');
+        var overlay = document.getElementById('overlay');
+            
+        // Aplicar animaciones de desvanecimiento y desplazamiento
+        cookieBanner.style.transform = 'translateY(100%)'; // Desplazar hacia abajo
+        cookieBanner.style.opacity = '0'; // Desvanecer el cuadro
+        overlay.style.opacity = '0'; // Desvanecer el fondo semitransparente
+            
+        // Esperar el fin de la animación (0.5s) y luego eliminar ambos elementos
+        setTimeout(function() {
+            cookieBanner.remove();
+            overlay.remove();
+            document.body.classList.remove('modal-active'); // Volver a habilitar la interacción en la página
+        }, 500); // Tiempo coincidente con la duración de la animación
+    });
+
+
+    // Mostrar el popup al cargar la página
+
+    // Generamos la fecha de hoy
+
+    const fechaActual = new Date();
+    const tabId = fechaActual.getFullYear() + "/"+ String(fechaActual.getMonth() + 1). padStart(2, '0') + "/" + String(fechaActual.getDate()).padStart(2, '0');
+    //console.log (tabId);
+
+    window.addEventListener('load', function () {
+       //console.log ("carga " + localStorage.getItem("popupAbierto") + " " + tabId);
+        if (!localStorage.getItem("popupAbierto") || localStorage.getItem("popupAbierto")!==tabId){
+            //console.log("ha entrado");
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('cookieBanner').style.display = 'flex';
+            localStorage.setItem("popupAbierto", tabId);
+        }
+    });
+
+</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>SENASA</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta charset="utf-8" />
+    <meta name="author" content="SENASA" />
+	<meta name="Description" content="SERVICIOS Y ESTUDIOS PARA LA NAVEGACIóN AéREA Y LA SEGURIDAD AERONáUTICA S.M.E. M.P. S.A." />
+	<meta name="Keywords" content="senasa, seguridad, formacion, aeronautica, formacion aeronautica, seguridad aeronautica, ATCO Jobs, Call for Tender" />	
+	<meta property="og:title" content="SENASA S.M.E. M.P. S.A." />
+	<meta property="og:url" content="https://www.senasa.es/" />
+	<meta property="og:description" content="Formación y asistencia técnica especializada en navegación aérea, seguridad en el transporte, aeropuertos, servidumbres, sostenibilidad y UAS." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image:secure_url" itemprop="image" content="https://www.senasa.es/img/LogoSENASAbola.png" />
+	<meta property="og:image:width" content="107" />
+	<meta property="og:image:height" content="56" />
+	<meta property="og:locale" content="es-ES" />
+	<link rel="shortcut icon" type="image/png" href="https://www.senasa.es/img/favicon.png" />
+    <link rel="icon" type="image/png" href="https://www.senasa.es/img/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="https://www.senasa.es/estilos/estilos.css?v=1794150969" />
+	<script src="https://www.senasa.es/js/senasa.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://www.senasa.es/estilos/perfil_contratante.css?v=1794150969" />
+	<script src="https://www.senasa.es/js/trabaja.js?v=1794150969"></script>
+
+</head>
+<body>
+	<div id="container">
+		<div id="cabecera">
+			<div id="cabecera_top">
+				<div class="cabecera_top_left">
+					<a id="HLinkCabeceraLogoSenasaNew" href="https://www.senasa.es/index.php?lang=es-ES"><img id="ImageLogoSenasa" src="https://www.senasa.es/img/cabecera_web.svg?v=1794150969" alt="Servicios y Estudios para la Navegación Aérea y la Seguridad Aeronáutica S.M.E. M.P. S.A." /></a>
+				</div>
+				<div class="cabecera_top_right">
+					<div class="langCabecera">	
+					<a  id="HLinkCabeceraIdiomaES" href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=13" title="Castellano / Spanish">
+					ESP 
+					</a>
+					<span class="separatorLANG">|</span>
+					<a  id="HLinkCabeceraIdiomaGB" href="https://www.senasa.es/index.php?lang=en-GB&amp;idPag=13" title="English / Inglés">
+					ENG
+					</a>
+					</div>
+					<div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" title="Facebook" href="https://www.facebook.com/pages/SENASA/157753110940844"><img alt="Facebook SENASA" src="https://www.senasa.es/img/facebook.svg?v=1794150969" /></a>
+					<a target="_blank" title="Twitter" href="https://twitter.com/SENASA_Spain"><img alt="Twitter SENASA" src="https://www.senasa.es/img/twitter.svg?v=1794150969" /></a>
+					<a target="_blank" title="LinkedIn" href="https://www.linkedin.com/company/senasa/"><img alt="LinkedIn SENASA" src="https://www.senasa.es/img/linkedin.svg?v=1794150969" /></a>
+					<a target="_blank" title="Bluesky" href="https://bsky.app/profile/senasa-spain.bsky.social"><img alt="bluesky SENASA" src="https://www.senasa.es/img/bluesky.svg?v=1794150969" /></a>
+					</div>
+				</div>
+			</div>
+			<div id="cabecera_bottom">
+				<div class="mainMenuContainer">
+					<ul>
+						<li><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=0">INICIO</a></li>
+						<li><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=6">QUIÉNES SOMOS</a></li>
+						<li><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=4">PERFIL DEL CONTRATANTE</a></li>
+						<li><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=5">TRABAJA CON NOSOTROS</a></li>
+						<li><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=3">CONTACTO</a></li>
+
+					</ul>	
+					<!-- 08/06/2023 -->
+
+					<!-- <a class="quejas" href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=629">BUZÓN DE DENUNCIAS Y QUEJAS</a> -->
+					<a class="quejas" target="_blank" href="https://centinela.lefebvre.es/public/concept/2375049?access=I0Xii2enLTqM15UQ2KDI8DQiCz5heYAxY6K9lguRZko%3D">CANAL DE DENUNCIAS</a>
+
+			
+				</div>
+			</div>
+		</div>
+<!--.............................................HASTA AQUÍ LA CABECERA.........................................................-->
+		<div id="contenido">
+			<div id="menu">
+				<ul class="menuses">
+				</ul>
+				<div class="tituloSeccion">PRODUCTOS Y SERVICIOS</div>
+				<div class="menu_productos">
+					<ul>
+						<li class="itemPortada">
+							<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=273">
+								<img src="https://www.senasa.es/img/miniaturas/catalogo.png" />
+								<div class="triangulito"></div>
+								<div class="cajaContenido">
+									<p class="tituloItem">FORMACIÓN AERONÁUTICA</p>
+									<p class="descripItem">Catálogo de Cursos</p>
+								</div>
+							</a>
+						</li>
+						<li class="itemPortada">
+							<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=24">
+								<img src="https://www.senasa.es/img/miniaturas/consultoria_aeronautica.png" />
+								<div class="triangulito"></div>
+								<div class="cajaContenido">
+									<p class="tituloItem">CONSULTORÍA AERONÁUTICA</p>
+									<p class="descripItem">Compromiso con la Seguridad</p>
+								</div>
+							</a>
+						</li>
+						<li class="itemPortada">
+							<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=25">
+								<img src="https://www.senasa.es/img/miniaturas/medio_ambiente.png" />
+								<div class="triangulito"></div>
+								<div class="cajaContenido">
+									<p class="tituloItem">MEDIO AMBIENTE</p>
+									<p class="descripItem">Sostenibilidad en la Aviación</p>
+								</div>
+							</a>
+						</li>
+						<li class="itemPortada">
+							<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=29">
+								<img src="https://www.senasa.es/img/miniaturas/mantenimiento_aeronaves.png" />
+								<div class="triangulito"></div>
+								<div class="cajaContenido">
+									<p class="tituloItem">MANTENIMIENTO Y OPERACIÓN DE AERONAVES</p>
+									<p class="descripItem">Experiencia y Profesionalidad</p>
+								</div>
+							</a>
+						</li>
+						<li class="itemPortada">
+							<a href="https://www.senasa.es/recursos/adobePDF/2022/pdf/SENASA_cat_servicios_UAS_2022_ES.pdf" target='_blank'>
+								<img src="https://www.senasa.es/img/miniaturas/thumbUAS.jpg" />
+								<div class="triangulito"></div>
+								<div class="cajaContenido">
+									<p class="tituloItem">DRONES: FORMACIÓN Y CONSULTORÍA</p>
+									<p class="descripItem">Catálogo de servicios</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- menu -->			<div id="pagina">
+				<div class="migaPan">
+					<ul>
+						<li>
+							<a href="https://www.senasa.es/index.php?lang=es-ES">INICIO</a>
+						</li>
+						<li>
+							<img src="https://www.senasa.es/img/bullet_migapan.png" />
+							<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=13">PAGINA DE PRUEBA</a>
+						</li>
+					</ul>
+				</div>
+				<div class="bannerTitulo">
+					<img src="https://www.senasa.es/img/cabeceras/bannerGenerico.jpg" />
+					<h1>PAGINA DE PRUEBA</h1>
+				</div>
+				<div class="bannerTituloTriangulito"></div>
+				<div class="contenido_variable">
+<p>Los profesionales de SENASA son los responsables de la evolución que ha experimentado la sociedad desde su creación en 1990 hasta nuestros días. Gracias a la implicación, esfuerzo e innovación de más de 420 profesionales, SENASA es hoy en día una empresa de referencia en el  Sector Aeronáutico.</p>
+<p>&nbsp;</p>
+<p>SENASA proporciona condiciones únicas de desarrollo, en la esfera profesional participando en proyectos nacionales e internacionales con las principales instituciones aeronáuticas españolas; y en la esfera personal, promoviendo el respeto a la individualidad dentro del equipo, y favoreciendo el equilibrio de su crecimiento profesional con sus otras facetas de desarrollo.</p>
+<p>&nbsp;</p>
+<p>Si estás interesado/a en formar parte de nuestro proyecto, consulta en esta página nuestras ofertas de empleo:</p>
+<p>&nbsp;</p>
+<form name="frm_ofertas" method='POST' action="">
+	<input type="radio" name="rad_ofertas" id="rad_ofertas1" value="1" checked />
+	<label for="rad_ofertas1">Activas</label>&nbsp;&nbsp;
+	<input type="radio" name="rad_ofertas" id="rad_ofertas2" value="2" />
+	<label for="rad_ofertas2">Cerradas</label>&nbsp;&nbsp;
+	<input type="radio" name="rad_ofertas" id="rad_ofertas3" value="3" />
+	<label for="rad_ofertas3">Todas</label>
+</form>
+<p>&nbsp;</p>
+<div class="resultSet" id="resulsetOfertas">
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript:inscripcion(this);" ref="XXX">CONTROLADORES/AS DE TRÁNSITO AÉREO</a></h1>
+		<p>&nbsp;</p>
+		<p>SENASA está seleccionando controladores/as de tránsito aéreo con todas las habilitaciones para impartir formación inicial en las habilitaciones de ruta y aproximación (APP, APS, ACP y ACS).</p>
+	</div>
+	<!-- Pedro 27/dic/2021: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<h1>RESOLUCIÓN PROCESO TASA DE REPOSICIÓN 2021</h1>
+	</div>
+	<!-- Pedro 16/diciembre/2021: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<h1>PROCESO TASA REPOSICIÓN 2021</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>36-21</p>
+		<p><span class="bold">Plazas Vacantes: </span>15</p>
+		<p><span class="bold">Fecha de publicación: </span>2021-12-16</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2021-12-23</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/36-21.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+	</div>
+	<!-- Pedro 5/abr/2021: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<h1><!-- <a href="https://www.senasa.es/recursos/adobePDF/2021/pdf/resolucion_proc_tasa_reposicion.pdf" target="_blank"> -->RESOLUCIÓN PROCESO TASA DE REPOSICIÓN<!-- </a> --></h1>
+	</div>
+	
+	<!-- Pedro 20/dic/2019: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<h1><!-- <a href="https://www.senasa.es/recursos/adobePDF/2019/pdf/Resolución_proceso_estabilizacion.pdf" target="_blank"> -->RESOLUCIÓN PROCESO ESTABILIZACIÓN EMPLEO TEMPORAL<!-- </a> --></h1>
+	</div>
+	<!-- Pedro 10/dic/2019: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<!-- <h1><a href="#" onclick="javascript:inscripcion(this);" ref="142-19">CONVOCATORIA PROCESO ESTABILIZACIÓN EMPLEO TEMPORAL</a></h1> -->
+		<h1>CONVOCATORIA PROCESO ESTABILIZACIÓN EMPLEO TEMPORAL</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>142-19</p>
+		<p><span class="bold">Plazas Vacantes: </span>39</p>
+		<p><span class="bold">Fecha de publicación: </span>2019-12-10</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2019-12-17</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/142-19.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+	</div>
+
+	<!-- Pedro 26/sep/2019: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	<div class="contrato cerrada">
+		<h1>RESOLUCIÓN PROCESO TASA DE REPOSICIÓN</h1>
+	</div>
+
+	<!-- Pedro 13/sep/2019: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	
+	<div class="contrato cerrada">
+		<!-- <h1><a href="#" onclick="javascript:inscripcion(this);" ref="111-19">PROCESO TASA DE REPOSICIÓN</a></h1> -->
+		<h1>PROCESO TASA DE REPOSICIÓN</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>111-19</p>
+		<p><span class="bold">Plazas Vacantes: </span>14</p>
+		<p><span class="bold">Fecha de publicación: </span>2019-09-13</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2019-09-20</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/111-19.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+	</div>
+
+	<!-- Guille 21/dic/2018: Pongo a cañón esta capa a petición de Inma de RRHH -->
+	
+	<div class="contrato cerrada">
+		<!-- <h1><a href="https://www.senasa.es/recursos/adobePDF/2018/pdf/Resolución Proceso Consolidación Empleo Temporal.pdf" ref="XXX">RESOLUCIÓN PROCESO DE CONSOLIDACIÓN DE EMPLEO TEMPORAL</a></h1>-->
+		<h1>RESOLUCIÓN PROCESO DE CONSOLIDACIÓN DE EMPLEO TEMPORAL</h1>
+	</div>
+	
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. RPAs-UAS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>105-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-30</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-06</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/105-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/105-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. SIRU</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>104-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>3</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-30</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-06</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/104-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/104-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Registro matrículas aeronaves</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>103-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-27</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/103-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/103-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Exámenes Piloto</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>102-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-23</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/102-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/102-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Secretaría General</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>101-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-22</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-10-25</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/101-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/101-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. PESO-Calidad</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>100-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-13</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-10-20</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/100-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/100-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. PESO-SNS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>99-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-06</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-10-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/99-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/99-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="98-26">Jefe-a de Equipo (Mecánica). Salamanca</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>98-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-05</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/98-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/98-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="97-26">Técnico-a Mantenimiento Aeronaves. Salamanca</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>97-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-10-05</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/97-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/97-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Experto-a Operaciones de vuelo. SOV y Trabajos Aéreos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>96-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-30</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/96-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/96-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Superior. Mantenimiento Salamanca</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>95-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-25</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-10-26</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/95-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/95-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Medio. Mantenimiento Salamanca</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>94-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-25</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-05</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/94-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/94-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="93-26">Titulado-a Superior o Titulado-a Medio o Grado. Soporte Proyectos Técnicos</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>93-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-25</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/93-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/93-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Contabilidad</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>92-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-21</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-28</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/92-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/92-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Grado. Secretaría General AEE</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>91-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-18</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-25</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/91-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/91-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Oficial TPV</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>90-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-17</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-24</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/90-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/90-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Secretaría General</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>89-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-17</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-24</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/89-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/89-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Licencias Personal de Vuelo</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>88-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-17</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-24</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/88-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/88-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. PESO-Calidad</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>86-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-08</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-28</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/86-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/86-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. UAS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>85-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-01</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-08</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/85-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/85-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado Superior o Grado. Marketing Digital</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>84-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-09-01</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-08</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/84-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/84-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. SOV y Trabajos Aéreos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>83-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-31</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/83-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/83-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Aprobaciones y estandarización aeronavegabilidad</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>82-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-26</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-08-27</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/82-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/82-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Medio o Grado. Licencias Personal de Vuelo</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>81-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>2</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-26</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-14</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/81-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/81-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Responsable de Operaciones. SASEMAR</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>80-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-14</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/80-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/80-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="79-26">Titulado-a Superior o Titulado-a Medio o Grado. Licencias Ferroviarias</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>79-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/79-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/79-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Experto-a Operaciones Vuelo. Coordinación de enseñanzas Aeronáuticas</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>78-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-08-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-14</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/78-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/78-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Oficial Básico Mantenimiento Aeronáutico. Salamanca</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>77-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>2</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-31</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-08-31</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/77-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/77-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Medio o Grado. SOV y Trabajos Aéreos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>76-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-30</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-08-31</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/76-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/76-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Grado. Gabinete DSA</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>75-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-30</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-08-18</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/75-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/75-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Encargado-a de Obra. Servicios Generales</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>74-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-14</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/74-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/74-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="73-26">Titulado-a Superior o Titulado-a Medio o Grado. NA-ATM-ANS</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>73-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-21</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/73-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/73-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Básico-a. Sistemas de la Información</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>72-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-21</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-28</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/72-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/72-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. SOV y Trabajos Aéreos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>87-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-17</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/87-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/87-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Gestión de Subvenciones</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>71-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-15</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-22</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/71-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/71-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Gestión de Subvenciones</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>70-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-15</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-22</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/70-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/70-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="69-26">Técnico-a. Licencias Ferroviarias</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>69-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-15</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/69-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/69-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="68-26">Técnico-a Experto-a. Licencias Ferroviarias</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>68-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-15</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/68-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/68-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Desarrollo Informático</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>67-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-14</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-21</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/67-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/67-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Dirección de Programas e Industria AEE</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>66-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-14</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-21</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/66-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/66-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. UAS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>63-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-07-08</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-10-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/63-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/63-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Gestión de huelgas</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>50-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-06-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-01</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/50-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/50-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Grado. Dirección AESA</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>49-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-06-24</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-08-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/49-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/49-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Secretaría General</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>48-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-06-22</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-29</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/48-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/48-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a. Desarrollo Informático</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>47-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-06-04</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/47-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/47-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Mantenimiento Aeronaves. Salamanca</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>46-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-06-04</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-11</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/46-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/46-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Oficial TPV. Servicios Generales</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>45-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-28</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-21</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/45-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/45-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado o Grado. Desarrollo Informático</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>44-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-28</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/44-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/44-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. RPAs-UAS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>43-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-28</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-03</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/43-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/43-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Administrativo-a. Licencias Personal de Vuelo</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>42-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-28</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-04</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/42-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/42-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="41-26">Titulado-a Superior o Titulado-a Medio o Grado. RR.HH - Administracion de Personal</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>41-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-28</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/41-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/41-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Soporte y Proyectos Técnicos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>40-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-14</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-21</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/40-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/40-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Medio o Grado. Medicina ferroviaria</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>39-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-12</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-21</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/39-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/39-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Experto-a Aeronáutico-a. Soporte Proyectos Técnicos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>38-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-08</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-15</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/38-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/38-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Medio o Grado. PESO-SNS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>37-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-05-06</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/37-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/37-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Protección y Resiliencia de Operadores Críticos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>31-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-04-27</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-01</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/31-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/31-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. Sistemas de la Información</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>27-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-04-06</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-18</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/27-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/27-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato activa">
+		<h1><a href="#" onclick="javascript: inscripcion(this);" ref="21-26">Titulado-a Superior o Titulado-a Medio o Grado. NA-ATM-ANS</a></h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>21-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-03-10</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-11-16</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/21-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/21-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Oficial Básico Mantenimiento Aeronáutico. Salamanca</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>19-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>2</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-03-04</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-29</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/19-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/19-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. SOV y Trabajos Aéreos</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>18-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-03-04</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-01</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/18-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/18-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. AVSEC</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>17-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-02-20</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-09-28</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/17-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/17-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. CNS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>08-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-01-29</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-11</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/08-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/08-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Técnico-a Experto-a Operaciones Vuelo. Coordinación de enseñanzas Aeronáuticas</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>07-26</p>
+		<p><span class="bold">Plazas Vacantes: </span>2</p>
+		<p><span class="bold">Fecha de publicación: </span>2026-01-29</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-06-29</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/07-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/07-26.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. PESO-SNS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>122-25</p>
+		<p><span class="bold">Plazas Vacantes: </span>2</p>
+		<p><span class="bold">Fecha de publicación: </span>2025-12-22</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-05-11</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/122-25.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/122-25.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+	<div class="contrato cerrada">
+		<h1>Titulado-a Superior o Titulado-a Medio o Grado. NA-ATM-ANS</h1>
+		<p>&nbsp;</p>
+		<p><span class="bold">Referencia: </span>99-25</p>
+		<p><span class="bold">Plazas Vacantes: </span>1</p>
+		<p><span class="bold">Fecha de publicación: </span>2025-11-07</p>
+		<p><span class="bold">Fecha fin de vigencia: </span>2026-07-13</p>
+		<p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/99-25.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p>
+		<!-- <p><a href="https://www.senasa.es/recursos/adobePDF/OfertasERP/99-25.pdf" target="_blank">VER CONVOCATORIA EN PDF</a></p> -->
+	</div>
+</div>
+<form name="frm_inscripcion" method='POST' action="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=202" class="oculto">
+	<input type="hidden" name="referencia" />
+	<input type="hidden" name="titulo" />
+</form>
+<form method="post" action="http://srvaosp01.senasa.es:9191/service.asmx?WSDL">
+	<input type="hidden" name="className" value="SENCurriculumAX" />
+	<input type="hidden" name="methodName" value="consultingRecruitingTable" />
+	<input type="submit" />
+</form>				</div>
+			</div> <!-- pagina -->
+
+		</div><!-- contenido -->
+<!--.....................................................PIE........................................................................-->
+		<div id="pie_pagina">
+			<div id="pieTop">
+				<ul>
+					<li>
+						<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=53">AVISO LEGAL</a>
+					</li>
+					<li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=613">POLÍTICA DE PRIVACIDAD</a>
+					</li>
+					
+					<li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=254">GESTION DE DATOS PERSONALES Y PRIVACIDAD</a>
+					</li>
+					<!-- <li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a target="blanck" href="https://www.senasa.es/recursos/adobePDF/Guia_de_Uso_de_cookies_ES.pdf">USO DE COOKIES</a>
+					</li>
+
+					<li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=2">MAPA DEL SITIO</a>
+					</li> -->
+					<!-- <li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=59">ÁREA RESTRINGIDA</a>
+					</li> -->
+					<li>
+						<img src="https://www.senasa.es/img/bullet_pie_bottom.png">
+						<a href="mailto:calidad@senasa.es?subject=SugerenciasSenasa" title="Ayúdanos a mejorar nuestros servicios. Buzón de sugerencias">AYÚDANOS A MEJORAR</a>
+					</li>
+				</ul>
+			</div>
+			<div id="pieMiddle">
+				<div id="pieMiddleLeft"><a href="https://www.senasa.es/recursos/adobePDF/2025/pdf/SGS_Esquema Nacional de Seguridad_ESMAD_000441_ES_firmado.pdf"><img width="50px" src="https://www.senasa.es/img/ENS.png"></a></div>
+
+				<!-- <div id="pieMiddleLeft"><a href="https://www.agenda2030.gob.es/"><img alt="ODS" src="https://www.senasa.es/img/ods.png"></a></div> -->
+				<div id="pieMiddleRight"><a href="https://www.senasa.es/index.php?lang=es-ES&amp;idPag=716"><img alt="Trainair Plus" src="https://www.senasa.es/img/trainer_plus.jpg"></a></div>
+			</div>
+			<div id="pieBottom">SERVICIOS Y ESTUDIOS PARA LA NAVEGACIÓN AÉREA Y LA SEGURIDAD AERONÁUTICA S.M.E. M.P. S.A.</div>
+		</div> <!-- pie_pagina -->
+		<div id="reg_mercantil">REGISTRO MERCANTIL: TOMO 838, FOLIO 121, HOJA 16835. C.I.F.: A-79818423</div>
+	</div> <!-- container -->
+</body>
+</html>

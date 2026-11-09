@@ -1,0 +1,382 @@
+
+<html>
+<head>
+	<title>GPEX - Proceso de selecci&oacute;n</title>
+<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./imagenes/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./imagenes/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./imagenes/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./imagenes/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./imagenes/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./imagenes/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./imagenes/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./imagenes/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./imagenes/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="./imagenes/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./imagenes/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="./imagenes/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./imagenes/favicon/favicon-16x16.png">
+		<link rel="manifest" href="./imagenes/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="./imagenes/favicon/ms-icon-144x144.png">
+<!-- fin favicon -->
+	<link rel="stylesheet" type="text/css" href="css/estilo_inicio.css" />
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilo_new.css" />
+	<link rel="stylesheet" href="css/fuentes.css">	
+	<link rel="stylesheet" href="css/login.css">	
+	<link href="css/jquery.alerts.css" media="all" rel="stylesheet" type="text/css" >		
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/registro.js"></script>				
+	<script language="JavaScript" type="text/JavaScript" src="js/ajax.js"></script>		
+	<script language="JavaScript" type="text/JavaScript" src="js/funciones.js"></script>		
+	<script language="JavaScript" type="text/JavaScript" src="js/openpopups.js"></script>				
+	<script language="javascript" type="text/javascript" src="js/jquery.alerts.js" ></script>		
+
+
+	<script type="text/javascript">
+	
+	/********   MENU PARA TABLET Y MOVILES ************/
+	$(document).ready(function(){
+	
+
+	   $('a#modal_cookie').click(function(evento){		   		   
+	  $('#modal').load('cookies/index.php');
+   });
+	
+
+/*************fin ready ******/		
+
+
+	ComprobarCookies();
+});
+
+
+	function ComprobarCookies() {
+	    if (localStorage.acceptCookies == 'true') {} else {
+	        $('#div-cookies').show();
+	    }
+	}
+
+	function ocultarCookies() {
+
+	    localStorage.acceptCookies = 'true';
+	    $('#div-cookies').hide();
+	}
+
+	
+	function closeModal(){
+		$('#bgmodal').remove();
+		$('#bgtransparent').remove();
+	}
+
+
+	/*******************************************************/
+
+</script>
+
+
+
+
+</head>
+<body>
+	<div id="contenedor">
+		<div class="wrapper">
+			<div id="">
+				<div id="logotipo" class="logotipo"><a href="index.php" title="Inicio" lang="es"><img border="0" src="imagenes/logotipo.png" title="Gesti&oacute;n P&uacute;blica de Extremadura"/> </a></div>
+				<div id="titulo" class="titulo">Gesti&oacute;n P&uacute;blica de Extremadura</div>
+				<div id="logojunta" class="logojunta">
+					<a href="https://www.juntaex.es/" title="Inicio" target="_blank" lang="es"><img id="img_logojunta" border="0" src="imagenes/logoLargo.png" title="Junta de Extremadura" /></a>
+				</div>
+				<div id="subtitulo" class="subtitulo">Portal Candidat<label style="font-size:40px;">@</label></div>
+
+				<div id="nav" class="menu">
+					<ul id="menu">
+						
+														<li><a class="" href="index.php" title="Inicio">Inicio</a></li>
+												
+						 <li><a class="" href="index.php?modulo=ofertas_publico&pagina=index.php" title="Procesos Abiertos">Procesos Abiertos</a></li>
+						 <li><a class="" href="index.php?modulo=ofertas_publico&pagina=index_cerrados.php" title="Procesos Cerrados">Procesos Cerrados</a></li>
+                         <li><a class="" href="index.php?modulo=anuncios" title="Procesos Cerrados">Anuncios Ofertas de Empleo</a></li>
+						  						 <li><a class="" href="index.php?modulo=accesibilidad" title="Declaraci�n de Accesibilidad">Accesibilidad</a></li>
+						
+					</ul>
+			   </div>			
+			</div>
+
+			<div id="contenido"><!--contenido-->				
+			<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+<div class="camino_migas mi_25">Procesos Abiertos&nbsp;<img src="imagenes/simbolo_lista_superior.gif" style="vertical-align:middle ">&nbsp;Visualizar</div>
+<br>
+<center>
+
+
+
+
+
+
+<table width="90%" cellspacing="1" cellpadding="2" align="center">
+	<tr>
+	<td width="25%" align="left"><img border="0"  src=""  style="display:none;"></td>
+	<td width="25%" align="center"><img border="0" src=""  style="display:none;"></td>
+	<td width="25%" align="center"><img border="0" src=""  style="display:none;"></td>
+	<td width="25%" align="right"><img border="0" src="img_financiacion//51Cof_Union_Eurpopea.jpg"  ></td>
+	</tr>
+	</table>	
+
+
+<table width="90%" cellspacing="1" cellpadding="2" align="center" class="tabla_oferta">	
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left; width:30%">Sociedad</td>
+		<td align="left" class="celdatabla txt_normal">GPEX</td>
+	</tr>	
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left;">&Aacute;rea</td>
+		<td align="left" class="celdatabla txt_normal">Área de Gestión Forestal y Medio Natural</td>
+	</tr>	
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left;">Convenio de referencia</td>
+		<td align="left" class="celdatabla txt_normal">202518AGE011 - Asistencia técnica y auxiliar para la ejecución de tareas vinculadas a las intervenciones del Plan Estratégico de la PAC de España 2023-2027 cofinanciadas por el Fondo FEADER y gestionadas por la Dirección General de Gestión Forestal, Caza y Pesca de la Consejería de Gestión Forestal y Mundo Rural de la Junta de Extremadura</td>
+	</tr>		
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left;">Proyecto de referencia</td>
+		<td align="left" class="celdatabla txt_normal">08.02.02 - Asistencia en la redacción de proyectos y dirección de obras en montes gestionados por la administración forestal 2026<br>08.02.03 - Asistencia en la redacción de proyectos y dirección de obras en montes gestionados por la administración forestal 2027</td>
+	</tr>		
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left;">Denominaci&oacute;n del puesto</td>
+		<td align="left" class="celdatabla txt_normal">BC26342 Personal Técnico Medio Ambiental</td>
+	</tr>		
+	<tr>
+		<td class="celdatablaoferta" style="text-align:left;">N&#186; de plazas ofertadas</td>
+		<td align="left" class="celdatabla txt_normal">1</td>
+	</tr>								
+</table>
+<br>
+	
+<table width="90%" cellspacing="1" cellpadding="2" align="center" class="tabla_oferta">	
+	<tr><td class="titulo_apartado" colspan="2">CARACTER&Iacute;STICAS DEL PUESTO</td></tr>
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left; width:30%">Emplazamiento y/o puesto de trabajo</td>
+		<td align="left" class="celdatabla txt_normal">Mérida (Badajoz)</td>
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Horas semanales u horario de trabajo</td>
+		<td align="left" class="celdatabla txt_normal">37.5 Horas semanales de lunes a viernes</td>
+	</tr>	
+		
+				
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Causa del contrato ofertado</td>
+		<td align="left" class="celdatabla txt_normal">Cubrir plaza temporal</td>
+	</tr>	
+		<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Retribuci&oacute;n Bruta Anual</td>
+		<td align="left" class="celdatabla txt_normal">Según II Convenio Colectivo GPEX (Anexo III)</td>
+	</tr>		
+	<tr>
+		<!-- G:2016/11/30 -->
+		<!-- <td class="celdatabla txt_normal_neg" style="text-align:left;">Categor�a profesional</td> -->
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Grupo profesional</td>
+		<td align="left" class="celdatabla txt_normal">Grupo B. Diplomatura, Arquitectura Técnica, Ingeniería Técnica o Grado correspondiente.</td>
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Duraci&oacute;n estimada del contrato</td>
+		<td align="left" class="celdatabla txt_normal">Hasta incorporación de la persona sustituida, finalización de la reserva de puesto o finalización del encargo con fecha 30/09/2027</td>
+	</tr>						
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Fecha de incorporaci&oacute;n deseada</td>
+		<td align="left" class="celdatabla txt_normal">Inmediata</td>
+	</tr>	
+	<tr><td class="titulo_apartado" colspan="2">FUNCIONES Y/O TAREAS A DESEMPE&Ntilde;AR EN EL PUESTO</td></tr>
+	<tr>		
+		<td align="left" class="celdatabla txt_normal" colspan="2">- Asistencia en la redacción de proyectos y trabajos técnicos<br><br />
+- Asistencia a la Dirección facultativa en la dirección de las obras</td>
+	</tr>								
+	<tr><td colspan="2" class="titulo_apartado">PROCEDIMIENTO</td></tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left; width:30%">Tramitaci&oacute;n</td>
+		<td align="left" class="celdatabla txt_normal">Portal Candidat@ de GPEX: www.gpex.es</td>
+	</tr>				
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Tipo de procedimiento</td>
+		<td align="left" class="celdatabla txt_normal">Ordinario</td>
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Medios</td>
+		<td align="left" class="celdatabla txt_normal">Propios</td>
+	</tr>			
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Publicidad</td>
+		<td align="left" class="celdatabla txt_normal">Portal Candidat@ GPEX y nota de prensa Junta de Extremadura</td>
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Plazo de presentaci&oacute;n de canditaturas</td>
+<!--		<td align="left" class="celdatabla txt_normal">Desde el d�a < ? echo $fecha_inicio_candidatura; ?> hasta el d�a < ? echo $fecha_fin_candidatura; ?>, ambos inclusive.</td>
+-->        
+		<td align="left" class="celdatabla txt_normal">Desde el d&iacute;a 06/11/2026 hasta el d&iacute;a 12/11/2026, ambos inclusive.</td>        
+		            
+	</tr>													
+	<tr><td colspan="2" class="titulo_apartado">REQUISITOS</td></tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Titulaciones y estudios</td>		
+<!--rowspan="< ? echo count($ofertas_requisitos_titulos)+1;?>"-->		
+		<td align='left' class='celdatabla txt_normal'><i>- Ingeniería Técnica Forestal y/o Grado equivalente</i><br/></td>			
+	</tr>
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Experiencia profesional</td>		
+<!--rowspan="< ? echo count($ofertas_requisitos_experiencias)+1;?>"-->		
+		<td align='left' class='celdatabla txt_normal'><i>- Experiencia laboral acreditable de, al menos, 6 meses en tareas propias de la titulación exigida en esta publicación</i><br/></td>			
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Formaci&oacute;n complementaria </td>		
+<!-- rowspan="< ? echo count($ofertas_requisitos_cursos)+1;?>"-->
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>			
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Idiomas</td>				
+<!--rowspan="< ? echo count($ofertas_requisitos_idiomas)+1;?>"-->		
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>	
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Inform&aacute;tica</td>		
+<!--rowspan="< ? echo count($ofertas_requisitos_informaticas)+1;?>"-->
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>			
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Carn&eacute;s de conducir</td>		
+<!--rowspan="< ? echo count($ofertas_requisitos_carnes)+1;?>"-->
+		<td align='left' class='celdatabla txt_normal'><i>- Tipo B</i><br/></td>			
+	</tr>		
+	<!-- SI LA OFERTA TIENE DECLARACION RESPONSABLE -->	
+		<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Otros</td>
+		<td class="celdatabla txt_normal" style="text-align:left;"> Incorporación inmediata<br />
+Declaración expresa responsable								</td>
+	</tr> 	
+		<tr><td colspan="2" class="titulo_apartado">FASE DE M&Eacute;RITOS</td></tr>			
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Titulaciones y estudios</td>		
+<!--rowspan="< ? echo count($ofertas_meritos_titulos)+1;?>"-->		
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>			
+	</tr>
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Experiencia profesional</td>		
+<!--rowspan="< ? echo count($ofertas_meritos_experiencias)+1;?>"-->
+		<td align='left' class='celdatabla txt_normal'><i>- Experiencia laboral acreditable superior a la exigida en esta publicación<br>- Experiencia laboral acreditable en redacción de proyectos en el ámbito forestal</i><br/></td>			
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;">Formaci&oacute;n complementaria </td>		
+<!-- rowspan="< ? echo count($ofertas_meritos_cursos)+1;?>"-->
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>	
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Idiomas</td>				
+<!--rowspan="< ? echo count($ofertas_meritos_idiomas)+1;?>"-->		
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>	
+	</tr>		
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Inform&aacute;tica</td>		
+<!--rowspan="< ? echo count($ofertas_meritos_informaticas)+1;?>"-->		
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>			
+	</tr>	
+	<tr>
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Carn&eacute;s de conducir</td>		
+<!--rowspan="< ? echo count($ofertas_meritos_carnes)+1;?>"-->		
+		<td align="left" class="celdatabla txt_normal">&nbsp;</td>			
+	</tr>
+	<tr>		
+		<td class="celdatabla txt_normal_neg" style="text-align:left;" >Otros:</td>	
+		<td align="left" class="celdatabla txt_normal" ></td>
+	</tr>			
+	<tr>		
+		<td align="left" class="celdatabla txt_normal" colspan="2">Observación: Todos los requisitos y méritos aportados por las personas candidatas deberán ser acreditados documentalmente, previa petición por GPEX, antes de la incorporación de la persona candidata seleccionada.</td>
+	</tr>		
+	<tr><td colspan="2" class="titulo_apartado">FASE DE CONOCIMIENTOS Y ACTITUDES</td></tr>
+	<tr>		
+		<td align="left" class="celdatabla txt_normal" colspan="2">Las personas candidatas preseleccionadas serán citadas para la realización de una o varias de las siguientes pruebas o ejercicios:<br />
+- Test psicotécnico.<br />
+- Examen o prueba teórica, práctica o teórico-práctica.<br />
+- Redacción y/o defensa de un proyecto.<br />
+- Entrevista personal y/o grupal.<br />
+- Otras que así se determine.</td>
+	</tr>		
+	<tr><td colspan="2" class="titulo_apartado">CONSIDERACIONES</td></tr>
+	<tr>		
+		<td align="left" class="celdatabla txt_normal" colspan="2">El Órgano de Provisión de Personal está constituido por:<br />
+Presidencia:<br />
+- Responsable del Departamento de RRHH de Gpex, SAU<br />
+Secretaría:<br />
+- Personal Técnico del Departamento de RRHH de Gpex, SAU<br />
+Vocalía:<br />
+- Personal Técnico del Departamento de RRHH de Gpex, SAU<br />
+Colaboración:<br />
+- Asistencia externa colaboradora (empresa consultora especializada)<br />
+<br />
+Plazo de reclamación:<br />
+A partir de la publicación de la fase Cierre Provisional y del Listado Provisional de Candidato/a , se abrirá un plazo de reclamación de 48 horas. Las reclamaciones deben ir dirigidas a seleccionconvocatoria@gpex.es <br />
+<br />
+- En caso de empate, se optará por aquella persona candidata que aporte un Certificado de Discapacidad Oficial con un grado de discapacidad igual o superior al 33%</td>
+	</tr>						
+</table>
+
+	
+<br>
+<table style="width:100%;padding:20px 0 35px 0;z-index:1001;position: relative;">
+<tr>
+	<td align="center">	
+	<form name="fvolver" id="fvolver" action="index.php">
+		<input type="hidden" name="modulo" id="modulo" value="ofertas_publico">
+		<input type="hidden" name="pagina" id="pagina" value="index.php">
+		<input type="submit" class="input_boton" name="atras" id="atras" value="Volver">
+	</form>
+	</td>
+</tr>
+</table>	
+</center>
+</body>
+</html>
+			</div>
+		</div>
+		<div style="width:10%; float:left; ">&nbsp;</div>
+		<div id="modal" class="modalmask"><a href="#close" title="Close" class="close">X</a></div>		
+		<div id="pie" style="position: fixed;bottom: 0;width: 53%; z-index:1001;"><!--pie-->				
+			<script type="text/javascript">
+	function abrir(){
+		window.open("./politica_proteccion_datos2.pdf", "lpd", "location=1,status=1,scrollbars=1,width=700,height=800,left=500"); 
+	}
+	
+	</script>
+
+
+<div id="pie_enlaces" style="left:0;">
+<!--	<a href="index.php?modulo=aviso_legal"  class="enlace_pie"  title="Aviso Legal">Aviso Legal</a>-->
+<!--	<a href="./politica_proteccion_datos.pdf"  class="enlace_pie"  title="Aviso Legal">Aviso Legal</a>-->
+	<a class="enlace_pie"  title="Aviso Legal" href="javascript:abrir();" >Aviso legal</a></b>
+</div>
+<div id="copyright">
+	Gesti&oacute;n P&uacute;blica de Extremadura &copy; Extremadura 2012
+</div>
+
+
+
+		</div>
+		<div id="div-cookies" style="display: none;"><div class="texto_cookie">
+		GPEX no utiliza cookies para recoger informaci&oacute;n de las personas usuarias, ni registra las direcciones IP de acceso. &Uacute;nicamente se utilizan cookies
+		propias, de sesi&oacute;n, necesarias, con finalidad t&eacute;cnica (aquellas que permiten la navegaci&oacute;n a trav&eacute;s del sitio web y la utilizaci&oacute;n
+		de las diferentes opciones y servicios que en ella existen).<div class="clear-2"></div>
+		</div>
+		<button id="ok_cookies" type="button" class="btn-sm btn-primary" onclick="ocultarCookies()">Aceptar</button>
+		<a class="espacio-dcha negrita mi_25" hreflang="es" id="modal_cookie" href="#modal" title="Politica de Cookies">Ver Pol&iacute;tica de Cookies</a>
+		
+		</div>		
+
+	</div>
+</body>
+</html>

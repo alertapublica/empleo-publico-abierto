@@ -1,0 +1,35 @@
+name: Sondeo
+
+# Lectura puntual de las páginas de empleo de las empresas públicas. Solo se lanza a mano.
+# No toca los datos ni la web: guarda el HTML recibido como artefacto, para revisarlo.
+on:
+  workflow_dispatch:
+    inputs:
+      ronda:
+        description: "Lista de páginas a leer (1 = inicial, 2 a 4 = seguimiento, 5 = fuera de SEPI)"
+        type: choice
+        options: ["1", "2", "3", "4", "5"]
+        default: "1"
+
+permissions:
+  contents: read
+
+jobs:
+  sondeo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Leer las páginas (una petición por página, con pausa)
+        env:
+          RELAY_CLAVE: ${{ secrets.RELAY_CLAVE }}
+          RELAY_URL: ${{ secrets.RELAY_URL }}
+        run: python -m empleo.sondeo sondeo "${{ inputs.ronda }}" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sondeo
+          path: sondeo
+          retention-days: 7

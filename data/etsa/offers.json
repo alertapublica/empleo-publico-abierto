@@ -1,0 +1,39 @@
+{
+ "RH2026045": {
+  "apply_url": "https://www.etsa.es/conductor-a-repartidor-a-de-vehiculos-ligeros-con-adr/",
+  "category": null,
+  "closed_at": null,
+  "code": "RH2026045",
+  "company": "ETSA",
+  "deadline": "2026-11-11",
+  "deadline_time": "15:00",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T08:58:36+00:00",
+  "id": "etsa:RH2026045",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-11",
+  "location": null,
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-10-28",
+  "ref": "RH2026045",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p><a href=\"https://www.etsa.es/etsa/wp-content/uploads/1.-Bases-conv_Conduc-RAD_Indef-1.pdf\">-&gt; Ver bases de convocatoria</a><br/>\n<a href=\"https://www.etsa.es/etsa/wp-content/uploads/Anexo-Proteccion-Datos-ETSA_Conductores-2.pdf\">-&gt; Ver Anexo Protección Datos</a></p>\n<p>Interesados/as: Enviar mail a <strong>candidaturas@etsa.es </strong>según lo indicado en las bases antes del 11 de noviembre de 2026 a las 15.00 horas.<br/>\nLa candidatura <strong>solo se admitirá</strong> si se envía el <strong>anexo de protección de datos</strong> debidamente cumplimentado y firmado a<strong> candidaturas@etsa.es</strong></p>\n <a href=\"https://www.etsa.es/politica-privacidad/\">Leer la política de privacidad.</a>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "etsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Conductor/a repartidor/a de vehículos ligeros con ADR",
+  "url": "https://www.etsa.es/conductor-a-repartidor-a-de-vehiculos-ligeros-con-adr/"
+ }
+}

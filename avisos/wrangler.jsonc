@@ -1,0 +1,37 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.147.0/config-schema.json",
+  // Avisos por Telegram y correo. Los datos de las ofertas siguen en GitHub Pages: aquí solo
+  // están las suscripciones (D1) y la bandeja de salida.
+  "name": "empleo-avisos",
+  "account_id": "a8183539272f1346a4e6fe05a5c5ee29",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  // URL pública para el webhook de Telegram y los enlaces del correo.
+  "workers_dev": true,
+  "preview_urls": false,
+  // Registros sin datos personales: el código no escribe chats, correos ni mensajes.
+  "observability": { "enabled": true },
+  "triggers": {
+    // Cada minuto vacía la bandeja de salida; a las 6:00 UTC prepara el resumen diario por correo.
+    // Deben coincidir con CRON_ENVIOS y CRON_CORREO de src/index.js.
+    "crons": ["* * * * *", "0 6 * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "empleo-avisos",
+      "database_id": "479bff1c-7005-473a-a092-2c91c145ffad",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "URL_PUBLICA": "https://empleo-avisos.empleo-publico.workers.dev",
+    // Correo desactivado hasta tener dominio y plan Workers Paid: entonces «si», CORREO_REMITENTE
+    // y el binding "send_email": [{ "name": "CORREO" }].
+    "CORREO_ACTIVO": "no",
+    "CORREO_REMITENTE": ""
+  }
+  // Secretos (wrangler secret put): AVISOS_CLAVE (la misma que el secreto de GitHub), TELEGRAM_TOKEN
+  // (de BotFather), TELEGRAM_SECRETO (cadena aleatoria para el webhook) y, con el correo,
+  // TURNSTILE_SECRETO.
+}

@@ -1,0 +1,44 @@
+{
+ "asesor-a-juridico-a-letrado-a": {
+  "apply_url": "https://www.mercasa.es/wp-content/uploads/2026/10/BASES-EXTERNAS_ASESORIA-JURIDICA-LETRADA_-T05-26.pdf",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Mercasa",
+  "deadline": "2026-11-16",
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-07T09:24:22+00:00",
+  "id": "mercasa:asesor-a-juridico-a-letrado-a",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": null,
+  "published_on": null,
+  "ref": "asesor-a-juridico-a-letrado-a",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 16/11/2026</li></ul>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.mercasa.es/wp-content/uploads/2026/10/BASES-EXTERNAS_ASESORIA-JURIDICA-LETRADA_-T05-26.pdf\">BASES CONVOCATORIA PROCESO SELECTIVO EXTERNO</a></li><li><a href=\"https://www.mercasa.es/wp-content/uploads/2026/10/ANEXO-I.-FORMULARIO-INSCRIPCION-T05-26.pdf\">ANEXO I. FORMULARIO DE INSCRIPCIÓN DE CANDIDATURAS</a></li><li><a href=\"https://www.mercasa.es/wp-content/uploads/2026/10/ANEXO-II.-DECLARACION-RESPONSABLE.pdf\">ANEXO II. DECLARACIÓN RESPONSABLE</a></li><li><a href=\"https://www.mercasa.es/wp-content/uploads/2026/10/NOTA-ACLARATORIA-VALORACION-DE-MERITOS-EN-MATERIA-PROCESAL-T05-26.pdf\">COMUNICADO ACLARATORIO SOBRE LA VALORACIÓN DE LA EXPERIENCIA EN MATERIA PROCESAL</a></li><li><a href=\"https://www.mercasa.es/wp-content/uploads/2026/10/T05-26-COMUNICADO-DE-AMPLIACION-DEL-PLAZO-DE-PRESENTACION-DE-CANDIDATURAS.pdf\">AMPLIACIÓN DEL PLAZO DE PRESENTACIÓN DE CANDIDATURAS</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "mercasa",
+  "source_title": null,
+  "status": "open",
+  "title": "Asesor/a jurídico/a letrado/a",
+  "url": "https://www.mercasa.es/que-es-mercasa/unete-a-mercasa/"
+ }
+}

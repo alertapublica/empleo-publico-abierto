@@ -1,0 +1,46 @@
+{
+ "1498": {
+  "apply_url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1498",
+  "category": null,
+  "closed_at": null,
+  "code": "2026.76",
+  "company": "IDIVAL",
+  "contract": null,
+  "deadline": "2026-11-11",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "family": null,
+  "first_seen": "2026-11-08T16:28:39+00:00",
+  "id": "idival:1498",
+  "kind": null,
+  "listed_deadline": "2026-11-11",
+  "location": "Cantabria",
+  "missed_runs": 0,
+  "opens_on": "2026-11-07",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 4,
+  "positions": null,
+  "published_on": null,
+  "ref": "1498",
+  "region": "Cantabria",
+  "sections": [
+   {
+    "html": "<p>Requisitos de participación</p><p>Podrán participar las personas que cumplan los siguientes requisitos:</p><p>Tener nacionalidad española. Asimismo, podrán participar en igualdad de condiciones:</p><p>Las personas nacionales de los Estados miembros de la Unión Europea.</p><p>El cónyuge de españoles o de nacionales de otros Estados miembros de la UE, cualquiera que sea su nacionalidad, siempre que no estén separados de derecho, así como sus descendientes en las condiciones previstas en la convocatoria.</p><p>Las personas incluidas en el ámbito de aplicación de los Tratados Internacionales celebrados por la Unión Europea y ratificados por España en los que resulte de aplicación la libre circulación de trabajadores.</p><p>Las personas extranjeras con residencia legal en España.</p><p>Estar en posesión del título universitario de Doctor/a.</p><p>Tener una experiencia mínima de 10 años en la dirección de grupos de investigación en el área de salud.</p><p>Contar con al menos 3 proyectos de investigación en el área de la salud como Investigador/a Principal, financiados mediante convocatorias competitivas nacionales, encontrándose al menos 1 de ellos activo en los últimos 5 años.</p><p>Contar con al menos 3 proyectos de investigación en el área de salud como Investigador/a Principal, financiados mediante convocatorias competitivas internacionales, encontrándose al menos 1 de ellos activo en los últimos 5 años.</p><p>Poseer la capacidad funcional necesaria para el desempeño de las tareas.</p><p>No haber sido separado/a mediante expediente disciplinario, no haber sido objeto de despido disciplinario en una sociedad o fundación del sector público y no encontrarse en situación de inhabilitación, en los términos establecidos en la Base 1.ª de la convocatoria.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/DescargarDocumentoBases/1498\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "idival",
+  "source_title": "2026.76. Convocatoria para la cobertura del puesto de Director/a Científico de IDIVAL",
+  "status": "open",
+  "title": "Convocatoria para la cobertura del puesto de Director/a Científico de IDIVAL",
+  "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1498"
+ }
+}
