@@ -37,7 +37,7 @@ def tls_context() -> ssl.SSLContext:
 # Hosts que no responden a las IP de GitHub Actions: se leen por un relay con IP española, firmado con
 # RELAY_CLAVE y situado en RELAY_URL (secretos del repo). Cada host tiene que estar también en la lista
 # de hosts permitidos del relay.
-VIA_RELAY = {"sepi.es", "www.sepi.es"}
+VIA_RELAY = {"agenciaefe.es", "www.agenciaefe.es", "sepi.es", "www.sepi.es"}
 
 
 def relay(url: str) -> tuple[str, dict[str, str]]:

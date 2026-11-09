@@ -61,6 +61,10 @@ class Relay(unittest.TestCase):
         self.assertEqual(FakeRelay.seen[0]["url"], SEPI)
         self.assertTrue(FakeRelay.seen[0]["path"].startswith("/relay.php/?url="))
 
+    def test_efe_va_por_el_relay(self):
+        for url in ("https://agenciaefe.es/empleo-efe-temporal/", "https://www.agenciaefe.es/empleo-efe-indefinido/"):
+            self.assertEqual(http.Client(delay=0).get(url), f"por el relay: {url}")
+
     def test_firma_nueva_en_cada_intento(self):
         FakeRelay.answers = [502]  # fallo de red del relay: se reintenta
         with mock.patch.object(http, "relay", wraps=http.relay) as relay:
