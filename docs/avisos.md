@@ -13,6 +13,13 @@ Un aviso combina palabras del título (por comienzo de palabra, sin tildes), ár
 3. Variable del repo `TELEGRAM_BOT` con el usuario del bot: la web empieza a mencionarlo.
 4. Lanzar el workflow «Workers»: migra D1, despliega y registra el webhook y los comandos del bot.
 
+## Enlaces con el organismo ya elegido
+
+Para enlazar los avisos desde otra web (por ejemplo, la del Grupo Tragsa, `alertapublica/empleo-tragsa`), con el id de `organismos` de `api/listas.json`:
+
+- `https://alertapublica.es/avisos/?organismo=tragsa` deja marcada su casilla, y abierto su grupo, en el formulario de correo (`listas.js`).
+- `https://t.me/<bot>?start=tragsa` empieza un aviso con ese organismo ya elegido y se salta ese paso. Un `/start` sin organismo o con uno que no existe muestra la ayuda.
+
 ## Correo
 
 Sale por el SMTP del buzón `avisos@alertapublica.es` de Piensa (`smtp.buzondecorreo.com`, TLS en el 465), con un cliente propio sobre `cloudflare:sockets` (`avisos/src/smtp.js`). No hace falta el plan Workers Paid. Cada tanda abre una sola sesión y envía como mucho `CORREO_POR_TANDA` correos; el resto espera al minuto siguiente. Un destinatario rechazado no se reintenta; un fallo temporal o de conexión, sí.
