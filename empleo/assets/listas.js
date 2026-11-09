@@ -53,6 +53,18 @@
       : total === 1 ? "1 lista encontrada." : total + " listas encontradas.";
   }
 
+  // ?organismo=tragsa (enlace desde otra web): deja marcada su casilla en el formulario de correo y
+  // abierto su grupo. Solo se compara con las casillas que ya existen.
+  var pedido = new URLSearchParams(location.search).get("organismo");
+  if (pedido) {
+    document.querySelectorAll('.form-correo input[name="organismos"]').forEach(function (casilla) {
+      if (casilla.value !== pedido) return;
+      casilla.checked = true;
+      var grupo = casilla.closest("details");
+      if (grupo) grupo.open = true;
+    });
+  }
+
   if (form && input && estado && grupos.length) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();

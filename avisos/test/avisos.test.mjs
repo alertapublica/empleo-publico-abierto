@@ -207,6 +207,29 @@ test("el bot crea un aviso analista + Galicia + Tragsa con comunicados", async (
   assert.equal(await b.db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0, "sin avisos no se guarda el chat");
 });
 
+test("el enlace t.me/<bot>?start=tragsa crea un aviso con el organismo ya elegido", async () => {
+  const b = bot();
+  await b.db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
+  await b.escribir("/start noexiste");
+  assert.match(b.ultimo(), /\/nuevo crea un aviso/, "un organismo desconocido da la ayuda");
+  await b.escribir("/start tragsa");
+  assert.match(b.ultimo(), /aviso de las ofertas de Grupo Tragsa/);
+  assert.match(b.ultimo(), /Paso 1 de 3/);
+  await b.pulsar("saltar");
+  assert.match(b.ultimo(), /Paso 2 de 3/);
+  await b.pulsar("saltar");
+  await b.pulsar("no");
+  assert.match(b.ultimo(), /Paso 3 de 3/);
+  await b.pulsar("saltar");
+  assert.match(b.ultimo(), /comunicados/, "sin preguntar por los organismos");
+  await b.pulsar("si");
+  await b.pulsar("guardar");
+  assert.match(b.ultimo(), /Guardado/);
+  const aviso = JSON.parse(await b.db.prepare("SELECT criterios FROM avisos").first("criterios"));
+  assert.deepEqual(aviso.organismos, ["tragsa"]);
+  assert.equal(aviso.comunicados, true);
+});
+
 test("cancelar a medias no deja datos y /baja lo borra todo", async () => {
   const b = bot();
   await b.db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
