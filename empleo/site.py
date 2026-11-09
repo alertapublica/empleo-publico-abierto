@@ -872,8 +872,9 @@ def telegram_section(bot: str) -> str:
 <li>A partir de ese momento, el bot le enviará un mensaje cada vez que se publique una oferta que cumpla sus criterios.</li>
 </ol>
 <p>La oferta debe cumplir todos los criterios elegidos: «analista» y Galicia avisa solo de las ofertas de analista en Galicia. Si elige organismos, también puede recibir los comunicados de sus procesos selectivos.</p>
+<p>Las palabras se buscan en el título por su comienzo y sin distinguir tildes: «ingenier» encuentra «Ingeniero/a» e «Ingeniera». El título se compara tal como lo publica cada organismo, por lo que las ofertas en inglés o en catalán solo coinciden con palabras en ese idioma.</p>
 <p>El bot avisa de las ofertas nuevas y de las que se vuelven a publicar. Los cambios de plazo o de número de plazas solo se notifican por RSS.</p>
-<p>Con <code>/avisos</code> puede consultar y borrar sus avisos, y con <code>/ayuda</code>, obtener la explicación completa. El bot solo guarda el identificador del chat y sus criterios; con <code>/baja</code> se borran de inmediato. Más información en <a href="../acerca/#datos-personales">Datos personales</a>.</p>
+<p>Puede tener hasta 10 avisos. Con <code>/avisos</code> puede consultar y borrar sus avisos, y con <code>/ayuda</code>, obtener la explicación completa. El bot solo guarda el identificador del chat y sus criterios; con <code>/baja</code> se borran de inmediato. Más información en <a href="../acerca/#datos-personales">Datos personales</a>.</p>
 """
 
 
