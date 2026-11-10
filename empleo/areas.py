@@ -117,6 +117,8 @@ FRASES = [
      r"informacion y contenidos|contenidos digitales|comunicacion social|imagen corporativa|"
      r"realizacion( \(asistencia\)| audiovisual| de (television|programas))|realizador\w*|"
      r"\biluminacion\b|profesor\w* de orquesta", {"comunicacion": 3}),
+    (r"bienes culturales|bens culturals|patrimonio (cultural|historico|artistico)|"
+     r"patrimoni (cultural|historic)", {"comunicacion": 3}),
     (r"ingenier\w* de (la )?edificacion|arquitect\w* tecnic\w*", {"obras": 3}),
     (r"oficial\w* (de )?(puente|maquinas)|jefe\w* de maquinas|patron\w* (de|del) "
      r"(embarcacion|litoral|cabotaje|altura|buque|pesca)\w*|marina mercante|\bm\.?m\.?",
@@ -148,7 +150,8 @@ FRASES = [
     (r"ciencias de la salud|ciencies de la salut", {"sanidad": 1, "investigacion": 1}),
     (r"ciencias del mar|medio marino|espacios marinos|areas marinas|reservas? de la biosfera|"
      r"red natura|biodiversidad|habitats?|restauracion (ambiental|forestal)|genetica forestal|"
-     r"dominio publico (maritimo|hidraulico)|residuos", {"ambiente": 3}),
+     r"dominio publico (maritimo|hidraulico)|residuos|productos libres( de deforestacion)?|"
+     r"deforestacion importada", {"ambiente": 3}),
     (r"ciencias ambientales|ciencias de la naturaleza", {"ambiente": 1}),
     (r"energias? renovables?|eficiencia energetica|transicion energetica|"
      r"instalaciones electricas|ingenieria electrica|sistemas? electric\w*|equipos? electr\w*",
