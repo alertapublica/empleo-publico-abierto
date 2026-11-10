@@ -471,12 +471,12 @@ class Site(unittest.TestCase):
     def test_ubicacion_de_los_procesos_sin_municipio(self):
         base = {"source": "puertos", "url": "u", "state": "curso", "date": "", "first_seen": "2026-11-06T10:00:00+00:00"}
         notices = [{**base, "process": "A", "title": "a", "location": "Pasaia"},
-                   {**base, "process": "B", "title": "b", "location": "Bahía de Algeciras"},
+                   {**base, "process": "B", "title": "b", "location": "Vilagarcía"},  # nombre corto, no oficial
                    {**base, "process": "C", "title": "c"}]  # guardado antes de existir el dato
         api = {p["nombre"]: p for p in site.processes(notices)}
         self.assertEqual((api["A"]["ubicacion"], api["A"]["ccaa"], api["A"]["provincia"]), ("Pasaia", "16", "20"))
         self.assertNotIn("municipio", api["A"])
-        self.assertEqual((api["B"]["ubicacion"], api["B"]["ccaa"]), ("Bahía de Algeciras", None))  # no deja claro dónde
+        self.assertEqual((api["B"]["ubicacion"], api["B"]["ccaa"]), ("Vilagarcía", None))  # no deja claro dónde
         self.assertEqual((api["C"]["ubicacion"], api["C"]["ccaa"], api["C"]["provincia"]), (None, None, None))
         novedades = site.news({}, [], notices, {}, BASE, NOW)
         self.assertEqual({n["proceso"]: n["ccaa"] for n in novedades}, {"A": "16", "B": None, "C": None})

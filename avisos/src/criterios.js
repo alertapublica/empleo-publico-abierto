@@ -5,7 +5,8 @@
 //   areas:       ids de área (api/listas.json)
 //   teletrabajo: solo ofertas cuya ficha menciona el teletrabajo (las que no traen texto no se
 //                pueden comprobar y no se avisan)
-//   ccaa:        códigos INE de comunidad; sin_ccaa: incluir también las ofertas sin comunidad concreta
+//   ccaa:        códigos INE de comunidad; sin_ccaa: incluir también las ofertas y los comunicados sin
+//                comunidad concreta (casi todos los procesos son estatales o no dicen dónde)
 //   organismos:  ids de organismo
 //   comunicados: incluir los comunicados de procesos selectivos de esos organismos
 // Dentro de un mismo criterio basta con que coincida uno; entre criterios, tienen que coincidir todos.
@@ -37,6 +38,8 @@ export function coincide(criterios, novedad) {
   const palabras = lista(criterios.palabras);
   const organismos = lista(criterios.organismos);
   if (organismos.length && !organismos.includes(novedad.organismo)) return false;
+  const ccaa = lista(criterios.ccaa);
+  if (ccaa.length && !(novedad.ccaa ? ccaa.includes(novedad.ccaa) : criterios.sin_ccaa !== false)) return false;
 
   if (novedad.tipo === "comunicado") {
     if (!criterios.comunicados) return false;
@@ -45,8 +48,6 @@ export function coincide(criterios, novedad) {
   }
   if (novedad.tipo !== "oferta") return false;
 
-  const ccaa = lista(criterios.ccaa);
-  if (ccaa.length && !(novedad.ccaa ? ccaa.includes(novedad.ccaa) : criterios.sin_ccaa !== false)) return false;
   const areas = lista(criterios.areas);
   if (areas.length && !lista(novedad.areas).some((a) => areas.includes(a))) return false;
   if (criterios.teletrabajo && typeof novedad.teletrabajo !== "string") return false;

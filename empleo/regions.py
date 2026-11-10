@@ -12,7 +12,7 @@ SEVERAL = "Varias comunidades"
 UNKNOWN = "Sin ubicación"
 
 _ALIASES = {
-    "Andalucía": "andalucia almeria cadiz cordoba granada huelva jaen malaga sevilla cabril",
+    "Andalucía": "andalucia almeria cadiz cordoba granada huelva jaen malaga sevilla cabril|bahia de algeciras",
     "Aragón": "aragon huesca teruel zaragoza",
     "Asturias": "asturias oviedo gijon",
     "Illes Balears": "balears baleares mallorca menorca ibiza eivissa formentera",
@@ -24,7 +24,7 @@ _ALIASES = {
     "Ceuta": "ceuta",
     "Comunitat Valenciana": "valencia alicante alacant castellon castello|comunitat valenciana|comunidad valenciana",
     "Extremadura": "extremadura badajoz caceres",
-    "Galicia": "galicia coruna ourense orense lugo pontevedra|santiago de compostela|vigo",
+    "Galicia": "galicia coruna ourense orense lugo pontevedra|santiago de compostela|vigo|ferrol-san cibrao|marin y r. de pont.",
     "La Rioja": "rioja logrono",
     "Comunidad de Madrid": "madrid",
     "Melilla": "melilla",
@@ -50,6 +50,8 @@ def _build() -> list[tuple[str, str]]:
         "sta. cruz", "ciudad real", "castilla-la mancha", "castilla la mancha",
         "castilla y leon", "santiago de compostela", "pais vasco", "comunitat valenciana",
         "comunidad valenciana",
+        # Autoridades portuarias cuyo nombre no es el de un lugar (Puertos del Estado).
+        "bahia de algeciras", "ferrol-san cibrao", "marin y r. de pont.",
     }
     table: list[tuple[str, str]] = []
     for region, names in _ALIASES.items():
@@ -158,7 +160,7 @@ PROVINCES = {
     "05": ("Ávila", "avila"), "06": ("Badajoz", "badajoz"),
     "07": ("Illes Balears", "illes balears|islas baleares|baleares|balears|mallorca|menorca|ibiza|eivissa|formentera"),
     "08": ("Barcelona", "barcelona"), "09": ("Burgos", "burgos"), "10": ("Cáceres", "caceres"),
-    "11": ("Cádiz", "cadiz"), "12": ("Castellón/Castelló", "castellon|castello"),
+    "11": ("Cádiz", "cadiz|bahia de algeciras"), "12": ("Castellón/Castelló", "castellon|castello"),
     "13": ("Ciudad Real", "ciudad real"), "14": ("Córdoba", "cordoba"),
     "15": ("A Coruña", "a coruna|la coruna|coruna"), "16": ("Cuenca", "cuenca"),
     "17": ("Girona", "girona|gerona"), "18": ("Granada", "granada"),
@@ -170,7 +172,7 @@ PROVINCES = {
     "32": ("Ourense", "ourense|orense"), "33": ("Asturias", "asturias"),
     "34": ("Palencia", "palencia"),
     "35": ("Las Palmas", "las palmas|gran canaria|fuerteventura|lanzarote"),
-    "36": ("Pontevedra", "pontevedra"), "37": ("Salamanca", "salamanca"),
+    "36": ("Pontevedra", "pontevedra|marin y r. de pont."), "37": ("Salamanca", "salamanca"),
     "38": ("Santa Cruz de Tenerife",
            "santa cruz de tenerife|sta. cruz de tenerife|tenerife|la palma|la gomera|el hierro"),
     "39": ("Cantabria", "cantabria"), "40": ("Segovia", "segovia"), "41": ("Sevilla", "sevilla"),

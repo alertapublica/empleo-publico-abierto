@@ -890,7 +890,7 @@ def telegram_section(bot: str) -> str:
 <li>Escriba <code>/nuevo</code> y responda a las preguntas: palabras del título, áreas, comunidades autónomas y organismos. Puede omitir las que no le interesen.</li>
 <li>A partir de ese momento, el bot le enviará un mensaje cada vez que se publique una oferta que cumpla sus criterios.</li>
 </ol>
-<p>La oferta debe cumplir todos los criterios elegidos: «analista» y Galicia avisa solo de las ofertas de analista en Galicia. Si elige organismos, también puede recibir los comunicados de sus procesos selectivos.</p>
+<p>La oferta debe cumplir todos los criterios elegidos: «analista» y Galicia avisa solo de las ofertas de analista en Galicia. Si elige organismos, también puede recibir los comunicados de sus procesos selectivos; a ellos se aplican las palabras (en el nombre del proceso y en el comunicado) y las comunidades, si el proceso indica la suya.</p>
 <p>Las palabras se buscan en el título por su comienzo y sin distinguir tildes: «ingenier» encuentra «Ingeniero/a» e «Ingeniera». El título se compara tal como lo publica cada organismo, por lo que las ofertas en inglés o en catalán solo coinciden con palabras en ese idioma.</p>
 <p>El bot avisa de las ofertas nuevas y de las que se vuelven a publicar. Los cambios de plazo o de número de plazas solo se notifican por RSS.</p>
 <p>Puede tener hasta 10 avisos. Con <code>/avisos</code> puede consultar y borrar sus avisos, y con <code>/ayuda</code>, obtener la explicación completa. El bot solo guarda el identificador del chat y sus criterios; con <code>/baja</code> se borran de inmediato. Más información en <a href="../acerca/#datos-personales">Datos personales</a>.</p>
@@ -926,7 +926,7 @@ def mail_section(sitekey: str, organisms: list) -> str:
 <fieldset><legend>Comunidades autónomas</legend>
 <div class="opciones">
 {casillas("ccaa", [(code, name) for name, code in CCAA.items()])}</div>
-<label class="casilla"><input type="checkbox" name="sin_ccaa" value="1" checked> Incluir también las ofertas sin comunidad concreta</label></fieldset>
+<label class="casilla"><input type="checkbox" name="sin_ccaa" value="1" checked> Incluir también las ofertas y los procesos sin comunidad concreta</label></fieldset>
 <fieldset><legend>Organismos</legend>
 <p class="dato">Si no marca ninguno, recibirá avisos de todos, también de los que se incorporen al portal.</p>
 {groups}<label class="casilla"><input type="checkbox" name="comunicados" value="1"> Recibir también los comunicados de los procesos selectivos de los organismos elegidos</label></fieldset>
