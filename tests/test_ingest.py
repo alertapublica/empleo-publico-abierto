@@ -226,16 +226,29 @@ class Announcements(unittest.TestCase):
         known = {}
         ingest.sync_announcements(source, None, known, NOW)  # primera lectura: ya estaban
         source.items = [Announcement("", "Viejo", "T", "https://a"), Announcement("", "Nuevo", "T", "https://b")]
-        later = datetime(2026, 11, 10, 23, 30, tzinfo=timezone.utc)  # ya es día 11 en Madrid
+        later = datetime(2026, 11, 10, 23, 30, tzinfo=timezone.utc)
         ingest.sync_announcements(source, None, known, later)
         records = {r["process"]: r for r in known.values()}
         self.assertEqual(records["Viejo"]["state"], "retirado")
-        self.assertEqual((records["Nuevo"]["state"], records["Nuevo"]["date"]), ("curso", "2026-11-11"))
+        self.assertEqual((records["Nuevo"]["state"], records["Nuevo"]["date"]), ("curso", ""))  # sin fecha inventada
         self.assertEqual(feeds.announcement_items([records["Viejo"]]), [])
         ingest.sync_announcements(source, None, known, later + timedelta(days=29))
         self.assertEqual({r["process"]: r["state"] for r in known.values()}["Nuevo"], "curso")
         ingest.sync_announcements(source, None, known, later + timedelta(days=30))
         self.assertEqual({r["process"]: r["state"] for r in known.values()}["Nuevo"], "retirado")
+
+    def test_sin_fecha_no_se_inventa_y_lo_de_la_primera_lectura_no_es_novedad(self):
+        viejo, con_fecha = Announcement("", "P", "Viejo", "https://a"), self.item("P", "Con fecha")
+        known = self.sync({}, viejo, con_fecha)
+        self.sync(known, Announcement("", "P", "Nuevo", "https://b"), viejo, con_fecha, at=NOW + timedelta(hours=1))
+        records = {r["title"]: r for r in known.values()}
+        self.assertEqual(records["Viejo"]["date"], "")
+        self.assertTrue(records["Viejo"]["baseline"])  # y lo sigue siendo en las lecturas siguientes
+        self.assertNotIn("baseline", records["Nuevo"])
+        self.assertNotIn("baseline", records["Con fecha"])  # con fecha se sabe si es reciente
+        self.assertEqual((records["Nuevo"]["position"], records["Viejo"]["position"]), (0, 1))
+        self.assertNotIn("position", records["Con fecha"])
+        self.assertEqual({i["text"] for i in feeds.announcement_items(list(known.values()))}, {"Nuevo", "Con fecha"})
 
     def test_el_formato_anterior_se_sustituye(self):
         known = {"x:viejo": {"date": "2026-11-01", "process": "A", "title": "Corta", "url": "u", "source": "x",

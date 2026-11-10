@@ -9,7 +9,7 @@ from pathlib import Path
 from . import store
 from .http import Client
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, PROCESS_FIELDS, ListedOffer, SourceLayoutError,
-                    deadline_passed, today_madrid)
+                    deadline_passed)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
@@ -180,14 +180,17 @@ def sync_announcements(source: Source, http: Client, known: dict, now: datetime)
         del known[key]  # formato anterior: la lectura de hoy lo sustituye con todos sus datos
     first_read = not known
     processes = {}
-    for item in items:
+    for position, item in enumerate(items):
         key = f"{source.id}:{item.key}"
         before = known.get(key)
         first_seen = before["first_seen"] if before else stamp
         known[key] = {**asdict(item), "source": source.id, "first_seen": first_seen}
-        if source.stale_after_days:
-            known[key]["date"] = item.date or today_madrid(datetime.fromisoformat(first_seen))
-            known[key]["baseline"] = before["baseline"] if before else first_read
+        if not item.date:
+            # Sin fecha de la fuente no se inventa una: se ordena por cuándo se detectó y por su lugar
+            # en la web oficial, y lo que ya estaba en la primera lectura no es novedad.
+            known[key]["position"] = position
+            if before.get("baseline") if before else first_read:
+                known[key]["baseline"] = True
         processes[item.process] = known[key]
     for record in known.values():
         current = processes.get(record["process"])

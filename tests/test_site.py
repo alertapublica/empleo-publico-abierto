@@ -449,6 +449,24 @@ class Site(unittest.TestCase):
         novedades = {i["id"].split("/")[0]: i for i in json.loads(self.read("api/novedades.json"))["novedades"]}
         self.assertTrue(novedades["tragsa:4"]["teletrabajo"])
 
+    def test_comunicados_sin_fecha_por_deteccion_y_lo_que_ya_estaba_al_final(self):
+        base = {"source": "sepi", "process": "P", "url": "u", "state": "curso", "date": ""}
+        primera = {**base, "first_seen": "2026-11-01T08:00:00+00:00", "baseline": True}
+        notices = [
+            {**primera, "title": "Bases", "position": 2},
+            {**primera, "title": "Estado", "position": 0},
+            {**primera, "title": "Admitidos", "position": 1},
+            {**base, "title": "Resolución nueva", "first_seen": "2026-11-09T10:00:00+00:00", "position": 0},
+            {**base, "title": "Con fecha", "date": "2026-11-05", "first_seen": "2026-11-05T09:00:00+00:00"},
+        ]
+        (proceso,) = site.processes(notices)
+        self.assertEqual([c["titulo"] for c in proceso["comunicados"]],
+                         ["Resolución nueva", "Con fecha", "Estado", "Admitidos", "Bases"])
+        self.assertEqual([c["fecha"] for c in proceso["comunicados"]], [None, "2026-11-05", None, None, None])
+        # Un proceso del que solo se sabe lo que ya estaba va detrás de cualquiera con fecha.
+        otro = {**base, "process": "Q", "title": "Q1", "date": "2026-10-01", "first_seen": "2026-11-01T08:00:00+00:00"}
+        self.assertEqual([p["nombre"] for p in site.processes(notices[:3] + [otro])], ["Q", "P"])
+
     def test_sin_menciones_no_hay_casilla(self):
         portada = site.index_page([offer("1")], NOW.date(), "hoy", {})
         self.assertNotIn('name="teletrabajo"', portada)
