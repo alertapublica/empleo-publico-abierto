@@ -93,6 +93,11 @@ class Offers(unittest.TestCase):
         self.assertTrue(all(i.date == "" and "Proceso en curso" in i.title for i in items))
         self.assertTrue(all(i.access == "libre" for i in items))
 
+    def test_los_procesos_llevan_su_centro_si_el_puesto_lo_nombra(self):
+        locations = {i.process: i.location for i in self.source.list_announcements(self.http)}
+        self.assertEqual(locations["3 puestos en la I.N. Santa María de Garoña (DO-DE-26-031)"], "Santa María de Garoña")
+        self.assertIn(None, locations.values())
+
     def test_puestos_sin_nombre_y_titulo_repetido(self):
         title = ("CONVOCATORIA DE PROCESO SELECTIVO PARA LA COBERTURA DE VACANTE DE 3 PUESTOS DE TRABAJO "
                  "EN LA I.N. SANTA MARÍA DE GAROÑA MEDIANTE ACCESO LIBRE EN LA EMPRESA NACIONAL")

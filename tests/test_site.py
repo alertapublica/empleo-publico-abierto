@@ -428,6 +428,7 @@ class Site(unittest.TestCase):
         self.assertIn({"provincia": "03", "nombre": "Alicante", "ccaa": "10"}, listas["provincias"])
         self.assertIn({"provincia": "15", "nombre": "A Coruña", "ccaa": "12"}, listas["provincias"])
         self.assertIn("tragsa", {o["id"] for o in listas["organismos"]})
+        self.assertTrue(all(o["url"].startswith("https://") for o in listas["organismos"]))
         self.assertIn("tic", {a["id"] for a in listas["areas"]})
 
     def test_teletrabajo_con_la_frase_literal_y_sin_inventar(self):
@@ -466,6 +467,19 @@ class Site(unittest.TestCase):
         # Un proceso del que solo se sabe lo que ya estaba va detrás de cualquiera con fecha.
         otro = {**base, "process": "Q", "title": "Q1", "date": "2026-10-01", "first_seen": "2026-11-01T08:00:00+00:00"}
         self.assertEqual([p["nombre"] for p in site.processes(notices[:3] + [otro])], ["Q", "P"])
+
+    def test_ubicacion_de_los_procesos_sin_municipio(self):
+        base = {"source": "puertos", "url": "u", "state": "curso", "date": "", "first_seen": "2026-11-06T10:00:00+00:00"}
+        notices = [{**base, "process": "A", "title": "a", "location": "Pasaia"},
+                   {**base, "process": "B", "title": "b", "location": "Bahía de Algeciras"},
+                   {**base, "process": "C", "title": "c"}]  # guardado antes de existir el dato
+        api = {p["nombre"]: p for p in site.processes(notices)}
+        self.assertEqual((api["A"]["ubicacion"], api["A"]["ccaa"], api["A"]["provincia"]), ("Pasaia", "16", "20"))
+        self.assertNotIn("municipio", api["A"])
+        self.assertEqual((api["B"]["ubicacion"], api["B"]["ccaa"]), ("Bahía de Algeciras", None))  # no deja claro dónde
+        self.assertEqual((api["C"]["ubicacion"], api["C"]["ccaa"], api["C"]["provincia"]), (None, None, None))
+        novedades = site.news({}, [], notices, {}, BASE, NOW)
+        self.assertEqual({n["proceso"]: n["ccaa"] for n in novedades}, {"A": "16", "B": None, "C": None})
 
     def test_sin_menciones_no_hay_casilla(self):
         portada = site.index_page([offer("1")], NOW.date(), "hoy", {})

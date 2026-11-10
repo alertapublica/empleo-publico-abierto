@@ -154,6 +154,7 @@ class Announcement:
     deadline: str | None = None  # fin de la inscripción, si está abierta
     apply_url: str | None = None  # dónde inscribirse, si está abierta
     deadline_time: str | None = None  # HH:MM, si la inscripción acaba a una hora concreta
+    location: str | None = None  # ubicación literal del proceso (un centro, una autoridad portuaria), si la da
 
     @property
     def key(self) -> str:
@@ -162,7 +163,7 @@ class Announcement:
 
 
 PROCESS_FIELDS = ("via", "access", "contract", "system", "state", "process_url", "deadline", "apply_url",
-                  "deadline_time")
+                  "deadline_time", "location")
 
 
 def today_madrid(now: datetime) -> str:
