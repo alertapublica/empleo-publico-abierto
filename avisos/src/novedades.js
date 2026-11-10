@@ -109,7 +109,7 @@ export function mensajeTelegram(novedades) {
 
 export const asuntoCorreo = (n) => (n === 1 ? "1 novedad para tus avisos de empleo público" : `${n} novedades para tus avisos de empleo público`);
 
-// Texto plano del resumen diario por correo (el enlace de baja lo añade el envío).
+// Texto plano del resumen por correo (el enlace de baja lo añade el envío).
 export function textoCorreo(novedades) {
   const ofertas = ordenar(novedades.filter((n) => n.tipo === "oferta"));
   const comunicados = ordenar(novedades.filter((n) => n.tipo === "comunicado"));
