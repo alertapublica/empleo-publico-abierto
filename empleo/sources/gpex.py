@@ -48,6 +48,11 @@ def _cards(html: str, what: str) -> list:
     soup = BeautifulSoup(html, "html.parser")
     container = soup.select_one("#contenido #ofertas")
     if container is None:
+        # Sin nada publicado no hay lista, solo el aviso «No hay Anuncios de ofertas de empleo
+        # disponibles actualmente».
+        notice = soup.select_one("#contenido .informacion")
+        if notice is not None and _text(notice).startswith("No hay "):
+            return []
         raise SourceLayoutError(f"GPEX: no se encuentra la lista de {what}")
     return container.select("#dtos_oferta")
 
