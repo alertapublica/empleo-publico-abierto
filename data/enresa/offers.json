@@ -1,4 +1,49 @@
 {
+ "DO-DE-26-017": {
+  "apply_url": "https://www.enresa.es/documentos/C.E._multiple_DO-DE-26-017-018.pdf",
+  "category": "Acceso libre",
+  "closed_at": null,
+  "code": "DO-DE-26-017",
+  "company": "Enresa",
+  "contract": null,
+  "deadline": "2026-11-24",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-10T14:37:30+00:00",
+  "id": "enresa:DO-DE-26-017",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-24",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": null,
+  "ref": "DO-DE-26-017",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DE PROCESO SELECTIVO PARA LA COBERTURA DE VACANTE DE DOS PUESTOS DE TRABAJO DE PERSONAL TITULADO DEL DEPARTAMENTO DE SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN MEDIANTE ACCESO LIBRE EN LA EMPRESA NACIONAL DE RESIDUOS RADIACTIVOS, S.A., S.M.E. (ENRESA) (DO-DE-26-017-018)</p><p>Plazo de presentación de candidaturas: del 11/11/2026 al 24/11/2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.enresa.es/documentos/4.1_Anexo_Declaraci_n_de_no_estar_inhabilitado_y_de_veracidad_DO-DE-26-018.docx\">Anexo Declaración de no estar inhabilitado y de veracidad</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_Formulario_DO-DE-26-017.docx\">Anexo Formulario de presentación de candidatura</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_Formulario_DO-DE-26-018.docx\">Anexo Formulario de presentación de candidatura</a></li><li><a href=\"https://www.enresa.es/documentos/C.E._multiple_DO-DE-26-017-018.pdf\">Convocatoria de proceso selectivo</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_I_T_cnico_de_aplicaciones.pdf\">Anexo I. Técnico de aplicaciones.</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_II._T_cnico_de_IT.pdf\">Anexo II. Técnico de IT</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "enresa",
+  "source_title": null,
+  "status": "open",
+  "title": "PERSONAL TITULADO DEL DEPARTAMENTO DE SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN",
+  "url": "https://www.enresa.es/esp/empleo"
+ },
  "DO-DE-26-028": {
   "apply_url": "https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Proyectos_de_Clausura_DO-DE-26-028.pdf",
   "category": "Acceso libre",
