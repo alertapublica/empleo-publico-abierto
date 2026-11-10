@@ -904,7 +904,7 @@ def mail_section(sitekey: str, organisms: list) -> str:
         f'<div class="opciones">\n{casillas("organismos", members)}</div></details>\n'
         for label, members in organisms)
     return f"""<h2 id="correo">Por correo electrónico</h2>
-<p>Recibirá un correo cada mañana, solo los días en que haya ofertas nuevas o vueltas a publicar que cumplan sus criterios. La oferta debe cumplir todos los apartados que elija y, dentro de cada uno, basta con una opción. Los apartados que deje en blanco no filtran.</p>
+<p>Recibirá como mucho dos correos al día, por la mañana y por la tarde, solo cuando haya ofertas nuevas o vueltas a publicar que cumplan sus criterios. La oferta debe cumplir todos los apartados que elija y, dentro de cada uno, basta con una opción. Los apartados que deje en blanco no filtran.</p>
 <form class="form-correo" method="post" action="{AVISOS_URL}/correo/alta">
 <p><label for="correo-direccion">Correo electrónico</label>
 <input id="correo-direccion" name="correo" type="email" autocomplete="email" required></p>
