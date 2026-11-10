@@ -188,7 +188,7 @@ class EnresaSource(Source):
             common = {
                 "process": _process_name(row), "url": _main_document(row), "process_url": PAGE,
                 "contract": row["kind"], "system": selection_system(row["title"]),
-                "access": "libre" if "acceso libre" in row["title"].lower() else None,
+                "access": "libre" if "acceso libre" in row["title"].lower() else None, "location": row["centre"],
             }
             if row["state"] == "proceso":
                 notice = Announcement(date="", title="Plazo de candidaturas cerrado. Proceso en curso.", **common)

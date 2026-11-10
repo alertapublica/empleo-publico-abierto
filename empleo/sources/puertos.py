@@ -136,7 +136,7 @@ class PuertosSource(Source):
             Announcement(
                 date="", process=f"{entry['title']} (Autoridad Portuaria: {entry['provider']})",
                 title="Aparece en el portal de Puertos del Estado", url=entry["url"],
-                access="libre", process_url=entry["url"],
+                access="libre", process_url=entry["url"], location=entry["provider"],
             )
             for entry in entries if not INTERNAL.search(entry["title"])
         ]

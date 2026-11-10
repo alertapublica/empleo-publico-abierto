@@ -15,7 +15,7 @@ from urllib.parse import quote
 from . import areas, feeds, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
                     SYSTEMS, process_type, today_madrid)
-from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, provinces
+from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, provinces, region_of
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
 
@@ -1176,6 +1176,7 @@ PROCESS_FIELDS = [
     (("tipo",), "Tipo de proceso (<code>tipos_proceso</code> en listas.json). Siempre tiene valor: <code>otro</code> es un proceso selectivo sin un tipo más concreto."),
     (("acceso", "tipo_contrato", "sistema"), "Tipo de acceso, tipo de contrato y sistema de selección (<code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), solo si el organismo los indica."),
     (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code> y los <code>curso</code>."),
+    (("ubicacion", "ccaa", "provincia"), "Ubicación literal del proceso, si el organismo la da (un centro de trabajo o, en las autoridades portuarias, el nombre de la autoridad), y códigos del INE de comunidad autónoma y provincia, solo cuando el texto no deja dudas. No se asigna municipio: un centro o una autoridad portuaria no fijan una localidad."),
     (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo (<code>AAAA-MM-DD</code>), hora de cierre (<code>HH:MM</code>, hora peninsular) y enlace de inscripción, solo mientras la inscripción está abierta. Sin hora, el último día cuenta completo."),
     (("url",), "Página o documento oficial del proceso."),
     (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Los que no tienen fecha se ordenan por el momento en que se detectaron; los que ya estaban publicados en la primera lectura del organismo van al final, en el orden de la web oficial, y no figuran en novedades.json porque no se sabe cuándo se publicaron. No incluye relaciones de personas."),
@@ -1186,7 +1187,8 @@ NEWS_FIELDS = [
     (("tipo",), "<code>oferta</code> o <code>comunicado</code>."),
     (("evento",), "Solo ofertas: <code>new</code> (nueva) o <code>republished</code> (nueva publicación)."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
-    (("ccaa", "areas", "teletrabajo"), "Solo ofertas: como en ofertas.json."),
+    (("ccaa",), "Código del INE de la comunidad autónoma, como en ofertas.json o, en los comunicados, como en procesos.json."),
+    (("areas", "teletrabajo"), "Solo ofertas: como en ofertas.json."),
     (("proceso", "proceso_id"), "Solo comunicados: nombre del proceso y su <code>id</code> en procesos.json."),
     (("titulo",), "Título de la oferta o del comunicado. Si el organismo lo escribe en mayúsculas, aquí (y en <code>proceso</code>) va en minúsculas con mayúscula inicial, para facilitar la lectura; el texto literal está en ofertas.json y procesos.json."),
     (("detalle",), "Solo ofertas: resumen en una línea con la empresa, la ubicación, las plazas y el plazo."),
@@ -1197,7 +1199,7 @@ NEWS_FIELDS = [
 LIST_FIELDS = [
     (("comunidades",), "Comunidades autónomas: <code>ccaa</code> (código del INE) y <code>nombre</code>."),
     (("provincias",), "Provincias: <code>provincia</code> (código del INE), <code>nombre</code> en castellano y <code>ccaa</code>, su comunidad autónoma."),
-    (("organismos",), "Organismos: <code>id</code>, <code>nombre</code> y <code>grupo</code>."),
+    (("organismos",), "Organismos: <code>id</code>, <code>nombre</code>, <code>grupo</code> y <code>url</code>, la página oficial de empleo que lee este portal."),
     (("areas", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
      "Áreas profesionales, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
 ]
@@ -1374,7 +1376,8 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
             continue
         items.append({
             "id": f"anuncio/{item['process']}/{item['date']}/{item['title'][:80]}", "fecha": seen,
-            "tipo": "comunicado", "organismo": item["source"], "proceso": humane_caps(item["process"]),
+            "tipo": "comunicado", "organismo": item["source"], "ccaa": process_codes(item.get("location"))["ccaa"],
+            "proceso": humane_caps(item["process"]),
             "proceso_id": process_id([item]), "titulo": humane_caps(item["title"]), "url": item["url"],
         })
     return sorted(items, key=lambda item: item["fecha"], reverse=True)
@@ -1387,7 +1390,7 @@ def lists(sources: dict) -> dict:
     return {
         "comunidades": [{"ccaa": code, "nombre": name} for name, code in CCAA.items()],
         "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
-        "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group} for s in sources.values()],
+        "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group, "url": s.homepage} for s in sources.values()],
         "areas": named(dict(areas.BY_NAME)),
         "grupos": named(GROUPS),
         "tipos_contrato": named(KINDS),
@@ -1396,6 +1399,13 @@ def lists(sources: dict) -> dict:
         "sistemas": named(SYSTEMS),
         "estados_proceso": named(STATES),
     }
+
+
+def process_codes(location: str | None) -> dict:
+    """Comunidad y provincia (códigos del INE) de la ubicación literal de un proceso, si no deja dudas.
+    Sin municipio: un centro o una autoridad portuaria no fijan la localidad."""
+    codes = codes_of(region_of(location), location) if location else {"ccaa": None, "provincia": None}
+    return {"ccaa": codes["ccaa"], "provincia": codes["provincia"]}
 
 
 def processes(announcements: list) -> list[dict]:
@@ -1407,6 +1417,7 @@ def processes(announcements: list) -> list[dict]:
             "id": process_id(notices), "organismo": latest["source"], "nombre": latest["process"],
             "tipo": via_of(latest), "acceso": latest.get("access"), "tipo_contrato": latest.get("contract"),
             "sistema": latest.get("system"), "estado": latest.get("state", "curso"),
+            "ubicacion": latest.get("location"), **process_codes(latest.get("location")),
             "plazo_fin": latest.get("deadline"), "plazo_hora": latest.get("deadline_time"),
             "url": latest.get("process_url"), "url_inscripcion": latest.get("apply_url"),
             "comunicados": [{"fecha": n.get("date") or None, "titulo": n["title"], "url": n["url"],
