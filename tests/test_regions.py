@@ -27,6 +27,9 @@ class Regions(unittest.TestCase):
             "Santa María de Garoña": "Castilla y León",
             "Vandellós I": "Cataluña",
             "Rubí": "Cataluña",                 # municipio de la relación del INE
+            "Santa Cruz de Mudela": "Castilla-La Mancha",  # el municipio entero, no el alias «santa cruz»
+            "Santa Cruz de Bezana": "Cantabria",
+            "Formentera del Segura": "Comunitat Valenciana",
             "Ribes de Freser": "Cataluña",
         }
         for text, expected in cases.items():

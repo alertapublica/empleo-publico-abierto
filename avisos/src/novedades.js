@@ -31,21 +31,30 @@ export async function recibir(env, carga, ahora = new Date()) {
   const vistas = new Set(results.map((r) => r.id));
   const nuevas = novedades.filter((n) => !vistas.has(n.id));
 
+  // La primera vez todo es «nuevo»: se guarda sin avisar para no inundar a nadie.
+  const avisar = new Set(vacia ? [] : nuevas.filter((n) => n.fecha >= hace(ahora, RECIENTES_DIAS)).map((n) => n.id));
   await lotes(db, [
     db.prepare("INSERT OR REPLACE INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(carga.listas)),
     db.prepare("DELETE FROM novedades WHERE fecha < ?").bind(hace(ahora, GUARDAR_DIAS)),
-    ...nuevas.map((n) =>
-      db.prepare("INSERT OR IGNORE INTO novedades (id, fecha, datos) VALUES (?, ?, ?)").bind(n.id, n.fecha, JSON.stringify(n))),
+    ...nuevas.map((n) => db.prepare("INSERT OR IGNORE INTO novedades (id, fecha, datos, pendiente) VALUES (?, ?, ?, ?)")
+      .bind(n.id, n.fecha, JSON.stringify(n), avisar.has(n.id) ? 1 : 0)),
   ]);
 
-  // La primera vez todo es «nuevo»: se guarda sin avisar para no inundar a nadie.
-  const recientes = vacia ? [] : nuevas.filter((n) => n.fecha >= hace(ahora, RECIENTES_DIAS));
-  const mensajes = recientes.length ? await repartir(db, "telegram", recientes, ahora) : 0;
-  return { recibidas: novedades.length, nuevas: nuevas.length, avisadas: recientes.length, mensajes, primera: vacia };
+  // Las pendientes incluyen las de una recepción anterior cuyo reparto falló. La marca se quita en
+  // el mismo lote que los últimos mensajes encolados.
+  const { results: pendientes } = await db.prepare("SELECT n, datos FROM novedades WHERE pendiente = 1 ORDER BY n").all();
+  let mensajes = 0;
+  if (pendientes.length) {
+    const hasta = pendientes[pendientes.length - 1].n;
+    mensajes = await repartir(db, "telegram", pendientes.map((r) => JSON.parse(r.datos)), ahora,
+      [db.prepare("UPDATE novedades SET pendiente = 0 WHERE pendiente = 1 AND n <= ?").bind(hasta)]);
+  }
+  return { recibidas: novedades.length, nuevas: nuevas.length, avisadas: pendientes.length, mensajes, primera: vacia };
 }
 
 // Cruza las novedades con los avisos activos del canal y encola un mensaje (o varios trozos) por persona.
-export async function repartir(db, canal, novedades, ahora = new Date()) {
+// `cierre`: sentencias que van en el último lote, con los últimos mensajes (marcar lo ya repartido).
+export async function repartir(db, canal, novedades, ahora = new Date(), cierre = []) {
   const { results } = await db.prepare(
     `SELECT a.suscriptor, a.criterios FROM avisos a JOIN suscriptores s ON s.id = a.suscriptor
      WHERE s.canal = ? AND s.estado = 'activo' ORDER BY a.suscriptor, a.id`,
@@ -67,9 +76,12 @@ export async function repartir(db, canal, novedades, ahora = new Date()) {
         .bind(suscriptor, asunto, texto, iso(ahora)));
     }
   }
-  await lotes(db, sentencias);
+  await lotes(db, [...sentencias, ...cierre]);
   return sentencias.length;
 }
+
+const MAX_CAMPO = 1000; // un título desmesurado no debe partir el HTML del mensaje
+const corto = (t) => { const s = String(t ?? ""); return s.length > MAX_CAMPO ? `${s.slice(0, MAX_CAMPO - 1)}…` : s; };
 
 export const escapar = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -85,18 +97,17 @@ export function mensajeTelegram(novedades) {
     for (const o of ofertas) {
       const prefijo = o.evento === "republished" ? "Republicada: " : "";
       const tele = typeof o.teletrabajo === "string" ? "\nMenciona teletrabajo" : "";
-      bloques.push(`• ${prefijo}<a href="${escapar(o.url)}">${escapar(o.titulo)}</a>${o.detalle ? `\n${escapar(o.detalle)}` : ""}${tele}`);
+      bloques.push(`• ${prefijo}<a href="${escapar(o.url)}">${escapar(corto(o.titulo))}</a>${o.detalle ? `\n${escapar(corto(o.detalle))}` : ""}${tele}`);
     }
   }
   if (comunicados.length) {
     bloques.push(`<b>Comunicados de procesos selectivos</b>`);
-    for (const c of comunicados) bloques.push(`• ${escapar(c.proceso)}: <a href="${escapar(c.url)}">${escapar(c.titulo)}</a>`);
+    for (const c of comunicados) bloques.push(`• ${escapar(corto(c.proceso))}: <a href="${escapar(c.url)}">${escapar(corto(c.titulo))}</a>`);
   }
   bloques.push("Gestiona tus avisos con /avisos.");
   const trozos = [];
   let actual = "";
-  for (const bloque of bloques) {
-    const b = bloque.length > MAX_MENSAJE ? bloque.slice(0, MAX_MENSAJE) : bloque;
+  for (const b of bloques) {
     if (actual && actual.length + b.length + 2 > MAX_MENSAJE) {
       trozos.push(actual);
       actual = "";

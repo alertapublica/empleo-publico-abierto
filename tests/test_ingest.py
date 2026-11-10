@@ -136,6 +136,11 @@ class Reconcile(unittest.TestCase):
         self.assertEqual(self.offers["1"]["status"], "open")
         self.assertIsNone(self.offers["1"]["closed_at"])
 
+    def test_cerrada_sin_plazo_en_el_listado_no_se_reabre_si_el_de_la_ficha_vencio(self):
+        self.offers["1"].update(deadline="2026-11-05", status="closed", closed_at="x")  # plazo de la ficha
+        self.assertEqual(self.kinds([listed(deadline=None)]), [])
+        self.assertEqual(self.offers["1"]["closed_at"], "x")
+
     def test_si_desaparece_casi_todo_se_aborta_sin_tocar_datos(self):
         offers = {}
         ingest.reconcile(offers, [listed(str(i)) for i in range(30)], "s", NOW)
@@ -318,6 +323,19 @@ class RunSource(unittest.TestCase):
                          ("Analista", "OE 24/26", "OE 24/26 - Analista"))
         self.assertEqual(self.stored("events.json")[-1]["kind"], "new")  # sin eventos por el cambio
 
+    def test_el_plazo_vencido_de_la_ficha_cierra_en_la_misma_lectura(self):
+        ingest.run_source(FakeSource([listed(deadline=None)], OfferDetail(deadline="2026-11-06")), None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["status"], "closed")
+        self.assertEqual([e["kind"] for e in self.stored("events.json")], ["new", "closed"])
+
+    def test_una_fecha_imposible_no_se_guarda(self):
+        with self.assertRaises(SourceLayoutError):
+            ingest.run_source(FakeSource([listed(deadline="2027-02-31")]), None, self.data, NOW)
+        self.assertEqual(self.stored(), {})
+        # En la ficha solo se descarta esa ficha.
+        ingest.run_source(FakeSource([listed()], OfferDetail(deadline="2026-13-01")), None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["deadline"], self.stored()["1"]["detail_ok"]), ("2026-11-20", False))
+
     def test_ficha_no_disponible_se_reintenta(self):
         ingest.run_source(FakeSource([listed()], None), None, self.data, NOW)
         self.assertFalse(self.stored()["1"]["detail_ok"])
@@ -434,3 +452,16 @@ class Chosen(unittest.TestCase):
     def test_id_desconocido_es_error(self):
         with self.assertRaises(SystemExit):
             ingest.chosen(["fundesalu"])
+
+
+class AnnouncementId(unittest.TestCase):
+    def test_dos_comunicados_que_empiezan_igual_no_comparten_id(self):
+        # Cetarsa: el mismo día, dos exámenes que solo difieren en la sede, más allá de 80 caracteres.
+        start = "Examen de FASE II – Oposición 10 de Noviembre de 2026 – 10.00h en el Centro de CETARSA en "
+        items = [{"source": "cetarsa", "process": "Técnico", "date": "2026-11-05", "title": start + place,
+                  "url": "https://a", "first_seen": "2026-11-05T10:00:00+00:00"}
+                 for place in ("Talayuela", "Navalmoral de la Mata")]
+        self.assertEqual(len({feeds.announcement_id(i) for i in items}), 2)
+        self.assertEqual(len({i["guid"] for i in feeds.announcement_items(items)}), 2)
+        other = {**items[0], "source": "enusa"}
+        self.assertNotEqual(feeds.announcement_id(other), feeds.announcement_id(items[0]))

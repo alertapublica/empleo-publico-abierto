@@ -131,6 +131,25 @@ test("no avisa de novedades antiguas aunque lleguen por primera vez", async () =
   assert.deepEqual([r.nuevas, r.mensajes], [1, 0]);
 });
 
+test("si el reparto falla, la recepción siguiente lo reintenta en vez de darlo por avisado", async () => {
+  const db = d1();
+  await conSuscriptor(db, {});
+  await recibir({ DB: db }, { novedades: [oferta(1)], listas: LISTAS }, AHORA);
+  const real = db.prepare;
+  db.prepare = (sql) => {
+    if (sql.includes("FROM avisos a")) throw new Error("D1 caído");
+    return real(sql);
+  };
+  const carga = { novedades: [oferta(1), oferta(2)], listas: LISTAS };
+  await assert.rejects(recibir({ DB: db }, carga, AHORA), /D1 caído/);
+  db.prepare = real;
+  const r = await recibir({ DB: db }, carga, AHORA);
+  assert.deepEqual([r.nuevas, r.avisadas, r.mensajes], [0, 1, 1]);
+  assert.match((await db.prepare("SELECT texto FROM envios").first("texto")), /Analista 2/);
+  const otra = await recibir({ DB: db }, carga, AHORA);
+  assert.deepEqual([otra.avisadas, otra.mensajes], [0, 0]);
+});
+
 test("rechaza cargas sin novedades o sin listas", async () => {
   await assert.rejects(recibir({ DB: d1() }, { novedades: [] }, AHORA), /Carga no válida/);
 });
@@ -142,6 +161,12 @@ test("los mensajes largos se parten y el texto ajeno se escapa", () => {
   assert.ok(trozos.every((t) => t.length <= MAX_MENSAJE));
   assert.ok(trozos.every((t) => !t.includes("<b>x")));
   assert.match(trozos.at(-1), /\/avisos/);
+});
+
+test("un título desmesurado se recorta antes de escaparlo: el enlace sigue cerrado", () => {
+  const [texto] = mensajeTelegram([oferta(1, { titulo: "x".repeat(4000) })]);
+  assert.ok(texto.length <= MAX_MENSAJE);
+  assert.match(texto, /x…<\/a>/);
 });
 
 test("vaciar envía, reintenta los 429 y borra a quien bloqueó el bot", async () => {
@@ -159,6 +184,18 @@ test("vaciar envía, reintenta los 429 y borra a quien bloqueó el bot", async (
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores WHERE destino = '2'").first("n"), 0);
   const pendiente = await db.prepare("SELECT intentos, despues FROM envios").all();
   assert.deepEqual(pendiente.results, [{ intentos: 1, despues: "2026-11-09T07:00:05+00:00" }]);
+});
+
+test("dos tandas a la vez no mandan el mismo mensaje", async () => {
+  const db = d1();
+  const a = await conSuscriptor(db, {}, "telegram", "1");
+  await db.prepare("INSERT INTO envios (suscriptor, texto, despues) VALUES (?, 'hola', '2026-11-09T06:00:00+00:00')").bind(a).run();
+  const tg = telegramFalso();
+  const env = { DB: db, TELEGRAM_TOKEN: "t" };
+  const [x, y] = await Promise.all([vaciar(env, { ahora: AHORA, fetcher: tg.fetcher }), vaciar(env, { ahora: AHORA, fetcher: tg.fetcher })]);
+  assert.equal(x.enviados + y.enviados, 1);
+  assert.equal(tg.mensajes().length, 1);
+  assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM envios").first("n"), 0);
 });
 
 test("sin token de Telegram no se intenta enviar", async () => {
@@ -515,5 +552,8 @@ test("las rutas internas y el webhook exigen su secreto", async () => {
   assert.equal((await worker.fetch(publicado("Bearer clave"), env, ctx)).status, 500, "carga vacía");
   const tg = new Request("https://x/telegram", { method: "POST", headers: { "X-Telegram-Bot-Api-Secret-Token": "mal" }, body: "{}" });
   assert.equal((await worker.fetch(tg, env, ctx)).status, 401);
+  // Sin secreto configurado, una petición sin cabecera tampoco pasa.
+  const sinSecreto = { ...env, TELEGRAM_SECRETO: undefined };
+  assert.equal((await worker.fetch(new Request("https://x/telegram", { method: "POST", body: "{}" }), sinSecreto, ctx)).status, 401);
   assert.equal((await worker.fetch(new Request("https://x/nada"), env, ctx)).status, 404);
 });

@@ -40,12 +40,18 @@ def offer_items(offers: dict, events: list, offer_url, summary) -> list[dict]:
     return items
 
 
+def announcement_id(item: dict) -> str:
+    """Id de un comunicado en novedades.json y guid del RSS. Lleva el organismo y el título entero:
+    dos comunicados del mismo proceso y día pueden empezar igual (Cetarsa: exámenes en dos sedes)."""
+    return f"anuncio/{item['source']}/{item['process']}/{item['date']}/{item['title']}"
+
+
 def announcement_items(announcements: list[dict]) -> list[dict]:
     return [
         {
             "title": f"{humane_caps(item['process'])}: {humane_caps(item['title'])}",
             "link": item["url"],
-            "guid": f"anuncio/{item['process']}/{item['date']}/{item['title'][:80]}",
+            "guid": announcement_id(item),
             "date": _when(item["date"] or item["first_seen"]),
             "text": item["title"],
             "offer": None,

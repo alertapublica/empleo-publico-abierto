@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import sys
 from dataclasses import asdict, replace
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import store
@@ -67,10 +67,12 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
             record = offers[offer.ref] = _record(source_id, offer, stamp)
             _event(events, record, "new", stamp)
             continue
-        # La hora guardada solo vale si el día no ha cambiado.
-        same_day = offer.deadline == record["deadline"]
+        # Si el listado no trae plazo, vale el guardado (de la ficha): sin él, una oferta vencida que
+        # sigue listada se reabriría y cerraría en cada lectura. La hora solo vale si el día no cambia.
+        deadline = offer.deadline if offer.deadline is not None else record["deadline"]
+        same_day = deadline == record["deadline"]
         hour = offer.deadline_time or (record.get("deadline_time") if same_day else None)
-        if record["status"] == "closed" and not deadline_passed(offer.deadline, hour, now):
+        if record["status"] == "closed" and not deadline_passed(deadline, hour, now):
             record.update(status="open", closed_at=None)
             _event(events, record, "reopened", stamp)
         record["missed_runs"] = 0
@@ -108,6 +110,26 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
     return events
 
 
+def close_expired(offers: dict, events: list, now: datetime) -> None:
+    """Cierra las abiertas cuyo plazo ya ha pasado: tras leer las fichas, que pueden traerlo."""
+    stamp = now.isoformat(timespec="seconds")
+    for record in offers.values():
+        if record["status"] == "open" and deadline_passed(record["deadline"], record.get("deadline_time"), now):
+            record.update(status="closed", closed_at=stamp)
+            _event(events, record, "closed", stamp)
+
+
+def check_dates(item, fields: tuple[str, ...]) -> None:
+    """Una fecha imposible no se guarda: rompería la publicación entera."""
+    for name in fields:
+        value = getattr(item, name)
+        if value:
+            try:
+                date.fromisoformat(value)
+            except ValueError:
+                raise SourceLayoutError(f"{name} no es una fecha válida: {value!r}") from None
+
+
 def _locate(record: dict) -> None:
     title_hint = location_from_title(record["title"])
     # El paréntesis final del título solo vale si es un lugar: en Isdefe es la referencia
@@ -134,6 +156,11 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list) -> N
             print(f"AVISO {record['id']}: {error}", file=sys.stderr)
             continue
         if detail is None:
+            continue
+        try:
+            check_dates(detail, ("deadline", "opens_on"))
+        except SourceLayoutError as error:
+            print(f"AVISO {record['id']}: {error}", file=sys.stderr)
             continue
         record.update(sections=detail.sections, detail_ok=True, detail_version=source.detail_version,
                       parent_ref=detail.parent_ref)
@@ -176,6 +203,8 @@ def sync_announcements(source: Source, http: Client, known: dict, now: datetime)
     items = source.list_announcements(http)
     if not items:  # sin lectura válida no se puede concluir que un proceso haya terminado
         return
+    for item in items:
+        check_dates(item, ("date", "deadline"))
     for key in [key for key, record in known.items() if "via" not in record]:
         del known[key]  # formato anterior: la lectura de hoy lo sustituye con todos sus datos
     first_read = not known
@@ -218,8 +247,11 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
             record.update(source.labels(record["title"], record["ref"]))
     listed = [replace(offer, **source.labels(offer.title, offer.ref, offer.code))
               for offer in source.list_offers(http)]
+    for offer in listed:
+        check_dates(offer, ("deadline", "published_on", "opens_on"))
     new_events = reconcile(offers, listed, source.id, now)
     fetch_details(source, http, offers, new_events)
+    close_expired(offers, new_events, now)
     apply_enrichment(source, http, offers)
     for record in offers.values():
         if record["status"] == "open":

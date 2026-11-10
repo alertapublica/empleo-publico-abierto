@@ -50,17 +50,28 @@ export async function enviarUno(env, mensaje) {
 
 export const enlaceBaja = (env, token) => `${env.URL_PUBLICA}/correo/baja?t=${encodeURIComponent(token)}`;
 
+const RESERVA_MS = 10 * 60000; // más que una tanda, por lenta que sea el SMTP
+
 export async function vaciar(env, { ahora = new Date(), fetcher = fetch, limite = 40 } = {}) {
   const db = env.DB;
   const canales = correoActivo(env) ? ["telegram", "correo"] : ["telegram"];
   if (!env.TELEGRAM_TOKEN) canales.splice(canales.indexOf("telegram"), 1);
   if (!canales.length) return { enviados: 0, fallidos: 0 };
+  // Reserva atómica: la tanda aplaza sus envíos RESERVA_MS antes de mandarlos, así otra tanda que
+  // coincida (cron y vaciado tras publicar) no los coge. Si esta se corta, se reintentan al caducar.
+  const { results: reservados } = await db.prepare(
+    `UPDATE envios SET despues = ? WHERE id IN (
+       SELECT e.id FROM envios e JOIN suscriptores s ON s.id = e.suscriptor
+       WHERE e.despues <= ? AND s.canal IN (${canales.map(() => "?").join(", ")})
+       ORDER BY e.id LIMIT ?)
+     RETURNING id`,
+  ).bind(iso(new Date(ahora.getTime() + RESERVA_MS)), iso(ahora), ...canales, limite).all();
+  if (!reservados.length) return { enviados: 0, fallidos: 0, aplazados: 0 };
   const { results } = await db.prepare(
     `SELECT e.id, e.asunto, e.texto, e.intentos, s.id AS suscriptor, s.canal, s.destino, s.token
      FROM envios e JOIN suscriptores s ON s.id = e.suscriptor
-     WHERE e.despues <= ? AND s.canal IN (${canales.map(() => "?").join(", ")})
-     ORDER BY e.id LIMIT ?`,
-  ).bind(iso(ahora), ...canales, limite).all();
+     WHERE e.id IN (SELECT value FROM json_each(?)) ORDER BY e.id`,
+  ).bind(JSON.stringify(reservados.map((r) => r.id))).all();
 
   const sentencias = [];
   const fuera = new Set(); // personas que bloquearon el bot
@@ -76,6 +87,7 @@ export async function vaciar(env, { ahora = new Date(), fetcher = fetch, limite 
       if (fuera.has(e.suscriptor)) continue;
       if (e.canal === "correo" && (correoParado || correos >= maxCorreos)) { // sin gastar intento
         aplazados++;
+        sentencias.push(db.prepare("UPDATE envios SET despues = ? WHERE id = ?").bind(iso(ahora), e.id)); // fuera de la reserva
         continue;
       }
       let reintentar = null;

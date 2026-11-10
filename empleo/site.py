@@ -1375,7 +1375,7 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
         if item.get("baseline") or not seen or datetime.fromisoformat(seen) < since:
             continue
         items.append({
-            "id": f"anuncio/{item['process']}/{item['date']}/{item['title'][:80]}", "fecha": seen,
+            "id": feeds.announcement_id(item), "fecha": seen,
             "tipo": "comunicado", "organismo": item["source"], "ccaa": process_codes(item.get("location"))["ccaa"],
             "proceso": humane_caps(item["process"]),
             "proceso_id": process_id([item]), "titulo": humane_caps(item["title"]), "url": item["url"],
