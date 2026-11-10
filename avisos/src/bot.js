@@ -42,7 +42,7 @@ Cuánto tiempo: hasta que lo borres. /baja borra tus avisos y el identificador d
 
 Dónde: en Cloudflare, Inc., que presta el servicio y puede tratar los datos fuera del Espacio Económico Europeo, con las garantías del Marco de Privacidad de Datos UE-EE. UU. Los mensajes pasan además por Telegram, según su propia política de privacidad.
 
-Responsable: Voceiro - JJAA (info@voceiro.eu). Escribe a ese correo para ejercer tus derechos (acceso, rectificación, supresión, oposición, limitación o portabilidad). Si no quedan atendidos, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).
+Responsable: Voceiro - JJAA (legal@alertapublica.es). Escribe a ese correo para ejercer tus derechos (acceso, rectificación, supresión, oposición, limitación o portabilidad). Si no quedan atendidos, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).
 
 Más información: https://alertapublica.es/acerca/#bot-telegram`;
 

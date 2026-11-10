@@ -25,7 +25,7 @@ TAGLINE = "Ofertas de empleo de las empresas y entidades del sector público, re
 REPO = "https://github.com/alertapublica/empleo-publico-abierto"
 # Titular del portal y responsable de los datos del bot (LSSI art. 10, RGPD art. 13).
 TITULAR = "Voceiro - JJAA"
-CONTACTO = "info@voceiro.eu"
+CONTACTO = "legal@alertapublica.es"
 MAILTO = f'<a href="mailto:{CONTACTO}">{CONTACTO}</a>'
 DEFAULT_BASE_URL = "https://alertapublica.es/"
 # Usuario del bot de avisos (sin @). Vacío: la web no lo menciona. Se fija en actualizar.yml.
