@@ -99,6 +99,43 @@ class Sepi(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             sepi.parse_page("<html><body><p>Nada</p></body></html>")
 
+    def test_procesos_con_su_estado_y_sus_documentos_sin_fecha(self):
+        source = sepi.SepiSource(datetime(2026, 11, 8, 12, 0, tzinfo=timezone.utc))
+        http = Http("sepi-empleo.html")
+        self.assertEqual(source.list_offers(http), [])
+        items = source.list_announcements(http)
+        self.assertEqual(len(http.urls), 4)  # el listado, una vez, y la ficha de cada uno de los tres procesos
+        self.assertEqual(len({i.process for i in items}), 3)
+        self.assertEqual({i.date for i in items}, {""})
+        first = [i for i in items if i.process.startswith("CONVOCATORIA DE PROCESO DE SELECCIÓN PARA LA COBERTURA DE 15")]
+        # Primero el estado, enlazado a la ficha; después los documentos, del más reciente al más antiguo.
+        self.assertEqual([i.title for i in first], ["Concluido el plazo de presentación de candidaturas.", "Cronograma estimado",
+                                                    "Reseña curricular órgano de selección", "Anexo IV: documento modelo de presentación de candidaturas - Perfil C",
+                                                    "Anexo IV: documento modelo de presentación de candidaturas - Perfiles A y B", "Bases convocatoria"])
+        ficha = source._rows[0]["url"]
+        self.assertEqual({(i.process_url) for i in first} | {first[0].url}, {ficha})
+        self.assertTrue(first[-1].url.endswith(".pdf"))
+        self.assertEqual([next(i.via for i in items if i.process == p["title"]) for p in source._rows], ["tasa", "oep", "otro"])
+        # «&nbsp;» escrito como texto en la web no llega al comunicado.
+        self.assertIn("Concluido plazo de presentación de candidaturas.", {i.title for i in items})
+
+    def test_mientras_hay_plazo_es_oferta_y_no_proceso(self):
+        source = sepi.SepiSource(datetime(2026, 5, 19, 12, 0, tzinfo=timezone.utc))
+        http = Http("sepi-empleo-2026-05.html")
+        (offer,) = source.list_offers(http)
+        items = source.list_announcements(http)
+        self.assertNotIn(offer.title, {i.process for i in items})
+        self.assertEqual(len({i.process for i in items}), 1)
+
+    def test_ficha_de_proceso_sin_documentos(self):
+        class Vacia(Http):
+            def get(self, url):
+                return fixture(self.page) if url == sepi.PAGE else "<html><body></body></html>"
+
+        source = sepi.SepiSource(datetime(2026, 11, 8, 12, 0, tzinfo=timezone.utc))
+        with self.assertRaises(SourceLayoutError):
+            source.list_announcements(Vacia("sepi-empleo.html"))
+
 
 if __name__ == "__main__":
     unittest.main()

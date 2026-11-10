@@ -14,7 +14,7 @@ from urllib.parse import quote
 
 from . import areas, feeds, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
-                    SYSTEMS, process_type)
+                    SYSTEMS, process_type, today_madrid)
 from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, provinces
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
@@ -664,12 +664,21 @@ def process_groups(items: list[dict]) -> list[list[dict]]:
     for item in items:
         groups.setdefault((item["source"], item["process"]), []).append(item)
     for notices in groups.values():
-        notices.sort(key=lambda a: a["date"], reverse=True)
+        notices.sort(key=notice_order, reverse=True)
     return sorted(
         groups.values(),
-        key=lambda notices: (notices[0].get("state") == "abierto", notices[0]["date"]),
+        key=lambda notices: (notices[0].get("state") == "abierto", notice_order(notices[0])),
         reverse=True,
     )
+
+
+def notice_order(notice: dict) -> tuple:
+    """Clave para ordenar comunicados, del más reciente al más antiguo: su fecha; sin ella, el día en
+    que se detectó, salvo si ya estaba en la primera lectura (no se sabe cuándo se publicó: al final).
+    Después, el momento de detección y el lugar en la web oficial."""
+    seen = notice.get("first_seen") or ""
+    day = notice["date"] or ("" if notice.get("baseline") or not seen else today_madrid(datetime.fromisoformat(seen)))
+    return day, seen, -notice.get("position", 0)
 
 
 def process_id(notices: list[dict]) -> str:
@@ -784,7 +793,7 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
 def closed_processes_page(items: list[dict], checked: str, sources: dict, today: date) -> str:
     names = {s.id: s.name for s in sources.values()}
     groups = [g for g in process_groups(items) if not is_live(g)]
-    groups.sort(key=lambda notices: notices[0]["date"], reverse=True)
+    groups.sort(key=lambda notices: notice_order(notices[0]), reverse=True)
     cards = "\n".join(process_card(g, names, today, "../../", feed=False) for g in groups)
     empty = "" if groups else '<p class="nota">Aún no hay procesos finalizados.</p>'
     body = f"""<p><a href="../">Volver al histórico de ofertas</a> · <a href="../../anuncios/">Ver los procesos en marcha</a></p>
@@ -1169,7 +1178,7 @@ PROCESS_FIELDS = [
     (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code> y los <code>curso</code>."),
     (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo (<code>AAAA-MM-DD</code>), hora de cierre (<code>HH:MM</code>, hora peninsular) y enlace de inscripción, solo mientras la inscripción está abierta. Sin hora, el último día cuenta completo."),
     (("url",), "Página o documento oficial del proceso."),
-    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Las autoridades portuarias (organismo <code>puertos</code>) no publican la fecha: en ellas, <code>fecha</code> es el día en que este portal detectó el comunicado. No incluye relaciones de personas."),
+    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Los que no tienen fecha se ordenan por el momento en que se detectaron; los que ya estaban publicados en la primera lectura del organismo van al final, en el orden de la web oficial, y no figuran en novedades.json porque no se sabe cuándo se publicaron. No incluye relaciones de personas."),
 ]
 NEWS_FIELDS = [
     (("id",), "Identificador estable: la misma novedad conserva siempre el mismo <code>id</code>, de modo que puede avisarse una sola vez."),
@@ -1273,7 +1282,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h3 id="formato">Formato común</h3>
 <p>Todos los ficheros comienzan con estos campos:</p>
 {field_table(FILE_FIELDS, "Campos comunes a todos los ficheros")}
-<p>Un dato que la fuente no facilita vale <code>null</code>, salvo la fecha de los comunicados de las autoridades portuarias (ver <a href="#procesos">Procesos</a>). Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo, salvo los títulos en mayúsculas de novedades.json.</p>
+<p>Un dato que la fuente no facilita vale <code>null</code>. Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo, salvo los títulos en mayúsculas de novedades.json.</p>
 </section>
 <section class="campos-fichero" aria-labelledby="ofertas">
 <h3 id="ofertas">Ofertas (ofertas.json)</h3>
@@ -1283,7 +1292,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <section class="campos-fichero" aria-labelledby="procesos">
 <h3 id="procesos">Procesos (procesos.json)</h3>
 <p>El campo <code>procesos</code> contiene todos los procesos selectivos que ha recogido este portal, en marcha y terminados. Solo figuran los organismos que publican sus procesos por fases, con comunicados; los puestos que se publican con ficha y plazo propios están en ofertas.json.</p>
-<p>Primero van los procesos con la inscripción abierta y después los demás, por la fecha de su último comunicado, del más reciente al más antiguo (los que no tienen fecha, al final). Los datos de cada proceso (tipo, estado, plazo…) son los de la última lectura de la web oficial. Cada proceso en marcha tiene, además, su lista RSS en <code>{e(base_url)}feeds/proceso-<var>id</var>.xml</code>.</p>
+<p>Primero van los procesos con la inscripción abierta y después los demás, por su último comunicado, del más reciente al más antiguo y con el mismo criterio que los comunicados (ver <code>comunicados</code>). Los datos de cada proceso (tipo, estado, plazo…) son los de la última lectura de la web oficial. Cada proceso en marcha tiene, además, su lista RSS en <code>{e(base_url)}feeds/proceso-<var>id</var>.xml</code>.</p>
 <p>Campos de cada proceso:</p>
 {field_table(PROCESS_FIELDS, "Campos de cada proceso en procesos.json")}
 </section>

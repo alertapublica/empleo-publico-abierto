@@ -9,7 +9,12 @@ horas», «finalizará a las 23.59 horas del día 27 de enero de 2026»). Compro
 Internet Archive de 2025 y 2026. La ficha da el mismo texto y los documentos.
 
 `sepi.es` no responde desde Actions: se lee por el relay (`VIA_RELAY` en `http.py`).
-Los documentos de las fases (Procesos) aún no se anuncian: no tienen fecha.
+
+Procesos, como en EFE: mientras el plazo de candidaturas está abierto es oferta; después, proceso.
+Sus comunicados son el texto de estado del listado (enlazado a la ficha) y los documentos de la
+ficha, que la web ordena del más antiguo al más reciente y aquí van al revés. Ninguno tiene fecha:
+el motor los ordena por cuándo se detectaron y no avisa de los que ya estaban en la primera lectura.
+Cada lectura pide la ficha de cada proceso del listado (hoy tres).
 """
 from __future__ import annotations
 
@@ -22,7 +27,7 @@ from bs4 import BeautifulSoup
 
 from ..dates import CLOCK, first_date
 from ..http import Client
-from ..model import ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
+from ..model import Announcement, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed, process_type
 from ..sanitize import sanitize
 from .base import Source
 
@@ -33,7 +38,8 @@ APPLY = re.compile(r"plazo de presentaci[oó]n de (?:candidaturas|solicitudes)\b
 
 
 def _clean(text: str) -> str:
-    return " ".join(text.split())
+    # La web escribe a veces «&nbsp;» como texto («candidaturas.&amp;nbsp;» en el HTML).
+    return " ".join(text.replace("&nbsp;", " ").split())
 
 
 def deadline_of(text: str) -> tuple[str | None, str | None]:
@@ -87,11 +93,13 @@ class SepiSource(Source):
     def __init__(self, now: datetime | None = None) -> None:
         self._now = now  # solo para las pruebas
         self._status: dict[str, str] = {}
+        self._rows: list[dict] | None = None  # el listado, leído en list_offers
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
         now = self._now or datetime.now(timezone.utc)
         offers = []
-        for row in parse_page(http.get(PAGE)):
+        self._rows = parse_page(http.get(PAGE))
+        for row in self._rows:
             deadline, hour = deadline_of(row["status"])
             if deadline is None or deadline_passed(deadline, hour, now):
                 continue
@@ -111,3 +119,20 @@ class SepiSource(Source):
         if items:
             sections.append({"title": "Documentos de la convocatoria", "level": 2, "html": sanitize(f"<ul>{items}</ul>")})
         return OfferDetail(sections=sections)
+
+    def list_announcements(self, http: Client) -> list[Announcement]:
+        """Los procesos del listado que ya no admiten candidaturas: su estado y sus documentos, sin fecha."""
+        now = self._now or datetime.now(timezone.utc)
+        items = []
+        for row in self._rows if self._rows is not None else parse_page(http.get(PAGE)):
+            deadline, hour = deadline_of(row["status"])
+            if deadline is not None and not deadline_passed(deadline, hour, now):
+                continue  # aún es oferta
+            docs = documents(http.get(row["url"]))
+            if not docs:
+                raise SourceLayoutError(f"SEPI: ficha sin documentos: {row['url']}")
+            via = "oep" if re.search(r"\bOEP\b", row["title"]) else process_type(row["title"])
+            notices = ([(row["status"], row["url"])] if row["status"] else []) + docs[::-1]
+            items += [Announcement(date="", process=row["title"], title=title, url=url, via=via,
+                                   process_url=row["url"]) for title, url in notices]
+        return items
