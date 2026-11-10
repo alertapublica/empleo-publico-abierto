@@ -43,7 +43,7 @@ AREAS = {
     "comercial": "Comercial y atención al público",
     "seguridad": "Seguridad y emergencias",
 }
-ORDER = {key: i for i, key in enumerate(AREAS)}
+ORDER = {key: i for i, key in enumerate(AREAS)}  # desempata en classify; para mostrarlas, BY_NAME
 NONE = "ninguna"  # valor del filtro para las ofertas sin área
 
 # Ámbito de las fuentes de un solo sector: desempata y, si el título no dice nada, da el área.
@@ -276,6 +276,10 @@ def normalize(text: str) -> str:
     text = " ".join(t for t in text.split() if not any(ch.isdigit() for ch in t))
     text = re.sub(r"[_–—·]", " - ", text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+# Las áreas tal como se muestran (filtro, avisos, feeds, bot): por nombre, sin contar tildes.
+BY_NAME = sorted(AREAS.items(), key=lambda item: normalize(item[1]))
 
 
 def score(text: str) -> dict[str, float]:

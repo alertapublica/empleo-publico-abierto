@@ -333,11 +333,11 @@ def options(values, labels: dict | None = None) -> str:
 
 
 def area_options(open_offers: list[dict], group_of: dict) -> str:
-    """Áreas con alguna oferta abierta, en el orden de areas.AREAS; «Sin área» al final."""
+    """Áreas con alguna oferta abierta, por nombre; «Sin área» al final."""
     present = set()
     for offer in open_offers:
         present.update(areas.offer_areas(offer, group_of.get(offer["source"], ""))[0] or [areas.NONE])
-    choices = [(key, label) for key, label in areas.AREAS.items() if key in present]
+    choices = [(key, label) for key, label in areas.BY_NAME if key in present]
     if areas.NONE in present:
         choices.append((areas.NONE, "Sin área"))
     return "".join(f'<option value="{key}">{e(label)}</option>' for key, label in choices)
@@ -913,12 +913,13 @@ def mail_section(sitekey: str, organisms: list) -> str:
 <span id="ayuda-palabras" class="dato">Se buscan por su comienzo y sin distinguir tildes: «ingenier» encuentra «Ingeniero/a» e «Ingeniera». Hasta 10.</span></p>
 <fieldset><legend>Áreas</legend>
 <div class="opciones">
-{casillas("areas", list(areas.AREAS.items()))}</div></fieldset>
+{casillas("areas", areas.BY_NAME)}</div></fieldset>
 <fieldset><legend>Comunidades autónomas</legend>
 <div class="opciones">
 {casillas("ccaa", [(code, name) for name, code in CCAA.items()])}</div>
 <label class="casilla"><input type="checkbox" name="sin_ccaa" value="1" checked> Incluir también las ofertas sin comunidad concreta</label></fieldset>
 <fieldset><legend>Organismos</legend>
+<p class="dato">Si no marca ninguno, recibirá avisos de todos, también de los que se incorporen al portal.</p>
 {groups}<label class="casilla"><input type="checkbox" name="comunicados" value="1"> Recibir también los comunicados de los procesos selectivos de los organismos elegidos</label></fieldset>
 <fieldset><legend>Teletrabajo</legend>
 <label class="casilla"><input type="checkbox" name="teletrabajo" value="1"> Solo las ofertas cuya ficha menciona el teletrabajo</label></fieldset>
@@ -1365,7 +1366,7 @@ def lists(sources: dict) -> dict:
         "comunidades": [{"ccaa": code, "nombre": name} for name, code in CCAA.items()],
         "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
         "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group} for s in sources.values()],
-        "areas": named(areas.AREAS),
+        "areas": named(dict(areas.BY_NAME)),
         "grupos": named(GROUPS),
         "tipos_contrato": named(KINDS),
         "tipos_proceso": named(PROCESS_TYPES),
@@ -1465,7 +1466,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         region_feeds.append((region, path))
     offer_area = {id_: areas.offer_areas(o, group_of.get(o["source"], ""))[0] for id_, o in offers.items()}
     area_feeds = []
-    for area, name in areas.AREAS.items():
+    for area, name in areas.BY_NAME:
         path = f"feeds/area-{area}.xml"
         emit(path, name, [i for i in offer_feed if area in offer_area[i["offer"]["id"]]])
         area_feeds.append((name, path))
