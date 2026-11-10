@@ -56,9 +56,9 @@ def latest(found: list[tuple[date, str | None]]) -> tuple[date | None, str | Non
 
 
 def numeric_date(text: str) -> str:
-    """«26/11/2026» → «2026-11-26»."""
+    """«26/11/2026» → «2026-11-26». Una fecha imposible («31/02/2027») lanza ValueError."""
     day, month, year = text.split("/")
-    return f"{year}-{month}-{day}"
+    return date(int(year), int(month), int(day)).isoformat()
 
 
 def first_date(text: str) -> date | None:

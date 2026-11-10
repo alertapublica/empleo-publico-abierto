@@ -87,9 +87,11 @@ def region_of(*candidates: str | None) -> str:
             return NATIONAL
         if re.search(r"\bvarias\b", plain):
             return SEVERAL
+        # El municipio entero va antes que los alias: «Santa Cruz de Mudela» no es Canarias ni
+        # «Formentera del Segura», Baleares. También resuelve «Rubí» o «Ribes de Freser».
+        if municipality := municipality_of(text):
+            return REGION_OF_CCAA[municipality[1]]
         found = _found_regions(plain)
-        if not found and (municipality := municipality_of(text)):  # «Rubí», «Ribes de Freser»
-            found = {REGION_OF_CCAA[municipality[1]]}
         if len(found) == 1:
             return found.pop()
         if found:

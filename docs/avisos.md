@@ -1,6 +1,6 @@
 # Avisos por Telegram y correo
 
-El worker `empleo-avisos` (`avisos/`, cuenta `empleo-publico` de Cloudflare) guarda las suscripciones en D1 (`empleo-avisos`). Los datos de las ofertas no se copian: al terminar de publicar, `actualizar.yml` le envía las novedades de los últimos 3 días a `/interno/publicado`. El worker guarda las que no conocía, las cruza con los avisos y deja los mensajes en una bandeja de salida. Un cron la vacía cada minuto, por tandas, porque el plan gratuito permite 50 llamadas por ejecución. Otros dos crons, a las 6:00 y a las 13:00 UTC, preparan los resúmenes por correo (ver abajo).
+El worker `empleo-avisos` (`avisos/`, cuenta `empleo-publico` de Cloudflare) guarda las suscripciones en D1 (`empleo-avisos`). Los datos de las ofertas no se copian: al terminar de publicar, `actualizar.yml` le envía las novedades de los últimos 3 días a `/interno/publicado`. El worker guarda las que no conocía marcadas como pendientes, las cruza con los avisos y deja los mensajes en una bandeja de salida; la marca se quita con los últimos mensajes, así un reparto que falla se reintenta en la recepción siguiente. Un cron vacía la bandeja cada minuto, por tandas, porque el plan gratuito permite 50 llamadas por ejecución. Cada tanda reserva sus envíos (los aplaza 10 minutos) antes de mandarlos: dos tandas que coinciden no mandan el mismo mensaje. Otros dos crons, a las 6:00 y a las 13:00 UTC, preparan los resúmenes por correo (ver abajo).
 
 ## Criterios de un aviso
 

@@ -145,15 +145,15 @@ export async function baja(env, request, url) {
 }
 
 // Crons de la mañana y de la tarde: un resumen por persona con las novedades guardadas desde el último. El cursor
-// es el rowid (orden de llegada), no la fecha de la novedad, para no perder las que llegan tarde.
+// es n (orden de llegada, no se reutiliza), no la fecha de la novedad, para no perder las que llegan tarde.
 export async function resumenCorreo(env, ahora = new Date()) {
   if (!correoActivo(env)) return 0;
   const db = env.DB;
   const desde = await db.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor");
-  const ultimo = (await db.prepare("SELECT MAX(rowid) AS n FROM novedades").first("n")) || 0;
+  const ultimo = (await db.prepare("SELECT MAX(n) AS n FROM novedades").first("n")) || 0;
   let encolados = 0;
   if (desde !== null) {
-    const { results } = await db.prepare("SELECT datos FROM novedades WHERE rowid > ? AND rowid <= ?")
+    const { results } = await db.prepare("SELECT datos FROM novedades WHERE n > ? AND n <= ?")
       .bind(Number(desde), ultimo).all();
     if (results.length) encolados = await repartir(db, "correo", results.map((r) => JSON.parse(r.datos)), ahora);
   }

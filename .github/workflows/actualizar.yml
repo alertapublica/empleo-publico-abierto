@@ -68,9 +68,11 @@ jobs:
           git push
 
       - name: Fijar la hora de la última comprobación
+        env:
+          FUENTES: ${{ inputs.fuentes }}  # por env, nunca dentro del script: no se ejecuta lo que traiga
         run: |
           # Una lectura parcial no comprueba el resto: no cuenta como comprobación de todo.
-          if [ "${{ steps.ingesta.outcome }}" = "success" ] && [ -z "${{ inputs.fuentes }}" ]; then
+          if [ "${{ steps.ingesta.outcome }}" = "success" ] && [ -z "$FUENTES" ]; then
             echo "CHECKED_AT=$(date -Iseconds)" >> "$GITHUB_ENV"
           else
             echo "CHECKED_AT=$(git log -1 --format=%cI -- data)" >> "$GITHUB_ENV"

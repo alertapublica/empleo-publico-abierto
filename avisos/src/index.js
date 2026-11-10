@@ -38,7 +38,8 @@ export default {
     const ruta = `${request.method} ${url.pathname}`;
     try {
       if (ruta === "POST /telegram") {
-        if (!env.TELEGRAM_TOKEN || !igual(request.headers.get("X-Telegram-Bot-Api-Secret-Token") || "", env.TELEGRAM_SECRETO || "")) {
+        if (!env.TELEGRAM_TOKEN || !env.TELEGRAM_SECRETO
+          || !igual(request.headers.get("X-Telegram-Bot-Api-Secret-Token") || "", env.TELEGRAM_SECRETO)) {
           return new Response("No autorizado", { status: 401 });
         }
         try {
