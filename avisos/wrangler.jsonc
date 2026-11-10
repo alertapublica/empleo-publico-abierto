@@ -6,7 +6,10 @@
   "account_id": "a8183539272f1346a4e6fe05a5c5ee29",
   "main": "src/index.js",
   "compatibility_date": "2026-11-01",
-  // URL pública para el webhook de Telegram y los enlaces del correo.
+  // URL pública (URL_PUBLICA) para el webhook de Telegram, el formulario y los enlaces del correo.
+  // Crearla exige que el token de despliegue tenga «Zone › Workers Routes › Edit» en alertapublica.es.
+  "routes": [{ "pattern": "avisos.alertapublica.es", "custom_domain": true }],
+  // La dirección de workers.dev sigue activa mientras dura el cambio de dominio.
   "workers_dev": true,
   "preview_urls": false,
   // Registros sin datos personales: el código no escribe chats, correos ni mensajes.
@@ -25,7 +28,7 @@
     }
   ],
   "vars": {
-    "URL_PUBLICA": "https://empleo-avisos.empleo-publico.workers.dev",
+    "URL_PUBLICA": "https://avisos.alertapublica.es",
     // Correo por el SMTP del buzón de Piensa (TLS en el 465). Con «no» no hay altas ni resumen
     // diario, pero funciona la ruta /interno/correo-prueba. Con «si», las altas exigen un token de
     // Turnstile emitido en alertapublica.es: el interruptor público es la variable CORREO_SITEKEY del

@@ -33,7 +33,7 @@ TELEGRAM_BOT = os.environ.get("TELEGRAM_BOT", "").lstrip("@")
 # Clave pública del widget de Turnstile del formulario de avisos por correo. Vacía: la web no ofrece
 # el correo. Se fija en actualizar.yml.
 CORREO_SITEKEY = os.environ.get("CORREO_SITEKEY", "")
-AVISOS_URL = "https://empleo-avisos.empleo-publico.workers.dev"  # worker de avisos (avisos/)
+AVISOS_URL = "https://avisos.alertapublica.es"  # worker de avisos (avisos/)
 TURNSTILE = "https://challenges.cloudflare.com"
 CSP = "default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; base-uri 'none'; form-action 'self'"
 # Solo en «Recibir avisos» con el formulario de correo: el widget de Turnstile y el envío al worker.
