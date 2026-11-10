@@ -939,7 +939,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
     if bot:
         ways.append('<li><a href="#telegram"><strong>Por Telegram</strong><span>Un bot le envía un mensaje cuando se publica una oferta que cumple sus criterios.</span></a></li>')
     if sitekey:
-        ways.append('<li><a href="#correo"><strong>Por correo electrónico</strong><span>Un resumen diario con las ofertas que cumplen sus criterios.</span></a></li>')
+        ways.append('<li><a href="#correo"><strong>Por correo electrónico</strong><span>Dos resúmenes al día, mañana y tarde, con las ofertas que cumplen sus criterios.</span></a></li>')
     if ways:
         ways.append('<li><a href="#rss"><strong>Por RSS</strong><span>Siga una lista desde su lector de RSS, sin registrarse ni facilitar datos personales.</span></a></li>')
         intro = (f'<p>Puede recibir los avisos de {"dos" if len(ways) == 2 else "tres"} formas:</p>\n'
@@ -1002,7 +1002,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
     telegram = ("<li><strong>Telegram:</strong> un bot le envía un mensaje cuando se publica una oferta que cumple "
                 "sus criterios: palabras del título, áreas, comunidades autónomas u organismos.</li>\n") if bot else ""
     if mail:
-        telegram += ("<li><strong>Correo electrónico:</strong> un resumen diario con las ofertas que cumplen sus "
+        telegram += ("<li><strong>Correo electrónico:</strong> dos resúmenes al día (mañana y tarde) con las ofertas que cumplen sus "
                      "criterios, con los mismos apartados que el bot.</li>\n")
     sections = [("que-hay", "Contenido del portal"), ("organismos", "Organismos incluidos"),
                 ("antes-de-inscribirte", "Antes de inscribirse"), ("como-buscar", "Cómo buscar"),

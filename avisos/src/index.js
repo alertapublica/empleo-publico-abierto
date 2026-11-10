@@ -3,12 +3,12 @@
 // aquí solo se guardan las suscripciones y lo necesario para no avisar dos veces.
 
 import { COMANDOS, atender } from "./bot.js";
-import { alta, baja, confirmar, direccion, pagina, resumenDiario } from "./correo.js";
+import { alta, baja, confirmar, direccion, pagina, resumenCorreo } from "./correo.js";
 import { correoConfigurado, enlaceBaja, enviarUno, telegram, vaciar } from "./envios.js";
 import { recibir } from "./novedades.js";
 
 export const CRON_ENVIOS = "* * * * *";
-export const CRON_CORREO = "0 6 * * *";
+export const CRONS_CORREO = ["0 6 * * *", "0 13 * * *"]; // resumen de la mañana y de la tarde (UTC)
 
 function igual(a, b) { // comparación en tiempo constante
   const x = new TextEncoder().encode(a);
@@ -93,7 +93,7 @@ export default {
   },
 
   async scheduled(evento, env, _ctx) {
-    if (evento.cron === CRON_CORREO) await resumenDiario(env);
+    if (CRONS_CORREO.includes(evento.cron)) await resumenCorreo(env);
     await vaciar(env);
   },
 };

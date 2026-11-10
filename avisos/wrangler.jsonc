@@ -15,9 +15,9 @@
   // Registros sin datos personales: el código no escribe chats, correos ni mensajes.
   "observability": { "enabled": true },
   "triggers": {
-    // Cada minuto vacía la bandeja de salida; a las 6:00 UTC prepara el resumen diario por correo.
-    // Deben coincidir con CRON_ENVIOS y CRON_CORREO de src/index.js.
-    "crons": ["* * * * *", "0 6 * * *"]
+    // Cada minuto vacía la bandeja de salida; a las 6:00 y a las 13:00 UTC prepara el resumen por correo
+    // (el de la mañana y el de la tarde). Deben coincidir con CRON_ENVIOS y CRONS_CORREO de src/index.js.
+    "crons": ["* * * * *", "0 6 * * *", "0 13 * * *"]
   },
   "d1_databases": [
     {
@@ -29,8 +29,8 @@
   ],
   "vars": {
     "URL_PUBLICA": "https://avisos.alertapublica.es",
-    // Correo por el SMTP del buzón de Piensa (TLS en el 465). Con «no» no hay altas ni resumen
-    // diario, pero funciona la ruta /interno/correo-prueba. Con «si», las altas exigen un token de
+    // Correo por el SMTP del buzón de Piensa (TLS en el 465). Con «no» no hay altas ni resúmenes
+    // por correo, pero funciona la ruta /interno/correo-prueba. Con «si», las altas exigen un token de
     // Turnstile emitido en alertapublica.es: el interruptor público es la variable CORREO_SITEKEY del
     // repo, que hace aparecer el formulario en la web.
     "CORREO_ACTIVO": "si",

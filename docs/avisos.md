@@ -1,6 +1,6 @@
 # Avisos por Telegram y correo
 
-El worker `empleo-avisos` (`avisos/`, cuenta `empleo-publico` de Cloudflare) guarda las suscripciones en D1 (`empleo-avisos`). Los datos de las ofertas no se copian: al terminar de publicar, `actualizar.yml` le envía las novedades de los últimos 3 días a `/interno/publicado`. El worker guarda las que no conocía, las cruza con los avisos y deja los mensajes en una bandeja de salida. Un cron la vacía cada minuto, por tandas, porque el plan gratuito permite 50 llamadas por ejecución.
+El worker `empleo-avisos` (`avisos/`, cuenta `empleo-publico` de Cloudflare) guarda las suscripciones en D1 (`empleo-avisos`). Los datos de las ofertas no se copian: al terminar de publicar, `actualizar.yml` le envía las novedades de los últimos 3 días a `/interno/publicado`. El worker guarda las que no conocía, las cruza con los avisos y deja los mensajes en una bandeja de salida. Un cron la vacía cada minuto, por tandas, porque el plan gratuito permite 50 llamadas por ejecución. Otros dos crons, a las 6:00 y a las 13:00 UTC, preparan los resúmenes por correo (ver abajo).
 
 ## Criterios de un aviso
 
@@ -25,6 +25,8 @@ Para enlazar los avisos desde otra web (por ejemplo, la del Grupo Tragsa, `alert
 ## Correo
 
 Sale por el SMTP del buzón `avisos@alertapublica.es` de Piensa (`smtp.buzondecorreo.com`, TLS en el 465), con un cliente propio sobre `cloudflare:sockets` (`avisos/src/smtp.js`). No hace falta el plan Workers Paid. Cada tanda abre una sola sesión y envía como mucho `CORREO_POR_TANDA` correos; el resto espera al minuto siguiente. Un destinatario rechazado no se reintenta; un fallo temporal o de conexión, sí.
+
+Los avisos por correo son resúmenes, no alertas: se envían como mucho dos al día, a las 6:00 y a las 13:00 UTC (7:00 y 14:00 en invierno; 8:00 y 15:00 en verano, hora de Madrid). Cada uno reúne lo guardado desde el anterior, de modo que el de la tarde lleva lo de la mañana y el de la mañana, lo de la tarde y la noche. Una novedad espera, como mucho, hasta el siguiente resumen. Telegram avisa en cada ingesta. Si cambias las horas, cámbialas a la vez en `crons` de `avisos/wrangler.jsonc` y en `CRONS_CORREO` de `avisos/src/index.js`.
 
 Está desactivado mientras `CORREO_ACTIVO` no sea `si`. Hace falta:
 

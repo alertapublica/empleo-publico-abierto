@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { atender } from "../src/bot.js";
-import { alta, baja, confirmar, direccion, resumenDiario } from "../src/correo.js";
+import { alta, baja, confirmar, direccion, resumenCorreo } from "../src/correo.js";
 import { coincide, describir, empiezaPalabra, limpiar, reconocerComunidades, reconocerOrganismos } from "../src/criterios.js";
 import { vaciar } from "../src/envios.js";
-import worker from "../src/index.js";
+import worker, { CRON_ENVIOS, CRONS_CORREO } from "../src/index.js";
 import { MAX_MENSAJE, mensajeTelegram, recibir } from "../src/novedades.js";
 import { abrirSesion, cabecera, componer, ErrorSmtp } from "../src/smtp.js";
 import { LISTAS, d1, oferta, telegramFalso } from "./d1.mjs";
@@ -352,12 +353,12 @@ test("correo desactivado: el alta responde 503 y el resumen no hace nada", async
   const peticion = new Request("https://x/correo/alta", { method: "POST", body: new URLSearchParams({ correo: "a@b.es" }) });
   const r = await worker.fetch(peticion, { DB: d1(), CORREO_ACTIVO: "no" }, { waitUntil() {} });
   assert.equal(r.status, 503);
-  assert.equal(await resumenDiario({ DB: d1(), CORREO_ACTIVO: "no" }, AHORA), 0);
+  assert.equal(await resumenCorreo({ DB: d1(), CORREO_ACTIVO: "no" }, AHORA), 0);
   const sinClave = correoEnv(d1(), smtpFalso(), { SMTP_CLAVE: "" });
   assert.equal((await worker.fetch(formAlta("a@b.es"), sinClave, { waitUntil() {} })).status, 503, "sin contraseña no está activo");
 });
 
-test("correo activo: alta con doble confirmación, resumen diario y baja con un clic", async () => {
+test("correo activo: alta con doble confirmación, resúmenes y baja con un clic", async () => {
   const db = d1();
   const smtp = smtpFalso();
   const env = correoEnv(db, smtp);
@@ -374,10 +375,10 @@ test("correo activo: alta con doble confirmación, resumen diario y baja con un 
   assert.equal((await confirmar(env, new URL(enlace), { ahora: AHORA })).status, 404, "el enlace sirve una vez");
   assert.equal(await db.prepare("SELECT estado FROM suscriptores").first("estado"), "activo");
 
-  await resumenDiario(env, AHORA); // fija el cursor
+  await resumenCorreo(env, AHORA); // fija el cursor
   await recibir(env, { novedades: [oferta(0)], listas: LISTAS }, AHORA); // primera carga, sin avisos
   await recibir(env, { novedades: [oferta(1), oferta(2, { titulo: "Conductor/a" })], listas: LISTAS }, AHORA);
-  assert.equal(await resumenDiario(env, AHORA), 1);
+  assert.equal(await resumenCorreo(env, AHORA), 1);
   await vaciar(env, { ahora: AHORA });
   const resumen = enviados().at(-1);
   assert.equal(resumen.cabeceras.To, "<ana@ejemplo.es>");
@@ -392,6 +393,22 @@ test("correo activo: alta con doble confirmación, resumen diario y baja con un 
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 1, "abrir el enlace no da de baja");
   await baja(env, new Request(bajaUrl, { method: "POST" }), new URL(bajaUrl));
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0);
+});
+
+test("los crons de wrangler.jsonc coinciden con los del código y el correo sale por la mañana y por la tarde", async () => {
+  const jsonc = readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8").replace(/^\s*\/\/.*$/gm, "");
+  const { triggers } = JSON.parse(jsonc);
+  assert.deepEqual([...triggers.crons].sort(), [CRON_ENVIOS, ...CRONS_CORREO].sort());
+  assert.equal(CRONS_CORREO.length, 2);
+  for (const cron of CRONS_CORREO) {
+    const db = d1();
+    const env = correoEnv(db, smtpFalso());
+    await worker.scheduled({ cron }, env, { waitUntil() {} });
+    assert.equal(await db.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor"), "0", `${cron} fija el cursor`);
+  }
+  const db = d1();
+  await worker.scheduled({ cron: CRON_ENVIOS }, correoEnv(db, smtpFalso()), { waitUntil() {} });
+  assert.equal(await db.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor"), null, "el cron de envíos no prepara resumen");
 });
 
 test("alta: los criterios llegan como casillas del formulario y se limpian", async () => {

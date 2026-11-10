@@ -17,7 +17,7 @@ export async function telegram(env, metodo, datos, fetcher = fetch) {
 }
 
 // Correo por el SMTP del buzón de Piensa. «Configurado» basta para la ruta de prueba; «activo» abre
-// las altas y el resumen diario.
+// las altas y los resúmenes.
 export const correoConfigurado = (env) =>
   Boolean(env.SMTP_SERVIDOR && env.SMTP_USUARIO && env.SMTP_CLAVE && env.CORREO_REMITENTE);
 export const correoActivo = (env) => env.CORREO_ACTIVO === "si" && correoConfigurado(env);
