@@ -21,4 +21,5 @@ La ubicación se guarda tal como la da cada portal. Al publicar, `api/ofertas.js
 
 - Todos los ficheros empiezan con `version` (ahora `1`), `licencia`, `documentacion` y `generado`. Dentro de una versión solo se añaden claves: renombrar o quitar una obliga a subir `API_VERSION` (`empleo/site.py`). `test_api_v1_en_castellano` fija el orden de las claves de una oferta.
 - La descripción de cada clave vive en `FILE_FIELDS`, `OFFER_FIELDS`, `PROCESS_FIELDS` y `NEWS_FIELDS` (`empleo/site.py`), que generan «Datos abiertos». `test_datos_abiertos_documenta_todas_las_claves` falla si una clave de la API no está descrita ahí.
-- Un dato que la fuente no da vale `null`. Los textos van tal como los publica cada organismo; lo que elabora el proyecto son los códigos INE, las áreas y la detección del teletrabajo.
+- Un dato que la fuente no da vale `null`. Los textos van tal como los publica cada organismo, salvo en `novedades.json`, que pasa a minúsculas los títulos en mayúsculas (`humane_caps`) porque los usan los avisos; lo que elabora el proyecto son los códigos INE, las áreas y la detección del teletrabajo.
+- El `id` de un proceso sale de su organismo y su nombre (`process_id`); los comunicados de `novedades.json` lo llevan en `proceso_id`.

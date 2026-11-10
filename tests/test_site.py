@@ -351,7 +351,8 @@ class Site(unittest.TestCase):
         proceso = next(p for p in json.loads(self.read("api/procesos.json"))["procesos"] if p["nombre"] == "PROCESO ABIERTO (AB-1)")
         self.assertEqual((proceso["tipo"], proceso["acceso"], proceso["estado"], proceso["plazo_fin"], proceso["url_inscripcion"]),
                          ("tasa", "libre", "abierto", "2026-11-10", "https://plataforma.example/entrar"))
-        self.assertEqual(proceso["comunicados"], [{"fecha": "2026-11-03", "titulo": "Plazo", "url": "https://www.tragsa.es/p"}])
+        self.assertEqual(proceso["comunicados"], [{"fecha": "2026-11-03", "titulo": "Plazo", "url": "https://www.tragsa.es/p",
+                                                   "detectado": "2026-11-07T00:00:00+00:00"}])
         listas = json.loads(self.read("api/listas.json"))
         for clave, valor in (("tipos_contrato", "temporal"), ("tipos_proceso", "tasa"), ("accesos", "libre"),
                              ("sistemas", "concurso-oposicion"), ("estados_proceso", "abierto"), ("grupos", "sepi")):
@@ -374,7 +375,8 @@ class Site(unittest.TestCase):
         self.assertIn('<form id="buscar-campos"', datos)
         self.assertIn("api/ofertas.json | jq", datos)  # ejemplo con la URL absoluta de la API
         self.assertIn("(Invoke-RestMethod " + BASE + "api/ofertas.json)", datos)  # y para Windows
-        self.assertEqual(datos.count('class="ejemplo-bloque"'), 6)
+        self.assertIn("api/procesos.json | jq", datos)
+        self.assertEqual(datos.count('class="ejemplo-bloque"'), 9)
         self.assertIn('src="../assets/datos.js"', datos)
         self.assertTrue((site.ASSETS / "datos.js").exists())
         self.assertIn('aria-current="page">Datos abiertos</a>', datos.split("<footer")[1])
@@ -404,6 +406,12 @@ class Site(unittest.TestCase):
         comunicados = [i for i in items.values() if i["tipo"] == "comunicado"]
         self.assertEqual(len(comunicados), 6)
         self.assertTrue(all(i["proceso"] and i["url"] for i in comunicados))
+        # Cada comunicado se enlaza con su proceso por el id, aunque el nombre aquí vaya en minúsculas.
+        procesos = {p["id"]: p for p in json.loads(self.read("api/procesos.json"))["procesos"]}
+        self.assertTrue(all(i["proceso_id"] in procesos for i in comunicados))
+        abierto = next(i for i in comunicados if i["titulo"] == "Plazo")
+        self.assertEqual(abierto["proceso"], "Proceso abierto (AB-1)")
+        self.assertEqual(procesos[abierto["proceso_id"]]["nombre"], "PROCESO ABIERTO (AB-1)")
 
     def test_api_de_procesos_y_listas(self):
         procesos = json.loads(self.read("api/procesos.json"))["procesos"]
