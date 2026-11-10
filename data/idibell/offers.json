@@ -140,7 +140,7 @@
  "2286": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2286",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-10T05:23:42+00:00",
   "code": "26-144_SS_VN",
   "company": "IDIBELL",
   "contract": "Temporary contract to cover sick leave",
@@ -155,7 +155,7 @@
   "kind": null,
   "listed_deadline": "2026-11-09",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-26",
   "parent_ref": null,
   "place": null,
@@ -179,7 +179,7 @@
   ],
   "source": "idibell",
   "source_title": "26-144_SS_VN - Study Coordinator for Cancer Clinical Trials (Sick Leave Cover)",
-  "status": "open",
+  "status": "closed",
   "title": "Study Coordinator for Cancer Clinical Trials (Sick Leave Cover)",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2286"
  },
