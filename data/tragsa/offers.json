@@ -17639,6 +17639,96 @@
   "title": "Ingeniero/a o Licenciado/a o Graduado/a + Máster Oficial - Bioinformática (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58678"
  },
+ "58683": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58683",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58683",
+  "company": "Tragsa",
+  "contract": null,
+  "deadline": "2026-11-24",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-10T08:07:27+00:00",
+  "id": "tragsa:58683",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-24",
+  "location": "Mallorca",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Mallorca - Baleares",
+  "portal_tries": 0,
+  "positions": 12,
+  "published_on": null,
+  "ref": "58683",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 12 Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Mallorca<br/>Dirección: VARIAS ZONAS DE MALLORCA</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Desempeño de trabajos especializados de edificación en obras de nueva construcción, rehabilitación y mantenimiento de infraestructuras, ejecutando tareas de albañilería, replanteo, enfoscados, revestimientos, solados, alicatados y acabados, garantizando el cumplimiento de especificaciones técnicas, calidad de ejecución y plazos establecidos.</li><li>Realización de labores de mantenimiento correctivo y preventivo en edificios e instalaciones, interviniendo en reparaciones estructurales menores, acondicionamiento de espacios, conservación de elementos constructivos y adecuación de inmuebles conforme a criterios técnicos, funcionales y de seguridad.</li><li>Supervisión y organización de tajos de trabajo, colaborando con encargados, técnicos y equipos multidisciplinares para optimizar recursos, controlar rendimientos y asegurar el cumplimiento de la planificación de obra y los estándares exigidos en la obra</li><li>Aplicación de medidas de prevención de riesgos laborales, seguridad y salud en obra, verificando el uso correcto de equipos de protección individual y el cumplimiento de procedimientos establecidos para minimizar incidencias y garantizar entornos de trabajo seguros.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li><li>Disponer de experiencia laboral y/o académica o formación ligado al ámbito de las obras, edificación, mantenimiento o instalaciones</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li><li>Disponer de experiencia laboral y/o académica o formación ligado al ámbito de las obras, edificación, mantenimiento o instalaciones</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso de PRL en trabajos en altura (adjuntar certificado en la solicitud)</li><li>Cursos PRL de 50/60 horas o superior (adjuntar certificado en la solicitud)</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en mantenimiento y trabajos con instalaciones (laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Disponer de formación complementaria de la menos 500 horas o superior en las ramas del conocimiento de Electricidad y Tensión, Fontanería, climatización, Albañilería u otras afines que permitan el desarrollo de las funciones del puesto (adjuntar certificado en la solicitud)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso de PRL en trabajos en altura (adjuntar certificado en la solicitud)</li><li>Cursos PRL de 50/60 horas o superior (adjuntar certificado en la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso de PRL en trabajos en altura (adjuntar certificado en la solicitud)</li><li>Cursos PRL de 50/60 horas o superior (adjuntar certificado en la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en mantenimiento y trabajos con instalaciones (laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Disponer de formación complementaria de la menos 500 horas o superior en las ramas del conocimiento de Electricidad y Tensión, Fontanería, climatización, Albañilería u otras afines que permitan el desarrollo de las funciones del puesto (adjuntar certificado en la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde el día 10/11/2026 hasta el próximo 24/11/2026 a las 23:59h (hora peninsular).<br/><br/>SE OFRECE:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa 37,5h <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58683"
+ },
  "tasas-reposicion-especifica-2025-2026": {
   "apply_url": "https://grupotragsatre2026.iformalia.es/",
   "category": "Tasa de reposición",
