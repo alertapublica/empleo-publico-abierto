@@ -1164,15 +1164,16 @@ PROCESS_FIELDS = [
     (("id",), "Identificador del proceso, calculado con su organismo y su nombre: se mantiene mientras el organismo no cambie el nombre del proceso. Es el <code>proceso_id</code> de novedades.json."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
     (("nombre",), "Nombre literal del proceso."),
-    (("tipo", "acceso", "tipo_contrato", "sistema"), "Tipo de proceso, tipo de acceso, tipo de contrato y sistema de selección (<code>tipos_proceso</code>, <code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), si constan."),
-    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json)."),
-    (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo, hora de cierre y enlace de inscripción, solo mientras la inscripción está abierta."),
+    (("tipo",), "Tipo de proceso (<code>tipos_proceso</code> en listas.json). Siempre tiene valor: <code>otro</code> es un proceso selectivo sin un tipo más concreto."),
+    (("acceso", "tipo_contrato", "sistema"), "Tipo de acceso, tipo de contrato y sistema de selección (<code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), solo si el organismo los indica."),
+    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code> y los <code>curso</code>."),
+    (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo (<code>AAAA-MM-DD</code>), hora de cierre (<code>HH:MM</code>, hora peninsular) y enlace de inscripción, solo mientras la inscripción está abierta. Sin hora, el último día cuenta completo."),
     (("url",), "Página o documento oficial del proceso."),
-    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo, con <code>fecha</code> (<code>AAAA-MM-DD</code> o <code>null</code>), <code>titulo</code>, <code>url</code> y <code>detectado</code>: el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. No incluye relaciones de personas."),
+    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Las autoridades portuarias (organismo <code>puertos</code>) no publican la fecha: en ellas, <code>fecha</code> es el día en que este portal detectó el comunicado. No incluye relaciones de personas."),
 ]
 NEWS_FIELDS = [
     (("id",), "Identificador estable: la misma novedad conserva siempre el mismo <code>id</code>, de modo que puede avisarse una sola vez."),
-    (("fecha",), "Momento (ISO 8601) en que este portal detectó la novedad."),
+    (("fecha",), "Momento (ISO 8601) en que este portal detectó la novedad. En los comunicados es su <code>detectado</code> de procesos.json."),
     (("tipo",), "<code>oferta</code> o <code>comunicado</code>."),
     (("evento",), "Solo ofertas: <code>new</code> (nueva) o <code>republished</code> (nueva publicación)."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
@@ -1180,7 +1181,7 @@ NEWS_FIELDS = [
     (("proceso", "proceso_id"), "Solo comunicados: nombre del proceso y su <code>id</code> en procesos.json."),
     (("titulo",), "Título de la oferta o del comunicado. Si el organismo lo escribe en mayúsculas, aquí (y en <code>proceso</code>) va en minúsculas con mayúscula inicial, para facilitar la lectura; el texto literal está en ofertas.json y procesos.json."),
     (("detalle",), "Solo ofertas: resumen en una línea con la empresa, la ubicación, las plazas y el plazo."),
-    (("url",), "Ofertas: ficha en este portal. Comunicados: documento oficial."),
+    (("url",), "Ofertas: ficha en este portal. Comunicados: como en procesos.json, su documento oficial o la página del proceso."),
 ]
 
 
@@ -1245,7 +1246,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h2 id="ficheros">Ficheros</h2>
 <ul>
 <li><a href="../api/ofertas.json">ofertas.json</a>: todas las ofertas, abiertas y cerradas.</li>
-<li><a href="../api/procesos.json">procesos.json</a>: los procesos selectivos y sus comunicados, por fases.</li>
+<li><a href="../api/procesos.json">procesos.json</a>: todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases.</li>
 <li><a href="../api/novedades.json">novedades.json</a>: las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios.</li>
 <li><a href="../api/listas.json">listas.json</a>: el nombre de cada clave que usan los demás ficheros (comunidades autónomas, organismos, áreas, tipos de contrato…).</li>
 </ul>
@@ -1272,7 +1273,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h3 id="formato">Formato común</h3>
 <p>Todos los ficheros comienzan con estos campos:</p>
 {field_table(FILE_FIELDS, "Campos comunes a todos los ficheros")}
-<p>Un dato que la fuente no facilita vale <code>null</code>. Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo, salvo los títulos en mayúsculas de novedades.json.</p>
+<p>Un dato que la fuente no facilita vale <code>null</code>, salvo la fecha de los comunicados de las autoridades portuarias (ver <a href="#procesos">Procesos</a>). Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo, salvo los títulos en mayúsculas de novedades.json.</p>
 </section>
 <section class="campos-fichero" aria-labelledby="ofertas">
 <h3 id="ofertas">Ofertas (ofertas.json)</h3>
@@ -1281,7 +1282,9 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 </section>
 <section class="campos-fichero" aria-labelledby="procesos">
 <h3 id="procesos">Procesos (procesos.json)</h3>
-<p>El campo <code>procesos</code> contiene los procesos selectivos, con los datos de su comunicado más reciente:</p>
+<p>El campo <code>procesos</code> contiene todos los procesos selectivos que ha recogido este portal, en marcha y terminados. Solo figuran los organismos que publican sus procesos por fases, con comunicados; los puestos que se publican con ficha y plazo propios están en ofertas.json.</p>
+<p>Primero van los procesos con la inscripción abierta y después los demás, por la fecha de su último comunicado, del más reciente al más antiguo (los que no tienen fecha, al final). Los datos de cada proceso (tipo, estado, plazo…) son los de la última lectura de la web oficial. Cada proceso en marcha tiene, además, su lista RSS en <code>{e(base_url)}feeds/proceso-<var>id</var>.xml</code>.</p>
+<p>Campos de cada proceso:</p>
 {field_table(PROCESS_FIELDS, "Campos de cada proceso en procesos.json")}
 </section>
 <section class="campos-fichero" aria-labelledby="novedades">
@@ -1298,12 +1301,12 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <p>Este portal lo mantienen personas ajenas a la Administración, con recursos limitados, gracias a las contribuciones y donaciones de la comunidad. Se ruega hacer un uso responsable de los datos:</p>
 <ul>
 <li>Los ficheros se actualizan, como mucho, cada 30 minutos; no es necesario consultarlos con mayor frecuencia.</li>
-<li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json completo en cada consulta.</li>
+<li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json o procesos.json completos en cada consulta.</li>
 <li>Si su servicio tiene muchas personas usuarias, guarde una copia de los ficheros en su servidor en lugar de que cada navegador los descargue de este portal.</li>
 </ul>
 <h2 id="licencia">Licencia y atribución</h2>
 <p>Los datos pueden reutilizarse con la licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>, citando «{SITE_NAME}» y enlazando este portal. Los textos, documentos y enlaces de cada oferta y comunicado pertenecen a su organismo.</p>
-<p>Si ofrece un servicio basado en estos datos, indique a sus personas usuarias que la inscripción se realiza en la web oficial de cada organismo: cada oferta incluye sus enlaces en <code>url</code> y <code>url_inscripcion</code>.</p>
+<p>Si ofrece un servicio basado en estos datos, indique a sus personas usuarias que la inscripción se realiza en la web oficial de cada organismo: cada oferta incluye sus enlaces en <code>url</code> y <code>url_inscripcion</code>, y cada proceso con la inscripción abierta, en <code>url_inscripcion</code>.</p>
 <script src="../assets/datos.js" defer></script>"""
     return page("Datos abiertos", body, "../", "datos", checked=checked,
                 description="Ofertas de empleo del sector público en ficheros JSON abiertos, con licencia CC BY 4.0")

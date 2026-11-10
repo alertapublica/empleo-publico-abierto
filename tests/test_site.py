@@ -417,6 +417,11 @@ class Site(unittest.TestCase):
         procesos = json.loads(self.read("api/procesos.json"))["procesos"]
         self.assertEqual(len(procesos), 5)
         self.assertNotIn("first_seen", procesos[0]["comunicados"][0])
+        # «Datos abiertos» promete una lista RSS por proceso en marcha, con su id.
+        self.assertIn("feeds/proceso-<var>id</var>.xml", self.read("datos/index.html"))
+        for proceso in procesos:
+            en_marcha = proceso["estado"] in ("abierto", "curso")
+            self.assertEqual((self.out / f"feeds/proceso-{proceso['id']}.xml").exists(), en_marcha, proceso["nombre"])
         listas = json.loads(self.read("api/listas.json"))
         self.assertEqual(len(listas["comunidades"]), 19)
         self.assertEqual(len(listas["provincias"]), 52)
