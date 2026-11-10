@@ -93,11 +93,11 @@ class Informe(unittest.TestCase):
 
 
 class Portada(unittest.TestCase):
-    def test_opciones_en_orden_y_sin_area_al_final(self):
+    def test_opciones_por_nombre_y_sin_area_al_final(self):
         html = site.area_options(
             [offer("Programador/a PHP"), offer("Ingeniero/a de Montes"), offer("Sin pistas")], {})
-        self.assertEqual(html, '<option value="ambiente">Medio ambiente, agro y pesca</option>'
-                               '<option value="tic">Informática y telecomunicaciones</option>'
+        self.assertEqual(html, '<option value="tic">Informática y telecomunicaciones</option>'
+                               '<option value="ambiente">Medio ambiente, agro y pesca</option>'
                                '<option value="ninguna">Sin área</option>')
 
     def test_tarjeta_con_sus_areas(self):
