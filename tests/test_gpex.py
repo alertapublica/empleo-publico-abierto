@@ -57,6 +57,15 @@ class Lectura(unittest.TestCase):
     def test_lista_vacia_es_valida(self):
         self.assertEqual(gpex.parse_open('<div id="contenido"><div id="ofertas"></div></div>'), [])
 
+    def test_sin_anuncios_es_valido(self):
+        # Así sale la página de anuncios cuando no hay ninguno (10-11-2026).
+        html = ('<div id="contenido"><div class="camino_migas">Anuncios ofertas de empleo</div>'
+                "<div class='informacion separacion'><b>No hay Anuncios de ofertas de empleo disponibles"
+                " actualmente</b></div></div>")
+        self.assertEqual(gpex.parse_notices(html), [])
+        with self.assertRaises(SourceLayoutError):
+            gpex.parse_notices('<div id="contenido"><div class="informacion">Mantenimiento</div></div>')
+
     def test_ficha(self):
         detail = gpex.parse_detail(page("gpex-ficha.html"))
         self.assertEqual(detail.location, "Mérida (Badajoz)")
