@@ -207,7 +207,8 @@ def _municipalities() -> dict[str, list[tuple[str, str]]]:
     for identity in catalog.ids("municipality"):
         record = catalog.territory(identity)
         code, ccaa = record["codes"]["ine:municipio"], record["ancestors"][1].rsplit(":", 1)[1]
-        for name in record["names"]["official"].split("/"):  # «Alacant/Alicante»
+        former = [a["name"] for a in record["names"].get("aliases", []) if a["kind"] == "former_official"]
+        for name in [*record["names"]["official"].split("/"), *former]:  # «Alacant/Alicante»; «Cangas», antes
             name = name.strip()
             forms = {name}
             if match := re.fullmatch(r"(.+), (\S+)", name):  # «Palmas de Gran Canaria, Las»

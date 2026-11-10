@@ -71,6 +71,8 @@ class CodigosINE(unittest.TestCase):
         self.assertEqual(municipality_of("L'Hospitalet de Llobregat"), ("08101", "09"))
         self.assertEqual(municipality_of("Hospitalet de Llobregat"), ("08101", "09"))
         self.assertEqual(municipality_of("Donostia"), ("20069", "16"))
+        self.assertEqual(municipality_of("Cangas de Morrazo"), ("36008", "12"))
+        self.assertEqual(municipality_of("Cangas"), ("36008", "12"))  # nombre oficial hasta 2026
         self.assertIsNone(municipality_of("Sevilla"))      # provincia o capital: no se elige
         self.assertIsNone(municipality_of("Cantabria"))
         self.assertIsNone(municipality_of("Rioja"))        # hay un Rioja en Almería
