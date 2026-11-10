@@ -1,3 +1,3 @@
 beautifulsoup4==4.15.0
 pypdf==7.0.0
-territorios-es @ git+https://github.com/alertapublica/territorios-es@v0.2.0
+territorios-es @ git+https://github.com/alertapublica/territorios-es@v0.3.0
