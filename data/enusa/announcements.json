@@ -51,6 +51,24 @@
   "url": "https://www.enusa.es/trabaja-con-nosotros/",
   "via": "otro"
  },
+ "enusa:d53b866da6ca": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-11-10",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-10T11:37:22+00:00",
+  "location": null,
+  "process": "TECNICO/A TITULADO/A DESMANTELAMIENTO Y RECUPERACION AM (846-TTRECAM)",
+  "process_url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "source": "enusa",
+  "state": "curso",
+  "system": null,
+  "title": "Comunicación del proceso",
+  "url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "via": "otro"
+ },
  "enusa:ec11bf31f842": {
   "access": "libre",
   "apply_url": null,
