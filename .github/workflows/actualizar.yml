@@ -114,7 +114,7 @@ jobs:
              | {novedades: [$n[0].novedades[] | select(.fecha >= $desde)], listas: $l[0]}' > carga.json
           curl -fsS --retry 3 --retry-all-errors -X POST \
             -H "Authorization: Bearer $AVISOS_CLAVE" -H "Content-Type: application/json" \
-            --data-binary @carga.json https://empleo-avisos.empleo-publico.workers.dev/interno/publicado
+            --data-binary @carga.json https://avisos.alertapublica.es/interno/publicado
 
       # Ofertas abiertas sin área (o solo con la de su organismo) que aún no están revisadas en
       # empleo/areas_referencia.csv: un único issue que se crea, se actualiza y se cierra solo.

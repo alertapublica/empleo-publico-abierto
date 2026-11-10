@@ -13,6 +13,8 @@ Un aviso combina palabras del título (por comienzo de palabra, sin tildes), ár
 3. Variable del repo `TELEGRAM_BOT` con el usuario del bot: la web empieza a mencionarlo.
 4. Lanzar el workflow «Workers»: migra D1, despliega y registra el webhook y los comandos del bot.
 
+El worker se publica en `https://avisos.alertapublica.es` (dominio propio declarado en `avisos/wrangler.jsonc`), así que el token del secreto `CLOUDFLARE_API_TOKEN` necesita también «Zone › Workers Routes › Edit» en la zona `alertapublica.es`. Si cambia esa dirección, hay que cambiarla también en `URL_PUBLICA`, en `AVISOS_URL` (`empleo/site.py`) y en los workflows `actualizar.yml` y `worker.yml`.
+
 ## Enlaces con el organismo ya elegido
 
 Para enlazar los avisos desde otra web (por ejemplo, la del Grupo Tragsa, `alertapublica/empleo-tragsa`), con el id de `organismos` de `api/listas.json`:
@@ -36,7 +38,7 @@ Funciona aunque el correo esté desactivado: sirve para comprobar el SMTP desde 
 
 ```bash
 curl -X POST -H "Authorization: Bearer $AVISOS_CLAVE" -d '{"para": "direccion@ejemplo.es"}' \
-  https://empleo-avisos.empleo-publico.workers.dev/interno/correo-prueba
+  https://avisos.alertapublica.es/interno/correo-prueba
 ```
 
 Responde `{"enviado": true}` o el fallo, sin el texto del servidor (p. ej. `SMTP 535 en AUTH`).

@@ -78,7 +78,7 @@ jobs:
         run: |
           if [ -z "$AVISOS_CLAVE" ]; then echo "Falta el secreto AVISOS_CLAVE."; exit 0; fi
           codigo=$(curl -sS -o respuesta.json -w '%{http_code}' -X POST \
-            -H "Authorization: Bearer $AVISOS_CLAVE" https://empleo-avisos.empleo-publico.workers.dev/interno/configurar)
+            -H "Authorization: Bearer $AVISOS_CLAVE" https://avisos.alertapublica.es/interno/configurar)
           cat respuesta.json; echo
           case "$codigo" in
             200) jq -e '.webhook and .comandos' respuesta.json ;;
