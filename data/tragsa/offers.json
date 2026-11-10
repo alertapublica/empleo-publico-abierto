@@ -10437,12 +10437,12 @@
  "58427": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58427",
   "category": "Específica",
-  "closed_at": "2026-11-10T05:23:42+00:00",
+  "closed_at": null,
   "code": "58427",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-09",
-  "deadline_time": "23:59",
+  "deadline": "2026-11-16",
+  "deadline_time": null,
   "department": "Guipúzcoa",
   "detail_ok": true,
   "detail_version": 2,
@@ -10450,9 +10450,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58427",
   "kind": "temporal",
-  "listed_deadline": "2026-11-09",
+  "listed_deadline": "2026-11-16",
   "location": "Gipuzkoa",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": "2026-10-21",
   "parent_ref": null,
   "place": "Gipuzkoa",
@@ -10463,7 +10463,7 @@
   "region": "País Vasco",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para dar apoyo en la Gestión del Dominio Público Marítimo-Terrestre y protección de costas en Gipuzkoa.</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para dar apoyo en la Gestión del Dominio Público Marítimo-Terrestre y protección de costas en Gipuzkoa.<br/><br/>En relación al proceso publicado el pasado 21/10/2026 se amplía el plazo de recepción de candidaturas desde el 10/11/2026 hasta el 16/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -10525,7 +10525,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Caminos, Canales y Puertos_Gestión del Dominio Público Marítimo-Terrestre y protección de costas (Gipuzkoa)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58427"
  },
