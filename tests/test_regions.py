@@ -73,6 +73,8 @@ class CodigosINE(unittest.TestCase):
         self.assertEqual(municipality_of("Donostia"), ("20069", "16"))
         self.assertEqual(municipality_of("Cangas de Morrazo"), ("36008", "12"))
         self.assertEqual(municipality_of("Cangas"), ("36008", "12"))  # nombre oficial hasta 2026
+        self.assertEqual(municipality_of("Riós"), ("32071", "12"))     # antes «Riós», ahora «Riós, O»
+        self.assertEqual(municipality_of("Peñíscola"), ("12089", "10"))  # «Peñíscola/Peníscola»
         self.assertIsNone(municipality_of("Sevilla"))      # provincia o capital: no se elige
         self.assertIsNone(municipality_of("Cantabria"))
         self.assertIsNone(municipality_of("Rioja"))        # hay un Rioja en Almería
