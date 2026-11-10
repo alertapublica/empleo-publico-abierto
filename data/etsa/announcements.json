@@ -12,9 +12,27 @@
   "process_url": "https://www.etsa.es/conductor-a-internacional-de-vehiculos-articulados-con-adr/",
   "source": "etsa",
   "state": "curso",
-  "system": null,
+  "system": "concurso",
   "title": "Listado definitivo de admitidos/as",
   "url": "https://www.etsa.es/etsa/wp-content/uploads/4.-Oferta_RH2026040_Listado-definitivo-admitidos.pdf",
+  "via": "otro"
+ },
+ "etsa:7fc1ede58d16": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-10-14",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-10T12:07:26+00:00",
+  "location": null,
+  "process": "Conductor/a internacional de vehículos articulados con ADR (RH2026040)",
+  "process_url": "https://www.etsa.es/conductor-a-internacional-de-vehiculos-articulados-con-adr/",
+  "source": "etsa",
+  "state": "curso",
+  "system": "concurso",
+  "title": "Resultado fase concurso",
+  "url": "https://www.etsa.es/etsa/wp-content/uploads/5.-Oferta_RH2026040_resultado-fase-concurso.pdf",
   "via": "otro"
  },
  "etsa:ed017dd8266c": {

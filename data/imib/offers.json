@@ -68,7 +68,7 @@
  "IMIB26_C83": {
   "apply_url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2083",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-10T12:07:26+00:00",
   "code": "IMIB26_C83",
   "company": "FFIS",
   "contract": null,
@@ -82,7 +82,7 @@
   "kind": null,
   "listed_deadline": "2026-11-10",
   "location": "Murcia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-02",
   "parent_ref": null,
   "place": null,
@@ -94,7 +94,7 @@
   "sections": [],
   "source": "imib",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "INVESTIGADOR/A DOCTOR/A",
   "url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2083"
  }
