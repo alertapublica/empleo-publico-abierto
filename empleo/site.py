@@ -1161,26 +1161,27 @@ OFFER_FIELDS = [
     (("url", "url_inscripcion", "url_portal"), "Enlaces a la ficha oficial, a la inscripción oficial y a la ficha en este portal."),
 ]
 PROCESS_FIELDS = [
-    (("id",), "Identificador estable del proceso."),
+    (("id",), "Identificador del proceso, calculado con su organismo y su nombre: se mantiene mientras el organismo no cambie el nombre del proceso. Es el <code>proceso_id</code> de novedades.json."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
     (("nombre",), "Nombre literal del proceso."),
-    (("tipo", "acceso", "tipo_contrato", "sistema"), "Tipo de proceso, tipo de acceso, tipo de contrato y sistema de selección (<code>tipos_proceso</code>, <code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), si constan."),
-    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json)."),
-    (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo, hora de cierre y enlace de inscripción, solo mientras la inscripción está abierta."),
+    (("tipo",), "Tipo de proceso (<code>tipos_proceso</code> en listas.json). Siempre tiene valor: <code>otro</code> es un proceso selectivo sin un tipo más concreto."),
+    (("acceso", "tipo_contrato", "sistema"), "Tipo de acceso, tipo de contrato y sistema de selección (<code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), solo si el organismo los indica."),
+    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code> y los <code>curso</code>."),
+    (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo (<code>AAAA-MM-DD</code>), hora de cierre (<code>HH:MM</code>, hora peninsular) y enlace de inscripción, solo mientras la inscripción está abierta. Sin hora, el último día cuenta completo."),
     (("url",), "Página o documento oficial del proceso."),
-    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo, con <code>fecha</code> (<code>AAAA-MM-DD</code> o <code>null</code>), <code>titulo</code> y <code>url</code>. No incluye relaciones de personas."),
+    (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Las autoridades portuarias (organismo <code>puertos</code>) no publican la fecha: en ellas, <code>fecha</code> es el día en que este portal detectó el comunicado. No incluye relaciones de personas."),
 ]
 NEWS_FIELDS = [
     (("id",), "Identificador estable: la misma novedad conserva siempre el mismo <code>id</code>, de modo que puede avisarse una sola vez."),
-    (("fecha",), "Momento (ISO 8601) en que este portal detectó la novedad."),
+    (("fecha",), "Momento (ISO 8601) en que este portal detectó la novedad. En los comunicados es su <code>detectado</code> de procesos.json."),
     (("tipo",), "<code>oferta</code> o <code>comunicado</code>."),
     (("evento",), "Solo ofertas: <code>new</code> (nueva) o <code>republished</code> (nueva publicación)."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
     (("ccaa", "areas", "teletrabajo"), "Solo ofertas: como en ofertas.json."),
-    (("proceso",), "Solo comunicados: nombre del proceso."),
-    (("titulo",), "Título de la oferta o del comunicado."),
+    (("proceso", "proceso_id"), "Solo comunicados: nombre del proceso y su <code>id</code> en procesos.json."),
+    (("titulo",), "Título de la oferta o del comunicado. Si el organismo lo escribe en mayúsculas, aquí (y en <code>proceso</code>) va en minúsculas con mayúscula inicial, para facilitar la lectura; el texto literal está en ofertas.json y procesos.json."),
     (("detalle",), "Solo ofertas: resumen en una línea con la empresa, la ubicación, las plazas y el plazo."),
-    (("url",), "Ofertas: ficha en este portal. Comunicados: documento oficial."),
+    (("url",), "Ofertas: ficha en este portal. Comunicados: como en procesos.json, su documento oficial o la página del proceso."),
 ]
 
 
@@ -1225,6 +1226,13 @@ def open_data_page(checked: str, base_url: str = DEFAULT_BASE_URL) -> str:
   Select-Object titulo, empresa, plazo_fin, url""",
         f"""const datos = await (await fetch("{e(api)}ofertas.json")).json();
 const abiertas = datos.ofertas.filter(o =&gt; o.estado === "abierta" &amp;&amp; o.ccaa === "01");""")
+    example_processes = code_example(
+        f"""curl -s {e(api)}procesos.json | jq '.procesos[] | select(.estado == "abierto") | {{nombre, organismo, plazo_fin, url_inscripcion}}'""",
+        f"""(Invoke-RestMethod {e(api)}procesos.json).procesos |
+  Where-Object {{ $_.estado -eq "abierto" }} |
+  Select-Object nombre, organismo, plazo_fin, url_inscripcion""",
+        f"""const datos = await (await fetch("{e(api)}procesos.json")).json();
+const abiertos = datos.procesos.filter(p =&gt; p.estado === "abierto");""")
     example_news = code_example(
         f"""curl -s {e(api)}novedades.json | jq '.novedades[] | select(.tipo == "oferta" and .ccaa == "12") | {{titulo, url}}'""",
         f"""(Invoke-RestMethod {e(api)}novedades.json).novedades |
@@ -1238,7 +1246,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h2 id="ficheros">Ficheros</h2>
 <ul>
 <li><a href="../api/ofertas.json">ofertas.json</a>: todas las ofertas, abiertas y cerradas.</li>
-<li><a href="../api/procesos.json">procesos.json</a>: los procesos selectivos y sus comunicados, por fases.</li>
+<li><a href="../api/procesos.json">procesos.json</a>: todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases.</li>
 <li><a href="../api/novedades.json">novedades.json</a>: las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios.</li>
 <li><a href="../api/listas.json">listas.json</a>: el nombre de cada clave que usan los demás ficheros (comunidades autónomas, organismos, áreas, tipos de contrato…).</li>
 </ul>
@@ -1248,6 +1256,9 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h3>Ofertas abiertas en Andalucía</h3>
 <p>Con el código del INE de la comunidad autónoma (<code>01</code>), y su título, empresa, fin del plazo y enlace:</p>
 {example_open}
+<h3>Procesos selectivos con inscripción abierta</h3>
+<p>Con su nombre, organismo, fin del plazo y enlace de inscripción:</p>
+{example_processes}
 <h3>Novedades de ofertas en Galicia</h3>
 <p>Con el código del INE <code>12</code>, y su título y su enlace:</p>
 {example_news}
@@ -1262,7 +1273,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h3 id="formato">Formato común</h3>
 <p>Todos los ficheros comienzan con estos campos:</p>
 {field_table(FILE_FIELDS, "Campos comunes a todos los ficheros")}
-<p>Un dato que la fuente no facilita vale <code>null</code>. Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo.</p>
+<p>Un dato que la fuente no facilita vale <code>null</code>, salvo la fecha de los comunicados de las autoridades portuarias (ver <a href="#procesos">Procesos</a>). Los textos de ofertas y comunicados se reproducen tal como los publica cada organismo, salvo los títulos en mayúsculas de novedades.json.</p>
 </section>
 <section class="campos-fichero" aria-labelledby="ofertas">
 <h3 id="ofertas">Ofertas (ofertas.json)</h3>
@@ -1271,7 +1282,9 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 </section>
 <section class="campos-fichero" aria-labelledby="procesos">
 <h3 id="procesos">Procesos (procesos.json)</h3>
-<p>El campo <code>procesos</code> contiene los procesos selectivos, con los datos de su comunicado más reciente:</p>
+<p>El campo <code>procesos</code> contiene todos los procesos selectivos que ha recogido este portal, en marcha y terminados. Solo figuran los organismos que publican sus procesos por fases, con comunicados; los puestos que se publican con ficha y plazo propios están en ofertas.json.</p>
+<p>Primero van los procesos con la inscripción abierta y después los demás, por la fecha de su último comunicado, del más reciente al más antiguo (los que no tienen fecha, al final). Los datos de cada proceso (tipo, estado, plazo…) son los de la última lectura de la web oficial. Cada proceso en marcha tiene, además, su lista RSS en <code>{e(base_url)}feeds/proceso-<var>id</var>.xml</code>.</p>
+<p>Campos de cada proceso:</p>
 {field_table(PROCESS_FIELDS, "Campos de cada proceso en procesos.json")}
 </section>
 <section class="campos-fichero" aria-labelledby="novedades">
@@ -1288,12 +1301,12 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <p>Este portal lo mantienen personas ajenas a la Administración, con recursos limitados, gracias a las contribuciones y donaciones de la comunidad. Se ruega hacer un uso responsable de los datos:</p>
 <ul>
 <li>Los ficheros se actualizan, como mucho, cada 30 minutos; no es necesario consultarlos con mayor frecuencia.</li>
-<li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json completo en cada consulta.</li>
+<li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json o procesos.json completos en cada consulta.</li>
 <li>Si su servicio tiene muchas personas usuarias, guarde una copia de los ficheros en su servidor en lugar de que cada navegador los descargue de este portal.</li>
 </ul>
 <h2 id="licencia">Licencia y atribución</h2>
 <p>Los datos pueden reutilizarse con la licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>, citando «{SITE_NAME}» y enlazando este portal. Los textos, documentos y enlaces de cada oferta y comunicado pertenecen a su organismo.</p>
-<p>Si ofrece un servicio basado en estos datos, indique a sus personas usuarias que la inscripción se realiza en la web oficial de cada organismo: cada oferta incluye sus enlaces en <code>url</code> y <code>url_inscripcion</code>.</p>
+<p>Si ofrece un servicio basado en estos datos, indique a sus personas usuarias que la inscripción se realiza en la web oficial de cada organismo: cada oferta incluye sus enlaces en <code>url</code> y <code>url_inscripcion</code>, y cada proceso con la inscripción abierta, en <code>url_inscripcion</code>.</p>
 <script src="../assets/datos.js" defer></script>"""
     return page("Datos abiertos", body, "../", "datos", checked=checked,
                 description="Ofertas de empleo del sector público en ficheros JSON abiertos, con licencia CC BY 4.0")
@@ -1353,7 +1366,7 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
         items.append({
             "id": f"anuncio/{item['process']}/{item['date']}/{item['title'][:80]}", "fecha": seen,
             "tipo": "comunicado", "organismo": item["source"], "proceso": humane_caps(item["process"]),
-            "titulo": humane_caps(item["title"]), "url": item["url"],
+            "proceso_id": process_id([item]), "titulo": humane_caps(item["title"]), "url": item["url"],
         })
     return sorted(items, key=lambda item: item["fecha"], reverse=True)
 
@@ -1387,7 +1400,8 @@ def processes(announcements: list) -> list[dict]:
             "sistema": latest.get("system"), "estado": latest.get("state", "curso"),
             "plazo_fin": latest.get("deadline"), "plazo_hora": latest.get("deadline_time"),
             "url": latest.get("process_url"), "url_inscripcion": latest.get("apply_url"),
-            "comunicados": [{"fecha": n.get("date") or None, "titulo": n["title"], "url": n["url"]} for n in notices],
+            "comunicados": [{"fecha": n.get("date") or None, "titulo": n["title"], "url": n["url"],
+                             "detectado": n.get("first_seen")} for n in notices],
         })
     return result
 
