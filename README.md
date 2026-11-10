@@ -5,7 +5,7 @@
 [![Código: EUPL 1.2](https://img.shields.io/badge/código-EUPL%201.2-blue)](LICENSE)
 [![Datos: CC BY 4.0](https://img.shields.io/badge/datos-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/deed.es)
 
-Portal independiente y **no oficial** que reúne en un solo sitio las ofertas de empleo de las empresas públicas españolas, con una web accesible, avisos por RSS y Telegram y una API JSON abierta.
+Portal independiente y **no oficial** que reúne en un solo sitio las ofertas de empleo de las empresas públicas españolas, con una web accesible, avisos por RSS, Telegram y correo y una API JSON abierta.
 
 **Web: <https://alertapublica.es/>**
 
@@ -15,7 +15,7 @@ Lee las páginas oficiales de 43 organismos: Grupo SEPI, otras empresas del Esta
 
 - **Ofertas** con ficha y plazo, y **procesos selectivos** con sus comunicados por fases, siempre con enlace a la fuente oficial.
 - **Filtros** por texto, área, comunidad, organismo, tipo de contrato y teletrabajo.
-- **Avisos** por RSS y por Telegram con criterios propios (palabras, áreas, comunidades, organismos).
+- **Avisos** por RSS, por Telegram y por correo (dos resúmenes al día) con criterios propios (palabras, áreas, comunidades, organismos).
 - **Datos abiertos**: API JSON sin clave y con CORS abierto, con códigos INE de comunidad, provincia y municipio.
 - **Sin cuentas ni cookies**: la web y el RSS no recogen datos de quien los usa.
 
@@ -23,7 +23,7 @@ Lee las páginas oficiales de 43 organismos: Grupo SEPI, otras empresas del Esta
 
 ```text
 Webs oficiales → ingesta (hasta cada 30 min) → data/ (JSON) → web estática + RSS + API JSON
-                                                   → worker de avisos → Telegram (y correo)
+                                                   → worker de avisos → Telegram y correo
 ```
 
 GitHub Actions lee las páginas públicas una vez por hora, de una en una y con pausas, y guarda los cambios como JSON en `data/` (el histórico queda en git). La web se genera desde esos datos y se publica en GitHub Pages; no hay servidor. Si una página oficial cambia de forma, la ingesta de esa fuente se detiene sin tocar sus datos y la ejecución falla para avisar.
@@ -63,7 +63,7 @@ Para quien reutiliza los datos, la documentación de cada campo está en [Datos 
 
 ## Contribuir
 
-Las ideas, los fallos y las fuentes nuevas son bienvenidos: mira [`CONTRIBUTING.md`](CONTRIBUTING.md). Para vulnerabilidades, [`SECURITY.md`](SECURITY.md).
+Las ideas, los fallos y las fuentes nuevas son bienvenidos: mira [`CONTRIBUTING.md`](CONTRIBUTING.md). Para vulnerabilidades, [`SECURITY.md`](SECURITY.md). Para lo demás (consultas, reclamaciones o datos personales): <legal@alertapublica.es>.
 
 ## Licencia
 
