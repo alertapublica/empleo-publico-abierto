@@ -4,7 +4,7 @@ El worker `empleo-avisos` (`avisos/`, cuenta `empleo-publico` de Cloudflare) gua
 
 ## Criterios de un aviso
 
-Un aviso combina palabras del título (por comienzo de palabra, sin tildes), áreas, «menciona teletrabajo», comunidades y organismos. Tiene que cumplir todos los apartados elegidos, y dentro de cada uno basta con una coincidencia. Las ofertas sin comunidad concreta se incluyen salvo que se desactive. Los comunicados de procesos van en una casilla aparte, junto a los organismos.
+Un aviso combina palabras del título (por comienzo de palabra, sin tildes), áreas, «menciona teletrabajo», comunidades y organismos. Tiene que cumplir todos los apartados elegidos, y dentro de cada uno basta con una coincidencia. Las ofertas sin comunidad concreta se incluyen salvo que se desactive. Los comunicados de procesos van en una casilla aparte, junto a los organismos; se filtran por las palabras (nombre del proceso y título) y por la comunidad del proceso (`ccaa` de `novedades.json`), con la misma casilla para los que no la tienen, que hoy son la mayoría: solo Puertos y ENRESA dan la ubicación de sus procesos.
 
 ## Puesta en marcha
 

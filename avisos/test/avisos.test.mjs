@@ -63,7 +63,17 @@ test("comunicados solo con la casilla y del organismo elegido", () => {
   assert.ok(coincide({ organismos: ["tragsa"], comunicados: true }, com));
   assert.ok(!coincide({ organismos: ["isdefe"], comunicados: true }, com));
   assert.ok(coincide({ organismos: ["tragsa"], comunicados: true, palabras: ["analista"], ccaa: ["03"] }, com),
-    "la comunidad no se aplica a los comunicados y las palabras miran el nombre del proceso");
+    "sin comunidad entra por defecto y las palabras miran el nombre del proceso");
+});
+
+test("comunicados: la comunidad del proceso, como en las ofertas", () => {
+  const avisos = { organismos: ["puertos"], comunicados: true, ccaa: ["12"] };
+  const de = (ccaa) => ({ tipo: "comunicado", organismo: "puertos", ccaa, proceso: "Policía Portuario", titulo: "Aparece", url: "u" });
+  assert.ok(coincide(avisos, de("12")));
+  assert.ok(!coincide(avisos, de("09")), "un proceso de Barcelona no llega a quien eligió Galicia");
+  assert.ok(coincide(avisos, de(null)), "sin comunidad concreta, incluido por defecto");
+  assert.ok(!coincide({ ...avisos, sin_ccaa: false }, de(null)));
+  assert.ok(coincide({ organismos: ["puertos"], comunicados: true }, de("09")), "sin comunidades elegidas no filtra");
 });
 
 test("limpiar descarta claves desconocidas y valores raros", () => {

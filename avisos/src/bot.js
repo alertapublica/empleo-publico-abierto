@@ -104,7 +104,7 @@ function pregunta(paso, criterios, listas) {
       };
     case "sin_ccaa":
       return {
-        text: "Algunas ofertas no dicen la comunidad (sin ubicación, varias comunidades o ámbito nacional). ¿Quieres recibirlas también?",
+        text: "Algunas ofertas y procesos no dicen la comunidad (sin ubicación, varias comunidades o ámbito nacional). ¿Quieres recibirlos también?",
         reply_markup: teclado([[boton("Sí, también", "si"), boton("No", "no")], CANCELAR]),
       };
     case "organismos":

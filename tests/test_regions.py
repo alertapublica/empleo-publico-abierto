@@ -107,3 +107,12 @@ class CodigosINE(unittest.TestCase):
 
     def test_no_contradice_la_comunidad(self):
         self.assertEqual(codes_of("Galicia", "Rubí"), {"ccaa": "12", "provincia": None, "municipio": None})
+
+    def test_autoridades_portuarias_cuyo_nombre_no_es_un_lugar(self):
+        codes = lambda text: codes_of(region_of(text), text)
+        self.assertEqual(codes("Bahía de Algeciras"), {"ccaa": "01", "provincia": "11", "municipio": None})
+        self.assertEqual(codes("Marín y R. de Pont."), {"ccaa": "12", "provincia": "36", "municipio": None})
+        # Ferrol (A Coruña) y San Cibrao (Lugo): la comunidad, sin provincia.
+        self.assertEqual(codes("Ferrol-San Cibrao"), {"ccaa": "12", "provincia": None, "municipio": None})
+        # Solo el nombre completo: «Ferrol» dentro de otra dirección no es la autoridad.
+        self.assertEqual(region_of("Calle Ferrol, Madrid"), "Comunidad de Madrid")
