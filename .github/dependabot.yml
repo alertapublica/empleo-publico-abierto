@@ -1,0 +1,20 @@
+# Actualizaciones de dependencias: una PR al mes por ecosistema, con todo agrupado.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      acciones:
+        patterns: ["*"]
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      python:
+        patterns: ["*"]
+    ignore:
+      # Se sube a mano con cada versión de territorios-es.
+      - dependency-name: territorios-es
