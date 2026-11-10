@@ -68,8 +68,10 @@ class Reconcile(unittest.TestCase):
         self.assertEqual(self.offers["1"]["deadline"], "2026-11-30")
         self.assertFalse(self.offers["1"]["detail_ok"])
 
-    def test_un_fallo_puntual_no_cierra_y_dos_si(self):
+    def test_un_fallo_puntual_no_cierra_y_tres_si(self):
         self.assertEqual(self.kinds([listed("2")]), ["new"])
+        self.assertEqual(self.offers["1"]["status"], "open")
+        self.assertEqual(self.kinds([listed("2")]), [])
         self.assertEqual(self.offers["1"]["status"], "open")
         self.assertEqual(self.kinds([listed("2")]), ["closed"])
         self.assertEqual(self.offers["1"]["status"], "closed")
@@ -126,6 +128,7 @@ class Reconcile(unittest.TestCase):
         self.assertEqual(self.offers["1"]["deadline_time"], "14:00")
 
     def test_reabierta_con_nuevo_plazo(self):
+        self.kinds([listed("2")])
         self.kinds([listed("2")])
         self.kinds([listed("2")])
         kinds = self.kinds([listed("1", deadline="2026-12-01"), listed("2")])

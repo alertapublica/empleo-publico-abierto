@@ -1,7 +1,7 @@
 name: Actualizar y publicar
 
 on:
-  # Cada hora la lanza el worker empleo-cron (worker/) por workflow_dispatch: el cron de GitHub
+  # Según el horario de docs/worker.md la lanza el worker empleo-cron (worker/) por workflow_dispatch: el cron de GitHub
   # se saltaba muchas ejecuciones.
   workflow_dispatch:
     inputs:
