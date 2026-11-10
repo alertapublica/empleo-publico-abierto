@@ -22,7 +22,7 @@ Lee las páginas oficiales de 43 organismos: Grupo SEPI, otras empresas del Esta
 ## Cómo funciona
 
 ```text
-Webs oficiales → ingesta cada hora → data/ (JSON) → web estática + RSS + API JSON
+Webs oficiales → ingesta (hasta cada 30 min) → data/ (JSON) → web estática + RSS + API JSON
                                                    → worker de avisos → Telegram (y correo)
 ```
 
@@ -55,7 +55,7 @@ Los workers de Cloudflare tienen sus propios tests: ver [`docs/worker.md`](docs/
 | [`docs/anadir-fuente.md`](docs/anadir-fuente.md) | Cómo añadir un organismo y qué cuenta como oferta o proceso |
 | [`docs/api.md`](docs/api.md) | API JSON: ficheros, versionado y reglas para quien mantiene el código |
 | [`docs/avisos.md`](docs/avisos.md) | Avisos por Telegram y correo: funcionamiento y puesta en marcha |
-| [`docs/worker.md`](docs/worker.md) | Worker de Cloudflare que lanza la ingesta cada hora |
+| [`docs/worker.md`](docs/worker.md) | Worker de Cloudflare que lanza la ingesta según un horario |
 | [`docs/privacidad.md`](docs/privacidad.md) | Qué datos se guardan y cuáles nunca |
 | [`hallazgos/`](hallazgos/) | Estado de cada fuente y cómo publica cada portal sus plazos |
 

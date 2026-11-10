@@ -956,7 +956,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <li>Elija una de las listas que figuran más abajo y copie su enlace.</li>
 <li>Pegue el enlace en el lector, en la opción «Añadir fuente» o «Suscribirse».</li>
 </ol>
-<p>Las webs oficiales se consultan cada hora. Cada lista incluye lo siguiente:</p>
+<p>Las webs oficiales se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Cada lista incluye lo siguiente:</p>
 <ul>
 <li>«Todas las novedades» y las listas por organismo incluyen las ofertas y los anuncios de procesos.</li>
 <li>Las listas por comunidad autónoma, por área, de teletrabajo y por empresa incluyen solo ofertas.</li>
@@ -1050,7 +1050,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 </ul>
 <p>Todas las listas y las instrucciones paso a paso figuran en <a href="../avisos/">Recibir avisos</a>.</p>
 <h2 id="de-donde">Origen de los datos</h2>
-<p>Las páginas públicas de empleo de cada organismo se consultan cada hora. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
+<p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
 <p>El área de cada oferta (en «Filtros») no la facilita la empresa: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo y solo sirve para filtrar; una oferta puede tener dos áreas o ninguna.</p>
 <p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Si la ficha solo remite a las bases, no es posible saberlo y así se indica.</p>
 <h2 id="datos">Datos abiertos</h2>
@@ -1232,7 +1232,7 @@ const abiertas = datos.ofertas.filter(o =&gt; o.estado === "abierta" &amp;&amp; 
         f"""const datos = await (await fetch("{e(api)}novedades.json")).json();
 const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.ccaa === "12");""")
     body = f"""<h1>Datos abiertos</h1>
-<p>Toda la información de este portal está disponible en ficheros JSON para su reutilización en webs, aplicaciones o análisis. No se requiere clave ni registro, y los ficheros pueden leerse desde cualquier web (CORS abierto). Se generan de nuevo con cada actualización del portal, aproximadamente cada hora.</p>
+<p>Toda la información de este portal está disponible en ficheros JSON para su reutilización en webs, aplicaciones o análisis. No se requiere clave ni registro, y los ficheros pueden leerse desde cualquier web (CORS abierto). Se generan de nuevo con cada actualización del portal, hasta cada 30 minutos en horario laboral.</p>
 <nav class="indice-datos" aria-label="En esta página"><ul>{index}</ul></nav>
 <h2 id="ficheros">Ficheros</h2>
 <ul>
@@ -1286,7 +1286,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h2 id="uso-responsable">Uso responsable</h2>
 <p>Este portal lo mantienen personas ajenas a la Administración, con recursos limitados, gracias a las contribuciones y donaciones de la comunidad. Se ruega hacer un uso responsable de los datos:</p>
 <ul>
-<li>Los ficheros se actualizan aproximadamente cada hora; no es necesario consultarlos con mayor frecuencia.</li>
+<li>Los ficheros se actualizan, como mucho, cada 30 minutos; no es necesario consultarlos con mayor frecuencia.</li>
 <li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json completo en cada consulta.</li>
 <li>Si su servicio tiene muchas personas usuarias, guarde una copia de los ficheros en su servidor en lugar de que cada navegador los descargue de este portal.</li>
 </ul>

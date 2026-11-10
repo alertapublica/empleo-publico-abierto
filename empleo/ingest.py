@@ -15,7 +15,7 @@ from .sources import ACTIVE
 from .sources.base import Source
 
 DATA = Path("data")
-MISSED_RUNS_TO_CLOSE = 2  # un fallo puntual de la web no debe cerrar ofertas
+MISSED_RUNS_TO_CLOSE = 3  # (1,5 h con lecturas cada 30 min) un fallo puntual de la web no debe cerrar ofertas
 MIN_VISIBLE_RATIO = 0.3  # si desaparece casi todo, lo raro es la lectura
 MAX_PORTAL_TRIES = 4
 TRACKED = ("title", "code", "source_title", "company", "category", "url", "apply_url")
