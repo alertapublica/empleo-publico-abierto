@@ -1,4 +1,22 @@
 {
+ "etsa:07f98b50158a": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-10-28",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-11T15:07:33+00:00",
+  "location": null,
+  "process": "Conductor/a repartidor/a de vehículos ligeros con ADR (RH2026045)",
+  "process_url": "https://www.etsa.es/conductor-a-repartidor-a-de-vehiculos-ligeros-con-adr/",
+  "source": "etsa",
+  "state": "curso",
+  "system": null,
+  "title": "Listado definitivo de admitidos/as",
+  "url": "https://www.etsa.es/etsa/wp-content/uploads/3.Oferta_RH2026045_Listado-definitivo-admitidos.pdf",
+  "via": "otro"
+ },
  "etsa:7275d829d677": {
   "access": "libre",
   "apply_url": null,

@@ -2724,6 +2724,111 @@
   "title": "Licenciado/a o Graduado/a con Máster Oficial (prácticas) - Bienes culturales (Asturias)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57759"
  },
+ "57795": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57795",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57795",
+  "company": "Tragsa",
+  "contract": null,
+  "deadline": "2026-11-19",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-11T15:07:33+00:00",
+  "id": "tragsa:57795",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-19",
+  "location": "Sede Madrid Tragsa",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": null,
+  "ref": "57795",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Analista Programador/a para prestar apoyo en un importante proyecto de la Administración Pública en Madrid.<br/><br/>En relación al proceso publicado el pasado 05/10/2026 se amplía el plazo de recepción de candidaturas desde el 11/11/2026 hasta el 19/11/2026 a las 23:59h (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsa</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Desarrollar y mantener las aplicaciones informáticas en función de la información que proviene del/de la analista.</li><li>Definir y realizar las pruebas del código desarrollado en base a la metodología establecida.</li><li>Documentar la actividad para cada módulo / pantalla realizada, de acuerdo a los estándares de calidad.</li><li>Elaborar el manual técnico de la aplicación correspondiente.</li><li>Interpretar aplicaciones desarrolladas por terceros/as.</li><li>Documentar los módulos según las normas de calidad.</li><li>Formar a los/as nuevos/as programadores/as en las aplicaciones y elementos de programación.</li><li>Observar la normativa vigente con especial atención a las normas relativas a la protección de datos de carácter personal y a la legislación específica en el ámbito de las TIC.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato y/o académica en desarrollos informáticos de PeopleSoft, incluyendo elaboración de servicios Web, Application Engine y desarrollo de elementos Fluid.</li><li>Al menos 1 año de experiencia con contrato y/o académica en pruebas funcionales y ciclos completos.</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato y/o académica en desarrollos informáticos de PeopleSoft, incluyendo elaboración de servicios Web, Application Engine y desarrollo de elementos Fluid.</li><li>Al menos 1 año de experiencia con contrato y/o académica en pruebas funcionales y ciclos completos.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en otros entornos de desarrollo (se comprobará en valoración técnica).</li><li>Certificaciones en gestores de Bases de Datos.</li><li>Formación complementaria en metodologías en herramientas TIC (se comprobará en valoración técnica).</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 5 años de experiencia en herramientas de test de servicios Web (SoapUI) (experiencia con contrato y/o académica).</li><li>Desde 1 año Hasta 5 años de experiencia en herramientas de consulta y optimización de SQL (Toad) (experiencia con contrato y/o académica).</li></ul>Otros Factores Meritorios<ul><li>Conocimientos en gestor de consultas (se comprobará en valoración técnica).</li><li>Conocimientos en SQR (se comprobará en valoración técnica).</li><li>Conocimientos en nVision (se comprobará en valoración técnica).</li><li>Conocimientos en Crystal Reports (se comprobará en valoración técnica).</li><li>Conocimientos en Application Designer (se comprobará en valoración técnica).</li><li>Conocimientos en BI Publisher (se comprobará en valoración técnica).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en otros entornos de desarrollo (se comprobará en valoración técnica).</li><li>Certificaciones en gestores de Bases de Datos.</li><li>Formación complementaria en metodologías en herramientas TIC (se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en otros entornos de desarrollo (se comprobará en valoración técnica).</li><li>Certificaciones en gestores de Bases de Datos.</li><li>Formación complementaria en metodologías en herramientas TIC (se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 5 años de experiencia en herramientas de test de servicios Web (SoapUI) (experiencia con contrato y/o académica).</li><li>Desde 1 año Hasta 5 años de experiencia en herramientas de consulta y optimización de SQL (Toad) (experiencia con contrato y/o académica).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos en gestor de consultas (se comprobará en valoración técnica).</li><li>Conocimientos en SQR (se comprobará en valoración técnica).</li><li>Conocimientos en nVision (se comprobará en valoración técnica).</li><li>Conocimientos en Crystal Reports (se comprobará en valoración técnica).</li><li>Conocimientos en Application Designer (se comprobará en valoración técnica).</li><li>Conocimientos en BI Publisher (se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/>Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por la persona seleccionada de las indicadas en la oferta.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>En relación al proceso publicado el pasado 05/10/2026 se amplía el plazo de recepción de candidaturas desde el 11/11/2026 hasta el 19/11/2026 a las 23:59h (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista Programador/a (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=57795"
+ },
  "57815": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57815",
   "category": "Específica",
