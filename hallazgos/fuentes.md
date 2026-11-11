@@ -13,6 +13,7 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 | **Tragsa** | `tragsa.py` | Web (SharePoint) y portal de candidatos (PeopleSoft, sesión de invitado) son el mismo universo. La ficha se vacía al cerrar: hay que guardarla al detectar la oferta. Hay republicaciones con `jobid` nuevo («proviene de la publicación con ID …»). Las fijas son procesos con comunicados; algunos títulos traen códigos de candidatura, que se quitan |
 | **EFE** | `efe.py` | `robots.txt` bloquea los PDF |
 | **Correos, Navantia** | `successfactors.py` | El RSS vacío de Navantia trae un elemento marcador (`guid` 0). Navantia sin ofertas reales vistas; paginación de más de 25 sin ver |
+| **BSM** (Barcelona de Serveis Municipals) | `successfactors.py` | Grupo «local». SuccessFactors en catalán («Resultats 1 – 19 de 19», «14 d’oct. 2026»): el módulo acepta las dos lenguas. Solo vacantes vigentes; las bolsas («Borsa de treball») no traen cierre: «Plazo sin indicar», como Correos. El microdato de localidad dice «Selecció»: se fija Barcelona. Listado vacío en catalán sin ver (detendría la fuente). Del informe de Codex (2026-11-11) |
 | **Enusa** | `enusa.py` | El contador («13») no coincide con las filas (10) y se ignora. Títulos cortados por la propia web |
 | **RTVE** | `rtve.py` | Solo se ha visto sin inscripciones abiertas: el formato real de `fechaFinInscripcion` está sin ver; uno desconocido detiene la fuente. La convocatoria 1/2025 de la prensa no está en la API |
 | **Enresa** | `enresa.py` | Los procesos «en proceso» no tienen fecha |
