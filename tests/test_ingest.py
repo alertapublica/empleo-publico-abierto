@@ -245,15 +245,19 @@ class Announcements(unittest.TestCase):
     def test_sin_fecha_no_se_inventa_y_lo_de_la_primera_lectura_no_es_novedad(self):
         viejo, con_fecha = Announcement("", "P", "Viejo", "https://a"), self.item("P", "Con fecha")
         known = self.sync({}, viejo, con_fecha)
-        self.sync(known, Announcement("", "P", "Nuevo", "https://b"), viejo, con_fecha, at=NOW + timedelta(hours=1))
+        nuevo_con_fecha = self.item("P", "Nuevo con fecha")
+        self.sync(known, Announcement("", "P", "Nuevo", "https://b"), viejo, con_fecha, nuevo_con_fecha,
+                  at=NOW + timedelta(hours=1))
         records = {r["title"]: r for r in known.values()}
         self.assertEqual(records["Viejo"]["date"], "")
         self.assertTrue(records["Viejo"]["baseline"])  # y lo sigue siendo en las lecturas siguientes
+        self.assertTrue(records["Con fecha"]["baseline"])  # con fecha tampoco: sería avisar del histórico
         self.assertNotIn("baseline", records["Nuevo"])
-        self.assertNotIn("baseline", records["Con fecha"])  # con fecha se sabe si es reciente
+        self.assertNotIn("baseline", records["Nuevo con fecha"])
         self.assertEqual((records["Nuevo"]["position"], records["Viejo"]["position"]), (0, 1))
         self.assertNotIn("position", records["Con fecha"])
-        self.assertEqual({i["text"] for i in feeds.announcement_items(list(known.values()))}, {"Nuevo", "Con fecha"})
+        self.assertEqual({i["text"] for i in feeds.announcement_items(list(known.values()))},
+                         {"Nuevo", "Nuevo con fecha"})
 
     def test_el_formato_anterior_se_sustituye(self):
         known = {"x:viejo": {"date": "2026-11-01", "process": "A", "title": "Corta", "url": "u", "source": "x",

@@ -214,12 +214,14 @@ def sync_announcements(source: Source, http: Client, known: dict, now: datetime)
         before = known.get(key)
         first_seen = before["first_seen"] if before else stamp
         known[key] = {**asdict(item), "source": source.id, "first_seen": first_seen}
+        # Lo que ya estaba en la primera lectura no es novedad, tenga fecha o no: si no, una fuente
+        # nueva avisaría de todo su histórico.
+        if before.get("baseline") if before else first_read:
+            known[key]["baseline"] = True
         if not item.date:
             # Sin fecha de la fuente no se inventa una: se ordena por cuándo se detectó y por su lugar
-            # en la web oficial, y lo que ya estaba en la primera lectura no es novedad.
+            # en la web oficial.
             known[key]["position"] = position
-            if before.get("baseline") if before else first_read:
-                known[key]["baseline"] = True
         processes[item.process] = known[key]
     for record in known.values():
         current = processes.get(record["process"])
