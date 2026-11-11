@@ -41,6 +41,7 @@ class Deadlines(unittest.TestCase):
             "se aceptarán candidaturas hasta las 23:59 horas del día 16 de julio de 2026.": date(2026, 7, 16),
             "queda ampliado hasta las 12:00 horas del día 16 de noviembre de 2026.": date(2026, 11, 16),
             "deberán enviar su candidatura … hasta las 23: 59 horas del 18 de octubre de 2026": date(2026, 10, 18),
+            "El plazo de presentación finalizará el próximo día 25 de noviembre de 2026, a las 12:00 horas": date(2026, 11, 25),
         }
         for text, expected in casos.items():
             self.assertEqual(pdftext.deadlines(text), [expected], text)
