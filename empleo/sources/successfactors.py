@@ -1,4 +1,4 @@
-"""Portales de empleo de SAP SuccessFactors (Career Site Builder): Correos, Navantia…
+"""Portales de empleo de SAP SuccessFactors (Career Site Builder): Correos, Navantia, BSM…
 
 El listado de cada categoría (`/go/<nombre>/<id>/`) llega ya montado en el HTML, con título,
 departamento, centro y fecha de publicación. La ficha (`/job/<texto>/<id>/`) añade, como
@@ -19,10 +19,12 @@ from ..sanitize import sanitize
 from .base import Source
 
 MONTHS = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6, "jul": 7,
-          "ago": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dic": 12}
+          "ago": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dic": 12,
+          # en catalán (BSM): «11 de nov. 2026», «14 d’oct. 2026»
+          "gen": 1, "febr": 2, "març": 3, "maig": 5, "juny": 6, "ag": 8, "set": 9, "des": 12}
 MAX_PAGES = 40
 EMPTY_TEXT = "no hay ninguna vacante"
-RESULTS = re.compile(r"Resultados\s+(\d+)\s*[–-]\s*(\d+)\s+de\s+(\d+)")
+RESULTS = re.compile(r"Result(?:ados|ats)\s+(\d+)\s*[–-]\s*(\d+)\s+de\s+(\d+)")
 JOB_ID = re.compile(r"/job/[^?#]*?/(\d+)/?(?:[?#].*)?$")
 UTC_DATE = re.compile(r"[A-Za-z]{3} ([A-Za-z]{3}) (\d{1,2}) (\d{2}):(\d{2}):(\d{2}) UTC (\d{4})")
 ENGLISH_MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
@@ -33,7 +35,7 @@ def _clean(text: str) -> str:
 
 
 def _list_date(value: str) -> str | None:
-    match = re.fullmatch(r"(\d{1,2})\s+([a-záéíóú]+)\.?\s+(\d{4})", _clean(value).lower())
+    match = re.fullmatch(r"(\d{1,2})\s+(?:de\s+|d[’']\s*)?([a-záéíóúç]+)\.?\s+(\d{4})", _clean(value).lower())
     if not match or match.group(2) not in MONTHS:
         return None
     return f"{match.group(3)}-{MONTHS[match.group(2)]:02d}-{int(match.group(1)):02d}"
@@ -114,8 +116,9 @@ class SuccessFactorsSource(Source):
     """`categories` son pares (tipo de contrato o None, ruta `/go/...`)."""
 
     def __init__(self, id: str, name: str, host: str, company: str,
-                 categories: list[tuple[str | None, str]]) -> None:
+                 categories: list[tuple[str | None, str]], location: str | None = None) -> None:
         self.id, self.name, self.company = id, name, company
+        self.location = location  # si el microdato de la ficha no da la localidad (BSM pone «Selecció»)
         self.host = host.rstrip("/")
         self.homepage = f"{self.host}/"
         self.categories = categories
@@ -156,7 +159,10 @@ class SuccessFactorsSource(Source):
         ]
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
-        return parse_detail(http.get(offer.url))
+        detail = parse_detail(http.get(offer.url))
+        if detail is not None and self.location:
+            detail.location = self.location
+        return detail
 
     def enrich(self, http: Client) -> dict[str, dict]:
         # Todo viene ya en el listado: no hace falta otra petición.

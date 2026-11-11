@@ -37,6 +37,24 @@ class Listing(unittest.TestCase):
         self.assertEqual(first["facility"], "Sede Central")
         self.assertEqual([r["published_on"] for r in rows], ["2026-11-07", "2026-11-02", "2026-10-30"])
 
+    def test_listado_en_catalan(self):
+        # BSM: «Resultats 1 – 19 de 19» y fechas «11 de nov. 2026», «14 d’oct. 2026».
+        rows, total = sf.parse_listing(fixture("bsm-vacants.html"), "https://creix.bsmsa.cat")
+        self.assertEqual((total, len(rows)), (19, 3))
+        self.assertEqual([r["published_on"] for r in rows], ["2026-11-11", "2026-11-10", "2026-11-09"])
+        self.assertEqual(sf._list_date("14 d’oct. 2026"), "2026-10-14")
+        self.assertEqual(sf._list_date("3 de febr. 2027"), "2027-02-03")
+
+    def test_localidad_fija_si_el_microdato_no_sirve(self):
+        source = sf.SuccessFactorsSource(id="x", name="X", host=HOST, company="X", categories=[], location="Barcelona")
+
+        class Http:
+            def get(self, url):
+                return fixture("sf-ficha.html")
+
+        offer = sf.ListedOffer(ref="1", title="T", company="X", url=HOST + "/job/x/1/", apply_url="")
+        self.assertEqual(source.fetch_detail(Http(), offer).location, "Barcelona")
+
     def test_categoria_sin_vacantes_es_lista_vacia(self):
         self.assertEqual(sf.parse_listing(fixture("sf-vacio.html"), HOST), ([], 0))
 
