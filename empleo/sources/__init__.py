@@ -65,6 +65,11 @@ NAVANTIA = SuccessFactorsSource(
         ("practicas", "/go/Becas-y-Pr%C3%A1cticas/9308455/"),
     ],
 )
+BSM = SuccessFactorsSource(
+    id="bsm", name="BSM (Barcelona de Serveis Municipals)", host="https://creix.bsmsa.cat", company="BSM",
+    categories=[(None, "/go/Totes-les-vacants/9231655/")], location="Barcelona",
+)
+BSM.scope, BSM.text_lang = "Cataluña", "ca"
 ADIF = SentinelSource(
     id="adif", name="ADIF y ADIF Alta Velocidad", homepage="https://www.adif.es/empleo",
     page="https://www.adif.es/empleo/oferta-empleo-publico/plazo-solicitud-abierto",
@@ -85,7 +90,7 @@ CATALOG = {
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource()],
-    "local": [TmbSource(), EmtSource()],
+    "local": [TmbSource(), EmtSource(), BSM],
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
