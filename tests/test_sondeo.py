@@ -55,7 +55,7 @@ class Sondeo(unittest.TestCase):
         self.assertIn("TimeoutError", sondeo.summary(report))
 
     def test_los_destinos_son_https_y_sin_inicio_de_sesion(self):
-        for _, url in sondeo.TARGETS + sondeo.TARGETS_2 + sondeo.TARGETS_5:
+        for _, url in sondeo.TARGETS + sondeo.TARGETS_2 + sondeo.TARGETS_5 + sondeo.TARGETS_6:
             self.assertTrue(url.startswith("https://"), url)
         self.assertNotIn("procesosmasivos", " ".join(u for _, u in sondeo.TARGETS))
         self.assertLessEqual(len(sondeo.TARGETS), 25)

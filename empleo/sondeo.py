@@ -74,7 +74,28 @@ TARGETS_5 = [
     ("sasemar", "https://www.salvamentomaritimo.es/conocenos/nuestra-empresa/trabaja-con-nosotros"),
     ("paradores", "https://paradoresempleo.epreselec.com/Ofertas/Ofertas.aspx"),
 ]
-ROUNDS = {"1": TARGETS, "2": TARGETS_2, "3": TARGETS_3, "4": TARGETS_4, "5": TARGETS_5}
+# Candidatas del informe de Codex (2026-11-11): prioridad alta, RTVA (su robots.txt bloquea a los
+# agentes de OpenAI, no se sabe si al nuestro) y el robots.txt de los hosts donde importa.
+TARGETS_6 = [
+    ("idibaps", "https://www.clinicbarcelona.org/ca/idibaps/carrera-professional-idibaps/ofertes-de-treball"),
+    ("bsm", "https://creix.bsmsa.cat/go/Totes-les-vacants/9231655/"),
+    ("bsm", "https://creix.bsmsa.cat/robots.txt"),
+    ("cnic", "https://www.cnic.es/es/empleo/ofertas-empleo"),
+    ("cnic", "https://www.cnic.es/robots.txt"),
+    ("apb", "https://seleccio.portdebarcelona.cat/es/web/seleccio/llistat-ofertes"),
+    ("tmb", "https://www.tmb.cat/ca/treball-i-practiques"),
+    ("tmb", "https://www.tmb.cat/ca/treball-i-practiques/estat-processos-seleccio"),
+    ("tmb", "https://www.tmb.cat/robots.txt"),
+    ("irb", "https://recruitment.irbbarcelona.org/"),
+    ("idisba", "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/"),
+    ("veiasa", "https://www.veiasa.es/es/la-empresa/selecci%C3%B3n-de-personal"),
+    ("iisaragon", "https://www.iisaragon.es/empleo/"),
+    ("emt", "https://www.emtmadrid.es/Empresa/Empleo"),
+    ("emt", "https://www.emtmadrid.es/robots.txt"),
+    ("rtva", "https://www.canalsur.es/rtva/transparencia/oposiciones-canal-sur/"),
+    ("rtva", "https://www.canalsur.es/robots.txt"),
+]
+ROUNDS = {"1": TARGETS, "2": TARGETS_2, "3": TARGETS_3, "4": TARGETS_4, "5": TARGETS_5, "6": TARGETS_6}
 
 # Pistas de la tecnología con la que se publica: sirven para decidir qué parser hace falta.
 HINTS = {
