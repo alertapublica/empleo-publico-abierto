@@ -45,6 +45,7 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 | **FISEVI** | `fisevi.py` | Listado por la API REST (categoría 45; contenido vacío): se leen las entradas de los últimos 15 días. La etiqueta «Abierta» del listado web no sigue el plazo. Año del plazo a veces mal: solo vale entre la publicación y 60 días después. Anuladas fuera (filtro sin ver con una real). Las correcciones de errores van en PDF |
 | **IMIB (FFIS)** | `imib.py` | `rrhh.ffis.es/` por GET: 10 filas sin orden (las de id más alto); si la más antigua sigue en plazo, se detiene. La hora (10:00, 13:00) solo está en la ficha antigua `ofertaEmpleo.jsf`, no en `ofertaEmpleoNew.jsf`: se lee para las que siguen en plazo |
 | **IRYCIS** | `irycis.py` | Contrata la Fundación para la Investigación Biomédica del H. U. Ramón y Cajal. Tabla por año con fechas sin año: año de la tabla, que debe coincidir con el sufijo (`C75/26`); cierre anterior a la convocatoria = año siguiente; más de 60 días, fuera. Solo las dos últimas tablas. Convocatoria en PDF escaneado (sin hora). Título literal (suele ser la titulación). Las actas no se enlazan. Si en enero la tabla del año nuevo aún no existe, la fuente se detiene (sin ver) |
+| **CESCE** | `cesce.py` | Liferay. Dos listados en la misma página: el de agentes mediadores (tras `carreras.mediadores@cesce.es`) no se lee. Estado literal («Abierta», «Proceso»; uno desconocido detiene la fuente). Plazo solo en el PDF de la convocatoria, sin año ni hora: año de la publicación del documento; vale la fecha mayor con las ampliaciones. «Abierta» con el plazo vencido pasa a proceso. Comunicados = documentos con su «Fecha de publicación», sin los anexos |
 
 ## Centinelas
 
@@ -68,7 +69,6 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 | **FGV** (C. Valenciana) | Plazo en la subpágina «Apertura plazo»; OEP y bolsas en el mismo expediente. Iría como proceso |
 | **CSAG / CRTVG** (Galicia) | Sin plazo de inscripción en la web. `Crawl-delay: 10`; intermedio TLS equivocado |
 | **Mercasturias** | Comunicados con fecha; sus procesos ya están en fase de oposición |
-| **CESCE** | 5 procesos con fecha de publicación; sería fuente de procesos, no de ofertas |
 
 ## Fuera
 
