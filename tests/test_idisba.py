@@ -13,14 +13,17 @@ def fixture(name):
 
 
 class Http:
-    """Página 1 real; la 2, la misma con las fechas de 2025 (todo vencido)."""
+    """Página 1 real; la 2, la misma con las fechas de 2025 (todo vencido); `pages` cambia el contenido."""
 
-    def __init__(self):
+    def __init__(self, pages=None):
         self.asked = []
+        self.pages = pages or {}
 
     def get(self, url):
         self.asked.append(url)
         page = fixture("idisba-ofertas.html")
+        if url in self.pages:
+            return self.pages[url]
         return page if url == idisba.PAGE else page.replace("2026", "2025")
 
 
@@ -57,10 +60,26 @@ class Source(unittest.TestCase):
         self.assertEqual([o.deadline for o in offers], ["2026-12-03"] * 3)
         self.assertEqual(len(http.asked), 2)  # la página 1 tenía abiertas; la 2, ya no
 
-    def test_sin_abiertas_no_sigue(self):
+    def test_una_abierta_tras_una_pagina_vencida_tambien_se_lee(self):
+        # Página 1: solo convocatorias vencidas pero recientes; la abierta (hasta el 03/12) está en la 2.
+        page = fixture("idisba-ofertas.html")
+        vencidas = page.replace('datetime="2026-12-03"', 'datetime="2026-11-05"')
+        http = Http({idisba.PAGE: vencidas, idisba.PAGED.format(2): page,
+                     idisba.PAGED.format(3): page.replace("2026", "2025")})
+        offers = idisba.IdisbaSource(now=at(11, 11)).list_offers(http)
+        self.assertIn("2026-12-03", [o.deadline for o in offers])
+        self.assertEqual(len(http.asked), 3)
+
+    def test_se_detiene_cuando_la_pagina_es_antigua(self):
         http = Http()
         self.assertEqual(idisba.IdisbaSource(now=at(12, 4)).list_offers(http), [])
-        self.assertEqual(len(http.asked), 1)
+        self.assertEqual(len(http.asked), 2)  # la 1 tiene plazos recientes; la 2 ya es de 2025
+
+    def test_sin_fin_de_paginas_recientes_detiene_la_fuente(self):
+        page = fixture("idisba-ofertas.html")
+        http = Http({idisba.PAGED.format(n): page for n in range(2, idisba.MAX_PAGES + 1)})
+        with self.assertRaises(SourceLayoutError):
+            idisba.IdisbaSource(now=at(11, 11)).list_offers(http)
 
     def test_ficha_con_plazo_boib_y_documentos(self):
         source = idisba.IdisbaSource(now=at(11, 11))

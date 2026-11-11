@@ -7,21 +7,23 @@ antigua. Cada convocatoria es un `div.flow--m` con el título (enlace a la ficha
 anexos y, cuando avanza, listas de admitidos, a veces con la fecha delante: «20261104_lista_…»).
 
 El orden es el de publicación, no el del plazo: una convocatoria antigua puede seguir abierta. Se lee
-la página siguiente mientras alguna de la actual siga en plazo (hasta MAX_PAGES). Es oferta la que
+la página siguiente mientras alguna de la actual haya abierto su plazo en los últimos WINDOW_DAYS
+días (el plazo más largo visto es de 41 días: una anterior ya no puede seguir abierta). Si se llega a
+MAX_PAGES sin cumplirse, la fuente se detiene en vez de publicar una lectura truncada. Es oferta la que
 tiene el fin del plazo sin vencer. Sin procesos: al pasar a la página siguiente dejarían de verse y
 el motor los daría por retirados.
 """
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from html import escape
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
 from ..http import Client
-from ..model import ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
+from ..model import MADRID, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
 from ..sanitize import sanitize
 from .base import Source
 
@@ -29,7 +31,8 @@ SITE = "https://www.idisba.es"
 PAGE = SITE + "/es/trabajo/ofertas-de-trabajo/"
 PAGED = SITE + "/es/trabajo/ofertas-de-trabajo/page/{}"
 COMPANY = "IdISBa"
-MAX_PAGES = 3
+MAX_PAGES = 6
+WINDOW_DAYS = 90
 SIZE = re.compile(r"\s*\(PDF[^)]*\)\s*$|\s*\(ZIP[^)]*\)\s*$", re.I)
 
 
@@ -81,12 +84,15 @@ class IdisbaSource(Source):
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
         now = self._now or datetime.now(timezone.utc)
+        since = (now.astimezone(MADRID).date() - timedelta(days=WINDOW_DAYS)).isoformat()
         entries = []
         for number in range(1, MAX_PAGES + 1):
             page = parse_page(http.get(PAGE if number == 1 else PAGED.format(number)))
             entries += page
-            if all(deadline_passed(e["deadline"], None, now) for e in page):
+            if all(e["opens_on"] < since for e in page):
                 break
+        else:
+            raise SourceLayoutError(f"IdISBa: {MAX_PAGES} páginas con plazos abiertos en los últimos {WINDOW_DAYS} días")
         offers = []
         for entry in entries:
             if deadline_passed(entry["deadline"], None, now) or entry["ref"] in self._found:
