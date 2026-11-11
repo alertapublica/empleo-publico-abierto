@@ -44,6 +44,14 @@ class Detail(unittest.TestCase):
         self.assertEqual((detail.positions, detail.kind, detail.location), (1, "indefinido", "Barcelona"))
 
 
+    def test_enlace_de_las_bases_solo_http(self):
+        html = fixture("tmb-ficha.html")
+        start = html.index('href="/documents/')
+        end = html.index('"', start + 6)
+        detail = tmb.parse_detail(html[:start] + 'href="javascript:alert(document.domain)//bases.pdf' + html[end:])
+        self.assertNotIn("javascript:", " ".join(s["html"] for s in detail.sections))
+
+
 class Source(unittest.TestCase):
     def test_solo_las_que_siguen_en_plazo(self):
         offers = tmb.TmbSource(now=at(11, 11)).list_offers(Http())

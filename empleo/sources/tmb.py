@@ -66,11 +66,12 @@ def parse_detail(html: str) -> OfferDetail:
         raise SourceLayoutError("TMB: ficha sin descripción")
     text = _clean(body.get_text(" "))
     sections = [{"title": "Descripció", "level": 2, "html": sanitize(body.decode_contents())}]
-    bases = [a for a in soup.select("a[href]") if re.search(r"\.pdf(?:[/?]|$)", a["href"], re.I)]  # Liferay: «….pdf/<uuid>?t=…»
+    bases = [urljoin(SITE, a["href"]) for a in soup.select("a[href]")
+             if re.search(r"\.pdf(?:[/?]|$)", a["href"], re.I)]  # Liferay: «….pdf/<uuid>?t=…»
+    bases = [url for url in bases if url.startswith(("https://", "http://"))]
     if bases:
-        link = bases[0]
         sections.append({"title": "Bases de la convocatòria", "level": 2,
-                         "html": f'<p><a href="{escape(urljoin(SITE, link["href"]), quote=True)}">Bases de la convocatoria (PDF)</a></p>'})
+                         "html": sanitize(f'<p><a href="{escape(bases[0], quote=True)}">Bases de la convocatoria (PDF)</a></p>')})
     seats = soup.find(string=re.compile(r"Places titulars"))
     number = re.search(r"\d+", _clean(seats.find_parent("div").get_text(" "))) if seats else None
     kind = "indefinido" if re.search(r"car[àa]cter indefinit", text, re.I) else (
