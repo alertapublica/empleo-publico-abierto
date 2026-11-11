@@ -30,6 +30,7 @@ GROUPS = {
     "sepi": "Grupo SEPI",
     "estatal": "Otras empresas del Estado",
     "autonomica": "Empresas públicas autonómicas",
+    "local": "Empresas públicas locales",
     "investigacion": "Fundaciones y centros de investigación",
 }
 STATE_SCOPE = "Estatal"

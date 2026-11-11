@@ -38,6 +38,7 @@ from .serpa import SerpaSource
 from .sepi import SepiSource
 from .sepides import SepidesSource
 from .successfactors import SuccessFactorsSource
+from .tmb import TmbSource
 from .tragsa import TragsaSource
 from .zarzuela import ZarzuelaSource
 
@@ -76,6 +77,7 @@ CATALOG = {
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
+    "local": [TmbSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
         LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(),
