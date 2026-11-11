@@ -1,1 +1,36 @@
-{}
+{
+ "G00762026": {
+  "apply_url": "https://www.convocatoriascanaldeisabelsegunda.es/convocatoria-252",
+  "category": null,
+  "closed_at": null,
+  "code": "G00762026",
+  "company": "Canal de Isabel II",
+  "contract": null,
+  "deadline": "2026-11-27",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:07:24+00:00",
+  "id": "canal:G00762026",
+  "kind": null,
+  "listed_deadline": "2026-11-27",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-11",
+  "ref": "G00762026",
+  "region": "Sin ubicación",
+  "sections": [],
+  "source": "canal",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado/a superior prevención",
+  "url": "https://www.convocatoriascanaldeisabelsegunda.es/convocatoria-252"
+ }
+}
