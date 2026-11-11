@@ -2,7 +2,7 @@
  "2026-54-IDISBA": {
   "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-11T12:37:21+00:00",
   "code": "2026-54-IDISBA",
   "company": "IdISBa",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-11",
   "location": "Palma",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": "2026-10-21",
   "parent_ref": null,
   "place": null,
@@ -45,7 +45,7 @@
   ],
   "source": "idisba",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria del proceso selectivo para cubrir una plaza de técnico o técnica titulado medio de apoyo a la investigación, del grupo profesional B, para el proyecto «Investigación clínica y traslacional en cáncer colorrectal y cirugía oncológica avanzada» (GISE/CIRCOLO)",
   "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-"
  },
