@@ -18,7 +18,7 @@ from .http import Client
 from .model import SourceLayoutError
 
 DEADLINE = re.compile(
-    r"(?:finalizar[áa]|hasta)\s+(?:el\s+(?:d[ií]a\s+)?|las?\s+(\d{1,2}[:.]\s?\d{2})\s*(?:h|horas)\.?\s+del?\s+(?:d[ií]a\s+)?)"
+    r"(?:finalizar[áa]|hasta)\s+(?:el\s+(?:pr[óo]ximo\s+)?(?:d[ií]a\s+)?|las?\s+(\d{1,2}[:.]\s?\d{2})\s*(?:h|horas)\.?\s+del?\s+(?:d[ií]a\s+)?)"
     r"(\d{1,2})\s+de\s+(" + "|".join(MONTHS) + r")\s+de\s+(\d{4})", re.I)
 
 

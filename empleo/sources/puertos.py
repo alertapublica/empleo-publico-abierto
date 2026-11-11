@@ -12,7 +12,8 @@ Las ofertas de las autoridades portuarias (`offer_type=107`) no dan fecha: sus b
 (20) días hábiles, a partir del día siguiente al de la publicación de esta convocatoria», sin decir
 cuándo ni dónde se publica, y el listado conserva las antiguas sin añadirles nada. Por eso son
 procesos sin plazo: el listado da puesto, autoridad portuaria y ficha, y el motor las pasa a «sin
-novedades» a los 30 días de verlas (`stale_after_days`).
+novedades» a los 30 días de verlas (`stale_after_days`). Las autoridades con fuente propia (OWN_SOURCE)
+no se leen aquí: su portal da plazo, oferta y seguimiento, y saldrían dos veces.
 """
 from __future__ import annotations
 
@@ -33,6 +34,8 @@ HOST = "https://www.puertos.es"
 PAGE = f"{HOST}/institucional/recursos-humanos/ofertas-de-empleo"
 LISTING = f"{PAGE}?offer_type=108"
 AUTHORITIES = f"{PAGE}?offer_type=107"
+# Autoridades portuarias que tienen fuente propia: apb.py lee el portal de selección de Barcelona.
+OWN_SOURCE = {"Barcelona"}
 COMPANY = "Puertos del Estado"
 INTERNAL = re.compile(r"intra(portuaria|administrativa)", re.I)
 DEADLINE = re.compile(r"Fecha l[ií]mite[^:]*:\s*(?:[a-záéíóú]+,?\s+)?(\d\d/\d\d/\d{4})", re.I)  # «Miércoles 17/06/2026»
@@ -138,5 +141,5 @@ class PuertosSource(Source):
                 title="Aparece en el portal de Puertos del Estado", url=entry["url"],
                 access="libre", process_url=entry["url"], location=entry["provider"],
             )
-            for entry in entries if not INTERNAL.search(entry["title"])
+            for entry in entries if not INTERNAL.search(entry["title"]) and entry["provider"] not in OWN_SOURCE
         ]
