@@ -2,7 +2,7 @@
  "RH2026045": {
   "apply_url": "https://www.etsa.es/conductor-a-repartidor-a-de-vehiculos-ligeros-con-adr/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-11T14:07:25+00:00",
   "code": "RH2026045",
   "company": "ETSA",
   "deadline": "2026-11-11",
@@ -32,7 +32,7 @@
   ],
   "source": "etsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Conductor/a repartidor/a de vehículos ligeros con ADR",
   "url": "https://www.etsa.es/conductor-a-repartidor-a-de-vehiculos-ligeros-con-adr/"
  }
