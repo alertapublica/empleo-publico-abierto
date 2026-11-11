@@ -4,6 +4,7 @@ from .cesce import CesceSource
 from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
 from .cimus import CimusSource
+from .cnic import CnicSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
@@ -80,7 +81,7 @@ CATALOG = {
     "local": [TmbSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
-        LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(),
+        LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
     ],
 }
 for _group, _sources in CATALOG.items():
