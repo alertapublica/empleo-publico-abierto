@@ -25,6 +25,7 @@ from .ibsal import IbsalSource
 from .idibaps import IdibapsSource
 from .idisna import IdisnaSource
 from .idisba import IdisbaSource
+from .iisaragon import IisAragonSource
 from .imib import ImibSource
 from .irycis import IrycisSource
 from .mayasa import MayasaSource
@@ -83,7 +84,7 @@ CATALOG = {
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
     "local": [TmbSource()],
     "investigacion": [
-        IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
+        IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
     ],
 }
