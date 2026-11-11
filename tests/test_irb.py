@@ -34,6 +34,16 @@ class Page(unittest.TestCase):
         self.assertEqual(rows[0]["ref"], "8699011")
 
 
+    def test_estructura_desconocida_detiene_la_fuente(self):
+        with self.assertRaises(SourceLayoutError):
+            irb.parse_page(fixture("irb-jobs.html").replace("jobs_list_container", "otra-lista"))
+        with self.assertRaises(SourceLayoutError):
+            irb.parse_page(fixture("irb-jobs.html").replace("/jobs/", "/positions/"))
+
+    def test_aviso_sin_vacantes_es_lista_vacia(self):
+        self.assertEqual(irb.parse_page("<main><p>There are no open positions right now.</p></main>"), [])
+
+
 class Job(unittest.TestCase):
     def test_jobposting_con_cierre_y_plazas_en_la_descripcion(self):
         job = irb.parse_job(fixture("irb-job.html"))

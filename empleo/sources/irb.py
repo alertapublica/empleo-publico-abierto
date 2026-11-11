@@ -27,15 +27,25 @@ PAGE = SITE + "/"
 COMPANY = "IRB Barcelona"
 JOB = re.compile(r"^https://recruitment\.irbbarcelona\.org/jobs/(\d+)-")
 DEADLINE = re.compile(r"Deadline for applications\s*:\s*(\d{1,2})/(\d{1,2})/(\d{4})", re.I)
+# Aviso de Teamtailor sin vacantes (sin ver todavía en IRB): sin él ni lista, la fuente se detiene.
+EMPTY = re.compile(r"no (?:job openings|open positions|current openings)|there are no (?:jobs|open)", re.I)
 POSITIONS = re.compile(r"Number of positions available\s*:\s*(\d+)", re.I)
 
 
 def parse_page(html: str) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    container = soup.select_one("#jobs_list_container")
+    if container is None:
+        if EMPTY.search(" ".join(soup.get_text(" ").split())):
+            return []
+        raise SourceLayoutError("IRB Barcelona: no se encuentra la lista de ofertas ni el aviso de que no hay")
     found = {}
-    for link in BeautifulSoup(html, "html.parser").find_all("a", href=True):
+    for link in container.find_all("a", href=True):
         job = JOB.match(link["href"])
         if job and job.group(1) not in found:
             found[job.group(1)] = {"ref": job.group(1), "url": link["href"]}
+    if not found:
+        raise SourceLayoutError("IRB Barcelona: la lista de ofertas no tiene enlaces a fichas")
     return list(found.values())
 
 
