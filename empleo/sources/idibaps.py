@@ -21,11 +21,14 @@ from bs4 import BeautifulSoup
 
 from ..http import Client
 from ..model import ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
+from ..sanitize import sanitize
 from .base import Source
 
 PAGE = "https://www.clinicbarcelona.org/ca/idibaps/carrera-professional-idibaps/ofertes-de-treball"
 COMPANY = "FRCB-IDIBAPS"
 DAY = re.compile(r"(\d{2})/(\d{2})/(\d{4})")
+# Aviso de pestaña vacía: sin ver todavía; cualquier otra cosa sin tarjetas detiene la fuente.
+EMPTY = re.compile(r"no hi ha|no hay|cap oferta|ninguna oferta", re.I)
 CODE = re.compile(r"\(Convocat[òo]ria ([A-Z]+(?:-[A-Z]+)*-\d+/\d{4})\)\s*$")
 
 
@@ -38,8 +41,11 @@ def parse_page(html: str) -> list[dict]:
     active = BeautifulSoup(html, "html.parser").select_one("#active")
     if active is None:
         raise SourceLayoutError("IDIBAPS: no se encuentra la pestaña de ofertas abiertas")
+    cards = active.select(".research-offer-card")
+    if not cards and not EMPTY.search(_clean(active.get_text(" "))):
+        raise SourceLayoutError("IDIBAPS: la pestaña de abiertas no tiene tarjetas ni dice que no hay ofertas")
     found = []
-    for card in active.select(".research-offer-card"):
+    for card in cards:
         link = card.select_one(".legend-list__inner-data a[href]")
         values = [_clean(v.get_text(" ")) for v in card.select(".legend-list__inner-data") if not v.select_one(".p-small")]
         day = next((DAY.fullmatch(v) for v in values if DAY.fullmatch(v)), None)
@@ -78,4 +84,4 @@ class IdibapsSource(Source):
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
         link = f'<p><a href="{escape(offer.url, quote=True)}">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>'
-        return OfferDetail(location="Barcelona", sections=[{"title": "La convocatoria", "level": 2, "html": link}])
+        return OfferDetail(location="Barcelona", sections=[{"title": "La convocatoria", "level": 2, "html": sanitize(link)}])

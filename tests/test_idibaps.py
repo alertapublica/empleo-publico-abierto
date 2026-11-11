@@ -38,6 +38,14 @@ class Page(unittest.TestCase):
     def test_codigo_con_dos_siglas(self):
         self.assertIn("FU-ES-16/2026", [r["ref"] for r in self.rows])
 
+    def test_tarjetas_irreconocibles_detienen_la_fuente(self):
+        html = fixture("idibaps-ofertes.html").replace("research-offer-card", "otra-tarjeta")
+        with self.assertRaises(SourceLayoutError):
+            idibaps.parse_page(html)
+
+    def test_pestana_vacia_con_aviso_es_lista_vacia(self):
+        self.assertEqual(idibaps.parse_page('<div id="active"><p>No hi ha ofertes obertes.</p></div>'), [])
+
     def test_sin_pestana_detiene_la_fuente(self):
         with self.assertRaises(SourceLayoutError):
             idibaps.parse_page("<main>Ofertes de feina</main>")
@@ -57,6 +65,12 @@ class Source(unittest.TestCase):
         manana = idibaps.IdibapsSource(now=at(11, 13)).list_offers(Http())
         self.assertIn("FU-338/2026", [o.ref for o in hoy])
         self.assertNotIn("FU-338/2026", [o.ref for o in manana])
+
+    def test_enlace_saneado(self):
+        source = idibaps.IdibapsSource(now=at(11, 11))
+        offer = source.list_offers(Http())[0]
+        offer.url = "javascript:alert(document.domain)"
+        self.assertNotIn("javascript:", source.fetch_detail(Http(), offer).sections[0]["html"])
 
     def test_ficha_enlaza_la_convocatoria(self):
         source = idibaps.IdibapsSource(now=at(11, 11))
