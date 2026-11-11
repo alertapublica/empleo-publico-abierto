@@ -22,7 +22,7 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 | **Zarzuela, Mercasa, Sepides** | `zarzuela.py`, `mercasa.py`, `sepides.py` | Plazo en PDF (`pypdf`). Sus listados y adjudicaciones no se anuncian: no tienen fecha |
 | **Grupo Hunosa (SADIM)** | `hunosa.py` | Los 5 enlaces de `hunosa.es/empleo-publico/` dan 404; solo se lee `sadim.es/empleo` |
 | **ENAIRE, Aena** | `pfsrv.py` | Latin-1. Aena sin convocatoria abierta real vista. Un anulado con fechas vigentes saldría como abierto |
-| **Puertos del Estado** | `puertos.py` | Solo `offer_type=108`. Las autoridades portuarias (`107`, 30+ páginas, plazo a veces solo en PDF) no se leen |
+| **Puertos del Estado** | `puertos.py` | Ofertas de `offer_type=108`. Las autoridades portuarias (`107`) van como procesos sin plazo, salvo Barcelona, que tiene fuente propia (`apb.py`; `OWN_SOURCE`). Solapamiento entre fuentes pendiente de diseño (2026-11-11) |
 | **Autoridad Portuaria de Barcelona** | `apb.py` | Portal propio (`seleccio.portdebarcelona.cat`, Liferay). Listado sin plazo: se lee cada ficha (7) y, si no tiene «Seguimiento del proceso de selección», sus bases en PDF («finalizará el 23 de noviembre de 2026, a las 13:00 horas»); la ampliación va en un párrafo de la ficha. Seguimiento = párrafos literales sin fecha → procesos. Fichas en `/ca/` se leen en `/es/`. Del informe de Codex (2026-11-11) |
 | **SENASA** | `senasa.py` | Intermedio TLS en `empleo/certs/` |
 | **ISDEFE** | `isdefe.py` | `seleccionisdefe.es`, sin `www`. Solo se leen los calendarios de filas con enlace de inscripción |

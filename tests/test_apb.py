@@ -27,6 +27,8 @@ class Http:
 
 
 def pdfs(http, url, what):
+    if "sostenibilitat" in url:  # bases con un cierre anterior: la ampliación de la ficha lo prorroga
+        return "El plazo de presentación de solicitudes finalizará el 13 de noviembre de 2026, a las 13:00 horas."
     return fixture("apb-bases.txt")
 
 
@@ -76,7 +78,8 @@ class Source(unittest.TestCase):
         by_ref = {o.ref: o for o in offers}
         self.assertEqual(len(offers), 4)  # dos ampliadas y dos solo con bases
         ampliada = next(o for o in offers if "sostenibilitat" in o.ref)
-        self.assertEqual((ampliada.deadline, ampliada.deadline_time), ("2026-11-23", "13:00"))  # vale la mayor
+        # Bases: 13/11 a las 13:00; ampliación en la ficha: 20/11 a las 12:00. Manda la ampliación, con su hora.
+        self.assertEqual((ampliada.deadline, ampliada.deadline_time), ("2026-11-20", "12:00"))
         bases = next(o for o in offers if "domini-public" in o.ref)
         self.assertEqual((bases.deadline, bases.deadline_time, bases.kind), ("2026-11-23", "13:00", "indefinido"))
         self.assertEqual(details[bases.ref].location, "Barcelona")
@@ -87,6 +90,10 @@ class Source(unittest.TestCase):
         self.assertEqual(len({n.process for n in notices}), 3)
         self.assertEqual({n.date for n in notices}, {""})
         self.assertEqual({n.state for n in notices}, {"curso"})
+
+    def test_sin_la_ampliacion_habria_cerrado(self):
+        offers, _, _ = read(at(11, 14))
+        self.assertIn("2026-11-20", [o.deadline for o in offers if "sostenibilitat" in o.ref])
 
     def test_vencido_el_plazo_no_hay_ofertas(self):
         offers, _, _ = read(at(11, 23, 13))  # 14:00 en Madrid

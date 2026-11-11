@@ -104,7 +104,8 @@ class Seleccion(unittest.TestCase):
 class AutoridadesPortuarias(unittest.TestCase):
     def test_son_procesos_sin_plazo_con_su_autoridad(self):
         items = puertos.PuertosSource().list_announcements(FakeHttp())
-        self.assertEqual(len(items), 10)  # 12 menos 2 intraportuarias
+        self.assertEqual(len(items), 7)  # 12 menos 2 intraportuarias y 3 de Barcelona (fuente propia: apb.py)
+        self.assertFalse(any(item.location == "Barcelona" for item in items))
         first = items[0]
         self.assertEqual(first.process, "Responsable de Operaciones y Servicios Portuarios (Digitalización) "
                                         "(Autoridad Portuaria: Bahía de Algeciras)")
