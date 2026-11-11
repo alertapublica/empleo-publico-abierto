@@ -15,6 +15,7 @@ admitidos y de puntuaciones.
 from __future__ import annotations
 
 import re
+import sys
 from datetime import datetime, timezone
 
 from bs4 import BeautifulSoup
@@ -43,7 +44,11 @@ def parse_page(html: str) -> list[dict]:
     found = []
     for item in items:
         text = _text(item)
-        post = next((m.group(1) for c in item.get("class", []) if (m := POST.fullmatch(c))), None)
+        if not text:
+            # Entrada publicada sin rellenar (pasó con la 23/2026): se salta hasta que tenga datos.
+            print(f"AVISO fundesalud: tarjeta vacía, se salta: {item.get('class')}", file=sys.stderr)
+            continue
+        post =next((m.group(1) for c in item.get("class", []) if (m := POST.fullmatch(c))), None)
         starts, ends = STARTS.search(text), ENDS.search(text)
         label, title, link = item.select_one("p.elementor-heading-title"), item.find("h6"), item.find("a", href=True)
         if not (post and ends and title and link):
@@ -56,6 +61,8 @@ def parse_page(html: str) -> list[dict]:
             "deadline": numeric_date(ends.group(1)),
             "positions": int(seats.group(1)) if seats else None,
         })
+    if not found:
+        raise SourceLayoutError("FUNDESALUD: todas las convocatorias están vacías")
     return found
 
 

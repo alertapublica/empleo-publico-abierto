@@ -1,3 +1,4 @@
+import io
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -113,6 +114,20 @@ class Fundesalud(unittest.TestCase):
         for label in ("Ref:18/2025", "REF. P26-03", "PMP25/2026", "NO12345 P1"):
             entries = fundesalud.parse_page(html.replace("Ref. 22/2026", label, 1))
             self.assertEqual((entries[0]["code"], entries[0]["title"]), (label, "UN /A TÉCNICO DE PROYECTOS I+D+i"))
+
+    def test_tarjeta_vacia_se_salta_con_aviso(self):
+        # Así salió la 23/2026 el 2026-11-11: publicada sin rellenar, con los campos invisibles.
+        vacia = ('<div class="elementor e-loop-item post-13927 oferta-de-empleo">'
+                 '<a href="https://fundesalud.es/personal/ofertas-de-empleo/ref-23-2026/"></a>'
+                 '<div><!-- dce invisible element 70a21164 --></div></div>')
+        html = fixture("fundesalud-ofertas.html")
+        primera = html.index('<div class="elementor elementor-1202 e-loop-item')
+        with mock.patch("sys.stderr", new_callable=io.StringIO) as stderr:
+            entries = fundesalud.parse_page(html[:primera] + vacia + html[primera:])
+        self.assertEqual([e["ref"] for e in entries], [e["ref"] for e in fundesalud.parse_page(html)])
+        self.assertIn("AVISO fundesalud: tarjeta vacía", stderr.getvalue())
+        with mock.patch("sys.stderr", new_callable=io.StringIO), self.assertRaises(SourceLayoutError):
+            fundesalud.parse_page(vacia)
 
     def test_ficha_no_se_pide(self):
         offer = fundesalud.FundesaludSource().fetch_detail(None, None)
