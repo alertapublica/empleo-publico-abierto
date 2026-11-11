@@ -3,7 +3,7 @@
 1. Crea `empleo/sources/<organismo>.py` con una clase que herede de `Source`, o reutiliza una plataforma ya hecha (SuccessFactors, por ejemplo). Si es autonómico, declara su `scope` con el nombre de la comunidad.
 2. Implementa `list_offers`, que debe lanzar `SourceLayoutError` si la página cambia.
 3. Implementa, si procede, `fetch_detail`, `enrich` y `list_announcements`.
-4. Añádelo a su grupo en `CATALOG` (`empleo/sources/__init__.py`): Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas o fundaciones y centros de investigación. Quítalo de `PLANNED`.
+4. Añádelo a su grupo en `CATALOG` (`empleo/sources/__init__.py`): Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas, empresas públicas locales o fundaciones y centros de investigación. Quítalo de `PLANNED`.
 
 El motor, la web y los feeds no necesitan cambios. La clase `FakeSource` de `tests/test_ingest.py` es un ejemplo mínimo.
 

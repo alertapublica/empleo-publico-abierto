@@ -25,7 +25,7 @@ class Catalogo(unittest.TestCase):
         for source in ACTIVE:
             if source.group in ("sepi", "estatal"):
                 self.assertEqual(source.scope, STATE_SCOPE, source.id)
-            elif source.group == "autonomica":
+            elif source.group in ("autonomica", "local"):
                 self.assertIn(source.scope, COMMUNITIES, source.id)
             else:
                 self.assertIn(source.scope, [STATE_SCOPE, *COMMUNITIES], source.id)
