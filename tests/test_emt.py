@@ -48,11 +48,24 @@ class Detail(unittest.TestCase):
         self.assertIn("dos plazas de Titulado/a Superior", detail["summary"])
 
 
+    def test_enlaces_saneados(self):
+        html = fixture("emt-ficha.html").replace('href="/getattachment/', 'href="javascript:alert(1)//')
+        source = emt.EmtSource(now=at(11, 11))
+
+        class Bad(Http):
+            def get(self, url):
+                return fixture("emt-empleo.html") if url == emt.PAGE else html
+
+        offer = source.list_offers(Bad())[0]
+        self.assertNotIn("javascript:", " ".join(s["html"] for s in source.fetch_detail(Bad(), offer).sections))
+
+
 class Source(unittest.TestCase):
-    def test_solo_se_leen_las_del_ultimo_ano(self):
+    def test_se_leen_todas_las_de_la_lista(self):
+        # Filtrar por antigüedad daría por retirados procesos que la web sigue listando.
         http = Http()
         offers = emt.EmtSource(now=at(11, 11)).list_offers(http)
-        self.assertEqual(len(http.asked), 1 + 10)  # desde el 11-11-2025
+        self.assertEqual(len(http.asked), 1 + 17)
         self.assertEqual(offers[0].positions, 2)
         self.assertEqual((offers[0].deadline, offers[0].opens_on), ("2026-12-31", "2026-10-24"))
 

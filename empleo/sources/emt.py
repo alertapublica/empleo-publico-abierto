@@ -8,28 +8,27 @@ La ficha (`.tab-pane.active`) da «Periodo de inscripción: 24/10/2026 - 31/12/2
 documentos numerados con su fecha («1. Bases convocatoria 23-10-2026»). La inscripción es un
 formulario de suscripción en la misma ficha (no se copia).
 
-Se leen las fichas de las convocatorias del último año (RECENT_DAYS; hoy, 10). Es oferta la que tiene
-el periodo de inscripción sin vencer; las demás son procesos, cuyos comunicados son sus documentos,
-con la fecha que trae su nombre.
+Se leen todas las fichas de la lista (hoy, 17): si se filtrara por antigüedad, el motor daría por
+retirados procesos que la web sigue mostrando. Es oferta la que tiene el periodo de inscripción sin
+vencer; las demás son procesos, cuyos comunicados son sus documentos, con la fecha que trae su nombre.
 """
 from __future__ import annotations
 
 import re
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from html import escape
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
 from ..http import Client
-from ..model import MADRID, Announcement, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
+from ..model import Announcement, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
 from ..sanitize import sanitize
 from .base import Source
 
 SITE = "https://www.emtmadrid.es"
 PAGE = SITE + "/Empresa/Empleo"
 COMPANY = "EMT Madrid"
-RECENT_DAYS = 365
 TRAILING_DAY = re.compile(r"\s*(\d{2})-(\d{2})-(\d{4})\s*$")
 PERIOD = re.compile(r"(\d{2})/(\d{2})/(\d{4})\s*-\s*(\d{2})/(\d{2})/(\d{4})")
 POSITIONS = re.compile(r"^Convocatoria (\d+) plazas?\b", re.I)
@@ -93,10 +92,7 @@ class EmtSource(Source):
 
     def _read(self, http: Client) -> list[tuple[dict, dict]]:
         if self._rows is None:
-            now = self._now or datetime.now(timezone.utc)
-            since = (now.astimezone(MADRID).date() - timedelta(days=RECENT_DAYS)).isoformat()
-            self._rows = [(row, parse_detail(http.get(row["url"])))
-                          for row in parse_page(http.get(PAGE)) if row["published"] >= since]
+            self._rows = [(row, parse_detail(http.get(row["url"]))) for row in parse_page(http.get(PAGE))]
         return self._rows
 
     def _is_offer(self, detail: dict) -> bool:
@@ -119,13 +115,13 @@ class EmtSource(Source):
         detail = next((d for r, d in self._read(http) if r["ref"] == offer.ref), None)
         if detail is None:
             return OfferDetail(location="Madrid")
-        sections = [{"title": "Periodo de inscripción", "level": 2, "html": f"<p>{escape(detail['period'])}</p>"}]
+        sections = [{"title": "Periodo de inscripción", "level": 2, "html": sanitize(f"<p>{escape(detail['period'])}</p>")}]
         if detail["summary"]:
             sections.append({"title": "La convocatoria", "level": 2, "html": detail["summary"]})
         if detail["documents"]:
             items = "".join(f'<li><a href="{escape(d["url"], quote=True)}">{escape(d["label"])}</a></li>'
                             for d in detail["documents"])
-            sections.append({"title": "Documentos", "level": 2, "html": f"<ul>{items}</ul>"})
+            sections.append({"title": "Documentos", "level": 2, "html": sanitize(f"<ul>{items}</ul>")})
         return OfferDetail(location="Madrid", sections=sections)
 
     def list_announcements(self, http: Client) -> list[Announcement]:
