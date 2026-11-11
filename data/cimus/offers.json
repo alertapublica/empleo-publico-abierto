@@ -2,7 +2,7 @@
  "5182": {
   "apply_url": "https://cimus.usc.gal/es/empleo/convocatoria-publica-urgente-cimus-232026-de-contratacion-de-personal-para-colaborar-en-las",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-11T05:07:29+00:00",
   "code": null,
   "company": "Universidade de Santiago de Compostela",
   "contract": null,
@@ -16,7 +16,7 @@
   "kind": null,
   "listed_deadline": "2026-11-10",
   "location": "Santiago de Compostela",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -28,7 +28,7 @@
   "sections": [],
   "source": "cimus",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria Pública Urgente CiMUS 23/2026 de contratación de personal para colaborar en las actividades y proyectos de investigación del CiMUS.",
   "url": "https://cimus.usc.gal/es/empleo/convocatoria-publica-urgente-cimus-232026-de-contratacion-de-personal-para-colaborar-en-las"
  },
