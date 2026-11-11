@@ -58,6 +58,13 @@ class Deadline(unittest.TestCase):
         text = ("Se abre un plazo de 3 días hábiles siguientes a la fecha de publicación de este listado "
                 "provisional, publicado el 20 de noviembre de 2026.")
         self.assertEqual(veiasa.deadline_of(text), (None, None))
+        solicitudes = "el plazo permanecerá abierto hasta el 11 de noviembre de 2026, a las 23:59 horas. "
+        alegaciones = "El plazo de alegaciones finalizará el 20 de noviembre de 2026 a las 12:00 horas."
+        self.assertEqual(veiasa.deadline_of(solicitudes + alegaciones), (date(2026, 11, 11), "23:59"))
+
+    def test_hora_con_punto(self):
+        text = "El plazo de presentación de solicitudes finaliza el 11 de noviembre de 2026 a las 13.00 horas."
+        self.assertEqual(veiasa.deadline_of(text), (date(2026, 11, 11), "13:00"))
 
 
 class Source(unittest.TestCase):

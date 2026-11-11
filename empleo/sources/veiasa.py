@@ -30,7 +30,10 @@ SITE = "https://www.veiasa.es"
 PAGE = SITE + "/es/la-empresa/selecci%C3%B3n-de-personal"
 COMPANY = "VEIASA"
 NOT_OFFERS = re.compile(r"llamamiento", re.I)  # al personal fijo discontinuo: interno
-CLAUSE = re.compile(r"plazo[^.]{0,300}?(?:hasta|finaliz)[^.]{0,200}", re.I)
+# Una frase: hasta el punto final, pero no el de una hora («13.00 horas»).
+_SENTENCE = r"(?:[^.]|(?<=\d)\.(?=\d))"
+CLAUSE = re.compile(r"plazo" + _SENTENCE + r"{0,300}?(?:hasta|finaliz)" + _SENTENCE + r"{0,200}", re.I)
+OTHER_PHASES = re.compile(r"alegaci|reclamaci|subsanaci|recurso", re.I)
 WHEN = re.compile(r"(?:a\s+las\s+(\d{1,2}[:.]\d{2})\s*horas?\s+del?\s+(?:d[ií]a\s+)?)?(?:[a-záéíóú]+\s+)?(\d{1,2}) de ("
                   + "|".join(MONTHS) + r") de (\d{4})(?:,?\s*a\s+las\s+(\d{1,2}[:.]\d{2}))?", re.I)
 
@@ -62,6 +65,8 @@ def deadline_of(text: str) -> tuple:
     """Último día (y hora) de las frases del plazo que dicen «hasta» o «finaliza»."""
     found = []
     for clause in CLAUSE.findall(_clean(text)):
+        if OTHER_PHASES.search(clause):
+            continue
         for before, day, month, year, after in WHEN.findall(clause):
             when = spanish_date(day, month, year)
             if when:
