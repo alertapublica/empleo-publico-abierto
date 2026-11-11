@@ -18559,6 +18559,111 @@
   "title": "Analista SAP BTP (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58630"
  },
+ "58631": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58631",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58631",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-25",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-11T09:07:21+00:00",
+  "id": "tragsa:58631",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-25",
+  "location": "Sede Madrid Tragsa",
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": null,
+  "ref": "58631",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista SAP HCM para prestar apoyo técnico a un importante proyecto de la Administración en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsa</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Mantenimiento correctivo y evolutivo de SAP HCM Nómina y Gestión de Tiempos.</li><li>Análisis y optimización de esquemas de nómina y tiempos.</li><li>Configuración de sociedades y convenios colectivos.</li><li>Gestión de cambios legales de IRPF y Seguridad Social, cierres fiscales y modelo 190.</li><li>Desarrollo y mantenimiento de programas ABAP relacionados con HCM.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>Idiomas<ul><li>Inglés, Nivel Mínimo B2 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>Experiencia Previa<ul><li>Al menos 3 años de experiencia con contrato laboral en SAP HCM, especialmente en Nómina y Gestión de Tiempos.</li><li>Al menos 3 años de experiencia con contrato laboral en esquemas de nómina y de la legislación laboral y fiscal española.</li><li>Al menos 3 años de experiencia con contrato laboral en ABAP y resolución de incidencias.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>Idiomas<ul><li>Inglés, Nivel Mínimo B2 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Inglés, Nivel Mínimo B2 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Al menos 3 años de experiencia con contrato laboral en SAP HCM, especialmente en Nómina y Gestión de Tiempos.</li><li>Al menos 3 años de experiencia con contrato laboral en esquemas de nómina y de la legislación laboral y fiscal española.</li><li>Al menos 3 años de experiencia con contrato laboral en ABAP y resolución de incidencias.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación relacionadas con SAP HCM Payroll</li></ul>Experiencia Previa<ul><li>Desde 3 años Hasta 5 años de experiencia en ABAP HR, debugging, ampliaciones, reports, interfaces y resolución de incidencias, (experiencia con contrato laboral, se comprobará en la prueba oral técnica)</li></ul>Otros Factores Meritorios<ul><li>Experiencia con contrato laboral desde 3 años hasta 10 años en esquemas y reglas de nómina y tiempos, reglas de cálculo, infotipos, tablas y clústeres de nómina, parametrización de conceptos salariales, convenios colectivos, IRPF, Seguridad Social, cierres de nómina y fiscales, modelo 190.</li><li>Experiencia con contrato laboral desde 3 años hasta 10 años en la gestión de absentismos, contingentes y saldos horarios.</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación relacionadas con SAP HCM Payroll</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación relacionadas con SAP HCM Payroll</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 años Hasta 5 años de experiencia en ABAP HR, debugging, ampliaciones, reports, interfaces y resolución de incidencias, (experiencia con contrato laboral, se comprobará en la prueba oral técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia con contrato laboral desde 3 años hasta 10 años en esquemas y reglas de nómina y tiempos, reglas de cálculo, infotipos, tablas y clústeres de nómina, parametrización de conceptos salariales, convenios colectivos, IRPF, Seguridad Social, cierres de nómina y fiscales, modelo 190.</li><li>Experiencia con contrato laboral desde 3 años hasta 10 años en la gestión de absentismos, contingentes y saldos horarios.</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa de hasta el 50%.<br/><br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 11/11/2026 hasta el próximo 25/11/2026 a las 23:59 (hora peninsular).<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista SAP HCM (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58631"
+ },
  "58632": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58632",
   "category": "Específica",
@@ -19541,7 +19646,7 @@
   "source": "tragsa",
   "source_title": null,
   "status": "open",
-  "title": "Licenciado/a y/o Diplomado/a o Graduado/a + Máster Oficial Derecho y especialidades jurídicas - Apoyo normativo aplicaciones informáticas (Zaragoza)",
+  "title": "Licenciado/a o Graduado/a + Máster Oficial Derecho y especialidades jurídicas - Apoyo normativo aplicaciones informáticas (Zaragoza)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58659"
  },
  "58661": {

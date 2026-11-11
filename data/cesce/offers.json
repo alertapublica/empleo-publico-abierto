@@ -1,0 +1,52 @@
+{
+ "19939583": {
+  "apply_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "CESCE",
+  "contract": null,
+  "deadline": "2026-11-22",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T09:07:21+00:00",
+  "id": "cesce:19939583",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-22",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-10",
+  "ref": "19939583",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DEL 10 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE TÉCNICO COMERCIAL DE FINANCIACIÓN (EN EL MARCO DE LA TASA DE REPOSICIÓN AUTORIZADA)</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p>El plazo de admisión de solicitudes será desde el día 10 de noviembre hasta el día 22 de noviembre, ambos incluidos.</p>",
+    "level": 2,
+    "title": "Plazo"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.cesce.es/documents/20122/19939501/Convocatoria+%28TCF2+-2026%29.pdf/13c1d9e2-0e27-e5eb-dd3b-a484aa68e448?t=1794328970995\">Convocatoria</a> (publicado el 10/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/19939501/Anexo+I+Perfil.+T%C3%A9cnico+Comercial+de+Financiaci%C3%B3n+%28TCF2%29.pdf/98bf4639-1d2a-46d6-9efd-64ecd582daf8?t=1794329563316\">Anexo I. Perfil del puesto</a> (publicado el 10/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/19939501/Anexo+II+Modelo+de+Solicitud+-+pdf.pdf/aeca1cf9-fdd3-46db-64c0-0ca0b50cc05a?t=1794328969062\">Anexo II. Modelo de Solicitud - pdf</a> (publicado el 10/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/19939501/Anexo+II+Modelo+de+Solicitud+-+word+cumplimentable.docx/13c30d8e-07a8-0ae3-e4a6-cbc831c721ba?t=1794328970007\">Anexo II. Modelo de Solicitud - word cumplimentable</a> (publicado el 10/11/2026)</li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesce",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico comercial de financiación",
+  "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
+ }
+}
