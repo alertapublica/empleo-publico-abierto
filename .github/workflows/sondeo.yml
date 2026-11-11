@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       ronda:
-        description: "Lista de páginas a leer (1 = inicial, 2 a 4 = seguimiento, 5 = fuera de SEPI)"
+        description: "Lista de páginas a leer (1 = inicial, 2 a 4 = seguimiento, 5 = fuera de SEPI, 6 = candidatas de Codex)"
         type: choice
-        options: ["1", "2", "3", "4", "5"]
+        options: ["1", "2", "3", "4", "5", "6"]
         default: "1"
 
 permissions:
