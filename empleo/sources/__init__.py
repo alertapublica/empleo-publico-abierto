@@ -46,6 +46,7 @@ from .sepides import SepidesSource
 from .successfactors import SuccessFactorsSource
 from .tmb import TmbSource
 from .tragsa import TragsaSource
+from .veiasa import VeiasaSource
 from .zarzuela import ZarzuelaSource
 
 CORREOS = SuccessFactorsSource(
@@ -82,7 +83,7 @@ CATALOG = {
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
-    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
+    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource()],
     "local": [TmbSource()],
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
