@@ -68,6 +68,8 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 
 | Fuente | Motivo |
 |---|---|
+| **RTVA / Canal Sur** (Andalucía) | Un proceso de 228 plazas en cuatro fases sucesivas; las tres primeras (reingreso, traslados, promoción interna) son internas. Página narrativa sin comunicados fechados. Integrar cuando se abra el concurso-oposición libre (la fase externa). `robots.txt` solo bloquea agentes de IA (sondeo del 2026-11-11) |
+| **FIBAO, IDIS/FIDIS, Fundación Universidad de La Rioja, 3Cat/CCMA, EMASESA, IIS Galicia Sur** | Prioridad media del informe de Codex (2026-11-11): formato válido, poco o ningún volumen hoy. IDIS: usar `/ofertastrabajo/publicadas`. EMASESA: `robots.txt` restringe PDF y URL con parámetros. FIBAO: una de sus dos ofertas es una ayuda PTA y otra exige vinculación previa |
 | **CSAG / CRTVG** (Galicia) | Sin plazo de inscripción en la web. `Crawl-delay: 10`; intermedio TLS equivocado |
 
 ## Fuera
@@ -89,4 +91,4 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 
 ## Sin revisar
 
-Del estudio externo, todavía sin leer: Sogama, SODECAN, ESAMUR, GITPA, Tracasa, Visesa, VEIASA, IdISBa, INIBIC, IIS Galicia Sur, FIBAO, IBIMA/FIMABIS, IDIS/FIDIS, IRB Barcelona, IDIAP Jordi Gol, Fundación para la Transformación de La Rioja y Fundación de la Universidad de La Rioja. También las filiales del índice de SEPI (`sepi.es/es/empleo-publico/en-empresas-del-grupo`) no citadas aquí.
+Revisado el 2026-11-11 con el informe de Codex (prioridad baja, sin integrar): Sogama (sin ofertas abiertas; histórico con procesos internos), SODECAN (no confirmado en vivo), ESAMUR (sin empleo público ahora), GITPA (un proceso de 2019 presentado como abierto), Visesa (apartados vacíos en el HTML), INIBIC (`gestion.inibic.es` con cadena TLS no verificable), IDIAP Jordi Gol (tabla vacía sin JS; `robots.txt` prohíbe `/api/`), Fundación para la Transformación de La Rioja («Abierto» sin plazo; un 403), CIBER y VHIR (sin ruta determinista), IISPV (TLS), Mercabarna (406), EMAYA (aplicación JS), SEPIDES Gestión y SODIEX (página propia vacía: posibles centinelas), ABRA Industrial, AGRUMINSA y PEPA (publican en la web de SEPIDES, ya leída). Descartadas por Codex: Tracasa y Madrid Destino (sin plazo), FIMABIS (`robots.txt`: `Disallow: /`), BSC (reto Anubis), Metro de Madrid (bloqueo).
