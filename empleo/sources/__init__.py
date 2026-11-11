@@ -11,6 +11,7 @@ from .enresa import EnresaSource
 from .enusa import EnusaSource
 from .etsa import EtsaSource
 from .fgc import FgcSource
+from .fgv import FgvSource
 from .fisevi import FiseviSource
 from .fnmt import FnmtSource
 from .fundanet import FISABIO, IDIBELL, IDIVAL
@@ -74,7 +75,7 @@ CATALOG = {
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
-    "autonomica": [FgcSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
+    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
         LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(),

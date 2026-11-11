@@ -47,6 +47,7 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 | **IRYCIS** | `irycis.py` | Contrata la Fundación para la Investigación Biomédica del H. U. Ramón y Cajal. Tabla por año con fechas sin año: año de la tabla, que debe coincidir con el sufijo (`C75/26`); cierre anterior a la convocatoria = año siguiente; más de 60 días, fuera. Solo las dos últimas tablas. Convocatoria en PDF escaneado (sin hora). Título literal (suele ser la titulación). Las actas no se enlazan. Si en enero la tabla del año nuevo aún no existe, la fuente se detiene (sin ver) |
 | **CESCE** | `cesce.py` | Liferay. Dos listados en la misma página: el de agentes mediadores (tras `carreras.mediadores@cesce.es`) no se lee. Estado literal («Abierta», «Proceso»; uno desconocido detiene la fuente). Plazo solo en el PDF de la convocatoria, sin año ni hora: año de la publicación del documento; vale la fecha mayor con las ampliaciones. «Abierta» con el plazo vencido pasa a proceso. Comunicados = documentos con su «Fecha de publicación», sin los anexos |
 | **Mercasturias** | `mercasturias.py` | `www.mercasturias.com` (el `.es` falla en TLS). Página estática: una lista de PDF con fecha («4 de noviembre 2026»), sin bloques por proceso: cada bases («Cobertura de puesto de trabajo …») abre uno. Plazo en las bases y ampliaciones (la extracción parte la hora: «23: 59»). Oferta = solo bases y ampliaciones, con plazo sin vencer; si no, proceso. La web no marca los terminados: siguen «en curso». Las relaciones de admitidos se anuncian (título y enlace), no se copian |
+| **FGV** | `fgv.py` | WordPress con la API REST desactivada. Árbol de páginas de «Convocatorias en proceso»: convocatoria → subpáginas (comunicados), sin fecha en ningún sitio (tampoco dentro): van sin fecha, ordenados por el id de página. Plazo en la subpágina «Apertura plazo…» («Inicio:» / «Fin: … a las 11:59 horas»); solo se lee en las convocatorias sin listados ni otras fases (hoy, dos peticiones). OEP y bolsas en la misma convocatoria: contrato sin indicar. «ANULADA:» = terminado. Las cerradas (otra rama del árbol) no se leen |
 
 ## Centinelas
 
@@ -67,7 +68,6 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 
 | Fuente | Motivo |
 |---|---|
-| **FGV** (C. Valenciana) | Plazo en la subpágina «Apertura plazo»; OEP y bolsas en el mismo expediente. Iría como proceso |
 | **CSAG / CRTVG** (Galicia) | Sin plazo de inscripción en la web. `Crawl-delay: 10`; intermedio TLS equivocado |
 
 ## Fuera
