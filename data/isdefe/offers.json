@@ -783,5 +783,45 @@
   "status": "open",
   "title": "Técnico/a Apoyo Gestión CIS - Reservistas de Especial Disponibilidad (RED)(2026-T00440 )",
   "url": "https://seleccionisdefe.es/convocatoria-2630"
+ },
+ "2632": {
+  "apply_url": "https://seleccionisdefe.es/registro-2632",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00478 (2)",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T11:07:23+00:00",
+  "id": "isdefe:2632",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-17",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-11",
+  "ref": "2632",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a Ingeniero/a de Operación y Mantenimiento para la <strong>Estación de Espacio Profundo de Cebreros</strong></p><p><strong>Titulaciones </strong></p><p>Ingenieria en Telecomunicaciones, Aeroespacial, Industrial o Electrónica</p><p>Mantenimiento y Operación de la Estación de Espacio Profundo de Cebreros (ESA).Realización periódica de mantenimientos preventivos.Troubleshooting y mantenimientos correctivos cuando se requiera.Realización de pruebas de rendimiento de todos los sistemas de la Estación para dar soporte a LEOP de nuevas misiones.Configuración y operación de la Estación para el seguimiento de misiones de Espacio Profundo de la ESA.Desarrollo y actualización de procedimientos de mantenimiento.Actualización de Manual de procedimientos Operativos y de Contingencia.Soporte a Ingeniería durante el diseño e implantación de nuevos subsistemas.Participación en el seguimiento de nuevos proyectos.Disponibilidad para realizar servicio de on-call periódicamente (una semana al mes aprox.). </p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Menos de 4 años de experiencia previa como Ingeniero/a</p><p>Inglés: Igual o superior a 700 puntos en prueba TOEIC</p><p><strong>Requisitos Valorables</strong></p><p>Conocimientos:<br/>\r\no             Radiofrecuencia.<br/>\r\no             Antenas.<br/>\r\no             Procesamiento digital de señales.<br/>\r\no             Sistemas de comunicaciones por satélite.<br/>\r\no             Servomecanismos (PLC).<br/>\r\no             Instrumentación de medida (analizadores vectoriales, osciloscopios).<br/>\r\no             Entornos Linux, conocimientos en Python/Matlab.</p><p>SE OFRECE CONTRATO INDEFINIDO</p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa).</em></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de Operación y Mantenimiento para la Estación de Espacio Profundo de Cebreros (2025-T00478)(2)",
+  "status": "open",
+  "title": "Ingeniero/a de Operación y Mantenimiento para la Estación de Espacio Profundo de Cebreros",
+  "url": "https://seleccionisdefe.es/convocatoria-2632"
  }
 }
