@@ -1,4 +1,22 @@
 {
+ "enusa:17733b019f1b": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-10-30",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-11T13:07:25+00:00",
+  "location": null,
+  "process": "TECNICO/A TITULADO/A OPERACIONES SERVICIOS EN CENTRAL (866-TTSCOP)",
+  "process_url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "source": "enusa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Resultado de la revisión de requisitos mínimos",
+  "url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "via": "otro"
+ },
  "enusa:39d37217a619": {
   "access": "libre",
   "apply_url": null,

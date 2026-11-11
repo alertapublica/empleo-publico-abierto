@@ -43,5 +43,50 @@
   "status": "open",
   "title": "Responsable de Sistemes Tecnològics de Xarxes i Telecomunicacions",
   "url": "https://www.tmb.cat/ca/w/oferta-10242-responsable-de-sistemes-tecnol%C3%B2gics-de-xarxes-i-telecomunicacions"
+ },
+ "10244": {
+  "apply_url": "https://www.tmb.cat/ca/w/oferta-10244-especialista-superior-energia-polivalent",
+  "category": null,
+  "closed_at": null,
+  "code": "10244",
+  "company": "TMB",
+  "contract": null,
+  "deadline": "2026-11-26",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T13:07:25+00:00",
+  "id": "tmb:10244",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-26",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": null,
+  "ref": "10244",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Convocatòria de procés de selecció per a la cobertura, amb caràcter indefinit, de 2 places + 3 reserves d’especialista superior d’energia polivalent, per treballar a la Direcció de Sistemes de la Xarxa de metro de Ferrocarril Metropolità de Barcelona.</p>\n<p>Requisits de participació:</p>\n<p>Estar en possessió de la titulació, oficial i finalitzada, de mínim Cicle Formatiu Grau Superior/FPII en branques tècniques, preferentment en electricitat. Famílies professionals acceptades:<br/>\n•Electricitat i Electrònica<br/>\n•Energia i Aigua<br/>\n•Instal·lació i manteniment</p>",
+    "level": 2,
+    "title": "Descripció"
+   },
+   {
+    "html": "<p><a href=\"https://www.tmb.cat/documents/20182/2092756/Bases+ESEP+2026.pdf/dfd0a984-778d-8a3a-0f0b-d0b255928298?t=1794402103574\">Bases de la convocatoria (PDF)</a></p>",
+    "level": 2,
+    "title": "Bases de la convocatòria"
+   }
+  ],
+  "source": "tmb",
+  "source_title": null,
+  "status": "open",
+  "title": "2 places + 3 reserves d’especialista superior d’energia polivalent",
+  "url": "https://www.tmb.cat/ca/w/oferta-10244-especialista-superior-energia-polivalent"
  }
 }
