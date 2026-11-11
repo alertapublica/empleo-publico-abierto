@@ -1,0 +1,512 @@
+{
+ "version": 1,
+ "_nota": "Quién convoca: cada entidad con los nombres con que la publican las fuentes. Los ids de organismos con fuente coinciden con el id de la fuente (son públicos en la API). Las dependencias entre entidades (el organigrama) quedan fuera: requieren verificar cada relación.",
+ "entidades": [
+  {
+   "id": "sepi",
+   "nombre": "SEPI",
+   "alias": []
+  },
+  {
+   "id": "tragsa",
+   "nombre": "Grupo Tragsa",
+   "alias": [
+    "Tragsa",
+    "Grupo Tragsa"
+   ]
+  },
+  {
+   "id": "efe",
+   "nombre": "Agencia EFE",
+   "alias": []
+  },
+  {
+   "id": "correos",
+   "nombre": "Grupo Correos",
+   "alias": [
+    "Correos",
+    "Grupo Correos"
+   ]
+  },
+  {
+   "id": "navantia",
+   "nombre": "Navantia",
+   "alias": []
+  },
+  {
+   "id": "enusa",
+   "nombre": "Enusa",
+   "alias": []
+  },
+  {
+   "id": "rtve",
+   "nombre": "Corporación RTVE",
+   "alias": []
+  },
+  {
+   "id": "enresa",
+   "nombre": "Enresa",
+   "alias": []
+  },
+  {
+   "id": "etsa",
+   "nombre": "ETSA",
+   "alias": []
+  },
+  {
+   "id": "cetarsa",
+   "nombre": "Cetarsa",
+   "alias": []
+  },
+  {
+   "id": "cofivacasa",
+   "nombre": "Cofivacasa",
+   "alias": []
+  },
+  {
+   "id": "zarzuela",
+   "nombre": "Hipódromo de la Zarzuela",
+   "alias": []
+  },
+  {
+   "id": "mercasa",
+   "nombre": "Mercasa",
+   "alias": []
+  },
+  {
+   "id": "hunosa",
+   "nombre": "Grupo Hunosa",
+   "alias": [
+    "Hunosa",
+    "Grupo Hunosa"
+   ]
+  },
+  {
+   "id": "sepides",
+   "nombre": "Sepides",
+   "alias": []
+  },
+  {
+   "id": "mayasa",
+   "nombre": "Mayasa",
+   "alias": []
+  },
+  {
+   "id": "enaire",
+   "nombre": "ENAIRE",
+   "alias": []
+  },
+  {
+   "id": "aena",
+   "nombre": "Aena",
+   "alias": []
+  },
+  {
+   "id": "puertos",
+   "nombre": "Puertos del Estado",
+   "alias": []
+  },
+  {
+   "id": "apb",
+   "nombre": "Autoridad Portuaria de Barcelona",
+   "alias": [
+    "Barcelona"
+   ]
+  },
+  {
+   "id": "senasa",
+   "nombre": "SENASA",
+   "alias": []
+  },
+  {
+   "id": "isdefe",
+   "nombre": "ISDEFE",
+   "alias": []
+  },
+  {
+   "id": "fnmt",
+   "nombre": "FNMT-RCM",
+   "alias": []
+  },
+  {
+   "id": "cesce",
+   "nombre": "CESCE",
+   "alias": []
+  },
+  {
+   "id": "mercasturias",
+   "nombre": "Mercasturias",
+   "alias": []
+  },
+  {
+   "id": "adif",
+   "nombre": "ADIF y ADIF Alta Velocidad",
+   "alias": []
+  },
+  {
+   "id": "renfe",
+   "nombre": "Renfe",
+   "alias": []
+  },
+  {
+   "id": "fgc",
+   "nombre": "FGC",
+   "alias": []
+  },
+  {
+   "id": "fgv",
+   "nombre": "FGV (Ferrocarrils de la Generalitat Valenciana)",
+   "alias": []
+  },
+  {
+   "id": "gpex",
+   "nombre": "GPEX (Gestión Pública de Extremadura)",
+   "alias": []
+  },
+  {
+   "id": "gesplan",
+   "nombre": "GESPLAN",
+   "alias": []
+  },
+  {
+   "id": "sarga",
+   "nombre": "SARGA",
+   "alias": []
+  },
+  {
+   "id": "serpa",
+   "nombre": "SERPA",
+   "alias": []
+  },
+  {
+   "id": "canal",
+   "nombre": "Canal de Isabel II",
+   "alias": []
+  },
+  {
+   "id": "veiasa",
+   "nombre": "VEIASA (Verificaciones Industriales de Andalucía)",
+   "alias": []
+  },
+  {
+   "id": "tmb",
+   "nombre": "TMB (Transports Metropolitans de Barcelona)",
+   "alias": []
+  },
+  {
+   "id": "emt",
+   "nombre": "EMT Madrid",
+   "alias": []
+  },
+  {
+   "id": "bsm",
+   "nombre": "BSM (Barcelona de Serveis Municipals)",
+   "alias": []
+  },
+  {
+   "id": "idibell",
+   "nombre": "IDIBELL",
+   "alias": []
+  },
+  {
+   "id": "idibaps",
+   "nombre": "FRCB-IDIBAPS",
+   "alias": []
+  },
+  {
+   "id": "fisabio",
+   "nombre": "FISABIO",
+   "alias": []
+  },
+  {
+   "id": "idival",
+   "nombre": "IDIVAL",
+   "alias": []
+  },
+  {
+   "id": "idisna",
+   "nombre": "IdiSNA",
+   "alias": []
+  },
+  {
+   "id": "idisba",
+   "nombre": "IdISBa (Institut d'Investigació Sanitària Illes Balears)",
+   "alias": []
+  },
+  {
+   "id": "ibsal",
+   "nombre": "IBSAL (FIBSAL)",
+   "alias": []
+  },
+  {
+   "id": "navarrabiomed",
+   "nombre": "Navarrabiomed (Fundación Miguel Servet)",
+   "alias": []
+  },
+  {
+   "id": "fundesalud",
+   "nombre": "FUNDESALUD",
+   "alias": []
+  },
+  {
+   "id": "iisaragon",
+   "nombre": "IIS Aragón",
+   "alias": []
+  },
+  {
+   "id": "lafe",
+   "nombre": "IIS La Fe",
+   "alias": []
+  },
+  {
+   "id": "irb",
+   "nombre": "IRB Barcelona",
+   "alias": []
+  },
+  {
+   "id": "ciqus",
+   "nombre": "CiQUS (USC)",
+   "alias": []
+  },
+  {
+   "id": "cimus",
+   "nombre": "CiMUS (USC)",
+   "alias": []
+  },
+  {
+   "id": "fisevi",
+   "nombre": "FISEVI",
+   "alias": []
+  },
+  {
+   "id": "imib",
+   "nombre": "IMIB (FFIS)",
+   "alias": []
+  },
+  {
+   "id": "irycis",
+   "nombre": "IRYCIS",
+   "alias": []
+  },
+  {
+   "id": "cnic",
+   "nombre": "CNIC (Centro Nacional de Investigaciones Cardiovasculares)",
+   "alias": []
+  },
+  {
+   "id": "tragsatec",
+   "nombre": "Tragsatec",
+   "alias": [
+    "Tragsatec"
+   ]
+  },
+  {
+   "id": "sadim",
+   "nombre": "SADIM",
+   "alias": [
+    "SADIM"
+   ]
+  },
+  {
+   "id": "ap-a-coruna",
+   "nombre": "Autoridad Portuaria de A Coruña",
+   "alias": [
+    "A Coruña"
+   ]
+  },
+  {
+   "id": "ap-alicante",
+   "nombre": "Autoridad Portuaria de Alicante",
+   "alias": [
+    "Alicante"
+   ]
+  },
+  {
+   "id": "ap-almeria",
+   "nombre": "Autoridad Portuaria de Almería",
+   "alias": [
+    "Almería"
+   ]
+  },
+  {
+   "id": "ap-aviles",
+   "nombre": "Autoridad Portuaria de Avilés",
+   "alias": [
+    "Avilés"
+   ]
+  },
+  {
+   "id": "ap-bahia-de-algeciras",
+   "nombre": "Autoridad Portuaria de Bahía de Algeciras",
+   "alias": [
+    "Bahía de Algeciras"
+   ]
+  },
+  {
+   "id": "ap-bahia-de-cadiz",
+   "nombre": "Autoridad Portuaria de Bahía de Cádiz",
+   "alias": [
+    "Bahía de Cádiz"
+   ]
+  },
+  {
+   "id": "ap-baleares",
+   "nombre": "Autoridad Portuaria de Baleares",
+   "alias": [
+    "Baleares"
+   ]
+  },
+  {
+   "id": "ap-bilbao",
+   "nombre": "Autoridad Portuaria de Bilbao",
+   "alias": [
+    "Bilbao"
+   ]
+  },
+  {
+   "id": "ap-cartagena",
+   "nombre": "Autoridad Portuaria de Cartagena",
+   "alias": [
+    "Cartagena"
+   ]
+  },
+  {
+   "id": "ap-castellon",
+   "nombre": "Autoridad Portuaria de Castellón",
+   "alias": [
+    "Castellón"
+   ]
+  },
+  {
+   "id": "ap-ceuta",
+   "nombre": "Autoridad Portuaria de Ceuta",
+   "alias": [
+    "Ceuta"
+   ]
+  },
+  {
+   "id": "ap-ferrol-san-cibrao",
+   "nombre": "Autoridad Portuaria de Ferrol-San Cibrao",
+   "alias": [
+    "Ferrol-San Cibrao"
+   ]
+  },
+  {
+   "id": "ap-gijon",
+   "nombre": "Autoridad Portuaria de Gijón",
+   "alias": [
+    "Gijón"
+   ]
+  },
+  {
+   "id": "ap-huelva",
+   "nombre": "Autoridad Portuaria de Huelva",
+   "alias": [
+    "Huelva"
+   ]
+  },
+  {
+   "id": "ap-las-palmas",
+   "nombre": "Autoridad Portuaria de Las Palmas",
+   "alias": [
+    "Las Palmas"
+   ]
+  },
+  {
+   "id": "ap-malaga",
+   "nombre": "Autoridad Portuaria de Málaga",
+   "alias": [
+    "Málaga"
+   ]
+  },
+  {
+   "id": "ap-marin-y-ria-de-pontevedra",
+   "nombre": "Autoridad Portuaria de Marín y Ría de Pontevedra",
+   "alias": [
+    "Marín y Ría de Pontevedra"
+   ]
+  },
+  {
+   "id": "ap-melilla",
+   "nombre": "Autoridad Portuaria de Melilla",
+   "alias": [
+    "Melilla"
+   ]
+  },
+  {
+   "id": "ap-motril",
+   "nombre": "Autoridad Portuaria de Motril",
+   "alias": [
+    "Motril"
+   ]
+  },
+  {
+   "id": "ap-pasaia",
+   "nombre": "Autoridad Portuaria de Pasaia",
+   "alias": [
+    "Pasaia"
+   ]
+  },
+  {
+   "id": "ap-santa-cruz-de-tenerife",
+   "nombre": "Autoridad Portuaria de Santa Cruz de Tenerife",
+   "alias": [
+    "Santa Cruz de Tenerife"
+   ]
+  },
+  {
+   "id": "ap-santander",
+   "nombre": "Autoridad Portuaria de Santander",
+   "alias": [
+    "Santander"
+   ]
+  },
+  {
+   "id": "ap-sevilla",
+   "nombre": "Autoridad Portuaria de Sevilla",
+   "alias": [
+    "Sevilla"
+   ]
+  },
+  {
+   "id": "ap-tarragona",
+   "nombre": "Autoridad Portuaria de Tarragona",
+   "alias": [
+    "Tarragona"
+   ]
+  },
+  {
+   "id": "ap-valencia",
+   "nombre": "Autoridad Portuaria de Valencia",
+   "alias": [
+    "Valencia"
+   ]
+  },
+  {
+   "id": "ap-vigo",
+   "nombre": "Autoridad Portuaria de Vigo",
+   "alias": [
+    "Vigo"
+   ]
+  },
+  {
+   "id": "ap-vilagarcia",
+   "nombre": "Autoridad Portuaria de Vilagarcía",
+   "alias": [
+    "Vilagarcía"
+   ]
+  }
+ ],
+ "coberturas": {
+  "_nota": "Cómo se asigna el convocante en las fuentes que publican por más de uno; en las demás, el organismo de la fuente.",
+  "tragsa": {
+   "ofertas": "empresa"
+  },
+  "hunosa": {
+   "ofertas": "empresa"
+  },
+  "puertos": {
+   "procesos": "ubicacion"
+  }
+ }
+}
