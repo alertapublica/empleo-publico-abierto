@@ -38,7 +38,7 @@
  "874-TTPRL": {
   "apply_url": "https://www.enusa.es/trabaja-con-nosotros/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-11T20:07:26+00:00",
   "code": "874-TTPRL",
   "company": "Enusa",
   "contract": null,
@@ -53,7 +53,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-11",
   "location": "Juzbado (Salamanca)",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -71,7 +71,7 @@
   ],
   "source": "enusa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "TÉCNICO/A TITULADO/A PREVENCIÓN DE RIESGOS LABORALES",
   "url": "https://www.enusa.es/trabaja-con-nosotros/"
  },
