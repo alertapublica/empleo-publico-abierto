@@ -35,7 +35,7 @@
  "IMIB26_C79": {
   "apply_url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2075",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-11T12:07:26+00:00",
   "code": "IMIB26_C79",
   "company": "FFIS",
   "contract": null,
@@ -49,7 +49,7 @@
   "kind": null,
   "listed_deadline": "2026-11-11",
   "location": "Murcia",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": "2026-11-03",
   "parent_ref": null,
   "place": null,
@@ -61,7 +61,7 @@
   "sections": [],
   "source": "imib",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "TÉCNICO/A MÁSTER DE APOYO A LA INVESTIGACIÓN",
   "url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2075"
  },
