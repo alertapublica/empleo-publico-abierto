@@ -17,16 +17,8 @@ class Tabla(unittest.TestCase):
     def test_cada_fuente_es_una_entidad_con_su_mismo_id(self):
         self.assertTrue({s.id for s in ACTIVE} <= set(self.ids))
 
-    def test_ids_unicos_y_dependencias_que_existen(self):
+    def test_ids_unicos(self):
         self.assertEqual(len(self.ids), len(set(self.ids)))
-        for entity in self.data["entidades"]:
-            if entity["depende_de"]:
-                self.assertIn(entity["depende_de"], self.ids, entity["id"])
-                self.assertIn(entity["relacion"], self.data["relaciones"], entity["id"])
-
-    def test_sin_ciclos(self):
-        for entity in self.ids:
-            self.assertNotIn(entity, entidades.ancestors(entity))
 
     def test_un_alias_no_nombra_a_dos_entidades(self):
         names = Counter(slug(n) for e in self.data["entidades"] for n in {e["nombre"], *e["alias"]})
@@ -52,18 +44,6 @@ class Convocante(unittest.TestCase):
                          "ap-bahia-de-algeciras")
         self.assertEqual(entidades.convocante({"location": "Barcelona"}, "puertos", "procesos"), "apb")
         self.assertEqual(entidades.convocante({"company": "Puertos del Estado"}, "puertos", "ofertas"), "puertos")
-
-
-class Jerarquia(unittest.TestCase):
-    def test_dependientes_a_cualquier_nivel(self):
-        sepi = entidades.descendants("sepi")
-        self.assertTrue({"sepi", "tragsa", "tragsatec", "sepides", "abra", "hunosa", "sadim"} <= sepi)
-        self.assertNotIn("puertos", sepi)
-        self.assertIn("apb", entidades.descendants("puertos"))
-        self.assertEqual(entidades.descendants("cnic"), {"cnic"})
-
-    def test_de_quien_depende(self):
-        self.assertEqual(entidades.ancestors("tragsatec"), ["tragsa", "sepi"])
 
 
 class Informe(unittest.TestCase):

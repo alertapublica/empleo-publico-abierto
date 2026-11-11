@@ -1,9 +1,10 @@
-"""Quién convoca, de quién depende y qué se solapa entre fuentes.
+"""Quién convoca y qué se solapa entre fuentes.
 
 Una *fuente* es de dónde se lee (un portal); un *convocante*, quién convoca. Casi siempre coinciden,
 pero no siempre: el portal de Tragsa publica ofertas de Tragsa y de Tragsatec, y Puertos del Estado
 lista las convocatorias de las autoridades portuarias. `entidades.json` es la tabla, con los mismos ids
-que las fuentes (son públicos en la API) y la dependencia de cada entidad (`depende_de`).
+que las fuentes (son públicos en la API) y los nombres con que las publican. Basta para reconocer la
+misma convocatoria en dos fuentes; de quién depende cada entidad (el organigrama) es otro asunto.
 
 De momento solo se calcula y se informa: nada de esto cambia lo que se publica.
 `python -m empleo.entidades informe [data]` lista, por fuente, a quién se asigna cada registro, lo que
@@ -48,20 +49,6 @@ def convocante(record: dict, source: str, kind: str) -> str | None:
     if rule == "ubicacion":
         return _by_name(record.get("location"))
     return source if source in table()["entities"] else None
-
-
-def ancestors(entity: str) -> list[str]:
-    """De quién depende, del más cercano al más lejano."""
-    found, current = [], table()["entities"][entity]["depende_de"]
-    while current:
-        found.append(current)
-        current = table()["entities"][current]["depende_de"]
-    return found
-
-
-def descendants(entity: str) -> set[str]:
-    """La entidad y todas las que dependen de ella, a cualquier nivel."""
-    return {e for e in table()["entities"] if e == entity or entity in ancestors(e)}
 
 
 def comparable(title: str) -> str:
