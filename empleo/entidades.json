@@ -1,0 +1,795 @@
+{
+ "version": 1,
+ "_nota": "Quién convoca y de quién depende. Los ids de organismos con fuente coinciden con el id de la fuente (son públicos en la API). 'verificado': false hasta contrastarlo con fuentes oficiales (INVENTE, SEPI, Puertos del Estado).",
+ "relaciones": {
+  "participada": "Participación mayoritaria (directa o indirecta)",
+  "sistema_portuario": "Autoridad portuaria del sistema de Puertos del Estado"
+ },
+ "entidades": [
+  {
+   "id": "sepi",
+   "nombre": "SEPI",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "tragsa",
+   "nombre": "Grupo Tragsa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [
+    "Tragsa",
+    "Grupo Tragsa"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "efe",
+   "nombre": "Agencia EFE",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "correos",
+   "nombre": "Grupo Correos",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [
+    "Correos",
+    "Grupo Correos"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "navantia",
+   "nombre": "Navantia",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "enusa",
+   "nombre": "Enusa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "rtve",
+   "nombre": "Corporación RTVE",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "enresa",
+   "nombre": "Enresa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "etsa",
+   "nombre": "ETSA",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "cetarsa",
+   "nombre": "Cetarsa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "cofivacasa",
+   "nombre": "Cofivacasa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "zarzuela",
+   "nombre": "Hipódromo de la Zarzuela",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "mercasa",
+   "nombre": "Mercasa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "hunosa",
+   "nombre": "Grupo Hunosa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [
+    "Hunosa",
+    "Grupo Hunosa"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "sepides",
+   "nombre": "Sepides",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "mayasa",
+   "nombre": "Mayasa",
+   "depende_de": "sepi",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "enaire",
+   "nombre": "ENAIRE",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "aena",
+   "nombre": "Aena",
+   "depende_de": "enaire",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "puertos",
+   "nombre": "Puertos del Estado",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "apb",
+   "nombre": "Autoridad Portuaria de Barcelona",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Barcelona"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "senasa",
+   "nombre": "SENASA",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "isdefe",
+   "nombre": "ISDEFE",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fnmt",
+   "nombre": "FNMT-RCM",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "cesce",
+   "nombre": "CESCE",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "mercasturias",
+   "nombre": "Mercasturias",
+   "depende_de": "mercasa",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "adif",
+   "nombre": "ADIF y ADIF Alta Velocidad",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "renfe",
+   "nombre": "Renfe",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fgc",
+   "nombre": "FGC",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fgv",
+   "nombre": "FGV (Ferrocarrils de la Generalitat Valenciana)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "gpex",
+   "nombre": "GPEX (Gestión Pública de Extremadura)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "gesplan",
+   "nombre": "GESPLAN",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "sarga",
+   "nombre": "SARGA",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "serpa",
+   "nombre": "SERPA",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "canal",
+   "nombre": "Canal de Isabel II",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "veiasa",
+   "nombre": "VEIASA (Verificaciones Industriales de Andalucía)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "tmb",
+   "nombre": "TMB (Transports Metropolitans de Barcelona)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "emt",
+   "nombre": "EMT Madrid",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "bsm",
+   "nombre": "BSM (Barcelona de Serveis Municipals)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "idibell",
+   "nombre": "IDIBELL",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "idibaps",
+   "nombre": "FRCB-IDIBAPS",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fisabio",
+   "nombre": "FISABIO",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "idival",
+   "nombre": "IDIVAL",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "idisna",
+   "nombre": "IdiSNA",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "idisba",
+   "nombre": "IdISBa (Institut d'Investigació Sanitària Illes Balears)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "ibsal",
+   "nombre": "IBSAL (FIBSAL)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "navarrabiomed",
+   "nombre": "Navarrabiomed (Fundación Miguel Servet)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fundesalud",
+   "nombre": "FUNDESALUD",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "iisaragon",
+   "nombre": "IIS Aragón",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "lafe",
+   "nombre": "IIS La Fe",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "irb",
+   "nombre": "IRB Barcelona",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "ciqus",
+   "nombre": "CiQUS (USC)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "cimus",
+   "nombre": "CiMUS (USC)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "fisevi",
+   "nombre": "FISEVI",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "imib",
+   "nombre": "IMIB (FFIS)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "irycis",
+   "nombre": "IRYCIS",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "cnic",
+   "nombre": "CNIC (Centro Nacional de Investigaciones Cardiovasculares)",
+   "depende_de": null,
+   "relacion": null,
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "tragsatec",
+   "nombre": "Tragsatec",
+   "depende_de": "tragsa",
+   "relacion": "participada",
+   "alias": [
+    "Tragsatec"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "sadim",
+   "nombre": "SADIM",
+   "depende_de": "hunosa",
+   "relacion": "participada",
+   "alias": [
+    "SADIM"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "abra",
+   "nombre": "ABRA Industrial",
+   "depende_de": "sepides",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "agruminsa",
+   "nombre": "AGRUMINSA",
+   "depende_de": "sepides",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "pepa",
+   "nombre": "Parque Empresarial Principado de Asturias (PEPA)",
+   "depende_de": "sepides",
+   "relacion": "participada",
+   "alias": [],
+   "verificado": false
+  },
+  {
+   "id": "ap-a-coruna",
+   "nombre": "Autoridad Portuaria de A Coruña",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "A Coruña"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-alicante",
+   "nombre": "Autoridad Portuaria de Alicante",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Alicante"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-almeria",
+   "nombre": "Autoridad Portuaria de Almería",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Almería"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-aviles",
+   "nombre": "Autoridad Portuaria de Avilés",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Avilés"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-bahia-de-algeciras",
+   "nombre": "Autoridad Portuaria de Bahía de Algeciras",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Bahía de Algeciras"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-bahia-de-cadiz",
+   "nombre": "Autoridad Portuaria de Bahía de Cádiz",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Bahía de Cádiz"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-baleares",
+   "nombre": "Autoridad Portuaria de Baleares",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Baleares"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-bilbao",
+   "nombre": "Autoridad Portuaria de Bilbao",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Bilbao"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-cartagena",
+   "nombre": "Autoridad Portuaria de Cartagena",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Cartagena"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-castellon",
+   "nombre": "Autoridad Portuaria de Castellón",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Castellón"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-ceuta",
+   "nombre": "Autoridad Portuaria de Ceuta",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Ceuta"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-ferrol-san-cibrao",
+   "nombre": "Autoridad Portuaria de Ferrol-San Cibrao",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Ferrol-San Cibrao"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-gijon",
+   "nombre": "Autoridad Portuaria de Gijón",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Gijón"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-huelva",
+   "nombre": "Autoridad Portuaria de Huelva",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Huelva"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-las-palmas",
+   "nombre": "Autoridad Portuaria de Las Palmas",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Las Palmas"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-malaga",
+   "nombre": "Autoridad Portuaria de Málaga",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Málaga"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-marin-y-ria-de-pontevedra",
+   "nombre": "Autoridad Portuaria de Marín y Ría de Pontevedra",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Marín y Ría de Pontevedra"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-melilla",
+   "nombre": "Autoridad Portuaria de Melilla",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Melilla"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-motril",
+   "nombre": "Autoridad Portuaria de Motril",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Motril"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-pasaia",
+   "nombre": "Autoridad Portuaria de Pasaia",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Pasaia"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-santa-cruz-de-tenerife",
+   "nombre": "Autoridad Portuaria de Santa Cruz de Tenerife",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Santa Cruz de Tenerife"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-santander",
+   "nombre": "Autoridad Portuaria de Santander",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Santander"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-sevilla",
+   "nombre": "Autoridad Portuaria de Sevilla",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Sevilla"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-tarragona",
+   "nombre": "Autoridad Portuaria de Tarragona",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Tarragona"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-valencia",
+   "nombre": "Autoridad Portuaria de Valencia",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Valencia"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-vigo",
+   "nombre": "Autoridad Portuaria de Vigo",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Vigo"
+   ],
+   "verificado": false
+  },
+  {
+   "id": "ap-vilagarcia",
+   "nombre": "Autoridad Portuaria de Vilagarcía",
+   "depende_de": "puertos",
+   "relacion": "sistema_portuario",
+   "alias": [
+    "Vilagarcía"
+   ],
+   "verificado": false
+  }
+ ],
+ "coberturas": {
+  "_nota": "Cómo se asigna el convocante en las fuentes que publican por más de uno; en las demás, el organismo de la fuente.",
+  "tragsa": {
+   "ofertas": "empresa"
+  },
+  "hunosa": {
+   "ofertas": "empresa"
+  },
+  "puertos": {
+   "procesos": "ubicacion"
+  }
+ }
+}

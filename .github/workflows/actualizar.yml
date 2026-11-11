@@ -139,6 +139,12 @@ jobs:
             gh issue edit "$NUM" --body-file informe-areas.md
           fi
 
+      # Quién convoca cada registro y qué parece repetido entre fuentes (empleo/entidades.py). Solo
+      # informa en el resumen de la ejecución: no cambia los datos ni la web.
+      - name: Informe de convocantes y solapamientos
+        continue-on-error: true
+        run: python -m empleo.entidades informe | tee -a "$GITHUB_STEP_SUMMARY"
+
       # La web se publica igualmente, pero el fallo tiene que verse y avisar.
       - name: Señalar si falló la lectura
         if: steps.ingesta.outcome == 'failure'
