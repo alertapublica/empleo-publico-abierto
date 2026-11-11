@@ -3,5 +3,12 @@
   "at": "2026-11-08T16:28:39+00:00",
   "kind": "new",
   "offer": "idival:1498"
+ },
+ {
+  "after": "2026-11-15",
+  "at": "2026-11-11T13:37:23+00:00",
+  "before": "2026-11-11",
+  "kind": "deadline_changed",
+  "offer": "idival:1498"
  }
 ]
