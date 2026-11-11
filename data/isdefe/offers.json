@@ -823,5 +823,45 @@
   "status": "open",
   "title": "Ingeniero/a de Operación y Mantenimiento para la Estación de Espacio Profundo de Cebreros",
   "url": "https://seleccionisdefe.es/convocatoria-2632"
+ },
+ "2633": {
+  "apply_url": "https://seleccionisdefe.es/registro-2633",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00179 (8)",
+  "company": "ISDEFE",
+  "contract": null,
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T11:37:27+00:00",
+  "id": "isdefe:2633",
+  "kind": null,
+  "listed_deadline": "2026-11-17",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-11",
+  "ref": "2633",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, selecciona un/a <strong>Ingeniero/a de sistemas informáticos.</strong> para NASA en <strong>Robledo de Chavela.</strong><br/>\r\n </p><p><strong>Misión del puesto:</strong></p><p>Formar parte del departamento de Tecnologías de la Información de MDSCC, encargado del diseño, la instalación, operación y mantenimiento de los sistemas de información del centro</p><p><strong>Funciones habituales:</strong></p><p>Se integrará en el departamento de IT que se ocupa del diseño, instalación, operaciones y mantenimiento de los sistemas informáticos que dan soporte a las actividades del DSN/MDSCC (Madrid Deep Space Communications Complex) en estrecha coordinación con la NASA y el JPL. Los sistemas que están bajo la responsabilidad de este departamento incluyen:<br/>\r\n- Infraestructura de entorno virtual on-prem (Hiperconvergencia, VMware, Datacore,…)<br/>\r\n- Entorno de servidores (DNS, DHCP, impresoras, servidores de ficheros, bases de datos,...)<br/>\r\n- Servicio de Directorio Activo.<br/>\r\n- Correo electrónico y herramientas de colaboración.<br/>\r\n- Copia de seguridad VEEAM.<br/>\r\n- ERP Y CRM.<br/>\r\n- Escritorio y dispositivos móviles.<br/>\r\n- Soporte a usuarios (Help Desk)<br/>\r\n </p><p><strong>Requisitos imprescindibles que debe cumplimentar el/la candidato/a: </strong></p><p>» Titulación: Ingeniería/grado en informatica, telecomunicaciones (y sus especialidades). Ciencia e ingeniería de datos, telemática, licenciatura/grado en matemáticas, ciencias fisicas. </p><p>» Años de experiencia: Entre 5 y 12 años de experiencia.</p><p>» Tipo de experiencia:    <br/>\r\n- Administración de sistemas.</p><p>» Conocimientos :    <br/>\r\n- Conocimientos de sistemas de hardware informático y tecnologías de virtualización..<br/>\r\n- Conocimientos de redes informáticas..</p><p>» Idiomas requeridos /Nivel: Inglés: TOEIC superior a 800 puntos (listening, reading, speaking).     </p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.<br/>\r\nExcepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.<br/>\r\nEl personal interno se regirá por la política de la empresa.)</em></p><p>» Otros :    <br/>\r\n- Capacidad para trabajar de forma independiente.<br/>\r\n- Orientación a los objetivos y resultados.<br/>\r\n- Buenas dotes de comunicación.</p><p><strong>Requisitos valorables:</strong></p><p>» Experiencia :    <br/>\r\n- Lenguajes de programación de alto nivel.<br/>\r\n- Herramientas de automatización de procesos IT.<br/>\r\n- Manejo avanzado de sistemas Windows y Linux.</p><p>» Otros :    <br/>\r\nCapacidad para gestionar proyectos.<br/>\r\nCertificaciones valorables:<br/>\r\n- Python (PCEP, PCAP, PCPP)<br/>\r\n- VMware (VCP)<br/>\r\n- Cisco (CCNA)<br/>\r\n </p><p>Indispensable carnet de conducir y vehículo propio.</p><p><strong>Se ofrece: Contrato Indefinido.</strong></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de sistemas informáticos (NASA, Robledo de Chavela) (2025-T00179) (8)",
+  "status": "open",
+  "title": "Ingeniero/a de sistemas informáticos (NASA, Robledo de Chavela)",
+  "url": "https://seleccionisdefe.es/convocatoria-2633"
  }
 }
