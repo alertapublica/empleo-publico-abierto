@@ -1,3 +1,4 @@
+import re
 import unittest
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -20,7 +21,11 @@ class Http:
 
     def get(self, url):
         self.asked.append(url)
-        return fixture("iisaragon-empleo.html" if url == iisaragon.PAGE else "iisaragon-ficha.html")
+        if url == iisaragon.PAGE:
+            return fixture("iisaragon-empleo.html")
+        if "/page/" in url:  # la página 2: las mismas entradas, un año antes
+            return re.sub(r"(\d{2}-\d{2})-2026", r"\1-2025", fixture("iisaragon-empleo.html"))
+        return fixture("iisaragon-ficha.html")
 
 
 def at(month, day, hour=10):
@@ -53,14 +58,19 @@ class Source(unittest.TestCase):
     def test_lee_solo_las_entradas_recientes_con_referencia(self):
         http = Http()
         offers = iisaragon.IisAragonSource(now=at(11, 11)).list_offers(http)
-        # Desde el 2 de octubre (40 días): RRHH-26/043 a 049, siete fichas; el aviso no se lee.
-        self.assertEqual(len(http.asked), 1 + 7)
-        self.assertEqual(len({o.ref for o in offers}), 7)
+        # Últimos 60 días (desde el 12/9): las nueve con referencia de la página 1; la última entrada es
+        # del 30/9, dentro del margen, así que se mira la 2, que ya es de 2025. El aviso no se lee.
+        self.assertEqual(len(http.asked), 2 + 9)
+        self.assertEqual(len({o.ref for o in offers}), 9)
         source = iisaragon.IisAragonSource(now=at(11, 11))
         offer = source.list_offers(Http())[0]
         labels = source.labels(offer.title, offer.ref)
         self.assertEqual((labels["title"], labels["code"]), ("Director/a Ejecutivo/a", "RRHH-26/049"))
         self.assertEqual((offer.deadline, offer.deadline_time), ("2026-11-13", "23:59"))
+
+    def test_hora_de_una_cifra(self):
+        html = fixture("iisaragon-ficha.html").replace("23:59 horas del viernes", "9:00 horas del viernes")
+        self.assertEqual(iisaragon.parse_detail(html)["deadline_time"], "09:00")
 
     def test_pasada_la_hora_ya_no_es_oferta(self):
         self.assertEqual(iisaragon.IisAragonSource(now=at(11, 13, 23)).list_offers(Http()), [])  # 00:00 del 14

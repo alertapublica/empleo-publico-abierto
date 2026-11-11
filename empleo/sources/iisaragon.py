@@ -7,8 +7,9 @@ ofertas y no se leen.
 
 El plazo solo está en la entrada: «Plazo de Inicio: Jueves, 22 de octubre de 2026» y «Plazo de Fin:
 23:59 horas del viernes, 13 de noviembre de 2026». Se leen las entradas con referencia publicadas en
-los últimos RECENT_DAYS días de la primera página (hoy, siete). Es oferta la que tiene el fin sin
-vencer. La entrada lleva un formulario de candidatura (Contact Form 7) que no se copia.
+los últimos WINDOW_DAYS días (el plazo más largo visto es de 22 días), pasando de página mientras la
+última entrada siga dentro de ese margen; si se llega a MAX_PAGES, la fuente se detiene. Es oferta la
+que tiene el fin sin vencer. La entrada lleva un formulario de candidatura (Contact Form 7) que no se copia.
 """
 from __future__ import annotations
 
@@ -17,15 +18,17 @@ from datetime import date, datetime, timedelta, timezone
 
 from bs4 import BeautifulSoup
 
-from ..dates import MONTHS, spanish_date
+from ..dates import MONTHS, clock, spanish_date
 from ..http import Client
 from ..model import MADRID, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
 from ..sanitize import sanitize
 from .base import Source
 
 PAGE = "https://www.iisaragon.es/empleo/"
+PAGED = "https://www.iisaragon.es/empleo/page/{}/"
 COMPANY = "IIS Aragón"
-RECENT_DAYS = 40
+WINDOW_DAYS = 60
+MAX_PAGES = 4
 REF = re.compile(r"\[Ref\.\s*(RRHH-\d+/\d+)\]")
 MONTH = "(" + "|".join(MONTHS) + ")"
 END = re.compile(r"Plazo de Fin:\s*(?:(\d{1,2}[:.]\d{2})\s*horas?\s+del?\s+)?(?:[a-záéíóú]+,?\s+)?(\d{1,2}) de "
@@ -69,7 +72,7 @@ def parse_detail(html: str) -> dict:
     deadline = spanish_date(day, month, year)
     opens = spanish_date(*start.groups()) if start else None
     return {
-        "deadline": deadline.isoformat() if deadline else None, "deadline_time": hour.replace(".", ":") if hour else None,
+        "deadline": deadline.isoformat() if deadline else None, "deadline_time": clock(hour),
         "opens_on": opens.isoformat() if opens else None,
         "sections": [{"title": "La convocatoria", "level": 2, "html": sanitize(content.decode_contents())}],
     }
@@ -89,9 +92,17 @@ class IisAragonSource(Source):
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
         now = self._now or datetime.now(timezone.utc)
-        since = now.astimezone(MADRID).date() - timedelta(days=RECENT_DAYS)
+        since = now.astimezone(MADRID).date() - timedelta(days=WINDOW_DAYS)
+        entries = []
+        for number in range(1, MAX_PAGES + 1):
+            page = parse_page(http.get(PAGE if number == 1 else PAGED.format(number)))
+            entries += page
+            if page[-1]["published"] < since:
+                break
+        else:
+            raise SourceLayoutError(f"IIS Aragón: {MAX_PAGES} páginas de entradas de los últimos {WINDOW_DAYS} días")
         offers = []
-        for entry in parse_page(http.get(PAGE)):
+        for entry in entries:
             if entry["ref"] is None or entry["published"] < since:
                 continue
             detail = parse_detail(http.get(entry["url"]))
