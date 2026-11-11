@@ -7,6 +7,7 @@ from .cimus import CimusSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
+from .emt import EmtSource
 from .enresa import EnresaSource
 from .enusa import EnusaSource
 from .etsa import EtsaSource
@@ -77,7 +78,7 @@ CATALOG = {
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
-    "local": [TmbSource()],
+    "local": [TmbSource(), EmtSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
         LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(),
