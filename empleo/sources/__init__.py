@@ -26,6 +26,7 @@ from .mayasa import MayasaSource
 from .isdefe import IsdefeSource
 from .lafe import LaFeSource
 from .mercasa import MercasaSource
+from .mercasturias import MercasturiasSource
 from .navarrabiomed import NavarrabiomedSource
 from .pfsrv import AENA, ENAIRE
 from .puertos import PuertosSource
@@ -72,7 +73,7 @@ CATALOG = {
         EnresaSource(), EtsaSource(), CetarsaSource(), CofivacasaSource(),
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
-    "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), ADIF, RENFE],
+    "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),

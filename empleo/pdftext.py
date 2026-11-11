@@ -18,7 +18,7 @@ from .http import Client
 from .model import SourceLayoutError
 
 DEADLINE = re.compile(
-    r"(?:finalizar[áa]|hasta)\s+(?:el\s+(?:d[ií]a\s+)?|las?\s+(\d{1,2}[:.]\d{2})\s*(?:h|horas)\.?\s+del?\s+(?:d[ií]a\s+)?)"
+    r"(?:finalizar[áa]|hasta)\s+(?:el\s+(?:d[ií]a\s+)?|las?\s+(\d{1,2}[:.]\s?\d{2})\s*(?:h|horas)\.?\s+del?\s+(?:d[ií]a\s+)?)"
     r"(\d{1,2})\s+de\s+(" + "|".join(MONTHS) + r")\s+de\s+(\d{4})", re.I)
 
 
@@ -41,7 +41,9 @@ def read_pdf(http: Client, url: str, what: str) -> str:
 
 def deadlines_at(text: str) -> list[tuple[date, str | None]]:
     """Fechas de fin de plazo que menciona el texto, con su hora si va delante («hasta las 12:00 h del…»)."""
-    found = ((spanish_date(day, month, year), clock(hour)) for hour, day, month, year in DEADLINE.findall(text))
+    # La extracción del PDF parte a veces la hora («23: 59», Mercasturias).
+    found = ((spanish_date(day, month, year), clock(hour.replace(" ", "")))
+             for hour, day, month, year in DEADLINE.findall(text))
     return [(day, hour) for day, hour in found if day]
 
 
