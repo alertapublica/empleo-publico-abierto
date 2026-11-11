@@ -17764,6 +17764,101 @@
   "title": "Arquitecto/a Técnico/a o Graduado/a en Ingeniería de la Edificación (San Fernando de Henares)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58606"
  },
+ "58607": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58607",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58607",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-25",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-11T07:37:27+00:00",
+  "id": "tragsa:58607",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-25",
+  "location": "Sevilla",
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": "Sevilla",
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": null,
+  "ref": "58607",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista Programador/a para  prestar apoyo a un proyecto de la Administración en Sevilla.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sevilla</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Integración, validación y explotación de datos procedentes de redes de control hidrológico y fuentes de información oficiales.</li><li>Desarrollo de informes técnicos, indicadores y visualizaciones mediante herramientas de inteligencia de negocio.</li><li>Análisis y suministro de información para la planificación hidrológica, gestión del dominio público hidráulico y toma de decisiones.</li><li>Supervisión de la calidad y trazabilidad de la información, integración de fuentes externas y preparación de datos para su explotación y publicación.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en tecnologías Java, Spring Boot, Angular y desarrollo de servicios REST para la integración y explotación de datos.</li><li>Al menos 2 años de experiencia con contrato laboral y/o académica en bases de datos relacionales (Oracle, PostgreSQL, SQL Server), consultas SQL, migración, transformación y validación de información.</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollo de informes técnicos y operativos, generación de indicadores y visualización de datos mediante herramientas de reporting e inteligencia de negocio.</li><li>Al menos 2 años de experiencia con contrato laboral y/o académica en arquitecturas de microservicios, interoperabilidad de aplicaciones, servicios web, control de versiones y despliegue de soluciones en entornos corporativos.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en tecnologías Java, Spring Boot, Angular y desarrollo de servicios REST para la integración y explotación de datos.</li><li>Al menos 2 años de experiencia con contrato laboral y/o académica en bases de datos relacionales (Oracle, PostgreSQL, SQL Server), consultas SQL, migración, transformación y validación de información.</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollo de informes técnicos y operativos, generación de indicadores y visualización de datos mediante herramientas de reporting e inteligencia de negocio.</li><li>Al menos 2 años de experiencia con contrato laboral y/o académica en arquitecturas de microservicios, interoperabilidad de aplicaciones, servicios web, control de versiones y despliegue de soluciones en entornos corporativos.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en BI/Analítica de datos</li></ul>Otros Factores Meritorios<ul><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de migración de aplicaciones, modernización de arquitecturas y evolución de sistemas de información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en el desarrollo, mantenimiento o evolución de aplicaciones relacionadas con la gestión del agua, incluyendo sistemas de gestión de clientes, consumos, facturación y explotación de información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de automatización de procesos, elaboración de informes operativos y desarrollo de mecanismos de seguimiento y trazabilidad de la información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de integración de fuentes de datos heterogéneas, migración entre sistemas gestores de bases de datos y aseguramiento de la consistencia de la información</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en BI/Analítica de datos</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en BI/Analítica de datos</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de migración de aplicaciones, modernización de arquitecturas y evolución de sistemas de información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en el desarrollo, mantenimiento o evolución de aplicaciones relacionadas con la gestión del agua, incluyendo sistemas de gestión de clientes, consumos, facturación y explotación de información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de automatización de procesos, elaboración de informes operativos y desarrollo de mecanismos de seguimiento y trazabilidad de la información</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en proyectos de integración de fuentes de datos heterogéneas, migración entre sistemas gestores de bases de datos y aseguramiento de la consistencia de la información</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de la jornada de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 11/11/2026 hasta el próximo 25/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista Programador/a (Sevilla)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58607"
+ },
  "58608": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58608",
   "category": "Específica",
