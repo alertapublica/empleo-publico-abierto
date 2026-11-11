@@ -1,5 +1,6 @@
 """Registro de fuentes del portal."""
 from .canal import CanalSource
+from .cesce import CesceSource
 from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
 from .cimus import CimusSource
@@ -71,7 +72,7 @@ CATALOG = {
         EnresaSource(), EtsaSource(), CetarsaSource(), CofivacasaSource(),
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
-    "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), ADIF, RENFE],
+    "estatal": [ENAIRE, AENA, PuertosSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource()],
     "investigacion": [
         IDIBELL, FISABIO, IDIVAL, IdisnaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(),
