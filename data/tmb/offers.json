@@ -1,0 +1,47 @@
+{
+ "10242": {
+  "apply_url": "https://www.tmb.cat/ca/w/oferta-10242-responsable-de-sistemes-tecnol%C3%B2gics-de-xarxes-i-telecomunicacions",
+  "category": null,
+  "closed_at": null,
+  "code": "10242",
+  "company": "TMB",
+  "contract": null,
+  "deadline": "2026-11-16",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "tmb:10242",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-07",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "10242",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Convocatòria de procés de selecció, per concurs-oposició, per a la cobertura, amb caràcter indefinit, de 1 plaça estructural i 1 plaça reserva de Responsable de sistemes tecnològics de xarxes i telecomunicacions per a la Unitat de Xarxes i Telecomunicacions, dins del Servei de Solucions de Tecnologia</p>\n<p>Requisits de participació:</p>\n<ul>\n<li><strong>Titulació acadèmica:</strong> disposar de titulació, finalitzada i homologada, d’Enginyeria (Superior i/o Tècnica) o Grau universitari en Informàtica o en Telecomunicacions</li>\n<li>Acreditar el coneixement de la llengua catalana mitjançant la possessió del certificat de nivell C1 de coneixements de llengua catalana, expedit per la Secretaria de Política Lingüística o per qualsevol altre organisme o entitat competent, o d’un títol, certificat o acreditació equivalent reconegut oficialment.</li>\n<li>Estar en possessió de la titulació finalitzada en anglès de, mínim, B2 o equivalent, segons l’estàndard del MCER (Marc Comú Europeu de Referència per a les llengües). Únicament es consideraran vàlids els títols recollits a l’annex 1 de la resolució EDU/2684/2024, del 17 de juliol, de la Generalitat de Catalunya. </li>\n</ul>\n<p>En el supòsit de no poder acreditar la titulació d’anglès sol·licitada, s’haurà de realitzar i superar una prova de nivell B2 d’anglès. Aquelles persones que sí acreditin el nivell B2 d’anglès en les condicions previstes, estan exemptes de realitzar aquesta prova.</p>\n<p>En els casos de titulacions obtingudes a l’estranger, hauran d’estar degudament homologades i/o amb equivalència a les titulacions reconegudes a Espanya.</p>\n<ul>\n<li><strong>Experiència professional:</strong> disposar de la següent experiència professional acreditada:\n<ul>\n<li>Disposar de mínim 2 anys d’experiència professional en la participació en projectes, així com en la gestió i coordinació de tasques relacionades amb xarxes i telecomunicacions. </li>\n</ul>\n</li>\n</ul>",
+    "level": 2,
+    "title": "Descripció"
+   },
+   {
+    "html": "<p><a href=\"https://www.tmb.cat/documents/20182/2084185/Bases+10242+Responsable+Sistemes+Tecnol%C3%B2gics+de+Xarxes+i+Telecomunicacions.pdf/6d94b12b-f643-1de7-aedf-4db28fe8ada9?t=1793623561898\">Bases de la convocatoria (PDF)</a></p>",
+    "level": 2,
+    "title": "Bases de la convocatòria"
+   }
+  ],
+  "source": "tmb",
+  "source_title": null,
+  "status": "open",
+  "title": "Responsable de Sistemes Tecnològics de Xarxes i Telecomunicacions",
+  "url": "https://www.tmb.cat/ca/w/oferta-10242-responsable-de-sistemes-tecnol%C3%B2gics-de-xarxes-i-telecomunicacions"
+ }
+}

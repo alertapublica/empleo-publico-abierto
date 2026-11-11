@@ -1,0 +1,202 @@
+{
+ "2026-54-IDISBA": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-54-IDISBA",
+  "company": "IdISBa",
+  "contract": null,
+  "deadline": "2026-11-11",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "idisba:2026-54-IDISBA",
+  "kind": null,
+  "listed_deadline": "2026-11-11",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-10-21",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "2026-54-IDISBA",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 21/10/2026 - Fin: 11/11/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 133 - 20/10/2026. <a href=\"https://www.caib.es/eboibfront/ca/2026/12347/seccio-ii-autoritats-i-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-54-idisba-es-bases_1792482223.pdf\">20261020_bases_técnico/a titulado medio de apoyo a la investigación_grupo_B_2026-54-IDISBA</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-54-idisba-es-anexo-ii_1792482223.pdf\">2026-54-IDISBA Anexo II</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-54-idisba-anexo-iii_1792482224.pdf\">2026-54-IDISBA Anexo III</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria del proceso selectivo para cubrir una plaza de técnico o técnica titulado medio de apoyo a la investigación, del grupo profesional B, para el proyecto «Investigación clínica y traslacional en cáncer colorrectal y cirugía oncológica avanzada» (GISE/CIRCOLO)",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-"
+ },
+ "L03110004": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5103/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-superior-en-gestion-del-conocimiento-y-calidad-de-la-fundacion-instituto-de-investigacion-san",
+  "category": null,
+  "closed_at": null,
+  "code": "L03110004",
+  "company": "IdISBa",
+  "contract": null,
+  "deadline": "2026-12-03",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "idisba:L03110004",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-10-23",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "L03110004",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 23/10/2026 - Fin: 03/12/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 135 - 22/10/2026. <a href=\"https://www.caib.es/eboibfront/es/2026/12349/seccion-ii-autoridades-y-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.idisba.es/media/upload/pdf/es-bases-ope-2024_1791551438.pdf\">Bases (ES)</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/temari-l03110004_1791539751.zip\">Temario (ES)</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria para la cobertura de una plaza de técnico/a superior en gestión del conocimiento y calidad de la Fundación Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5103/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-superior-en-gestion-del-conocimiento-y-calidad-de-la-fundacion-instituto-de-investigacion-san"
+ },
+ "L03120003": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5104/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-titulado-medio-en-recursos-humanos-y-proyectos-de-la-fundacion-instituto-de-investigacion-san",
+  "category": null,
+  "closed_at": null,
+  "code": "L03120003",
+  "company": "IdISBa",
+  "contract": null,
+  "deadline": "2026-12-03",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "idisba:L03120003",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-10-23",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "L03120003",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 23/10/2026 - Fin: 03/12/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 135 - 22/10/2026. <a href=\"https://www.caib.es/eboibfront/es/2026/12349/seccion-ii-autoridades-y-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.idisba.es/media/upload/pdf/es-bases-ope-2024_1791551538.pdf\">Bases (ES)</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/temari-l03120003_1791462688.zip\">Temario (ES)</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria para la cobertura de una plaza de técnico/a titulado medio en recursos humanos y proyectos de la Fundación Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5104/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-titulado-medio-en-recursos-humanos-y-proyectos-de-la-fundacion-instituto-de-investigacion-san"
+ },
+ "L03130017": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5105/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-gestor-en-recursos-humanos-de-la-fundacion-instituto-de-investigacion-sanitaria-de-les-illes-",
+  "category": null,
+  "closed_at": null,
+  "code": "L03130017",
+  "company": "IdISBa",
+  "contract": null,
+  "deadline": "2026-12-03",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "idisba:L03130017",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-10-23",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "L03130017",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 23/10/2026 - Fin: 03/12/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 135 - 22/10/2026. <a href=\"https://www.caib.es/eboibfront/es/2026/12349/seccion-ii-autoridades-y-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.idisba.es/media/upload/pdf/es-bases-ope-2024_1791551618.pdf\">Bases (ES)</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/temari-l03130017_1791463295.zip\">Temario (ES)</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria para la cobertura de una plaza de técnico/a gestor en recursos humanos de la Fundación Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5105/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-gestor-en-recursos-humanos-de-la-fundacion-instituto-de-investigacion-sanitaria-de-les-illes-"
+ }
+}

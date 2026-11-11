@@ -1,0 +1,302 @@
+{
+ "Convocatoria-1-plaza-Jefe-a-de-Departamento-de-PRL": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plaza-Jefe-a-de-Departamento-de-PRL.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-1-plaza-Jefe-a-de-Departamento-de-PRL",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-06-10",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-06-09",
+  "ref": "Convocatoria-1-plaza-Jefe-a-de-Departamento-de-PRL",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>10/06/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer una plaza de Jefe/a de Departamento de PRL - Transporte  en el Departamento de Prevención de Riesgos Laborales , perteneciente a la Dirección de Recursos Humanos.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/97afba9b-147c-4b22-92f3-76e3eac13206/20260609-JN002-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 09-06-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 1 plaza Jefe/a de Departamento de PRL - Transporte",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plaza-Jefe-a-de-Departamento-de-PRL.aspx"
+ },
+ "Convocatoria-1-plaza-Titulado-a-Superior-Divis-(2)": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plaza-Titulado-a-Superior-Divis-(2).aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-1-plaza-Titulado-a-Superior-Divis-(2)",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-07-31",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-07-30",
+  "ref": "Convocatoria-1-plaza-Titulado-a-Superior-Divis-(2)",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>31/07/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer una plaza de Titulado/a Superior SAP módulo PA en la División de Operaciones, perteneciente a la Dirección de Tecnología e Innovación.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/1de500ab-b59c-4a54-b333-284447cfaa1d/20260730-JL009-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 30-07-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 1 plaza Titulado/a Superior SAP módulo PA",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plaza-Titulado-a-Superior-Divis-(2).aspx"
+ },
+ "Convocatoria-1-plazaJefe-a-de-Division-Asesoria-Ju": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaJefe-a-de-Division-Asesoria-Ju.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-1-plazaJefe-a-de-Division-Asesoria-Ju",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-07-18",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-07-17",
+  "ref": "Convocatoria-1-plazaJefe-a-de-Division-Asesoria-Ju",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>18/07/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer una plaza de Titulado/a Superior en la División de Asesoría Jurídica y Seguros, perteneciente a la Dirección de Secretaría General.<br/>\r\n </p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/634b7c2a-f108-4a31-a3b8-e683ef633686/20260717-JL004-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 17-07-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 1 plaza Titulado/a Superior Asesoría Jurídica y Seguros",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaJefe-a-de-Division-Asesoria-Ju.aspx"
+ },
+ "Convocatoria-1-plazaJefe-a-de-Division-Subdireccio": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaJefe-a-de-Division-Subdireccio.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-1-plazaJefe-a-de-Division-Subdireccio",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-07-18",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-07-17",
+  "ref": "Convocatoria-1-plazaJefe-a-de-Division-Subdireccio",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>18/07/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer una plaza de  Jefe/a de División PRL y Salud Laboral en la Subdirección de Recursos Humanos, perteneciente a la Dirección de Recursos Humanos</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/62f07d50-348d-41c9-9427-ef6806ddf9f4/20260717-JL003-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 17-07-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 1 plaza Jefe/a de División PRL y Salud Laboral Recursos Humanos",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaJefe-a-de-Division-Subdireccio.aspx"
+ },
+ "Convocatoria-1-plazaTitulado-a-Superior-Division-d": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaTitulado-a-Superior-Division-d.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-1-plazaTitulado-a-Superior-Division-d",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-06-10",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-06-09",
+  "ref": "Convocatoria-1-plazaTitulado-a-Superior-Division-d",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>10/06/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer una plaza de Titulado/a Superior en la División de Régimen Jurídico y Servicios Generales, perteneciente a la Dirección de Secretaría General.<br/>\r\n </p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/a9dd0892-3c64-475c-b564-5ab0fd5384a4/20260609-JN003-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 09-06-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 1 plaza Titulado/a Superior División Régimen Jurídico y Servicios Generales",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-1-plazaTitulado-a-Superior-Division-d.aspx"
+ },
+ "Convocatoria-2-plazasTitulado-a-Superior-Direccion": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-2-plazasTitulado-a-Superior-Direccion.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "deadline": "2026-12-31",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-11T10:37:23+00:00",
+  "id": "emt:Convocatoria-2-plazasTitulado-a-Superior-Direccion",
+  "kind": null,
+  "listed_deadline": "2026-12-31",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-10-24",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 2,
+  "published_on": "2026-10-23",
+  "ref": "Convocatoria-2-plazasTitulado-a-Superior-Direccion",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>24/10/2026 - 31/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer dos plazas de Titulado/a Superior en la Dirección de Servicios de Transporte.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/b49baaeb-bdbb-47ee-8c74-4e7d12feaa6e/20261023-OC002-01-Bases-Convocatoria.aspx\">1. Bases convocatoria 23-10-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 2 plazas Titulado/a Superior Dirección de Servicios de Transporte",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-2-plazasTitulado-a-Superior-Direccion.aspx"
+ }
+}
