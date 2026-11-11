@@ -40,6 +40,7 @@ class Deadlines(unittest.TestCase):
             "hasta las 12:00 h del 06 de Noviembre de 2026 con:": date(2026, 11, 6),
             "se aceptarán candidaturas hasta las 23:59 horas del día 16 de julio de 2026.": date(2026, 7, 16),
             "queda ampliado hasta las 12:00 horas del día 16 de noviembre de 2026.": date(2026, 11, 16),
+            "deberán enviar su candidatura … hasta las 23: 59 horas del 18 de octubre de 2026": date(2026, 10, 18),
         }
         for text, expected in casos.items():
             self.assertEqual(pdftext.deadlines(text), [expected], text)
@@ -49,6 +50,10 @@ class Deadlines(unittest.TestCase):
                 "ampliado hasta las 12:00 horas del día 16 de noviembre de 2026")
         self.assertEqual(max(pdftext.deadlines(text)), date(2026, 11, 16))
         self.assertEqual(max(pdftext.deadlines_at(text)), (date(2026, 11, 16), "12:00"))
+
+    def test_hora_partida_por_el_pdf(self):
+        self.assertEqual(pdftext.deadlines_at("hasta las 23: 59 horas del 18 de octubre de 2026"),
+                         [(date(2026, 10, 18), "23:59")])
 
     def test_otros_hasta_no_son_plazos(self):
         self.assertEqual(pdftext.deadlines("hasta el 15 por ciento de la retribución; hasta el momento de la firma"), [])
