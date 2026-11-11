@@ -29,6 +29,7 @@ from .iisaragon import IisAragonSource
 from .imib import ImibSource
 from .irycis import IrycisSource
 from .mayasa import MayasaSource
+from .irb import IrbSource
 from .isdefe import IsdefeSource
 from .lafe import LaFeSource
 from .mercasa import MercasaSource
@@ -85,7 +86,7 @@ CATALOG = {
     "local": [TmbSource()],
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
-        LaFeSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
+        LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
     ],
 }
 for _group, _sources in CATALOG.items():
