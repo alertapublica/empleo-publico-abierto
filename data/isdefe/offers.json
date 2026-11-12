@@ -1103,5 +1103,45 @@
   "status": "open",
   "title": "Técnico/a apoyo Atención al Usuario de Sistemas de Información- RED - Reservistas de Especial Disponibilidad (RED) 2026-T00409",
   "url": "https://seleccionisdefe.es/convocatoria-2639"
+ },
+ "2640": {
+  "apply_url": "https://seleccionisdefe.es/registro-2640",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "deadline": "2026-11-18",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T12:07:24+00:00",
+  "id": "isdefe:2640",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-18",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-12",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-12",
+  "ref": "2640",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Técnico/a apoyo al mantenimiento de sistemas microinformáticos y redes- RED</strong></p><p><strong>Titulaciones </strong></p><p>-Estudios Mínimos de Educación Secundaria Obligatoria, se valorará Formacion Profesional ( FP1, FP2 o titualción equivalente) de las ramas tecnológicas.</p><p><strong>Funciones habituales:</strong></p><p>Realizará alguna de las siguientes funciones:<br/>\r\n- Apoyar en las tareas de instalación y manteniemiento de equipos informáticos.<br/>\r\n- Apoyar en el montaje y mantenimiento de sistemas de radiodifusión.<br/>\r\n- Apoyar en la instalación y mantenimiento de electrónica de red.<br/>\r\n- Apoyar en el montaje y mantenimiento de sistemas satelitales.<br/>\r\n- Apoyar en la ejecución del mantenimiento correctivo. </p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p><strong>- Solo podrán acceder personal que ostenten la condición de militares profesionales de tropa y marinería que se encuentren en los últimos diez años de su contrato de larga duración o sean reservistas de especial disponibilidad (RED)</strong></p><p>-Entre 1 y 7 años de experiencia</p><p>- Experiencia en el montaje y mantenimiento de hardware en el ámbito de MDEF</p><p>- Conocimientos de electrónica.<br/>\r\n- Conocimientos de montaje, conectórica y mantenimiento hardware de sistemas de telecomunicaciones radio y satélite.<br/>\r\n- Conocmientos de conectorización, parcheo y comprobación de líneas.<br/>\r\n- Conocimientos de reparación y sustitución de módulos en ordenadores de sobremesa, portátiles y servidores.<br/>\r\n- Procedimientos propios del MDEF<br/>\r\n- Conocimientos de Windows a nivel de usuario y administración.<br/>\r\n- Conocimientos de Ofimática (suite MS Office) y herramientas corporativas del MDEF,</p><p>- Sistemas del MDEF/UME, Redes de MDEF/UME, Ofimática</p><p>Valorable: Disciplina, escucha activa, empatía, orden y atención al detalle.</p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.El personal interno se regirá por la política de la empresa).</em></p><p>SE OFRECE CONTRATO INDEFINIDO</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a apoyo al mantenimiento de sistemas microinformáticos y redes- RED - Reservistas de Especial Disponibilidad (RED) 2026-T00414",
+  "url": "https://seleccionisdefe.es/convocatoria-2640"
  }
 }
