@@ -1,0 +1,132 @@
+{
+ "453": {
+  "apply_url": "https://jobs.energy.imdea.org/es/offer/453",
+  "category": null,
+  "closed_at": null,
+  "code": "26.76 TN6 PRE",
+  "company": "IMDEA Energía",
+  "contract": null,
+  "deadline": "2026-12-01",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T19:05:22+00:00",
+  "id": "imdea-energia:453",
+  "kind": null,
+  "listed_deadline": "2026-12-01",
+  "location": "Móstoles",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-03",
+  "ref": "453",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IMDEA Energía quiere incorporar un investigador/a predoctoral en la Unidad de Tecnología Nuclear para trabajar en reactores nucleares avanzados (SMR y microrreactores) con control formador de red que mantengan el suministro de infraestructuras críticas, instalaciones industriales y centros de datos de la Comunidad de Madrid durante apagones.</p>\n<p>Te incorporarás al equipo de investigación de la Unidad de Tecnología Nuclear, en colaboración con la Unidad de Sistemas Eléctricos, para realizar una tesis doctoral sobre reactores nucleares avanzados que actúen como fuentes formadoras de red para la resiliencia de infraestructuras críticas frente a apagones como el del 28 de abril de 2025.</p>\n<p><strong>Tareas principales:</strong></p>\n<ul>\n<li>Desarrollar un modelo dinámico acoplado, en tiempo real, de reactores nucleares avanzados (microrreactor de heat-pipes y SMR de agua ligera), su sistema de conversión de potencia, un convertidor formador de red y una microrred crítica.</li>\n<li>Evaluar los márgenes de seguridad nuclear (temperatura de combustible, reactividad, heat-pipes) durante la operación en isla, los escalones de carga y el rechazo de carga.</li>\n<li>Analizar el apagón ibérico del 28 de abril de 2025 sobre una red equivalente reducida y evaluar la posible contribución de los reactores avanzados al control de tensión y al arranque en negro.</li>\n<li>Diseñar estrategias de control predictivo que coordinen el reactor y el almacenamiento durante el arranque en negro respetando los márgenes nucleares, para predecir y evitar disparos del reactor.</li>\n<li>Validar experimentalmente las estrategias de control en power-hardware-in-the-loop en el laboratorio SEIL (Smart Energy Integration Lab) de IMDEA Energía.</li>\n<li>Aplicar los resultados a casos de estudio en la Comunidad de Madrid (hospital, centro de datos y polígono industrial).</li>\n<li>Publicar los resultados en revistas científicas internacionales y congresos y contribuir a solicitudes de patente.</li>\n<li>Matricularse en un programa de doctorado de una universidad española y completarlo.</li>\n</ul>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p><strong> Requisitos obligatorios:</strong></p>\n<ul>\n<li>Máster universitario en Ingeniería Nuclear, Energética, Industrial o Eléctrica, Física o afín que dé acceso a un programa de doctorado en España, o previsión de obtenerlo antes del inicio del contrato.</li>\n<li>Conocimientos de programación en Python, MATLAB/Simulink o similares.</li>\n<li>Nivel de inglés B2 o superior (MCER).</li>\n</ul>\n<p><strong>Otros requisitos valorables:</strong></p>\n<ul>\n<li>Conocimientos de física de reactores, dinámica de reactores nucleares o termohidráulica.</li>\n<li>Conocimientos de sistemas eléctricos de potencia, electrónica de potencia, control formador de red o microrredes.</li>\n<li>Experiencia en modelado y simulación dinámica (Simulink, Modelica, OpenMC, MOOSE o similares), simulación en tiempo real o ensayos hardware-in-the-loop.</li>\n<li>Conocimientos de ingeniería de control (por ejemplo, control predictivo) o aprendizaje automático.</li>\n<li>Expediente académico (nota media de grado y máster).</li>\n<li>Experiencia investigadora: trabajo fin de máster en temas afines, estancias o prácticas de investigación, publicaciones o comunicaciones a congresos.</li>\n</ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<ul>\n<li>Adecuación de la formación del candidato al perfil solicitado.</li>\n<li>Experiencia laboral relacionada con el perfil del puesto de trabajo.</li>\n<li>Motivación para realizar investigación de alta calidad.</li>\n<li>Conocimientos de inglés.</li>\n</ul>",
+    "level": 2,
+    "title": "Criterios de selección"
+   },
+   {
+    "html": "<ul>\n<li><strong>Remuneración:</strong> Entre 22.000€ – 25.000€ al año, dependiendo de la cualificación y la experiencia.</li>\n<li><strong>Duración del contrato: </strong>1 año con renovaciones anuales en función del desempeño. Máximo de 4 años. (Contrado Predoctoral)</li>\n</ul>",
+    "level": 2,
+    "title": "Condiciones"
+   },
+   {
+    "html": "<p><strong>IMDEA Energía</strong>, Móstoles, Madrid. 100% presencial</p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<ul><li>Título del Certificado Académico</li><li>Título Oficial de Máster</li><li>Carta de Motivación</li></ul>",
+    "level": 2,
+    "title": "Documentos que hay que adjuntar"
+   }
+  ],
+  "source": "imdea-energia",
+  "source_title": null,
+  "status": "open",
+  "title": "Investigador Predoctoral para trabajar en reactores nucleares avanzados formadores de red para la resiliencia frente a apagones de infraestructuras críticas, industria y centros de datos",
+  "url": "https://jobs.energy.imdea.org/es/offer/453"
+ },
+ "454": {
+  "apply_url": "https://jobs.energy.imdea.org/es/offer/454",
+  "category": null,
+  "closed_at": null,
+  "code": "26.77 AT7 TEC",
+  "company": "IMDEA Energía",
+  "contract": "Contrato según legislación vigente",
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T19:05:22+00:00",
+  "id": "imdea-energia:454",
+  "kind": null,
+  "listed_deadline": "2026-11-17",
+  "location": "Móstoles",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-03",
+  "ref": "454",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IMDEA Energía busca incorporar un Técnico de Laboratorio Júnior para la Unidad de Procesos de Alta Temperatura. Buscamos candidatos motivados con estudios recientes de Formación Profesional para dar apoyo transversal a nuestro equipo técnico e investigador en labores de taller, montajes experimentales, mantenimiento rutinario, logística y seguridad en las instalaciones y laboratorios de la unidad. Financiado por la Unión Europea.</p>\n<p><strong>Tareas principales:  </strong></p>\n<ul>\n<li>Apoyo en el ensamblaje mecánico, canalización de fluidos y cableado básico de dispositivos y bancos de ensayo experimentales.</li>\n<li>Aprendizaje y ejecución de rutinas básicas de mantenimiento preventivo de equipos auxiliares de laboratorio (bombas de vacío, enfriadores/chillers, compresores y sistemas de ventilación).</li>\n<li>Asistencia en pruebas de estanqueidad, revisión de presiones y comprobación rutinaria de sensores (termopares, sondas de presión, caudalímetros) bajo supervisión.</li>\n<li>Soporte logístico en el control de consumibles de taller, racorería, botellas de gases técnicos y reposición de herramientas.</li>\n<li>Organización y reposición de Equipos de Protección Individual (EPIs), recepción de reactivos y apoyo en la retirada y gestión de residuos químicos de laboratorio.  </li>\n<li>Mantenimiento del orden y la limpieza técnica en talleres y laboratorios, así como cumplimiento de las normas de Prevención de Riesgos Laborales.</li>\n</ul>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p><strong>Requisitos obligatorios:</strong></p>\n<ul>\n<li>Ciclo Formativo de Grado Superior (Formación Profesional del Sistema Educativo) en “Instalación y Mantenimiento”, “Electricidad y Electrónica”, “Fabricación Mecánica”, “Química” (Química Industrial, Laboratorio de Análisis y Control de Calidad) o similar, obtenido en los últimos 3 años.</li>\n</ul>\n<p><strong>Otros méritos a valorar:</strong></p>\n<ul>\n<li>Formación o prácticas curriculares en montaje mecánico, circuitos de fluidos, canalizaciones/racorería o cableado eléctrico básico.</li>\n<li>Manejo de herramientas manuales de taller, instrumentación básica y sensores de medida (termopares, manómetros).</li>\n<li>Comprensión y lectura básica en inglés técnico (manuales de equipos y fichas de seguridad).</li>\n<li>Alta motivación por aprender, actitud proactiva, orientación al detalle y trabajo en equipo.</li>\n</ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<ul>\n<li>Adecuación de la formación del candidato al perfil solicitado.</li>\n<li>Experiencia laboral relacionada con el perfil del puesto de trabajo.</li>\n<li>Conocimientos de inglés.</li>\n<li>Motivación para realizar investigación de alta calidad.</li>\n</ul>",
+    "level": 2,
+    "title": "Criterios de selección"
+   },
+   {
+    "html": "<ul>\n<li><strong>Remuneración: </strong>Dependiendo de la cualificación y la experiencia.</li>\n<li><strong>Tipo de contrato:</strong> Contrato según legislación vigente</li>\n</ul>",
+    "level": 2,
+    "title": "Condiciones"
+   },
+   {
+    "html": "<p><strong>IMDEA Energía: </strong>Móstoles, Madrid. 100% presencial</p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<ul><li>Título del Certificado Académico</li><li>Carta de Motivación</li></ul>",
+    "level": 2,
+    "title": "Documentos que hay que adjuntar"
+   }
+  ],
+  "source": "imdea-energia",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico de laboratorio para apoyo operacional y experimental general en instalaciones de procesos de alta temperatura",
+  "url": "https://jobs.energy.imdea.org/es/offer/454"
+ }
+}

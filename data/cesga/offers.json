@@ -1,0 +1,140 @@
+{
+ "6ae1de145f2ddb8b80db1103": {
+  "apply_url": "https://emprego.cesga.es/oferta/6ae1de145f2ddb8b80db1103",
+  "category": null,
+  "closed_at": null,
+  "code": "QUANTUM_IBER_IA-26-INVPD1-TCC",
+  "company": "CESGA (Centro de Supercomputación de Galicia)",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T19:05:22+00:00",
+  "id": "cesga:6ae1de145f2ddb8b80db1103",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Santiago de Compostela",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-10-30",
+  "ref": "6ae1de145f2ddb8b80db1103",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<strong>Perfil </strong><p>Es deseable que el/a investigador/a cuente con suficiente conocimiento de herramientas de desarrollo y gestión de código, especialmente Python o C/C++ y de paralelización con hilos o distribuida y con experiencia en la ejecución de programas cuánticos o híbridos en unidades de computación cuántica reales y emuladas. </p><p>La persona deberá ayudar a consolidar la actividad internacional del grupo, por el cuál es imprescindible la disponibilidad para viajar (fundamentalmente a otros estados de la Unión Europa) y a hacer cortas estancias de investigación en otros centros de interés para la línea de investigación, que puedan fortalecer las relaciones con otros grupos de investigación de referencia en el área. </p><strong>Titulación</strong><p>Doctor.</p><p>La titulación deberá estar adscrita en alguno de los siguientes ámbitos del conocimiento, segundo el Real Decreto 822/2021 (Anexo I):</p><ul><li>Ciencias de la Tierra.</li><li>Física y astronomía.</li><li>Ingeniería eléctrica, ingeniería electrónica e ingeniería de la telecomunicación.</li><li>Ingeniería industrial, ingeniería mecánica, ingeniería automática, ingeniería de la organización industrial e ingeniería de la navegación.</li><li>Ingeniería informática y de sistemas.</li><li>Ingeniería química, ingeniería de los materiales e ingeniería del medio natural.</li><li>Matemáticas y estadística.</li><li>Química.</li></ul><p>Transitoriamente, para titulaciones no adaptadas al nuevo marco, serán válidas aquellas adscritas a alguna de las siguientes ramas del conocimiento, segundo el Real Decreto 1393/2007:</p><ul><li>Ciencias.</li><li>Ingeniería y Arquitectura.</li></ul><strong>Experiencia</strong><p>Se requiere una experiencia en computación cuántica (predoctoral o postdoctoral) con una duración mínima de un año.</p><strong>Publicaciones</strong><p>Tener una publicación en computación cuántica o computación de altas prestaciones en una revista científica con revisión por pares.</p><strong>Idiomas</strong><p>Gallego: CELGA4<br/>Inglés: B1</p><p>Se deberá indicar en el CV que se anexe con la solicitud, de forma explícita, si cuenta con una acreditación/certificación oficial de este nivel. Si, por el contrario, no dispone de esta deberá realizar una prueba de nivel. </p><strong>Duración del contrato y condiciones laborales</strong><ul><li>Indefinida, con una duración aproximada inicial hasta el 31 de diciembre de 2028, sujeta la continuidad a la existencia de financiación suficiente para mantener la línea de investigación.</li><li>Jornada laboral completa de 39 h. en horario de invierno y 35 horas en horario de verano, con flexibilidad horaria y posibilidad de teletrabajo.</li><li>22 días de vacaciones anuales y días de asuntos propios.</li></ul><strong>Salario</strong><p>37.156,28 € brutos anuales en 14 pagas.</p><strong>Ubicación</strong><p>CESGA (Centro de Supercomputación de Galicia) - Fundación pública pionera en la computación de altas prestaciones, situada en el centro de la ciudad de Santiago de Compostela, en el campus universitario, pulmón verde de la ciudad. </p><p>Avenida de Vigo, s/n, 15705 - 42º52.539 N 8º33.196 W.</p><strong>Funciones</strong><p>Las necesarias para la el desarrollo adecuado de la línea de investigación, y especialmente las asociadas al proyecto Quantum_Iber_IA. </p><ul><li>Investigación, ejecución y supervisión de tareas de investigación y técnicas como son el diseño, programación y evaluación de algoritmos basados en técnicas de computación híbrida clásico-cuántica, y definición y ejecución de benchmarks para unidades de computación cuántica.</li><li>Documentación y mantenimiento del software desarrollado.</li><li>Busca de financiación para mantener la línea de investigación.</li><li>Participación en el diseño y seguimiento del plan de trabajo de los diferentes proyectos que compongan la línea de investigación, especialmente del proyecto Quantum_Iber_IA.</li><li>Coordinación o participación en la redacción de los informes científicos, técnicos y de gestión del proyecto Quantum_Iber_IA y de otros proyectos relacionados.</li><li>Publicación de resultados en revistas, conferencias y demás medios de comunicación y difusión de resultados.</li><li>Coordinación con socios, con las entidades financiadoras, los proveedores, socios y subcontratas del programa de investigación y los diferentes proyectos.</li><li>Vigilancia tecnológica: Busca y análisis de la documentación científica y técnica relacionada con la temática de la línea de investigación, tanto de publicaciones científicas como de patentes.</li><li>Ejecución de otras tareas asociadas con el correcto desarrollo de la línea de investigación: asistencia a reuniones, participación en conferencias y cursos, elaboración de informes, realización de presentaciones, generación de material promocional, formación sobre las técnicas utilizadas.</li><li>Otras tareas necesarias para la realización de la línea de investigación.</li></ul>",
+    "level": 2,
+    "title": "Descripción del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270886197-229644656.pdf\">Bases da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270886201-124285669.docx\">Anexo I. Modelo de solicitude</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270886201-834259384.pdf\">Anexo II. Cadro da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270886205-215303181.docx\">Anexo III. Modelo de alegación ou recurso</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793351994036-521452491.pdf\">DOG, 30 de outubro 2026</a></li></ul>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesga",
+  "source_title": null,
+  "status": "open",
+  "title": "Investigador/a postdoutoral en tecnoloxías de computación cuántica",
+  "url": "https://emprego.cesga.es/oferta/6ae1de145f2ddb8b80db1103"
+ },
+ "6ae1f1d1677f3c9a32b9aa5e": {
+  "apply_url": "https://emprego.cesga.es/oferta/6ae1f1d1677f3c9a32b9aa5e",
+  "category": null,
+  "closed_at": null,
+  "code": "DEEPQUANTUM-26-TSINV1",
+  "company": "CESGA (Centro de Supercomputación de Galicia)",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T19:05:22+00:00",
+  "id": "cesga:6ae1f1d1677f3c9a32b9aa5e",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Santiago de Compostela",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-10-30",
+  "ref": "6ae1f1d1677f3c9a32b9aa5e",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<strong>Perfil </strong><p>Es deseable que el técnico/a cuente con suficiente conocimiento de herramientas de desarrollo y gestión de código, especialmente Python o C/C++ y de paralelización con hilos o distribuida y con experiencia en la ejecución de programas cuánticos o híbridos en unidades de computación cuántica reales y emuladas.</p><p>Además deberá ayudar a consolidar la actividad internacional del grupo, por el cuál es imprescindible la disponibilidad para viajar (fundamentalmente a otros estados de la Unión Europa) y hacer cortas estancias de investigación en otros centros de interés para la línea de investigación, que puedan fortalecer las relaciones con otros grupos de investigación de referencia en el área. La colaboración con otros centros del proyecto puede necesitar hacer estos viajes a nivel internacional.</p><p>Se busca, por tanto, una persona formada en técnicas de computación cuántica, motivada, con un CV acomodado para desarrollar su actividad de investigación predoctoral con posibilidad de que sea su trabajo doctoral en el campo del software para la computación cuántica y sus aplicaciones, con una orientación a la computación cuántica de altas prestaciones.<br/> </p><strong>Titulación</strong><p>La titulación superior (Nivel 3) que deberá estar adscrita en alguno de los siguientes ámbitos del conocimiento, segundo el Real Decreto 822/2021 (Anexo I):</p><ul><li>Ciencias de la Tierra.</li><li>Física y astronomía.</li><li>Ingeniería eléctrica, ingeniería electrónica e ingeniería de la telecomunicación.</li><li>Ingeniería industrial, ingeniería mecánica, ingeniería automática, ingeniería de la organización industrial e ingeniería de la navegación.</li><li>Ingeniería informática y de sistemas.</li><li>Ingeniería química, ingeniería de los materiales e ingeniería del medio natural.</li><li>Matemáticas y estadística.</li><li>Química.</li></ul><p>Transitoriamente, para titulaciones no adaptadas al nuevo marco, serán válidas aquellas adscritas a alguna de las siguientes ramas del conocimiento, segundo el Real Decreto 1393/2007:</p><ul><li>Ciencias.</li><li>Ingeniería y Arquitectura.</li></ul><strong>Experiencia</strong><p>No haber disfrutado de un contrato predoctoral anteriormente.</p><strong>Idiomas</strong><p>Gallego: CELGA4<br/>Inglés: B2</p><p>Se deberá indicar en el CV que se anexe con la solicitud, de forma explícita, si cuenta con una acreditación/certificación oficial de este nivel. Si, por el contrario, no dispone de esta deberá realizar una prueba de nivel. </p><strong>Duración del contrato y condiciones laborales</strong><ul><li>Indefinida, con una duración aproximada inicial hasta el 31 de agosto de 2028, sujeta la continuidad a la existencia de financiación suficiente para mantener la línea de investigación.</li><li>Jornada laboral completa de 39 h. en horario de invierno y 35 horas en horario de verano, con flexibilidad horaria y posibilidad de teletrabajo.</li><li>22 días de vacaciones anuales y días de asuntos propios.</li></ul><strong>Salario</strong><p>33.804,82 € brutos anuales en 14 pagas.</p><strong>Ubicación</strong><p>CESGA (Centro de Supercomputación de Galicia) - Fundación pública pionera en la computación de altas prestaciones, situada en el centro de la ciudad de Santiago de Compostela, en el campus universitario, pulmón verde de la ciudad.</p><p>Avenida de Vigo, s/n, 15705 - 42º52.539 N 8º33.196 W.</p><strong>Funciones</strong><p>Las necesarias para la el desarrollo adecuado de la línea de investigación. </p><ul><li>Investigación y ejecución de tareas de investigación y técnicas como son el diseño, programación y evaluación de algoritmos basados en técnicas de computación híbrida clásico-cuántica, y definición y ejecución de benchmarks para unidades de computación cuántica.</li><li>Documentación y mantenimiento del software desarrollado.</li><li>Publicación de resultados en revistas, conferencias y demás medios de comunicación y difusión de resultados.</li><li>Coordinación con socios, con las entidades financiadoras, los proveedores, socios y subcontratas del programa de investigación y los diferentes proyectos.</li><li>Vigilancia tecnológica: Busca y análisis de la documentación científica y técnica relacionada con la temática de la línea de investigación, tanto de publicaciones científicas como de patentes.</li><li>Ejecución de otras tareas asociadas con el correcto desarrollo de la línea de investigación: asistencia a reuniones, participación en conferencias y cursos, elaboración de informes, realización de presentaciones, generación de material promocional, formación sobre las técnicas utilizadas.</li><li>Otras tareas necesarias para la realización de la línea de investigación.</li></ul>",
+    "level": 2,
+    "title": "Descripción del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270607820-983986017.pdf\">Bases da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270607840-511181673.docx\">Anexo I. Modelo de solicitude</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270607840-450755005.pdf\">Anexo II. Cadro da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270607846-571859049.docx\">Anexo III. Modelo de alegación ou recurso</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793352016172-634232166.pdf\">DOG, 30 de outubro 2026</a></li></ul>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesga",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a superior de investigación en tecnoloxías de computación cuántica",
+  "url": "https://emprego.cesga.es/oferta/6ae1f1d1677f3c9a32b9aa5e"
+ },
+ "6ae1f559677f3c9a32b9ae5d": {
+  "apply_url": "https://emprego.cesga.es/oferta/6ae1f559677f3c9a32b9ae5d",
+  "category": null,
+  "closed_at": null,
+  "code": "HPQC-QEX-26-INV2 -TCC",
+  "company": "CESGA (Centro de Supercomputación de Galicia)",
+  "contract": null,
+  "deadline": "2026-11-13",
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T19:05:22+00:00",
+  "id": "cesga:6ae1f559677f3c9a32b9ae5d",
+  "kind": null,
+  "listed_deadline": "2026-11-13",
+  "location": "Santiago de Compostela",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-10-30",
+  "ref": "6ae1f559677f3c9a32b9ae5d",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<strong>Perfil </strong><p>Es deseable que el técnico/a cuente con suficiente conocimiento de herramientas de desarrollo y gestión de código, especialmente Python o C/C++ y de paralelización con hilos o distribuida y con experiencia en la ejecución de programas cuánticos o híbridos en unidades de computación cuántica reales y emuladas.</p><p>El técnico/a deberá ayudar a consolidar la actividad internacional del grupo, por el cuál es imprescindible la disponibilidad para viajar (fundamentalmente a otros estados de la Unión Europa) y a hacer cortas estancias en otros centros de interés para la línea de investigación, que puedan fortalecer las relaciones con otros grupos de investigación de referencia en el área. La colaboración con otros centros del proyecto puede necesitar hacer estos viajes a nivel internacional.</p><p>Se busca, por tanto, una persona formada en técnicas de computación cuántica y motivada, y que quiera desarrollar su actividad en el campo del software para la computación cuántica.</p><strong>Titulación</strong><p>Nivel 3 (Grado + Máster) según el Marco Español de cualificaciones para la Educación Superior recogido en el Real Decreto 1027/2011 de 15 de julio.</p><p>La titulación deberá estar adscrita en alguno de los siguientes ámbitos del conocimiento, segundo el Real Decreto 822/2021 (Anexo I):</p><ul><li>Ciencias de la Terra.</li><li>Física y astronomía.</li><li>Ingeniería eléctrica, ingeniería electrónica e ingeniería de la telecomunicación.</li><li>Ingeniería industrial, ingeniería mecánica, ingeniería automática, ingeniería de la organización industrial e ingeniería de la navegación.</li><li>Ingeniería química, ingeniería de los materiales e ingeniería del medio natural.</li><li>Ingeniería informática y de sistemas.</li><li>Matemáticas y estadística.</li><li>Química.</li></ul><p>Transitoriamente, para titulaciones no adaptadas al nuevo marco, serán válidas aquellas adscritas a alguna de las siguientes ramas del conocimiento, segundo el Real Decreto 1393/2007:</p><ul><li>Ciencias.</li><li>Ingeniería y Arquitectura.</li></ul><strong>Experiencia</strong><p>Se requiere una experiencia en computación cuántica o computación de altas prestaciones de una duración mínima de un año desde la fecha de la obtención de la titulación.</p><strong>Idiomas</strong><p>Gallego: CELGA4<br/>Inglés: B2</p><p>Se deberá indicar en el CV que se anexe con la solicitud, de forma explícita, si cuenta con una acreditación/certificación oficial de este nivel. Si, por el contrario, no dispone de esta deberá realizar una prueba de nivel. </p><strong>Duración del contrato y condiciones laborales</strong><ul><li>Indefinida, con una duración aproximada inicial hasta el 14 de abril de 2029, sujeta la continuidad a la existencia de financiación suficiente para mantener la línea de investigación.</li><li>Jornada laboral completa de 39 h. en horario de invierno y 35 horas en horario de verano, con flexibilidad horaria y posibilidad de teletrabajo.</li><li>22 días de vacaciones anuales y días de asuntos propios.</li></ul><strong>Salario</strong><p>33.804,82 € brutos anuales en 14 pagas.</p><strong>Ubicación</strong><p>CESGA (Centro de Supercomputación de Galicia) - Fundación pública pionera en la computación de altas prestaciones, situada en el centro de la ciudad de Santiago de Compostela, en el campus universitario, pulmón verde de la ciudad. </p><p>Avenida de Vigo, s/n, 15705 - 42º52.539 N 8º33.196 W.</p><strong>Funciones</strong><ul><li>Diseño, programación y evaluación de algoritmos basados en técnicas de computación híbrida clásico-cuántica, y definición y ejecución de benchmarks para unidades de computación cuántica.</li><li>Participación en el diseño, despliegue y evolución de las infraestructuras asociadas a la línea de investigación y del proyecto QEX.</li><li>Documentación y mantenimiento del software desarrollado.</li><li>Coordinación o participación en la redacción de los informes científicos, técnicos y de gestión del proyecto QEX y de otros proyectos relacionados.</li><li>Publicación de resultados en revistas, conferencias y demás medios de comunicación y difusión de resultados.</li><li>Coordinación con socios, con las entidades financiadoras, los proveedores, socios y subcontratas del programa de investigación y los diferentes proyectos.</li><li>Vigilancia tecnológica: Busca y análisis de la documentación científica y técnica relacionada con la temática de la línea de investigación, tanto de publicaciones científicas como de patentes.</li><li>Ejecución de otras tareas asociadas con el correcto desarrollo de la línea de investigación: asistencia a reuniones, participación en conferencias y cursos, elaboración de informes, realización de presentaciones, generación de material promocional, formación sobre las técnicas utilizadas.</li><li>Colaboración en la busca de financiación para el mantenimiento de la línea de investigación.</li><li>Otras tareas necesarias para la realización de la línea de investigación y el proyecto QEX.</li></ul>",
+    "level": 2,
+    "title": "Descripción del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270483703-57679285.pdf\">Bases da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270483715-410917978.docx\">Anexo I. Modelo de solicitude</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270483719-223527595.pdf\">Anexo II. Cadro da convocatoria</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793270483723-957745033.docx\">Anexo III. Modelo de alegación ou recurso</a></li><li><a href=\"https://emprego.cesga.es/uploads/newAttachments-1793352031578-866274532.pdf\">DOG, 30 de outubro 2026</a></li></ul>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesga",
+  "source_title": null,
+  "status": "open",
+  "title": "Investigador/a en tecnoloxías de computación cuántica",
+  "url": "https://emprego.cesga.es/oferta/6ae1f559677f3c9a32b9ae5d"
+ }
+}
