@@ -79,6 +79,13 @@ ADIF = SentinelSource(
     page="https://www.adif.es/empleo/oferta-empleo-publico/plazo-solicitud-abierto",
     empty_text="no hay ninguna oferta de empleo público",
 )
+FURIOJA = SentinelSource(
+    id="furioja", name="Fundación de la Universidad de La Rioja",
+    homepage="https://fundacion.unirioja.es/transparencia/ofertas-empleo",
+    page="https://fundacion.unirioja.es/transparencia/ofertas-empleo",
+    empty_text="No hay ofertas de empleo abiertas en este momento",
+)
+FURIOJA.scope = "La Rioja"
 RENFE = SentinelSource(
     id="renfe", name="Renfe", homepage="https://empleo.renfe.com/",
     page="https://empleo.renfe.com/search/",
@@ -98,7 +105,7 @@ CATALOG = {
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), FURIOJA,
     ],
 }
 for _group, _sources in CATALOG.items():
