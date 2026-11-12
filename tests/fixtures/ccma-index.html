@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca"><head id="j_idt2">
+    <title>Espai Selecció
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://statics.3cat.cat/_resources/favicons/3cat-apple-touch-icon-180x180.png" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-192x192.png" sizes="192x192" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-160x160.png" sizes="160x160" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-16x16.png" sizes="16x16" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="https://statics.3cat.cat/_resources/favicons/3cat-mstile-144x144.png" />
+	<link rel="shortcut icon" href="https://www.3cat.cat/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="Author" content="(ASI) Corporació Catalana de Mitjans Audiovisuals, S.A." lang="ca" />
+    <meta name="description" content="Portal web dels processos de selecció de la Corporació Catalana de Mitjans Audiovisuals" />
+
+    <script src="https://statics.3cat.cat/js/vendor/jquery.min.js">
+      <!--jquery 1.9.1-->
+    </script>
+    <script src="https://statics.3cat.cat/js/vendor/jquery.scrollTo.min.js"></script>
+    <!-- &lt;link
+      href="/seleccio/css/bootstrap.5.1.3.min.css?fp=b38e0e06"
+      rel="stylesheet"
+      type="text/css"
+    /&gt; -->
+    <link href="/seleccio/css/bootstrap.css?fp=30d3cc45" rel="stylesheet" type="text/css" />
+    <script src="/seleccio/js/general.js?fp=94ae9fcd" type="text/javascript">
+      <!-- -->
+    </script>
+    <link href="/seleccio/css/fontawesome-all.min.css?fp=3dbcb3fd" rel="stylesheet" type="text/css" />
+    <link href="/seleccio/css/bootstrap-icons/bootstrap-icons.css?fp=20261029_080541Z" rel="stylesheet" type="text/css" />
+
+    <!-- TODO: Codi COMU que hauria de facilitar Interactiva -->
+    <script src="https://statics.3cat.cat/js/capnouportal_utf8.min.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?hl=ca" async="async" defer="defer"></script>
+    <script src="/seleccio/js/bootstrap.bundle.5.1.3.min.js?fp=f63e89d1"></script>
+
+    <!-- css -->
+    <link href="/seleccio/css/base.css?fp=7d9fa8f6" rel="stylesheet" type="text/css" />
+
+    <!-- carreguem Javascript de JSF --><script defer="defer" city="madrid" src="https://madrid.report.botm.transparentedge.io/static/js/bm.js" origin-key="tjo_y07qw0gVtvhmf577hhqGsS7XuVjrVBMxqZAR" async="async" track="true"></script><script type="text/javascript" src="/seleccio/javax.faces.resource/jsf.js.jsf?ln=javax.faces"></script></head>
+  <body style="background-position: 0 44px">
+
+      <script type="text/javascript" src="/seleccio/js/general.js?fp=94ae9fcd"></script>
+      <script type="text/javascript" src="/seleccio/js/jquery/jquery-ui.js?fp=20261029_080541Z"></script>
+      <script type="text/javascript" src="/seleccio/js/message-frame.js?fp=9c5ff046"></script>
+      <script type="text/javascript" src="/seleccio/js/missatges.js?fp=ae90108b"></script>
+
+	<iframe id="iframeDialeg" name="iframeDialeg" style="height:0px;width:100%;">
+		
+	</iframe>
+
+<script type="text/javascript" charset="utf-8">
+	
+	var fesRefresca = false;
+	function refresca() {
+		var command="";
+		if (command){
+			document.getElementById(command).click();
+		}
+	}
+
+	var dialogObrintse=false;
+	function _obrirDialegIntern(){
+		//un cop carregat el contingut (si encara no haviem fet open)
+		if (!jQuery("#iframeDialeg").dialog( "isOpen" ) && dialogObrintse){
+			_obreDialeg(jQuery("#iframeDialeg"),'center');
+			dialogObrintse = false;
+		}
+	}
+	
+	jQuery("#iframeDialeg").dialog({
+		modal:true,
+		autoOpen:false,
+		close:function( event, ui ) {
+			if (top.fesRefresca) refresca();
+			$('#iframeDialeg', window.parent.document).contents().find("body").html('');
+		}
+	}).load(_obrirDialegIntern);
+	
+    function obreDialeg(alcada, amplada){
+        if (alcada!=null 
+        && alcada.toString().indexOf("%") >= 1) {
+            alcada = parseInt(alcada.toString().replace("%",""));
+            alcada = alcada / 100;            
+            alcada = $(window).height() * alcada;   
+        }
+        
+        //configurem el dialog, pero no l'obrim, ho farà el load de l'iframe per tenir les mides bones.
+        jQuery("#iframeDialeg")
+            .dialog( "option", "width", amplada!=null?amplada:"50%" )
+            .dialog( "option", "height", alcada!=null?alcada:"400");
+        dialogObrintse=true;
+        //TODO: intentar calcular la mida del contingut obrint el dialeg un cop carregat (mig preparat a load(_obrirDialegIntern)).
+        //jQuery("#iframeDialeg")[0].src="/seleccio/loading.jsf";
+        _obrirDialegIntern();
+    }
+
+    function _obreDialeg(dialeg,posicio){
+        dialeg
+            .dialog("option","position",{my:posicio,at:posicio, of:window})
+            .dialog("open")
+            .css('width','100%'); //TODO: ho posem perque jQuery-ui-dialog no calcula be l'amplada
+    }
+    
+	
+</script>
+
+      <div class="ccmabar">
+        <script type="text/javascript">
+          capnouportal(0, 0, "menu5");
+        </script>
+      </div>
+
+      <div id="web" class="portada d-flex flex-column">
+
+        <header>
+          <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-expand-xl navbar-light bg-blanc">
+                <div class="container-fluid">
+<form id="j_idt13" name="j_idt13" method="post" action="/seleccio/index.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt13" value="j_idt13" />
+<a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt13'),{'j_idt13:j_idt14':'j_idt13:j_idt14'},'');return false">
+                      <h1 class="d-flex align-items-center navbar-brand mb-0 me-0">
+                        <img src="/seleccio/img/seleccio.png" alt="Selecció CCMA" class="me-2" />ESPAI DE SELECCIÓ
+                      </h1></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Opcions de navegació">
+                      <span class="navbar-toggler-icon"></span>
+                    </button><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="3990874293653519996:-2359538858582713048" autocomplete="off" />
+</form>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<form id="iniciaSessio" name="iniciaSessio" method="post" action="/seleccio/index.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="iniciaSessio" value="iniciaSessio" />
+
+                      <ul class="navbar-nav">
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt21':'iniciaSessio:j_idt21'},'');return false" class="nav-link p-md-1">
+                            PROCESSOS DE SELECCIÓ
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt24':'iniciaSessio:j_idt24'},'');return false" class="nav-link p-md-1">
+                            NOTÍCIES
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt27':'iniciaSessio:j_idt27'},'');return false" class="nav-link p-md-1">
+                            <em class="bi bi-question-circle pe-1" title="Preguntes Freqüents" aria-hidden="true"></em>PREGUNTES FREQÜENTS
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt30':'iniciaSessio:j_idt30'},'');return false" class="nav-link p-md-1">
+                            <em class="bi bi-envelope pe-1" title="Contacte" aria-hidden="true"></em>CONTACTE
+                          </a>
+                        </li>
+                          <li class="nav-item  ms-xl-1 p-2 p-md-0 rDestaca"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt35':'iniciaSessio:j_idt35'},'');return false" class="nav-link p-md-1">
+                              <em class="bi bi-person pe-1" title="Inici" aria-hidden="true"></em>EL MEU ESPAI
+                            </a>
+                          </li>
+                      </ul><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="3990874293653519996:-2359538858582713048" autocomplete="off" />
+</form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header><div id="cap" class="cap">
+			<!-- lloc on posar els avisos -->
+    
+	<div id="destiMissatgesAvis">  </div></div>
+        <div class="R-big-background flex-grow-1"><div class="container">
+            <div class="row R-slogan d-flex align-items-center">
+              <div class="col-12 col-xl-4 mb-3 mt-3 mb-sm-3 mt-sm-3">
+                <img src="/seleccio/img/somfutur.png" alt="Som futur. Som [el teu] futur." />
+                <p class="mt-3 blanc">Volem que treballis amb nosaltres! Comptem amb un gran equip de persones i volem continuar creixent amb professionals com tu. Explora les convocatòries obertes i troba-hi la teva passió. T’hi esperem!</p>
+<form id="j_idt54" name="j_idt54" method="post" action="/seleccio/index.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt54" value="j_idt54" />
+<a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt54'),{'j_idt54:j_idt55':'j_idt54:j_idt55'},'');return false">
+                    <button type="button" class="btn btn-dark btn-sm B-boto-acces">
+                      <em class="bi bi-person-fill" aria-hidden="true"></em>
+                      ACCEDEIX / REGISTRA'T
+                    </button></a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="3990874293653519996:-2359538858582713048" autocomplete="off" />
+</form>
+              </div>
+              <div class="d-none d-lg-flex col-lg-12 col-xl-8 justify-content-center -3 d-flex R-caixes">
+                <video autoplay="true" muted="true" width="400px" aria-hidden="true">
+                  <source src="https://mp4-down-high-int.3catvideos.cat/1/3/1677761447331.mp4" type="video/mp4"></source>
+                  <!-- &lt;source
+                    src="/seleccio/img/connecta.mp4"
+                    type="video/mp4"
+                  /&gt; -->
+                </video>
+              </div>
+            </div></div><div class="container R-wrapper ">
+            <div class="alert_ccma"></div>
+            <div class="row"><div id="cos" class="cos">
+    <div class="row m-0">
+      <div class="col-12 col-lg-9 p-2 ps-3">
+<form id="j_idt99" name="j_idt99" method="post" action="/seleccio/index.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt99" value="j_idt99" />
+<input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="3990874293653519996:-2359538858582713048" autocomplete="off" />
+</form><div>
+<form id="formLlistatVigents" name="formLlistatVigents" method="post" action="/seleccio/index.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formLlistatVigents" value="formLlistatVigents" />
+
+            <div id="filtres" class="container filtres d-flex">
+              <h2 data-testid="seccio-processos">Processos de selecció oberts
+              </h2>
+            </div><div id="formLlistatVigents:llistaConvocatories"><div id="formLlistatVigents:opcionsCV" class="dretaFloat"></div>
+              <div class="container">
+                 <div class="cardConvo">
+                  <div class="llista factures llistac d-flex "><div class="cosConvoc flex-grow-1">
+                          <div class="row align-items-center mb-1 me-1">
+                            <div class="col-12 col-lg-2 mb-lg-0 mb-2">
+                              <span class="badge bg-success">Inscripció oberta
+                              </span>
+                            </div>
+                            <div class="col-12 col-lg-10"><div>
+                              
+                              <em class="bi bi-calendar-week" role="img" aria-label="Calendari"> </em>Període d'inscripció: 
+                                26/10/2026 al  15/11/2026</div>
+                            </div>
+                          </div>
+                        <div><a id="formLlistatVigents:j_idt106:0:titol" name="formLlistatVigents:j_idt106:0:titol" href="/seleccio/convocatoria.jsf?idConv=3316">
+                            <h3 class="mt-3">2026 ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL·LACIONS
+                            </h3></a>
+                        </div>
+                        <div class="row me-1">
+                          <div class="col-12 mt-2">
+                            <strong class="me-1">Àmbit: 
+                            </strong><span class="me-3">Concurs públic / promoció interna</span>
+                          </div>
+                          <div class="col-12 mt-2">
+                            <strong class="me-1">Empresa: 
+                            </strong>CCMA, SA
+                          </div>
+                        </div>
+                        
+                        <div class="row me-1">                            
+                       </div></div><div class="d-flex align-items-center justify-content-center"><a id="formLlistatVigents:j_idt106:0:titolDreta" name="formLlistatVigents:j_idt106:0:titolDreta" href="/seleccio/convocatoria.jsf?idConv=3316" title="Anar al procés">
+                        <em class="bi bi-chevron-right" role="img" aria-label="Anar al concurs"></em></a></div>
+                  </div>
+                 </div>
+              </div>
+                <br/>
+              </div>
+            <div class="mt-3 mb-3 d-flex justify-content-center">
+              <a href="/seleccio/processos.jsf" class="btn btn-dark btn-sm">Tots els processos
+              </a>
+            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:4" value="3990874293653519996:-2359538858582713048" autocomplete="off" />
+</form></div>
+      </div>
+      <div class="col-12 col-lg-3 p-2 ps-3 mt-3"><div class="mb-3">
+	        <h2 class="border-bottom">AJUDA INSCRIPCIÓ
+	        </h2>
+			<div class="ratio ratio-16x9">
+				<iframe src="https://www.youtube.com/embed/TINaGclFKYA" allowfullscreen="true" title="AJUDA INSCRIPCIÓ"></iframe>
+			</div></div>
+        <h2 class="border-bottom" data-testid="seccio-segueix-nos">Segueix-nos
+        </h2>
+        <ul class="R-enllacos">
+          <li>
+            <a href="https://es.linkedin.com/company/ccma-tv3-catradio" target="_blank"><em class="bi bi-linkedin pe-2" aria-hidden="true"></em>LINKEDIN</a>
+          </li>
+          <li class="infojobs">
+            <a class="ps-4" href="https://ccma.ofertas-trabajo.infojobs.net/" target="_blank">INFOJOBS</a>
+          </li>
+        </ul>
+      </div>
+    </div></div>
+    
+	<div class="messages" id="divMissatgeAvis">
+	    <ul id="errorGeneralAjax" style="display:none;">
+	        <li class="ico-warning alert alert-danger">S'ha produït un error inesperat
+	        </li>
+	    </ul><div id="errorsControlatsJSF"></div>
+	</div>
+            </div></div>
+        </div>
+
+        	
+		<script type="text/javascript">
+			peunouportal(0, 0, "menu5");
+    	</script>
+      </div>
+   <script type="text/javascript">window.gdprAppliesGlobally=true;(function(){(function(e,r){var t=document.createElement("link");t.rel="preconnect";t.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var o=document.createElement("script");o.id="spcloader";o.type="text/javascript";o["async"]=true;o.charset="utf-8";var a="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+r;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var s=c.country;var d=c.region;if(s){a=a+"&country="+s;if(d){a=a+"&region="+d}}}t.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=a;o.src=a;var p=document.getElementsByTagName("script")[0];p.parentNode.insertBefore(t,p);p.parentNode.insertBefore(n,p);p.parentNode.insertBefore(i,p);p.parentNode.insertBefore(o,p)})("ea8bee0c-fac0-4150-846a-53dc583758d0","4wjnGP6D")})();</script>
+
+    <div class="carregantMiss" data-testid="mascara-carregant"></div>
+  </body>
+</html>
