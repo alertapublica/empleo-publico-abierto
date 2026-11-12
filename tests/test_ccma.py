@@ -57,8 +57,21 @@ class Ccma(unittest.TestCase):
         self.assertEqual(ccma.CcmaSource(at(2026, 11, 12, 12, 0)).list_offers(http), [])
         self.assertEqual(http.urls, [ccma.PAGE])
 
-    def test_hora_solo_si_es_el_mismo_dia(self):
+    def test_hora_solo_si_es_la_misma_fecha(self):
         self.assertIsNone(ccma.parse_ficha(fixture("ccma-convocatoria.html"), "2026-11-16")["deadline_time"])
+        self.assertIsNone(ccma.parse_ficha(fixture("ccma-convocatoria.html"), "2026-12-15")["deadline_time"])
+
+    def test_hora_con_mes_apostrofado(self):
+        page = fixture("ccma-convocatoria.html").replace("15 de novembre de 2026 a les 23:59h", "1 d’octubre de 2026 a les 14:00h")
+        self.assertEqual(ccma.parse_ficha(page, "2026-10-01")["deadline_time"], "14:00")
+        page = page.replace("d’octubre", "d'octubre")
+        self.assertEqual(ccma.parse_ficha(page, "2026-10-01")["deadline_time"], "14:00")
+
+    def test_ambito_ausente_o_desconocido_detiene_la_fuente(self):
+        for page in (fixture("ccma-index.html").replace("Àmbit:", "Àmbit del procés:"),
+                     fixture("ccma-index.html").replace("Concurs públic / promoció interna", "Borsa de treball")):
+            with self.assertRaises(SourceLayoutError):
+                ccma.CcmaSource(at(2026, 11, 12, 12, 0)).list_offers(Http(page))
 
     def test_lista_vacia_de_verdad(self):
         page = ('<h2 data-testid="seccio-processos">Processos de selecció oberts</h2>'

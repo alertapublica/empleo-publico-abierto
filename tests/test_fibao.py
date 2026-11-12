@@ -23,11 +23,15 @@ class Http:
         return page if page.startswith("<") else fixture(page)
 
 
-def listing(*rows):
+def listing(*rows, count=None):
+    count = len(rows) if count is None else count
+    menu = (f'<div class="mod_nav_top"><ul><li><a href="./">Todas</a></li>'
+            + (f'<li><a href="./?estado=Abierta">Abierta <span class="with-count">({count})</span></a></li>' if count else "")
+            + "</ul></div>")
     articles = "".join(f'<article class="article_item article_event"><a href="/ofertas/ficha/{ref}/"><ul>'
                        f'<li><strong>Fecha:</strong><br />28 de Octubre de 2026</li></ul><h3>{title}</h3></a></article>'
-                       for ref, title in rows)
-    return f"<html><head><title>Ofertas de empleo | Listado | FIBAO</title></head><body>{articles}</body></html>"
+                       for ref, title in rows) or '<article class="article_item no_events"><h1>No hay ofertas de empleo</h1></article>'
+    return f"<html><body><section>{menu}{articles}</section></body></html>"
 
 
 def at(*args):
@@ -53,8 +57,12 @@ class Fibao(unittest.TestCase):
                      FICHA.format(1501): "fibao-ficha.html"})
         source = fibao.FibaoSource(at(2026, 11, 5, 12, 0))
         (offer,) = source.list_offers(http)
-        self.assertEqual((offer.ref, offer.code, offer.title, offer.deadline, offer.published_on),
-                         ("1501", "87/2026", "Técnico/a Investigación PI24/00888", "2026-11-07", "2026-10-28"))
+        self.assertEqual((offer.ref, offer.title, offer.deadline, offer.published_on),
+                         ("1501", "87/2026.- Técnico/a Investigación PI24/00888", "2026-11-07", "2026-10-28"))
+        # El literal llega a la ingesta, que separa el código y guarda el título original.
+        self.assertEqual(source.labels(offer.title, offer.ref), {
+            "title": "Técnico/a Investigación PI24/00888", "code": "87/2026",
+            "source_title": "87/2026.- Técnico/a Investigación PI24/00888"})
         self.assertEqual(source.fetch_detail(http, offer).sections[0]["title"], "Convocatoria")
         self.assertEqual(len(http.urls), 2)  # la ficha no se vuelve a pedir
 
@@ -77,6 +85,33 @@ class Fibao(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             fibao.parse_list("<html><body>Página no encontrada</body></html>")
         self.assertEqual(fibao.parse_list(listing()), [])
+
+    def test_vacio_real_sin_contador_de_abiertas(self):
+        page = fixture("fibao-sin-resultados.html")  # un filtro sin resultados: «No hay ofertas de empleo»
+        with self.assertRaises(SourceLayoutError):  # el menú dice 2 abiertas
+            fibao.parse_list(page)
+        self.assertEqual(fibao.parse_list(page.replace('Abierta <span class="with-count">(2)</span>', "")), [])
+
+    def test_si_no_cuadra_con_el_contador_se_detiene(self):
+        with self.assertRaises(SourceLayoutError):
+            fibao.parse_list(listing(("1501", "87/2026.- Técnico/a"), count=2))
+        with self.assertRaises(SourceLayoutError):  # tarjetas con otra clase: no se ve ninguna
+            fibao.parse_list(fixture("fibao-abiertas.html").replace("article_item article_event", "item"))
+
+    def test_lista_vacia_sin_el_aviso_se_detiene(self):
+        with self.assertRaises(SourceLayoutError):
+            fibao.parse_list(listing().replace("No hay ofertas de empleo", ""))
+
+    def test_ficha_sin_plazo_se_detiene(self):
+        with self.assertRaises(SourceLayoutError):
+            fibao.parse_ficha(fixture("fibao-ficha.html").replace("Fecha fin de presentación", "Último día"))
+
+    def test_solo_se_enlazan_las_bases(self):
+        page = fixture("fibao-ficha.html").replace(
+            "</table>", '<tr><td>Acta de valoración de candidaturas</td><td><a href="/media/acta.pdf">Descargar</a></td></tr></table>')
+        documents = fibao.parse_ficha(page)["sections"][-1]["html"]
+        self.assertIn("Bases de la convocatoria", documents)
+        self.assertNotIn("acta.pdf", documents)
 
     def test_ficha_sin_convocatoria_se_detiene(self):
         with self.assertRaises(SourceLayoutError):

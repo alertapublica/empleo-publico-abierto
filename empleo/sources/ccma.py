@@ -8,7 +8,9 @@ convocatoria entera en `div.descripcioConvocatoria`, en catalán; el último dí
 («finalitza el dia 15 de novembre de 2026 a les 23:59h»).
 
 Es oferta el proceso con el fin del periodo sin vencer y con un ámbito abierto al público («Concurs
-públic», también «Concurs públic / promoció interna»); los de solo promoción interna no se leen. Sin
+públic», también «Concurs públic / promoció interna»); los de solo promoción interna no se leen y un
+ámbito ausente o desconocido detiene la fuente. La hora solo vale si la ficha da la misma fecha
+completa (también «d'octubre», con apóstrofo). Sin
 tarjetas, la lista tiene que estar vacía de verdad: si no, la fuente se detiene. Las bases se
 descargan con el formulario JSF: solo se enlaza la ficha.
 """
@@ -28,8 +30,11 @@ from .base import Source
 SITE = "https://seleccio.3cat.cat"
 PAGE = SITE + "/seleccio/index.jsf"
 PUBLIC = re.compile(r"públic|extern", re.I)
+INTERNAL = re.compile(r"(?:promoció\s+)?intern[ao]?", re.I)
+MONTHS = "gener febrer març abril maig juny juliol agost setembre octubre novembre desembre".split()
 DMY = re.compile(r"(\d{2})/(\d{2})/(\d{4})")
-LAST_DAY = re.compile(r"finalitza\s+el\s+dia\s+(\d{1,2})\s+de\s+\w+\s+de\s+(\d{4})\s+a\s+les\s+(\d{1,2}[:.]\d{2})", re.I)
+LAST_DAY = re.compile(
+    r"finalitza\s+el\s+dia\s+(\d{1,2})\s+d(?:e\s+|['’]\s*)(\w+)\s+de\s+(\d{4})\s+a\s+les\s+(\d{1,2}[:.]\d{2})", re.I)
 
 
 def _clean(text: str) -> str:
@@ -74,8 +79,9 @@ def parse_ficha(html: str, deadline: str) -> dict:
         raise SourceLayoutError("3Cat: ficha sin convocatòria")
     hour = None
     last = LAST_DAY.search(_clean(content.get_text(" ")))
-    if last and int(last.group(1)) == int(deadline[8:]) and last.group(2) == deadline[:4]:
-        hour = clock(last.group(3))
+    month = MONTHS.index(last.group(2).lower()) + 1 if last and last.group(2).lower() in MONTHS else None
+    if month and f"{last.group(3)}-{month:02d}-{int(last.group(1)):02d}" == deadline:
+        hour = clock(last.group(4))
     # El editor envuelve la convocatoria en un `<p>`: fuera, para que queden sus bloques.
     for wrapper in content.find_all("p"):
         if wrapper.find(["p", "h2", "h3", "h4", "ul", "ol"]):
@@ -115,7 +121,13 @@ class CcmaSource(Source):
         now = self._now or datetime.now(timezone.utc)
         offers = []
         for row in parse_list(http.get(PAGE)):
-            if not PUBLIC.search(row["scope"] or "") or deadline_passed(row["deadline"], None, now):
+            if not row["scope"]:
+                raise SourceLayoutError(f"3Cat: «{row['title']}» sin «Àmbit»")
+            if not PUBLIC.search(row["scope"]):
+                if INTERNAL.fullmatch(row["scope"]):
+                    continue
+                raise SourceLayoutError(f"3Cat: ámbito desconocido «{row['scope']}» en «{row['title']}»")
+            if deadline_passed(row["deadline"], None, now):
                 continue
             ficha = parse_ficha(http.get(row["url"]), row["deadline"])
             if deadline_passed(row["deadline"], ficha["deadline_time"], now):

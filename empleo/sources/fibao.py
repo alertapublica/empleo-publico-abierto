@@ -1,17 +1,20 @@
 """FIBAO (Fundación para la Investigación Biosanitaria de Andalucía Oriental).
 
 `/ofertas/todas/?estado=Abierta` lista las convocatorias que el portal da por abiertas, veinte por
-página (con más, enlaza `?page=2`; la fuente se detiene en vez de leer solo la primera). Cada una es
+página (con más, enlaza `?page=2`; la fuente se detiene en vez de leer solo la primera). El menú dice
+cuántas hay («Abierta (2)»; sin ninguna, se supone que no aparece) y tienen que coincidir con las
+leídas; sin ninguna, la página dice «No hay ofertas de empleo» (visto con un filtro sin resultados,
+el 2026-11-12). Cada una es
 un `article` con la fecha de publicación, si tiene resolución y el título con su número delante
 («90/2026.- Técnico/a Investigación…»), enlazado a `/ofertas/ficha/N/`. El plazo solo está en la
-ficha: «Fecha fin de presentación de solicitudes: DD/MM/AAAA», sin hora. Publica unas 90 al año, con
+ficha: «Fecha fin de presentación de solicitudes: DD/MM/AAAA», sin hora; si no está, se detiene. Publica unas 90 al año, con
 plazos de una o dos semanas.
 
 Es oferta la ficha con el fin del plazo sin vencer. No son empleo abierto y no se leen: las
 convocatorias dirigidas a personal con vinculación laboral con las instituciones del instituto
 («con vinculación laboral a alguna de las instituciones») y las «Búsqueda de candidatos/as» para
 presentarse con FIBAO a una ayuda (PTA y similares), que no llevan número. De los documentos de la
-ficha se enlazan las bases, no las resoluciones ni las listas.
+ficha solo se enlazan los que se llaman «Bases…»: los demás pueden ser actas o listas de personas.
 """
 from __future__ import annotations
 
@@ -33,7 +36,8 @@ PAGE = SITE + "/ofertas/todas/?estado=Abierta"
 HOMEPAGE = SITE + "/ofertas/todas/"
 INTERNAL = re.compile(r"con\s+vinculación\s+laboral\s+a\s+alguna\s+de\s+las\s+instituciones", re.I)
 GRANT_SEARCH = re.compile(r"Búsqueda\s+(?:de\s+)?candidat", re.I)
-LISTS = re.compile(r"resoluci|lista|admitid|exclui|baremo|provisional|definitiv|tribunal", re.I)
+BASES = re.compile(r"Bases\b", re.I)
+EMPTY = "No hay ofertas de empleo"
 
 
 def _clean(text: str) -> str:
@@ -44,8 +48,14 @@ def parse_list(html: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     if soup.select_one("a[href*='page=']"):
         raise SourceLayoutError("FIBAO: más de una página de convocatorias abiertas")
+    counter = next((a for a in soup.select("div.mod_nav_top a") if _clean(a.get_text(" ")).startswith("Abierta")), None)
+    if soup.select_one("div.mod_nav_top") is None:
+        raise SourceLayoutError("FIBAO: la página no es la lista de ofertas")
+    expected = re.search(r"\((\d+)\)", counter.get_text()) if counter else None
+    if counter is not None and expected is None:
+        raise SourceLayoutError("FIBAO: no se lee cuántas convocatorias abiertas hay")
     found = []
-    for article in soup.select("article.article_item"):
+    for article in soup.select("article.article_item:not(.no_events)"):
         link, heading = article.find("a", href=re.compile(r"^/ofertas/ficha/\d+/$")), article.find("h3")
         if link is None or heading is None:
             raise SourceLayoutError("FIBAO: convocatoria sin enlace o sin título")
@@ -55,8 +65,10 @@ def parse_list(html: str) -> list[dict]:
             "ref": link["href"].strip("/").rsplit("/", 1)[1], "url": urljoin(SITE, link["href"]),
             "title": _clean(heading.get_text(" ")), "published_on": day.isoformat() if day else None,
         })
-    if not found and "ofertas de empleo" not in soup.get_text().lower():
-        raise SourceLayoutError("FIBAO: la página no es la lista de ofertas")
+    if len(found) != (int(expected.group(1)) if expected else 0):
+        raise SourceLayoutError(f"FIBAO: se leen {len(found)} convocatorias abiertas y el menú dice otra cosa")
+    if not found and EMPTY not in _clean(soup.get_text(" ")):
+        raise SourceLayoutError(f"FIBAO: lista sin convocatorias y sin «{EMPTY}»")
     return found
 
 
@@ -66,7 +78,9 @@ def parse_ficha(html: str) -> dict:
         raise SourceLayoutError("FIBAO: ficha sin convocatoria")
     text = _clean(content.get_text(" "))
     end = re.search(r"Fecha fin de presentación de solicitudes:\s*(\d{2})/(\d{2})/(\d{4})", text)
-    deadline = date(int(end.group(3)), int(end.group(2)), int(end.group(1))).isoformat() if end else None
+    if end is None:
+        raise SourceLayoutError("FIBAO: ficha sin «Fecha fin de presentación de solicitudes»")
+    deadline = date(int(end.group(3)), int(end.group(2)), int(end.group(1))).isoformat()
     paragraphs = []
     for p in content.find_all("p", recursive=False):
         line = _clean(p.get_text(" "))
@@ -77,7 +91,7 @@ def parse_ficha(html: str) -> dict:
     documents = []
     for row in content.select("table tr"):
         cells, link = row.find_all("td"), row.find("a", href=True)
-        if len(cells) < 2 or link is None or LISTS.search(cells[0].get_text()):
+        if len(cells) < 2 or link is None or not BASES.match(_clean(cells[0].get_text(" "))):
             continue
         documents.append(f'<li><a href="{escape(urljoin(SITE, link["href"]), quote=True)}">{escape(_clean(cells[0].get_text(" ")))}</a></li>')
     if documents:
@@ -104,11 +118,11 @@ class FibaoSource(Source):
             if GRANT_SEARCH.match(row["title"]):
                 continue
             ficha = parse_ficha(http.get(row["url"]))
-            if ficha["internal"] or not ficha["deadline"] or deadline_passed(ficha["deadline"], None, now):
+            if ficha["internal"] or deadline_passed(ficha["deadline"], None, now):
                 continue
             self._sections[row["ref"]] = ficha["sections"]
             offers.append(ListedOffer(
-                ref=row["ref"], **self.labels(row["title"], row["ref"]), company="FIBAO",
+                ref=row["ref"], title=row["title"], company="FIBAO",
                 url=row["url"], apply_url=row["url"], kind=None, deadline=ficha["deadline"],
                 published_on=row["published_on"],
             ))

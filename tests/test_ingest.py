@@ -339,6 +339,14 @@ class RunSource(unittest.TestCase):
                          ("Analista", "OE 24/26", "OE 24/26 - Analista"))
         self.assertEqual(self.stored("events.json")[-1]["kind"], "new")  # sin eventos por el cambio
 
+    def test_el_titulo_literal_que_ya_da_la_fuente_se_respeta(self):
+        offer = replace(listed(ref="2", title="Titulado/a Graduado/a I · PROMODAS"),
+                        code="081/2026", source_title="1.2 3 Titulado/a Graduado/a I")
+        ingest.run_source(FakeSource([offer], OfferDetail()), None, self.data, NOW)
+        record = self.stored()["2"]
+        self.assertEqual((record["title"], record["code"], record["source_title"]),
+                         ("Titulado/a Graduado/a I · PROMODAS", "081/2026", "1.2 3 Titulado/a Graduado/a I"))
+
     def test_el_plazo_vencido_de_la_ficha_cierra_en_la_misma_lectura(self):
         ingest.run_source(FakeSource([listed(deadline=None)], OfferDetail(deadline="2026-11-06")), None, self.data, NOW)
         self.assertEqual(self.stored()["1"]["status"], "closed")

@@ -43,6 +43,8 @@ def parse_concursos(html: str) -> list[dict]:
         day, month, year = end.groups()
         found.append({"title": " ".join(cells[1].get_text(" ").split()),
                       "deadline": date(int(year), int(month), int(day)).isoformat()})
+    if not found:  # la tabla guarda también los cerrados: vacía, algo ha cambiado
+        raise SourceLayoutError("EMASESA: la tabla de concursos públicos no tiene filas")
     return found
 
 

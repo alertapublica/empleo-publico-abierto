@@ -247,7 +247,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     for record in offers.values():  # guardadas antes de separar el código del título (una vez)
         if "source_title" not in record:
             record.update(source.labels(record["title"], record["ref"]))
-    listed = [replace(offer, **source.labels(offer.title, offer.ref, offer.code))
+    # El código se separa aquí; si la fuente ya da el título literal aparte, se respeta.
+    listed = [offer if offer.source_title else replace(offer, **source.labels(offer.title, offer.ref, offer.code))
               for offer in source.list_offers(http)]
     for offer in listed:
         check_dates(offer, ("deadline", "published_on", "opens_on"))

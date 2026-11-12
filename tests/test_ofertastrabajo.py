@@ -52,6 +52,16 @@ class Idis(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             ofertastrabajo.parse_idis("<html><body><p>Mantenimiento</p></body></html>")
 
+    def test_pendiente_de_publicacion_sin_fechas_no_es_oferta(self):
+        page = fixture("idis-publicadas.html").replace(
+            "Fecha apertura: <strong>16/10/2026</strong><br>", "", 1).replace(
+            "Fecha cierre: <strong>28/10/2026</strong>", "<span>Pendiente de publicación en DOGA</span>", 1)
+        self.assertEqual(len(ofertastrabajo.parse_idis(page)), 3)
+
+    def test_fecha_de_cierre_irreconocible_detiene_la_fuente(self):
+        with self.assertRaises(SourceLayoutError):
+            ofertastrabajo.parse_idis(fixture("idis-publicadas.html").replace("Fecha cierre:", "Fin del plazo:", 1))
+
 
 class GaliciaSur(unittest.TestCase):
     def test_solo_las_que_tienen_plazo(self):
@@ -72,6 +82,13 @@ class GaliciaSur(unittest.TestCase):
     def test_sin_convocatorias_se_detiene(self):
         with self.assertRaises(SourceLayoutError):
             ofertastrabajo.parse_galiciasur("<div class='list-wrapper'></div>")
+
+    def test_plazo_irreconocible_detiene_la_fuente(self):
+        with self.assertRaises(SourceLayoutError):  # otra clase: ya no se ve el plazo
+            ofertastrabajo.parse_galiciasur(fixture("galiciasur-publicadas.html").replace('class="plazo"', 'class="fechas"'))
+        with self.assertRaises(SourceLayoutError):  # un estado que no conocemos
+            ofertastrabajo.parse_galiciasur(fixture("galiciasur-publicadas.html").replace(
+                "Convocatoria resuelta", "Plazo ampliado", 1))
 
 
 class Titulo(unittest.TestCase):
@@ -119,6 +136,11 @@ class Ficha(unittest.TestCase):
         self.assertIn("946/bases-oferta.pdf", documents)
         self.assertNotIn("tribunal", documents)
         self.assertNotIn("baremo", documents)
+
+    def test_el_recuadro_sin_titulo_va_como_otros_datos(self):
+        other = next(s for s in ofertastrabajo.parse_ficha(fixture("idis-ficha.html")) if s["title"] == "Otros datos")
+        self.assertIn("Ubicación del puesto", other["html"])
+        self.assertIn("Hospital Clínico Universitario de Santiago", other["html"])
 
     def test_el_texto_preformateado_queda_en_parrafos(self):
         merits = next(s for s in ofertastrabajo.parse_ficha(fixture("idis-ficha.html")) if s["title"] == "Méritos")

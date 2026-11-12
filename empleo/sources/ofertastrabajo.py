@@ -18,10 +18,13 @@ repite en muchas convocatorias. El título publicado es el puesto sin esa catego
 investigación:», «PROYECTO:», «Línea de Investigación:»), « · » y ese texto, sin el rótulo ni la
 titulación que le sigue. El literal del puesto queda en `source_title`.
 
-Es oferta la que tiene la fecha de cierre sin vencer (sin hora). Clave: el número de la ficha; el
+Es oferta la que tiene la fecha de cierre sin vencer (sin hora). Sin fechas solo se aceptan los
+estados conocidos («Pendiente de publicación en DOGA» en IDIS, «Convocatoria resuelta» en Galicia
+Sur); cualquier otro detiene la fuente, para no dar por cerradas ofertas vigentes. Clave: el número de la ficha; el
 código público es la referencia. La ficha tiene cuadros numerados («Oferta de empleo»,
 «Condiciones/Duración», «Fecha límite») y recuadros con título («Requisitos imprescindibles»,
-«Méritos», «Más información»). De los documentos solo se enlazan las bases: «Tribunal» y «Baremo
+«Méritos», «Más información»; el que no lo tiene, con la financiación y la ubicación del puesto, va
+como «Otros datos»). De los documentos solo se enlazan las bases: «Tribunal» y «Baremo
 provisional» son listas de personas. Sin procesos.
 """
 from __future__ import annotations
@@ -43,6 +46,8 @@ PLAZAS = re.compile(r"(\d+)\s+PLAZAS\s+(?:de\s+)?", re.I)
 # Categoría del convenio delante del puesto: «1.2 3», «1.2.4», «1.2.2.», «1.1. 4», «1 1.3», «1..2 1», «.2.3».
 LEVEL = re.compile(r"(?:\.?\d+(?:\.+\d+)+\.?(?:\s+\d+(?:\.\d+)*\.?)?|\d+\s+\d+(?:\.\d+)+\.?)\s+(?=\D)")
 PROJECT = re.compile(r"(?:Proyecto(?:\s+de\s+investigaci[oó]n)?|L[ií]nea\s+de\s+investigaci[oó]n)\s*:?\s*(.+)", re.I)
+NO_DATES_IDIS = "Pendiente de publicación"
+NO_DATES_GALICIASUR = "Convocatoria resuelta"
 REF = re.compile(r"\s*\(REF:\s*([^)]+)\)\s*$")
 
 
@@ -78,8 +83,12 @@ def parse_idis(html: str) -> list[dict]:
         if heading is None or facts is None or link is None:
             raise SourceLayoutError("IDIS: convocatoria sin puesto, sin fechas o sin ficha")
         text = _clean(facts.get_text(" "))
-        ref = re.search(r"Número de referencia:\s*(.+?)\s*Fecha apertura", text)
+        ref = re.search(r"Número de referencia:\s*(.+?)\s*(?:Fecha apertura|$)", text)
         opens, closes = re.search(r"Fecha apertura:\s*(\S+)", text), re.search(r"Fecha cierre:\s*(\S+)", text)
+        if closes is None or _iso(closes.group(1)) is None:
+            if NO_DATES_IDIS in text:
+                continue
+            raise SourceLayoutError(f"IDIS: convocatoria sin fecha de cierre reconocible: «{text}»")
         position = _clean(heading.get_text(" "))
         project = block.select_one("h5")
         plazas = PLAZAS.match(position)
@@ -88,7 +97,7 @@ def parse_idis(html: str) -> list[dict]:
             **job_title(position, _clean(project.get_text(" ")) if project else None),
             "code": ref.group(1) if ref else None, "positions": int(plazas.group(1)) if plazas else None,
             "opens_on": _iso(opens.group(1)) if opens else None,
-            "deadline": _iso(closes.group(1)) if closes else None,
+            "deadline": _iso(closes.group(1)),
         })
     if not found:
         raise SourceLayoutError("IDIS: la página no tiene convocatorias")
@@ -106,9 +115,12 @@ def parse_galiciasur(html: str) -> list[dict]:
         if heading is None or link is None:
             raise SourceLayoutError("Galicia Sur: convocatoria sin título o sin ficha")
         period = item.select_one("div[class^='plazo']")
-        dates = DMY.findall(period.get_text()) if period else []
+        state = _clean(period.get_text(" ")) if period else ""
+        dates = DMY.findall(state)
         if len(dates) != 2:
-            continue  # «Convocatoria resuelta»: sin plazo
+            if state == NO_DATES_GALICIASUR:
+                continue
+            raise SourceLayoutError(f"Galicia Sur: convocatoria sin plazo reconocible: «{state}»")
         opens, closes = ("-".join(reversed(d)) for d in dates)
         literal = _clean(heading.get_text(" "))
         ref = REF.search(literal)
@@ -152,14 +164,12 @@ def parse_ficha(html: str) -> list[dict]:
         sections.append({"title": title, "level": 2, "html": _box(content)})
     for callout in soup.select("div.bs-callout"):
         heading = callout.find("h3")
-        if heading is None:
-            continue
-        heading.extract()
+        title = _clean(heading.extract().get_text(" ")) if heading else "Otros datos"
         for note in callout.select("small"):
             note.wrap(soup.new_tag("p"))
         html_box = _box(callout)
         if html_box:
-            sections.append({"title": _clean(heading.get_text(" ")), "level": 2, "html": html_box})
+            sections.append({"title": title, "level": 2, "html": html_box})
     bases = [a for a in soup.select("a[href]") if _clean(a.get_text(" ")) == "Bases de la oferta"]
     if bases:
         link = f'<p><a href="{escape(bases[0]["href"], quote=True)}">Bases de la oferta</a></p>'

@@ -48,6 +48,12 @@ class Emasesa(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             emasesa.parse_concursos("<html><body>Mantenimiento</body></html>")
 
+    def test_tabla_sin_filas_se_detiene(self):
+        page = fixture("emasesa-concursos.html")
+        header = page[:page.index("</tr>") + 5] + "</tbody></table></main></body></html>"
+        with self.assertRaises(SourceLayoutError):
+            emasesa.parse_concursos(header)
+
 
 if __name__ == "__main__":
     unittest.main()
