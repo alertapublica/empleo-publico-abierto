@@ -227,6 +227,24 @@
   "url": "https://www.cesce.es/documents/20122/19606505/Valoraci%C3%B3n+Fase+Concurso+%28AGOFE2+-+2026%29.pdf/603a62d4-0f89-cdfb-9450-d719c6f48011?t=1793206297216",
   "via": "tasa"
  },
+ "cesce:df17acfdc064": {
+  "access": null,
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-12",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-12T13:37:35+00:00",
+  "location": null,
+  "process": "CONVOCATORIA DEL 28 DE OCTUBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE ANALISTA DE RIESGOS (EN EL MARCO DE LA TASA DE REPOSICIÓN AUTORIZADA 2026)",
+  "process_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "source": "cesce",
+  "state": "curso",
+  "system": null,
+  "title": "Valoración fase concurso",
+  "url": "https://www.cesce.es/documents/20122/19820672/Valoraci%C3%B3n+fase+concurso+%28AR2+-+2026%29.pdf/9208d2c0-7514-659d-1890-959dc3180c08?t=1794397416293",
+  "via": "tasa"
+ },
  "cesce:f3f22d52d7b5": {
   "access": null,
   "apply_url": null,

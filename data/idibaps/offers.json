@@ -39,6 +39,46 @@
   "title": "MD Clinical Researcher pel grup Alzheimer i altres trastorns cognitius",
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/74/a21e8f32c3ee59008bf29b0dd7352c028b0f3160.pdf"
  },
+ "FU-303/2026": {
+  "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8e8cadc351bc21fb87111ca431491258af084ba4.pdf",
+  "category": null,
+  "closed_at": null,
+  "code": "FU-303/2026",
+  "company": "FRCB-IDIBAPS",
+  "contract": null,
+  "deadline": "2026-11-18",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T13:37:35+00:00",
+  "id": "idibaps:FU-303/2026",
+  "kind": null,
+  "listed_deadline": "2026-11-18",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "FU-303/2026",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p><a href=\"https://www.clinicbarcelona.org/uploads/media/default/0023/75/8e8cadc351bc21fb87111ca431491258af084ba4.pdf\">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "idibaps",
+  "source_title": "[FRCB-IDIBAPS] PhD Call 2026. 5 R1 positions in biomedicine at FRCB-IDIBAPS (Convocatòria FU-303/2026)",
+  "status": "open",
+  "title": "PhD Call 2026. 5 R1 positions in biomedicine at FRCB-IDIBAPS",
+  "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8e8cadc351bc21fb87111ca431491258af084ba4.pdf"
+ },
  "FU-320/2026": {
   "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/74/987c9f0e507ce1cf13598d707e3c0a58357059e2.pdf",
   "category": null,
