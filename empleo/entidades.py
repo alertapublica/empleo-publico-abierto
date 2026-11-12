@@ -65,24 +65,38 @@ def _records(data: Path) -> list[dict]:
         for offer in store.load(folder / "offers.json", {}).values():
             status = offer.get("status")
             found.append({"source": source, "kind": "oferta", "title": offer["title"], "state": status,
-                          "live": status == "open", "convocante": convocante(offer, source, "ofertas")})
+                          "live": status == "open", "url": offer.get("url"),
+                          "convocante": convocante(offer, source, "ofertas")})
         for notice in store.load(folder / "announcements.json", {}).values():
             state = notice.get("state")
             found.append({"source": source, "kind": "proceso", "title": notice["process"], "state": state,
-                          "live": state in ("abierto", "curso"),
+                          "live": state in ("abierto", "curso"), "url": notice.get("process_url"),
                           "convocante": convocante(notice, source, "procesos")})
     return found
 
 
-def duplicates(records: list[dict]) -> list[tuple[str, list[tuple]]]:
-    """Convocatorias del mismo convocante y título que aparecen en más de una fuente, vivas o no."""
-    groups = defaultdict(set)
+def duplicates(records: list[dict]) -> list[tuple[str, list[dict]]]:
+    """Convocatorias del mismo convocante y título que aparecen en más de una fuente, vivas o no.
+
+    Cada aparición es una oferta o un proceso de una fuente; los comunicados de un mismo proceso se
+    juntan en una, con los estados que hayan tenido."""
+    groups: dict[tuple, dict[tuple, dict]] = defaultdict(dict)
     for record in records:
-        if record["convocante"]:
-            groups[(record["convocante"], comparable(record["title"]))].add(
-                (record["source"], record["kind"], record["state"] or "?", record["title"]))
-    return [(who, sorted(items)) for (who, _), items in sorted(groups.items())
-            if len({item[0] for item in items}) > 1]
+        if not record["convocante"]:
+            continue
+        seen = groups[(record["convocante"], comparable(record["title"]))].setdefault(
+            (record["source"], record["kind"], record["title"]),
+            {"source": record["source"], "kind": record["kind"], "title": record["title"],
+             "url": record["url"], "states": set()})
+        seen["states"].add(record["state"] or "?")
+        seen["url"] = seen["url"] or record["url"]
+    return [(who, [items[k] for k in sorted(items)]) for (who, _), items in sorted(groups.items())
+            if len({source for source, _, _ in items}) > 1]
+
+
+def _appearance(item: dict) -> str:
+    title = f"[{item['title']}]({item['url']})" if item["url"] else item["title"]
+    return f"{item['source']} ({item['kind']}, {'/'.join(sorted(item['states']))}): {title}"
 
 
 def report(data: Path) -> str:
@@ -98,7 +112,7 @@ def report(data: Path) -> str:
     lines += ["", "# Posibles duplicados entre fuentes (mismo convocante y título, también en el histórico)", ""]
     found = duplicates(records)
     for who, items in found:
-        lines.append(f"- {who}: " + " | ".join(f"{s} ({k}, {st}): {t}" for s, k, st, t in items))
+        lines.append(f"- {who}: " + " | ".join(_appearance(item) for item in items))
     if not found:
         lines.append("Ninguno.")
     return "\n".join(lines) + "\n"

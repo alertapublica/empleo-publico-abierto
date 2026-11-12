@@ -84,6 +84,24 @@ class Informe(unittest.TestCase):
         self.assertIn("apb (proceso, finalizado)", text)
         self.assertIn("puertos (proceso, retirado)", text)
 
+    def test_los_comunicados_de_un_proceso_son_una_aparicion_con_su_enlace(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            data = Path(tmp)
+            url = "https://seleccio.portdebarcelona.cat/es/web/seleccio/tecnic"
+            _escribe(data, "apb", "announcements.json", {
+                "apb:1": {"process": "Técnico/a de promoción y comunicación de mercado", "state": "curso",
+                          "process_url": url},
+                "apb:2": {"process": "Técnico/a de promoción y comunicación de mercado", "state": "finalizado",
+                          "process_url": url}})
+            _escribe(data, "puertos", "announcements.json", {"puertos:1": {
+                "process": PUERTOS_BCN, "location": "Barcelona", "state": "retirado"}})
+            (who, items), = entidades.duplicates(entidades._records(data))
+            text = entidades.report(data)
+        self.assertEqual((who, [i["source"] for i in items]), ("apb", ["apb", "puertos"]))
+        self.assertIn(f"apb (proceso, curso/finalizado): [Técnico/a de promoción y comunicación de mercado]({url})",
+                      text)
+        self.assertIn(f"puertos (proceso, retirado): {PUERTOS_BCN}", text)  # sin enlace guardado, sin corchetes
+
     def test_el_mismo_titulo_en_una_sola_fuente_no_es_duplicado(self):
         with tempfile.TemporaryDirectory() as tmp:
             data = Path(tmp)
