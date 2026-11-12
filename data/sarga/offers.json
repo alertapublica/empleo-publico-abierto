@@ -2,7 +2,7 @@
  "tecnico-a-de-asistencias-desarrollo-rural-20261030": {
   "apply_url": "https://www.sarga.es/ofertas-de-empleo-especifico/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-12T13:07:32+00:00",
   "code": null,
   "company": "SARGA",
   "contract": "Indefinido",
@@ -35,7 +35,7 @@
   ],
   "source": "sarga",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "TÉCNICO/A DE ASISTENCIAS DESARROLLO RURAL",
   "url": "https://www.sarga.es/wp-content/uploads/2026/10/31698_Perfil_T2C_T_Asist_des_rural.pdf"
  }
