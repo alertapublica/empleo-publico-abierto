@@ -1427,5 +1427,29 @@
   "at": "2026-11-12T07:37:27+00:00",
   "kind": "new",
   "offer": "tragsa:58711"
+ },
+ {
+  "at": "2026-11-12T08:07:23+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:58246"
+ },
+ {
+  "after": "2026-11-18",
+  "at": "2026-11-12T08:07:23+00:00",
+  "before": "2026-11-10",
+  "kind": "deadline_changed",
+  "offer": "tragsa:58246"
+ },
+ {
+  "at": "2026-11-12T08:07:23+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:56487"
+ },
+ {
+  "after": "2026-11-23",
+  "at": "2026-11-12T08:07:23+00:00",
+  "before": "2026-11-09",
+  "kind": "deadline_changed",
+  "offer": "tragsa:56487"
  }
 ]

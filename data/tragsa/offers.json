@@ -282,11 +282,11 @@
  "56487": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56487",
   "category": "Específica",
-  "closed_at": "2026-11-10T05:23:42+00:00",
+  "closed_at": null,
   "code": "56487",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-09",
+  "deadline": "2026-11-23",
   "deadline_time": null,
   "department": "LLeida",
   "detail_ok": true,
@@ -295,9 +295,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:56487",
   "kind": "temporal",
-  "listed_deadline": "2026-11-09",
+  "listed_deadline": "2026-11-23",
   "location": "Lleida",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Lleida",
@@ -308,7 +308,7 @@
   "region": "Cataluña",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Caminos Canales y Puertos o Graduado/a + Máster Oficial (Plan Bolonia) en Ingeniería de Caminos Canales y Puertos - Redacción de proyectos de carreteras  (Lleida) en Lleida. En relación al proceso publicado el pasado 13/07/2026 se amplía el plazo de recepción de candidaturas desde el 03/11/2026 hasta el 09/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Caminos Canales y Puertos o Graduado/a + Máster Oficial (Plan Bolonia) en Ingeniería de Caminos Canales y Puertos - Redacción de proyectos de carreteras  (Lleida) en Lleida. En relación al proceso publicado el pasado 03/11/2026 se amplía el plazo de recepción de candidaturas desde el 12/11/2026 hasta el 23/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -375,7 +375,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Caminos Canales y Puertos o Graduado/a + Máster Oficial (Plan Bolonia) en Ingeniería de Caminos Canales y Puertos - Redacción de proyectos de carreteras (Lleida)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56487"
  },
@@ -7527,11 +7527,11 @@
  "58246": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58246",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "58246",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-10",
+  "deadline": "2026-11-18",
   "deadline_time": "23:59",
   "department": "Pontevedra",
   "detail_ok": true,
@@ -7540,10 +7540,10 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58246",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
+  "listed_deadline": "2026-11-18",
   "location": "Pontevedra",
-  "missed_runs": 1,
-  "opens_on": "2026-11-05",
+  "missed_runs": 0,
+  "opens_on": "2026-11-12",
   "parent_ref": null,
   "place": "Pontevedra",
   "portal_tries": 1,
@@ -7553,7 +7553,7 @@
   "region": "Galicia",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para prestar apoyo en obras de la Gerencia de Pontevedra<br/><br/>En relación al proceso publicado el pasado 08/10/2026 se amplía el plazo de recepción de candidaturas desde el 05/11/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para prestar apoyo en obras de la Gerencia de Pontevedra<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 12/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -7608,14 +7608,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 05/11/2026 hasta el próximo 10/11/2026  a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 12/11/2026 hasta el próximo 18/11/2026  a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Caminos, Canales y Puertos - Obras (Pontevedra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58246"
  },
