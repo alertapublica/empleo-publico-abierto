@@ -189,6 +189,11 @@
    "alias": []
   },
   {
+   "id": "ccma",
+   "nombre": "3Cat (Corporació Catalana de Mitjans Audiovisuals)",
+   "alias": []
+  },
+  {
    "id": "tmb",
    "nombre": "TMB (Transports Metropolitans de Barcelona)",
    "alias": []
@@ -201,6 +206,11 @@
   {
    "id": "bsm",
    "nombre": "BSM (Barcelona de Serveis Municipals)",
+   "alias": []
+  },
+  {
+   "id": "emasesa",
+   "nombre": "EMASESA (Aguas de Sevilla)",
    "alias": []
   },
   {
@@ -291,6 +301,26 @@
   {
    "id": "cnic",
    "nombre": "CNIC (Centro Nacional de Investigaciones Cardiovasculares)",
+   "alias": []
+  },
+  {
+   "id": "idis",
+   "nombre": "IDIS (Instituto de Investigación Sanitaria de Santiago)",
+   "alias": []
+  },
+  {
+   "id": "galiciasur",
+   "nombre": "IIS Galicia Sur (Fundación Biomédica Galicia Sur)",
+   "alias": []
+  },
+  {
+   "id": "fibao",
+   "nombre": "FIBAO (Fundación para la Investigación Biosanitaria de Andalucía Oriental)",
+   "alias": []
+  },
+  {
+   "id": "furioja",
+   "nombre": "Fundación de la Universidad de La Rioja",
    "alias": []
   },
   {

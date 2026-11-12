@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca"><head id="j_idt2">
+    <title>Espai Selecció
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://statics.3cat.cat/_resources/favicons/3cat-apple-touch-icon-180x180.png" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-192x192.png" sizes="192x192" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-160x160.png" sizes="160x160" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://statics.3cat.cat/_resources/favicons/3cat-favicon-16x16.png" sizes="16x16" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="https://statics.3cat.cat/_resources/favicons/3cat-mstile-144x144.png" />
+	<link rel="shortcut icon" href="https://www.3cat.cat/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="Author" content="(ASI) Corporació Catalana de Mitjans Audiovisuals, S.A." lang="ca" />
+    <meta name="description" content="Portal web dels processos de selecció de la Corporació Catalana de Mitjans Audiovisuals" />
+
+    <script src="https://statics.3cat.cat/js/vendor/jquery.min.js">
+      <!--jquery 1.9.1-->
+    </script>
+    <script src="https://statics.3cat.cat/js/vendor/jquery.scrollTo.min.js"></script>
+    <!-- &lt;link
+      href="/seleccio/css/bootstrap.5.1.3.min.css?fp=b38e0e06"
+      rel="stylesheet"
+      type="text/css"
+    /&gt; -->
+    <link href="/seleccio/css/bootstrap.css?fp=30d3cc45" rel="stylesheet" type="text/css" />
+    <script src="/seleccio/js/general.js?fp=94ae9fcd" type="text/javascript">
+      <!-- -->
+    </script>
+    <link href="/seleccio/css/fontawesome-all.min.css?fp=3dbcb3fd" rel="stylesheet" type="text/css" />
+    <link href="/seleccio/css/bootstrap-icons/bootstrap-icons.css?fp=20261029_080541Z" rel="stylesheet" type="text/css" />
+
+    <!-- TODO: Codi COMU que hauria de facilitar Interactiva -->
+    <script src="https://statics.3cat.cat/js/capnouportal_utf8.min.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?hl=ca" async="async" defer="defer"></script>
+    <script src="/seleccio/js/bootstrap.bundle.5.1.3.min.js?fp=f63e89d1"></script>
+
+    <!-- css -->
+    <link href="/seleccio/css/base.css?fp=7d9fa8f6" rel="stylesheet" type="text/css" />
+
+    <!-- carreguem Javascript de JSF --><script defer="defer" city="madrid" src="https://madrid.report.botm.transparentedge.io/static/js/bm.js" origin-key="tjo_y07qw0gVtvhmf577hhqGsS7XuVjrVBMxqZAR" async="async" track="true"></script><script type="text/javascript" src="/seleccio/javax.faces.resource/jsf.js.jsf?ln=javax.faces"></script></head>
+  <body style="background-position: 0 44px">
+
+      <script type="text/javascript" src="/seleccio/js/general.js?fp=94ae9fcd"></script>
+      <script type="text/javascript" src="/seleccio/js/jquery/jquery-ui.js?fp=20261029_080541Z"></script>
+      <script type="text/javascript" src="/seleccio/js/message-frame.js?fp=9c5ff046"></script>
+      <script type="text/javascript" src="/seleccio/js/missatges.js?fp=ae90108b"></script>
+
+	<iframe id="iframeDialeg" name="iframeDialeg" style="height:0px;width:100%;">
+		
+	</iframe>
+
+<script type="text/javascript" charset="utf-8">
+	
+	var fesRefresca = false;
+	function refresca() {
+		var command="";
+		if (command){
+			document.getElementById(command).click();
+		}
+	}
+
+	var dialogObrintse=false;
+	function _obrirDialegIntern(){
+		//un cop carregat el contingut (si encara no haviem fet open)
+		if (!jQuery("#iframeDialeg").dialog( "isOpen" ) && dialogObrintse){
+			_obreDialeg(jQuery("#iframeDialeg"),'center');
+			dialogObrintse = false;
+		}
+	}
+	
+	jQuery("#iframeDialeg").dialog({
+		modal:true,
+		autoOpen:false,
+		close:function( event, ui ) {
+			if (top.fesRefresca) refresca();
+			$('#iframeDialeg', window.parent.document).contents().find("body").html('');
+		}
+	}).load(_obrirDialegIntern);
+	
+    function obreDialeg(alcada, amplada){
+        if (alcada!=null 
+        && alcada.toString().indexOf("%") >= 1) {
+            alcada = parseInt(alcada.toString().replace("%",""));
+            alcada = alcada / 100;            
+            alcada = $(window).height() * alcada;   
+        }
+        
+        //configurem el dialog, pero no l'obrim, ho farà el load de l'iframe per tenir les mides bones.
+        jQuery("#iframeDialeg")
+            .dialog( "option", "width", amplada!=null?amplada:"50%" )
+            .dialog( "option", "height", alcada!=null?alcada:"400");
+        dialogObrintse=true;
+        //TODO: intentar calcular la mida del contingut obrint el dialeg un cop carregat (mig preparat a load(_obrirDialegIntern)).
+        //jQuery("#iframeDialeg")[0].src="/seleccio/loading.jsf";
+        _obrirDialegIntern();
+    }
+
+    function _obreDialeg(dialeg,posicio){
+        dialeg
+            .dialog("option","position",{my:posicio,at:posicio, of:window})
+            .dialog("open")
+            .css('width','100%'); //TODO: ho posem perque jQuery-ui-dialog no calcula be l'amplada
+    }
+    
+	
+</script>
+
+      <div class="ccmabar">
+        <script type="text/javascript">
+          capnouportal(0, 0, "menu5");
+        </script>
+      </div>
+
+      <div id="web" class="portada d-flex flex-column">
+
+        <header>
+          <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-expand-xl navbar-light bg-blanc">
+                <div class="container-fluid">
+<form id="j_idt13" name="j_idt13" method="post" action="/seleccio/convocatoria.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt13" value="j_idt13" />
+<a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt13'),{'j_idt13:j_idt14':'j_idt13:j_idt14'},'');return false">
+                      <h1 class="d-flex align-items-center navbar-brand mb-0 me-0">
+                        <img src="/seleccio/img/seleccio.png" alt="Selecció CCMA" class="me-2" />ESPAI DE SELECCIÓ
+                      </h1></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Opcions de navegació">
+                      <span class="navbar-toggler-icon"></span>
+                    </button><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="5313144450536163016:7539488124704329899" autocomplete="off" />
+</form>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<form id="iniciaSessio" name="iniciaSessio" method="post" action="/seleccio/convocatoria.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="iniciaSessio" value="iniciaSessio" />
+
+                      <ul class="navbar-nav">
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt21':'iniciaSessio:j_idt21'},'');return false" class="nav-link p-md-1">
+                            PROCESSOS DE SELECCIÓ
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt24':'iniciaSessio:j_idt24'},'');return false" class="nav-link p-md-1">
+                            NOTÍCIES
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt27':'iniciaSessio:j_idt27'},'');return false" class="nav-link p-md-1">
+                            <em class="bi bi-question-circle pe-1" title="Preguntes Freqüents" aria-hidden="true"></em>PREGUNTES FREQÜENTS
+                          </a>
+                        </li>
+                        <li class="nav-item  p-2 p-md-0"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt30':'iniciaSessio:j_idt30'},'');return false" class="nav-link p-md-1">
+                            <em class="bi bi-envelope pe-1" title="Contacte" aria-hidden="true"></em>CONTACTE
+                          </a>
+                        </li>
+                          <li class="nav-item  ms-xl-1 p-2 p-md-0 rDestaca"><a href="#" onclick="mojarra.jsfcljs(document.getElementById('iniciaSessio'),{'iniciaSessio:j_idt35':'iniciaSessio:j_idt35'},'');return false" class="nav-link p-md-1">
+                              <em class="bi bi-person pe-1" title="Inici" aria-hidden="true"></em>EL MEU ESPAI
+                            </a>
+                          </li>
+                      </ul><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="5313144450536163016:7539488124704329899" autocomplete="off" />
+</form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header><div id="cap" class="cap">
+			<!-- lloc on posar els avisos -->
+    
+	<div id="destiMissatgesAvis">  </div></div>
+        <div class="R-big-background flex-grow-1"><div class="container">
+            <div class="row R-slogan d-flex align-items-center">
+              <div class="col-12 col-xl-4 mb-3 mt-3 mb-sm-3 mt-sm-3">
+                <img src="/seleccio/img/somfutur.png" alt="Som futur. Som [el teu] futur." />
+                <p class="mt-3 blanc">Volem que treballis amb nosaltres! Comptem amb un gran equip de persones i volem continuar creixent amb professionals com tu. Explora les convocatòries obertes i troba-hi la teva passió. T’hi esperem!</p>
+<form id="j_idt54" name="j_idt54" method="post" action="/seleccio/convocatoria.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt54" value="j_idt54" />
+<a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt54'),{'j_idt54:j_idt55':'j_idt54:j_idt55'},'');return false">
+                    <button type="button" class="btn btn-dark btn-sm B-boto-acces">
+                      <em class="bi bi-person-fill" aria-hidden="true"></em>
+                      ACCEDEIX / REGISTRA'T
+                    </button></a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="5313144450536163016:7539488124704329899" autocomplete="off" />
+</form>
+              </div>
+              <div class="d-none d-lg-flex col-lg-12 col-xl-8 justify-content-center -3 d-flex R-caixes">
+                <video autoplay="true" muted="true" width="400px" aria-hidden="true">
+                  <source src="https://mp4-down-high-int.3catvideos.cat/1/3/1677761447331.mp4" type="video/mp4"></source>
+                  <!-- &lt;source
+                    src="/seleccio/img/connecta.mp4"
+                    type="video/mp4"
+                  /&gt; -->
+                </video>
+              </div>
+            </div></div><div class="container R-wrapper ">
+            <div class="alert_ccma"></div>
+            <div class="row"><div id="cos" class="cos">
+<form id="j_idt60" name="j_idt60" method="post" action="/seleccio/convocatoria.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt60" value="j_idt60" />
+
+
+      <!-- &lt;h3 class="titol-3"&gt;&lt;t:outputText value="Processos de selecci&oacute;" /&gt;&lt;/h3&gt; -->
+      <div class="row mt-3">
+        <div class="col-12 d-flex align-items-center border-bottom"><a href="#" title="Enrere" onclick="mojarra.jsfcljs(document.getElementById('j_idt60'),{'j_idt60:j_idt63':'j_idt60:j_idt63','estat':'PROCESOBERT'},'');return false" class="me-3">          	
+            <em class="bi bi-chevron-left" role="img" aria-label="Anar a la convocatòria"></em></a>
+          <h2 class="mb-0" data-testid="titol-convocatoria">2026 ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL·LACIONS
+          </h2>
+        </div>
+      </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="5313144450536163016:7539488124704329899" autocomplete="off" />
+</form><div>
+<form id="dadesVigentsDetall:formDetallVigents" name="dadesVigentsDetall:formDetallVigents" method="post" action="/seleccio/convocatoria.jsf" enctype="multipart/form-data">
+<input type="hidden" name="dadesVigentsDetall:formDetallVigents" value="dadesVigentsDetall:formDetallVigents" />
+
+          <div class="row">
+            <div class="col-12 col-lg-8 p-3">
+              <div class="anunci_detall"><div id="dadesVigentsDetall:formDetallVigents:opcionsCV" class="dretaFloat"></div>
+                <div>
+                  <strong></strong>
+                  <!-- &lt;t:outputText
+                    value="2026 ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL&middot;LACIONS"
+                  /&gt; -->
+                </div>
+                <div class="descripcio descripcioConvocatoria">
+                  <p><h2><span style="font-size: 18pt;"><strong>CONVOCATÒRIA DE CONCURS CONJUNT DE PROMOCIÓ INTERNA I PÚBLIC D'ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL·LACIONS PER A LA CORPORACIÓ CATALANA DE MITJANS AUDIOVISUALS, SA</strong></span></h2>
+<p>D&rsquo;acord amb les previsions establertes al Tretzè Conveni Col·lectiu de Treball de la Corporació Catalana de Mitjans Audiovisuals, SA, es convoca un procés de selecció conjunt de promoció interna i públic per a la provisió actual d'una vacant, inclosa a l&rsquo;àrea de Patrimoni i Desenvolupament d'Infraestructures, i totes les que s&rsquo;hagin de cobrir durant els 24 mesos següents a partir de la data de publicació de resultats, i per disposar d&rsquo;una borsa de personal amb la capacitació suficient per a les contractacions temporals que hi pugui haver fins la convocatòria d&rsquo;un nou concurs públic.</p>
+<h3>1. CARACTERÍSTIQUES DEL LLOC DE TREBALL</h3>
+<ul>
+<li>Lloc de treball:&nbsp; Enginyer/a Especialista en projectes d'instal·lacions</li>
+<li>Nivell i categoria professional:&nbsp; Enginyer/a Especialista, nivell F</li>
+<li>Departaments: Fluids i energies</li>
+<li>Horari:&nbsp; Segons el conveni d&rsquo;aplicació</li>
+<li>Jornada:&nbsp; Jornada completa&nbsp;&nbsp;</li>
+<li>Retribució anual:&nbsp; 55.380,067&euro; (segons el conveni d&rsquo;aplicació)&nbsp;&nbsp;&nbsp;</li>
+<li>Centre de treball i localitat:&nbsp; C. Oriol Martorell, 1 (Sant Joan Despí) i/o Diagonal, 614 (Barcelona)</li>
+</ul>
+<h3>2. FUNCIONS DEL LLOC DE TREBALL</h3>
+<ul>
+<li>Definir necessitats i requeriments per projectes d'instal·lacions de fluids i energies, d'actualització i millora o de nova execució, seguint les directrius estratègiques i terminis de l'àrea i la CCMA.</li>
+<li>Participar en el disseny i seguiment de l'execució de projectes d'instal·lacions de fluids i energies per poder realitzar la posterior certificació, legalització i posta en servei.</li>
+<li>Participar en els processos de licitació pública dels projectes que li siguin encomanats.</li>
+<li>Seguiment de l'evolució tecnològica i normativa en el seus àmbits d'especialitats: fluids i energies.</li>
+</ul>
+<h3>3. REQUISITS D'ACCÉS A LA CONVOCATÒRIA</h3>
+<ul>
+<li>Per a la promoció interna: Personal indefinit de la plantilla de la CCMA o les de conformitat amb la normativa d&rsquo;aplicació i la resta de requisits especificats.</li>
+<li>Disposar del grau o màster en alguna Enginyeria Industrial o disposar d'una Enginyeria Tècnica Industrial o d'Enginyeria Industrial Superior o equivalent&nbsp;</li>
+<li>Disposar de 5 anys d&rsquo;experiència en projectes d&rsquo;infraestructures i d&rsquo;instal·lacions de fluids i energies</li>
+<li>Coneixements orals i escrits de nivell de català C1 i nivell d&rsquo;anglès B2 o superar una prova amb caràcter obligatori i eliminatori del mateix nivell.</li>
+</ul>
+<h3>4. PRESENTACIÓ DE SOL·LICITUDS</h3>
+<p>El termini de presentació de candidatures per a aquest procés finalitza el dia <strong>15 de novembre de 2026 a les 23:59h</strong>.</p>
+<p>Barcelona, 21 d'octubre de 2026</p>
+                  </p>
+                </div>
+              </div><input type="submit" name="dadesVigentsDetall:formDetallVigents:j_idt74" value="Torna" class="btn btn-dark btn-sm" onclick="mojarra.jsfcljs(document.getElementById('dadesVigentsDetall:formDetallVigents'),{'dadesVigentsDetall:formDetallVigents:j_idt74':'dadesVigentsDetall:formDetallVigents:j_idt74','estat':'PROCESOBERT'},'');return false" />
+            </div>
+            <div class="col-12 col-lg-4 p-3"><div id="dadesVigentsDetall:formDetallVigents:periodeInscripcio" class="columna_dreta_convocatoria bg-columna p-3" data-testid="dadesVigents">
+                <h3>ENGINYER ESPECIALISTA
+                </h3><div class="mb-3">
+		            	<em class="bi bi-calendar-week" role="img" aria-label="Calendari"> </em><span class="badge bg-dark">Període d'inscripció:</span> 
+			            
+			          <strong>26/10/2026
+			          </strong>
+				          <span style="color: black"> a </span>
+				          <strong>15/11/2026
+				          </strong></div>
+                	
+                <div class="mb-3">
+                  <em class="bi bi-geo-alt-fill" aria-hidden="true"></em> Empresa:  
+                  <strong>CCMA, SA
+                  </strong>
+                </div>
+                
+                <div class="mb-3">
+                  <em class="bi bi-file-earmark-text" aria-hidden="true"></em><a href="#" onclick="mojarra.jsfcljs(document.getElementById('dadesVigentsDetall:formDetallVigents'),{'dadesVigentsDetall:formDetallVigents:j_idt96:0:j_idt98':'dadesVigentsDetall:formDetallVigents:j_idt96:0:j_idt98'},'_blank');return false">
+                    <strong>Bases de la convocatòria
+                    </strong></a>
+                </div><div id="dadesVigentsDetall:formDetallVigents:divOfertaForaPeriode">
+                  <p>
+                    <strong>Procés de selecció fora de període d'inscripció
+                    </strong>
+                  </p></div>
+                <br /><input type="submit" name="dadesVigentsDetall:formDetallVigents:j_idt125" value="Torna" class="btn btn-dark btn-sm" onclick="mojarra.jsfcljs(document.getElementById('dadesVigentsDetall:formDetallVigents'),{'dadesVigentsDetall:formDetallVigents:j_idt125':'dadesVigentsDetall:formDetallVigents:j_idt125','estat':'PROCESOBERT'},'');return false" /></div>
+              <!--fi columna 4-->
+            </div>
+          </div><div id="dadesVigentsDetall:formDetallVigents:panelModalConcursAmbDocuments">
+    
+	<div class="modal fade" id="modalInscripcioConcursAmbDocuments" tabindex="-1" aria-labelledby="modalInformaticaUsuariTitol" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+          <!-- &lt;h:form
+            id="formFormulariInscripcioConcursAmbDocuments"
+            enctype="multipart/form-data"
+          &gt; -->
+          
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalInscripcioConcursAmbDocuments">
+                  Acceptació de les bases de la convocatòria i documentació 
+                </h5>
+              </div>
+			  <div class="modal-body modal-bodycontingut p-0"><div id="dadesVigentsDetall:formDetallVigents:divDocumentsAportats">
+              	<div class="messages m-3"><div id="dadesVigentsDetall:formDetallVigents:errorsControlatsJSFDialog"></div>
+		        </div><div id="dadesVigentsDetall:formDetallVigents:taulaDocumentsAportats" class="ms-3 me-3"></div></div><div class="form-check mx-3 mb-3">
+				<label class="form-check-label"><input id="dadesVigentsDetall:formDetallVigents:acceptaBases" type="checkbox" name="dadesVigentsDetall:formDetallVigents:acceptaBases" class="form-check-input" title="He llegit les bases de la convocatòria, les entenc i declaro responsablement que, en el moment de formalitzar la meva inscripció, compleixo els requisits indicats per aquest procés de selecció" />
+					He llegit les bases de la convocatòria, les entenc i declaro responsablement que, en el moment de formalitzar la meva inscripció, compleixo els requisits indicats per aquest procés de selecció
+				</label><span id="dadesVigentsDetall:formDetallVigents:acceptaBasesMessage"></span></div>
+            </div><div id="dadesVigentsDetall:formDetallVigents:divDocumentsAportatsPeu" class="modal-footer"><input id="dadesVigentsDetall:formDetallVigents:accioReiniciaApartatInf" type="submit" name="dadesVigentsDetall:formDetallVigents:accioReiniciaApartatInf" value="Cancel·la" class="btn btn-dark btn-sm  me-2" onclick="mojarra.ab(this,event,'action',0,'dadesVigentsDetall:formDetallVigents:script',{'onevent':ajaxTancarModalInscripcioConcurs});return false" /><script type="text/javascript" src="/seleccio/javax.faces.resource/oamSubmit.js.jsf?ln=org.apache.myfaces"></script><input id="dadesVigentsDetall:formDetallVigents:j_idt162" name="dadesVigentsDetall:formDetallVigents:j_idt162" type="submit" value="Inscriu-me" onclick="jsf.util.chain(document.getElementById('dadesVigentsDetall:formDetallVigents:j_idt162'), event,'showWait();bloquejaPagina();tancarUnloadListener();;', 'mojarra.ab(\'dadesVigentsDetall:formDetallVigents:j_idt162\',event,\'action\',\'@this dadesVigentsDetall:formDetallVigents:acceptaBases\',\'dadesVigentsDetall:formDetallVigents:script dadesVigentsDetall:formDetallVigents:errorsControlatsJSFDialog dadesVigentsDetall:formDetallVigents:acceptaBases dadesVigentsDetall:formDetallVigents:acceptaBasesMessage dadesVigentsDetall:formDetallVigents:periodeInscripcio\',{\'onevent\':ajaxTancarModalInscripcioConcurs,\'params\':{\'idConv\':\'3316\'}})'); return false;" class="btn btn-dark btn-sm" data-testid="confirmar-inscripcio-modal" /></div>
+            </div><div id="dadesVigentsDetall:formDetallVigents:script">
+            <script>
+            function calTancarModalInscripcioConcurs(){
+				//Si a l'acceptar hi ha errors de validació, no el tancarem.
+		 		if(true){
+	 				myModal.hide();
+		 		}
+			}
+			if (false) {
+				window.addEventListener('beforeunload', evitaTancarFinestra, true);
+			}
+            </script></div>
+            
+            
+            <script>
+            
+	          var myModal;
+	
+	          jQuery(document).ready(function () {
+	            myModal = new bootstrap.Modal(
+	              document.getElementById("modalInscripcioConcursAmbDocuments"),
+	              { backdrop: "static", keyboard: false }
+	            );
+	          });
+	
+	          function obre_modal(data) {
+         		myModal.show();
+	          }
+        
+        	function ajaxTancarModalInscripcioConcurs(data){
+				stopShowingWait();
+				var status = data.status;
+			    if (status === "success") {
+			    	calTancarModalInscripcioConcurs();
+			    	if (false)
+			    		reinitTooltips();
+			    }
+			}	          
+	          
+            </script>
+            
+            
+          <!-- &lt;/h:form&gt; -->
+        </div>
+      </div>
+    
+<!-- Ens posicionem al primer error. Utilitzem jQuery.scrollTo --><script type="text/javascript">var missatgeControlDesa='Si abandoneu la p\u00E0gina podrieu perdre els canvis. Feu clic a \'Queda\'t a aquesta p\u00E0gina\' i guardeu els canvis fent clic al bot\u00F3 DESA.';
+</script>
+		<script type="text/javascript">
+			var marxant=true;
+			var modified;
+
+			function noMarxem(){
+				marxant = false;				
+			}
+			
+
+		
+			jQuery(document).ready(function () {
+				modified = false;
+				jQuery("input:text,input:checkbox,input:radio,textarea,select").change(function () {   
+					modified = true; 
+				}); 
+			}); 	
+					
+					
+		</script>
+	
+    
+<!-- Ens posicionem al primer error. Utilitzem jQuery.scrollTo -->
+	<script type="text/javascript">
+		jQuery(document).ready( 
+				function(){
+					if (jQuery(".missatgeError, .scrollTo").length > 0){
+						jQuery.scrollTo(jQuery('.missatgeError, .scrollTo').first(), '500', { offset: {top:-10} });
+					}
+		});
+		
+	</script></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:4" value="5313144450536163016:7539488124704329899" autocomplete="off" />
+</form></div></div>
+    
+	<div class="messages" id="divMissatgeAvis">
+	    <ul id="errorGeneralAjax" style="display:none;">
+	        <li class="ico-warning alert alert-danger">S'ha produït un error inesperat
+	        </li>
+	    </ul><div id="errorsControlatsJSF"></div>
+	</div>
+            </div></div>
+        </div>
+
+        	
+		<script type="text/javascript">
+			peunouportal(0, 0, "menu5");
+    	</script>
+      </div>
+   <script type="text/javascript">window.gdprAppliesGlobally=true;(function(){(function(e,r){var t=document.createElement("link");t.rel="preconnect";t.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var o=document.createElement("script");o.id="spcloader";o.type="text/javascript";o["async"]=true;o.charset="utf-8";var a="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+r;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var s=c.country;var d=c.region;if(s){a=a+"&country="+s;if(d){a=a+"&region="+d}}}t.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=a;o.src=a;var p=document.getElementsByTagName("script")[0];p.parentNode.insertBefore(t,p);p.parentNode.insertBefore(n,p);p.parentNode.insertBefore(i,p);p.parentNode.insertBefore(o,p)})("ea8bee0c-fac0-4150-846a-53dc583758d0","4wjnGP6D")})();</script>
+
+    <div class="carregantMiss" data-testid="mascara-carregant"></div>
+  </body>
+</html>

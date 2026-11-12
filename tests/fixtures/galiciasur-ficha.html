@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Inscripci&oacute;n en oferta de trabajo</title>
+
+    <!-- Styles bootstrap+font-awesome+cutom... -->
+    <link rel="stylesheet" href="https://empleo.fundacionbiomedica.es/css/all.css">
+    <link rel="stylesheet" href="https://empleo.fundacionbiomedica.es/css/app.css" >
+
+    <style type="text/css">
+    	body{
+    		background-color:transparent;
+    	}
+
+
+		.bs-callout {
+		    padding: 5px 10px;
+		    margin: 10px 0;
+		    border: 1px solid;
+		    border-left: 4px solid; 
+		    font-family: inherit;
+		}
+		.bs-callout h3 {
+		    font-size: 14px;
+		    font-weight: 700;
+		    margin-bottom: 0;
+		    margin-top: 2px;
+		    text-transform: uppercase;
+		}
+		.bs-callout pre{
+			margin:0;
+			padding-top:4px;
+			background-color: #fff;
+			border:none;
+			font-family: inherit;
+			white-space: break-spaces;
+			word-break: break-word;
+		}
+		.bs-callout p:last-child {
+		    margin-bottom: 0;
+		}
+		.bs-callout code {
+		    border-radius: 3px;
+		}
+		.bs-callout+.bs-callout {
+		    margin-top: -5px;
+		}
+		.bs-callout-default {
+		    border-left-color: #466A99;
+		}
+		.bs-callout-default h3 {
+		    color: #466A99;
+		}
+		.bs-callout-danger {
+		    border-color: #d9534f;
+		}
+		.bs-callout-danger h3 {
+		    color: #d9534f;
+		}
+		.bs-callout-danger small.aviso {
+		    color: #d9534f;
+		}
+		.bs-callout-noborder{
+			color: #333;	
+			border:1px solid #ccc;
+		}
+
+
+		.cuadro{
+			border:1px dashed #466A99;
+			position:relative;
+			float:left;
+			color:#333; 
+			padding:10px 10px 10px 20px;
+			margin-left: -15px;
+			width: 90%;
+			min-width: 90%;
+			min-height: 110px;
+		}
+		.cuadro h3{
+			padding:0;
+			margin:0;
+			font-size: 18px;
+		}
+		.detalle{
+			margin-top:4px;
+		}
+		.circulo{
+			width:30px;
+			float:left;
+			margin-top:10px;
+			color: #466A99;
+			border:1px solid #466A99;
+			background-color: #fff;
+			text-align: center;
+			border-radius: 15px;
+			padding: 4px;
+			opacity:1;
+			z-index: 1000;
+			position: relative;
+		}
+
+
+		.progress {
+		    margin-bottom:0;
+		    margin-top:6px;
+		    margin-left:10px;
+		}
+
+		.btn.focus {
+		    outline:thin dotted #333;
+		    outline:5px auto -webkit-focus-ring-color;
+		    outline-offset:-2px;
+		}
+
+		.btn.hover {
+		    color:#ffffff;
+		    background-color:#3276b1;
+		    border-color:#285e8e;
+		}
+
+		.header-form{
+			border: 1px solid #244e9a;
+			border-radius: 0 0 85% 85% / 30%;
+			background-color: #244e9a;
+			padding: 20px 10px;
+			color: #fff;
+		}
+		.body{
+			background-color: #f1f1f1;
+		}
+		.logoHRS4R{
+			margin-top: 5px;
+    		height: 65px;
+		}
+
+		.butDoc1,.butDoc2,.butDoc3{
+			margin-left: 15px;
+			padding: 10px 20px;
+			color: #222;			
+			display:block;
+			min-width:230px;
+			width:40%
+		}
+		.butDoc1{
+			background-color: #a0a0a0;			
+			text-transform: uppercase;
+		}
+		.butDoc2{
+			background-color: #90b6dd;
+		}
+		.butDoc3{
+			background-color: #f99a9a;
+		}
+
+   	</style>
+</head>
+
+<body class="nav-md" >
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" style="background-color:#fff">
+
+				<div class="row" style="background: #f1f1f1;margin-bottom: 0px;padding-bottom: 22px;">
+					<div class="col-md-12">
+						<a href="https://www.fundacionbiomedica.org"><img width="300px" src="https://empleo.fundacionbiomedica.es/images/FPGIBGS_Logo_fondo_blanco.svg" title="Fundación Biomédica Galicia Sur"></img></a>
+						<a href="https://www.iisgaliciasur.es/hr4rs"><img src="https://empleo.fundacionbiomedica.es/images/logo-HRS4R.png" title="HRS4R" class="logoHRS4R"></img></a>
+					</div>
+				</div>
+
+									<div class="row bg-primary header-form" >
+						<div class="col-md-12">
+							<h2>Formulario de inscripción oferta de trabajo<br><small style="color: #ccc;">Fundación Pública Galega de Investigación Biomédica Galicia Sur</small></h2>
+						</div>					
+					</div>
+					<br/>
+					<div  class="row">
+						<div class="col-md-4 col-sm-12 col-xs-12" style="margin-bottom:10px">
+							<span class="circulo">1</span>
+							<div class="cuadro">
+								<h3>Oferta de empleo <small>(REF: 25/26)</small></h3>
+								<div class="detalle">
+									- 1.2.4 Titulada/o Grado II  – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.)<br/>
+									- TITULACI&Oacute;N REQUERIDA: Grado/ Diplomatura en Ciencias de la Salud o biosanitario  ( Enfermer&iacute;a, Farmacia, Biolog&iacute;a, Biomedicina u otras titulaciones afines )  (menos de 300 ECTS) .<br/>
+																			- L&iacute;nea de Investigaci&oacute;n: &ldquo;Investigaci&oacute;n cl&iacute;nica traslacional para el tratamiento de enfermedades dermatol&oacute;gicas del Servicio de Dermatolog&iacute;a del Complexo Hospitalario Universitario de Pontevedra&rdquo; <br/>
+																	</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12" style="margin-bottom:10px">
+							<span class="circulo">2</span>
+							<div class="cuadro">
+								<h3>Condiciones/Duraci&oacute;n</h3>
+								<div class="detalle">
+									- Hasta fin de proyecto/financiamiento.<br/>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12" style="margin-bottom:10px">
+							<span class="circulo">3</span>
+							<div class="cuadro">
+								<h3>Fecha l&iacute;mite</h3>
+								<div class="detalle">22/11/2026</div>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div  class="row">
+													<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:20px">
+								<div class="">
+									<a class="butDoc1"
+									href="https://empleo.fundacionbiomedica.es/file/ofertatrabajo/315/bases-oferta.pdf">Bases de la oferta</a>
+								</div>
+							</div>
+																																																					</div>
+
+											<div class="row">
+							<div class="col-md-12">
+								<div class="bs-callout bs-callout-danger">
+								  <h3>Requisitos imprescindibles</h3>
+								  <pre>TITULACIÓN REQUERIDA: Diplomatura/Grado en Enfermería o en Ciencias de la Salud (menos de 300 ECTS) .</pre>
+								  <small class="aviso">* Las ofertas que no cumplan con todos los requisitos imprescindibles quedar&aacute;n autom&aacute;ticamente descartadas.</small>
+							  </div>
+							</div>
+						</div>		
+																<div class="row">
+							<div class="col-md-12">
+								<div class="bs-callout bs-callout-default">
+								  <h3>Requisitos valorables</h3>
+								  <pre>-Formación específica relacionada con las funciones del puesto ( gestión y coordinación de ensayos clínicos, monitorizaciones, gestión documental, normativa de investigación clínica, etc)
+( De 10 horas a 20 horas: 10 puntos;  y más de 20 horas: 15 puntos )
+-Formación acreditada en buenas prácticas clínicas ( BPC/GCP) conforme a normativa vigente:
+( De 10 horas a 20 horas: 10 puntos;  y más de 20 hora: 15 puntos )
+-Nivel de certificado de inglés mínimo B1.
+( B1: 10 puntos; B2 o superior: 20 puntos )
+-Experiencia previa en investigación clínica (Hospital, CRO, Industria farmacéutica…)
+( Hasta 2 años: 10 puntos;  Mäs de 2 años y hasta 3 años: 20 puntos; Más de 3 años: 35 puntos )
+
+* Ver bases de la oferta para más información
+</pre>
+							  </div>
+							</div>
+						</div>	
+						
+
+											<div class="row">
+							<div class="col-md-12">
+								<div class="bs-callout bs-callout-noborder">
+								  <h3>M&aacute;s informaci&oacute;n</h3>
+								  <pre>- Contrato indefinido para actividades científico-técnicas a tiempo completo.
+- Duración: 12 meses (o fin del proyecto/financiación).
+−Jornada: 37,5 h. semanales de lunes a viernes.
+−Salario: 23755,08€ brutos anuales incluidas dos pagas extras.
+−Centro de trabajo: Pontevedra - Centro de especialidades Mollabao.
+GRUPO DE INVESTIGACIÓN: DIPO
+
+La persona contratada se encargará de realizar las siguientes tareas/funciones:
+- Coordinación y gestión de estudios de investigación clínica y comunicación con todas las partes implicadas.
+- Registro de datos en cuadernos electrónicos (eCRF). 
+- Preparación y apoyo en seguimientos, auditorías, inspecciones.</pre>
+							  </div>
+							</div>
+						</div>	
+						
+
+				 
+
+
+<!-- Solo visible si oferta activa -->
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Formulario de inscripción</h2>
+					</div>
+				</div>
+				<form method="POST" action="https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="G0lRmdTYvFtyl1VrGh7kjwPdB9PSKMxCthyoR45e">
+					<input name="ofertaTrabajo_id" type="hidden" value="315">
+					<input name="tipoOfertaTrabajo" type="hidden" value="ofertaTrabajo">
+				<div class="row">
+					<div class="col-md-3">
+						<label for="nombre">Nombre*</label>
+						<input class="form-control" name="nombre" type="text" id="nombre">
+						
+					</div>					
+					<div class="col-md-3">
+						<label for="apellidos">Apellidos*</label>
+						<input class="form-control" name="apellidos" type="text" id="apellidos">
+						
+					</div>
+					<div class="col-md-6">
+						<label for="dni">DNI</label>
+						<input class="form-control" name="dni" type="text" id="dni">
+						
+					</div>					
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-3">
+						<label for="fecha_nacimiento">Fecha Nacimiento (d&iacute;a/mes/a&ntilde;o)</label>
+						<input class="form-control" name="fecha_nacimiento" type="text" id="fecha_nacimiento">
+						
+					</div>					
+					<div class="col-md-3">
+						<label for="email">Email*</label>
+						<input class="form-control" name="email" type="text" id="email">
+						
+					</div>
+					<div class="col-md-6">
+						<label for="domicilio">Domicilio</label>
+						<input class="form-control" name="domicilio" type="text" id="domicilio">
+						
+					</div>					
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="poblacion">Poblacion</label>
+						<input class="form-control" name="poblacion" type="text" id="poblacion">
+						
+					</div>
+					<div class="col-md-3">
+						<label for="codigo_postal">C&oacute;digo Postal</label>
+						<input class="form-control" name="codigo_postal" type="text" id="codigo_postal">
+						
+					</div>					
+					<div class="col-md-6">
+						<label for="provincia">Provincia</label>
+						<input class="form-control" name="provincia" type="text" id="provincia">
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="nacionalidad">Nacionalidad</label>
+						<input class="form-control" name="nacionalidad" type="text" id="nacionalidad">
+						
+					</div>					
+					<div class="col-md-3">
+						<label for="tlfno">Tlfno</label>
+						<input class="form-control" name="tlfno" type="text" id="tlfno">
+						
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<label for="titulacion">Titulaci&oacute;n*</label>
+						<input class="form-control" name="titulacion" type="text" id="titulacion">
+						
+					</div>
+				</div>
+
+				<hr style="margin:10px 5px"/>
+				 				<div class="row">
+					<div class="col-md-6">
+													<label for="fichero_cv" class="control-label">Currículum Vitae (Formato libre) <br><small>( pdf, doc, docx, rtf, txt, jpeg, jpg, bmp, png )</small></label>	
+							  		            <br/>
+	  		            <button id="uploadBtn_fichero_cv" class="btn btn-sm btn-primary">Seleccione un fichero</button>
+		          		<div id="progressOuter_fichero_cv" class="progress progress-striped active" style="display:none;">
+			            	<div id="progressBar_fichero_cv" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+			            	</div>
+		          		</div>
+						<div id="msgbox_fichero_cv"></div>
+						
+						<input id="fichero_cv" name="fichero_cv" type="hidden">
+						<input id="fichero_cv_nombre" name="fichero_cv_nombre" type="hidden">
+					</div>
+											<div class="col-md-6">
+							<label for="fichero_titulos" class="control-label">Copia del título y acreditaciones obligatorias (todo en un archivo)<br><small>( pdf, doc, docx, rtf, txt, jpeg, jpg, bmp, png )</small></label>	
+		  		            <br/>
+		  		            <button id="uploadBtn_fichero_titulos" class="btn btn-sm btn-primary">Seleccione un fichero</button>
+			          		<div id="progressOuter_fichero_titulos" class="progress progress-striped active" style="display:none;">
+				            	<div id="progressBar_fichero_titulos" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+				            	</div>
+			          		</div>
+							<div id="msgbox_fichero_titulos"></div>
+							
+							<input id="fichero_titulos" name="fichero_titulos" type="hidden">
+							<input id="fichero_titulos_nombre" name="fichero_titulos_nombre" type="hidden">
+						</div>	
+									</div>
+
+				<hr style="margin:10px 5px"/>
+				<div class="row">					
+					<div class="col-md-6">
+						<label for="fichero_otros_docs" class="control-label">Otra documentación (Todo en un archivo)<br><small>( pdf, doc, docx, rtf, txt, jpeg, jpg, bmp, png )</small></label>	
+	  		            <br/>
+	  		            <button id="uploadBtn_fichero_otros_docs" class="btn btn-sm btn-primary">Seleccione un fichero</button>
+		          		<div id="progressOuter_fichero_otros_docs" class="progress progress-striped active" style="display:none;">
+			            	<div id="progressBar_fichero_otros_docs" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+			            	</div>
+		          		</div>
+						<div id="msgbox_fichero_otros_docs"></div>
+						
+						<input id="fichero_otros_docs" name="fichero_otros_docs" type="hidden">
+						<input id="fichero_otros_docs_nombre" name="fichero_otros_docs_nombre" type="hidden">
+					</div>
+
+					<div class="col-md-6">						
+						<label for="fichero_declaracion_resp" class="control-label">Declaración responsable	(<a target="_blank" href="https://empleo.fundacionbiomedica.es/images/declaracion_responsable.pdf">Plantilla</a>)<br/><small>Descarga la plantilla y adjúntala firmada</small>
+						</label>						
+	  		            <br/>
+	  		            <button id="uploadBtn_fichero_declaracion_resp" class="btn btn-sm btn-primary">Seleccione un fichero</button>
+		          		<div id="progressOuter_fichero_declaracion_resp" class="progress progress-striped active" style="display:none;">
+			            	<div id="progressBar_fichero_declaracion_resp" class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+			            	</div>
+		          		</div>
+						<div id="msgbox_fichero_declaracion_resp"></div>
+						
+						<input id="fichero_declaracion_resp" name="fichero_declaracion_resp" type="hidden">
+						<input id="fichero_declaracion_resp_nombre" name="fichero_declaracion_resp_nombre" type="hidden">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<label for="otros_docs">Otra documentaci&oacute;n (incluya descripci&oacute;n del contenido del archivo)</label>
+						<textarea class="form-control" rows="1" name="otros_docs" cols="50" id="otros_docs"></textarea>
+						
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-12" style="margin-bottom:10px">
+						<p>* PARA MAS INFORMACI&Oacute;N CONSULTAR LAS BASES DE LA OFERTA&nbsp;</p>
+
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">	
+						<label>Aceptación de cláusulas</label>
+													<div>
+								<input id="clausulasReq" style="width:20px;float:left;margin-right:5px" name="cumplo_requisitos" type="checkbox" value="1">
+								<label for="clausulasReq" style="width:90%;text-align:justify">Acepto que cumplo con todos los requisitos imprescindibles indicados en la oferta</label>
+							</div>
+												<div>
+							<input id="clausulasRGPD" style="width:20px;float:left;margin-right:5px" name="clausulas" type="checkbox" value="clausulas">
+							<label for="clausulasRGPD" style="width:90%;text-align:justify">He leído y acepto la <a href="http://www.fundacionbiomedica.org/politica-cookies-privacidad/">política de privacidad</a> 
+		<ul style="padding: 5px 10px;"><li  style="padding-bottom:5px"><b>​Responsable de tratamiento</b>: Sus datos serán tratados por FUNDACIÓN BIOMÉDICA GALICIA SUR con domicilio social en HOSPITAL ALVARO CUNQUEIRO, BLOQUE TECNICO, PLANTA 2 – CTRA. CLARA CAMPOAMOR 341 36312 – VIGO (PONTEVEDRA).</li><li style="padding-bottom:5px"><b>Finalidad y legitimación</b>: Sus datos serán tratados para con la finalidad de gestionar su candidatura y contactarle para informar sobre la situación de nuestros procesos de selección de empleo , con base legal en el consentimiento expreso.
+		</li><li style="padding-bottom:5px"><b>Cesiones</b>: no serán cedidos a terceros salvo obligación legal.
+		</li><li style="padding-bottom:5px"><b>Plazo</b>: Los datos proporcionados se conservarán hasta la adjudicación de un puesto de trabajo o el máximo fijado en la convocatoria de empleo o, en todo caso, hasta que sean cancelados en respuesta al ejercicio por parte de su titular de los derechos correspondientes.
+		</li><li style="padding-bottom:5px"><b>Derechos</b>: Le informamos que puede ejercer sus derechos de acceso, rectificación, cancelación y oposición al tratamiento  dirigiéndose por escrito (siempre acreditando su identidad) a: FUNDACION BIOMEDICA GALICIA SUR en HOSPITAL ALVARO CUNQUEIRO, BLOQUE TECNICO, PLANTA 2 – CTRA. CLARA CAMPOAMOR 341 , 36312- VIGO (PONTEVEDRA)
+		</li><li style="padding-bottom:5px"><b>Información adicional</b>: Puede consultar la información adicional y detallada sobre Protección de datos en nuestra <a href="http://www.fundacionbiomedica.org/politica-cookies-privacidad/">política de privacidad</a>
+		</li>
+		</ul></label>
+						</div>
+						<div>Para cualquier duda o más información puedes contactar con <a href="mailto:rrhh@iisgaliciasur.es">rrhh@iisgaliciasur.es</a>
+						</div>
+						<br/>
+						
+						<button id="butEnviar" type="submit" class="btn btn-default" disabled="disabled">
+								<i class="fa fa-btn fa-floppy-o"></i> Enviar
+						</button>	
+					</div>
+				</div>	
+				<br/><br/>
+
+				</form>
+<!-- formulario solo visible si oferta activa -->	
+				
+
+
+ 			</div>
+		</div>
+	</div>
+ 
+
+	<!-- JavaScripts -->
+	<script src="https://empleo.fundacionbiomedica.es/js/all.js"></script>	
+	<script src="https://empleo.fundacionbiomedica.es/js/SimpleAjaxUploader.js"></script>	
+
+	<!-- Javascripts personalizados de las páginas -->
+	
+	<script type="text/javascript">
+		function escapeTags( str ) {
+		  return String( str )
+		           .replace( /&/g, '&amp;' )
+		           .replace( /"/g, '&quot;' )
+		           .replace( /'/g, '&#39;' )
+		           .replace( /</g, '&lt;' )
+		           .replace( />/g, '&gt;' );
+		}
+
+
+	  	$(document).ready(function(){
+	      // Resaltar etiquetas formularios. 
+	      $(".form-control").focus(function() {
+	        $("label[for='" + this.id + "']").addClass("labelfocus");
+	      }).blur(function() {
+	        $("label").removeClass("labelfocus");
+	      });
+
+
+	      $("#clausulasReq,#clausulasRGPD").change(function(){
+	      	if($("#clausulasReq:checked,#clausulasRGPD:checked").length == 2) {
+	      		$("#butEnviar").prop( "disabled", false );
+	      	}else{
+	      		$("#butEnviar").prop( "disabled", true );
+	      	}
+	      });
+
+	      $("#clausulasRGPD").change();
+
+
+
+		  // Botones de subida asíncrona. 
+		  maxFileSize = 40960; // kilobytes => 40Mb
+
+	      var btn = document.getElementById('uploadBtn_fichero_cv'),
+		      progressBar = document.getElementById('progressBar_fichero_cv'),
+		      progressOuter = document.getElementById('progressOuter_fichero_cv'),
+		      msgBox = document.getElementById('msgbox_fichero_cv');
+
+		  if ($("#fichero_cv_nombre").val() != ""){
+	  		msgBox.innerHTML = '<strong>' + $("#fichero_cv_nombre").val() + '</strong>' + ' almacenado correctamente.';
+	  	  }
+
+		  var uploader = new ss.SimpleUpload({
+		        button: btn,
+		        url:  'https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones-fich',
+		        name: 'uploadedFile',
+		        multipart: true,
+		        hoverClass: 'hover',
+		        focusClass: 'focus',
+		        responseType: 'json',
+		        allowedExtensions: ['pdf', 'doc', 'docx', 'rtf', 'txt', 'jpeg', 'bmp', 'png', 'jpg'],
+      			maxSize: maxFileSize, // kilobytes => 40Mb
+		        startXHR: function() {
+		            progressOuter.style.display = 'block'; // make progress bar visible
+		            this.setProgressBar( progressBar );
+		        },
+		        onSubmit: function() {
+		        	$("#fichero_cv").val("");
+		        	$("#fichero_cv_nombre").val("");		                
+		        	var self = this;
+		            self.setData({
+		            	"_token": "G0lRmdTYvFtyl1VrGh7kjwPdB9PSKMxCthyoR45e",
+		            	"fichero": "fichero_cv",
+		            });
+		            msgBox.innerHTML = ''; // empty the message box
+		            btn.innerHTML = 'Guardando...'; // change button text to "Uploading..."
+		          },
+		        onComplete: function( filename, response ) {
+		            btn.innerHTML = 'Seleccione otro fichero';
+		            progressOuter.style.display = 'none'; // hide progress bar when upload is completed
+
+		            if ( !response ) {
+		            	msgBox.innerHTML = 'No se pudo subir el fichero';
+		                return;
+		            }
+
+		            if ( response.success === true ) {
+		            	fiename = escapeTags( filename );
+		                msgBox.innerHTML = '<strong>' + filename  + '</strong>' + ' almacenado correctamente.';
+		                $("#fichero_cv").val(response.result);
+		                $("#fichero_cv_nombre").val(filename );		                
+
+		            } else {
+		                if ( response.msg )  {
+		                    msgBox.innerHTML = escapeTags( response.msg );
+
+		                } else {
+		                    msgBox.innerHTML = 'Se produjo un error al subir el fichero.';
+		                }
+		            }
+		          },
+		        onError: function() {
+		            progressOuter.style.display = 'none';
+		            msgBox.innerHTML = 'Error no se pudo subir el fichero';
+		          },
+		        onExtError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBox.innerHTML = 'Error: no se permite subir ficheros de tipo "'+extension+'"';
+		          },
+		        onSizeError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBox.innerHTML = 'Error: el archivo sobrepasa el tamaño máximo ('+maxFileSize+' Kb)';
+		          }
+			});
+
+
+
+		  
+
+			//Boton subida fichero Titulos
+		   	var btnTitulos = document.getElementById('uploadBtn_fichero_titulos'),
+			progressBarTitulos = document.getElementById('progressBar_fichero_titulos'),
+			progressOuterTitulos = document.getElementById('progressOuter_fichero_titulos'),
+			msgBoxTitulos = document.getElementById('msgbox_fichero_titulos');
+
+			if ($("#fichero_titulos_nombre").val() != ""){
+				msgBoxTitulos.innerHTML = '<strong>' + $("#fichero_titulos_nombre").val() + '</strong>' + ' almacenado correctamente.';
+			  }
+
+			var uploaderTitulos = new ss.SimpleUpload({
+			    button: btnTitulos,
+			    url:  'https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones-fich',
+			    name: 'uploadedFile',
+			    multipart: true,
+			    hoverClass: 'hover',
+			    focusClass: 'focus',
+			    responseType: 'json',
+			    allowedExtensions: ['pdf', 'doc', 'docx', 'rtf', 'txt', 'jpeg', 'bmp', 'png', 'jpg'],
+      			maxSize: 40960, // kilobytes => 40Mb
+			    startXHR: function() {
+			        progressOuterTitulos.style.display = 'block'; // make progress bar visible
+			        this.setProgressBar( progressBarTitulos );
+			    },
+			    onSubmit: function() {
+			    	$("#fichero_titulos").val("");
+			    	$("#fichero_titulos_nombre").val("");		                
+			    	var self = this;
+			        self.setData({
+			        	"_token": "G0lRmdTYvFtyl1VrGh7kjwPdB9PSKMxCthyoR45e",
+			        	"fichero": "fichero_titulos",
+			        });
+			        msgBoxTitulos.innerHTML = ''; // empty the message box
+			        btnTitulos.innerHTML = 'Guardando...'; // change button text to "Uploading..."
+			      },
+			    onComplete: function( filename, response ) {
+			        btnTitulos.innerHTML = 'Seleccione otro fichero';
+			        progressOuterTitulos.style.display = 'none'; // hide progress bar when upload is completed
+
+			        if ( !response ) {
+			        	msgBoxTitulos.innerHTML = 'No se pudo subir el fichero';
+			            return;
+			        }
+
+			        if ( response.success === true ) {
+			        	fiename = escapeTags( filename );
+			            msgBoxTitulos.innerHTML = '<strong>' + filename  + '</strong>' + ' almacenado correctamente.';
+			            $("#fichero_titulos").val(response.result);
+			            $("#fichero_titulos_nombre").val(filename );		                
+
+			        } else {
+			            if ( response.msg )  {
+			                msgBoxTitulos.innerHTML = escapeTags( response.msg );
+
+			            } else {
+			                msgBoxTitulos.innerHTML = 'Se produjo un error al subir el fichero.';
+			            }
+			        }
+			      },
+			    onError: function() {
+			        progressOuterTitulos.style.display = 'none';
+			        msgBoxTitulos.innerHTML = 'Error no se pudo subir el fichero';
+			      },
+		        onExtError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBoxTitulos.innerHTML = 'Error: no se permite subir ficheros de tipo "'+extension+'"';
+		          },
+		        onSizeError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBoxTitulos.innerHTML = 'Error: el archivo sobrepasa el tamaño máximo ('+maxFileSize+' Kb)';
+		          }
+			});
+
+
+
+			//Boton subida fichero Otros docs otros_docs
+		   	var btnOtrosDocs = document.getElementById('uploadBtn_fichero_otros_docs'),
+			progressBarOtrosDocs = document.getElementById('progressBar_fichero_otros_docs'),
+			progressOuterOtrosDocs = document.getElementById('progressOuter_fichero_otros_docs'),
+			msgBoxOtrosDocs = document.getElementById('msgbox_fichero_otros_docs');
+
+			if ($("#fichero_otros_docs_nombre").val() != ""){
+				msgBoxOtrosDocs.innerHTML = '<strong>' + $("#fichero_otros_docs_nombre").val() + '</strong>' + ' almacenado correctamente.';
+			  }
+
+			var uploaderOtrosDocs = new ss.SimpleUpload({
+			    button: btnOtrosDocs,
+			    url:  'https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones-fich',
+			    name: 'uploadedFile',
+			    multipart: true,
+			    hoverClass: 'hover',
+			    focusClass: 'focus',
+			    responseType: 'json',
+			    allowedExtensions: ['pdf', 'doc', 'docx', 'rtf', 'txt', 'jpeg', 'bmp', 'png', 'jpg'],
+      			maxSize: maxFileSize, // kilobytes => 40Mb
+			    startXHR: function() {
+			        progressOuterOtrosDocs.style.display = 'block'; // make progress bar visible
+			        this.setProgressBar( progressBarOtrosDocs );
+			    },
+			    onSubmit: function() {
+			    	$("#fichero_otros_docs").val("");
+			    	$("#fichero_otros_docs_nombre").val("");		                
+			    	var self = this;
+			        self.setData({
+			        	"_token": "G0lRmdTYvFtyl1VrGh7kjwPdB9PSKMxCthyoR45e",
+			        	"fichero": "fichero_otros_docs",
+			        });
+			        msgBoxOtrosDocs.innerHTML = ''; // empty the message box
+			        btnOtrosDocs.innerHTML = 'Guardando...'; // change button text to "Uploading..."
+			      },
+			    onComplete: function( filename, response ) {
+			        btnOtrosDocs.innerHTML = 'Seleccione otro fichero';
+			        progressOuterOtrosDocs.style.display = 'none'; // hide progress bar when upload is completed
+
+			        if ( !response ) {
+			        	msgBoxOtrosDocs.innerHTML = 'No se pudo subir el fichero';
+			            return;
+			        }
+
+			        if ( response.success === true ) {
+			        	fiename = escapeTags( filename );
+			            msgBoxOtrosDocs.innerHTML = '<strong>' + filename  + '</strong>' + ' almacenado correctamente.';
+			            $("#fichero_otros_docs").val(response.result);
+			            $("#fichero_otros_docs_nombre").val(filename );		                
+
+			        } else {
+			            if ( response.msg )  {
+			                msgBoxOtrosDocs.innerHTML = escapeTags( response.msg );
+
+			            } else {
+			                msgBoxOtrosDocs.innerHTML = 'Se produjo un error al subir el fichero.';
+			            }
+			        }
+			      },
+			    onError: function() {
+			        progressOuterOtrosDocs.style.display = 'none';
+			        msgBoxOtrosDocs.innerHTML = 'Error no se pudo subir el fichero';
+			      },
+		        onExtError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBoxOtrosDocs.innerHTML = 'Error: tipo de fichero no permitido ("'+extension+'")';
+		          },
+		        onSizeError: function( filename, extension ) {
+		            progressOuter.style.display = 'none';
+		            msgBoxOtrosDocs.innerHTML = 'Error: el archivo sobrepasa el tamaño máximo ('+maxFileSize+' Kb)';
+		          }
+			});
+
+
+			//Boton subida fichero  fichero_declaracion_resp
+		   	var btnDeclaracionResp = document.getElementById('uploadBtn_fichero_declaracion_resp'),
+			progressBarDeclaracionResp = document.getElementById('progressBar_fichero_declaracion_resp'),
+			progressOuterDeclaracionResp = document.getElementById('progressOuter_fichero_declaracion_resp'),
+			msgBoxDeclaracionResp = document.getElementById('msgbox_fichero_declaracion_resp');
+
+			if ($("#fichero_declaracion_resp_nombre").val() != ""){
+				msgBoxDeclaracionResp.innerHTML = '<strong>' + $("#fichero_declaracion_resp_nombre").val() + '</strong>' + ' almacenado correctamente.';
+			  }
+
+			var uploaderDeclaracionResp = new ss.SimpleUpload({
+			    button: btnDeclaracionResp,
+			    url:  'https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones-fich',
+			    name: 'uploadedFile',
+			    multipart: true,
+			    hoverClass: 'hover',
+			    focusClass: 'focus',
+			    responseType: 'json',
+			    allowedExtensions: ['pdf', 'doc', 'docx', 'rtf', 'txt', 'jpeg', 'bmp', 'png', 'jpg'],
+      			maxSize: maxFileSize, // kilobytes => 40Mb
+			    startXHR: function() {
+			        progressOuterDeclaracionResp.style.display = 'block'; // make progress bar visible
+			        this.setProgressBar( progressBarDeclaracionResp );
+			    },
+			    onSubmit: function() {
+			    	$("#fichero_declaracion_resp").val("");
+			    	$("#fichero_declaracion_resp_nombre").val("");		                
+			    	var self = this;
+			        self.setData({
+			        	"_token": "G0lRmdTYvFtyl1VrGh7kjwPdB9PSKMxCthyoR45e",
+			        	"fichero": "fichero_declaracion_resp",
+			        });
+			        msgBoxDeclaracionResp.innerHTML = ''; // empty the message box
+			        btnDeclaracionResp.innerHTML = 'Guardando...'; // change button text to "Uploading..."
+			      },
+			    onComplete: function( filename, response ) {
+			        btnDeclaracionResp.innerHTML = 'Seleccione otro fichero';
+			        progressOuterDeclaracionResp.style.display = 'none'; // hide progress bar when upload is completed
+
+			        if ( !response ) {
+			        	msgBoxDeclaracionResp.innerHTML = 'No se pudo subir el fichero';
+			            return;
+			        }
+
+			        if ( response.success === true ) {
+			        	fiename = escapeTags( filename );
+			            msgBoxDeclaracionResp.innerHTML = '<strong>' + filename  + '</strong>' + ' almacenado correctamente.';
+			            $("#fichero_declaracion_resp").val(response.result);
+			            $("#fichero_declaracion_resp_nombre").val(filename );		                
+
+			        } else {
+			            if ( response.msg )  {
+			                msgBoxDeclaracionResp.innerHTML = escapeTags( response.msg );
+
+			            } else {
+			                msgBoxDeclaracionResp.innerHTML = 'Se produjo un error al subir el fichero.';
+			            }
+			        }
+			      },
+			    onError: function() {
+			        progressOuterDeclaracionResp.style.display = 'none';
+			        msgBoxDeclaracionResp.innerHTML = 'Error no se pudo subir el fichero';
+			      },
+		        onExtError: function( filename, extension ) {
+		            progressOuterDeclaracionResp.style.display = 'none';
+		            msgBoxDeclaracionResp.innerHTML = 'Error: tipo de fichero no permitido ("'+extension+'")';
+		          },
+		        onSizeError: function( filename, extension ) {
+		            progressOuterDeclaracionResp.style.display = 'none';
+		            msgBoxDeclaracionResp.innerHTML = 'Error: el archivo sobrepasa el tamaño máximo ('+maxFileSize+' Kb)';
+		          }
+			});
+
+
+
+			
+
+	  	});
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

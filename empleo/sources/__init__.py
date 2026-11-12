@@ -1,6 +1,7 @@
 """Registro de fuentes del portal."""
 from .apb import ApbSource
 from .canal import CanalSource
+from .ccma import CcmaSource
 from .cesce import CesceSource
 from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
@@ -9,12 +10,14 @@ from .cnic import CnicSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
+from .emasesa import EmasesaSource
 from .emt import EmtSource
 from .enresa import EnresaSource
 from .enusa import EnusaSource
 from .etsa import EtsaSource
 from .fgc import FgcSource
 from .fgv import FgvSource
+from .fibao import FibaoSource
 from .fisevi import FiseviSource
 from .fnmt import FnmtSource
 from .fundanet import FISABIO, IDIBELL, IDIVAL
@@ -36,6 +39,7 @@ from .lafe import LaFeSource
 from .mercasa import MercasaSource
 from .mercasturias import MercasturiasSource
 from .navarrabiomed import NavarrabiomedSource
+from .ofertastrabajo import GaliciaSurSource, IdisSource
 from .pfsrv import AENA, ENAIRE
 from .puertos import PuertosSource
 from .rtve import RtveSource
@@ -75,6 +79,13 @@ ADIF = SentinelSource(
     page="https://www.adif.es/empleo/oferta-empleo-publico/plazo-solicitud-abierto",
     empty_text="no hay ninguna oferta de empleo público",
 )
+FURIOJA = SentinelSource(
+    id="furioja", name="Fundación de la Universidad de La Rioja",
+    homepage="https://fundacion.unirioja.es/transparencia/ofertas-empleo",
+    page="https://fundacion.unirioja.es/transparencia/ofertas-empleo",
+    empty_text="No hay ofertas de empleo abiertas en este momento",
+)
+FURIOJA.scope = "La Rioja"
 RENFE = SentinelSource(
     id="renfe", name="Renfe", homepage="https://empleo.renfe.com/",
     page="https://empleo.renfe.com/search/",
@@ -89,11 +100,12 @@ CATALOG = {
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
-    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource()],
-    "local": [TmbSource(), EmtSource(), BSM],
+    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource()],
+    "local": [TmbSource(), EmtSource(), BSM, EmasesaSource()],
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), FURIOJA,
     ],
 }
 for _group, _sources in CATALOG.items():
