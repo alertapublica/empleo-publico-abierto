@@ -474,6 +474,176 @@
   "title": "Ingenieros/as- Expedientes de Gasto de Servicios Afectados (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56493"
  },
+ "56609": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56609",
+  "category": "Progresiva",
+  "closed_at": null,
+  "code": "56609",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-12T14:37:29+00:00",
+  "id": "tragsa:56609",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-17",
+  "location": "A bordo de buques pesqueros cerqueros del de cerco tropical del Atlántico, Índico y/o Pacífico",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 8,
+  "published_on": null,
+  "ref": "56609",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 8 Titulados/as Universitarios/as para trabajar como Observadores/as científicos/as a bordo de buques pesqueros cerqueros en la Flota española de cerco tropical del Atlántico, Índico y/o Pacífico.<br/><br/>Habiendo quedado pendiente de cubrir, al menos, 1 posición, se amplía el plazo del 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>A bordo de buques pesqueros cerqueros del de cerco tropical del Atlántico, Índico y/o Pacífico</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Realización de labores de observación científica a bordo de buques pesqueros cerqueros de túnidos tropicales (océanos Atlántico, Índico y Pacífico).</li><li>Recogida de datos de capturas pesqueras y realización de muestreos de especies objeto de estudio.</li><li>Grabación de datos.</li><li>Realización de informes.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer la titulación de Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia académica y/o con contrato laboral como observador científico pesquero</li><li>Libreta marítima y/o Documento de Identidad Marítimo (DIM) en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica).</li><li>Pasaporte en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica).</li><li>Flexibilidad para realizar embarques</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer la titulación de Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer la titulación de Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia académica y/o con contrato laboral como observador científico pesquero</li><li>Libreta marítima y/o Documento de Identidad Marítimo (DIM) en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica).</li><li>Pasaporte en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica).</li><li>Flexibilidad para realizar embarques</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Otros Factores Meritorios<ul><li>Disponibilidad de incorporación inmediata (con un máximo de 5 días desde la comunicación en caso de resultar seleccionado/a)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, realizando funciones como observador/a científico/a pesquero a bordo de buques oceanográficos o pesqueros</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, realizando funciones como observador/a científico/a y/o pesquero/a a bordo de buques pesqueros cerqueros dirigidos a túnidos tropicales en la zona de embarque (Océanos Atlántico, Índico y/o Pacífico)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Disponibilidad de incorporación inmediata (con un máximo de 5 días desde la comunicación en caso de resultar seleccionado/a)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, realizando funciones como observador/a científico/a pesquero a bordo de buques oceanográficos o pesqueros</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, realizando funciones como observador/a científico/a y/o pesquero/a a bordo de buques pesqueros cerqueros dirigidos a túnidos tropicales en la zona de embarque (Océanos Atlántico, Índico y/o Pacífico)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada por las características de cada embarque y asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada completa de lunes a domingo.<br/><br/>Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por las personas seleccionadas de las indicadas en la oferta. <br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de las necesidades de las campañas previstas, formalizándose la contratación en función de la fecha de incorporación y a la duración de los embarques.<br/><br/>Habiendo quedado pendiente de cubrir, al menos, 1 posición, se amplía el plazo del 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulados/as Universitarios/as- Observadores/as científicos/as a bordo de buques pesqueros cerqueros_ Flota española de cerco tropical del Atlántico, Índico y/o Pacífico",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56609"
+ },
+ "56616": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56616",
+  "category": "Progresiva",
+  "closed_at": null,
+  "code": "56616",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-12T14:37:29+00:00",
+  "id": "tragsa:56616",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-17",
+  "location": "Nacional",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 10,
+  "published_on": null,
+  "ref": "56616",
+  "region": "Ámbito nacional",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 10 Titulados/as universitarios/as como Observadores/as científicos/as a bordo buques pesqueros arrastreros en la Flota española en aguas no españolas (Atlántico y/o Ártico).<br/><br/>Habiendo quedado pendientes de cubrir, al menos, 5 posiciones, se amplía el plazo del 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Nacional<br/>Dirección: A bordo de buques pesqueros arrastreros de  flota española en aguas no españolas del Atlántico y/o aguas del Ártico</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Realización de labores de observación científica a bordo de buques pesqueros arrastreros principalmente en las zonas de embarque de Hatton Bank, NAFO, Malvinas, Svalbard, entre otros.</li><li>Recogida de datos de capturas pesqueras y realización de muestreos de especies objeto de estudio</li><li>Grabación de datos</li><li>Realización de informes</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia académica y/o con contrato laboral como observador científico pesquero</li><li>Libreta marítima y/o Documento de Identidad Marítimo (DIM) en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica)</li><li>Pasaporte en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica)</li><li>Flexibilidad para realizar embarques.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de  Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) o Poseer Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) con al menos 2 años de experiencia académica y/o con contrato laboral en el sector pesquero.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia académica y/o con contrato laboral como observador científico pesquero</li><li>Libreta marítima y/o Documento de Identidad Marítimo (DIM) en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica)</li><li>Pasaporte en vigor en el momento de comienzo de campaña (se comprobará en valoración técnica)</li><li>Flexibilidad para realizar embarques.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Otros Factores Meritorios<ul><li>Disponibilidad de incorporación inmediata (máximo 5 días desde la confirmación del puesto)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, como observador/a científico/a y/o de control a bordo de buques oceanográficos o pesqueros arrastreros que faenan en las zonas de embarque (zonas de embarque de Hatton Bank, NAFO, Malvinas, Svalbard)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, como observador científico pesquero a bordo de buques oceanográficos o pesqueros</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Disponibilidad de incorporación inmediata (máximo 5 días desde la confirmación del puesto)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, como observador/a científico/a y/o de control a bordo de buques oceanográficos o pesqueros arrastreros que faenan en las zonas de embarque (zonas de embarque de Hatton Bank, NAFO, Malvinas, Svalbard)</li><li>Experiencia académica y/o con contrato laboral de al menos 1 semana, como observador científico pesquero a bordo de buques oceanográficos o pesqueros</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/>-Contrato de duración determinada por las características de cada embarque y asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/>- Jornada completa de lunes a domingo.<br/><br/>Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por las personas seleccionadas de las indicadas en la oferta. <br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de las necesidades de las campañas previstas, formalizándose la contratación en función de la fecha de incorporación y a la duración de los embarques.<br/><br/>Habiendo quedado pendientes de cubrir, al menos, 5 posiciones, se amplía el plazo del 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulados/as universitarios/as - Observadores/as científicos/as a bordo buques pesqueros arrastreros_ Flota española en aguas no españolas (Atlántico y/o Ártico)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56616"
+ },
  "56704": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56704",
   "category": "Específica",
@@ -3369,6 +3539,106 @@
   "title": "Diplomado/a o Graduado/a en Empresariales, ADE, Económicas o Derecho - Gestión Ayudas Fondos Europeos (Sevilla)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57860"
  },
+ "57867": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57867",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57867",
+  "company": "Tragsa",
+  "contract": null,
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-12T14:37:29+00:00",
+  "id": "tragsa:57867",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-17",
+  "location": "Comunidad de La Rioja",
+  "missed_runs": 0,
+  "opens_on": "2026-09-15",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": null,
+  "ref": "57867",
+  "region": "La Rioja",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Encargado/a Técnico/a para dar apoyo en Obras de Edificación en la Comunidad de La Rioja.<br/><br/> En relación al proceso publicado el pasado 30/10/2026 se amplía el plazo de recepción de candidaturas desde el 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de La Rioja</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Organizar las actividades de la obra siguiendo las instrucciones del jefe de obra, asegurar la calidad y el rendimiento de los trabajos garantizando un entorno de trabajo adecuado a todos los agentes implicados.</li><li>Colaborar en la programación de actuaciones, elaboración de presupuestos y replanteos.</li><li>Supervisar la ejecución de la obra con mediciones, cálculo de rendimientos y control de materiales.</li><li>Cumplir y velar por el cumplimiento del plan de seguridad de la actuación, así como las especificaciones existentes en cuanto a calidad y medio ambiente.</li><li>Organizar y coordinar equipos humanos instruyendo a operarios en tareas específicas.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia como encargado técnico de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>Otros Requisitos Imprescindibles<ul><li>permiso de conducir tipo B</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia como encargado técnico de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>permiso de conducir tipo B</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>igual o superior a 60 horas en Prevención de Riesgos Laborales</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 4 años de experiencia en encargado de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li><li>Desde 2 años Hasta 4 años de experiencia en instalaciones (climatización, fontaneria, electricidad...) (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>igual o superior a 60 horas en Prevención de Riesgos Laborales</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>igual o superior a 60 horas en Prevención de Riesgos Laborales</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 4 años de experiencia en encargado de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li><li>Desde 2 años Hasta 4 años de experiencia en instalaciones (climatización, fontaneria, electricidad...) (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 15/09/2026 hasta el próximo 29/09/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece contrato de duración determinada con una duración estimada de 14 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea<br/><br/>Jornada Completa.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Encargado/a Técnico/a _ Obras Edificación (La Rioja)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57867"
+ },
  "57886": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57886",
   "category": "Específica",
@@ -3563,6 +3833,106 @@
   "status": "open",
   "title": "Licenciatura o Diplomatura/Grado + Máster Oficial - Financiación PYMES Y MIDCAPS (Cataluña)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57899"
+ },
+ "57934": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57934",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57934",
+  "company": "Tragsa",
+  "contract": null,
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-12T14:37:29+00:00",
+  "id": "tragsa:57934",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-17",
+  "location": "Comunidad de La Rioja",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 2,
+  "published_on": null,
+  "ref": "57934",
+  "region": "La Rioja",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Encargados/as Técnicos/as para dar apoyo en Obras en Comunidad de La Rioja.<br/><br/>En relación al proceso publicado el pasado 30/10/2026 se amplía el plazo de recepción de candidaturas desde el 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de La Rioja</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Organizar las actividades de la obra siguiendo las instrucciones del jefe de obra, asegurar la calidad y el rendimiento de los trabajos garantizando un entorno de trabajo adecuado a todos los agentes implicados.</li><li>Colaborar en la programación de actuaciones, elaboración de presupuestos y replanteos.</li><li>Supervisar la ejecución de la obra con mediciones, cálculo de rendimientos y control de materiales.</li><li>Cumplir y velar por el cumplimiento del plan de seguridad de la actuación, así como las especificaciones existentes en cuanto a calidad y medio ambiente.</li><li>Organizar y coordinar equipos humanos instruyendo a operarios en tareas específicas.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia como encargado técnico de obras de edificación y/u obra civil (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>Otros Requisitos Imprescindibles<ul><li>permiso de conducir tipo B</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de FP II o CFGS en especialidad agraria o edificación y obra civil o electricidad y electrónica o instalación y mantenimiento. (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia como encargado técnico de obras de edificación y/u obra civil (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>permiso de conducir tipo B</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Prevención de Riesgos Laborales igual o superior a 60 horas</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 4 años realizando funciones como encargado de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV)</li><li>Desde 2 años Hasta 4 años realizando funciones como encargado de obra civil (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Prevención de Riesgos Laborales igual o superior a 60 horas</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Prevención de Riesgos Laborales igual o superior a 60 horas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 4 años realizando funciones como encargado de obras de edificación (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV)</li><li>Desde 2 años Hasta 4 años realizando funciones como encargado de obra civil (acreditable a través de experiencia laboral o académica a través de contrato laboral/vida laboral + CV).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 16/09/2026 hastael próximo 30/09/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece contrato de duración determinada con una duración estimada de 14 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea<br/><br/>Jornada Completa.<br/><br/>El puesto puede estar ubicado en La Rioja o Navarra según las necesidades del servicio o proyecto.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Encargado/a Técnico/a _ Obras (Navarra - La Rioja)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57934"
  },
  "57949": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57949",
