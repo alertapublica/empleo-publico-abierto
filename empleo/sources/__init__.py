@@ -8,6 +8,7 @@ from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
 from .cimus import CimusSource
 from .cnic import CnicSource
+from .cesga import CesgaSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
@@ -99,7 +100,7 @@ CATALOG = {
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12,
+        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(),
     ],
 }
 for _group, _sources in CATALOG.items():

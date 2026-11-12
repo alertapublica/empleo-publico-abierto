@@ -329,6 +329,11 @@
    "alias": []
   },
   {
+   "id": "cesga",
+   "nombre": "CESGA (Centro de Supercomputación de Galicia)",
+   "alias": []
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [
