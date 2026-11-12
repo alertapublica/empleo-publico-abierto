@@ -32,6 +32,7 @@ from .idibaps import IdibapsSource
 from .idisna import IdisnaSource
 from .idisba import IdisbaSource
 from .iisaragon import IisAragonSource
+from .iisgm import IisgmSource
 from .imib import ImibSource
 from .irycis import IrycisSource
 from .mayasa import MayasaSource
@@ -100,7 +101,7 @@ CATALOG = {
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(),
     ],
 }
 for _group, _sources in CATALOG.items():
