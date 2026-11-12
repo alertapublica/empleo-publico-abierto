@@ -21,7 +21,7 @@ from .fgv import FgvSource
 from .fibao import FibaoSource
 from .fisevi import FiseviSource
 from .fnmt import FnmtSource
-from .fundanet import FISABIO, IDIBELL, IDIVAL
+from .fundanet import FISABIO, IDIBELL, IDIVAL, IMAS12
 from .fundesalud import FundesaludSource
 from .gesplan import GesplanSource
 from .gpex import GpexSource
@@ -99,7 +99,7 @@ CATALOG = {
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12,
     ],
 }
 for _group, _sources in CATALOG.items():

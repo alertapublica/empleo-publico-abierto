@@ -1,9 +1,9 @@
-"""Fundanet «ConvocatoriasPropias»: IDIBELL, FISABIO e IDIVAL.
+"""Fundanet «ConvocatoriasPropias»: IDIBELL, FISABIO, IDIVAL e i+12.
 
-Las tres fundaciones usan la misma aplicación. El listado es una tabla de servidor
+Las cuatro fundaciones usan la misma aplicación. El listado es una tabla de servidor
 (`#GvConvocatorias`) con título, inicio y fin de la presentación de solicitudes, con hora
 («20/11/2026 23:59»), y en IDIBELL e IDIVAL una columna de estado. IDIBELL e IDIVAL listan
-también las cerradas (cientos de filas, sin paginar); FISABIO solo las abiertas (`Estado=A`).
+también las cerradas (cientos de filas, sin paginar); FISABIO e i+12 solo las abiertas (`Estado=A`).
 
 Es oferta toda fila cuyo fin no ha pasado, con su hora; si aún no ha empezado, se guarda el
 inicio. La columna de estado no se usa: mandan las fechas (el 2026-11-08 coincidían en todas
@@ -12,8 +12,10 @@ las filas). La inscripción se hace desde la propia ficha (botón «Crear Solici
 La ficha (`VerConvocatoria/N`) trae el texto de la convocatoria (`div.InfoConvocatoria`) y los
 documentos. Solo se enlazan las bases: entre los documentos puede haber listas de personas
 (IDIVAL publica ahí «Admitidos y excluidos»). El contrato se toma literal de la ficha
-(IDIBELL: «Contract duration: Permanent by project») o, en FISABIO, de sus bases en PDF
-(«Tipo de contrato laboral: contrato indefinido»). IDIVAL no lo da en un campo fijo.
+(IDIBELL: «Contract duration: Permanent by project») o, en FISABIO e i+12, de sus bases en PDF
+(«Tipo de contrato laboral: contrato indefinido», «• Contrato: Indefinido Art.23 Bis de la Ley
+14/2011.»). IDIVAL no lo da en un campo fijo. En i+12 la ficha solo trae la categoría, el
+investigador principal y la referencia: el puesto, las funciones y el perfil están en las bases.
 
 La ubicación es la comunidad de la fundación: las fichas no dan un lugar de trabajo
 uniforme. Sin ver todavía: el listado sin ninguna convocatoria abierta.
@@ -41,7 +43,8 @@ MOMENT = re.compile(r"(\d\d/\d\d/\d{4})\s+(\d{1,2}:\d\d)")
 DETAIL = re.compile(r"/VerConvocatoria/(\d+)")
 HEADERS = ("Título", "F.Inicio Presentación de Solicitudes", "F.Fin Presentación de Solicitudes")
 CONTRACT = re.compile(r"^(?:Contract duration|Duración del contrato|Tipo de contrato)\s*:\s*(.+)$", re.I)
-BASES_CONTRACT = re.compile(r"Tipo de contrato(?: laboral)?:\s*(.+?)\s+-\s", re.I)
+BASES_CONTRACT = re.compile(r"Tipo de contrato(?: laboral)?:\s*(.+?)\s+-\s", re.I)  # FISABIO
+IMAS12_CONTRACT = re.compile(r"\bContrato:\s*(.+?)\s+[•\uf0b7]")  # viñeta «•» o la de Symbol
 
 
 def _text(node) -> str:
@@ -105,7 +108,7 @@ def parse_detail(html: str, base: str, lang: str | None = None) -> tuple[OfferDe
 class FundanetSource(Source):
     apply_label = "Ver la convocatoria y presentar la solicitud"
 
-    def __init__(self, id: str, name: str, listing: str, scope: str, contract_in_bases: bool = False,
+    def __init__(self, id: str, name: str, listing: str, scope: str, bases_contract: re.Pattern | None = None,
                  title_code: re.Pattern | None = None, text_lang: str | None = None,
                  now: datetime | None = None) -> None:
         self.id = id
@@ -113,7 +116,7 @@ class FundanetSource(Source):
         self.homepage = listing
         self.listing = listing
         self.scope = scope
-        self.contract_in_bases = contract_in_bases
+        self.bases_contract = bases_contract
         self.title_code = title_code
         self.text_lang = text_lang
         if text_lang:
@@ -135,9 +138,9 @@ class FundanetSource(Source):
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
         detail, bases = parse_detail(http.get(offer.url), self.listing, self.text_lang)
-        if self.contract_in_bases and bases and detail.contract is None:
-            found = BASES_CONTRACT.search(read_pdf(http, bases, f"{self.name}, bases de {offer.ref}"))
-            detail.contract = found.group(1).strip() if found else None
+        if self.bases_contract and bases and detail.contract is None:
+            found = self.bases_contract.search(read_pdf(http, bases, f"{self.name}, bases de {offer.ref}"))
+            detail.contract = found.group(1).rstrip(". ") if found else None
         detail.location = self.scope
         return detail
 
@@ -148,7 +151,7 @@ IDIBELL = FundanetSource(
     listing="https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DetalleTipoConvocatoria/OE?Estado=T",
 )
 FISABIO = FundanetSource(
-    id="fisabio", name="FISABIO", scope="Comunitat Valenciana", contract_in_bases=True,
+    id="fisabio", name="FISABIO", scope="Comunitat Valenciana", bases_contract=BASES_CONTRACT,
     # «2026/67 UN/A TÉCNICO/A DE INVESTIGACIÓN (T3) PLAZA 146 RPT»
     title_code=re.compile(r"(?P<code>\d{4}/\d+)\s+(?P<title>.+?)(?:\s+(?P<extra>PLAZA\s+\d+\s+RPT))?"),
     listing="https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DetalleTipoConvocatoria/EMPLEO?Estado=A",
@@ -157,4 +160,10 @@ IDIVAL = FundanetSource(
     id="idival", name="IDIVAL", scope="Cantabria",
     title_code=re.compile(r"(?P<code>\d{4}\.\d+)\.?\s+(?P<title>.+)"),  # «2026.76. Convocatoria…»
     listing="https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/DetalleTipoConvocatoria/EMPLEO?Estado=T",
+)
+IMAS12 = FundanetSource(
+    id="imas12", name="i+12 (FIBH12O)", scope="Comunidad de Madrid", bases_contract=IMAS12_CONTRACT,
+    # Título literal («PERSONAL INVESTIGADOR( REF. 2611/14). DR. Rojo»): sin la referencia y el
+    # investigador principal, seis de las dieciséis del 2026-11-12 serían «PERSONAL INVESTIGADOR».
+    listing="https://fibh12o.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DetalleTipoConvocatoria/rh?Estado=A",
 )
