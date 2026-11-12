@@ -194,6 +194,11 @@
    "alias": []
   },
   {
+   "id": "andalucia",
+   "nombre": "Junta de Andalucía (entidades instrumentales)",
+   "alias": []
+  },
+  {
    "id": "tmb",
    "nombre": "TMB (Transports Metropolitans de Barcelona)",
    "alias": []
