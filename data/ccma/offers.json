@@ -1,0 +1,62 @@
+{
+ "3316": {
+  "apply_url": "https://seleccio.3cat.cat/seleccio/convocatoria.jsf?idConv=3316",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "CCMA, SA",
+  "contract": null,
+  "deadline": "2026-11-15",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T16:48:24+00:00",
+  "id": "ccma:3316",
+  "kind": null,
+  "listed_deadline": "2026-11-15",
+  "location": "Cataluña",
+  "missed_runs": 0,
+  "opens_on": "2026-10-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3316",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>D’acord amb les previsions establertes al Tretzè Conveni Col·lectiu de Treball de la Corporació Catalana de Mitjans Audiovisuals, SA, es convoca un procés de selecció conjunt de promoció interna i públic per a la provisió actual d'una vacant, inclosa a l’àrea de Patrimoni i Desenvolupament d'Infraestructures, i totes les que s’hagin de cobrir durant els 24 mesos següents a partir de la data de publicació de resultats, i per disposar d’una borsa de personal amb la capacitació suficient per a les contractacions temporals que hi pugui haver fins la convocatòria d’un nou concurs públic.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul>\n<li>Lloc de treball:  Enginyer/a Especialista en projectes d'instal·lacions</li>\n<li>Nivell i categoria professional:  Enginyer/a Especialista, nivell F</li>\n<li>Departaments: Fluids i energies</li>\n<li>Horari:  Segons el conveni d’aplicació</li>\n<li>Jornada:  Jornada completa  </li>\n<li>Retribució anual:  55.380,067€ (segons el conveni d’aplicació)   </li>\n<li>Centre de treball i localitat:  C. Oriol Martorell, 1 (Sant Joan Despí) i/o Diagonal, 614 (Barcelona)</li>\n</ul>",
+    "level": 2,
+    "title": "1. CARACTERÍSTIQUES DEL LLOC DE TREBALL"
+   },
+   {
+    "html": "<ul>\n<li>Definir necessitats i requeriments per projectes d'instal·lacions de fluids i energies, d'actualització i millora o de nova execució, seguint les directrius estratègiques i terminis de l'àrea i la CCMA.</li>\n<li>Participar en el disseny i seguiment de l'execució de projectes d'instal·lacions de fluids i energies per poder realitzar la posterior certificació, legalització i posta en servei.</li>\n<li>Participar en els processos de licitació pública dels projectes que li siguin encomanats.</li>\n<li>Seguiment de l'evolució tecnològica i normativa en el seus àmbits d'especialitats: fluids i energies.</li>\n</ul>",
+    "level": 2,
+    "title": "2. FUNCIONS DEL LLOC DE TREBALL"
+   },
+   {
+    "html": "<ul>\n<li>Per a la promoció interna: Personal indefinit de la plantilla de la CCMA o les de conformitat amb la normativa d’aplicació i la resta de requisits especificats.</li>\n<li>Disposar del grau o màster en alguna Enginyeria Industrial o disposar d'una Enginyeria Tècnica Industrial o d'Enginyeria Industrial Superior o equivalent </li>\n<li>Disposar de 5 anys d’experiència en projectes d’infraestructures i d’instal·lacions de fluids i energies</li>\n<li>Coneixements orals i escrits de nivell de català C1 i nivell d’anglès B2 o superar una prova amb caràcter obligatori i eliminatori del mateix nivell.</li>\n</ul>",
+    "level": 2,
+    "title": "3. REQUISITS D'ACCÉS A LA CONVOCATÒRIA"
+   },
+   {
+    "html": "<p>El termini de presentació de candidatures per a aquest procés finalitza el dia <strong>15 de novembre de 2026 a les 23:59h</strong>.</p>\n<p>Barcelona, 21 d'octubre de 2026</p>",
+    "level": 2,
+    "title": "4. PRESENTACIÓ DE SOL·LICITUDS"
+   }
+  ],
+  "source": "ccma",
+  "source_title": null,
+  "status": "open",
+  "title": "2026 ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL·LACIONS",
+  "url": "https://seleccio.3cat.cat/seleccio/convocatoria.jsf?idConv=3316"
+ }
+}

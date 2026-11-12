@@ -1,0 +1,67 @@
+{
+ "315": {
+  "apply_url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315",
+  "category": null,
+  "closed_at": null,
+  "code": "25/26",
+  "company": "Fundación Pública Galega de Investigación Biomédica Galicia Sur",
+  "contract": null,
+  "deadline": "2026-11-22",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T16:48:24+00:00",
+  "id": "galiciasur:315",
+  "kind": null,
+  "listed_deadline": "2026-11-22",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-12",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "315",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2.4 Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.)</p><p>- TITULACIÓN REQUERIDA: Grado/ Diplomatura en Ciencias de la Salud o biosanitario ( Enfermería, Farmacia, Biología, Biomedicina u otras titulaciones afines ) (menos de 300 ECTS) .</p><p>- Línea de Investigación: “Investigación clínica traslacional para el tratamiento de enfermedades dermatológicas del Servicio de Dermatología del Complexo Hospitalario Universitario de Pontevedra”</p>",
+    "level": 2,
+    "title": "Oferta de empleo (REF: 25/26)"
+   },
+   {
+    "html": "<p>- Hasta fin de proyecto/financiamiento.</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>TITULACIÓN REQUERIDA: Diplomatura/Grado en Enfermería o en Ciencias de la Salud (menos de 300 ECTS) .</p>\n<p>* Las ofertas que no cumplan con todos los requisitos imprescindibles quedarán automáticamente descartadas.</p>",
+    "level": 2,
+    "title": "Requisitos imprescindibles"
+   },
+   {
+    "html": "<p>-Formación específica relacionada con las funciones del puesto ( gestión y coordinación de ensayos clínicos, monitorizaciones, gestión documental, normativa de investigación clínica, etc)</p><p>( De 10 horas a 20 horas: 10 puntos;  y más de 20 horas: 15 puntos )</p><p>-Formación acreditada en buenas prácticas clínicas ( BPC/GCP) conforme a normativa vigente:</p><p>( De 10 horas a 20 horas: 10 puntos;  y más de 20 hora: 15 puntos )</p><p>-Nivel de certificado de inglés mínimo B1.</p><p>( B1: 10 puntos; B2 o superior: 20 puntos )</p><p>-Experiencia previa en investigación clínica (Hospital, CRO, Industria farmacéutica…)</p><p>( Hasta 2 años: 10 puntos;  Mäs de 2 años y hasta 3 años: 20 puntos; Más de 3 años: 35 puntos )</p><p>* Ver bases de la oferta para más información</p>",
+    "level": 2,
+    "title": "Requisitos valorables"
+   },
+   {
+    "html": "<p>- Contrato indefinido para actividades científico-técnicas a tiempo completo.</p><p>- Duración: 12 meses (o fin del proyecto/financiación).</p><p>−Jornada: 37,5 h. semanales de lunes a viernes.</p><p>−Salario: 23755,08€ brutos anuales incluidas dos pagas extras.</p><p>−Centro de trabajo: Pontevedra - Centro de especialidades Mollabao.</p><p>GRUPO DE INVESTIGACIÓN: DIPO</p><p>La persona contratada se encargará de realizar las siguientes tareas/funciones:</p><p>- Coordinación y gestión de estudios de investigación clínica y comunicación con todas las partes implicadas.</p><p>- Registro de datos en cuadernos electrónicos (eCRF).</p><p>- Preparación y apoyo en seguimientos, auditorías, inspecciones.</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.fundacionbiomedica.es/file/ofertatrabajo/315/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "galiciasur",
+  "source_title": "1.2.4 Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) (REF: 25/26)",
+  "status": "open",
+  "title": "Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) · “Investigación clínica traslacional para el tratamiento de enfermedades dermatológicas del Servicio de Dermatología del Complexo Hospitalario Universitario de Pontevedra”",
+  "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315"
+ }
+}
