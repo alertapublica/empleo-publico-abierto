@@ -89,6 +89,7 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 |---|---|
 | **RTVA / Canal Sur** (Andalucía) | Un proceso de 228 plazas en cuatro fases sucesivas; las tres primeras (reingreso, traslados, promoción interna) son internas. Página narrativa sin comunicados fechados. Integrar cuando se abra el concurso-oposición libre (la fase externa). Sus contrataciones temporales (ofertas genéricas del SAE) ya llegan por la fuente de la Junta de Andalucía (2026-11-12). `robots.txt` solo bloquea agentes de IA (sondeo del 2026-11-11) |
 | **CSAG / CRTVG** (Galicia) | Sin plazo de inscripción en la web. `Crawl-delay: 10`; intermedio TLS equivocado |
+| **IdiPAZ** (Hospital La Paz, FIBHULP) | `idipaz.es/RRHH/OfertasEmpleo`, tabla de servidor con «Plazo», estado y título. El «Plazo» es el fin (Euraxess: «10 Nov 2026 - 12:00» para la del 10/11), pero sin hora, y la página deja como «Abierta» ofertas vencidas desde junio. Sin ficha propia: enlaza a madri+d (POEM, aplicación JavaScript con API WSO2 en `apiscm.comunidad.madrid`) y a Euraxess (429 a la segunda petición). Sondeo del 2026-11-12. Posible vía: madri+d como agregador de centros de Madrid |
 
 ## Fuera
 
