@@ -9,7 +9,14 @@ y el formulario de inscripción (solo se enlaza, nunca se rellena). Cambia la pl
   «Fecha cierre» en un párrafo. Es una sola página con todo el histórico desde 2018 (más de 900
   convocatorias, unos 2,4 MB), de la más reciente a la más antigua.
 - Galicia Sur: un `div.list-item…` por convocatoria con «Plazo: DD/MM/AAAA - DD/MM/AAAA» (solo las
-  que tienen plazo; las demás dicen «Convocatoria resuelta») y el título con «(REF: 25/26)» al final.
+  que tienen plazo; las demás dicen «Convocatoria resuelta»), el puesto con «(REF: 25/26)» al final y
+  un párrafo con el proyecto y la titulación.
+
+El puesto lleva delante la categoría del convenio («1.2 3 Titulado/a Graduado/a I», «1.2.4 …») y se
+repite en muchas convocatorias. El título publicado es el puesto sin esa categoría ni «N PLAZAS de»
+(las plazas van aparte) y, si el portal rotula el proyecto o la línea de investigación («Proyecto de
+investigación:», «PROYECTO:», «Línea de Investigación:»), « · » y ese texto, sin el rótulo ni la
+titulación que le sigue. El literal del puesto queda en `source_title`.
 
 Es oferta la que tiene la fecha de cierre sin vencer (sin hora). Clave: el número de la ficha; el
 código público es la referencia. La ficha tiene cuadros numerados («Oferta de empleo»,
@@ -32,7 +39,11 @@ from .base import Source
 
 DMY = re.compile(r"(\d{2})/(\d{2})/(\d{4})")
 FICHA = re.compile(r"/ofertastrabajo/inscripciones/(\d+)")
-PLAZAS = re.compile(r"(\d+)\s+PLAZAS\s+de\s+", re.I)
+PLAZAS = re.compile(r"(\d+)\s+PLAZAS\s+(?:de\s+)?", re.I)
+# Categoría del convenio delante del puesto: «1.2 3», «1.2.4», «1.2.2.», «1.1. 4», «1 1.3», «1..2 1», «.2.3».
+LEVEL = re.compile(r"(?:\.?\d+(?:\.+\d+)+\.?(?:\s+\d+(?:\.\d+)*\.?)?|\d+\s+\d+(?:\.\d+)+\.?)\s+(?=\D)")
+PROJECT = re.compile(r"(?:Proyecto(?:\s+de\s+investigaci[oó]n)?|L[ií]nea\s+de\s+investigaci[oó]n)\s*:?\s*(.+)", re.I)
+REF = re.compile(r"\s*\(REF:\s*([^)]+)\)\s*$")
 
 
 def _clean(text: str) -> str:
@@ -47,6 +58,17 @@ def _iso(text: str) -> str | None:
     return date(int(year), int(month), int(day)).isoformat()
 
 
+def job_title(position: str, project: str | None) -> dict:
+    """Título publicado: el puesto sin categoría ni plazas y, si está rotulado, el proyecto."""
+    title = LEVEL.sub("", PLAZAS.sub("", position, count=1), count=1).strip() or position
+    named = PROJECT.match(project or "")
+    if named:
+        name = re.split(r"\s*TITULACI[OÓ]N\s+REQUERIDA", named.group(1), maxsplit=1, flags=re.I)[0].strip()
+        if name:
+            title = f"{title} · {name}"
+    return {"title": title, "source_title": position if title != position else None}
+
+
 def parse_idis(html: str) -> list[dict]:
     soup = BeautifulSoup(html, "html.parser")
     found = []
@@ -58,10 +80,12 @@ def parse_idis(html: str) -> list[dict]:
         text = _clean(facts.get_text(" "))
         ref = re.search(r"Número de referencia:\s*(.+?)\s*Fecha apertura", text)
         opens, closes = re.search(r"Fecha apertura:\s*(\S+)", text), re.search(r"Fecha cierre:\s*(\S+)", text)
-        title = _clean(heading.get_text(" "))
-        plazas = PLAZAS.match(title)
+        position = _clean(heading.get_text(" "))
+        project = block.select_one("h5")
+        plazas = PLAZAS.match(position)
         found.append({
-            "ref": FICHA.search(link["href"]).group(1), "url": link["href"], "title": title,
+            "ref": FICHA.search(link["href"]).group(1), "url": link["href"],
+            **job_title(position, _clean(project.get_text(" ")) if project else None),
             "code": ref.group(1) if ref else None, "positions": int(plazas.group(1)) if plazas else None,
             "opens_on": _iso(opens.group(1)) if opens else None,
             "deadline": _iso(closes.group(1)) if closes else None,
@@ -86,9 +110,15 @@ def parse_galiciasur(html: str) -> list[dict]:
         if len(dates) != 2:
             continue  # «Convocatoria resuelta»: sin plazo
         opens, closes = ("-".join(reversed(d)) for d in dates)
+        literal = _clean(heading.get_text(" "))
+        ref = REF.search(literal)
+        position = REF.sub("", literal) if ref else literal
+        summary = item.find("p")
+        entry = job_title(position, _clean(summary.get_text(" ")) if summary else None)
         found.append({
-            "ref": FICHA.search(link["href"]).group(1), "url": link["href"],
-            "title": _clean(heading.get_text(" ")), "code": None, "positions": None,
+            "ref": FICHA.search(link["href"]).group(1), "url": link["href"], "title": entry["title"],
+            "source_title": literal if entry["title"] != literal else None,
+            "code": ref.group(1).strip() if ref else None, "positions": None,
             "opens_on": opens, "deadline": closes,
         })
     return found
@@ -156,7 +186,7 @@ class OfertasTrabajoSource(Source):
             if not entry["deadline"] or deadline_passed(entry["deadline"], None, now):
                 continue
             offers.append(ListedOffer(
-                ref=entry["ref"], **self.labels(entry["title"], entry["ref"], entry["code"]),
+                ref=entry["ref"], title=entry["title"], code=entry["code"], source_title=entry["source_title"],
                 company=self.company, url=entry["url"], apply_url=entry["url"], kind=None,
                 positions=entry["positions"], opens_on=entry["opens_on"], deadline=entry["deadline"],
             ))
@@ -183,7 +213,6 @@ class GaliciaSurSource(OfertasTrabajoSource):
     homepage = "https://www.iisgaliciasur.es/es/fundacion-biomedica/recursos-humanos/empleo/"
     page = "https://empleo.fundacionbiomedica.es/ofertastrabajo/publicadas"
     company = "Fundación Pública Galega de Investigación Biomédica Galicia Sur"
-    title_code = re.compile(r"(?P<title>.+?)\s*\(REF:\s*(?P<code>[^)]+)\)")
 
     def parse(self, html: str) -> list[dict]:
         return parse_galiciasur(html)
