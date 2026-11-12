@@ -25,7 +25,7 @@ class FakeHttp:
 
 def source(template, now=NOW):
     return fundanet.FundanetSource(id=template.id, name=template.name, listing=template.listing,
-                                   scope=template.scope, contract_in_bases=template.contract_in_bases,
+                                   scope=template.scope, bases_contract=template.bases_contract,
                                    text_lang=template.text_lang, now=now)
 
 
@@ -50,6 +50,16 @@ class Listado(unittest.TestCase):
     def test_fisabio_sin_columna_de_estado(self):
         offers = source(fundanet.FISABIO).list_offers(FakeHttp("fundanet-fisabio-listado.html"))
         self.assertEqual([o.ref for o in offers], ["881", "880"])
+
+    def test_imas12_titulo_literal(self):
+        offers = source(fundanet.IMAS12).list_offers(FakeHttp("fundanet-imas12-listado.html"))
+        self.assertEqual([(o.ref, o.title) for o in offers], [
+            ("41", "ENFERMERO/A ENSAYOS CLÍNICOS( REF.2611/16)- Dr.Arribas"),
+            ("40", "PERSONAL INVESTIGADOR( REF. 2611/14). DR. Rojo"),
+            ("26", "GESTOR/A DE DATOS ( REF:2611/15 ) - Dra. Álvarez Conejo")])
+        self.assertEqual((offers[2].opens_on, offers[2].deadline, offers[2].deadline_time),
+                         ("2026-11-04", "2026-11-12", "23:59"))
+        self.assertEqual(fundanet.IMAS12.labels(offers[1].title, "40")["title"], offers[1].title)
 
     def test_cierra_a_la_hora_del_listado(self):
         html = fixture("fundanet-idival-listado.html").replace("11/11/2026 23:59", "11/11/2026 12:24")
@@ -106,6 +116,20 @@ class Ficha(unittest.TestCase):
         self.assertEqual(read.call_args.args[1],
                          "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DescargarDocumentoBases/881")
         self.assertEqual(detail.location, "Comunitat Valenciana")
+
+    def test_imas12_contrato_de_las_bases(self):
+        src, http, offer = self.detail(fundanet.IMAS12, "fundanet-imas12-ficha.html", "fundanet-imas12-listado.html")
+        read = mock.Mock(return_value=fixture("fundanet-imas12-bases-41.txt"))
+        with mock.patch.object(fundanet, "read_pdf", read):
+            detail = src.fetch_detail(http, offer)
+        self.assertEqual(detail.contract, "Indefinido Art.23 Bis de la Ley 14/2011")
+        self.assertEqual(detail.location, "Comunidad de Madrid")
+        self.assertIn("I.P _ DR. ARRIBAS", detail.sections[0]["html"])
+        self.assertIn("DescargarDocumentoBases/41", detail.sections[1]["html"])
+        # Otra convocatoria con la viñeta de Symbol y el artículo entre paréntesis
+        read.return_value = "CONDICIONES DE CONTRATO: \uf0b7 Plazas: 1 \uf0b7 Contrato: Indefinido (Art.23 bis de ley 14/2011) \uf0b7 Jornada"
+        with mock.patch.object(fundanet, "read_pdf", read):
+            self.assertEqual(src.fetch_detail(http, offer).contract, "Indefinido (Art.23 bis de ley 14/2011)")
 
     def test_idival_sin_contrato_y_sin_enlazar_listas_de_personas(self):
         src, http, offer = self.detail(fundanet.IDIVAL, "fundanet-idival-ficha.html", "fundanet-idival-listado.html")

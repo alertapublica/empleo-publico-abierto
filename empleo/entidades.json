@@ -324,6 +324,26 @@
    "alias": []
   },
   {
+   "id": "imas12",
+   "nombre": "i+12 (Fundación para la Investigación Biomédica del Hospital 12 de Octubre)",
+   "alias": []
+  },
+  {
+   "id": "cesga",
+   "nombre": "CESGA (Centro de Supercomputación de Galicia)",
+   "alias": []
+  },
+  {
+   "id": "iisgm",
+   "nombre": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
+   "alias": []
+  },
+  {
+   "id": "imdea-energia",
+   "nombre": "IMDEA Energía",
+   "alias": []
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [

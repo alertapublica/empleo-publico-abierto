@@ -8,6 +8,7 @@ from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
 from .cimus import CimusSource
 from .cnic import CnicSource
+from .cesga import CesgaSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
@@ -21,7 +22,7 @@ from .fgv import FgvSource
 from .fibao import FibaoSource
 from .fisevi import FiseviSource
 from .fnmt import FnmtSource
-from .fundanet import FISABIO, IDIBELL, IDIVAL
+from .fundanet import FISABIO, IDIBELL, IDIVAL, IMAS12
 from .fundesalud import FundesaludSource
 from .gesplan import GesplanSource
 from .gpex import GpexSource
@@ -31,6 +32,8 @@ from .idibaps import IdibapsSource
 from .idisna import IdisnaSource
 from .idisba import IdisbaSource
 from .iisaragon import IisAragonSource
+from .iisgm import IisgmSource
+from .imdea import ImdeaEnergiaSource
 from .imib import ImibSource
 from .irycis import IrycisSource
 from .mayasa import MayasaSource
@@ -99,7 +102,7 @@ CATALOG = {
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(),
     ],
 }
 for _group, _sources in CATALOG.items():
