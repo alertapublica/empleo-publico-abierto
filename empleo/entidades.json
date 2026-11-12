@@ -339,6 +339,11 @@
    "alias": []
   },
   {
+   "id": "imdea-energia",
+   "nombre": "IMDEA Energía",
+   "alias": []
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [
