@@ -1,8 +1,12 @@
+import io
 import json
+import sys
 import tempfile
 import unittest
 from collections import Counter
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 from empleo import entidades
 from empleo.sources import ACTIVE
@@ -46,21 +50,69 @@ class Convocante(unittest.TestCase):
         self.assertEqual(entidades.convocante({"company": "Puertos del Estado"}, "puertos", "ofertas"), "puertos")
 
 
+PUERTOS_BCN = "Técnico/a de Promoción y Comunicación de Mercado (Autoridad Portuaria: Barcelona)"
+
+
+def _escribe(data: Path, source: str, name: str, value: dict) -> None:
+    (data / source).mkdir(exist_ok=True)
+    (data / source / name).write_text(json.dumps(value), encoding="utf-8")
+
+
 class Informe(unittest.TestCase):
     def test_la_misma_convocatoria_en_puertos_y_en_el_port(self):
         with tempfile.TemporaryDirectory() as tmp:
             data = Path(tmp)
-            (data / "puertos").mkdir()
-            (data / "apb").mkdir()
-            (data / "puertos" / "announcements.json").write_text(json.dumps({"puertos:1": {
-                "process": "Técnico/a de Promoción y Comunicación de Mercado (Autoridad Portuaria: Barcelona)",
-                "location": "Barcelona", "state": "curso"}}), encoding="utf-8")
-            (data / "apb" / "offers.json").write_text(json.dumps({"apb:x": {
-                "title": "Técnico/a de promoción y comunicación de mercado", "status": "open"}}), encoding="utf-8")
+            _escribe(data, "puertos", "announcements.json", {"puertos:1": {
+                "process": PUERTOS_BCN, "location": "Barcelona", "state": "curso"}})
+            _escribe(data, "apb", "offers.json", {"apb:x": {
+                "title": "Técnico/a de promoción y comunicación de mercado", "status": "open"}})
             text = entidades.report(data)
         self.assertIn("- puertos: apb 1", text)
-        self.assertIn("- apb: apb (oferta)", text)
-        self.assertIn("puertos (proceso)", text)
+        self.assertIn("- apb: apb (oferta, open)", text)
+        self.assertIn("puertos (proceso, curso)", text)
+
+    def test_tambien_los_duplicados_del_historico(self):
+        # El caso real: Puertos lo guardó antes de existir la fuente del Port; los dos ya terminados.
+        with tempfile.TemporaryDirectory() as tmp:
+            data = Path(tmp)
+            _escribe(data, "puertos", "announcements.json", {"puertos:1": {
+                "process": PUERTOS_BCN, "location": "Barcelona", "state": "retirado"}})
+            _escribe(data, "apb", "announcements.json", {"apb:1": {
+                "process": "Técnico/a de promoción y comunicación de mercado", "state": "finalizado"}})
+            text = entidades.report(data)
+        self.assertNotIn("- puertos: apb", text)  # el recuento por fuente sigue siendo de lo vivo
+        self.assertIn("apb (proceso, finalizado)", text)
+        self.assertIn("puertos (proceso, retirado)", text)
+
+    def test_el_mismo_titulo_en_una_sola_fuente_no_es_duplicado(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            data = Path(tmp)
+            _escribe(data, "cnic", "offers.json", {
+                "cnic:1": {"title": "Técnico de laboratorio", "status": "closed"},
+                "cnic:2": {"title": "Técnico de laboratorio", "status": "open"}})
+            self.assertIn("Ninguno.", entidades.report(data))
+
+    def test_anota_el_aviso_en_actions_si_hay_duplicados(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            data = Path(tmp)
+            _escribe(data, "puertos", "announcements.json", {"puertos:1": {
+                "process": PUERTOS_BCN, "location": "Barcelona", "state": "retirado"}})
+            _escribe(data, "apb", "offers.json", {"apb:x": {
+                "title": "Técnico/a de promoción y comunicación de mercado", "status": "closed"}})
+            out, err = io.StringIO(), io.StringIO()
+            with mock.patch.object(sys, "argv", ["entidades", "informe", tmp]), \
+                    redirect_stdout(out), redirect_stderr(err):
+                entidades.main()
+        self.assertIn("::warning title=Duplicados entre fuentes::1 convocatoria(s)", err.getvalue())
+        self.assertNotIn("::warning", out.getvalue())  # no se cuela en el resumen
+
+    def test_sin_duplicados_no_anota_nada(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            err = io.StringIO()
+            with mock.patch.object(sys, "argv", ["entidades", "informe", tmp]), \
+                    redirect_stdout(io.StringIO()), redirect_stderr(err):
+                entidades.main()
+        self.assertEqual(err.getvalue(), "")
 
 
 if __name__ == "__main__":
