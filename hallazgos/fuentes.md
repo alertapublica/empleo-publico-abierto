@@ -69,7 +69,6 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 |---|---|
 | **ADIF** | Ver una oferta abierta. Liferay con HTML de servidor (`li.col-12 > div.oep-wrapper-list`). Su WAF (Akamai) da 403 si el `User-Agent` lleva la URL de GitHub o falta `Accept`; con UA corto y `Accept: text/html` da 200, también desde Actions. Procesos en curso y resueltos ya se podrían anunciar (título, fecha, estado, plazas) |
 | **EMASESA** (Sevilla) | Ver un concurso abierto. «Concursos públicos» es una tabla sin ficha por concurso (bases e inscripción por formulario POST; `robots.txt` prohíbe URL con parámetros y PDF): se detiene si algún concurso tiene la fecha fin sin vencer o si «Procesos selección» deja de decir «No hay procesos de selección». Tres concursos en septiembre y octubre de 2026 |
-| **Fundación Universidad de La Rioja** | Ver una oferta abierta. Hoy: «No hay ofertas de empleo abiertas en este momento». Muy poco volumen (nueve convocatorias resueltas a la vista) |
 | **Renfe** | Ver `/search/` con ofertas. SuccessFactors muy personalizado: `successfactors.py` no sirve. `robots.txt` prohíbe `/services/`. Las fechas de los procesos solo están en los PDF |
 
 ## Siguiente tanda (T2): pendientes
@@ -101,6 +100,7 @@ Revisadas de nuevo el 2026-11-08. Las demás de la tanda 2 ya están activas.
 | **Fundación SEPI, Correos Telecom** | TLS incompleto, sin revisar intermedio |
 | **Saeca, SAES, Emgrisa, Sainsel, Hunosa Empresas, Mercabadajoz, Mercamálaga, Mercalaspalmas, Mercalgeciras** | Sin ofertas a la vista, enlace roto, licitaciones mezcladas o sin sección de empleo (2026-11-07) |
 | **SASEMAR** | Timeout también desde Actions |
+| **Fundación Universidad de La Rioja** | HTTP 429 desde Actions en cada lectura (2026-11-12; desde aquí, 200). Era solo un centinela: «No hay ofertas de empleo abiertas en este momento», muy poco volumen. Por el relay con IP española (Piensa), también 429 con las mismas cabeceras que desde aquí dan 200: `fundacion.unirioja.es` se queda admitido en el relay por si cambia |
 | **SELAE, ICO, COFIDES, ICEX** | Poco volumen o sin listado |
 | **Hispasat** | No es mayoritariamente pública (Indra) |
 
