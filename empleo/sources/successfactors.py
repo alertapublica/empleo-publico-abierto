@@ -58,8 +58,10 @@ def parse_listing(html: str, base: str) -> tuple[list[dict], int]:
     soup = BeautifulSoup(html, "html.parser")
     table = soup.select_one("table#searchresults")
     if table is None:
-        # Aviso «sin resultados» de la plataforma, igual en castellano y en catalán (BSM)
-        if soup.select_one("div#noresults") is not None:
+        # Aviso «sin resultados» de la plataforma, igual en castellano y en catalán (BSM): «A continuación,
+        # figuran las 0 últimas ofertas…», «A continuació s'enumeren els 0 llocs…». Sin ese «0», no vale.
+        message = soup.select_one("div#noresults #noresults-message")
+        if message is not None and re.search(r"\b0\b", message.get_text(" ")):
             return [], 0
         raise SourceLayoutError("SuccessFactors: no se encuentra la tabla de resultados")
     rows = []
