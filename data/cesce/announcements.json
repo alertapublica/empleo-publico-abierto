@@ -208,6 +208,24 @@
   "url": "https://www.cesce.es/documents/20122/19532865/Listado+de+Admitidos+%28PS4-+2026%29.pdf/124d7e3f-7c8b-0c6c-e26e-394ba824e13c?t=1793098610026",
   "via": "otro"
  },
+ "cesce:9d8f66aaf006": {
+  "access": null,
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-12",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-12T17:07:27+00:00",
+  "location": null,
+  "process": "CONVOCATORIA DEL 23 DE OCTUBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DIRECTOR DE DESARROLLO DE NEGOCIO, SOSTENIBILIDAD E INNOVACIÓN PARA PYMES (EN EL MARCO DE LA TASA DE REPOSICIÓN ESPECÍFICA AUTORIZADA 2026)",
+  "process_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "source": "cesce",
+  "state": "curso",
+  "system": null,
+  "title": "Listado de Admitidos",
+  "url": "https://www.cesce.es/documents/20122/19770789/Listado+de+Admitidos+%28DDNSIP-+2026%29.pdf/48bab0da-b01f-e541-d6d9-8ea1b1deeb10?t=1794502137484",
+  "via": "tasa"
+ },
  "cesce:db21033c753a": {
   "access": null,
   "apply_url": null,
