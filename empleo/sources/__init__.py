@@ -1,4 +1,5 @@
 """Registro de fuentes del portal."""
+from .andalucia import AndaluciaSource
 from .apb import ApbSource
 from .canal import CanalSource
 from .ccma import CcmaSource
@@ -93,7 +94,7 @@ CATALOG = {
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
-    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource()],
+    "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource(), AndaluciaSource()],
     "local": [TmbSource(), EmtSource(), BSM, EmasesaSource()],
     "investigacion": [
         IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
