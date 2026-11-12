@@ -64,6 +64,9 @@ def parse_listing(html: str, base: str) -> tuple[list[dict], int]:
         if message is not None and re.search(r"\b0\b", message.get_text(" ")):
             return [], 0
         raise SourceLayoutError("SuccessFactors: no se encuentra la tabla de resultados")
+    if soup.select_one("div#noresults") is not None:
+        # Categoría vacía con una tabla de «últimas ofertas» de otras categorías: no son suyas
+        raise SourceLayoutError("SuccessFactors: aviso de categoría vacía junto a una tabla de resultados")
     rows = []
     for tr in table.select("tr.data-row"):
         link = tr.select_one("a.jobTitle-link")

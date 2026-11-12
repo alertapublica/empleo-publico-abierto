@@ -69,6 +69,11 @@ class Listing(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             sf.parse_listing(html + '<div id="noresults"><div id="noresults-message"></div></div>', HOST)
 
+    def test_aviso_de_vacia_junto_a_una_tabla_no_se_interpreta(self):
+        aviso = '<div id="noresults"><div id="noresults-message">las 3 últimas ofertas</div></div>'
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(aviso + fixture("sf-listado.html"), HOST)
+
     def test_pagina_inesperada_no_pasa_por_vacia(self):
         with self.assertRaises(SourceLayoutError):
             sf.parse_listing("<h1>Mantenimiento</h1>", HOST)
