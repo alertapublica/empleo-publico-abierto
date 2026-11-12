@@ -7322,12 +7322,12 @@
  "58210": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58210",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "58210",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-10",
-  "deadline_time": null,
+  "deadline": "2026-11-18",
+  "deadline_time": "23:59",
   "department": "La Coruña",
   "detail_ok": true,
   "detail_version": 2,
@@ -7335,10 +7335,10 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58210",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
+  "listed_deadline": "2026-11-18",
   "location": "Comunidad de Galicia",
-  "missed_runs": 1,
-  "opens_on": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-12",
   "parent_ref": null,
   "place": "Santiago de Compostela",
   "portal_tries": 1,
@@ -7348,7 +7348,7 @@
   "region": "Galicia",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Agrónomo/a o Ingeniero/a de Montes para prestar apoyo en tareas de coordinación seguridad y salud en Santiago de Compostela.</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Agrónomo/a o Ingeniero/a de Montes para prestar apoyo en tareas de coordinación seguridad y salud en Santiago de Compostela.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 12/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -7413,14 +7413,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 9 meses.<br/>- Jornada completa.<br/><br/>En relación con la oferta publicada, atendiendo a incidencias técnicas, el plazo de recepción de candidaturas que finalizaba el día 06/11, se ha ampliado hasta el 10/11 a las 23:59 horas (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 9 meses.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 12/11/2026 hasta el próximo 18/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a Agrónomo/a o Ingeniero/a de Montes - Coordinación seguridad y salud (Santiago de Compostela)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58210"
  },
@@ -12253,6 +12253,106 @@
   "status": "open",
   "title": "Primer/a Oficial/a de Puente (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58457"
+ },
+ "58459": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58459",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58459",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-26",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-12T11:07:25+00:00",
+  "id": "tragsa:58459",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-26",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-12",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": null,
+  "ref": "58459",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Licenciado/a o Graduado/a con Máster Oficial para prestar apoyo en Coordinación de Compras en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaboración de contratos procedentes de licitaciones según la Ley de Contratos del Sector Público (LCSP).</li><li>Revisión de las solicitudes de modificaciones contractuales, y asesoramiento a las unidades solicitantes, para que sean conformes a la LCSP y cumplan la normativa interna.</li><li>Asistencia a la Secretaría de la Mesa de Contratación en los trámites de procedimiento administrativo: calificación administrativa de expedientes de contratación, elaboración de requerimientos de documentación de licitaciones, y elaboración de resoluciones de adjudicación de los expedientes de compra.</li><li>Colaboración en la redacción de alegaciones frente a recursos interpuestos en los procedimientos de contratación correspondientes a los expedientes de compra.</li><li>Automatización de contratos y modificaciones contractuales a partir de plantillas mediante herramientas Microsoft 365.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Licenciatura o Grado + Máster Oficial en Derecho (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 3 meses de experiencia en elaboración de contratos mercantiles y modificaciones contractuales (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Licenciatura o Grado + Máster Oficial en Derecho (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Licenciatura o Grado + Máster Oficial en Derecho (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 3 meses de experiencia en elaboración de contratos mercantiles y modificaciones contractuales (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en Derecho Mercantil</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 1 año de experiencia en elaboración de contratos mercantiles y modificaciones contractuales (experiencia académica y/o con contrato laboral).</li><li>Desde 1 mes Hasta 6 meses de experiencia en administración pública y/o empresa pública (experiencia académica y/o con contrato laboral).</li></ul>Otros Factores Meritorios<ul><li>Conocimiento de automatización de documentos a través de herramientas Microsoft Office 365 (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en Derecho Mercantil</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en Derecho Mercantil</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 1 año de experiencia en elaboración de contratos mercantiles y modificaciones contractuales (experiencia académica y/o con contrato laboral).</li><li>Desde 1 mes Hasta 6 meses de experiencia en administración pública y/o empresa pública (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimiento de automatización de documentos a través de herramientas Microsoft Office 365 (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede<br/>- Jornada completa<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 12/11/2026 hasta el próximo 26/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciatura o Grado + Máster Oficial - Apoyo a Coordinación de Compras (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58459"
  },
  "58462": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58462",

@@ -197,6 +197,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/DGRAF_P3_Bolsa-de-reserva-03_PUBLICO.pdf",
   "via": "otro"
  },
+ "rtve:3939bee70e4a": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-12",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-12T11:07:25+00:00",
+  "location": null,
+  "process": "Convocatoria 1/2022 · Ingeniería técnica – Industrial · Proceso Libre",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Listado provisional rectificativo de adjudicacion de plazas P3",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/INGT-IND_P3_Listado-provisional-rectificativo-de-adjudicacion-de-plazas-P3_PUBLICO.pdf",
+  "via": "otro"
+ },
  "rtve:39b6ab83d242": {
   "access": "libre",
   "apply_url": null,
@@ -250,6 +268,24 @@
   "title": "Listado Candidaturas Admitidas Provisional",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESEC_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
   "via": "bolsa"
+ },
+ "rtve:420f60bf967f": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-12",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-12T11:07:25+00:00",
+  "location": null,
+  "process": "Convocatoria 1/2022 · Ingeniería técnica – Industrial · Proceso Libre",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Listado definitivo rectificativo de méritos P3",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/INGT-IND_P3_Listado-definitivo-rectificativo-de-m%C3%A9ritos-P3_PUBLICO.pdf",
+  "via": "otro"
  },
  "rtve:47504fc3148c": {
   "access": "libre",
@@ -358,6 +394,24 @@
   "title": "Listado Candidaturas Admitidas Provisional",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TESE_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
   "via": "bolsa"
+ },
+ "rtve:6acb08ff83d9": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-12",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-12T11:07:25+00:00",
+  "location": null,
+  "process": "Convocatoria 1/2022 · Ingeniería técnica – Industrial · Proceso Libre",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Listado definitivo rectificativo de puntuaciones P3",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/INGT-IND_P3_Listado-definitivo-rectificativo-de-puntuaciones-P3_PUBLICO.pdf",
+  "via": "otro"
  },
  "rtve:744addc8c08f": {
   "access": null,
