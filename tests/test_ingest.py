@@ -297,6 +297,18 @@ class RunSource(unittest.TestCase):
         ingest.run_source(FakeSource([listed(title="Oferta")], detail), None, self.data, NOW)
         self.assertEqual(self.stored()["1"]["region"], "Castilla y León")
 
+    def test_sin_ubicacion_vale_la_comunidad_de_la_fuente(self):
+        source = FakeSource([listed(title="Oferta")], OfferDetail())
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["region"], "Sin ubicación")  # fuente estatal
+        source.scope = "Aragón"
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["location"], self.stored()["1"]["region"]), ("Aragón", "Aragón"))
+        concreta = FakeSource([listed(ref="2", title="Oferta")], OfferDetail(location="Huesca"))
+        concreta.scope = "Aragón"
+        ingest.run_source(concreta, None, self.data, NOW)
+        self.assertEqual(self.stored()["2"]["location"], "Huesca")
+
     def test_parentesis_del_titulo_que_no_es_un_lugar_no_es_la_ubicacion(self):
         source = FakeSource([listed(title="Ingeniero/a de Plataformas (2026-T00434)")], OfferDetail())
         ingest.run_source(source, None, self.data, NOW)
