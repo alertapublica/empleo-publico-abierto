@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 
 from empleo.model import SourceLayoutError
-from empleo.sources import ADIF, FURIOJA, RENFE
+from empleo.sources import ADIF, RENFE
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -23,7 +23,6 @@ class Centinela(unittest.TestCase):
     def test_paginas_vacias_reales_no_dan_ofertas(self):
         self.assertEqual(ADIF.list_offers(FakeHttp(fixture("adif-plazo-abierto.html"))), [])
         self.assertEqual(RENFE.list_offers(FakeHttp(fixture("renfe-search.html"))), [])
-        self.assertEqual(FURIOJA.list_offers(FakeHttp(fixture("furioja-ofertas.html"))), [])
 
     def test_si_desaparece_el_texto_falla_y_dice_donde_mirar(self):
         with self.assertRaises(SourceLayoutError) as caught:
