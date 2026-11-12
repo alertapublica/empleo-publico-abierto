@@ -8,8 +8,8 @@ from pathlib import Path
 
 from . import store
 from .http import Client
-from .model import (LISTING_OR_DETAIL, LIVE_STATES, PROCESS_FIELDS, ListedOffer, SourceLayoutError,
-                    deadline_passed)
+from .model import (LISTING_OR_DETAIL, LIVE_STATES, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
+                    SourceLayoutError, deadline_passed)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
@@ -258,6 +258,10 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     for record in offers.values():
         if record["status"] == "open":
             if record["region"] in (None, UNKNOWN):  # también si la tabla de comunidades ha mejorado
+                _locate(record)
+            # Sin ubicación en la ficha: en un organismo de una sola comunidad, esa comunidad.
+            if not record["location"] and source.scope != STATE_SCOPE:
+                record["location"] = source.scope
                 _locate(record)
             record["place"] = place_of(record["title"], record["sections"])
     events.extend(new_events)
