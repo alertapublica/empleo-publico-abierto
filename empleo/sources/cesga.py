@@ -34,8 +34,11 @@ HEADERS = ["Referencia", "Título", "Prazo", "Estado", "Prazas"]
 DETAIL = re.compile(r"^/oferta/([0-9a-f]+)$")
 DAY = re.compile(r"\d{2}/\d{2}/\d{4}")
 MOMENT = re.compile(r"(\d{2}/\d{2}/\d{4})\s+(\d{1,2}:\d{2})")
-# `spanish: `<h4>…</h4>`,` dentro de `const jobData`; una comilla invertida en el texto va escapada.
-VERSION = re.compile(r"\b(galician|english|spanish):\s*`((?:[^`\\]|\\.)*)`", re.S)
+# `spanish: `<h4>…</h4>`,` dentro de `const jobData = { description: {…} }`; una comilla invertida en
+# el texto va escapada. Cada valor tiene que ser un literal entero (seguido de «,» o «}»): si la página
+# pasara a concatenar o calcular el texto, no se encuentra la versión y la ficha se detiene.
+JOB_DATA = re.compile(r"const jobData\s*=\s*\{\s*description:\s*\{")
+VERSION = re.compile(r"\s*(galician|english|spanish):\s*`((?:[^`\\]|\\.)*)`\s*(?:,|(?=\}))", re.S)
 
 
 def _clean(text: str) -> str:
@@ -78,7 +81,11 @@ def parse_ficha(html: str) -> dict:
     if deadline is None:
         raise SourceLayoutError("CESGA: ficha sin «Límite de presentación» con día y hora")
     published = MOMENT.search(_labelled(soup, "Data de publicación") or "")
-    versions = {lang: text.replace("\\`", "`") for lang, text in VERSION.findall(html)}
+    start = JOB_DATA.search(html)
+    versions, at = {}, start.end() if start else len(html)
+    while found := VERSION.match(html, at):  # solo las claves seguidas, dentro de `description`
+        versions[found.group(1)] = found.group(2).replace("\\`", "`")
+        at = found.end()
     if "spanish" not in versions or "galician" not in versions:
         raise SourceLayoutError("CESGA: ficha sin las versiones de la descripción")
     sections = []
@@ -133,4 +140,8 @@ class CesgaSource(Source):
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
         ficha = self._fichas.get(offer.ref) or parse_ficha(http.get(offer.url))
+        # Aquí y no en el listado: una ficha incompleta deja aviso y se relee, sin parar la fuente.
+        titles = [section["title"] for section in ficha["sections"]]
+        if titles != ["Descripción del puesto", "Documentos de la convocatoria"]:
+            raise SourceLayoutError(f"CESGA: ficha sin descripción o sin documentos ({titles})")
         return OfferDetail(sections=ficha["sections"], location="Santiago de Compostela")

@@ -80,6 +80,25 @@ class Cesga(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             cesga.parse_ficha(fixture("cesga-ficha.html").replace("spanish:", "castellano:"))
 
+    def test_descripcion_solo_si_es_un_literal_entero_de_jobdata(self):
+        html = fixture("cesga-ficha.html")
+        with self.assertRaises(SourceLayoutError):  # concatenada: no se toma solo el primer trozo
+            cesga.parse_ficha(html.replace("spanish: `", "spanish: `<p>Perfil</p>` + `", 1))
+        # Las mismas claves en otro objeto, antes de `jobData`, no cuentan
+        decoy = "<script>const otro = { spanish: `<p>Otro texto</p>`, };</script>"
+        ficha = cesga.parse_ficha(html.replace("<script>", decoy + "<script>", 1))
+        self.assertNotIn("Otro texto", ficha["sections"][0]["html"])
+
+    def test_ficha_incompleta_avisa_sin_parar_el_listado(self):
+        pages = {cesga.PAGE: "cesga-lista.html", OPEN: "cesga-ficha.html"}
+        html = fixture("cesga-ficha.html").replace("Documentación da convocatoria", "Documentos")
+        http = Http(pages)
+        http.get = lambda url: html if url == OPEN else fixture(pages[url])
+        source = cesga.CesgaSource(at(2026, 11, 12, 12, 0))
+        (offer,) = source.list_offers(http)  # el plazo se sigue leyendo
+        with self.assertRaises(SourceLayoutError):
+            source.fetch_detail(http, offer)
+
 
 if __name__ == "__main__":
     unittest.main()

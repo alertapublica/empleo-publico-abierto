@@ -26,6 +26,15 @@ def at(*args):
     return datetime(*args, tzinfo=timezone.utc)
 
 
+def paginated(html, last):
+    """La lista con la paginación de la web («1 2 3 4» y «Siguiente»)."""
+    links = "".join(f'<li><a class="pagination-link" href="/ofertas-de-empleo/page/{n}">{n}</a></li>'
+                    for n in range(1, last + 1))
+    nav = (f'<a class="pagination-next" href="/ofertas-de-empleo/page/2">Siguiente</a>'
+           f'<ol class="pagination-list">{links}</ol>')
+    return html.replace("</body>", nav + "</body>")
+
+
 class Iisgm(unittest.TestCase):
     def test_tarjetas_con_plazo(self):
         rows = iisgm.parse_list(fixture("iisgm-lista.html"))
@@ -39,18 +48,30 @@ class Iisgm(unittest.TestCase):
         http = Http({iisgm.PAGE: "iisgm-lista.html"})
         offers = iisgm.IisgmSource(at(2026, 11, 12, 12, 0)).list_offers(http)
         self.assertEqual([o.ref for o in offers], ["135", "132"])  # 133 es una beca; 129 cerró el 6
-        self.assertEqual(http.urls, [iisgm.PAGE])  # la última tarjeta ya cerró: no hace falta la página 2
+        self.assertEqual(http.urls, [iisgm.PAGE])  # sin paginación, una sola página
         self.assertEqual((offers[0].opens_on, offers[0].deadline, offers[0].deadline_time), ("2026-11-10", "2026-11-19", None))
 
-    def test_pasa_de_pagina_mientras_la_ultima_siga_en_plazo(self):
-        first = fixture("iisgm-lista.html").replace('datetime="2026-11-06"', 'datetime="2026-11-16"')
-        http = Http({iisgm.PAGE: first, iisgm.PAGE + "page/2": "iisgm-lista.html"})
+    def test_lee_todas_las_paginas_aunque_la_ultima_tarjeta_haya_cerrado(self):
+        # El orden no sigue el cierre (la 102 cierra en abril y la 101, detrás, en julio): una
+        # tarjeta en plazo puede ir en la página siguiente aunque la última de esta haya cerrado.
+        first = paginated(fixture("iisgm-lista.html"), 2)
+        later = fixture("iisgm-lista.html").replace('datetime="2026-11-06"', 'datetime="2026-11-16"')
+        later = later.replace("/ofertas-de-empleo/1", "/ofertas-de-empleo/9")  # otras tarjetas: 935, 933…
+        http = Http({iisgm.PAGE: first, iisgm.PAGE + "page/2": later})
         offers = iisgm.IisgmSource(at(2026, 11, 12, 12, 0)).list_offers(http)
         self.assertEqual(http.urls, [iisgm.PAGE, iisgm.PAGE + "page/2"])
-        self.assertIn("129", [o.ref for o in offers])
-        always = Http({iisgm.PAGE: first, **{f"{iisgm.PAGE}page/{n}": first for n in (2, 3, 4)}})
+        self.assertEqual([o.ref for o in offers], ["135", "132", "935", "932", "929"])
+
+    def test_demasiadas_paginas_se_detiene(self):
+        http = Http({iisgm.PAGE: paginated(fixture("iisgm-lista.html"), iisgm.MAX_PAGES + 1)})
         with self.assertRaises(SourceLayoutError):
-            iisgm.IisgmSource(at(2026, 11, 12, 12, 0)).list_offers(always)
+            iisgm.IisgmSource(at(2026, 11, 12, 12, 0)).list_offers(http)
+        self.assertEqual(http.urls, [iisgm.PAGE])
+
+    def test_oferta_de_beca_tampoco(self):
+        html = fixture("iisgm-lista.html").replace(">BECA UNIDAD", ">OFERTA DE BECA UNIDAD")
+        offers = iisgm.IisgmSource(at(2026, 11, 12, 12, 0)).list_offers(Http({iisgm.PAGE: html}))
+        self.assertEqual([o.ref for o in offers], ["135", "132"])
 
     def test_ficha(self):
         detail = iisgm.parse_detail(fixture("iisgm-ficha.html"))
@@ -68,6 +89,10 @@ class Iisgm(unittest.TestCase):
             iisgm.parse_list(fixture("iisgm-lista.html").replace('datetime="2026-11-19"', 'datetime=""', 1))
         with self.assertRaises(SourceLayoutError):
             iisgm.parse_detail(fixture("iisgm-ficha.html").replace("text-18", "texto"))
+        with self.assertRaises(SourceLayoutError):  # sin requisitos (cómo presentarse)
+            iisgm.parse_detail(fixture("iisgm-ficha.html").replace(">Requisitos<", ">Requerimientos<"))
+        with self.assertRaises(SourceLayoutError):  # sin el PDF de la oferta
+            iisgm.parse_detail(fixture("iisgm-ficha.html").replace("related-docs", "documentos"))
 
 
 if __name__ == "__main__":

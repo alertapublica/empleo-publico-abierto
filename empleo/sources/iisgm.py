@@ -4,9 +4,10 @@ Contrata la Fundación para la Investigación Biomédica del Hospital Gregorio M
 listado (`iisgm.com/ofertas-de-empleo/`, `/page/N`) tiene 12 tarjetas por página, de la más nueva
 a la más antigua: título, «Ref.», estado («Abierta», «En proceso», «Cerrada», «Adjudicada») y
 «Plazo» con inicio y fin en `<time datetime>` (sin hora). El estado no se usa: mandan las fechas.
-Se lee la página siguiente mientras la última tarjeta siga en plazo (hasta `MAX_PAGES`).
+El orden no sigue el cierre (en la página 3 del 2026-11-12, la 102 cierra en abril y la 101 en
+julio): se leen todas las páginas que enlaza la paginación (4, unos seis meses), hasta `MAX_PAGES`.
 
-Las becas («BECA UNIDAD TÉCNICA…», «oferta de beca») salen en la misma lista y no se publican. La
+Las becas («BECA UNIDAD TÉCNICA…»; también «OFERTA DE BECA…», por si acaso) salen en la misma lista y no se publican. La
 ficha (`/ofertas-de-empleo/<id>/<slug>`) trae los datos del puesto (grupo de investigación,
 categoría, titulación), los requisitos con la forma de presentarse (por correo) y «Documentos
 relacionados» (la oferta en PDF). El título se copia tal cual, con su referencia: la «Ref.» de la
@@ -29,10 +30,11 @@ from .base import Source
 
 SITE = "https://iisgm.com"
 PAGE = SITE + "/ofertas-de-empleo/"
-MAX_PAGES = 3
+MAX_PAGES = 6
 DETAIL = re.compile(r"^/ofertas-de-empleo/(\d+)/[\w-]+$")
 DAY = re.compile(r"\d{4}-\d{2}-\d{2}")
-GRANT = re.compile(r"^\s*BECA\b", re.I)
+GRANT = re.compile(r"^\s*(?:OFERTA\s+DE\s+)?BECAS?\b", re.I)
+PAGES = re.compile(r"/ofertas-de-empleo/page/(\d+)")
 
 
 def _clean(text: str) -> str:
@@ -65,8 +67,9 @@ def parse_detail(html: str) -> OfferDetail:
     sections = [{"title": "Datos del puesto", "level": 2, "html": sanitize(data.decode_contents())}]
     heading = next((h for h in panel.find_all("h2") if _clean(h.get_text(" ")) == "Requisitos"), None)
     body = heading.find_next_sibling("div") if heading else None
-    if body and _clean(body.get_text(" ")):
-        sections.append({"title": "Requisitos", "level": 2, "html": sanitize(body.decode_contents())})
+    if body is None or not _clean(body.get_text(" ")):
+        raise SourceLayoutError("IiSGM: ficha sin «Requisitos»")
+    sections.append({"title": "Requisitos", "level": 2, "html": sanitize(body.decode_contents())})
     documents = []
     for link in panel.select("ul.related-docs a[href]"):
         size = link.find("span")
@@ -76,8 +79,9 @@ def parse_detail(html: str) -> OfferDetail:
         if label:
             url = quote(urljoin(SITE, link["href"]), safe=":/?=&%#")  # los PDF llevan espacios en el nombre
             documents.append(f'<li><a href="{escape(url, quote=True)}">{escape(label)}</a></li>')
-    if documents:
-        sections.append({"title": "Documentos relacionados", "level": 2, "html": sanitize(f"<ul>{''.join(documents)}</ul>")})
+    if not documents:  # la oferta completa va en ese PDF
+        raise SourceLayoutError("IiSGM: ficha sin «Documentos relacionados»")
+    sections.append({"title": "Documentos relacionados", "level": 2, "html": sanitize(f"<ul>{''.join(documents)}</ul>")})
     return OfferDetail(sections=sections, location="Madrid")
 
 
@@ -91,14 +95,14 @@ class IisgmSource(Source):
     def __init__(self, now: datetime | None = None) -> None:
         self._now = now  # solo para las pruebas
 
-    def _rows(self, http: Client, now: datetime) -> list[dict]:
-        rows = parse_list(http.get(PAGE))
-        page = 2
-        while not deadline_passed(rows[-1]["deadline"], None, now):
-            if page > MAX_PAGES:
-                raise SourceLayoutError(f"IiSGM: siguen en plazo más allá de la página {MAX_PAGES}")
+    def _rows(self, http: Client) -> list[dict]:
+        html = http.get(PAGE)
+        rows = parse_list(html)
+        last = max((int(n) for n in PAGES.findall(html)), default=1)
+        if last > MAX_PAGES:
+            raise SourceLayoutError(f"IiSGM: {last} páginas de ofertas, más de {MAX_PAGES}")
+        for page in range(2, last + 1):
             rows += parse_list(http.get(f"{PAGE}page/{page}"))
-            page += 1
         return rows
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
@@ -106,7 +110,7 @@ class IisgmSource(Source):
         return [
             ListedOffer(ref=row["ref"], title=row["title"], company=self.name, url=row["url"], apply_url=row["url"],
                         kind=None, opens_on=row["opens_on"], deadline=row["deadline"])
-            for row in self._rows(http, now)
+            for row in self._rows(http)
             if not deadline_passed(row["deadline"], None, now) and not GRANT.search(row["title"])
         ]
 

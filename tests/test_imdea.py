@@ -60,6 +60,17 @@ class ImdeaEnergia(unittest.TestCase):
             imdea.parse_list(fixture("imdea-energia-lista.html").replace("Fecha de fin", "Cierre"))
         with self.assertRaises(SourceLayoutError):
             imdea.parse_detail(fixture("imdea-energia-ficha.html").replace(">Descripción<", ">Resumen<"))
+        with self.assertRaises(SourceLayoutError):  # sin requisitos
+            imdea.parse_detail(fixture("imdea-energia-ficha.html").replace(">Requisitos<", ">Perfil<"))
+
+    def test_bloque_con_otra_etiqueta_se_detiene(self):
+        html = fixture("imdea-energia-ficha.html")
+        start = html.index(">Requisitos</div>")
+        span = html.index("<span>", start)
+        end = html.index("</span>", span)
+        changed = html[:span] + "<div>" + html[span + 6:end] + "</div>" + html[end + 7:]
+        with self.assertRaises(SourceLayoutError):
+            imdea.parse_detail(changed)
 
 
 if __name__ == "__main__":

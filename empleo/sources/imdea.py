@@ -73,8 +73,10 @@ def parse_detail(html: str) -> OfferDetail:
     for heading in soup.select("div.offer-title-front"):
         name = _clean(heading.get_text(" "))
         if name in BLOCKS:
-            body = heading.find_next_sibling("span")
-            if body and _clean(body.get_text(" ")):
+            body = heading.find_next_sibling()
+            if body is None or body.name != "span":
+                raise SourceLayoutError(f"IMDEA Energía: «{name}» sin su texto detrás")
+            if _clean(body.get_text(" ")):
                 sections.append({"title": name, "level": 2, "html": sanitize(body.decode_contents())})
             for item in body.find_all("li") if body and name == "Condiciones" else []:
                 found = CONTRACT.match(_clean(item.get_text(" ")))
@@ -85,8 +87,9 @@ def parse_detail(html: str) -> OfferDetail:
             if any(items):
                 html = "".join(f"<li>{escape(item)}</li>" for item in items if item)
                 sections.append({"title": "Documentos que hay que adjuntar", "level": 2, "html": sanitize(f"<ul>{html}</ul>")})
-    if not sections or sections[0]["title"] != "Descripción":
-        raise SourceLayoutError("IMDEA Energía: ficha sin «Descripción»")
+    titles = [section["title"] for section in sections]
+    if titles[:2] != ["Descripción", "Requisitos"]:
+        raise SourceLayoutError(f"IMDEA Energía: ficha sin «Descripción» y «Requisitos» ({titles})")
     return OfferDetail(sections=sections, contract=contract, location="Móstoles")
 
 
