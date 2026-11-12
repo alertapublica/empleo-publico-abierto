@@ -278,7 +278,7 @@
  "2289": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2289",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-12T05:07:26+00:00",
   "code": "26-146_SS_RM",
   "company": "IDIBELL",
   "contract": "Permanent by project",
@@ -293,7 +293,7 @@
   "kind": null,
   "listed_deadline": "2026-11-11",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-28",
   "parent_ref": null,
   "place": null,
@@ -317,7 +317,7 @@
   ],
   "source": "idibell",
   "source_title": "26-146_SS_RM Research Support for the Cancer Immunotherapy Group",
-  "status": "open",
+  "status": "closed",
   "title": "Research Support for the Cancer Immunotherapy Group",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2289"
  },

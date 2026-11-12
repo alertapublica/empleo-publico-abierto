@@ -2,7 +2,7 @@
  "convocatoria-proceso-de-selecci%C3%93n-de-55-contratos-formativos-para-personal-inspector-de-itv": {
   "apply_url": "https://www.veiasa.es/w/convocatoria-proceso-de-selecci%C3%93n-de-55-contratos-formativos-para-personal-inspector-de-itv",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-12T05:07:26+00:00",
   "code": null,
   "company": "VEIASA",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-11",
   "location": null,
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -35,7 +35,7 @@
   ],
   "source": "veiasa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "CONVOCATORIA DEL PROCESO DE SELECCIÓN PARA LA COBERTURA DE 55 CONTRATOS FORMATIVOS DE PERSONAL INSPECTOR DE ITV",
   "url": "https://www.veiasa.es/w/convocatoria-proceso-de-selecci%C3%93n-de-55-contratos-formativos-para-personal-inspector-de-itv"
  }

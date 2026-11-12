@@ -2,7 +2,7 @@
  "IPRAC-JJF-10.26": {
   "apply_url": "https://www.cnic.es/es/convocatoria/investigadora-practicas-para-laboratorio-fisiopatologia-hematovascular-1#block-inscripcion",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-12T05:07:26+00:00",
   "code": "IPRAC-JJF-10.26",
   "company": "CNIC",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-11",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -40,7 +40,7 @@
   ],
   "source": "cnic",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Investigador/a en prácticas para el laboratorio de Fisiopatología Hematovascular",
   "url": "https://www.cnic.es/es/convocatoria/investigadora-practicas-para-laboratorio-fisiopatologia-hematovascular-1"
  },
