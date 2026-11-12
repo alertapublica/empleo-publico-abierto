@@ -58,6 +58,9 @@ class Listing(unittest.TestCase):
     def test_categoria_sin_vacantes_es_lista_vacia(self):
         self.assertEqual(sf.parse_listing(fixture("sf-vacio.html"), HOST), ([], 0))
 
+    def test_categoria_sin_vacantes_en_catalan_es_lista_vacia(self):
+        self.assertEqual(sf.parse_listing(fixture("sf-vacio-ca.html"), HOST), ([], 0))
+
     def test_pagina_inesperada_no_pasa_por_vacia(self):
         with self.assertRaises(SourceLayoutError):
             sf.parse_listing("<h1>Mantenimiento</h1>", HOST)
