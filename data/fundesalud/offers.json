@@ -1,1 +1,36 @@
-{}
+{
+ "13927": {
+  "apply_url": "https://fundesalud.es/personal/ofertas-de-empleo/ref-23-2026/",
+  "category": null,
+  "closed_at": null,
+  "code": "Ref.23/2026",
+  "company": "FUNDESALUD",
+  "contract": null,
+  "deadline": "2026-11-19",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-12T12:37:29+00:00",
+  "id": "fundesalud:13927",
+  "kind": null,
+  "listed_deadline": "2026-11-19",
+  "location": "Extremadura",
+  "missed_runs": 0,
+  "opens_on": "2026-11-13",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "13927",
+  "region": "Extremadura",
+  "sections": [],
+  "source": "fundesalud",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Proyectos de I+D+i.",
+  "url": "https://fundesalud.es/personal/ofertas-de-empleo/ref-23-2026/"
+ }
+}
