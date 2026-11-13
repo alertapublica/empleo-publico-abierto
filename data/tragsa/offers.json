@@ -7872,11 +7872,11 @@
  "58204": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58204",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "58204",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-10",
+  "deadline": "2026-11-16",
   "deadline_time": null,
   "department": "Calidad/Ev.Ambiental/M.Natural",
   "detail_ok": true,
@@ -7885,9 +7885,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58204",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
+  "listed_deadline": "2026-11-16",
   "location": "Comunidad de Madrid",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
@@ -7898,7 +7898,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a, Licenciado/a o Graduado/a + Máster Oficial para proyecto de recursos genéticos en Madrid.<br/><br/>En relación al proceso publicado el pasado 09/10/2026 se amplía el plazo de recepción de candidaturas desde el 04/11/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a, Licenciado/a o Graduado/a + Máster Oficial para proyecto de recursos genéticos en Madrid.<br/><br/>En relación al proceso publicado el pasado 04/11/2026 se amplía el plazo de recepción de candidaturas desde el 13/11/2026 hasta el 16/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -7973,14 +7973,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/as seleccionada/s.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 09/10/2026 se amplía el plazo de recepción de candidaturas desde el 04/11/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/as seleccionada/s.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 04/11/2026 se amplía el plazo de recepción de candidaturas desde el 13/11/2026 hasta el 16/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a, Licenciado/a o Graduado/a + Máster Oficial - Recursos Genéticos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58204"
  },
