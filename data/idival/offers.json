@@ -43,5 +43,50 @@
   "status": "open",
   "title": "Convocatoria para la cobertura del puesto de Director/a Científico de IDIVAL",
   "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1498"
+ },
+ "1500": {
+  "apply_url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1500",
+  "category": null,
+  "closed_at": null,
+  "code": "2026.53",
+  "company": "IDIVAL",
+  "contract": null,
+  "deadline": "2026-11-22",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-13T10:37:30+00:00",
+  "id": "idival:1500",
+  "kind": null,
+  "listed_deadline": "2026-11-22",
+  "location": "Cantabria",
+  "missed_runs": 0,
+  "opens_on": "2026-11-13",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "1500",
+  "region": "Cantabria",
+  "sections": [
+   {
+    "html": "<p>IMPORTANTE: Verifique que la dirección que proporciona es la correcta, ya que será el medio por el que nos pongamos en contacto con usted. No se evaluarán las candidaturas que no cumplan los requisitos de la oferta. Los títulos académicos otorgados por entidades extranjeras deben estar homologados en España. Es obligatorio acreditar todos los requisitos excluyentes.</p><p><br/>IMPORTANT: Verify that the address you provide is correct, as it will be the means by which we contact you. Candidates who don' t meet the requirements of the offer will not be evaluated. The Foreign titles must be homologated. It is mandatory to prove all the exclusion requirements.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/DescargarDocumentoBases/1500\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "idival",
+  "source_title": "2026.53 Convocatoria de una plaza de Doctor/a + Inglés. Call for a Doctoral degree + English. IP Paloma González Álvarez REF GPE2025-001706-P",
+  "status": "open",
+  "title": "Convocatoria de una plaza de Doctor/a + Inglés. Call for a Doctoral degree + English. IP Paloma González Álvarez REF GPE2025-001706-P",
+  "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1500"
  }
 }

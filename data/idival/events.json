@@ -10,5 +10,10 @@
   "before": "2026-11-11",
   "kind": "deadline_changed",
   "offer": "idival:1498"
+ },
+ {
+  "at": "2026-11-13T10:37:30+00:00",
+  "kind": "new",
+  "offer": "idival:1500"
  }
 ]
