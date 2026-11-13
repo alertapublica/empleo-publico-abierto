@@ -208,6 +208,24 @@
   "url": "https://www.cesce.es/documents/20122/19532865/Listado+de+Admitidos+%28PS4-+2026%29.pdf/124d7e3f-7c8b-0c6c-e26e-394ba824e13c?t=1793098610026",
   "via": "otro"
  },
+ "cesce:816a2039b009": {
+  "access": null,
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-11-13",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-13T13:07:32+00:00",
+  "location": null,
+  "process": "CONVOCATORIA DEL 28 DE OCTUBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN TEMPORAL DE UN PUESTO DE ADMINISTRATIVO DE APOYO A LA GESTIÓN (EN EL MARCO DEL CUPO DE CONTRATACIÓN TEMPORAL AUTORIZADO 2026)",
+  "process_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "source": "cesce",
+  "state": "curso",
+  "system": null,
+  "title": "Valoración fase concurso",
+  "url": "https://www.cesce.es/documents/20122/19823899/Valoraci%C3%B3n+fase+concurso+%28ADAG2-+2026%29.pdf/6cb7738a-1a19-6070-6514-901941e89485?t=1794574327489",
+  "via": "otro"
+ },
  "cesce:9d8f66aaf006": {
   "access": null,
   "apply_url": null,
