@@ -96,7 +96,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-13",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
