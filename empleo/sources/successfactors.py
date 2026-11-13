@@ -23,7 +23,6 @@ MONTHS = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6, "jul": 7,
           # en catalán (BSM): «11 de nov. 2026», «14 d’oct. 2026»
           "gen": 1, "febr": 2, "març": 3, "maig": 5, "juny": 6, "ag": 8, "set": 9, "des": 12}
 MAX_PAGES = 40
-EMPTY_TEXT = "no hay ninguna vacante"
 RESULTS = re.compile(r"Result(?:ados|ats)\s+(\d+)\s*[–-]\s*(\d+)\s+de\s+(\d+)")
 JOB_ID = re.compile(r"/job/[^?#]*?/(\d+)/?(?:[?#].*)?$")
 UTC_DATE = re.compile(r"[A-Za-z]{3} ([A-Za-z]{3}) (\d{1,2}) (\d{2}):(\d{2}):(\d{2}) UTC (\d{4})")
@@ -59,9 +58,15 @@ def parse_listing(html: str, base: str) -> tuple[list[dict], int]:
     soup = BeautifulSoup(html, "html.parser")
     table = soup.select_one("table#searchresults")
     if table is None:
-        if EMPTY_TEXT in _clean(soup.get_text(" ")).lower():
+        # Aviso «sin resultados» de la plataforma, igual en castellano y en catalán (BSM): «A continuación,
+        # figuran las 0 últimas ofertas…», «A continuació s'enumeren els 0 llocs…». Sin ese «0», no vale.
+        message = soup.select_one("div#noresults #noresults-message")
+        if message is not None and re.search(r"\b0\b", message.get_text(" ")):
             return [], 0
         raise SourceLayoutError("SuccessFactors: no se encuentra la tabla de resultados")
+    if soup.select_one("div#noresults") is not None:
+        # Categoría vacía con una tabla de «últimas ofertas» de otras categorías: no son suyas
+        raise SourceLayoutError("SuccessFactors: aviso de categoría vacía junto a una tabla de resultados")
     rows = []
     for tr in table.select("tr.data-row"):
         link = tr.select_one("a.jobTitle-link")

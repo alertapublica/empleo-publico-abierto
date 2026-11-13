@@ -58,6 +58,22 @@ class Listing(unittest.TestCase):
     def test_categoria_sin_vacantes_es_lista_vacia(self):
         self.assertEqual(sf.parse_listing(fixture("sf-vacio.html"), HOST), ([], 0))
 
+    def test_categoria_sin_vacantes_en_catalan_es_lista_vacia(self):
+        self.assertEqual(sf.parse_listing(fixture("sf-vacio-ca.html"), HOST), ([], 0))
+
+    def test_aviso_sin_resultados_vacio_no_pasa_por_lista_vacia(self):
+        # Una tabla que cambia de id junto a un aviso sin el «0» de «las 0 últimas ofertas»
+        html = fixture("sf-listado.html").replace('id="searchresults"', 'id="otra"')
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(html + '<div id="noresults" hidden></div>', HOST)
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(html + '<div id="noresults"><div id="noresults-message"></div></div>', HOST)
+
+    def test_aviso_de_vacia_junto_a_una_tabla_no_se_interpreta(self):
+        aviso = '<div id="noresults"><div id="noresults-message">las 3 últimas ofertas</div></div>'
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(aviso + fixture("sf-listado.html"), HOST)
+
     def test_pagina_inesperada_no_pasa_por_vacia(self):
         with self.assertRaises(SourceLayoutError):
             sf.parse_listing("<h1>Mantenimiento</h1>", HOST)
