@@ -18,7 +18,8 @@ documentos. Solo se enlazan las bases: entre los documentos puede haber listas d
 investigador principal y la referencia: el puesto, las funciones y el perfil están en las bases.
 
 La ubicación es la comunidad de la fundación: las fichas no dan un lugar de trabajo
-uniforme. Sin ver todavía: el listado sin ninguna convocatoria abierta.
+uniforme. Sin ninguna abierta (i+12, 2026-11-13), la tabla trae una sola fila `tr.t-no-data` vacía:
+es lista vacía; cualquier otra fila sin enlace o sin fechas detiene la lectura.
 
 IDIBELL redacta las convocatorias en inglés: `/es/`, `/ca/` y `/en/` dan el mismo texto (solo
 cambia la interfaz) y su web enlaza este listado. Se copian tal cual, marcadas `lang="en"`.
@@ -66,6 +67,8 @@ def parse_listing(html: str, what: str) -> list[dict]:
     headers = tuple(_text(th) for th in rows[0].find_all("th")) if rows else ()
     if headers[:3] != HEADERS:
         raise SourceLayoutError(f"{what}: columnas inesperadas: {headers}")
+    if len(rows) == 2 and "t-no-data" in (rows[1].get("class") or []) and not _text(rows[1]):
+        return []
     found = []
     for row in rows[1:]:
         cells = row.find_all("td")
