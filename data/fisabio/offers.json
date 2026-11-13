@@ -90,7 +90,7 @@
  "882": {
   "apply_url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/882",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-13T10:07:27+00:00",
   "code": "2026/69",
   "company": "FISABIO",
   "contract": null,
@@ -105,7 +105,7 @@
   "kind": null,
   "listed_deadline": "2026-11-28",
   "location": "Comunitat Valenciana",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": "2026-11-13",
   "parent_ref": null,
   "place": null,
@@ -128,7 +128,7 @@
   ],
   "source": "fisabio",
   "source_title": "2026/69 UN/A AYUDANTE TÉCNICO DE GESTIÓN DE LA INVESTIGACIÓN (M2)",
-  "status": "open",
+  "status": "closed",
   "title": "UN/A AYUDANTE TÉCNICO DE GESTIÓN DE LA INVESTIGACIÓN (M2)",
   "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/882"
  },
@@ -154,7 +154,7 @@
   "opens_on": "2026-11-13",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "883",
@@ -176,5 +176,50 @@
   "status": "open",
   "title": "UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)",
   "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/883"
+ },
+ "884": {
+  "apply_url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/884",
+  "category": null,
+  "closed_at": null,
+  "code": "2026/70",
+  "company": "FISABIO",
+  "contract": null,
+  "deadline": "2026-11-28",
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-13T10:07:27+00:00",
+  "id": "fisabio:884",
+  "kind": null,
+  "listed_deadline": "2026-11-28",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-13",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "884",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>RECOMENDACIONES A TENER EN CUENTA ANTES DE INICIAR LA INSCRIPCION:</p><p>Lea la convocatoria poniendo especial atención en la forma y documentos a presentar. Lea las instrucciones para realizar la inscripción a través de la plataforma. Recuerde que, en caso de haber algún error, las solicitudes podrán recuperarse introduciendo el mismo usuario y contraseña que indicará al presentar la solicitud (aconsejamos que recuerde estos datos). Recuerde que el único documento que debe ir firmado digitalmente es la declaración responsable de veracidad de datos. Antes de enviar su solicitud, revise la documentación presentada, ya que su candidatura será admitida únicamente cuando se compruebe que la documentación cumple con todos los requisitos expuestos en la convocatoria. Tras enviar su solicitud, recibirá un correo con un resguardo en pdf. En caso de no recibirlo, por favor, contactad en el correo electrónico: rrhh@fisabio.es</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DescargarDocumentoBases/884\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "fisabio",
+  "source_title": "2026/70 UN/A AYUDANTE TÉCNICO DE GESTIÓN DE LA INVESTIGACIÓN (M2)",
+  "status": "open",
+  "title": "UN/A AYUDANTE TÉCNICO DE GESTIÓN DE LA INVESTIGACIÓN (M2)",
+  "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/884"
  }
 }
