@@ -82,6 +82,12 @@ class Listado(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             fundanet.parse_listing(html, "IDIBELL")
 
+    def test_lista_vacia(self):
+        self.assertEqual(fundanet.parse_listing(fixture("fundanet-imas12-listado-vacio.html"), "i+12"), [])
+        html = fixture("fundanet-imas12-listado-vacio.html").replace('colspan="3">', 'colspan="3">Error')
+        with self.assertRaises(SourceLayoutError):
+            fundanet.parse_listing(html, "i+12")
+
     def test_fecha_ilegible_se_detiene(self):
         html = fixture("fundanet-idibell-listado.html").replace("20/11/2026 23:59", "pronto", 1)
         with self.assertRaises(SourceLayoutError):
