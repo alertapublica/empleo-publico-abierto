@@ -72,9 +72,13 @@ FRASES = [
     (r"administracion publica|(convocatoria (de )?)?proceso (de seleccion|selectivo)|"
      r"para la (cobertura|provision) de( \w+)? (puestos?|plazas?)( de trabajo)?( de)?|"
      r"oferta (de )?empleo publico|tasa de reposicion", {}),
-    (r"capital humano|talento humano|\bnominas?\b", {"personas": 3}),
+    (r"capital humano|talento humano|\bnomin(a|as|es)\b", {"personas": 3}),
+    (r"persones i organitzacio|personas y organizacion", {"personas": 3}),  # nombre del departamento
     (r"inteligencia artificial|machine learning|aprendizaje automatico|\bia\b|\bai\b",
      {"tic": 3}),
+    (r"operador\w* (tecnic\w* )?(masia|parc d['’]atraccions|parque de atracciones)", {"oficios": 3}),
+    (r"area de negoci de l['’]explotacio", {"comercial": 3}),
+    (r"ordenacion y gestion grafica", {"obras": 3}),
     (r"artes graficas|impresion|offset|encuadernac\w*|preimpresion", {"oficios": 3}),
     (r"facturacion|cobros|tesoreria", {"economia": 3}),
     (r"planificacion y control", {"economia": 2}),
@@ -85,16 +89,21 @@ FRASES = [
      {"ambiente": 3}),
     (r"seguridad y salud|seguridad,? salud y bienestar|prevencion de riesgos|\bprl\b|"
      r"occupational health|salud laboral|riscos laborais|seguretat i salut|laneko arriskuen", {"personas": 3}),
+    (r"(titulad\w*|tecnic\w*)( superior| medio)? (de |en )?prevencion$", {"personas": 3}),
     (r"medic\w* (del trabajo|de empresa)|metge del treball|enfermeria de empresa",
      {"sanidad": 3, "personas": 2}),
     (r"seguridad industrial|seguretat industrial", {"ingenieria": 3}),
     (r"ciberseguridad\w*|ciberseguretat|cybersecurity|seguridad de la informacion|"
-     r"seguridad informatica", {"tic": 3}),
+     r"seguridad informatica|seguretat informatica|seguridad de (los )?sistemas de informacion", {"tic": 3}),
+    (r"seguridad ferroviaria|seguretat ferroviaria", {"transporte": 3}),
     (r"servicio de seguridad|seguridad (fisica|patrimonial|privada)|control (de )?accesos|"
      r"vigilante\w*|polic\w*|bomber\w*|salvamento|socorrista\w*|emergencias|proteccion civil|"
-     r"extincion de incendios|suhiltzaile\w*", {"seguridad": 3}),
+     r"extincion de incendios|suhiltzaile\w*|servei de seguretat|tecnic\w* de (seguridad|seguretat)\b",
+     {"seguridad": 3}),
+    (r"atencion al usuario informatic\w*|atencio (al |a l['’])?usuari\w* informatic\w*", {"tic": 3}),
     (r"atencion (al|a la|e informacion al) (usuario|cliente|ciudadan\w*|publico|pasajero)|"
-     r"informacion al pasajero|atencio a la ciutadania|customer service|call ?center|"
+     r"atencion al visitante|atencio (al |a la |a l['’])?(usuari|client|visitant|public|ciutadania)\w*|"
+     r"informacion al pasajero|agent\w* civic\w*|customer service|call ?center|"
      r"punto (de )?(atencion|informacion)", {"comercial": 3}),
     (r"sistemas? de informacion geografica|\bsig\b|teledeteccion|geomatic\w*|geodesi\w*|"
      r"fotogrametri\w*|\blidar\b|cartografi\w*|topograf\w*|hidrografi\w*", {"obras": 2, "ambiente": 1}),
@@ -105,7 +114,7 @@ FRASES = [
      r"analistas?[ -]programador\w*|tecnologias de la informacion|sistemas de informacion|"
      r"estrategia digital|transformacion digital|administracion digital|administracio digital|"
      r"sistemas? de negocio|sistemes de negoci|sistemes critics|sistemas criticos|"
-     r"desarrollo de (software|aplicaciones)|software developer|desenvolupador\w*|"
+     r"tecnic\w* de (dades|datos)|desarrollo de (software|aplicaciones)|software developer|desenvolupador\w*|"
      r"analisis (de )?datos|data analy\w*|data scien\w*|cientific\w* de datos|"
      r"cabinas de almacenamiento|almacenamiento (de datos|informatico|cloud)|bases? de datos|"
      r"infraestructuras? (cis|tic|it|informatica\w*|de sistemas|de red\w*|cloud)|"
@@ -230,7 +239,7 @@ PALABRAS = [
     # transporte, náutica y logística
     (r"\bconductor\w*|\bcondutor\w*|\brepartidor\w*|\bchofer\w*|\bdriver\w*|\bgidari\w*|\bmaquinista\w*|"
      r"\bbuques?\b|\bembarcacion\w*|\blogistic\w*|\bferroviari\w*|\bferrocarril\w*|"
-     r"\btripulante\w*|\baeropuert\w*|\bportuari\w*|\bpuertos?\b|\bexplotacio\b|"
+     r"\btripulante\w*|\bmarineri\w*|\bmariner[oa]?s?\b|\baeropuert\w*|\bportuari\w*|\bpuertos?\b|\bexplotacio\b|"
      r"\btransporte\w*|\btransport\b", {"transporte": 3}),
     (r"\balmacen(es|ero|eros|era|eras)?\b|\bwarehouse", {"transporte": 2, "oficios": 2}),
     # oficios, operarios y mantenimiento
