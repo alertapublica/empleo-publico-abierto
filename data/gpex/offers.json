@@ -2,7 +2,7 @@
  "2557": {
   "apply_url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2557",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-13T05:07:40+00:00",
   "code": "BC26342",
   "company": "GPEX",
   "contract": "Cubrir plaza temporal",
@@ -16,7 +16,7 @@
   "kind": null,
   "listed_deadline": "2026-11-12",
   "location": "Mérida (Badajoz)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -54,7 +54,7 @@
   ],
   "source": "gpex",
   "source_title": "BC26342 Personal Técnico Medio Ambiental",
-  "status": "open",
+  "status": "closed",
   "title": "Personal Técnico Medio Ambiental",
   "url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2557"
  }

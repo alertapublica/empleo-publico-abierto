@@ -2,7 +2,7 @@
  "131": {
   "apply_url": "https://iisgm.com/ofertas-de-empleo/131/coordinador-a-de-ensayos-clinicos-y-proyectos-academicos-104-2026",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-13T05:07:40+00:00",
   "code": null,
   "company": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-12",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-03",
   "parent_ref": null,
   "place": null,
@@ -45,7 +45,7 @@
   ],
   "source": "iisgm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "COORDINADOR/A DE ENSAYOS CLÍNICOS Y PROYECTOS ACADÉMICOS 104_2026",
   "url": "https://iisgm.com/ofertas-de-empleo/131/coordinador-a-de-ensayos-clinicos-y-proyectos-academicos-104-2026"
  },

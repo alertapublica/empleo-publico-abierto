@@ -2,7 +2,7 @@
  "689719": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/689719.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-13T05:07:40+00:00",
   "code": "32-2026",
   "company": "Fundación Pública Andaluza Progreso y Salud, M.P.",
   "contract": "Indefinido",
@@ -17,7 +17,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-12",
   "location": "Sevilla (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-22",
   "parent_ref": null,
   "place": null,
@@ -50,7 +50,7 @@
   ],
   "source": "andalucia",
   "source_title": "Técnico/a Especialista en Evaluación de Tecnologías Sanitarias -32-2026",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a Especialista en Evaluación de Tecnologías Sanitarias",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/689719.html"
  },
