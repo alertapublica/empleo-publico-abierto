@@ -2,7 +2,7 @@
  "26-42": {
   "apply_url": "https://navarrabiomed.es/es/empleo/26-42-personal-administrativo",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-13T11:07:23+00:00",
   "code": "26-42",
   "company": "Fundación Miguel Servet",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-13",
   "location": "Pamplona (Navarra)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -40,7 +40,7 @@
   ],
   "source": "navarrabiomed",
   "source_title": "26-42 Personal administrativo",
-  "status": "open",
+  "status": "closed",
   "title": "Personal administrativo",
   "url": "https://navarrabiomed.es/es/empleo/26-42-personal-administrativo"
  },
