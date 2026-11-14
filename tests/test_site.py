@@ -30,8 +30,7 @@ def offer(ref, **extra):
     return {**base, **extra}
 
 
-RELLENO = ("<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12)
-           + " Contrato temporal a jornada completa.</p>")
+RELLENO = "<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12) + "</p>"
 TELETRABAJO = RELLENO + "<p>Posibilidad de trabajo a distancia hasta el 50 % de la jornada.</p>"
 
 
@@ -444,7 +443,7 @@ class Site(unittest.TestCase):
         self.assertIn('data-teletrabajo="0"', tarjetas["5"])
         self.assertIn("«Posibilidad de trabajo a distancia hasta el 50 % de la jornada.»", self.read("ofertas/tragsa-4/index.html"))
         self.assertIn("La ficha no lo menciona", self.read("ofertas/tragsa-5/index.html"))
-        self.assertIn("No consta: la ficha no recoge las condiciones", self.read("ofertas/tragsa-1/index.html"))
+        self.assertIn("No consta: consulte las bases", self.read("ofertas/tragsa-1/index.html"))
         api = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
         self.assertEqual([api[f"tragsa:{r}"]["teletrabajo"] for r in "145"],
                          [None, "Posibilidad de trabajo a distancia hasta el 50 % de la jornada.", False])
@@ -454,6 +453,15 @@ class Site(unittest.TestCase):
         novedades = {i["id"].split("/")[0]: i for i in json.loads(self.read("api/novedades.json"))["novedades"]}
         self.assertTrue(novedades["tragsa:4"]["teletrabajo"])
         self.assertEqual(novedades["tragsa:4"]["teletrabajo_estado"], "menciona")
+        # «Sin teletrabajo» solo con la frase de la ficha; no entra en el filtro ni en el RSS de teletrabajo.
+        presencial = offer("9", sections=[{"title": "Lugar", "level": 2, "html": RELLENO + "<p>Móstoles. 100% presencial</p>"}])
+        self.assertEqual(site.remote_fields(presencial),
+                         {"teletrabajo": False, "teletrabajo_estado": "sin", "teletrabajo_detalle": None})
+        tarjeta = site.offer_card(presencial, NOW.date())
+        self.assertIn('data-teletrabajo="0"', tarjeta)
+        self.assertNotIn("teletrabajo:", tarjeta.lower().split("data-guardar")[1])
+        self.assertIn("Sin teletrabajo, según la ficha: «Móstoles. 100% presencial»",
+                      site.offer_page(presencial, {s.id: s for s in site.ACTIVE}, NOW.date(), ""))
 
     def test_comunicados_sin_fecha_por_deteccion_y_lo_que_ya_estaba_al_final(self):
         base = {"source": "sepi", "process": "P", "url": "u", "state": "curso", "date": ""}

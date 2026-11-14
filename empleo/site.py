@@ -359,7 +359,7 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
     if any(isinstance(r, str) for r in remote):
         unknown = sum(r is None for r in remote)
         hint = (f" En {'1 oferta' if unknown == 1 else f'{unknown} ofertas'} no es posible comprobarlo, porque la"
-                " ficha no recoge las condiciones de trabajo." if unknown else "")
+                " ficha no recoge las condiciones y remite a las bases." if unknown else "")
         remote_filter = (
             '<label class="pastilla"><input type="checkbox" name="teletrabajo" value="1" aria-describedby="ayuda-teletrabajo">'
             ' Menciona teletrabajo</label>\n'
@@ -455,7 +455,7 @@ def remote_text(remote: teletrabajo.Remote) -> str:
         return f"Sin teletrabajo, según la ficha: «{e(remote.phrase)}»"
     if remote.state == teletrabajo.SILENT:
         return "La ficha no lo menciona"
-    return "No consta: la ficha no recoge las condiciones de trabajo"
+    return "No consta: consulte las bases"
 
 
 def offer_page(offer: dict, sources: dict, today: date, checked: str,
@@ -1065,7 +1065,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <h2 id="de-donde">Origen de los datos</h2>
 <p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
 <p>El área de cada oferta (en «Filtros») no la facilita la empresa: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo y solo sirve para filtrar; una oferta puede tener dos áreas o ninguna.</p>
-<p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Cuando la frase indica cuánto («hasta el 50 %», «1 día a la semana»), se añade a la etiqueta. Si la ficha no menciona el teletrabajo, no se deduce que no lo haya: solo se indica «sin teletrabajo» cuando la ficha lo dice. Si la ficha no recoge las condiciones de trabajo (por ejemplo, porque solo remite a las bases), no es posible saberlo y así se indica.</p>
+<p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Cuando la frase indica cuánto («hasta el 50 %», «1 día a la semana»), se añade a la etiqueta. Si la ficha no menciona el teletrabajo, no se deduce que no lo haya: solo se indica «sin teletrabajo» cuando la ficha lo dice. Si la ficha apenas tiene texto y solo remite a las bases, no es posible saberlo y así se indica.</p>
 <h2 id="datos">Datos abiertos</h2>
 <p>Toda la información del portal está disponible en ficheros JSON, sin clave ni registro, con licencia CC BY 4.0, para su reutilización en webs, aplicaciones o análisis. La descripción de cada fichero y de cada campo, con ejemplos, figura en <a href="../datos/">Datos abiertos</a>.</p>
 <h2 id="quien">Quién mantiene el portal</h2>
@@ -1169,8 +1169,8 @@ OFFER_FIELDS = [
     (("detectada", "cerrada"), "Momentos (ISO 8601) en que este portal detectó la oferta y en que se cerró."),
     (("republica",), "Código de la oferta anterior, si es una nueva publicación de aquella."),
     (("areas",), "Áreas profesionales (<code>areas</code> en listas.json). Clasificación orientativa que asigna este portal; puede haber varias o ninguna."),
-    (("teletrabajo",), "Frase literal de la ficha que menciona el teletrabajo; <code>false</code> si la ficha recoge las condiciones de trabajo y no lo menciona, o lo niega; <code>null</code> si no puede saberse porque la ficha no recoge las condiciones (solo remite a las bases, por ejemplo)."),
-    (("teletrabajo_estado",), "<code>menciona</code>; <code>sin</code> si la ficha lo niega expresamente («100% presencial»); <code>no_menciona</code> si la ficha recoge las condiciones y no lo nombra (no significa que no lo haya); <code>no_consta</code> si la ficha no recoge las condiciones."),
+    (("teletrabajo",), "Frase literal de la ficha que menciona el teletrabajo; <code>false</code> si la ficha tiene texto y no lo menciona, o lo niega; <code>null</code> si no puede saberse porque la ficha apenas tiene texto (solo remite a las bases, por ejemplo)."),
+    (("teletrabajo_estado",), "<code>menciona</code>; <code>sin</code> si la ficha lo niega expresamente («100% presencial»); <code>no_menciona</code> si la ficha tiene texto y no lo nombra (no significa que no lo haya); <code>no_consta</code> si la ficha apenas tiene texto. Es una lectura automática del texto, orientativa."),
     (("teletrabajo_detalle",), "Cuánto teletrabajo dice la frase, si lo dice: «hasta el 50 %», «1 día a la semana», «algunos días». <code>null</code> si no lo concreta."),
     (("url", "url_inscripcion", "url_portal"), "Enlaces a la ficha oficial, a la inscripción oficial y a la ficha en este portal."),
 ]

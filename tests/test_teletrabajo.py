@@ -2,8 +2,7 @@ import unittest
 
 from empleo import teletrabajo
 
-RELLENO = ("<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12)
-           + " Contrato temporal a jornada completa.</p>")
+RELLENO = "<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12) + "</p>"
 
 
 def ficha(*html):
@@ -48,7 +47,7 @@ class Teletrabajo(unittest.TestCase):
         self.assertTrue(frase.startswith("…") and frase.endswith("…"))
         self.assertLessEqual(len(frase), teletrabajo.MAX_CHARS + 30)
 
-    def test_cuanto_solo_si_la_frase_lo_dice(self):
+    def test_cuanto_solo_si_la_frase_lo_dice_del_teletrabajo(self):
         casos = {
             "Posibilidad de hasta un 50% de la jornada de trabajo a distancia por ahorro energético a determinar"
             " por la empresa.": "hasta el 50 %",
@@ -58,36 +57,41 @@ class Teletrabajo(unittest.TestCase):
             "Possibility to work some days in remote -Teleworking": "algunos días",
             "Possibilitat de teletreball 1 dia a la setmana.": "1 día a la semana",
             "Teletrabajo dos días a la semana.": "2 días a la semana",
+            "Teletrabajo del 40 %.": "40 %",
             "Jornada laboral completa de 39 h. en horario de invierno, con flexibilidad horaria y posibilidad"
             " de teletrabajo.": None,
-            # Una cifra lejos de la mención habla de otra cosa.
-            "Porcentaje de viaje de hasta el 25% de la jornada laboral, en proyectos repartidos por toda la provincia"
-            " y con desplazamientos frecuentes a las oficinas comarcales; posibilidad de teletrabajo.": None,
+            # Cifras que hablan de otra cosa: la jornada, los viajes, los días en la oficina.
+            "Jornada al 50 % con posibilidad de teletrabajo.": None,
+            "Viajes de hasta el 25 % y posibilidad de teletrabajo.": None,
+            "Tres días a la semana presenciales y dos de teletrabajo.": None,
         }
         for frase, cuanto in casos.items():
             leido = teletrabajo.read(ficha(f"<p>{frase}</p>", RELLENO))
             self.assertEqual((leido.state, leido.detail), ("menciona", cuanto), frase)
 
-    def test_sin_teletrabajo_solo_si_la_ficha_lo_dice(self):
-        for frase in ("IMDEA Energía, Móstoles, Madrid. 100% presencial", "Puesto sin posibilidad de teletrabajo."):
+    def test_sin_teletrabajo_solo_si_la_ficha_lo_dice_del_puesto(self):
+        for frase in ("IMDEA Energía, Móstoles, Madrid. 100% presencial", "Puesto sin posibilidad de teletrabajo.",
+                      "No se contempla el teletrabajo.", "Lloc de treball totalment presencial."):
             leido = teletrabajo.read(ficha(f"<p>{frase}</p>", RELLENO))
             self.assertEqual((leido.state, leido.phrase), ("sin", frase))
         for frase in (
             "Curso de Prevención de Riesgos Laborales 100% presencial.",
+            "Curs 100% presencial.",
+            "La prueba de selección será 100% presencial.",
+            "No es un puesto 100% presencial.",
+            "No es necesario viajar y se ofrece teletrabajo.",  # la negación no va con el teletrabajo
             "Disponibilidad para trabajar presencialmente en la Comunidad de Madrid.",  # no excluye lo híbrido
             "Posibilidad de oficina remota en otras oficinas de Tragsatec de Galicia.",  # otra sede, no su casa
             "Flexibilidad horaria.",  # el silencio no es un «no»
         ):
             self.assertEqual(teletrabajo.read(ficha(f"<p>{frase}</p>", RELLENO)).state, "no_menciona", frase)
 
-    def test_no_consta_si_la_ficha_no_recoge_las_condiciones(self):
-        instrucciones = "<p>" + " ".join(["Lea la convocatoria antes de iniciar la inscripción."] * 20) + "</p>"
-        self.assertEqual(teletrabajo.read(ficha(instrucciones)).state, "no_consta")
-        self.assertIsNone(teletrabajo.mention(ficha(instrucciones)))
-        # Los apartados que solo enlazan documentos no cuentan como descripción del puesto.
+    def test_los_apartados_de_documentos_no_cuentan_como_texto_de_la_ficha(self):
+        # Como Cesce o Enresa: una línea de convocatoria y una lista de anexos.
         enlaces = {"sections": [{"title": "Convocatoria", "level": 2, "html": "<p>Convocatoria de un puesto de técnico.</p>"},
                                 {"title": "Documentos de la convocatoria", "level": 2, "html": RELLENO}]}
         self.assertEqual(teletrabajo.read(enlaces).state, "no_consta")
+        self.assertIsNone(teletrabajo.mention(enlaces))
         # Pero una mención en ellos sí se lee.
         enlaces["sections"][1]["html"] += "<p>Anexo: acuerdo de teletrabajo.</p>"
         self.assertEqual(teletrabajo.read(enlaces).state, "menciona")
