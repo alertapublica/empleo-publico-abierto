@@ -83,7 +83,7 @@
   "apply_url": "https://recruitment.irbbarcelona.org/jobs/8507433-postdoctoral-fellows-for-chemical-biology-and-therapeutics-discovery-ref-pd-26-17",
   "category": null,
   "closed_at": null,
-  "code": null,
+  "code": "PD/26/17",
   "company": "IRB Barcelona",
   "contract": null,
   "deadline": "2026-11-19",
@@ -114,16 +114,16 @@
    }
   ],
   "source": "irb",
-  "source_title": null,
+  "source_title": "Postdoctoral Fellows for Chemical Biology and Therapeutics Discovery (ref. PD/26/17)",
   "status": "open",
-  "title": "Postdoctoral Fellows for Chemical Biology and Therapeutics Discovery (ref. PD/26/17)",
+  "title": "Postdoctoral Fellows for Chemical Biology and Therapeutics Discovery",
   "url": "https://recruitment.irbbarcelona.org/jobs/8507433-postdoctoral-fellows-for-chemical-biology-and-therapeutics-discovery-ref-pd-26-17"
  },
  "8507569": {
   "apply_url": "https://recruitment.irbbarcelona.org/jobs/8507569-research-assistant-in-chemical-biology-and-therapeutics-discovery-research-group-lab-26-15",
   "category": null,
   "closed_at": null,
-  "code": null,
+  "code": "LAB/26/15",
   "company": "IRB Barcelona",
   "contract": null,
   "deadline": "2026-11-19",
@@ -154,9 +154,9 @@
    }
   ],
   "source": "irb",
-  "source_title": null,
+  "source_title": "Research Assistant in Chemical Biology and Therapeutics Discovery Research Group (LAB/26/15)",
   "status": "open",
-  "title": "Research Assistant in Chemical Biology and Therapeutics Discovery Research Group (LAB/26/15)",
+  "title": "Research Assistant in Chemical Biology and Therapeutics Discovery Research Group",
   "url": "https://recruitment.irbbarcelona.org/jobs/8507569-research-assistant-in-chemical-biology-and-therapeutics-discovery-research-group-lab-26-15"
  },
  "8525941": {
