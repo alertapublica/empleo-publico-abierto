@@ -14,7 +14,7 @@ vigente es una oferta, aunque el plazo esté en el cuerpo de un comunicado.
 from __future__ import annotations
 
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from urllib.parse import parse_qs, urljoin, urlparse
 
 from bs4 import BeautifulSoup
@@ -45,6 +45,10 @@ LISTINGS = [
 ]
 EMPTY_TEXT = "No se han encontrado resultados"
 HEADERS = ["Oferta", "Código oferta", "Empresa", "Nº de puestos", "Tipo", "Fecha límite envío de CV"]
+CALL_HEADERS = ["Oferta de empleo", "ID", "Publicación", "Información sobre la fase"]
+OPEN_PHASE = "Abierto plazo inscripción"
+CALL_SINCE = re.compile(r"Desde:\s*(\d\d/\d\d/\d{4})")
+CALL_UNTIL = re.compile(r"Hasta:\s*(\d\d/\d\d/\d{4})\s+(\d\d:\d\d)")
 MAIN_SECTIONS = {
     "Proyecto/ Motivo contratación", "Lugar de Trabajo", "Funciones y Tareas",
     "Requisitos Específicos", "Méritos (Valorables)", "Observaciones",
@@ -75,10 +79,58 @@ def _date(value: str, layout: str = "%d/%m/%Y") -> str | None:
         return None
 
 
+def _parse_calls(table, kind: str) -> list[ListedOffer]:
+    """Tabla por fases (incendios, bolsas): solo es oferta la fila con la inscripción abierta.
+
+    «Hasta: 20/11/2026 00:00 h» es el final del día 19; la ficha lo dice así: «se cerrará el día
+    19/11/2026 (23:59 hora peninsular)».
+    """
+    headers = [_clean(th.get_text(" ")) for th in table.select("thead th")]
+    if headers != CALL_HEADERS:
+        raise SourceLayoutError(f"Columnas inesperadas: {headers}")
+    offers = []
+    for row in table.select("tbody tr"):
+        link = row.select_one("a[href*='ficha-oferta-empleo.aspx']")
+        if link is None:
+            continue
+        phase = row.select_one("td.fases")
+        lines = [_clean(line) for line in phase.get_text("\n").splitlines() if _clean(line)] if phase else []
+        if not lines or lines[0] != OPEN_PHASE:
+            continue  # las demás fases solo dan el nombre, sin documentos
+        query = parse_qs(urlparse(link["href"]).query)
+        text = " ".join(lines)
+        since, until = CALL_SINCE.search(text), CALL_UNTIL.search(text)
+        if "jobid" not in query or until is None:
+            raise SourceLayoutError(f"Fila incompleta: {text}")
+        day, hour = datetime.strptime(until.group(1), "%d/%m/%Y").date(), until.group(2)
+        if hour == "00:00":
+            day, hour = day - timedelta(days=1), "23:59"
+        published = row.select_one("td.fecha-publica")
+        ref = query["jobid"][0]
+        offers.append(
+            ListedOffer(
+                ref=ref,
+                title=_clean(link.get_text(" ")),
+                company="Grupo Tragsa",
+                deadline=day.isoformat(),
+                deadline_time=hour,
+                opens_on=_date(since.group(1)) if since else None,
+                published_on=_date(_clean(published.get_text(" "))[:10]) if published else None,
+                kind=kind,
+                url=urljoin(BASE, link["href"]),
+                apply_url=f"{BASE}/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid={ref}",
+            )
+        )
+    return offers
+
+
 def parse_listing(html: str, kind: str) -> list[ListedOffer]:
     soup = BeautifulSoup(html, "html.parser")
     table = soup.select_one("table.ofertas-empleo")
     if table is None:
+        calls = soup.select_one("table.convocatorias")
+        if calls is not None:
+            return _parse_calls(calls, kind)
         if EMPTY_TEXT in html:
             return []
         raise SourceLayoutError("No aparece la tabla de ofertas ni el aviso de lista vacía")
