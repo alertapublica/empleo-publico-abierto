@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.147.0/config-schema.json",
+  // Relay con salida en España para los portales que no responden a GitHub Actions (src/index.js).
+  "name": "empleo-relay",
+  "account_id": "a8183539272f1346a4e6fe05a5c5ee29",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  // URL pública (empleo-relay.empleo-publico.workers.dev): sin firma válida no atiende nada.
+  "workers_dev": true,
+  "preview_urls": false,
+  // Se ejecuta junto a la región de Google Cloud en Madrid, llame quien llame: así sale por España.
+  // Comprobado el 2026-11-14 llamándolo desde Nueva York: cf-placement remote-MAD, salida ES.
+  "placement": { "region": "gcp:europe-southwest1" },
+  "observability": { "enabled": true }
+  // Secreto: RELAY_CLAVE (la misma que el secreto RELAY_CF_CLAVE de Actions).
+}

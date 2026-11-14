@@ -54,6 +54,9 @@ jobs:
           # Relay con IP española para los hosts de VIA_RELAY (empleo/http.py); sin clave, lectura directa.
           RELAY_CLAVE: ${{ secrets.RELAY_CLAVE }}
           RELAY_URL: ${{ secrets.RELAY_URL }}
+          # Worker de relay/ (salida por Madrid) para los hosts de VIA_RELAY_CF; sin clave, lectura directa.
+          RELAY_CF_CLAVE: ${{ secrets.RELAY_CF_CLAVE }}
+          RELAY_CF_URL: ${{ secrets.RELAY_CF_URL }}
         run: python -m empleo.ingest $FUENTES
 
       - name: Guardar los cambios en los datos
