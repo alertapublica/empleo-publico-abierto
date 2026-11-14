@@ -2,7 +2,7 @@
  "RRHH-26/049": {
   "apply_url": "https://www.iisaragon.es/ofertas_de_empleo/director-a-ejecutivo-a-ref-rrhh-26-049/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": "RRHH-26/049",
   "company": "IIS Aragón",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-13",
   "location": "Aragón",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-22",
   "parent_ref": null,
   "place": null,
@@ -35,7 +35,7 @@
   ],
   "source": "iisaragon",
   "source_title": "Director/a Ejecutivo/a [Ref. RRHH-26/049]",
-  "status": "open",
+  "status": "closed",
   "title": "Director/a Ejecutivo/a",
   "url": "https://www.iisaragon.es/ofertas_de_empleo/director-a-ejecutivo-a-ref-rrhh-26-049/"
  }

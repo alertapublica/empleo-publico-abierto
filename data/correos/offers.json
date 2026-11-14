@@ -42,7 +42,7 @@
  "1413480533": {
   "apply_url": "https://empleo.correos.com/talentcommunity/apply/1413480533/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": null,
   "company": "Correos",
   "deadline": "2026-11-13",
@@ -53,7 +53,7 @@
   "id": "correos:1413480533",
   "kind": "practicas",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -70,7 +70,7 @@
   ],
   "source": "correos",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jóvenes Talentos Correos Express 2026-2027 Seguridad Salud y Bienestar",
   "url": "https://empleo.correos.com/job/Madrid-J%C3%B3venes-Talentos-Correos-Express-2026-2027-Seguridad-Salud-y-Bienestar-Madr/1413480533/"
  },
@@ -112,7 +112,7 @@
  "1453032233": {
   "apply_url": "https://empleo.correos.com/talentcommunity/apply/1453032233/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": null,
   "company": "Correos",
   "deadline": "2026-11-13",
@@ -123,7 +123,7 @@
   "id": "correos:1453032233",
   "kind": "practicas",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -140,7 +140,7 @@
   ],
   "source": "correos",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jóvenes Talentos 2026- Área Cuentas a pagar",
   "url": "https://empleo.correos.com/job/Madrid-J%C3%B3venes-Talentos-2026-%C3%81rea-Cuentas-a-pagar-Madr/1453032233/"
  }

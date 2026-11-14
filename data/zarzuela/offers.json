@@ -2,7 +2,7 @@
  "control-accesos-fijo-discontinuo": {
   "apply_url": "https://www.hipodromodelazarzuela.es/sites/default/files/2026-11/PROCESO%20SELECTIVO%20Oferta%20FD%20Accesos_Noviembre%202026_v3.pdf",
   "category": "Tasa de reposición",
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": null,
   "company": "Hipódromo de la Zarzuela",
   "deadline": "2026-11-13",
@@ -14,7 +14,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-13",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -36,7 +36,7 @@
   ],
   "source": "zarzuela",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Control accesos (fijo discontinuo)",
   "url": "https://www.hipodromodelazarzuela.es/informacion-corporativa"
  },

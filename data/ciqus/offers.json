@@ -2,7 +2,7 @@
  "convocatoria-publica-ordinaria-ciqus-142026-de-contratacion-de-personal-para-colaborar-en": {
   "apply_url": "https://ciqus.usc.gal/es/ofertas/convocatoria-publica-ordinaria-ciqus-142026-de-contratacion-de-personal-para-colaborar-en",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": null,
   "company": "Universidade de Santiago de Compostela",
   "contract": null,
@@ -16,7 +16,7 @@
   "kind": null,
   "listed_deadline": "2026-11-13",
   "location": "Santiago de Compostela",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-09",
   "parent_ref": null,
   "place": null,
@@ -28,7 +28,7 @@
   "sections": [],
   "source": "ciqus",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria Pública ORDINARIA CiQUS 14/2026 de contratación de personal para colaborar en las actividades y proyectos de investigación",
   "url": "https://ciqus.usc.gal/es/ofertas/convocatoria-publica-ordinaria-ciqus-142026-de-contratacion-de-personal-para-colaborar-en"
  }

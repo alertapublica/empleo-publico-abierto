@@ -18,5 +18,10 @@
   "at": "2026-11-13T14:37:27+00:00",
   "kind": "closed",
   "offer": "zarzuela:taquillero-a-apuestas-fijo-discontinuo"
+ },
+ {
+  "at": "2026-11-14T05:07:33+00:00",
+  "kind": "closed",
+  "offer": "zarzuela:control-accesos-fijo-discontinuo"
  }
 ]

@@ -41,7 +41,7 @@
  "1373217457": {
   "apply_url": "https://treballar.fgc.cat/talentcommunity/apply/1373217457/?locale=ca_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-14T05:07:33+00:00",
   "code": null,
   "company": "Ferrocarrils de la Generalitat de Catalunya",
   "contract": "Durada determinada / Indefinit",
@@ -55,7 +55,7 @@
   "kind": null,
   "listed_deadline": "2026-11-13",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -73,7 +73,7 @@
   ],
   "source": "fgc",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Tècnic/a mitjà/mitjana de Bon Govern Corporatiu",
   "url": "https://treballar.fgc.cat/job/Barcelona%C2%A0-T%C3%A8cnica-mitj%C3%A0mitjana-de-Bon-Govern-Corporatiu/1373217457/"
  },
