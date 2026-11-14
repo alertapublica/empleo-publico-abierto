@@ -40,6 +40,47 @@ class Listing(unittest.TestCase):
             tragsa.parse_listing(html, "temporal")
 
 
+class Calls(unittest.TestCase):
+    """Tabla por fases de incendios y bolsas (BRIF 2026, ID 56263)."""
+
+    def test_fila_con_inscripcion_abierta_es_oferta(self):
+        [offer] = tragsa.parse_listing(fixture("tragsa-convocatorias.html"), "temporal")
+        self.assertEqual(offer.ref, "56263")
+        self.assertTrue(offer.title.startswith("Capataz/a BRIF 2026_Cobertura"))
+        self.assertTrue(offer.title.endswith("Pinofranqueado (Cáceres)"))
+        self.assertEqual((offer.published_on, offer.opens_on), ("2026-11-13", "2026-11-13"))
+        self.assertIn("ficha-oferta-empleo.aspx?tipo=CTI&jobid=56263", offer.url)
+        self.assertIn("portal-empleo-acceso.aspx?jobid=56263", offer.apply_url)
+
+    def test_hasta_a_las_cero_horas_es_el_final_del_dia_anterior(self):
+        # Listado: «Hasta: 20/11/2026 00:00 h»; ficha: «se cerrará el día 19/11/2026 (23:59…)».
+        [offer] = tragsa.parse_listing(fixture("tragsa-convocatorias.html"), "temporal")
+        self.assertEqual((offer.deadline, offer.deadline_time), ("2026-11-19", "23:59"))
+
+    def test_hasta_con_hora_se_respeta(self):
+        html = fixture("tragsa-convocatorias.html").replace("Hasta: 20/11/2026 00:00 h", "Hasta: 20/11/2026 14:00 h")
+        [offer] = tragsa.parse_listing(html, "temporal")
+        self.assertEqual((offer.deadline, offer.deadline_time), ("2026-11-20", "14:00"))
+
+    def test_otras_fases_no_son_ofertas(self):
+        html = fixture("tragsa-convocatorias.html").replace(
+            "Abierto plazo inscripción", "Publicación de candidaturas admitidas y no admitidas provisional")
+        self.assertEqual(tragsa.parse_listing(html, "temporal"), [])
+
+    def test_tabla_vacia_es_lista_vacia(self):
+        self.assertEqual(tragsa.parse_listing(fixture("tragsa-convocatorias-vacia.html"), "bolsa"), [])
+
+    def test_inscripcion_abierta_sin_fecha_final_no_pasa(self):
+        html = fixture("tragsa-convocatorias.html").replace("Hasta:", "Fin:")
+        with self.assertRaises(SourceLayoutError):
+            tragsa.parse_listing(html, "temporal")
+
+    def test_columnas_cambiadas_no_se_interpretan(self):
+        html = fixture("tragsa-convocatorias.html").replace("Información sobre la fase", "Estado")
+        with self.assertRaises(SourceLayoutError):
+            tragsa.parse_listing(html, "temporal")
+
+
 class Detail(unittest.TestCase):
     def test_lee_la_ficha_real(self):
         detail = tragsa.parse_detail(fixture("ficha.html"))
