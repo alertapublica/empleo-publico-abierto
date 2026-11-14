@@ -306,9 +306,10 @@ def share_link(offer: dict, base_url: str) -> str:
 def offer_card(offer: dict, today: date, root: str = "", group: str = "") -> str:
     days = (date.fromisoformat(offer["deadline"]) - today).days if offer.get("deadline") else 9999
     facts = [offer.get("company"), where(offer), seats(offer.get("positions"))]
-    remote = teletrabajo.mention(offer)
+    remote = teletrabajo.read(offer)
+    remote_label = f"Menciona teletrabajo{f': {remote.detail}' if remote.detail else ''}"
     extra = [offer.get("family"), offer.get("category"), contract_label(offer),
-             "Menciona teletrabajo" if isinstance(remote, str) else None]
+             remote_label if remote.state == teletrabajo.MENTIONS else None]
     extra = " · ".join(f for f in extra if f)
     extra = f' <span class="dato">· {e(extra)}</span>' if extra else ""
     published = (
@@ -316,7 +317,7 @@ def offer_card(offer: dict, today: date, root: str = "", group: str = "") -> str
         if offer.get("published_on") else ""
     )
     area = " ".join(areas.offer_areas(offer, group)[0]) or areas.NONE
-    return f"""<li data-texto="{e(plain_search(offer))}" data-comunidad="{e(offer.get('region') or UNKNOWN)}" data-organismo="{e(offer['source'])}" data-grupo="{e(group)}" data-empresa="{e(offer.get('company') or '')}" data-area="{e(area)}" data-tipo="{e(offer.get('kind') or '')}" data-teletrabajo="{1 if isinstance(remote, str) else 0}" data-plazas="{offer.get('positions') or 0}" data-plazo="{e(offer.get('deadline') or '9999')}" data-publicada="{e(offer.get('published_on') or offer['first_seen'][:10])}" data-pronto="{1 if days <= SOON_DAYS else 0}" data-guardar="{e(saved_id(offer))}">
+    return f"""<li data-texto="{e(plain_search(offer))}" data-comunidad="{e(offer.get('region') or UNKNOWN)}" data-organismo="{e(offer['source'])}" data-grupo="{e(group)}" data-empresa="{e(offer.get('company') or '')}" data-area="{e(area)}" data-tipo="{e(offer.get('kind') or '')}" data-teletrabajo="{int(remote.state == teletrabajo.MENTIONS)}" data-plazas="{offer.get('positions') or 0}" data-plazo="{e(offer.get('deadline') or '9999')}" data-publicada="{e(offer.get('published_on') or offer['first_seen'][:10])}" data-pronto="{1 if days <= SOON_DAYS else 0}" data-guardar="{e(saved_id(offer))}">
 <h2><a href="{root}{offer_path(offer)}">{e(offer['title'])}</a></h2>
 <p>{e(' · '.join(str(f) for f in facts if f))}{extra}</p>
 <p class="plazo">{deadline_text(offer, today)}{published}</p>
@@ -358,7 +359,7 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
     if any(isinstance(r, str) for r in remote):
         unknown = sum(r is None for r in remote)
         hint = (f" En {'1 oferta' if unknown == 1 else f'{unknown} ofertas'} no es posible comprobarlo, porque la"
-                " ficha no recoge las condiciones y remite a las bases." if unknown else "")
+                " ficha no recoge las condiciones de trabajo." if unknown else "")
         remote_filter = (
             '<label class="pastilla"><input type="checkbox" name="teletrabajo" value="1" aria-describedby="ayuda-teletrabajo">'
             ' Menciona teletrabajo</label>\n'
@@ -447,12 +448,14 @@ def plazo(offer: dict) -> str:
     return until(offer)
 
 
-def remote_text(remote: str | bool | None) -> str:
-    if isinstance(remote, str):
-        return f"Según la ficha: «{e(remote)}»"
-    if remote is False:
+def remote_text(remote: teletrabajo.Remote) -> str:
+    if remote.state == teletrabajo.MENTIONS:
+        return f"Según la ficha: «{e(remote.phrase)}»"
+    if remote.state == teletrabajo.WITHOUT:
+        return f"Sin teletrabajo, según la ficha: «{e(remote.phrase)}»"
+    if remote.state == teletrabajo.SILENT:
         return "La ficha no lo menciona"
-    return "No consta: consulte las bases"
+    return "No consta: la ficha no recoge las condiciones de trabajo"
 
 
 def offer_page(offer: dict, sources: dict, today: date, checked: str,
@@ -469,7 +472,7 @@ def offer_page(offer: dict, sources: dict, today: date, checked: str,
         ("Tipo de puesto", e(offer.get("family") or "No consta")),
         ("Departamento", e(offer.get("department") or "No consta")),
         ("Plazo", plazo(offer)),
-        ("Teletrabajo", remote_text(teletrabajo.mention(offer))),
+        ("Teletrabajo", remote_text(teletrabajo.read(offer))),
         ("Fecha de publicación", time_tag(offer.get("published_on") or offer["first_seen"])),
     ]
     if offer.get("code"):
@@ -1062,7 +1065,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <h2 id="de-donde">Origen de los datos</h2>
 <p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
 <p>El área de cada oferta (en «Filtros») no la facilita la empresa: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo y solo sirve para filtrar; una oferta puede tener dos áreas o ninguna.</p>
-<p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Si la ficha solo remite a las bases, no es posible saberlo y así se indica.</p>
+<p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Cuando la frase indica cuánto («hasta el 50 %», «1 día a la semana»), se añade a la etiqueta. Si la ficha no menciona el teletrabajo, no se deduce que no lo haya: solo se indica «sin teletrabajo» cuando la ficha lo dice. Si la ficha no recoge las condiciones de trabajo (por ejemplo, porque solo remite a las bases), no es posible saberlo y así se indica.</p>
 <h2 id="datos">Datos abiertos</h2>
 <p>Toda la información del portal está disponible en ficheros JSON, sin clave ni registro, con licencia CC BY 4.0, para su reutilización en webs, aplicaciones o análisis. La descripción de cada fichero y de cada campo, con ejemplos, figura en <a href="../datos/">Datos abiertos</a>.</p>
 <h2 id="quien">Quién mantiene el portal</h2>
@@ -1166,7 +1169,9 @@ OFFER_FIELDS = [
     (("detectada", "cerrada"), "Momentos (ISO 8601) en que este portal detectó la oferta y en que se cerró."),
     (("republica",), "Código de la oferta anterior, si es una nueva publicación de aquella."),
     (("areas",), "Áreas profesionales (<code>areas</code> en listas.json). Clasificación orientativa que asigna este portal; puede haber varias o ninguna."),
-    (("teletrabajo",), "Frase literal de la ficha que menciona el teletrabajo; <code>false</code> si la ficha tiene texto y no lo menciona; <code>null</code> si no puede saberse porque la ficha solo remite a las bases."),
+    (("teletrabajo",), "Frase literal de la ficha que menciona el teletrabajo; <code>false</code> si la ficha recoge las condiciones de trabajo y no lo menciona, o lo niega; <code>null</code> si no puede saberse porque la ficha no recoge las condiciones (solo remite a las bases, por ejemplo)."),
+    (("teletrabajo_estado",), "<code>menciona</code>; <code>sin</code> si la ficha lo niega expresamente («100% presencial»); <code>no_menciona</code> si la ficha recoge las condiciones y no lo nombra (no significa que no lo haya); <code>no_consta</code> si la ficha no recoge las condiciones."),
+    (("teletrabajo_detalle",), "Cuánto teletrabajo dice la frase, si lo dice: «hasta el 50 %», «1 día a la semana», «algunos días». <code>null</code> si no lo concreta."),
     (("url", "url_inscripcion", "url_portal"), "Enlaces a la ficha oficial, a la inscripción oficial y a la ficha en este portal."),
 ]
 PROCESS_FIELDS = [
@@ -1188,7 +1193,7 @@ NEWS_FIELDS = [
     (("evento",), "Solo ofertas: <code>new</code> (nueva) o <code>republished</code> (nueva publicación)."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
     (("ccaa",), "Código del INE de la comunidad autónoma, como en ofertas.json o, en los comunicados, como en procesos.json."),
-    (("areas", "teletrabajo"), "Solo ofertas: como en ofertas.json."),
+    (("areas", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle"), "Solo ofertas: como en ofertas.json."),
     (("proceso", "proceso_id"), "Solo comunicados: nombre del proceso y su <code>id</code> en procesos.json."),
     (("titulo",), "Título de la oferta o del comunicado. Si el organismo lo escribe en mayúsculas, aquí (y en <code>proceso</code>) va en minúsculas con mayúscula inicial, para facilitar la lectura; el texto literal está en ofertas.json y procesos.json."),
     (("detalle",), "Solo ofertas: resumen en una línea con la empresa, la ubicación, las plazas y el plazo."),
@@ -1366,7 +1371,7 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
             "tipo": "oferta", "evento": event["kind"], "organismo": offer["source"],
             "ccaa": CCAA.get(offer.get("region") or ""),
             "areas": areas.offer_areas(offer, group_of.get(offer["source"], ""))[0],
-            "teletrabajo": teletrabajo.mention(offer),
+            **remote_fields(offer),
             "titulo": humane_caps(offer["title"]), "detalle": offer_summary(offer),
             "url": base_url + offer_path(offer),
         })
@@ -1426,6 +1431,13 @@ def processes(announcements: list) -> list[dict]:
     return result
 
 
+def remote_fields(offer: dict) -> dict:
+    """El teletrabajo en la API: la clave de siempre (frase, false o null) y, aparte, estado y detalle."""
+    remote = teletrabajo.read(offer)
+    return {"teletrabajo": teletrabajo.mention(offer), "teletrabajo_estado": remote.state,
+            "teletrabajo_detalle": remote.detail}
+
+
 def public_offer(offer: dict, group: str, base_url: str) -> dict:
     """Oferta de api/ofertas.json: el texto de la fuente tal cual, con claves en castellano."""
     return {
@@ -1440,7 +1452,7 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "plazo_inicio": offer.get("opens_on"), "plazo_fin": offer.get("deadline"),
         "plazo_hora": offer.get("deadline_time"), "publicada": offer.get("published_on"),
         "detectada": offer["first_seen"], "cerrada": offer.get("closed_at"), "republica": offer.get("parent_ref"),
-        "areas": areas.offer_areas(offer, group)[0], "teletrabajo": teletrabajo.mention(offer),
+        "areas": areas.offer_areas(offer, group)[0], **remote_fields(offer),
         "url": offer["url"], "url_inscripcion": offer.get("apply_url"), "url_portal": base_url + offer_path(offer),
     }
 

@@ -30,7 +30,8 @@ def offer(ref, **extra):
     return {**base, **extra}
 
 
-RELLENO = "<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12) + "</p>"
+RELLENO = ("<p>" + " ".join(["Funciones de apoyo técnico al equipo del proyecto."] * 12)
+           + " Contrato temporal a jornada completa.</p>")
 TELETRABAJO = RELLENO + "<p>Posibilidad de trabajo a distancia hasta el 50 % de la jornada.</p>"
 
 
@@ -344,7 +345,8 @@ class Site(unittest.TestCase):
             "id", "organismo", "codigo", "titulo", "titulo_original", "empresa", "estado", "ubicacion", "localidad",
             "comunidad", "ccaa", "provincia", "municipio", "plazas", "tipo_contrato", "contrato", "convocatoria", "tipo_puesto",
             "departamento", "plazo_inicio", "plazo_fin", "plazo_hora", "publicada", "detectada", "cerrada",
-            "republica", "areas", "teletrabajo", "url", "url_inscripcion", "url_portal"])
+            "republica", "areas", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle",
+            "url", "url_inscripcion", "url_portal"])
         self.assertEqual((ofertas["tragsa:2"]["estado"], ofertas["tragsa:3"]["estado"]), ("abierta", "cerrada"))
         self.assertEqual(ofertas["tragsa:4"]["republica"], "77")
         self.assertEqual(ofertas["tragsa:2"]["url_portal"], BASE + "ofertas/tragsa-2/")
@@ -438,17 +440,20 @@ class Site(unittest.TestCase):
         self.assertIn("En 2 ofertas no es posible comprobarlo", portada)
         tarjetas = {m.group(1): m.group(0) for m in re.finditer(r'<li data-texto="[^"]*" .*?href="ofertas/tragsa-(\d)/".*?</li>', portada, re.S)}
         self.assertIn('data-teletrabajo="1"', tarjetas["4"])
-        self.assertIn("Menciona teletrabajo", tarjetas["4"])
+        self.assertIn("Menciona teletrabajo: hasta el 50 %", tarjetas["4"])
         self.assertIn('data-teletrabajo="0"', tarjetas["5"])
         self.assertIn("«Posibilidad de trabajo a distancia hasta el 50 % de la jornada.»", self.read("ofertas/tragsa-4/index.html"))
         self.assertIn("La ficha no lo menciona", self.read("ofertas/tragsa-5/index.html"))
-        self.assertIn("No consta: consulte las bases", self.read("ofertas/tragsa-1/index.html"))
+        self.assertIn("No consta: la ficha no recoge las condiciones", self.read("ofertas/tragsa-1/index.html"))
         api = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
         self.assertEqual([api[f"tragsa:{r}"]["teletrabajo"] for r in "145"],
                          [None, "Posibilidad de trabajo a distancia hasta el 50 % de la jornada.", False])
+        self.assertEqual([(api[f"tragsa:{r}"]["teletrabajo_estado"], api[f"tragsa:{r}"]["teletrabajo_detalle"]) for r in "145"],
+                         [("no_consta", None), ("menciona", "hasta el 50 %"), ("no_menciona", None)])
         self.assertIsInstance(api["tragsa:1"]["areas"], list)
         novedades = {i["id"].split("/")[0]: i for i in json.loads(self.read("api/novedades.json"))["novedades"]}
         self.assertTrue(novedades["tragsa:4"]["teletrabajo"])
+        self.assertEqual(novedades["tragsa:4"]["teletrabajo_estado"], "menciona")
 
     def test_comunicados_sin_fecha_por_deteccion_y_lo_que_ya_estaba_al_final(self):
         base = {"source": "sepi", "process": "P", "url": "u", "state": "curso", "date": ""}
