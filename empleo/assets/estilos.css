@@ -116,7 +116,8 @@ h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
    En el HTML los controles van antes del menú para que, abierto en móvil, el foco pase del botón a él. */
 header.sitio { border-bottom: 1px solid var(--line); background: var(--surface); }
 .cab { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0 0.75rem; min-height: 3.25rem; container: cab / inline-size; }
-.marca { order: 1; align-self: center; font-weight: 700; font-size: 1.1rem; color: var(--titulos); text-decoration: none; padding: 0.4rem 0; }
+.marca { order: 1; align-self: center; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.1rem; color: var(--titulos); text-decoration: none; padding: 0.4rem 0; }
+.marca img { flex-shrink: 0; }
 nav.principal { order: 2; flex: 1 1 auto; display: flex; }
 .cab-acciones { order: 3; align-self: center; display: flex; gap: 0.4rem; flex-shrink: 0; margin-left: auto; }
 .btn-cab {
