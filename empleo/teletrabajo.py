@@ -121,9 +121,15 @@ def read(offer: dict) -> Remote:
             return Remote(WITHOUT, shorten(sentence, onsite.start()))
     if denied:
         return Remote(WITHOUT, denied)
+    return Remote(UNKNOWN if words(offer) < MIN_WORDS else SILENT)
+
+
+def words(offer: dict) -> int:
+    """Palabras de la ficha sin los apartados que solo enlazan documentos o repiten el plazo. Es un
+    umbral de «hay texto», no una prueba de que la ficha describa el puesto entero."""
     described = lines({"sections": [section for section in offer.get("sections") or []
                                     if not DOCUMENTS.search(section.get("title") or "")]})
-    return Remote(UNKNOWN if sum(len(s.split()) for s in described) < MIN_WORDS else SILENT)
+    return sum(len(sentence.split()) for sentence in described)
 
 
 def mention(offer: dict) -> str | bool | None:

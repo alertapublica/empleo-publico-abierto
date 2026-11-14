@@ -82,7 +82,8 @@ class IrbSource(Source):
     scope = "Cataluña"
     text_lang = "en"
     apply_label = "Ver la oferta y presentar la candidatura en la web oficial"
-    title_code = re.compile(r"(?P<title>.+?)\s*\(Ref\.\s*(?P<code>[A-Z]+/\d+/\d+)\)")
+    # «(Ref. LAB/26/10)», «(ref. PD/26/17)» o solo «(LAB/26/15)».
+    title_code = re.compile(r"(?P<title>.+?)\s*\((?:[Rr]ef\.\s*)?(?P<code>[A-Z]+/\d+/\d+)\)")
 
     def __init__(self, now: datetime | None = None) -> None:
         self._now = now  # solo para las pruebas

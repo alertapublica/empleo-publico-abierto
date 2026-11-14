@@ -68,6 +68,18 @@ class Source(unittest.TestCase):
         self.assertEqual((labels["title"], labels["code"]), ("Research Assistant", "LAB/26/17"))
         self.assertEqual(source.fetch_detail(http, offers[0]).location, "Barcelona")
 
+    def test_codigo_en_minusculas_o_sin_prefijo(self):
+        source = irb.IrbSource()
+        for title, clean, code in (
+            ("Postdoctoral Fellows for Chemical Biology (ref. PD/26/17)", "Postdoctoral Fellows for Chemical Biology", "PD/26/17"),
+            ("Research Assistant in Chemical Biology (LAB/26/15)", "Research Assistant in Chemical Biology", "LAB/26/15"),
+            ("AI Software Engineer (Research Assistant) (Ref. LAB/26/18)", "AI Software Engineer (Research Assistant)", "LAB/26/18"),
+        ):
+            labels = source.labels(title, "8507433")
+            self.assertEqual((labels["title"], labels["code"], labels["source_title"]), (clean, code, title))
+        # Un paréntesis que no es código se queda.
+        self.assertIsNone(source.labels("AI Software Engineer (Research Assistant)", "1")["source_title"])
+
     def test_vencido_el_cierre_no_es_oferta(self):
         self.assertEqual(irb.IrbSource(now=at(11, 24)).list_offers(Http()), [])
 

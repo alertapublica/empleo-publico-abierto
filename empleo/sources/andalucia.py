@@ -173,6 +173,9 @@ class AndaluciaSource(Source):
     homepage = HOMEPAGE
     scope = "Andalucía"
     apply_label = "Ver la convocatoria y cómo inscribirse"
+    # «Funciones» es opcional en la plantilla; sin él no hay descripción del puesto (691687: 342
+    # palabras de requisitos, sin funciones ni jornada).
+    required_sections = ("Funciones",)
 
     def __init__(self, now: datetime | None = None) -> None:
         self._now = now  # solo para las pruebas

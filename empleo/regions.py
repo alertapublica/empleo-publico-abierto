@@ -292,3 +292,31 @@ def provinces() -> tuple[tuple[str, str, str], ...]:
         record = catalog.territory(identity)
         rows.append((record["codes"]["ine:provincia"], catalog.name(identity, "es"), record["parent"].rsplit(":", 1)[1]))
     return tuple(sorted(rows))
+
+
+def provinces_in(text: str | None) -> set[str]:
+    """Códigos INE de las provincias (o islas) que nombra el texto: «Tenerife / Gran Canaria» da dos."""
+    return _provinces_in(_normalize(text)) if text else set()
+
+
+def provinces_named(text: str | None) -> set[str]:
+    """Provincias de un texto de ubicación. El nombre de un municipio sin ambigüedad no se lee como
+    provincia («La Palma del Condado (Huelva)» es Huelva, no La Palma; «Valencia de Don Juan (León)»,
+    León), pero lo que va detrás sí cuenta: «Rubí (Barcelona / Girona)» nombra dos."""
+    found = municipality_of(text)
+    if not found:
+        return provinces_in(text)
+    parts = re.split(r"\s*[(,]\s*", text.strip(), maxsplit=1)
+    return {found[0][:2]} | provinces_in(parts[1] if len(parts) > 1 else None)
+
+
+@cache
+def municipality_name(code: str) -> str:
+    """Nombre en castellano de un municipio por su código INE: «Las Palmas de Gran Canaria», no
+    «Palmas de Gran Canaria, Las»; «Alicante», no «Alacant/Alicante»."""
+    return territorios_es.load().name(f"es:municipio:{code}", "es")
+
+
+def province_name(code: str) -> str:
+    """Nombre en castellano de una provincia por su código INE, como en `provinces()`."""
+    return next(name for province, name, _ in provinces() if province == code)
