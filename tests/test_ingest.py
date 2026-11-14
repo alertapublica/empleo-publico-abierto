@@ -510,6 +510,21 @@ class RunSource(unittest.TestCase):
         self.assertEqual((record["family"], record["department"]), ("Apoyo Obra", "Lleida"))
         self.assertEqual(source.enrich_calls, 1)
 
+    def test_si_la_ficha_falla_la_ubicacion_del_portal_no_se_adelanta(self):
+        # 58786: si el portal rellenara «Barcelona» mientras la ficha falla, la ficha leída después
+        # («Lleida o Barcelona») ya no entraría.
+        class Intermitente(FakeSource):
+            def fetch_detail(self, http, offer):
+                self.detail_calls += 1
+                if self.detail_calls == 1:
+                    raise RuntimeError("ficha caída")
+                return OfferDetail(location="Lleida o Barcelona")
+        source = Intermitente([listed(title="Oferta")], extra={"1": {"published_on": "2026-11-12", "location": "Barcelona"}})
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["published_on"], "2026-11-12")
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["location"], "Lleida o Barcelona")
+
     def test_sin_familia_solo_se_consulta_si_la_fuente_la_espera(self):
         source = FakeSource([listed(published_on="2026-10-30")], OfferDetail(), {"1": {"family": "X"}})
         ingest.run_source(source, None, self.data, NOW)

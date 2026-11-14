@@ -533,6 +533,14 @@ def expired(offer: dict, now: datetime) -> bool:
     return bool(until and until <= now)
 
 
+def dmy(value: str) -> str | None:
+    """DD/MM/AAAA en ISO, o None si no es una fecha (una errata no debe romper la web)."""
+    try:
+        return datetime.strptime(value, "%d/%m/%Y").date().isoformat()
+    except ValueError:
+        return None
+
+
 def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
     """Por qué la ficha no lleva marcado JobPosting, o None si lo lleva."""
     source = sources[offer["source"]]
@@ -545,6 +553,12 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
         return "sin plazo"
     if not offer.get("published_on"):
         return "sin fecha"
+    # La fecha guardada es la de una ampliación de plazo y la de la publicación original no consta.
+    extended_from = getattr(source, "extended_from", None)
+    if extended_from and any(
+            day <= offer["published_on"]
+            for day in filter(None, map(dmy, extended_from.findall(" ".join(teletrabajo.lines(offer)))))):
+        return "fecha de ampliación"
     if not offer.get("company"):
         return "sin empleador"
     if teletrabajo.words(offer) < teletrabajo.MIN_WORDS:

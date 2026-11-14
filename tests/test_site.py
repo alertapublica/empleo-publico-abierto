@@ -1166,6 +1166,16 @@ class JobPosting(unittest.TestCase):
         self.assertIsNone(self.reason(leon))
         self.assertEqual(self.data(leon)["jobLocation"]["address"]["addressRegion"], "León")
 
+    def test_sin_marcado_si_la_fecha_es_la_de_una_ampliacion(self):
+        # Tragsa 57815: «se amplía el plazo del 11/11/2026…» y el portal da el 11/11 como publicación.
+        frase = "<p>Habiendo quedado pendientes de cubrir 1 posición, se amplía el plazo del 11/11/2026 hasta el 17/11/2026.</p>"
+        sections = [{"title": "Funciones", "level": 2, "html": LONG + frase}]
+        self.assertEqual(self.reason(posting(sections=sections, published_on="2026-11-11")), "fecha de ampliación")
+        # 58210: la fecha guardada es anterior a la ampliación, luego es la de la publicación.
+        self.assertIsNone(self.reason(posting(sections=sections, published_on="2026-10-23")))
+        errata = [{"title": "Funciones", "level": 2, "html": LONG + frase.replace("11/11/2026", "31/02/2026", 1)}]
+        self.assertIsNone(self.reason(posting(sections=errata, published_on="2026-11-11")))
+
     def test_sin_marcado_si_el_puesto_es_embarcado(self):
         sections = [{"title": "Funciones", "level": 2, "html": LONG + "<p>Embarcado/a en Buque Oceanográfico</p>"}]
         record = posting(location="Comunidad de Madrid", region="Comunidad de Madrid", sections=sections)

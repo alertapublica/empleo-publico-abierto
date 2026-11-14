@@ -1,8 +1,9 @@
 import unittest
 import warnings
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
+from empleo import ingest
 from empleo.model import SourceLayoutError
 from empleo.sources import tragsa
 
@@ -141,6 +142,24 @@ class Detail(unittest.TestCase):
         html = fixture("ficha.html").replace("desde hoy día", frase + " desde hoy día", 1)
         self.assertIn(frase, html)
         self.assertEqual(tragsa.parse_detail(html).published_before, "2026-10-30")
+        # Dos ampliaciones (57934): la cita es de la primera; el texto original conserva su «desde hoy día».
+        segunda = html.replace("30/10/2026", "06/11/2026", 1)
+        self.assertEqual(tragsa.parse_detail(segunda).published_before, "2026-11-04")
+
+    def test_relectura_sustituye_el_grupo_guardado_por_la_empresa_de_la_ficha(self):
+        # 56263 se guardó con «Grupo Tragsa» antes de leer la empresa en la ficha; el registro
+        # reconstruye el ListedOffer con ese valor.
+        class Http:
+            def get(self, url):
+                return fixture("ficha.html")
+        [fases] = tragsa.parse_listing(fixture("tragsa-convocatorias.html"), "temporal")
+        record = ingest._record("tragsa", fases, "2026-11-13T00:00:00+00:00")
+        record.update(company="Grupo Tragsa", detail_ok=True, detail_version=2, location="Cáceres")
+        offers = {"56263": record}
+        ingest.fetch_details(tragsa.TragsaSource(), Http(), offers, [])
+        self.assertEqual((record["company"], record["positions"]), ("Tragsatec", 3))
+        ingest.reconcile(offers, [fases], "tragsa", datetime(2026, 11, 14, tzinfo=timezone.utc))
+        self.assertEqual(record["company"], "Tragsatec")  # la siguiente lectura del listado no la borra
 
     def test_ficha_vaciada_al_cerrar(self):
         self.assertIsNone(tragsa.parse_detail("<section>sin datos</section>"))

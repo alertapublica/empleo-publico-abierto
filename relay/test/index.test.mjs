@@ -82,7 +82,7 @@ test("POST con cuerpo, cookies de entrada y Set-Cookie devueltas", async () => {
   assert.equal(r.status, 200);
   assert.equal(await r.text(), "<html>página 2</html>");
   assert.equal(r.headers.get("content-type"), "text/html; charset=UTF-8");
-  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookie")), ["S=2; path=/; HttpOnly"]);
+  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookies")), ["S=2; path=/; HttpOnly"]);
   assert.ok(r.headers.has("x-relay-ms"));
   assert.equal(vistas[0].method, "POST");
   assert.equal(new TextDecoder().decode(vistas[0].body), "ICAction=abajo");
@@ -103,7 +103,7 @@ test("sigue la redirección con la cookie recibida y la devuelve", async () => {
   assert.equal(vistas[1].method, "GET");
   assert.equal(vistas[1].body, undefined);
   assert.equal(vistas[1].headers.cookie, "SESION=abc");
-  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookie")), ["SESION=abc; path=/"]);
+  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookies")), ["SESION=abc; path=/"]);
 });
 
 test("varias cookies, una cambiada en la redirección: todas, en orden y en una sola cabecera", async () => {
@@ -117,13 +117,17 @@ test("varias cookies, una cambiada en la redirección: todas, en orden y en una 
   ]);
   const r = await atender(await peticion(PORTAL), env, pedir, AHORA);
   assert.equal(vistas[1].headers.cookie, "S=1; B=x");
-  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookie")),
+  assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookies")),
     ["S=1; path=/; HttpOnly", "B=x; Expires=Wed, 21 Oct 2026 07:28:00 GMT; path=/", "S=2; path=/"]);
+  // La antigua sigue saliendo durante la transición (un cliente anterior la lee como antes).
+  assert.equal(r.headers.get("x-relay-set-cookie"),
+    "S=1; path=/; HttpOnly, B=x; Expires=Wed, 21 Oct 2026 07:28:00 GMT; path=/, S=2; path=/");
 });
 
 test("sin Set-Cookie no hay cabecera de cookies", async () => {
   const { pedir } = servidor([new Response("ok", { status: 200 })]);
   const r = await atender(await peticion(PORTAL), env, pedir, AHORA);
+  assert.equal(r.headers.has("x-relay-set-cookies"), false);
   assert.equal(r.headers.has("x-relay-set-cookie"), false);
 });
 

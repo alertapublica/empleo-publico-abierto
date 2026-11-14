@@ -67,6 +67,13 @@ FICHA_TERM = re.compile(r"desde\s+hoy\s+d[íi]a\s+(\d\d/\d\d/\d{4})\s+hasta\s+el
                         r"(?:\s+a\s+las\s+(\d{1,2}[:.]\d{2}))?", re.I)
 # Al ampliar el plazo, la ficha cita la publicación original y el portal pone la fecha de la ampliación.
 PUBLISHED_BEFORE = re.compile(r"proceso\s+publicado\s+el\s+pasado\s+(\d\d/\d\d/\d{4})", re.I)
+# El texto de la publicación original se conserva: su «desde hoy día» (57867 y 57934, dos ampliaciones)
+# es anterior al «publicado el pasado», que remite a la primera ampliación. Sin ampliación no se usa: la
+# apertura de candidaturas puede no ser el día de publicación (58599).
+FROM_TODAY = re.compile(r"desde\s+hoy\s+d[íi]a\s+(\d\d/\d\d/\d{4})", re.I)
+# «Se amplía el plazo del 11/11/2026 hasta…» sin citar la publicación: si la fecha guardada no es
+# anterior, es la de la ampliación y la original no se conoce (57815).
+EXTENDED_FROM = re.compile(r"se\s+ampl[íi]a\s+el\s+plazo\s+del\s+(\d\d/\d\d/\d{4})", re.I)
 PLATFORM = re.compile(r"https?://[\w.-]+\.(?:iformalia\.es|talent-ecosystem\.com)[^\s\"'<>]*", re.I)
 ONLY_BLOCKS = re.compile(r"exclusivamente\s+para\s+(?:estos|esos)\s+bloques", re.I)
 
@@ -198,7 +205,9 @@ def parse_detail(html: str) -> OfferDetail | None:
     text = _clean(soup.select_one("section.detalles").get_text(" "))
     parent = re.search(r"proviene de la publicaci[oó]n con ID (\d+)", text)
     detail.parent_ref = parent.group(1) if parent else None
-    detail.published_before = min(filter(None, map(_date, PUBLISHED_BEFORE.findall(text))), default=None)
+    cited = PUBLISHED_BEFORE.findall(text)
+    if cited:
+        detail.published_before = min(filter(None, map(_date, cited + FROM_TODAY.findall(text))), default=None)
     term = FICHA_TERM.search(text)
     if term:
         detail.opens_on, detail.deadline = _date(term.group(1)), _date(term.group(2))
@@ -356,6 +365,7 @@ class TragsaSource(Source):
     # empresa y vacantes de la ficha para las filas del listado por fases.
     detail_version = 3
     enrich_fields = ("published_on", "family")
+    extended_from = EXTENDED_FROM  # para JobPosting (site.jobposting_reason)
 
     def __init__(self, today: date | None = None) -> None:
         self._today = today  # solo para las pruebas
@@ -396,8 +406,9 @@ class TragsaSource(Source):
             # Si el listado da una fecha posterior a la de la ficha, manda la del listado.
             if detail and detail.deadline and offer.deadline and detail.deadline < offer.deadline:
                 detail.deadline = detail.deadline_time = None
-            # Empresa y vacantes: las del listado, salvo en la tabla por fases, que no las trae.
-            if detail and offer.company:
+            # Empresa y vacantes: las del listado, salvo en la tabla por fases, que no las trae (el grupo
+            # es solo el respaldo: lo guardado antes de leer la empresa en la ficha se sustituye).
+            if detail and offer.company and offer.company != self.name:
                 detail.company = None
             elif detail:
                 detail.company = detail.company or self.name

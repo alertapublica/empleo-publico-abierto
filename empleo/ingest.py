@@ -172,7 +172,7 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
         try:
             detail = source.fetch_detail(http, listed)
             if detail is not None:
-                check_dates(detail, ("deadline", "opens_on"))
+                check_dates(detail, ("deadline", "opens_on", "published_before"))
         except Exception as error:  # una ficha mala no debe parar el resto
             print(f"AVISO {record['id']}: {error}", file=sys.stderr)
             detail = None
@@ -247,7 +247,9 @@ def apply_enrichment(source: Source, http: Client, offers: dict) -> None:
         record["portal_tries"] += 1
         values = extra.get(record["ref"])
         if values:
-            record.update({key: value for key, value in values.items() if value and not record.get(key)})
+            record.update({key: value for key, value in values.items() if value and not record.get(key)
+                           # la ubicación de la ficha manda: la del portal, solo si ya se leyó y no la daba
+                           and (key != "location" or record["detail_ok"])})
             _locate(record)
 
 
