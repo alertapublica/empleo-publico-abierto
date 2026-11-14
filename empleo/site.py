@@ -192,8 +192,27 @@ SETTINGS_BUTTON = ('<button type="button" id="btn-aa" class="btn-cab" aria-haspo
                    '<span class="aa" aria-hidden="true">Aa</span> <span class="aa-texto">Apariencia</span></button>')
 
 
+# Lo que en la cabecera necesita la dirección completa de la página (canónica, og:url, og:image) lo
+# pone `build`, que es quien sabe dónde se publica cada una.
+HEAD_URL = "<!--url-->"
+NOINDEX_DAYS = 2  # días tras el cierre en que la ficha deja de ofrecerse a los buscadores
+
+
+def head_url(html: str, base_url: str, path: str | None) -> str:
+    """Sustituye la marca por la canónica y las etiquetas con dirección completa; sin `path`, la quita."""
+    if path is None:
+        return html.replace(HEAD_URL + "\n", "")
+    url = e(base_url + path)
+    return html.replace(HEAD_URL, f'''<link rel="canonical" href="{url}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{e(base_url)}assets/tarjeta.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(SITE_NAME)}">''')
+
+
 def page(title: str, body: str, root: str, current: str = "", description: str = TAGLINE, checked: str = "",
-         csp: str = CSP) -> str:
+         csp: str = CSP, index: bool = True) -> str:
     links = "".join(
         f'<li><a href="{root}{href}"{" aria-current=\"page\"" if key == current else ""}>{label}</a></li>'
         for key, href, label in NAV
@@ -212,16 +231,24 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 <meta http-equiv="Content-Security-Policy" content="{csp}">
 <title>{e(full_title)}</title>
 <meta name="description" content="{e(description)}">
+{"" if index else '<meta name="robots" content="noindex">' + chr(10)}{HEAD_URL}
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(description)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{e(SITE_NAME)}">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{root}assets/estilos.css">
 <script src="{root}assets/tema.js"></script>
 <link rel="icon" href="{root}assets/icono.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{root}assets/icono-180.png">
 <link rel="alternate" type="application/rss+xml" title="Todas las novedades" href="{root}feed.xml">
 </head>
 <body id="arriba">
 <a class="salto" href="#contenido">Saltar al contenido</a>
 <header class="sitio">
 <div class="ancho cab">
-<a class="marca" href="{root}">{SITE_NAME}</a>
+<a class="marca" href="{root}"><img src="{root}assets/icono.svg" alt="" width="28" height="28">{SITE_NAME}</a>
 <div class="cab-acciones">
 {SETTINGS_BUTTON}
 <button type="button" id="btn-menu" class="btn-cab" hidden aria-expanded="false" aria-controls="nav-principal">Menú</button>
@@ -509,8 +536,21 @@ def offer_page(offer: dict, sources: dict, today: date, checked: str,
 {action}
 {sections}
 <p class="nota">Texto reproducido de la web oficial de {e(sources[offer['source']].name)}. En caso de discrepancia, prevalece la información publicada por el organismo.</p>"""
-    description = f"{offer.get('company')}, {where(offer)}. {seats(offer.get('positions'))}."
-    return page(offer["title"], body, root, description=description, checked=checked)
+    company = offer.get("company") or sources[offer["source"]].name
+    contract = offer.get("contract") or KINDS.get(offer.get("kind"))
+    summary = [
+        ", ".join(part for part in (company, where(offer)) if part != UNKNOWN),
+        f"Contrato: {contract}" if contract else "",
+        seats(offer["positions"]) if offer.get("positions") else "",
+        f"Cerrada el {long_date(offer['closed_at'])}" if closed
+        else f"Plazo hasta el {long_date(offer['deadline'])}" if offer.get("deadline") else "",
+    ]
+    description = " ".join(f"{fact}." for fact in summary if fact)
+    title = offer["title"] if company.lower() in offer["title"].lower() else f"{offer['title']} – {company}"
+    # Cerrada: sigue publicada (enlaces enviados, guardadas), pero a los dos días deja de ofrecerse a
+    # los buscadores.
+    stale = closed and (today - date.fromisoformat(offer["closed_at"][:10])).days >= NOINDEX_DAYS
+    return page(title, body, root, description=description, checked=checked, index=not stale)
 
 
 def by_group(sources: dict) -> list[tuple[str, str, list]]:
@@ -614,7 +654,9 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
 <p id="estado-organismos" role="status"></p>
 {"".join(blocks)}
 {planned_html}<script src="../assets/organismos.js" defer></script>"""
-    return page("Organismos", body, "../", "organismos", checked=checked)
+    return page("Organismos", body, "../", "organismos", checked=checked,
+                description="Empresas, fundaciones y centros de investigación del sector público cuyas ofertas "
+                            "de empleo reúne este portal.")
 
 
 def organism_page(source, open_offers: list[dict], today: date, checked: str,
@@ -655,7 +697,11 @@ def organism_page(source, open_offers: list[dict], today: date, checked: str,
 {search}<p class="resumen">{offers}. <a href="{e(source.homepage)}">Web oficial</a> · <a href="{root}feeds/organismo-{e(source.id)}.xml">Avisos por RSS</a>{telegram}.</p>
 {offer_list}
 {running}"""
-    return page(source.name, body, root, "organismos", checked=checked)
+    summary = [open_count(len(ordered))] if ordered else []
+    summary += [running_count(len(processes))] if processes else []
+    description = (f"{' y '.join(summary).capitalize()} en {source.name}." if summary
+                   else f"Ofertas de empleo y procesos selectivos de {source.name}.")
+    return page(f"Empleo en {source.name}", body, root, "organismos", description=description, checked=checked)
 
 
 def process_groups(items: list[dict]) -> list[list[dict]]:
@@ -787,7 +833,9 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
 {cards}
 </ol>
 {closed_link}"""
-    return page("Anuncios de procesos", body, "../", "anuncios", checked=checked)
+    return page("Anuncios de procesos", body, "../", "anuncios", checked=checked,
+                description="Procesos selectivos en marcha en las empresas y entidades del sector público, "
+                            "con sus comunicados por fases.")
 
 
 def closed_processes_page(items: list[dict], checked: str, sources: dict, today: date) -> str:
@@ -803,7 +851,8 @@ def closed_processes_page(items: list[dict], checked: str, sources: dict, today:
 <ol class="ofertas">
 {cards}
 </ol>"""
-    return page("Procesos finalizados", body, "../../", "historico", checked=checked)
+    return page("Procesos finalizados", body, "../../", "historico", checked=checked,
+                description="Procesos selectivos ya finalizados de las empresas y entidades del sector público.")
 
 
 def history_page(closed: list[dict], checked: str, closed_processes: int = 0) -> str:
@@ -837,7 +886,8 @@ def history_page(closed: list[dict], checked: str, closed_processes: int = 0) ->
 <ol class="ofertas" id="lista-ofertas">
 {rows}
 </ol>"""
-    return page("Histórico", body, "../", "historico", checked=checked)
+    return page("Histórico", body, "../", "historico", checked=checked,
+                description="Ofertas de empleo ya cerradas de las empresas y entidades del sector público.")
 
 
 COPY_BUTTON = ('<button type="button" class="copiar" hidden>Copiar'
@@ -992,7 +1042,9 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <h2>Reutilización de los datos</h2>
 <p>Los datos también están disponibles en formato JSON, sin clave de acceso. La descripción de los ficheros y algunos ejemplos de uso figuran en <a href="../datos/">Datos abiertos</a>.</p>
 <script src="../assets/listas.js" defer></script>"""
-    return page("Recibir avisos", body, "../", "avisos", checked=checked, csp=CSP_CORREO if sitekey else CSP)
+    return page("Recibir avisos", body, "../", "avisos", checked=checked, csp=CSP_CORREO if sitekey else CSP,
+                description="Avisos de las ofertas nuevas de empleo en empresas y entidades del sector público, "
+                            "por comunidad autónoma, área u organismo.")
 
 
 def and_join(items: list[str]) -> str:
@@ -1079,7 +1131,8 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <p>Este portal pretende ser accesible para todas las personas. Las medidas adoptadas y las limitaciones conocidas se detallan en <a href="../accesibilidad/">Accesibilidad</a>. Las webs oficiales, sus bases en PDF y sus formularios de inscripción no dependen de este portal y pueden no ser accesibles.</p>
 <h2 id="contacto">Contacto</h2>
 <p>Para cualquier consulta, incluido el ejercicio de sus derechos sobre datos personales, puede escribir a {MAILTO}. Los errores y las propuestas de mejora también pueden comunicarse mediante una <a href="{REPO}/issues">incidencia en GitHub</a>.</p>"""
-    return page("Acerca de", body, "../", "acerca", checked=checked)
+    return page("Acerca de", body, "../", "acerca", checked=checked,
+                description=f"Qué es {SITE_NAME}, qué ofertas incluye, cómo se obtienen y aviso legal.")
 
 
 def telegram_privacy(bot: str) -> str:
@@ -1138,7 +1191,8 @@ def accessibility_page(checked: str, mail: bool = False) -> str:
 </ul>
 <h2>Comunicar una barrera</h2>
 <p>Si encuentra una barrera en este portal, puede comunicarla mediante una <a href="{REPO}/issues">incidencia en GitHub</a> o escribiendo a {MAILTO}, para su corrección.</p>"""
-    return page("Accesibilidad", body, "../", "accesibilidad", checked=checked)
+    return page("Accesibilidad", body, "../", "accesibilidad", checked=checked,
+                description=f"Declaración de accesibilidad de {SITE_NAME}.")
 
 
 # Documentación de la API en la página «Datos abiertos»: (claves, descripción). Un test comprueba que
@@ -1459,28 +1513,32 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         shutil.rmtree(out)
     shutil.copytree(ASSETS, out / "assets")
     write(out / ".nojekyll", "")
-    write(out / "index.html", index_page(open_offers, today, checked, sources))
+
+    def put(path: str, html: str) -> None:
+        write(out / path / "index.html", head_url(html, base_url, path))
+
+    put("", index_page(open_offers, today, checked, sources))
     groups = process_groups(announcements)
     live = [g for g in groups if is_live(g)]
     running = {s.id: sum(g[0]["source"] == s.id for g in live) for s in ACTIVE}
-    write(out / "organismos/index.html", organisms_page(sources, open_offers, checked, running, TELEGRAM_BOT))
+    put("organismos/", organisms_page(sources, open_offers, checked, running, TELEGRAM_BOT))
     for source in ACTIVE:
-        write(out / "organismos" / source.id / "index.html", organism_page(
+        put(f"organismos/{source.id}/", organism_page(
             source, open_offers, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
     for offer in offers.values():
-        write(out / offer_path(offer) / "index.html", offer_page(offer, sources, today, checked, base_url))
-    write(out / "anuncios/index.html", announcements_page(announcements, checked, sources, today))
-    write(out / "historico/index.html", history_page(closed, checked, sum(not is_live(g) for g in groups)))
-    write(out / "historico/procesos/index.html", closed_processes_page(announcements, checked, sources, today))
-    write(out / "acerca/index.html", about_page(sources, checked, TELEGRAM_BOT, base_url, bool(CORREO_SITEKEY)))
-    write(out / "accesibilidad/index.html", accessibility_page(checked, bool(CORREO_SITEKEY)))
-    write(out / "datos/index.html", open_data_page(checked, base_url))
-    write(out / "404.html", page(
+        put(offer_path(offer), offer_page(offer, sources, today, checked, base_url))
+    put("anuncios/", announcements_page(announcements, checked, sources, today))
+    put("historico/", history_page(closed, checked, sum(not is_live(g) for g in groups)))
+    put("historico/procesos/", closed_processes_page(announcements, checked, sources, today))
+    put("acerca/", about_page(sources, checked, TELEGRAM_BOT, base_url, bool(CORREO_SITEKEY)))
+    put("accesibilidad/", accessibility_page(checked, bool(CORREO_SITEKEY)))
+    put("datos/", open_data_page(checked, base_url))
+    write(out / "404.html", head_url(page(
         "Página no encontrada",
         '<h1>Página no encontrada</h1><p>La página solicitada no existe o ha cambiado de dirección.</p>'
         '<p><a href="/">Ir al listado de ofertas</a>.</p>',
-        "/",
-    ))
+        "/", index=False,
+    ), base_url, None))
 
     offer_url = lambda offer: base_url + offer_path(offer)
     offer_feed = feeds.offer_items(offers, events, offer_url, offer_summary)
@@ -1533,7 +1591,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
             entries.append((member_name(source), organism_paths[source.id], subs))
         organism_feeds.append((label, entries))
     mail_organisms = [(label, [(s.id, member_name(s)) for s in members]) for _, label, members in by_group(sources)]
-    write(out / "avisos/index.html", alerts_page(region_feeds, organism_feeds, checked, TELEGRAM_BOT, area_feeds,
+    put("avisos/", alerts_page(region_feeds, organism_feeds, checked, TELEGRAM_BOT, area_feeds,
                                                  CORREO_SITEKEY, mail_organisms))
 
     stamp = now.isoformat(timespec="seconds")
@@ -1548,7 +1606,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     pages = (
         [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
-        + [offer_path(o) for o in offers.values()]
+        + [offer_path(o) for o in open_offers]  # las cerradas siguen publicadas, pero no se anuncian
     )
     write(out / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'

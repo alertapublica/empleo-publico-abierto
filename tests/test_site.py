@@ -100,6 +100,47 @@ class Site(unittest.TestCase):
     def read(self, path):
         return (self.out / path).read_text(encoding="utf-8")
 
+    def test_cada_pagina_declara_su_direccion_y_su_vista_previa(self):
+        for path in ("", "organismos/", "organismos/tragsa/", "ofertas/tragsa-1/", "anuncios/", "avisos/"):
+            html = self.read(path + "index.html").split("</head>")[0]
+            self.assertIn(f'<link rel="canonical" href="{BASE}{path}">', html, path)
+            self.assertIn(f'<meta property="og:url" content="{BASE}{path}">', html)
+            self.assertIn(f'<meta property="og:image" content="{BASE}assets/tarjeta.png">', html)
+            self.assertIn('<meta property="og:title"', html)
+            self.assertNotIn('name="robots"', html)
+            self.assertNotIn(site.HEAD_URL, html)
+        for name in ("tarjeta.png", "icono-180.png", "icono.svg"):
+            self.assertTrue((self.out / "assets" / name).exists(), name)
+        # La 404 no tiene dirección propia y no se ofrece a los buscadores.
+        missing = self.read("404.html")
+        self.assertIn('<meta name="robots" content="noindex">', missing)
+        self.assertNotIn("canonical", missing)
+        self.assertNotIn(site.HEAD_URL, missing)
+
+    def test_titulo_y_descripcion_propios_de_cada_pagina(self):
+        ficha = self.read("ofertas/tragsa-2/index.html")
+        self.assertIn("<title>Oferta 2 – Tragsa · Empleo en Empresas Públicas</title>", ficha)
+        self.assertIn('<meta name="description" content="Tragsa, Lugo. Contrato: Temporal. 2 plazas. '
+                      'Plazo hasta el 8 de noviembre de 2026.">', ficha)
+        self.assertIn("Cerrada el 7 de noviembre de 2026.", self.read("ofertas/tragsa-3/index.html").split("</head>")[0])
+        organismo = self.read("organismos/tragsa/index.html")
+        self.assertIn("<title>Empleo en Grupo Tragsa · Empleo en Empresas Públicas</title>", organismo)
+        self.assertIn('<meta name="description" content="4 ofertas abiertas', organismo)
+        descriptions = {re.search(r'<meta name="description" content="([^"]*)"', self.read(path + "index.html")).group(1)
+                        for path in ("", "organismos/", "anuncios/", "historico/", "avisos/", "acerca/", "datos/")}
+        self.assertEqual(len(descriptions), 7)
+
+    def test_las_cerradas_salen_del_sitemap_y_a_los_dos_dias_de_los_buscadores(self):
+        sitemap = self.read("sitemap.xml")
+        self.assertIn(f"{BASE}ofertas/tragsa-1/", sitemap)
+        self.assertNotIn("ofertas/tragsa-3/", sitemap)
+        self.assertTrue((self.out / "ofertas/tragsa-3/index.html").exists())
+        sources = {s.id: s for s in site.ACTIVE}
+        closed = offer("3", status="closed", closed_at="2026-11-07T00:00:00+00:00")
+        robots = '<meta name="robots" content="noindex">'
+        self.assertNotIn(robots, site.offer_page(closed, sources, datetime(2026, 11, 8).date(), ""))
+        self.assertIn(robots, site.offer_page(closed, sources, datetime(2026, 11, 9).date(), ""))
+
     def test_estructura_accesible_en_todas_las_paginas(self):
         for path in self.pages():
             parser = Parser()
