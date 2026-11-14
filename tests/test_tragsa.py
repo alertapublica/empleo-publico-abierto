@@ -1,4 +1,5 @@
 import unittest
+import warnings
 from datetime import date
 from pathlib import Path
 
@@ -110,6 +111,37 @@ class Detail(unittest.TestCase):
         detail = tragsa.TragsaSource().fetch_detail(Http(), offer)
         self.assertEqual((detail.deadline, detail.deadline_time, detail.opens_on), (None, None, "2026-11-04"))
 
+    def test_empresa_y_vacantes_de_la_ficha(self):
+        detail = tragsa.parse_detail(fixture("ficha.html"))
+        self.assertEqual((detail.company, detail.positions), ("Tragsatec", 3))
+        self.assertFalse({"Empresa", "Vacantes Previstas"} & {s["title"] for s in detail.sections})
+        self.assertIsNone(detail.published_before)
+
+    def test_el_listado_manda_en_empresa_y_vacantes_salvo_en_la_tabla_por_fases(self):
+        class Http:
+            def get(self, url):
+                return fixture("ficha.html")
+        source = tragsa.TragsaSource()
+        offer = tragsa.ListedOffer(ref="58644", title="t", company="Tragsa", positions=1, url="https://x/ficha",
+                                   apply_url="u", deadline="2026-11-09")
+        detail = source.fetch_detail(Http(), offer)
+        self.assertEqual((detail.company, detail.positions), (None, None))
+        [fases] = tragsa.parse_listing(fixture("tragsa-convocatorias.html"), "temporal")  # 56263
+        self.assertEqual((fases.company, fases.positions), (None, None))
+        detail = source.fetch_detail(Http(), fases)
+        self.assertEqual((detail.company, detail.positions), ("Tragsatec", 3))
+        sin_empresa = fixture("ficha.html").replace("<p>Tragsatec</p>", "<p></p>")
+        detail = source.fetch_detail(type("H", (), {"get": lambda self, url: sin_empresa})(), fases)
+        self.assertEqual(detail.company, "Grupo Tragsa")
+
+    def test_ampliacion_de_plazo_cita_la_publicacion_original(self):
+        # 57867: el portal da la fecha de la ampliación (12/11); la ficha, la de la publicación.
+        frase = ("En relación al proceso publicado el pasado 30/10/2026 se amplía el plazo de recepción de "
+                 "candidaturas desde el 12/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).")
+        html = fixture("ficha.html").replace("desde hoy día", frase + " desde hoy día", 1)
+        self.assertIn(frase, html)
+        self.assertEqual(tragsa.parse_detail(html).published_before, "2026-10-30")
+
     def test_ficha_vaciada_al_cerrar(self):
         self.assertIsNone(tragsa.parse_detail("<section>sin datos</section>"))
 
@@ -126,6 +158,20 @@ class Portal(unittest.TestCase):
     def test_respuesta_ajax_con_cdata(self):
         html = "<![CDATA[" + fixture("portal.html") + "]]>"
         self.assertEqual(len(tragsa.parse_portal_rows(html)), 2)
+
+    def test_la_paginacion_en_xml_no_ensucia_el_registro(self):
+        html = '<?xml version="1.0"?><PAGE id="x"><FIELD><![CDATA[' + fixture("portal.html") + "]]></FIELD></PAGE>"
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            self.assertEqual(len(tragsa.parse_portal_rows(html)), 2)
+        self.assertEqual(caught, [])
+
+    def test_portal_sin_filas_es_un_fallo_no_una_lista_vacia(self):
+        class Http:
+            def get(self, url):
+                return "<html><body>Mantenimiento</body></html>"
+        with self.assertRaises(SourceLayoutError):
+            tragsa.TragsaSource().enrich(Http())
 
 
 class FakeHttp:

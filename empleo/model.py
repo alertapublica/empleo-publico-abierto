@@ -131,10 +131,14 @@ class OfferDetail:
     opens_on: str | None = None
     deadline_time: str | None = None
     positions: int | None = None
+    company: str | None = None
+    # Publicación anterior que declara la propia ficha («proceso publicado el pasado …» al ampliar el
+    # plazo): vale como `published_on` si es más antigua que la guardada.
+    published_before: str | None = None
 
 
 # Datos de la oferta que pueden venir del listado o de la ficha.
-LISTING_OR_DETAIL = ("kind", "contract", "opens_on", "deadline_time", "positions")
+LISTING_OR_DETAIL = ("kind", "contract", "opens_on", "deadline_time", "positions", "company")
 
 
 @dataclass

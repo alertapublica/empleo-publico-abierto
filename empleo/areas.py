@@ -152,6 +152,8 @@ FRASES = [
      {"admin": 3}),
     (r"bon govern|buen gobierno|compliance|cumplimiento normativo|responsable de cumplimiento|"
      r"asesor\w* juridic\w*", {"juridico": 3}),
+    # antes que la defensa militar (Tragsa 58747, «representación y defensa de procedimientos judiciales»)
+    (r"defensa (de procedimientos )?judicial\w*|defensa juridic\w*|asuntos contenciosos", {"juridico": 3}),
     (r"comunicacion ambiental", {"comunicacion": 3, "ambiente": 2}),
     (r"comunicacion de mercado|gestor\w* de productos?|product manager", {"comercial": 3}),
     (r"head of (department|unit)|jefe\w* de departamento|cap de departament", {}),

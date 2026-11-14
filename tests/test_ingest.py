@@ -497,6 +497,40 @@ class RunSource(unittest.TestCase):
             ingest.run_source(ausente, None, self.data, NOW)
         self.assertEqual(ausente.enrich_calls, ingest.MAX_PORTAL_TRIES)
 
+    def test_el_portal_solo_completa_lo_que_falta(self):
+        # Tragsa 58786: la ficha dice «Lleida o Barcelona» y el portal solo «Barcelona»; 56263 ya tenía
+        # fecha del listado y le faltaba la familia.
+        extra = {"1": {"published_on": "2026-11-12", "location": "Barcelona", "family": "Apoyo Obra",
+                       "department": "Lleida"}}
+        source = FakeSource([listed(published_on="2026-10-30")], OfferDetail(location="Lleida o Barcelona"), extra)
+        source.enrich_fields = ("published_on", "family")
+        ingest.run_source(source, None, self.data, NOW)
+        record = self.stored()["1"]
+        self.assertEqual((record["published_on"], record["location"]), ("2026-10-30", "Lleida o Barcelona"))
+        self.assertEqual((record["family"], record["department"]), ("Apoyo Obra", "Lleida"))
+        self.assertEqual(source.enrich_calls, 1)
+
+    def test_sin_familia_solo_se_consulta_si_la_fuente_la_espera(self):
+        source = FakeSource([listed(published_on="2026-10-30")], OfferDetail(), {"1": {"family": "X"}})
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual(source.enrich_calls, 0)
+
+    def test_la_ficha_que_cita_una_publicacion_anterior_la_da_por_original(self):
+        source = FakeSource([listed(published_on="2026-11-12")], OfferDetail(published_before="2026-10-30"))
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["published_on"], "2026-10-30")
+        posterior = FakeSource([listed("2", published_on="2026-10-01")], OfferDetail(published_before="2026-10-30"))
+        ingest.run_source(posterior, None, self.data, NOW)
+        self.assertEqual(self.stored()["2"]["published_on"], "2026-10-01")
+
+    def test_empresa_de_la_ficha_si_el_listado_no_la_trae(self):
+        sin_empresa = replace(listed(), company=None)
+        ingest.run_source(FakeSource([sin_empresa], OfferDetail(company="Tragsa")), None, self.data, NOW)
+        ingest.run_source(FakeSource([sin_empresa], None), None, self.data, NOW)  # otra lectura del listado
+        self.assertEqual(self.stored()["1"]["company"], "Tragsa")
+        ingest.run_source(FakeSource([listed()], None), None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["company"], "Empresa")  # el listado manda si la trae
+
     def test_contrato_y_fechas_de_la_ficha_se_conservan_si_el_listado_no_los_trae(self):
         detail = OfferDetail(contract="Modalidad de contratación: Temporal", opens_on="2026-11-02",
                              deadline_time="13:00")

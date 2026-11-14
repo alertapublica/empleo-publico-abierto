@@ -3,8 +3,11 @@
 Un servidor local hace de relay.php: comprueba la firma igual que él
 (HMAC-SHA256 de ts + "\\n" + url, en las cabeceras x-ts y x-firma).
 """
+import email.message
 import hashlib
 import hmac
+import io
+import json
 import threading
 import unittest
 import urllib.parse
@@ -100,8 +103,11 @@ class FakeWorker(BaseHTTPRequestHandler):
         ok = hmac.compare_digest(expected, self.headers["x-firma"] or "")
         self.send_response(200 if ok else 403)
         if ok:
-            self.send_header("x-relay-set-cookie", f"PAGINA={len(self.seen)}; path=/; HttpOnly")
-            self.send_header("x-relay-set-cookie", "FIJA=1; Secure")
+            # Como el Worker: una sola cabecera con la lista JSON, en orden; aquí PAGINA cambia dentro de la
+            # misma respuesta (redirección) y FIJA lleva una coma en Expires.
+            self.send_header("x-relay-set-cookie", json.dumps([
+                "PAGINA=0; path=/", f"PAGINA={len(self.seen)}; path=/; HttpOnly",
+                "FIJA=1; Expires=Wed, 21 Oct 2026 07:28:00 GMT; Secure"]))
         self.end_headers()
         self.wfile.write(f"{method} {url} {body.decode()}".encode())
 
@@ -141,6 +147,17 @@ class RelayCloudflare(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "403"):
                 http.Client(delay=0).get(PORTAL_TRAGSA)
         self.assertEqual(len(FakeWorker.seen), 1)
+
+    def test_la_cabecera_de_cookies_solo_vale_si_viene_del_worker(self):
+        client = http.Client(delay=0)
+
+        class Respuesta(io.BytesIO):
+            headers = email.message.Message()
+            headers["x-relay-set-cookie"] = json.dumps(["INTRUSA=1"])
+
+        with mock.patch.object(client._opener, "open", return_value=Respuesta(b"ok")):
+            self.assertEqual(client.get("https://www.tragsa.es/"), "ok")
+        self.assertEqual(client._relay_cookies, {})
 
     def test_los_demas_hosts_no_van_por_el_worker(self):
         self.assertIsNone(http.relay_cf("https://www.tragsa.es/es/equipo/trabaja-con-nosotros", None))
