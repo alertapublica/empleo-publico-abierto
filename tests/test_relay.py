@@ -84,6 +84,73 @@ class Relay(unittest.TestCase):
         self.assertEqual((result["estado"], result["via"], result["url_final"]), (200, "relay", SEPI))
 
 
+PORTAL_TRAGSA = "https://rrhhcandidato.tragsa.es:8443/psc/portalrh/EMPLOYEE/HRMS/c/X.GBL?Page=A"
+
+
+class FakeWorker(BaseHTTPRequestHandler):
+    """Hace de relay/ (Worker de Cloudflare): firma de hora, método, URL y cuerpo; cookies en cabeceras propias."""
+    seen: list[dict] = []
+
+    def _answer(self, method):
+        body = self.rfile.read(int(self.headers.get("Content-Length") or 0))
+        url = urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query)["url"][0]
+        ts = self.headers["x-ts"]
+        expected = hmac.new(CLAVE.encode(), f"{ts}\n{method}\n{url}\n".encode() + body, hashlib.sha256).hexdigest()
+        self.seen.append({"method": method, "url": url, "body": body, "cookie": self.headers["x-relay-cookie"]})
+        ok = hmac.compare_digest(expected, self.headers["x-firma"] or "")
+        self.send_response(200 if ok else 403)
+        if ok:
+            self.send_header("x-relay-set-cookie", f"PAGINA={len(self.seen)}; path=/; HttpOnly")
+            self.send_header("x-relay-set-cookie", "FIJA=1; Secure")
+        self.end_headers()
+        self.wfile.write(f"{method} {url} {body.decode()}".encode())
+
+    def do_GET(self):
+        self._answer("GET")
+
+    def do_POST(self):
+        self._answer("POST")
+
+    def log_message(self, *_):
+        pass
+
+
+class RelayCloudflare(unittest.TestCase):
+    def setUp(self):
+        self.server = HTTPServer(("127.0.0.1", 0), FakeWorker)
+        threading.Thread(target=self.server.serve_forever, daemon=True).start()
+        self.addCleanup(self.server.server_close)
+        self.addCleanup(self.server.shutdown)
+        FakeWorker.seen = []
+        base = f"http://127.0.0.1:{self.server.server_port}"
+        env = mock.patch.dict("os.environ", {"RELAY_CF_CLAVE": CLAVE, "RELAY_CF_URL": base})
+        env.start()
+        self.addCleanup(env.stop)
+
+    def test_get_y_post_del_portal_de_tragsa_con_firma_y_cookies(self):
+        client = http.Client(delay=0)
+        self.assertEqual(client.get(PORTAL_TRAGSA), f"GET {PORTAL_TRAGSA} ")
+        self.assertEqual(client.post(PORTAL_TRAGSA, {"ICAction": "abajo"}), f"POST {PORTAL_TRAGSA} ICAction=abajo")
+        self.assertEqual([s["method"] for s in FakeWorker.seen], ["GET", "POST"])
+        self.assertIsNone(FakeWorker.seen[0]["cookie"])
+        # La segunda petición lleva las cookies que devolvió la primera, sin atributos.
+        self.assertEqual(FakeWorker.seen[1]["cookie"], "PAGINA=1; FIJA=1")
+
+    def test_firma_mala_no_se_reintenta(self):
+        with mock.patch.dict("os.environ", {"RELAY_CF_CLAVE": "otra"}):
+            with self.assertRaisesRegex(RuntimeError, "403"):
+                http.Client(delay=0).get(PORTAL_TRAGSA)
+        self.assertEqual(len(FakeWorker.seen), 1)
+
+    def test_los_demas_hosts_no_van_por_el_worker(self):
+        self.assertIsNone(http.relay_cf("https://www.tragsa.es/es/equipo/trabaja-con-nosotros", None))
+        self.assertIsNone(http.relay_cf(SEPI, None))
+
+    def test_sin_clave_va_directo(self):
+        with mock.patch.dict("os.environ", {}, clear=True):
+            self.assertIsNone(http.relay_cf(PORTAL_TRAGSA, None))
+
+
 class Directa(unittest.TestCase):
     def test_sin_clave_va_directa(self):
         with mock.patch.dict("os.environ", {}, clear=True):

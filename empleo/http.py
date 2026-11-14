@@ -53,6 +53,27 @@ def relay(url: str) -> tuple[str, dict[str, str]]:
     return base.rstrip("/") + "/?" + urllib.parse.urlencode({"url": url}), {"x-ts": ts, "x-firma": firma}
 
 
+# Hosts a los que tampoco llega el relay de Piensa (el portal de candidatos de Tragsa solo atiende en el
+# puerto 8443, que Piensa bloquea de salida): van por el Worker de Cloudflare de relay/, que sale por
+# Madrid, con GET y POST y las cookies de la sesión. Secretos RELAY_CF_URL y RELAY_CF_CLAVE.
+VIA_RELAY_CF = {"rrhhcandidato.tragsa.es"}
+
+
+def relay_cf(url: str, data: bytes | None) -> tuple[str, dict[str, str]] | None:
+    """URL y cabeceras firmadas para leer `url` por el Worker, o None si no le toca o falta la clave.
+
+    La firma cubre hora, método, URL y cuerpo, y caduca a los 120 s: se calcula en cada intento.
+    """
+    clave, base = os.environ.get("RELAY_CF_CLAVE"), os.environ.get("RELAY_CF_URL")
+    if not (clave and base) or urllib.parse.urlsplit(url).hostname not in VIA_RELAY_CF:
+        return None
+    ts = str(int(time.time()))
+    method = "GET" if data is None else "POST"
+    signed = f"{ts}\n{method}\n{url}\n".encode() + (data or b"")
+    firma = hmac.new(clave.encode(), signed, hashlib.sha256).hexdigest()
+    return base.rstrip("/") + "/?" + urllib.parse.urlencode({"url": url}), {"x-ts": ts, "x-firma": firma}
+
+
 class Client:
     def __init__(self, delay: float = DEFAULT_DELAY, retries: int = 3, timeout: float = 60):
         self.delay = delay
@@ -63,6 +84,8 @@ class Client:
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
         )
         self._last = 0.0
+        # Cookies de las sesiones que pasan por el Worker: no son de su dominio y no van al CookieJar.
+        self._relay_cookies: dict[str, str] = {}
 
     def get(self, url: str) -> str:
         return self._request(url, None).decode("utf-8", "replace")
@@ -80,10 +103,20 @@ class Client:
             pause = self._last + self.delay - time.monotonic()
             if pause > 0:
                 time.sleep(pause)
-            target, signed = relay(url) if data is None else (url, {})
+            via_cf = relay_cf(url, data)
+            if via_cf:
+                target, signed = via_cf
+                if self._relay_cookies:
+                    signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in self._relay_cookies.items())
+            else:
+                target, signed = relay(url) if data is None else (url, {})
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
             try:
                 with self._opener.open(request, timeout=self.timeout) as response:
+                    for line in response.headers.get_all("x-relay-set-cookie") or []:
+                        name, _, value = line.split(";")[0].partition("=")
+                        if name.strip():
+                            self._relay_cookies[name.strip()] = value.strip()
                     body = response.read()
                     if response.headers.get("Content-Encoding") == "gzip":
                         body = gzip.decompress(body)
