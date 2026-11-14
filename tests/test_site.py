@@ -1135,8 +1135,28 @@ class JobPosting(unittest.TestCase):
         record = posting(location="Barcelona / Girona", place="Barcelona", region="Cataluña")
         self.assertEqual(site.offer_codes(record)["provincia"], "08")
         self.assertEqual(self.reason(record), "varias provincias")
-        self.assertEqual(self.reason(posting(location="Varios", place="Tenerife / Gran Canaria", region="Canarias")),
+        self.assertEqual(self.reason(posting(location="Canarias", place="Tenerife / Gran Canaria", region="Canarias")),
                          "varias provincias")
+
+    def test_sin_marcado_si_los_textos_de_ubicacion_no_coinciden(self):
+        record = posting(location="Barcelona", place="Girona", region="Cataluña")
+        self.assertEqual(self.reason(record), "varias provincias")
+        # Coinciden: comunidad de una provincia, sede y paréntesis del título.
+        same = posting(title="Analista (Madrid)", location="Sede Madrid Tragsatec", region="Comunidad de Madrid")
+        self.assertIsNone(self.reason(same))
+
+    def test_varios_no_lo_concreta_el_titulo(self):
+        record = posting(title="Técnico (Madrid)", location="Varios", region="Comunidad de Madrid")
+        self.assertEqual(self.reason(record), "sin ubicación")
+        self.assertEqual(self.reason(posting(location="Nacional", region="Ámbito nacional")), "sin ubicación")
+
+    def test_municipios_con_nombre_de_provincia_o_isla(self):
+        palma = posting(location="La Palma del Condado (Huelva)", region="Andalucía")
+        self.assertIsNone(self.reason(palma))
+        self.assertEqual(self.data(palma)["jobLocation"]["address"]["addressLocality"], "La Palma del Condado")
+        leon = posting(location="Valencia de Don Juan (León)", region="Castilla y León")
+        self.assertIsNone(self.reason(leon))
+        self.assertEqual(self.data(leon)["jobLocation"]["address"]["addressRegion"], "León")
 
     def test_sin_marcado_si_el_puesto_es_embarcado(self):
         sections = [{"title": "Funciones", "level": 2, "html": LONG + "<p>Embarcado/a en Buque Oceanográfico</p>"}]
@@ -1151,6 +1171,10 @@ class JobPosting(unittest.TestCase):
         self.assertEqual(self.reason(record), "falta apartado")
         funciones = {"title": "Funciones", "level": 2, "html": "<p>Auditoría interna.</p>"}
         self.assertIsNone(self.reason({**record, "sections": [requisitos, funciones]}))
+        # Un apartado vacío o que solo remite a la convocatoria no cuenta (692356 trae «VER CONVOCATORIA»).
+        for html in ("<p>VER CONVOCATORIA</p>", "<p> </p>", "<p>Consultar las bases de la convocatoria.</p>"):
+            empty = {"title": "Funciones", "level": 2, "html": html}
+            self.assertEqual(self.reason({**record, "sections": [requisitos, empty]}), "falta apartado", html)
 
     def test_bsm_bolsas_sin_vacante_y_perfiles_distintos(self):
         bolsa = LONG + "<p>Tingues en compte que aquesta inscripció no correspon a una vacant activa.</p>"

@@ -16,8 +16,8 @@ from urllib.parse import quote
 from . import areas, feeds, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
                     SYSTEMS, process_type, today_madrid)
-from .regions import (CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, municipality_name, province_name,
-                      provinces, provinces_in, region_of)
+from .regions import (CCAA, NATIONAL, REGIONS, SEVERAL, UNKNOWN, codes_of, location_from_title, municipality_name, province_name,
+                      provinces, provinces_named, region_of)
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
 
@@ -493,6 +493,20 @@ def remote_text(remote: teletrabajo.Remote) -> str:
 EXAM_FEE = re.compile(r"derechos de examen|tasas? (?:de examen|de inscripci[oó]n)", re.I)
 ON_BOARD = re.compile(r"\bembarcad[oa](?:/a)? en buque", re.I)
 EMPLOYMENT_TYPES = {"temporal": "TEMPORARY", "practicas": "INTERN"}  # «indefinido» no dice la jornada
+# Ubicaciones que dicen expresamente que no hay un lugar: el paréntesis del título no las concreta.
+UNDETERMINED = ("Varios", "Varias", "Nacional", NATIONAL, SEVERAL, UNKNOWN)
+# Un apartado que solo remite a otro documento no lo describe: «VER CONVOCATORIA», «Consultar las bases».
+REFERRAL = re.compile(r"\W*(?:ver|véase|consultar?)\b.{0,60}\b(?:convocatoria|bases)\W*", re.I)
+
+
+def described_sections(offer: dict) -> set[str]:
+    """Títulos de los apartados con texto propio: ni vacíos ni una simple remisión a la convocatoria."""
+    titles = set()
+    for section in offer.get("sections") or []:
+        text = " ".join(teletrabajo.lines({"sections": [section]}))
+        if text.strip() and not REFERRAL.fullmatch(text):
+            titles.add(section.get("title"))
+    return titles
 
 
 def offer_codes(offer: dict) -> dict:
@@ -530,7 +544,7 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
         return "sin empleador"
     if teletrabajo.words(offer) < teletrabajo.MIN_WORDS:
         return "poco texto"
-    titles = {section.get("title") for section in offer.get("sections") or []}
+    titles = described_sections(offer)
     if any(required not in titles for required in getattr(source, "required_sections", ())):
         return "falta apartado"
     text = " ".join(filter(None, [offer["title"], offer.get("location"), offer.get("place"), *teletrabajo.lines(offer)]))
@@ -541,9 +555,14 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
         return "pago"
     if ON_BOARD.search(text):
         return "embarcado"
+    if (offer.get("location") or "").startswith(UNDETERMINED):
+        return "sin ubicación"
+    # Cada texto por separado, y todos de acuerdo: `codes_of` se queda con el primero que dé provincia
+    # y no ve que la ubicación diga Barcelona y la localidad Girona, o que un texto nombre dos.
     places = (offer.get("location"), offer.get("place"), location_from_title(offer["title"]))
-    if any(len(provinces_in(place)) > 1 for place in places):
-        return "varias provincias"  # `codes_of` podría quedarse con la de un texto posterior
+    named = [provinces_named(place) for place in places if place]
+    if any(len(found) > 1 for found in named) or len(set().union(*named)) > 1:
+        return "varias provincias"
     if not offer_codes(offer)["provincia"]:
         return "sin ubicación"
     return None

@@ -299,6 +299,13 @@ def provinces_in(text: str | None) -> set[str]:
     return _provinces_in(_normalize(text)) if text else set()
 
 
+def provinces_named(text: str | None) -> set[str]:
+    """Provincias de un texto de ubicación. Un municipio sin ambigüedad manda, porque desambigua:
+    «La Palma del Condado (Huelva)» es Huelva y no La Palma; «Valencia de Don Juan (León)», León."""
+    found = municipality_of(text)
+    return {found[0][:2]} if found else provinces_in(text)
+
+
 @cache
 def municipality_name(code: str) -> str:
     """Nombre en castellano de un municipio por su código INE: «Las Palmas de Gran Canaria», no
