@@ -6,7 +6,9 @@ Revisado el 2026-11-08.
 
 Resuelto el 2026-11-08: la hora de cierre ya cierra la oferta (`deadline_passed` en `empleo/model.py`), y Cetarsa, SADIM, Mercasa, Tragsa (fijas) y ENAIRE guardan la hora que leen. Los procesos (`Announcement`) también admiten `deadline_time`: pasada la hora, la inscripción deja de figurar abierta.
 
-1. **Correos y Navantia:** el plazo se lee una vez al encontrar la oferta. Si después lo amplían, no se detecta.
+Resuelto el 2026-11-14: en Correos, Navantia y BSM el plazo solo está en la ficha, que se leía una vez. Ahora, si la oferta vence y sigue en el listado, la ficha se vuelve a mirar una vez al día durante 14 días (`_extension_due` en `empleo/ingest.py`); si trae un plazo posterior, la oferta sigue o vuelve a estar abierta con «Plazo modificado».
+
+1. **Tragsa:** el listado trae el plazo y la ficha puede corregirlo. Una ampliación que solo cambie la ficha no se detecta (deducido del código; sin caso visto).
 
 ## Reglas
 

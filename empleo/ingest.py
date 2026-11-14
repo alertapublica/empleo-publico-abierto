@@ -8,7 +8,7 @@ from pathlib import Path
 
 from . import store
 from .http import Client
-from .model import (LISTING_OR_DETAIL, LIVE_STATES, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
+from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
                     SourceLayoutError, deadline_passed)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
@@ -18,6 +18,7 @@ DATA = Path("data")
 MISSED_RUNS_TO_CLOSE = 3  # (1,5 h con lecturas cada 30 min) un fallo puntual de la web no debe cerrar ofertas
 MIN_VISIBLE_RATIO = 0.3  # si desaparece casi todo, lo raro es la lectura
 MAX_PORTAL_TRIES = 4
+EXTENSION_DAYS = 14  # días tras el plazo en que se sigue mirando si la ficha lo ha ampliado
 TRACKED = ("title", "code", "source_title", "company", "category", "url", "apply_url")
 
 
@@ -142,10 +143,26 @@ def _locate(record: dict) -> None:
     record["location"] = record["location"] or title_hint
 
 
-def fetch_details(source: Source, http: Client, offers: dict, events: list) -> None:
+def _extension_due(record: dict, undated: frozenset, now: datetime | None) -> bool:
+    """Vencida que sigue en el listado, y el listado no da el plazo: solo la ficha dirá si lo amplían."""
+    if now is None or record["ref"] not in undated or not record["deadline"]:
+        return False
+    if not deadline_passed(record["deadline"], record.get("deadline_time"), now):
+        return False
+    today = now.astimezone(MADRID).date()
+    return (record.get("deadline_checked") != today.isoformat()
+            and date.fromisoformat(record["deadline"]) >= today - timedelta(days=EXTENSION_DAYS))
+
+
+def fetch_details(source: Source, http: Client, offers: dict, events: list, now: datetime | None = None,
+                  undated: frozenset = frozenset()) -> None:
+    """Lee las fichas pendientes. `undated`: ofertas que esta lectura ha listado sin plazo."""
     for record in offers.values():
-        if record["status"] != "open" or (
-                record["detail_ok"] and record.get("detail_version", 1) == source.detail_version):
+        # Si el plazo solo está en la ficha (Correos, Navantia, BSM), una prórroga no llega por el
+        # listado: mientras la oferta siga listada se vuelve a mirar la ficha, una vez al día.
+        recheck = _extension_due(record, undated, now)
+        if not recheck and (record["status"] != "open" or (
+                record["detail_ok"] and record.get("detail_version", 1) == source.detail_version)):
             continue
         # Los registros anteriores a un campo nuevo no lo tienen: vale su valor por defecto.
         listed = ListedOffer(**{field: record[field] for field in ListedOffer.__dataclass_fields__
@@ -162,6 +179,20 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list) -> N
         except SourceLayoutError as error:
             print(f"AVISO {record['id']}: {error}", file=sys.stderr)
             continue
+        if recheck:
+            record["deadline_checked"] = now.astimezone(MADRID).date().isoformat()
+            if not detail.deadline or deadline_passed(detail.deadline, detail.deadline_time, now):
+                continue  # sigue vencida: no se toca
+            stamp = now.isoformat(timespec="seconds")
+            closed_now = [event for event in events
+                          if event["offer"] == record["id"] and event["kind"] == "closed"]
+            if closed_now:  # se cerró en esta misma lectura: no llegó a publicarse como cerrada
+                events.remove(closed_now[0])
+            else:
+                _event(events, record, "reopened", stamp)
+            _event(events, record, "deadline_changed", stamp, before=record["deadline"], after=detail.deadline)
+            # La hora del plazo anterior no vale para el nuevo.
+            record.update(status="open", closed_at=None, deadline_time=None)
         record.update(sections=detail.sections, detail_ok=True, detail_version=source.detail_version,
                       parent_ref=detail.parent_ref)
         record["location"] = record["location"] or detail.location
@@ -253,7 +284,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     for offer in listed:
         check_dates(offer, ("deadline", "published_on", "opens_on"))
     new_events = reconcile(offers, listed, source.id, now)
-    fetch_details(source, http, offers, new_events)
+    fetch_details(source, http, offers, new_events, now,
+                  frozenset(offer.ref for offer in listed if offer.deadline is None))
     close_expired(offers, new_events, now)
     apply_enrichment(source, http, offers)
     for record in offers.values():

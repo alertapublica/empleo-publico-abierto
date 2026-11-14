@@ -352,6 +352,68 @@ class RunSource(unittest.TestCase):
         self.assertEqual(self.stored()["1"]["status"], "closed")
         self.assertEqual([e["kind"] for e in self.stored("events.json")], ["new", "closed"])
 
+    def undated(self, deadline="2026-11-06", **detail):
+        """Como Correos o BSM: el listado no da el plazo, solo la ficha. Leída dos días antes de NOW."""
+        source = FakeSource([listed(deadline=None)], OfferDetail(deadline=deadline, **detail))
+        ingest.run_source(source, None, self.data, NOW - timedelta(days=2))
+        return source
+
+    def kinds(self):
+        return [e["kind"] for e in self.stored("events.json")]
+
+    def test_prorroga_que_solo_dice_la_ficha_se_ve_al_vencer_el_plazo(self):
+        source = self.undated(deadline_time="14:00")
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW)
+        record = self.stored()["1"]
+        self.assertEqual((record["status"], record["deadline"], record["closed_at"]), ("open", "2026-11-20", None))
+        self.assertIsNone(record["deadline_time"])  # la hora del plazo anterior no se arrastra
+        # No llegó a publicarse como cerrada: solo consta el cambio de plazo.
+        self.assertEqual(self.kinds(), ["new", "deadline_changed"])
+        self.assertEqual(self.stored("events.json")[-1]["before"], "2026-11-06")
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual((source.detail_calls, self.kinds()), (2, ["new", "deadline_changed"]))
+
+    def test_sin_prorroga_se_cierra_y_la_ficha_se_mira_una_vez_al_dia(self):
+        source = self.undated()
+        ingest.run_source(source, None, self.data, NOW)
+        ingest.run_source(source, None, self.data, NOW + timedelta(hours=1))
+        self.assertEqual((self.stored()["1"]["status"], source.detail_calls), ("closed", 2))
+        self.assertEqual(self.kinds(), ["new", "closed"])
+        ingest.run_source(source, None, self.data, NOW + timedelta(days=1))
+        self.assertEqual(source.detail_calls, 3)
+
+    def test_prorroga_publicada_dias_despues_reabre(self):
+        source = self.undated()
+        ingest.run_source(source, None, self.data, NOW)
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW + timedelta(days=1))
+        self.assertEqual(self.stored()["1"]["status"], "open")
+        self.assertEqual(self.kinds(), ["new", "closed", "reopened", "deadline_changed"])
+
+    def test_si_la_ficha_falla_al_mirar_la_prorroga_se_reintenta(self):
+        source = self.undated()
+        source.detail = None
+        ingest.run_source(source, None, self.data, NOW)
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW + timedelta(hours=1))
+        self.assertEqual((self.stored()["1"]["status"], source.detail_calls), ("open", 3))
+        self.assertEqual(self.kinds(), ["new", "closed", "reopened", "deadline_changed"])
+
+    def test_la_prorroga_no_se_busca_si_no_sigue_listada_o_han_pasado_dos_semanas(self):
+        source = self.undated()
+        source.offers = []
+        ingest.run_source(source, None, self.data, NOW)
+        source.offers = [listed(deadline=None)]
+        ingest.run_source(source, None, self.data, NOW + timedelta(days=ingest.EXTENSION_DAYS + 1))
+        self.assertEqual((self.stored()["1"]["status"], source.detail_calls), ("closed", 1))
+
+    def test_con_plazo_en_el_listado_la_vencida_no_vuelve_a_leerse(self):
+        source = FakeSource([listed(deadline="2026-11-06")], OfferDetail())
+        ingest.run_source(source, None, self.data, NOW - timedelta(days=2))
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["status"], source.detail_calls), ("closed", 1))
+
     def test_una_fecha_imposible_no_se_guarda(self):
         with self.assertRaises(SourceLayoutError):
             ingest.run_source(FakeSource([listed(deadline="2027-02-31")]), None, self.data, NOW)
