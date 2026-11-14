@@ -292,3 +292,20 @@ def provinces() -> tuple[tuple[str, str, str], ...]:
         record = catalog.territory(identity)
         rows.append((record["codes"]["ine:provincia"], catalog.name(identity, "es"), record["parent"].rsplit(":", 1)[1]))
     return tuple(sorted(rows))
+
+
+def provinces_in(text: str | None) -> set[str]:
+    """Códigos INE de las provincias (o islas) que nombra el texto: «Tenerife / Gran Canaria» da dos."""
+    return _provinces_in(_normalize(text)) if text else set()
+
+
+@cache
+def municipality_name(code: str) -> str:
+    """Nombre en castellano de un municipio por su código INE: «Las Palmas de Gran Canaria», no
+    «Palmas de Gran Canaria, Las»; «Alicante», no «Alacant/Alicante»."""
+    return territorios_es.load().name(f"es:municipio:{code}", "es")
+
+
+def province_name(code: str) -> str:
+    """Nombre en castellano de una provincia por su código INE, como en `provinces()`."""
+    return next(name for province, name, _ in provinces() if province == code)

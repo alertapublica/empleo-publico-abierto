@@ -88,7 +88,7 @@ class Site(unittest.TestCase):
         store.save(root / "data/tragsa/events.json", events)
         store.save(root / "data/tragsa/announcements.json", notices)
         with mock.patch.object(site, "PLANNED", [{"id": "futura", "name": "Empresa futura"}]):
-            site.build(root / "data", cls.out, BASE, NOW)
+            cls.marks = site.build(root / "data", cls.out, BASE, NOW)
 
     @classmethod
     def tearDownClass(cls):
@@ -130,16 +130,30 @@ class Site(unittest.TestCase):
                         for path in ("", "organismos/", "anuncios/", "historico/", "avisos/", "acerca/", "datos/")}
         self.assertEqual(len(descriptions), 7)
 
+    def test_build_cuenta_el_marcado_de_las_abiertas(self):
+        # La 4 y la 5 tienen texto de sobra; la 1 y la 2, poco. La cerrada no cuenta.
+        self.assertEqual(self.marks, {"con marcado": 2, "poco texto": 2})
+        self.assertIn("application/ld+json", self.read("ofertas/tragsa-5/index.html"))
+        self.assertNotIn("application/ld+json", self.read("ofertas/tragsa-1/index.html"))
+
     def test_las_cerradas_salen_del_sitemap_y_a_los_dos_dias_de_los_buscadores(self):
         sitemap = self.read("sitemap.xml")
         self.assertIn(f"{BASE}ofertas/tragsa-1/", sitemap)
         self.assertNotIn("ofertas/tragsa-3/", sitemap)
         self.assertTrue((self.out / "ofertas/tragsa-3/index.html").exists())
         sources = {s.id: s for s in site.ACTIVE}
-        closed = offer("3", status="closed", closed_at="2026-11-07T00:00:00+00:00")
         robots = '<meta name="robots" content="noindex">'
-        self.assertNotIn(robots, site.offer_page(closed, sources, datetime(2026, 11, 8).date(), ""))
-        self.assertIn(robots, site.offer_page(closed, sources, datetime(2026, 11, 9).date(), ""))
+        # Cerrada a las 23:59 UTC: el 16 a las 00:00 en Madrid aún no han pasado 48 horas.
+        closed = offer("3", status="closed", closed_at="2026-11-14T23:59:00+00:00")
+        at = lambda *moment: site.offer_page(closed, sources, datetime(*moment, tzinfo=timezone.utc), "")
+        self.assertNotIn(robots, at(2026, 11, 15, 23, 0))
+        self.assertNotIn(robots, at(2026, 11, 16, 23, 58))
+        self.assertIn(robots, at(2026, 11, 16, 23, 59))
+        # Cruzando el cambio de hora (25 de octubre) siguen siendo 48 horas transcurridas, no 47 ni 49.
+        october = offer("3", status="closed", closed_at="2026-10-24T12:00:00+00:00")
+        later = lambda hour: site.offer_page(october, sources, datetime(2026, 10, 26, hour, tzinfo=timezone.utc), "")
+        self.assertNotIn(robots, later(11))
+        self.assertIn(robots, later(12))
 
     def test_estructura_accesible_en_todas_las_paginas(self):
         for path in self.pages():
@@ -502,7 +516,7 @@ class Site(unittest.TestCase):
         self.assertIn('data-teletrabajo="0"', tarjeta)
         self.assertNotIn("teletrabajo:", tarjeta.lower().split("data-guardar")[1])
         self.assertIn("Sin teletrabajo, según la ficha: «Móstoles. 100% presencial»",
-                      site.offer_page(presencial, {s.id: s for s in site.ACTIVE}, NOW.date(), ""))
+                      site.offer_page(presencial, {s.id: s for s in site.ACTIVE}, NOW, ""))
 
     def test_comunicados_sin_fecha_por_deteccion_y_lo_que_ya_estaba_al_final(self):
         base = {"source": "sepi", "process": "P", "url": "u", "state": "curso", "date": ""}
@@ -750,7 +764,7 @@ class Site(unittest.TestCase):
         record = offer("CT2026 10-01", id="efe:CT2026 10-01", source="efe")
         self.assertEqual(site.offer_path(record), "ofertas/efe-ct2026-10-01/")
         efe = type("S", (), {"name": "Agencia EFE", "apply_label": "Ver las bases y cómo presentarse"})()
-        html = site.offer_page(record, {"efe": efe}, NOW.date(), "ahora")
+        html = site.offer_page(record, {"efe": efe}, NOW, "ahora")
         self.assertIn("Ver las bases y cómo presentarse", html)
         self.assertNotIn("Inscribirse en la web oficial", html)
 
@@ -879,13 +893,13 @@ class Site(unittest.TestCase):
     def test_contrato_con_el_texto_de_la_fuente(self):
         literal = "Contrato indefinido de actividades científico-técnicas (art. 23 bis Ley 14/2011)"
         record = offer("5", kind="indefinido", contract=literal)
-        sheet = site.offer_page(record, self.sources(), NOW.date(), "ahora")
+        sheet = site.offer_page(record, self.sources(), NOW, "ahora")
         self.assertIn(f"<dt>Contrato</dt><dd>{literal}</dd>", sheet)
         self.assertIn("Indefinido</span></p>", site.offer_card(record, NOW.date()))  # en la tarjeta, corto
         ambiguous = offer("6", kind=None, contract="Durada determinada / Indefinit")
         self.assertIn("Durada determinada / Indefinit</span></p>", site.offer_card(ambiguous, NOW.date()))
         self.assertIn("<dt>Contrato</dt><dd>No consta</dd>",
-                      site.offer_page(offer("7", kind=None), self.sources(), NOW.date(), "ahora"))
+                      site.offer_page(offer("7", kind=None), self.sources(), NOW, "ahora"))
 
     def test_abrir_original_y_compartir_en_la_ficha_no_en_la_tarjeta(self):
         record = offer("8", title="Técnico & analista")
@@ -895,7 +909,7 @@ class Site(unittest.TestCase):
         self.assertNotIn("Abrir original", card)
         self.assertNotIn("Compartir", card)
         self.assertIn('<div class="tarjeta-acciones"></div>', card)  # el hueco de «Guardar»
-        html = site.offer_page(record, self.sources(), NOW.date(), "ahora", base)
+        html = site.offer_page(record, self.sources(), NOW, "ahora", base)
         self.assertIn('<a class="original" href="https://www.tragsa.es/f/8" target="_blank" rel="noopener">Abrir original', html)
         self.assertIn("(se abre en una pestaña nueva)</span>", html)
         self.assertIn(f'data-url="{portal}"', html)
@@ -903,27 +917,27 @@ class Site(unittest.TestCase):
         self.assertIn("mailto:?subject=T%C3%A9cnico%20%26%20analista&amp;body=", html)
         self.assertIn("%0A" + portal.replace(":", "%3A"), html)
         self.assertNotIn("Ver la oferta original", html)
-        closed = offer("9", status="closed", closed_at="2026-01-01")
-        self.assertNotIn("Compartir", site.offer_page(closed, self.sources(), NOW.date(), "ahora"))
+        closed = offer("9", status="closed", closed_at="2026-01-01T10:00:00+00:00")
+        self.assertNotIn("Compartir", site.offer_page(closed, self.sources(), NOW, "ahora"))
 
     def test_ficha_en_otro_idioma_marca_titulo_y_texto_oficial(self):
         idibell = type("S", (), {"name": "IDIBELL", "apply_label": "Ver", "text_lang": "en"})()
         sections = [{"title": "Convocatoria", "level": 2, "html": "<p>About</p>", "lang": "en"},
                     {"title": "Documentos de la convocatoria", "level": 2, "html": "<p>Bases</p>"}]
         record = offer("8", source="idibell", title="Biostatistician", sections=sections)
-        sheet = site.offer_page(record, {"idibell": idibell}, NOW.date(), "ahora")
+        sheet = site.offer_page(record, {"idibell": idibell}, NOW, "ahora")
         self.assertIn('<h1 lang="en">Biostatistician</h1>', sheet)
         self.assertIn('<div class="texto-oficial" lang="en"><p>About</p></div>', sheet)
         self.assertIn('<div class="texto-oficial"><p>Bases</p></div>', sheet)
-        plain = site.offer_page(offer("9"), self.sources(), NOW.date(), "ahora")
+        plain = site.offer_page(offer("9"), self.sources(), NOW, "ahora")
         self.assertNotIn(" lang=", plain.split("<html lang=\"es\">", 1)[1])
 
     def test_codigo_de_oferta_solo_si_lo_publica_el_portal(self):
-        sheet = site.offer_page(offer("5", code=None), self.sources(), NOW.date(), "ahora")
+        sheet = site.offer_page(offer("5", code=None), self.sources(), NOW, "ahora")
         self.assertNotIn("Código de oferta", sheet)
         self.assertNotIn("Título en la web oficial", sheet)
         record = offer("6", title="Médico de Empresa", code="OE 25/26", source_title="OE 25/26 - Médico de Empresa")
-        sheet = site.offer_page(record, self.sources(), NOW.date(), "ahora")
+        sheet = site.offer_page(record, self.sources(), NOW, "ahora")
         self.assertIn("<dt>Código de oferta</dt><dd>OE 25/26</dd>", sheet)
         self.assertIn("<dt>Título en la web oficial</dt><dd>OE 25/26 - Médico de Empresa</dd>", sheet)
         self.assertIn("<h1>Médico de Empresa</h1>", sheet)
@@ -935,7 +949,7 @@ class Site(unittest.TestCase):
         self.assertIn("Plazo aún no iniciado", card)
         self.assertIn("Inscripción desde el", card)
         self.assertIn("13 de noviembre de 2026</time>, a las 13:00", card)
-        sheet = site.offer_page(future, self.sources(), NOW.date(), "ahora")
+        sheet = site.offer_page(future, self.sources(), NOW, "ahora")
         self.assertIn("<dt>Plazo</dt><dd>Del <time", sheet)
         started = offer("6", opens_on="2026-11-01", deadline="2026-11-08", deadline_time="08:00")
         self.assertIn("Finaliza mañana.", site.offer_card(started, NOW.date()))
@@ -991,3 +1005,150 @@ class Where(unittest.TestCase):
         self.assertEqual(site.where({"location": "Sevilla", "region": "Andalucía", "place": "Dos Hermanas"}), "Sevilla")
         self.assertEqual(site.where({"location": "Sevilla", "region": "Andalucía"}), "Sevilla")
         self.assertEqual(site.where({"region": "Galicia"}), "Sin ubicación")
+
+
+# Texto de más de 80 palabras que describe un puesto.
+LONG = "<p>" + " ".join(["Funciones de apoyo técnico en la gestión de expedientes y atención a usuarios."] * 8) + "</p>"
+
+
+def posting(ref="1", **extra):
+    """Oferta que cumple todas las reglas del marcado JobPosting (por defecto, con marcado)."""
+    sections = [{"title": "Funciones", "level": 2, "html": LONG}]
+    return offer(ref, **{"sections": sections, "code": None, **extra})
+
+
+class JobPosting(unittest.TestCase):
+    sources = {s.id: s for s in site.ACTIVE}
+
+    def reason(self, record, now=NOW):
+        return site.jobposting_reason(record, self.sources, now)
+
+    def data(self, record, now=NOW):
+        return site.jobposting(record, self.sources, BASE, now)
+
+    def test_ficha_completa_lleva_el_marcado_en_la_cabecera(self):
+        record = posting("7", code="58007")
+        html = site.offer_page(record, self.sources, NOW, "ahora", BASE)
+        head = html.split("</head>")[0]
+        block = re.search(r'<script type="application/ld\+json">(.*?)</script>', head, re.S)
+        data = json.loads(block.group(1))
+        self.assertEqual(data["@type"], "JobPosting")
+        self.assertEqual(data["title"], "Oferta 7")
+        self.assertEqual(data["datePosted"], "2026-11-05")
+        self.assertEqual(data["validThrough"], "2026-11-20T23:59:59+01:00")
+        self.assertEqual(data["hiringOrganization"], {"@type": "Organization", "name": "Tragsatec"})
+        # «Sevilla» es también provincia: sin localidad, solo la provincia.
+        self.assertEqual(data["jobLocation"]["address"],
+                         {"@type": "PostalAddress", "addressRegion": "Sevilla", "addressCountry": "ES"})
+        self.assertEqual(data["employmentType"], "TEMPORARY")
+        self.assertEqual(data["identifier"], {"@type": "PropertyValue", "name": "Tragsatec", "value": "58007"})
+        self.assertEqual(data["url"], f"{BASE}ofertas/tragsa-7/")
+        self.assertTrue(data["description"].startswith("<p><strong>Funciones</strong></p><p>Funciones de apoyo"))
+        self.assertNotIn("Texto reproducido", data["description"])
+        self.assertNotIn("directApply", data)
+        self.assertNotIn("baseSalary", data)
+
+    def test_varias_plazas_del_mismo_perfil_llevan_marcado(self):
+        self.assertIsNone(self.reason(posting(positions=2)))
+
+    def test_titulo_limpio_y_no_el_literal_con_codigo(self):
+        record = posting(title="Platform Engineer", source_title="Platform Engineer (Ref. LAB/26/10)")
+        self.assertEqual(self.data(record)["title"], "Platform Engineer")
+
+    def test_municipio_con_nombre_en_castellano(self):
+        address = self.data(posting(location="Las Palmas de Gran Canaria", region="Canarias"))["jobLocation"]["address"]
+        self.assertEqual(address["addressLocality"], "Las Palmas de Gran Canaria")
+        self.assertEqual(address["addressRegion"], "Las Palmas")
+        self.assertEqual(self.data(posting(location="Camas (Sevilla)"))["jobLocation"]["address"]["addressLocality"], "Camas")
+
+    def test_isla_o_comunidad_de_una_provincia_dan_solo_la_provincia(self):
+        island = self.data(posting(location="Mallorca", region="Illes Balears"))["jobLocation"]["address"]
+        self.assertEqual(island, {"@type": "PostalAddress", "addressRegion": "Illes Balears", "addressCountry": "ES"})
+        madrid = self.data(posting(location="Comunidad de Madrid", region="Comunidad de Madrid"))["jobLocation"]["address"]
+        self.assertEqual(madrid["addressRegion"], "Madrid")
+        self.assertNotIn("addressLocality", madrid)
+
+    def test_valid_through_con_la_hora_y_el_desfase_de_madrid(self):
+        self.assertEqual(self.data(posting(deadline="2027-01-15", deadline_time="14:00"))["validThrough"],
+                         "2027-01-15T14:00:00+01:00")
+        self.assertEqual(self.data(posting(deadline="2027-07-15", deadline_time="14:00"))["validThrough"],
+                         "2027-07-15T14:00:00+02:00")
+        self.assertNotIn("validThrough", self.data(posting(deadline=None)))
+
+    def test_tipo_de_contrato_solo_si_lo_dice(self):
+        self.assertEqual(self.data(posting(kind="practicas"))["employmentType"], "INTERN")
+        self.assertNotIn("employmentType", self.data(posting(kind="indefinido")))
+        self.assertNotIn("employmentType", self.data(posting(kind=None)))
+
+    def test_identificador_solo_con_codigo_publico(self):
+        self.assertNotIn("identifier", self.data(posting(code=None)))
+
+    def test_el_texto_no_rompe_el_bloque(self):
+        title = 'Oferta </script><!-- "x" & <b>'
+        html = site.offer_page(posting(title=title), self.sources, NOW, "ahora", BASE)
+        block = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1)
+        self.assertNotIn("<", block)
+        self.assertNotIn("&", block)
+        self.assertEqual(json.loads(block)["title"], title)
+
+    def test_sin_marcado_si_no_esta_abierta(self):
+        self.assertEqual(self.reason(posting(status="closed", closed_at="2026-11-06T10:00:00+00:00")), "cerrada")
+        self.assertEqual(self.reason(posting(deadline="2026-11-06")), "cerrada")  # vencida y aún sin cerrar
+        # Plazo de hoy hasta las 10:00; son las 13:00 en Madrid.
+        self.assertEqual(self.reason(posting(deadline="2026-11-07", deadline_time="10:00")), "cerrada")
+        self.assertEqual(self.reason(posting(opens_on="2026-11-09")), "plazo no iniciado")
+        html = site.offer_page(posting(status="closed", closed_at="2026-11-06T10:00:00+00:00"), self.sources, NOW, "")
+        self.assertNotIn("application/ld+json", html)
+
+    def test_sin_marcado_sin_fecha_de_la_empresa_ni_empleador(self):
+        self.assertEqual(self.reason(posting(published_on=None)), "sin fecha")
+        self.assertEqual(self.reason(posting(company=None)), "sin empleador")
+
+    def test_sin_marcado_con_poco_texto(self):
+        self.assertEqual(self.reason(offer("1")), "poco texto")
+        documents = [{"title": "Documentos", "level": 2, "html": LONG}]
+        self.assertEqual(self.reason(posting(sections=documents)), "poco texto")
+        remote = [{"title": "Funciones", "level": 2, "html": "<p>Se ofrece teletrabajo dos días a la semana.</p>"}]
+        self.assertEqual(self.reason(posting(sections=remote)), "poco texto")
+
+    def test_sin_marcado_sin_lugar_concreto(self):
+        self.assertEqual(self.reason(posting(location="Ámbito nacional", region="Ámbito nacional")), "sin ubicación")
+        self.assertEqual(self.reason(posting(location="Varios", region="Varias comunidades")), "sin ubicación")
+        self.assertEqual(self.reason(posting(location="Galicia", region="Galicia")), "sin ubicación")
+
+    def test_sin_marcado_con_varias_provincias_aunque_codes_of_de_una(self):
+        record = posting(location="Barcelona / Girona", place="Barcelona", region="Cataluña")
+        self.assertEqual(site.offer_codes(record)["provincia"], "08")
+        self.assertEqual(self.reason(record), "varias provincias")
+        self.assertEqual(self.reason(posting(location="Varios", place="Tenerife / Gran Canaria", region="Canarias")),
+                         "varias provincias")
+
+    def test_sin_marcado_si_el_puesto_es_embarcado(self):
+        sections = [{"title": "Funciones", "level": 2, "html": LONG + "<p>Embarcado/a en Buque Oceanográfico</p>"}]
+        record = posting(location="Comunidad de Madrid", region="Comunidad de Madrid", sections=sections)
+        self.assertEqual(self.reason(record), "embarcado")
+        other = [{"title": "Funciones", "level": 2, "html": LONG + "<p>Apoyo a programas como el mortero embarcado.</p>"}]
+        self.assertIsNone(self.reason(posting(sections=other)))
+
+    def test_andalucia_sin_funciones_no_lleva_marcado(self):
+        requisitos = {"title": "Otros requisitos", "level": 2, "html": LONG}
+        record = posting(source="andalucia", company="Canal Sur Radio y Televisión, S.A.", sections=[requisitos])
+        self.assertEqual(self.reason(record), "falta apartado")
+        funciones = {"title": "Funciones", "level": 2, "html": "<p>Auditoría interna.</p>"}
+        self.assertIsNone(self.reason({**record, "sections": [requisitos, funciones]}))
+
+    def test_bsm_bolsas_sin_vacante_y_perfiles_distintos(self):
+        bolsa = LONG + "<p>Tingues en compte que aquesta inscripció no correspon a una vacant activa.</p>"
+        grouped = LONG + "<p>Posicions i funcions generals: sala, cuina i pastisseria.</p>"
+        for html in (bolsa, grouped):
+            record = posting(source="bsm", company="BSM", location="Barcelona", region="Cataluña",
+                             sections=[{"title": "Funcions", "level": 2, "html": html}])
+            self.assertEqual(self.reason(record), "bolsa o agrupada")
+        self.assertIsNone(self.reason(posting(source="bsm", company="BSM", location="Barcelona", region="Cataluña")))
+
+    def test_pago_por_solicitar(self):
+        fee = [{"title": "Funciones", "level": 2, "html": LONG + "<p>Abono de los derechos de examen.</p>"}]
+        self.assertEqual(self.reason(posting(sections=fee)), "pago")
+        for text in ("Pago de tasas de expedición del título.", "Plaza de la tasa de reposición de 2026."):
+            ok = [{"title": "Funciones", "level": 2, "html": f"{LONG}<p>{text}</p>"}]
+            self.assertIsNone(self.reason(posting(sections=ok)), text)

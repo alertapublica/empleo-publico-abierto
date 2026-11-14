@@ -1,4 +1,6 @@
 """Registro de fuentes del portal."""
+import re
+
 from .andalucia import AndaluciaSource
 from .apb import ApbSource
 from .canal import CanalSource
@@ -78,6 +80,9 @@ BSM = SuccessFactorsSource(
     categories=[(None, "/go/Totes-les-vacants/9231655/")], location="Barcelona",
 )
 BSM.scope, BSM.text_lang = "Cataluña", "ca"
+# Bolsas sin vacante activa («aquesta inscripció no correspon a una vacant activa») y fichas con varios
+# perfiles distintos (sala, cuina i pastisseria de la Masia del Tibidabo).
+BSM.not_a_post = re.compile(r"no correspon a una vacant activa|Posicions i funcions generals", re.I)
 ADIF = SentinelSource(
     id="adif", name="ADIF y ADIF Alta Velocidad", homepage="https://www.adif.es/empleo",
     page="https://www.adif.es/empleo/oferta-empleo-publico/plazo-solicitud-abierto",

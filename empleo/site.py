@@ -7,6 +7,7 @@ import os
 import re
 import shutil
 import unicodedata
+from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from html import escape as e
 from pathlib import Path
@@ -15,7 +16,8 @@ from urllib.parse import quote
 from . import areas, feeds, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
                     SYSTEMS, process_type, today_madrid)
-from .regions import CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, provinces, region_of
+from .regions import (CCAA, REGIONS, UNKNOWN, codes_of, location_from_title, municipality_name, province_name,
+                      provinces, provinces_in, region_of)
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
 
@@ -195,7 +197,7 @@ SETTINGS_BUTTON = ('<button type="button" id="btn-aa" class="btn-cab" aria-haspo
 # Lo que en la cabecera necesita la dirección completa de la página (canónica, og:url, og:image) lo
 # pone `build`, que es quien sabe dónde se publica cada una.
 HEAD_URL = "<!--url-->"
-NOINDEX_DAYS = 2  # días tras el cierre en que la ficha deja de ofrecerse a los buscadores
+NOINDEX_HOURS = 48  # horas tras el cierre en que la ficha deja de ofrecerse a los buscadores
 
 
 def head_url(html: str, base_url: str, path: str | None) -> str:
@@ -212,7 +214,7 @@ def head_url(html: str, base_url: str, path: str | None) -> str:
 
 
 def page(title: str, body: str, root: str, current: str = "", description: str = TAGLINE, checked: str = "",
-         csp: str = CSP, index: bool = True) -> str:
+         csp: str = CSP, index: bool = True, head: str = "") -> str:
     links = "".join(
         f'<li><a href="{root}{href}"{" aria-current=\"page\"" if key == current else ""}>{label}</a></li>'
         for key, href, label in NAV
@@ -243,7 +245,7 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 <link rel="icon" href="{root}assets/icono.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{root}assets/icono-180.png">
 <link rel="alternate" type="application/rss+xml" title="Todas las novedades" href="{root}feed.xml">
-</head>
+{head}</head>
 <body id="arriba">
 <a class="salto" href="#contenido">Saltar al contenido</a>
 <header class="sitio">
@@ -485,7 +487,96 @@ def remote_text(remote: teletrabajo.Remote) -> str:
     return "No consta: consulte las bases"
 
 
-def offer_page(offer: dict, sources: dict, today: date, checked: str,
+# Marcado JobPosting para Google (sondeo/plan-jobposting-2026-11-14.md). Solo en fichas que cumplen
+# todas las reglas: abiertas, con fecha de publicación del organismo, texto suficiente, empleador, un
+# puesto concreto y un lugar acreditado. Ante la duda, sin marcado: la ficha se publica igual.
+EXAM_FEE = re.compile(r"derechos de examen|tasas? (?:de examen|de inscripci[oó]n)", re.I)
+ON_BOARD = re.compile(r"\bembarcad[oa](?:/a)? en buque", re.I)
+EMPLOYMENT_TYPES = {"temporal": "TEMPORARY", "practicas": "INTERN"}  # «indefinido» no dice la jornada
+
+
+def offer_codes(offer: dict) -> dict:
+    """Códigos INE de la oferta, los mismos de la API."""
+    return codes_of(offer.get("region"), offer.get("location"), offer.get("place"), location_from_title(offer["title"]))
+
+
+def deadline_instant(offer: dict) -> datetime | None:
+    """Fin del plazo en hora de Madrid: a la hora que diga la fuente o, si no dice, a las 23:59:59."""
+    if not offer.get("deadline"):
+        return None
+    hour = offer.get("deadline_time") or "23:59:59"
+    return datetime.fromisoformat(f"{offer['deadline']}T{hour}").replace(tzinfo=MADRID)
+
+
+def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
+    """Por qué la ficha no lleva marcado JobPosting, o None si lo lleva."""
+    source = sources[offer["source"]]
+    until = deadline_instant(offer)
+    if offer["status"] != "open" or (until and until <= now):
+        return "cerrada"
+    if (offer.get("opens_on") or "") > now.astimezone(MADRID).date().isoformat():
+        return "plazo no iniciado"
+    if not offer.get("published_on"):
+        return "sin fecha"
+    if not offer.get("company"):
+        return "sin empleador"
+    if teletrabajo.words(offer) < teletrabajo.MIN_WORDS:
+        return "poco texto"
+    titles = {section.get("title") for section in offer.get("sections") or []}
+    if any(required not in titles for required in getattr(source, "required_sections", ())):
+        return "falta apartado"
+    text = " ".join(filter(None, [offer["title"], offer.get("location"), offer.get("place"), *teletrabajo.lines(offer)]))
+    not_a_post = getattr(source, "not_a_post", None)
+    if not_a_post and not_a_post.search(text):
+        return "bolsa o agrupada"
+    if EXAM_FEE.search(text):
+        return "pago"
+    if ON_BOARD.search(text):
+        return "embarcado"
+    places = (offer.get("location"), offer.get("place"), location_from_title(offer["title"]))
+    if any(len(provinces_in(place)) > 1 for place in places):
+        return "varias provincias"  # `codes_of` podría quedarse con la de un texto posterior
+    if not offer_codes(offer)["provincia"]:
+        return "sin ubicación"
+    return None
+
+
+def jobposting(offer: dict, sources: dict, base_url: str, now: datetime) -> dict | None:
+    """Datos JobPosting de la ficha, con el texto de la fuente tal cual, o None si no lleva marcado."""
+    if jobposting_reason(offer, sources, now):
+        return None
+    codes = offer_codes(offer)
+    address = {"@type": "PostalAddress"}
+    if codes["municipio"]:
+        address["addressLocality"] = municipality_name(codes["municipio"])
+    address |= {"addressRegion": province_name(codes["provincia"]), "addressCountry": "ES"}
+    # Google no da formato a los <h2>: cada título va como párrafo en negrita, seguido de su texto.
+    description = "".join(f"<p><strong>{e(s['title'])}</strong></p>{s['html']}" for s in offer["sections"])
+    data = {
+        "@context": "https://schema.org", "@type": "JobPosting",
+        "title": offer["title"],  # sin el código que lleva `source_title`
+        "description": description, "datePosted": offer["published_on"],
+        "hiringOrganization": {"@type": "Organization", "name": offer["company"]},
+        "jobLocation": {"@type": "Place", "address": address},
+        "url": base_url + offer_path(offer),
+    }
+    if until := deadline_instant(offer):
+        data["validThrough"] = until.isoformat()
+    if kind := EMPLOYMENT_TYPES.get(offer.get("kind")):
+        data["employmentType"] = kind
+    if offer.get("code"):  # solo el código público (Source.labels), nunca un id interno
+        data["identifier"] = {"@type": "PropertyValue", "name": offer["company"], "value": offer["code"]}
+    return data
+
+
+def json_ld(data: dict) -> str:
+    """Bloque de datos para la cabecera. Sin «<», «>» ni «&» literales: ningún texto puede cerrar el
+    <script> ni abrir un comentario, y JSON los lee igual."""
+    text = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+    return f'<script type="application/ld+json">{text}</script>\n'
+
+
+def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
                base_url: str = DEFAULT_BASE_URL) -> str:
     root = "../../"
     closed = offer["status"] == "closed"
@@ -550,10 +641,12 @@ def offer_page(offer: dict, sources: dict, today: date, checked: str,
     ]
     description = " ".join(f"{fact}." for fact in summary if fact)
     title = offer["title"] if company.lower() in offer["title"].lower() else f"{offer['title']} – {company}"
-    # Cerrada: sigue publicada (enlaces enviados, guardadas), pero a los dos días deja de ofrecerse a
-    # los buscadores.
-    stale = closed and (today - date.fromisoformat(offer["closed_at"][:10])).days >= NOINDEX_DAYS
-    return page(title, body, root, description=description, checked=checked, index=not stale)
+    # Cerrada: sigue publicada (enlaces enviados, guardadas), pero a las 48 horas deja de ofrecerse a
+    # los buscadores. Se comparan instantes: ni fechas de zonas distintas ni horas locales.
+    stale = closed and datetime.fromisoformat(offer["closed_at"]) + timedelta(hours=NOINDEX_HOURS) <= now
+    marked = jobposting(offer, sources, base_url, now)
+    return page(title, body, root, description=description, checked=checked, index=not stale,
+                head=json_ld(marked) if marked else "")
 
 
 def by_group(sources: dict) -> list[tuple[str, str, list]]:
@@ -1499,7 +1592,7 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "titulo_original": offer.get("source_title") or offer["title"],
         "empresa": offer.get("company"), "estado": "abierta" if offer["status"] == "open" else "cerrada",
         "ubicacion": offer.get("location"), "localidad": offer.get("place"), "comunidad": offer.get("region"),
-        **codes_of(offer.get("region"), offer.get("location"), offer.get("place"), location_from_title(offer["title"])),
+        **offer_codes(offer),
         "plazas": offer.get("positions"), "tipo_contrato": offer.get("kind"), "contrato": offer.get("contract"),
         "convocatoria": offer.get("category"), "tipo_puesto": offer.get("family"),
         "departamento": offer.get("department"),
@@ -1511,7 +1604,8 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
     }
 
 
-def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datetime | None = None) -> None:
+def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datetime | None = None) -> Counter:
+    """Genera la web en `out`. Devuelve cuántas fichas llevan marcado JobPosting y por qué no las demás."""
     offers, events, announcements = load_all(data)
     sources = {s.id: s for s in ACTIVE}
     today = now.astimezone(MADRID).date()
@@ -1538,7 +1632,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         put(f"organismos/{source.id}/", organism_page(
             source, open_offers, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
     for offer in offers.values():
-        put(offer_path(offer), offer_page(offer, sources, today, checked, base_url))
+        put(offer_path(offer), offer_page(offer, sources, now, checked, base_url))
     put("anuncios/", announcements_page(announcements, checked, sources, today))
     put("historico/", history_page(closed, checked, sum(not is_live(g) for g in groups)))
     put("historico/procesos/", closed_processes_page(announcements, checked, sources, today))
@@ -1626,17 +1720,20 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
           + "".join(f"<url><loc>{e(base_url + p)}</loc></url>" for p in pages)
           + "</urlset>\n")
     write(out / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base_url}sitemap.xml\n")
+    return Counter(jobposting_reason(o, sources, now) or "con marcado" for o in offers.values() if o["status"] == "open")
 
 
 def main() -> None:
     now = datetime.now(timezone.utc)
     base_url = os.environ.get("BASE_URL", DEFAULT_BASE_URL)
     checked = os.environ.get("CHECKED_AT")
-    build(
+    marks = build(
         Path("data"), Path("_site"), base_url, now,
         datetime.fromisoformat(checked) if checked else None,
     )
     print("Web generada en _site/")
+    print(f"JobPosting: {marks.pop('con marcado', 0)} abiertas con marcado; sin él: "
+          + (", ".join(f"{reason} {count}" for reason, count in marks.most_common()) or "ninguna"))
 
 
 if __name__ == "__main__":

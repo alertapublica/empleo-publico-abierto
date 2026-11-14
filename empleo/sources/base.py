@@ -30,6 +30,12 @@ class Source(ABC):
     # Los `ref` que encajan son el código que el portal publica con la oferta; el resto (ids de URL,
     # hashes, slugs) son internos y no se enseñan.
     ref_code: re.Pattern | None = None
+    # Marcado JobPosting (site.jobposting). Apartados sin los que la ficha no describe el puesto, en
+    # fuentes de plantilla fija que a veces los omiten: si falta uno, la ficha no lleva marcado.
+    required_sections: tuple[str, ...] = ()
+    # Frases con las que la fuente dice que la ficha no es un puesto concreto (bolsa sin vacante actual,
+    # varios perfiles en una ficha): se publica igual, pero sin marcado.
+    not_a_post: re.Pattern | None = None
 
     def labels(self, title: str, ref: str, code: str | None = None) -> dict:
         """Título limpio, código público y título literal (solo si cambia)."""
