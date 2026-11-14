@@ -519,7 +519,9 @@ class RunSource(unittest.TestCase):
                 if self.detail_calls == 1:
                     raise RuntimeError("ficha caída")
                 return OfferDetail(location="Lleida o Barcelona")
-        source = Intermitente([listed(title="Oferta")], extra={"1": {"published_on": "2026-11-12", "location": "Barcelona"}})
+        title = ("Ingeniero/a o Ingeniero/a Técnico/a o Graduado/a o Graduado/a + Máster Oficial en Ingeniería "
+                 "Agricola o Agrónoma - Apoyo técnico expropiaciones y valoraciones agrarias (Cataluña)")
+        source = Intermitente([listed(title=title)], extra={"1": {"published_on": "2026-11-12", "location": "Barcelona"}})
         ingest.run_source(source, None, self.data, NOW)
         self.assertEqual(self.stored()["1"]["published_on"], "2026-11-12")
         ingest.run_source(source, None, self.data, NOW)

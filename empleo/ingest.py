@@ -203,10 +203,15 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
             del record["deadline_checked"]
         if detail is None:
             continue
+        # Hasta leer la ficha, la ubicación es provisional (la del título, el ámbito de la fuente): manda la de
+        # la ficha (58786: «Lleida o Barcelona», no «Cataluña»). En una relectura se queda la guardada.
+        if record["detail_ok"]:
+            record["location"] = record["location"] or detail.location
+        else:
+            record["location"] = detail.location or record["location"]
         # Una relectura que llega sin texto no borra el que ya había.
         record.update(sections=detail.sections or (record["sections"] if recheck else []), detail_ok=True,
                       detail_version=source.detail_version, parent_ref=detail.parent_ref)
-        record["location"] = record["location"] or detail.location
         record["deadline"] = detail.deadline or record["deadline"]
         for field in LISTING_OR_DETAIL:
             record[field] = getattr(detail, field) or record.get(field)
