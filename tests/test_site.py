@@ -1073,7 +1073,6 @@ class JobPosting(unittest.TestCase):
                          "2027-01-15T14:00:00+01:00")
         self.assertEqual(self.data(posting(deadline="2027-07-15", deadline_time="14:00"))["validThrough"],
                          "2027-07-15T14:00:00+02:00")
-        self.assertNotIn("validThrough", self.data(posting(deadline=None)))
 
     def test_tipo_de_contrato_solo_si_lo_dice(self):
         self.assertEqual(self.data(posting(kind="practicas"))["employmentType"], "INTERN")
@@ -1099,6 +1098,22 @@ class JobPosting(unittest.TestCase):
         self.assertEqual(self.reason(posting(opens_on="2026-11-09")), "plazo no iniciado")
         html = site.offer_page(posting(status="closed", closed_at="2026-11-06T10:00:00+00:00"), self.sources, NOW, "")
         self.assertNotIn("application/ld+json", html)
+
+    def test_sin_marcado_sin_plazo(self):
+        # Sin `validThrough`, un cierre solo llegaría a Google cuando volviera a leer la ficha.
+        self.assertEqual(self.reason(posting(deadline=None)), "sin plazo")
+
+    def test_el_sitemap_deja_fuera_las_de_plazo_vencido_aun_sin_cerrar(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            records = {"1": posting("1"), "2": posting("2", deadline="2026-11-07", deadline_time="10:00")}
+            store.save(root / "data/tragsa/offers.json", {o["id"]: o for o in records.values()})
+            marks = site.build(root / "data", root / "_site", BASE, NOW)
+            sitemap = (root / "_site/sitemap.xml").read_text()
+            self.assertIn("ofertas/tragsa-1/", sitemap)
+            self.assertNotIn("ofertas/tragsa-2/", sitemap)
+            self.assertTrue((root / "_site/ofertas/tragsa-2/index.html").exists())
+            self.assertEqual(marks, {"con marcado": 1, "cerrada": 1})
 
     def test_sin_marcado_sin_fecha_de_la_empresa_ni_empleador(self):
         self.assertEqual(self.reason(posting(published_on=None)), "sin fecha")

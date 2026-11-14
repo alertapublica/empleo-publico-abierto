@@ -508,14 +508,22 @@ def deadline_instant(offer: dict) -> datetime | None:
     return datetime.fromisoformat(f"{offer['deadline']}T{hour}").replace(tzinfo=MADRID)
 
 
+def expired(offer: dict, now: datetime) -> bool:
+    """El plazo ya ha vencido, aunque la ingesta aún no haya cerrado la oferta."""
+    until = deadline_instant(offer)
+    return bool(until and until <= now)
+
+
 def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
     """Por qué la ficha no lleva marcado JobPosting, o None si lo lleva."""
     source = sources[offer["source"]]
-    until = deadline_instant(offer)
-    if offer["status"] != "open" or (until and until <= now):
+    if offer["status"] != "open" or expired(offer, now):
         return "cerrada"
     if (offer.get("opens_on") or "") > now.astimezone(MADRID).date().isoformat():
         return "plazo no iniciado"
+    # Con `validThrough`, Google la retira sola al vencer aunque no vuelva a leer la ficha.
+    if not offer.get("deadline"):
+        return "sin plazo"
     if not offer.get("published_on"):
         return "sin fecha"
     if not offer.get("company"):
@@ -559,9 +567,8 @@ def jobposting(offer: dict, sources: dict, base_url: str, now: datetime) -> dict
         "hiringOrganization": {"@type": "Organization", "name": offer["company"]},
         "jobLocation": {"@type": "Place", "address": address},
         "url": base_url + offer_path(offer),
+        "validThrough": deadline_instant(offer).isoformat(),
     }
-    if until := deadline_instant(offer):
-        data["validThrough"] = until.isoformat()
     if kind := EMPLOYMENT_TYPES.get(offer.get("kind")):
         data["employmentType"] = kind
     if offer.get("code"):  # solo el código público (Source.labels), nunca un id interno
@@ -1712,7 +1719,8 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     pages = (
         [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
-        + [offer_path(o) for o in open_offers]  # las cerradas siguen publicadas, pero no se anuncian
+        # Las cerradas, y las de plazo vencido aún sin cerrar, siguen publicadas, pero no se anuncian.
+        + [offer_path(o) for o in open_offers if not expired(o, now)]
     )
     write(out / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'
