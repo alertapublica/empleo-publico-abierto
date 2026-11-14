@@ -9,7 +9,7 @@ from pathlib import Path
 from . import store
 from .http import Client
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
-                    SourceLayoutError, deadline_passed)
+                    SourceLayoutError, deadline_passed, today_madrid)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
@@ -19,6 +19,7 @@ MISSED_RUNS_TO_CLOSE = 3  # (1,5 h con lecturas cada 30 min) un fallo puntual de
 MIN_VISIBLE_RATIO = 0.3  # si desaparece casi todo, lo raro es la lectura
 MAX_PORTAL_TRIES = 4
 EXTENSION_DAYS = 14  # días tras el plazo en que se sigue mirando si la ficha lo ha ampliado
+EXTENSION_TRIES = 3  # lecturas al día de una ficha vencida de la que no se consigue leer el plazo
 TRACKED = ("title", "code", "source_title", "company", "category", "url", "apply_url")
 
 
@@ -157,6 +158,7 @@ def _extension_due(record: dict, undated: frozenset, now: datetime | None) -> bo
 def fetch_details(source: Source, http: Client, offers: dict, events: list, now: datetime | None = None,
                   undated: frozenset = frozenset()) -> None:
     """Lee las fichas pendientes. `undated`: ofertas que esta lectura ha listado sin plazo."""
+    checked = extended = unread = 0
     for record in offers.values():
         # Si el plazo solo está en la ficha (Correos, Navantia, BSM), una prórroga no llega por el
         # listado: mientras la oferta siga listada se vuelve a mirar la ficha, una vez al día.
@@ -169,20 +171,25 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
                                 if field in record})
         try:
             detail = source.fetch_detail(http, listed)
+            if detail is not None:
+                check_dates(detail, ("deadline", "opens_on"))
         except Exception as error:  # una ficha mala no debe parar el resto
             print(f"AVISO {record['id']}: {error}", file=sys.stderr)
-            continue
-        if detail is None:
-            continue
-        try:
-            check_dates(detail, ("deadline", "opens_on"))
-        except SourceLayoutError as error:
-            print(f"AVISO {record['id']}: {error}", file=sys.stderr)
-            continue
+            detail = None
         if recheck:
-            record["deadline_checked"] = now.astimezone(MADRID).date().isoformat()
-            if not detail.deadline or deadline_passed(detail.deadline, detail.deadline_time, now):
+            checked += 1
+            if detail is None or not detail.deadline:
+                # Sin plazo legible no se sabe si lo han ampliado: se reintenta en la lectura
+                # siguiente, pero no más de unas pocas veces al día.
+                unread += 1
+                record["deadline_tries"] = record.get("deadline_tries", 0) + 1
+                if record["deadline_tries"] >= EXTENSION_TRIES:
+                    record.update(deadline_checked=today_madrid(now), deadline_tries=0)
+                continue
+            record.update(deadline_checked=today_madrid(now), deadline_tries=0)
+            if deadline_passed(detail.deadline, detail.deadline_time, now):
                 continue  # sigue vencida: no se toca
+            extended += 1
             stamp = now.isoformat(timespec="seconds")
             closed_now = [event for event in events
                           if event["offer"] == record["id"] and event["kind"] == "closed"]
@@ -191,10 +198,14 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
             else:
                 _event(events, record, "reopened", stamp)
             _event(events, record, "deadline_changed", stamp, before=record["deadline"], after=detail.deadline)
-            # La hora del plazo anterior no vale para el nuevo.
+            # La hora del plazo anterior no vale para el nuevo, y el nuevo se mirará cuando venza.
             record.update(status="open", closed_at=None, deadline_time=None)
-        record.update(sections=detail.sections, detail_ok=True, detail_version=source.detail_version,
-                      parent_ref=detail.parent_ref)
+            del record["deadline_checked"]
+        if detail is None:
+            continue
+        # Una relectura que llega sin texto no borra el que ya había.
+        record.update(sections=detail.sections or (record["sections"] if recheck else []), detail_ok=True,
+                      detail_version=source.detail_version, parent_ref=detail.parent_ref)
         record["location"] = record["location"] or detail.location
         record["deadline"] = detail.deadline or record["deadline"]
         for field in LISTING_OR_DETAIL:
@@ -204,6 +215,11 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
                 if event["offer"] == record["id"] and event["kind"] == "new":
                     event["kind"] = "republished"
         _locate(record)
+    if checked:
+        print(f"{source.id}: prórrogas: {checked} fichas vencidas consultadas, {extended} con plazo ampliado, "
+              f"{unread} sin plazo legible")
+        if unread == checked:
+            print(f"AVISO {source.id}: no se pudo leer el plazo de ninguna ficha vencida", file=sys.stderr)
 
 
 def apply_enrichment(source: Source, http: Client, offers: dict) -> None:

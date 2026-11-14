@@ -404,9 +404,41 @@ class RunSource(unittest.TestCase):
         source = self.undated()
         source.offers = []
         ingest.run_source(source, None, self.data, NOW)
-        source.offers = [listed(deadline=None)]
-        ingest.run_source(source, None, self.data, NOW + timedelta(days=ingest.EXTENSION_DAYS + 1))
         self.assertEqual((self.stored()["1"]["status"], source.detail_calls), ("closed", 1))
+        source.offers = [listed(deadline=None)]
+        last_day = datetime(2026, 11, 6 + ingest.EXTENSION_DAYS, 12, tzinfo=timezone.utc)
+        ingest.run_source(source, None, self.data, last_day)
+        self.assertEqual(source.detail_calls, 2)
+        ingest.run_source(source, None, self.data, last_day + timedelta(days=1))
+        self.assertEqual(source.detail_calls, 2)
+
+    def test_ficha_vencida_sin_plazo_legible_se_reintenta_pocas_veces_al_dia(self):
+        source = self.undated()
+        source.detail = OfferDetail()  # SuccessFactors sin `validThrough`: no se sabe si lo han ampliado
+        for hour in range(5):
+            ingest.run_source(source, None, self.data, NOW + timedelta(hours=hour))
+        self.assertEqual(source.detail_calls, 1 + ingest.EXTENSION_TRIES)
+        self.assertEqual(self.stored()["1"]["status"], "closed")
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW + timedelta(days=1))
+        self.assertEqual(self.stored()["1"]["status"], "open")
+
+    def test_la_prorroga_conserva_el_texto_si_la_relectura_llega_sin_el(self):
+        source = self.undated(sections=[{"title": "Funciones", "level": 2, "html": "<p>Tareas</p>"}])
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW)
+        record = self.stored()["1"]
+        self.assertEqual([section["title"] for section in record["sections"]], ["Funciones"])
+        self.assertNotIn("deadline_checked", record)  # el plazo nuevo se volverá a mirar cuando venza
+
+    def test_prorroga_que_reabre_es_una_sola_entrada_en_el_rss(self):
+        source = self.undated()
+        ingest.run_source(source, None, self.data, NOW)
+        source.detail = OfferDetail(deadline="2026-11-20")
+        ingest.run_source(source, None, self.data, NOW + timedelta(days=1))
+        items = feeds.offer_items({r["id"]: r for r in self.stored().values()}, self.stored("events.json"),
+                                  lambda offer: offer["url"], lambda offer: "")
+        self.assertEqual([item["title"] for item in items], ["Oferta (Madrid)", "Plazo modificado: Oferta (Madrid)"])
 
     def test_con_plazo_en_el_listado_la_vencida_no_vuelve_a_leerse(self):
         source = FakeSource([listed(deadline="2026-11-06")], OfferDetail())

@@ -24,9 +24,13 @@ def _when(value: str) -> datetime:
 
 def offer_items(offers: dict, events: list, offer_url, summary) -> list[dict]:
     items = []
+    # Una prórroga que reabre la oferta deja dos eventos en el mismo instante: basta «Plazo modificado».
+    extended = {(event["offer"], event["at"]) for event in events if event["kind"] == "deadline_changed"}
     for event in events:
         offer = offers.get(event["offer"])
         if offer is None or event["kind"] not in FEED_KINDS:
+            continue
+        if event["kind"] == "reopened" and (event["offer"], event["at"]) in extended:
             continue
         original = event["kind"] in ("new", "republished")
         items.append({
