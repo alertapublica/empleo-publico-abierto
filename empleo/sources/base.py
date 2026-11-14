@@ -55,8 +55,11 @@ class Source(ABC):
         """Detalle de una oferta, o None si ya no existe."""
         return OfferDetail()
 
+    # Mientras falte alguno de estos campos en una abierta, se consulta `enrich` (hasta MAX_PORTAL_TRIES).
+    enrich_fields: tuple[str, ...] = ("published_on",)
+
     def enrich(self, http: Client) -> dict[str, dict]:
-        """Datos extra por `ref` (published_on, location, family, department)."""
+        """Datos extra por `ref` (published_on, location, family, department), solo para lo que falte."""
         return {}
 
     def list_announcements(self, http: Client) -> list[Announcement]:

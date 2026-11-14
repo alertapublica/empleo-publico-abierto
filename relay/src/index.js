@@ -8,8 +8,11 @@
 // firma = HMAC-SHA256(RELAY_CLAVE, ts + "\n" + método + "\n" + url + "\n" + cuerpo); caduca a los
 // VENTANA_S segundos. Solo a los orígenes de ORIGENES, también en las redirecciones, que sigue él
 // mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
-// no son de este dominio: x-relay-cookie (de entrada, como Cookie) y una x-relay-set-cookie de
-// salida por cada Set-Cookie recibido.
+// no son de este dominio: x-relay-cookie (de entrada, como Cookie) y x-relay-set-cookies (de salida:
+// lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
+// y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
+// Transición: también sale la antigua x-relay-set-cookie, una por Set-Cookie, para los clientes que
+// aún no leen la nueva (una ingesta ya en marcha al desplegar). Quitarla cuando ya no haga falta.
 
 export const ORIGENES = new Set(["https://rrhhcandidato.tragsa.es:8443"]);
 const VENTANA_S = 120;
@@ -99,6 +102,7 @@ export async function atender(req, env, pedir = fetch, ahora = Date.now()) {
     const location = r.headers.get("location");
     if (![301, 302, 303, 307, 308].includes(r.status)) {
       const salida = new Headers({ "Content-Type": r.headers.get("content-type") || "application/octet-stream", "x-relay-ms": String(Date.now() - t0) });
+      if (recibidas.length) salida.set("x-relay-set-cookies", JSON.stringify(recibidas));
       for (const linea of recibidas) salida.append("x-relay-set-cookie", linea);
       return new Response(r.body, { status: r.status, headers: salida });
     }

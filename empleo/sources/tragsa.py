@@ -14,10 +14,11 @@ vigente es una oferta, aunque el plazo esté en el cuerpo de un comunicado.
 from __future__ import annotations
 
 import re
+import warnings
 from datetime import date, datetime, timedelta
 from urllib.parse import parse_qs, urljoin, urlparse
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 
 from ..dates import clock, latest, spanish_date
 from ..http import Client
@@ -64,6 +65,15 @@ APPLICATION = re.compile(
 APPLICATION_DAYS = re.compile(r"plazo\s+de\s+presentaci[óo]n\s+de\s+solicitudes\s+de\s+(\d{1,3})\s+d[íi]as\s+naturales", re.I)
 FICHA_TERM = re.compile(r"desde\s+hoy\s+d[íi]a\s+(\d\d/\d\d/\d{4})\s+hasta\s+el\s+pr[óo]ximo\s+(\d\d/\d\d/\d{4})"
                         r"(?:\s+a\s+las\s+(\d{1,2}[:.]\d{2}))?", re.I)
+# Al ampliar el plazo, la ficha cita la publicación original y el portal pone la fecha de la ampliación.
+PUBLISHED_BEFORE = re.compile(r"proceso\s+publicado\s+el\s+pasado\s+(\d\d/\d\d/\d{4})", re.I)
+# El texto de la publicación original se conserva: su «desde hoy día» (57867 y 57934, dos ampliaciones)
+# es anterior al «publicado el pasado», que remite a la primera ampliación. Sin ampliación no se usa: la
+# apertura de candidaturas puede no ser el día de publicación (58599).
+FROM_TODAY = re.compile(r"desde\s+hoy\s+d[íi]a\s+(\d\d/\d\d/\d{4})", re.I)
+# «Se amplía el plazo del 11/11/2026 hasta…» sin citar la publicación: si la fecha guardada no es
+# anterior, es la de la ampliación y la original no se conoce (57815).
+EXTENDED_FROM = re.compile(r"se\s+ampl[íi]a\s+el\s+plazo\s+del\s+(\d\d/\d\d/\d{4})", re.I)
 PLATFORM = re.compile(r"https?://[\w.-]+\.(?:iformalia\.es|talent-ecosystem\.com)[^\s\"'<>]*", re.I)
 ONLY_BLOCKS = re.compile(r"exclusivamente\s+para\s+(?:estos|esos)\s+bloques", re.I)
 
@@ -111,7 +121,7 @@ def _parse_calls(table, kind: str) -> list[ListedOffer]:
             ListedOffer(
                 ref=ref,
                 title=_clean(link.get_text(" ")),
-                company="Grupo Tragsa",
+                company=None,  # la da la ficha («Empresa»); si no, el grupo
                 deadline=day.isoformat(),
                 deadline_time=hour,
                 opens_on=_date(since.group(1)) if since else None,
@@ -176,6 +186,11 @@ def parse_detail(html: str) -> OfferDetail | None:
         if heading is None or content is None:
             continue
         title = _clean(heading.get_text(" "))
+        if title == "Empresa":
+            detail.company = _clean(content.get_text(" ")) or None
+        elif title == "Vacantes Previstas":
+            count = _clean(content.get_text(" "))
+            detail.positions = int(count) if count.isdigit() else None
         if title in SKIP_SECTIONS:
             continue
         body = sanitize(content.decode_contents())
@@ -190,6 +205,9 @@ def parse_detail(html: str) -> OfferDetail | None:
     text = _clean(soup.select_one("section.detalles").get_text(" "))
     parent = re.search(r"proviene de la publicaci[oó]n con ID (\d+)", text)
     detail.parent_ref = parent.group(1) if parent else None
+    cited = PUBLISHED_BEFORE.findall(text)
+    if cited:
+        detail.published_before = min(filter(None, map(_date, cited + FROM_TODAY.findall(text))), default=None)
     term = FICHA_TERM.search(text)
     if term:
         detail.opens_on, detail.deadline = _date(term.group(1)), _date(term.group(2))
@@ -198,7 +216,9 @@ def parse_detail(html: str) -> OfferDetail | None:
 
 
 def parse_portal_rows(html: str) -> dict[str, dict]:
-    soup = BeautifulSoup(re.sub(r"<!\[CDATA\[|\]\]>", "", html), "html.parser")
+    with warnings.catch_warnings():  # la paginación llega como XML con HTML dentro: se lee igual
+        warnings.simplefilter("ignore", XMLParsedAsHTMLWarning)
+        soup = BeautifulSoup(re.sub(r"<!\[CDATA\[|\]\]>", "", html), "html.parser")
     rows = {}
     pattern = re.compile(
         r"ID Puesto (\d+) Ubicación (.*?) Departamento (.*?) Familia Puestos (.*?) "
@@ -341,7 +361,11 @@ class TragsaSource(Source):
     name = "Grupo Tragsa"
     homepage = HUB
     ref_code = re.compile(r"\d+")  # «Código oferta»; los procesos llevan un slug
-    detail_version = 2  # la ficha corrige el plazo del listado (#17)
+    # 2: la ficha corrige el plazo del listado (#17). 3: publicación original al ampliar el plazo, y
+    # empresa y vacantes de la ficha para las filas del listado por fases.
+    detail_version = 3
+    enrich_fields = ("published_on", "family")
+    extended_from = EXTENDED_FROM  # para JobPosting (site.jobposting_reason)
 
     def __init__(self, today: date | None = None) -> None:
         self._today = today  # solo para las pruebas
@@ -382,6 +406,14 @@ class TragsaSource(Source):
             # Si el listado da una fecha posterior a la de la ficha, manda la del listado.
             if detail and detail.deadline and offer.deadline and detail.deadline < offer.deadline:
                 detail.deadline = detail.deadline_time = None
+            # Empresa y vacantes: las del listado, salvo en la tabla por fases, que no las trae (el grupo
+            # es solo el respaldo: lo guardado antes de leer la empresa en la ficha se sustituye).
+            if detail and offer.company and offer.company != self.name:
+                detail.company = None
+            elif detail:
+                detail.company = detail.company or self.name
+            if detail and offer.positions is not None:
+                detail.positions = None
             return detail
         return OfferDetail(
             sections=[{"title": "Comunicado oficial del plazo", "level": 2, "html": process["notice_html"]}],
@@ -391,6 +423,8 @@ class TragsaSource(Source):
     def enrich(self, http: Client) -> dict[str, dict]:
         html = http.get(f"{PORTAL}?FOCUS=Applicant&SiteId=1&Page=HRS_APP_SCHJOB_FL&Action=U")
         rows = parse_portal_rows(html)
+        if not rows:  # mantenimiento o cambio de página: que no gaste los intentos de las ofertas
+            raise SourceLayoutError("Portal de candidatos: la primera página no trae ofertas")
         fields = _hidden_fields(html)
         total = re.search(r"(\d+)\s+filas", html)
         for _ in range(PORTAL_MAX_PAGES):

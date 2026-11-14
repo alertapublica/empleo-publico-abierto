@@ -3,8 +3,11 @@
 Un servidor local hace de relay.php: comprueba la firma igual que él
 (HMAC-SHA256 de ts + "\\n" + url, en las cabeceras x-ts y x-firma).
 """
+import email.message
 import hashlib
 import hmac
+import io
+import json
 import threading
 import unittest
 import urllib.parse
@@ -90,6 +93,7 @@ PORTAL_TRAGSA = "https://rrhhcandidato.tragsa.es:8443/psc/portalrh/EMPLOYEE/HRMS
 class FakeWorker(BaseHTTPRequestHandler):
     """Hace de relay/ (Worker de Cloudflare): firma de hora, método, URL y cuerpo; cookies en cabeceras propias."""
     seen: list[dict] = []
+    legacy_only = False  # Worker anterior: solo la cabecera repetida, sin la lista JSON
 
     def _answer(self, method):
         body = self.rfile.read(int(self.headers.get("Content-Length") or 0))
@@ -100,8 +104,14 @@ class FakeWorker(BaseHTTPRequestHandler):
         ok = hmac.compare_digest(expected, self.headers["x-firma"] or "")
         self.send_response(200 if ok else 403)
         if ok:
-            self.send_header("x-relay-set-cookie", f"PAGINA={len(self.seen)}; path=/; HttpOnly")
-            self.send_header("x-relay-set-cookie", "FIJA=1; Secure")
+            # Como el Worker: la lista JSON, en orden (PAGINA cambia dentro de la misma respuesta, como en una
+            # redirección, y FIJA lleva una coma en Expires), y la cabecera antigua, una por cookie.
+            cookies = ["PAGINA=0; path=/", f"PAGINA={len(self.seen)}; path=/; HttpOnly",
+                       "FIJA=1; Expires=Wed, 21 Oct 2026 07:28:00 GMT; Secure"]
+            if not self.legacy_only:
+                self.send_header("x-relay-set-cookies", json.dumps(cookies))
+            for cookie in cookies:
+                self.send_header("x-relay-set-cookie", cookie)
         self.end_headers()
         self.wfile.write(f"{method} {url} {body.decode()}".encode())
 
@@ -122,6 +132,7 @@ class RelayCloudflare(unittest.TestCase):
         self.addCleanup(self.server.server_close)
         self.addCleanup(self.server.shutdown)
         FakeWorker.seen = []
+        FakeWorker.legacy_only = False
         base = f"http://127.0.0.1:{self.server.server_port}"
         env = mock.patch.dict("os.environ", {"RELAY_CF_CLAVE": CLAVE, "RELAY_CF_URL": base})
         env.start()
@@ -141,6 +152,25 @@ class RelayCloudflare(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "403"):
                 http.Client(delay=0).get(PORTAL_TRAGSA)
         self.assertEqual(len(FakeWorker.seen), 1)
+
+    def test_con_un_worker_anterior_tambien_guarda_las_cookies(self):
+        FakeWorker.legacy_only = True
+        client = http.Client(delay=0)
+        client.get(PORTAL_TRAGSA)
+        client.post(PORTAL_TRAGSA, {"ICAction": "abajo"})
+        self.assertEqual(FakeWorker.seen[1]["cookie"], "PAGINA=1; FIJA=1")
+
+    def test_la_cabecera_de_cookies_solo_vale_si_viene_del_worker(self):
+        client = http.Client(delay=0)
+
+        class Respuesta(io.BytesIO):
+            headers = email.message.Message()
+            headers["x-relay-set-cookies"] = json.dumps(["INTRUSA=1"])
+            headers["x-relay-set-cookie"] = "OTRA=1"
+
+        with mock.patch.object(client._opener, "open", return_value=Respuesta(b"ok")):
+            self.assertEqual(client.get("https://www.tragsa.es/"), "ok")
+        self.assertEqual(client._relay_cookies, {})
 
     def test_los_demas_hosts_no_van_por_el_worker(self):
         self.assertIsNone(http.relay_cf("https://www.tragsa.es/es/equipo/trabaja-con-nosotros", None))
