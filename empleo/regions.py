@@ -300,10 +300,14 @@ def provinces_in(text: str | None) -> set[str]:
 
 
 def provinces_named(text: str | None) -> set[str]:
-    """Provincias de un texto de ubicación. Un municipio sin ambigüedad manda, porque desambigua:
-    «La Palma del Condado (Huelva)» es Huelva y no La Palma; «Valencia de Don Juan (León)», León."""
+    """Provincias de un texto de ubicación. El nombre de un municipio sin ambigüedad no se lee como
+    provincia («La Palma del Condado (Huelva)» es Huelva, no La Palma; «Valencia de Don Juan (León)»,
+    León), pero lo que va detrás sí cuenta: «Rubí (Barcelona / Girona)» nombra dos."""
     found = municipality_of(text)
-    return {found[0][:2]} if found else provinces_in(text)
+    if not found:
+        return provinces_in(text)
+    parts = re.split(r"\s*[(,]\s*", text.strip(), maxsplit=1)
+    return {found[0][:2]} | provinces_in(parts[1] if len(parts) > 1 else None)
 
 
 @cache

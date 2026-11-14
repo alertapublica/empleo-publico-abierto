@@ -495,8 +495,13 @@ ON_BOARD = re.compile(r"\bembarcad[oa](?:/a)? en buque", re.I)
 EMPLOYMENT_TYPES = {"temporal": "TEMPORARY", "practicas": "INTERN"}  # «indefinido» no dice la jornada
 # Ubicaciones que dicen expresamente que no hay un lugar: el paréntesis del título no las concreta.
 UNDETERMINED = ("Varios", "Varias", "Nacional", NATIONAL, SEVERAL, UNKNOWN)
-# Un apartado que solo remite a otro documento no lo describe: «VER CONVOCATORIA», «Consultar las bases».
-REFERRAL = re.compile(r"\W*(?:ver|véase|consultar?)\b.{0,60}\b(?:convocatoria|bases)\W*", re.I)
+# Un apartado que solo remite a otro documento no lo describe: «VER CONVOCATORIA», «Consultar las bases
+# de la convocatoria», «Ver documento adjunto». Solo verbo, artículos y nombres de documento: «Consultar
+# expedientes y preparar las bases» es una función.
+_DOCUMENT = r"(?:convocatoria|bases|documento|documentaci[oó]n|pdf|anexos?|enlace)"
+REFERRAL = re.compile(
+    rf"\W*(?:ver|v[eé]ase|consultar?|cons[uú]ltese)\s+(?:(?:el|la|los|las|en|al|del?|su|sus)\s+)*{_DOCUMENT}"
+    rf"(?:\s+(?:(?:de\s+la|del?)\s+)?(?:{_DOCUMENT}|adjunt[ao]s?|publicad[ao]s?|oficial(?:es)?))*\W*", re.I)
 
 
 def described_sections(offer: dict) -> set[str]:
@@ -555,7 +560,7 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
         return "pago"
     if ON_BOARD.search(text):
         return "embarcado"
-    if (offer.get("location") or "").startswith(UNDETERMINED):
+    if " ".join((offer.get("location") or "").split()).casefold().startswith(tuple(u.casefold() for u in UNDETERMINED)):
         return "sin ubicación"
     # Cada texto por separado, y todos de acuerdo: `codes_of` se queda con el primero que dé provincia
     # y no ve que la ubicación diga Barcelona y la localidad Girona, o que un texto nombre dos.
