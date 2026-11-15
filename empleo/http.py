@@ -73,7 +73,7 @@ class Client:
             urllib.request.HTTPSHandler(context=tls_context()),
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
         )
-        self._last = 0.0
+        self.last = 0.0  # fin de la última petición (monotonic)
         self.attempts = 0  # peticiones hechas, contando reintentos (para el registro de la ingesta)
         self.failures = 0
         # Cookies de las sesiones que pasan por el Worker, por origen del destino: no son del dominio del
@@ -93,7 +93,7 @@ class Client:
     def _request(self, url: str, data: bytes | None) -> bytes:
         last_error: Exception | None = None
         for attempt in range(self.retries):
-            pause = self._last + self.delay - time.monotonic()
+            pause = self.last + self.delay - time.monotonic()
             if pause > 0:
                 time.sleep(pause)
             via_cf = relay_cf(url, data)
@@ -122,5 +122,5 @@ class Client:
                 if attempt + 1 < self.retries:  # tras el último intento no hay nada que esperar
                     time.sleep(5 * 3**attempt)
             finally:
-                self._last = time.monotonic()
+                self.last = time.monotonic()
         raise RuntimeError(f"No se pudo leer {url}: {last_error}")

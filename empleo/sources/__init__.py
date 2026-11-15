@@ -128,5 +128,23 @@ for _group, _sources in CATALOG.items():
 
 ACTIVE = [source for sources in CATALOG.values() for source in sources]
 
+# Fuentes que comparten servidor, o por prudencia la misma plataforma alojada sin confirmar que sea la
+# misma máquina: se leen una tras otra, nunca a la vez. Las demás van solas. El Worker de relay/ no
+# cuenta: cada petición es independiente y lo que importa es el servidor de destino.
+# Al dar de alta una fuente, añádela aquí si comparte servidor con otra.
+SHARED_SERVER = {
+    "junta-andalucia": ("andalucia", "ifapa"),  # mismo host
+    "usc": ("ciqus", "cimus"),
+    "successfactors": ("correos", "navantia", "fgc", "bsm", "renfe"),
+    "fundanet": ("idibell", "fisabio", "idival", "imas12"),
+    "seleccion": ("isdefe", "canal"),
+    "pfsrv": ("enaire", "aena"),
+    "ofertastrabajo": ("idis", "galiciasur"),
+}
+for _key, _ids in SHARED_SERVER.items():
+    for _source in ACTIVE:
+        if _source.id in _ids:
+            _source.concurrency_group = _key
+
 # Empresas previstas: se muestran como «próximamente» hasta tener su módulo.
 PLANNED = []

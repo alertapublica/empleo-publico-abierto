@@ -14,11 +14,10 @@ vigente es una oferta, aunque el plazo esté en el cuerpo de un comunicado.
 from __future__ import annotations
 
 import re
-import warnings
 from datetime import date, datetime, timedelta
 from urllib.parse import parse_qs, urljoin, urlparse
 
-from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from bs4 import BeautifulSoup
 
 from ..dates import clock, latest, spanish_date
 from ..http import Client
@@ -216,9 +215,9 @@ def parse_detail(html: str) -> OfferDetail | None:
 
 
 def parse_portal_rows(html: str) -> dict[str, dict]:
-    with warnings.catch_warnings():  # la paginación llega como XML con HTML dentro: se lee igual
-        warnings.simplefilter("ignore", XMLParsedAsHTMLWarning)
-        soup = BeautifulSoup(re.sub(r"<!\[CDATA\[|\]\]>", "", html), "html.parser")
+    # La paginación llega como XML con HTML dentro: se lee igual. Sin la declaración XML, BeautifulSoup no
+    # avisa; mejor que silenciar el aviso con `warnings`, que es estado global y no seguro con hilos.
+    soup = BeautifulSoup(re.sub(r"<\?xml[^>]*\?>|<!\[CDATA\[|\]\]>", "", html), "html.parser")
     rows = {}
     pattern = re.compile(
         r"ID Puesto (\d+) Ubicación (.*?) Departamento (.*?) Familia Puestos (.*?) "

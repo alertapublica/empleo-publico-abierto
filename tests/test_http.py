@@ -1,15 +1,20 @@
-"""Cliente HTTP: los intermedios añadidos y la pausa de cada fuente."""
+"""Cliente HTTP: los intermedios añadidos, la pausa de cada fuente y los grupos por servidor."""
 import contextlib
 import io
 import ssl
+import time
 import unittest
 from unittest import mock
 
-from empleo import http, ingest
+from empleo import http, ingest, sources
 
 
 def decoded(pem):
     return ssl._ssl._test_decode_cert(str(pem))
+
+
+def fake(id, delay=0.0, group=None):
+    return type("S", (), {"id": id, "delay": delay, "concurrency_group": group})()
 
 
 def name(fields):
@@ -33,8 +38,8 @@ class Certificados(unittest.TestCase):
 
 class Pausa(unittest.TestCase):
     def test_cada_fuente_lee_con_su_pausa(self):
-        slow = type("S", (), {"id": "lenta", "delay": 10.0})()
-        normal = type("S", (), {"id": "normal", "delay": http.DEFAULT_DELAY})()
+        slow = fake("lenta", 10.0)
+        normal = fake("normal", http.DEFAULT_DELAY)
         seen = []
         with mock.patch.object(ingest, "ACTIVE", [slow, normal]), \
                 mock.patch.object(ingest, "run_source", lambda s, client, *_: seen.append((s.id, client.delay))):
@@ -54,7 +59,7 @@ class Reintentos(unittest.TestCase):
 
 class Registro(unittest.TestCase):
     def test_inicio_y_fin_de_cada_fuente_tambien_si_falla(self):
-        sources = [type("S", (), {"id": i, "delay": 0})() for i in ("rota", "sana")]
+        sources = [fake("rota"), fake("sana")]
 
         def run(source, client, *_):
             client.attempts += 2
@@ -72,3 +77,33 @@ class Registro(unittest.TestCase):
         self.assertEqual(len(lines), len(expected), lines)
         for line, pattern in zip(lines, expected):
             self.assertRegex(line, f"^{pattern}$")
+
+
+class Grupos(unittest.TestCase):
+    def test_por_servidor_en_orden_de_catalogo(self):
+        a, b, c, d = fake("a", group="g"), fake("b"), fake("c", group="g"), fake("d")
+        self.assertEqual(ingest.by_server([a, b, c, d]), [[a, c], [b], [d]])
+
+    def test_dentro_del_grupo_se_respeta_la_pausa_y_entre_grupos_no(self):
+        sources = [fake("lenta", 10.0, "g"), fake("normal", 2.0, "g"), fake("otra", 2.0)]
+        seen = []
+
+        def run(source, client, *_):
+            seen.append((source.id, client.attempts))  # un Client nuevo por fuente
+            client.attempts += 1
+            client.last = time.monotonic()
+
+        with mock.patch.object(ingest, "ACTIVE", sources), mock.patch.object(ingest, "run_source", run), \
+                mock.patch.object(ingest.time, "sleep") as sleep, contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(ingest.main(), 0)
+        self.assertEqual(seen, [("lenta", 0), ("normal", 0), ("otra", 0)])
+        self.assertEqual(len(sleep.call_args_list), 1)
+        self.assertGreater(sleep.call_args.args[0], 9)  # la mayor de las dos pausas
+
+    def test_los_grupos_del_catalogo_nombran_fuentes_activas(self):
+        active = {source.id for source in sources.ACTIVE}
+        for key, ids in sources.SHARED_SERVER.items():
+            self.assertLessEqual(set(ids), active, key)
+            self.assertTrue(all(s.concurrency_group == key for s in sources.ACTIVE if s.id in ids))
+        self.assertTrue(all(s.concurrency_group is None for s in sources.ACTIVE
+                            if all(s.id not in ids for ids in sources.SHARED_SERVER.values())))

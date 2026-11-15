@@ -348,27 +348,46 @@ def chosen(ids: list[str]) -> list[Source]:
     return [source for source in ACTIVE if not ids or source.id in ids]
 
 
+def by_server(sources: list[Source]) -> list[list[Source]]:
+    """Las fuentes por servidor (`concurrency_group`, o la propia fuente), en el orden del catálogo."""
+    groups: dict[str, list[Source]] = {}
+    for source in sources:
+        groups.setdefault(source.concurrency_group or source.id, []).append(source)
+    return list(groups.values())
+
+
+def run_one(source: Source, http: Client, now: datetime) -> bool:
+    """Lee una fuente con INICIO/FIN al momento, también si falla o se corta: dónde se va el tiempo."""
+    print(f"INICIO {source.id}", flush=True)
+    start, result = time.monotonic(), "cortada"
+    try:
+        run_source(source, http, DATA, now)
+        result = "bien"
+    except Exception as error:  # cada fuente es independiente
+        result = "error"
+        print(f"ERROR {source.id}: {error}", file=sys.stderr, flush=True)
+    finally:
+        print(f"FIN {source.id} {result} {time.monotonic() - start:.0f} s, "
+              f"{http.attempts} peticiones, {http.failures} fallidas", flush=True)
+    return result == "bien"
+
+
+def run_group(group: list[Source], now: datetime) -> bool:
+    """Las fuentes de un servidor, una tras otra y cada una con su `Client`. Al pasar a la siguiente se
+    respeta la pausa, como si fuera el mismo cliente (la mayor de las dos)."""
+    ok, previous = True, None
+    for source in group:
+        if previous is not None:
+            time.sleep(max(0.0, previous.last + max(previous.delay, source.delay) - time.monotonic()))
+        previous = Client(source.delay)
+        ok = run_one(source, previous, now) and ok
+    return ok
+
+
 def main(ids: list[str] | None = None) -> int:
     now = datetime.now(timezone.utc)
-    http = Client()
-    failed = False
-    for source in chosen(ids or []):
-        http.delay = source.delay
-        # INICIO/FIN al momento, también si la fuente falla o se corta la ejecución: dónde se va el tiempo.
-        print(f"INICIO {source.id}", flush=True)
-        start, attempts, failures, result = time.monotonic(), http.attempts, http.failures, "cortada"
-        try:
-            run_source(source, http, DATA, now)
-            result = "bien"
-        except Exception as error:  # cada fuente es independiente
-            result = "error"
-            print(f"ERROR {source.id}: {error}", file=sys.stderr, flush=True)
-            failed = True
-        finally:
-            print(f"FIN {source.id} {result} {time.monotonic() - start:.0f} s, "
-                  f"{http.attempts - attempts} peticiones, {http.failures - failures} fallidas", flush=True)
-    return 1 if failed else 0
-
+    results = [run_group(group, now) for group in by_server(chosen(ids or []))]
+    return 0 if all(results) else 1
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
