@@ -9,8 +9,8 @@ class Referencia(unittest.TestCase):
     def test_casos_revisados(self):
         rows = perfiles.reference()
         self.assertGreater(len(rows), 100)
-        wrong = [f"{r['fuente']} | {r['titulo']} | esperado {r['perfil']!r}, sale {perfiles.classify(r['titulo'])!r}"
-                 for r in rows if perfiles.classify(r["titulo"]) != r["perfil"]]
+        wrong = [f"{r['fuente']} | {r['titulo']} | esperado {r['perfil']!r}, sale {perfiles.classify(r['titulo'], r['fuente'])!r}"
+                 for r in rows if perfiles.classify(r["titulo"], r["fuente"]) != r["perfil"]]
         self.assertFalse(wrong, "\n" + "\n".join(wrong))
 
     def test_solo_perfiles_conocidos(self):
@@ -70,6 +70,19 @@ class Reglas(unittest.TestCase):
                       "Tècnic/a de suport a la gestió de projectes"):
             self.assertEqual(perfiles.classify(title), "gestion", title)
         self.assertEqual(perfiles.classify("Técnico/a de gestión de la investigación"), "gestion")
+
+    def test_en_los_contratos_de_proyecto_decide_la_categoria(self):
+        title = ("Personal tecnólogo superior para colaborar con la línea de investigación financiada "
+                 "«Diseño de espacios de datos y gestión de datos abiertos»")
+        self.assertEqual(perfiles.matches(title, "ua"), ["tecnico"])
+        self.assertEqual(perfiles.classify("Personal especialista para colaborar con el proyecto «X»", "ua"), "tecnico")
+        self.assertEqual(perfiles.classify("Técnico Superior · Gestión de plagas para el investigador", "ifapa"), "tecnico")
+
+    def test_investigador_en_formacion_no_es_dudoso(self):
+        for title in ("Personal investigador en formación para colaborar con el proyecto «X»",
+                      "Investigador/a Predoctoral para el grupo X"):
+            self.assertEqual(perfiles.matches(title), ["predoctoral"], title)
+        self.assertEqual(perfiles.matches("Investigador/a postdoctoral"), ["investigador"])
 
     def test_sin_perfil(self):
         self.assertEqual(perfiles.classify("Titulación Universitaria en Biología"), "")

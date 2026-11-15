@@ -347,7 +347,7 @@ def offer_card(offer: dict, today: date, root: str = "", group: str = "") -> str
         if offer.get("published_on") else ""
     )
     area = " ".join(areas.offer_areas(offer, group)[0]) or areas.NONE
-    perfil = f' data-perfil="{perfiles.classify(offer["title"]) or perfiles.NONE}"' if group in RESEARCH_GROUPS else ""
+    perfil = f' data-perfil="{perfiles.classify(offer["title"], offer["source"]) or perfiles.NONE}"' if group in RESEARCH_GROUPS else ""
     return f"""<li data-texto="{e(plain_search(offer))}" data-comunidad="{e(offer.get('region') or UNKNOWN)}" data-organismo="{e(offer['source'])}" data-grupo="{e(group)}" data-empresa="{e(offer.get('company') or '')}" data-area="{e(area)}"{perfil} data-tipo="{e(offer.get('kind') or '')}" data-teletrabajo="{int(remote.state == teletrabajo.MENTIONS)}" data-plazo="{e(offer.get('deadline') or '9999')}" data-publicada="{e(offer.get('published_on') or offer['first_seen'][:10])}" data-pronto="{1 if days <= SOON_DAYS else 0}" data-guardar="{e(saved_id(offer))}">
 <h2><a href="{root}{offer_path(offer)}">{e(offer['title'])}</a></h2>
 <p>{e(' · '.join(str(f) for f in facts if f))}{extra}</p>
@@ -377,7 +377,7 @@ def area_options(open_offers: list[dict], group_of: dict) -> str:
 
 def profile_options(open_offers: list[dict]) -> str:
     """Perfiles con alguna oferta abierta, por nombre; «Sin perfil» al final."""
-    present = {perfiles.classify(o["title"]) or perfiles.NONE for o in open_offers}
+    present = {perfiles.classify(o["title"], o["source"]) or perfiles.NONE for o in open_offers}
     choices = [(key, label) for key, label in perfiles.BY_NAME if key in present]
     if perfiles.NONE in present:
         choices.append((perfiles.NONE, "Sin perfil"))
@@ -396,6 +396,8 @@ def research_only(offer: dict, group: str) -> bool:
     """La oferta sale solo en «Investigación», no en la portada."""
     if group not in RESEARCH_GROUPS:
         return False
+    if areas.project_category(offer.get("title") or "", offer.get("source") or ""):
+        return True  # contrato con cargo a un proyecto: el nombre del proyecto no lo lleva a la portada
     found = set(areas.offer_areas(offer, group)[0])
     return "investigacion" in found and not found & MANAGEMENT_AREAS
 
@@ -1738,7 +1740,7 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "plazo_hora": offer.get("deadline_time"), "publicada": offer.get("published_on"),
         "detectada": offer["first_seen"], "cerrada": offer.get("closed_at"), "republica": offer.get("parent_ref"),
         "areas": areas.offer_areas(offer, group)[0],
-        "perfil": (perfiles.classify(offer["title"]) or None) if group in RESEARCH_GROUPS else None,
+        "perfil": (perfiles.classify(offer["title"], offer["source"]) or None) if group in RESEARCH_GROUPS else None,
         **remote_fields(offer),
         "url": offer["url"], "url_inscripcion": offer.get("apply_url"), "url_portal": base_url + offer_path(offer),
     }

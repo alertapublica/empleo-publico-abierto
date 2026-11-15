@@ -6,7 +6,9 @@ ficha y, en último término, el ámbito de la fuente (SOURCE_AREAS). Lo que que
 con el de la fuente se lista en el informe (`python -m empleo.areas informe`), que en Actions
 abre o actualiza un issue para revisarlo. En los centros de investigación y las universidades el
 área decide además si la oferta sale también en la portada (site.research_only): el informe
-lista las decididas con menos seguridad.
+lista las decididas con menos seguridad. Los contratos con cargo a un proyecto cuyo título es
+«categoría + nombre del proyecto» (PROJECT_TITLES) son siempre de investigación y salen solo allí:
+el nombre del proyecto puede añadir la segunda área, no decidir el puesto.
 
 Reglas sobre el texto normalizado (sin tildes, minúsculas, sin «/a», sin códigos con cifras):
 - FRASES, en orden: suman y se «comen» el texto, para que las palabras sueltas no lo vuelvan a
@@ -62,6 +64,20 @@ SOURCE_AREAS = {
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
+# Contratos con cargo a un proyecto de investigación: el título es la categoría y, después, el
+# nombre del proyecto. Por fuente y por formato, para no esconder otro tipo de plaza de la fuente.
+PROJECT_TITLES = {
+    "ifapa": re.compile(r"^(.+?) · "),
+    "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
+}
+
+
+def project_category(title: str, source: str) -> str:
+    """Categoría («Personal tecnólogo superior») si el título es «categoría + proyecto»; si no, «»."""
+    found = PROJECT_TITLES[source].match(title) if source in PROJECT_TITLES else None
+    return found.group(1) if found else ""
+
+
 FRASES = [
     # nombres de organismos y fórmulas que no dicen nada del puesto
     (r"autoridad portuaria[^)]*|puertos del estado|grupo tragsa|correos express|jovenes talentos?|"
@@ -78,6 +94,9 @@ FRASES = [
     (r"administracion publica|(convocatoria (de )?)?proceso (de seleccion|selectivo)|"
      r"para la (cobertura|provision) de( \w+)? (puestos?|plazas?)( de trabajo)?( de)?|"
      r"oferta (de )?empleo publico|tasa de reposicion", {}),
+    (r"derecho (mercantil|civil|penal|administrativo|laboral|constitucional|internacional|procesal|"
+     r"tributario|financiero)", {"juridico": 3}),
+    (r"cultivos? celular\w*", {"investigacion": 2}),  # de laboratorio, no del campo
     (r"capital humano|talento humano|\bnomin(a|as|es)\b", {"personas": 3}),
     (r"persones i organitzacio|personas y organizacion", {"personas": 3}),  # nombre del departamento
     (r"inteligencia artificial|machine learning|aprendizaje automatico|\bia\b|\bai\b",
@@ -173,7 +192,7 @@ FRASES = [
     (r"ciencias del mar|medio marino|espacios marinos|areas marinas|reservas? de la biosfera|"
      r"red natura|biodiversidad|habitats?|restauracion (ambiental|forestal)|genetica forestal|"
      r"dominio publico (maritimo|hidraulico)|residuos|productos libres( de deforestacion)?|"
-     r"deforestacion importada", {"ambiente": 3}),
+     r"deforestacion importada|especies? (exotic|invasor|amenazad|protegid)\w*", {"ambiente": 3}),
     (r"ciencias ambientales|ciencias de la naturaleza", {"ambiente": 1}),
     (r"energias? renovables?|eficiencia energetica|transicion energetica|"
      r"instalaciones electricas|ingenieria electrica|sistemas? electric\w*|equipos? electr\w*",
@@ -190,7 +209,7 @@ PALABRAS = [
      r"\bpesquer\w*|\bdeforestacion|\bxylella|\bjardiner\w*|\bpaisajism\w*|\bhortofrutic\w*|"
      r"\binvernadero|\bincendios?\b|\bforestry|\bfisher\w*|\bnekazaritz\w*|\bbasogintz\w*|"
      r"\bmedi ambient\w*|\bmedio ?ambient\w*|\benvironment\w*|\bingurumen\w*|\bmeteorolog\w*|"
-     r"\bhidrometeorolog\w*|\bhidrometereolog\w*", {"ambiente": 3}),
+     r"\bhidrometeorolog\w*|\bhidrometereolog\w*|\bcultivos?\b|\bplagas?\b|\bacuicultur\w*", {"ambiente": 3}),
     (r"\baguas?\b|\bhidrolog\w*|\bhidric\w*|\bacuifer\w*|\bsaneamiento|\bdepuracion|"
      r"\bcaudales|\bdeslindes?\b|\bcostas?\b|\bemisiones|\bsostenibilidad|\bambiental\w*|"
      r"\binsectos|\bdph\b", {"ambiente": 2}),
@@ -360,10 +379,16 @@ def classify(title: str, ficha: str = "", source: str = "", group: str = "",
     best = max(total.values(), default=0)
     if best < 2 and total.get("ingenieria", 0) >= 1 and ENGINEER.match(normalize(title)):
         total["ingenieria"] = best = 2   # «Ingeniero/a de …» sin más pistas
+    project = bool(project_category(title, source))
     if best < 2:
+        if project:  # el formato del título ya dice que es de investigación
+            return ["investigacion"], "título"
         return ([prior], "fuente") if prior else ([], "")
     ranked = sorted(total, key=lambda k: (-total[k], ORDER[k]))  # a igualdad, orden de AREAS
-    return [k for k in ranked if total[k] >= max(2, best * 0.5)][:top], origin
+    found = [k for k in ranked if total[k] >= max(2, best * 0.5)]
+    if project:  # investigación siempre; el nombre del proyecto solo añade la segunda área
+        found = ["investigacion"] + [k for k in found if k != "investigacion"]
+    return found[:top], origin
 
 
 TAGS = re.compile(r"<[^>]+>")

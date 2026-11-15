@@ -815,6 +815,10 @@ class Site(unittest.TestCase):
             with self.subTest(title):
                 self.assertIs(site.research_only(offer("1", source="irb", title=title), "investigacion"), only)
         self.assertFalse(site.research_only(offer("1", title="Postdoctoral Researcher"), "sepi"))
+        # contrato con cargo a un proyecto: el nombre del proyecto (jurídico) no lo lleva a la portada
+        ua = "Personal tecnólogo superior para colaborar con el proyecto «El Derecho Mercantil del presente»"
+        self.assertTrue(site.research_only(offer("1", source="ua", title=ua), "universidades"))
+        self.assertFalse(site.research_only(offer("1", source="ua", title="Técnico/a de gestión económica"), "universidades"))
 
     def test_filtro_organismo_solo_con_varias_fuentes(self):
         def source(ident, name, group="sepi"):

@@ -83,6 +83,22 @@ class Reglas(unittest.TestCase):
         self.assertEqual(areas.classify(title, source="ua", group="universidades")[0], ["investigacion"])
         self.assertEqual(areas.classify("Técnico/a de gestión financiera")[0], ["economia"])
 
+    def test_el_nombre_del_proyecto_no_decide_el_puesto(self):
+        # «categoría + proyecto» (IFAPA, UA): investigación siempre; el proyecto solo añade la segunda área
+        ua = ("Personal tecnólogo superior para colaborar con la línea de investigación financiada "
+              "«Digitalización y sostenibilidad en el mercado: El Derecho Mercantil del presente»")
+        self.assertEqual(areas.classify(ua, source="ua", group="universidades")[0], ["investigacion", "juridico"])
+        ifapa = "Titulado Grado Medio · Propuesta para la supervivencia de los cultivos de espárrago y cebolla"
+        self.assertEqual(areas.classify(ifapa, source="ifapa", group="investigacion")[0], ["investigacion", "ambiente"])
+        self.assertEqual(areas.classify("Titulado Superior · Proyecto X", source="ifapa", group="investigacion"),
+                         (["investigacion"], "título"))
+        # solo con ese formato y en esas fuentes
+        self.assertEqual(areas.project_category("Administrativo/a de compras", "ua"), "")
+        self.assertEqual(areas.project_category("Titulado Superior · Titulación Superior en Biomedicina", "ciber"), "")
+        self.assertEqual(areas.classify("Técnico/a de cultivos y plagas")[0], ["ambiente"])
+        self.assertEqual(areas.classify("Técnico/a Auxiliar en Caracterización Molecular y Cultivo Celular")[0],
+                         ["investigacion"])
+
     def test_presentacion_fija_de_la_empresa_no_cuenta(self):
         ficha = ("Tragsatec, empresa especializada en la realización de actividades de ingeniería, consultoría "
                  "y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca...")
