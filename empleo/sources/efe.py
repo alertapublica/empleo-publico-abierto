@@ -9,8 +9,8 @@ la candidatura se presenta como indican las bases.
 filas siguen «abiertas» meses después de vencer el plazo de candidaturas. Solo se
 consideran ofertas las que aún admiten candidaturas.
 
-`agenciaefe.es` responde 403 a las IP de Actions (desde el 2026-11-09): se lee por el relay
-(`VIA_RELAY` en `http.py`).
+`agenciaefe.es` responde 403 a las IP de Actions (desde el 2026-11-09): se lee por el Worker de
+`relay/`, con salida en Madrid (`VIA_RELAY_CF` en `http.py`).
 """
 from __future__ import annotations
 

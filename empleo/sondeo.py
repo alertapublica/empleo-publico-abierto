@@ -15,7 +15,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from .http import HEADERS, relay
+from .http import HEADERS, relay_cf
 
 DELAY = 3.0
 MAX_BYTES = 3_000_000
@@ -139,7 +139,7 @@ def analyse(html: str) -> dict:
 
 def fetch(url: str) -> dict:
     """Una sola petición. Devuelve estado, cabeceras útiles y cuerpo (o el error)."""
-    target, signed = relay(url)
+    target, signed = relay_cf(url, None) or (url, {})
     request = urllib.request.Request(target, headers={**HEADERS, **signed})
     try:
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:

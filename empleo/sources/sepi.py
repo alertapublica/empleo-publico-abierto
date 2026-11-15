@@ -8,7 +8,9 @@ candidaturas o solicitudes, con la fecha completa («finaliza el 1 de junio de 2
 horas», «finalizará a las 23.59 horas del día 27 de enero de 2026»). Comprobado en capturas del
 Internet Archive de 2025 y 2026. La ficha da el mismo texto y los documentos.
 
-`sepi.es` no responde desde Actions: se lee por el relay (`VIA_RELAY` en `http.py`).
+`sepi.es` no responde desde Actions: se lee por el Worker de `relay/`, con salida en Madrid
+(`VIA_RELAY_CF` en `http.py`). Su primera conexión desde el Worker suele dar 522 a los ~19 s; el
+reintento ya entra.
 
 Procesos, como en EFE: mientras el plazo de candidaturas está abierto es oferta; después, proceso.
 Sus comunicados son el texto de estado del listado (enlazado a la ficha) y los documentos de la
@@ -21,7 +23,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timezone
 from html import escape
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
@@ -66,7 +68,11 @@ def parse_page(html: str) -> list[dict]:
         title, link = block.select_one("h2"), block.select_one("a[href*='/empleo-publico/']")
         if title is None or link is None:
             raise SourceLayoutError("SEPI: proceso sin título o enlace")
+        # Con www: es el host que va por el Worker (en 2025 el listado enlazaba algunas fichas sin www).
         url = urljoin(PAGE, link["href"])
+        parts = urlsplit(url)
+        if parts.hostname == "sepi.es" and parts.port in (None, 80, 443):
+            url = urlunsplit(("https", "www.sepi.es", parts.path, parts.query, parts.fragment))
         status = block.select_one(".plazo")
         found.append({
             "ref": url.rstrip("/").rsplit("/", 1)[-1], "title": _clean(title.get_text(" ")), "url": url,

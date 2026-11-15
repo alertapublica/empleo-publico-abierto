@@ -75,6 +75,15 @@ class Sepi(unittest.TestCase):
         self.assertEqual([(o.deadline, o.deadline_time) for o in found], [("2025-06-30", "23:59")] * 2)
         self.assertEqual(len({o.ref for o in found}), 2)
 
+    def test_fichas_sin_www_se_leen_con_www(self):
+        # En 2025 el listado enlazaba fichas a https://sepi.es/: solo www.sepi.es va por el Worker.
+        urls = [row["url"] for row in sepi.parse_page(fixture("sepi-empleo-2025-06.html"))]
+        self.assertTrue(urls)
+        self.assertTrue(all(url.startswith("https://www.sepi.es/es/empleo-publico/") for url in urls), urls)
+        for href in ("https://SEPI.ES/es/empleo-publico/x", "http://sepi.es:443/es/empleo-publico/x?a=1"):
+            page = f'<div class="bloque-empleo"><h2>T</h2><a href="{href}">ver</a></div>'
+            self.assertEqual(sepi.parse_page(page)[0]["url"].split("?")[0], "https://www.sepi.es/es/empleo-publico/x")
+
     def test_cierra_a_la_hora(self):
         page = "sepi-empleo-2026-01.html"
         self.assertEqual(len(offers(page, datetime(2026, 1, 27, 22, 58, tzinfo=timezone.utc))[0]), 1)

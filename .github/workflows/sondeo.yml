@@ -25,8 +25,9 @@ jobs:
           python-version: "3.13"
       - name: Leer las páginas (una petición por página, con pausa)
         env:
-          RELAY_CLAVE: ${{ secrets.RELAY_CLAVE }}
-          RELAY_URL: ${{ secrets.RELAY_URL }}
+          # Worker de relay/ (salida por Madrid) para los hosts de VIA_RELAY_CF; sin clave, lectura directa.
+          RELAY_CF_CLAVE: ${{ secrets.RELAY_CF_CLAVE }}
+          RELAY_CF_URL: ${{ secrets.RELAY_CF_URL }}
         run: python -m empleo.sondeo sondeo "${{ inputs.ronda }}" | tee -a "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:

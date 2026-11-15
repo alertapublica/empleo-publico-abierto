@@ -1,20 +1,26 @@
-// Relay con salida en España para los portales que no responden a las IP de GitHub Actions (EE. UU.)
-// y a los que no llega el relay de Piensa: el portal de candidatos de Tragsa da timeout desde
-// Actions y solo atiende en el puerto 8443, que Piensa bloquea de salida. El placement de
-// wrangler.jsonc lo ejecuta en Madrid aunque lo llame Actions desde EE. UU.
+// Relay con salida en España para los portales que no responden a las IP de GitHub Actions (EE. UU.).
+// El placement de wrangler.jsonc lo ejecuta en Madrid aunque lo llame Actions desde EE. UU.
+//   - Tragsa: el portal de candidatos da timeout desde Actions y solo atiende en el puerto 8443.
+//   - SEPI y EFE: no responden (SEPI) o dan 403 (EFE) a las IP de Actions.
+//   - Fundación de la Universidad de La Rioja: HTTP 429 a las IP de Actions.
 //
 //   POST|GET /?url=<codificada>   con cabeceras x-ts y x-firma
 //
 // firma = HMAC-SHA256(RELAY_CLAVE, ts + "\n" + método + "\n" + url + "\n" + cuerpo); caduca a los
-// VENTANA_S segundos. Solo a los orígenes de ORIGENES, también en las redirecciones, que sigue él
-// mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
+// VENTANA_S segundos. Solo a los orígenes de ORIGENES; las redirecciones, solo dentro del mismo origen,
+// y las sigue él mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
 // no son de este dominio: x-relay-cookie (de entrada, como Cookie) y x-relay-set-cookies (de salida:
 // lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
 // y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
-// Transición: también sale la antigua x-relay-set-cookie, una por Set-Cookie, para los clientes que
-// aún no leen la nueva (una ingesta ya en marcha al desplegar). Quitarla cuando ya no haga falta.
+// Cada origen tiene que estar también en VIA_RELAY_CF de empleo/http.py (lo comprueba tests/test_relay.py).
 
-export const ORIGENES = new Set(["https://rrhhcandidato.tragsa.es:8443"]);
+export const ORIGENES = new Set([
+  "https://rrhhcandidato.tragsa.es:8443",
+  "https://www.sepi.es",
+  "https://agenciaefe.es",
+  "https://www.agenciaefe.es",
+  "https://fundacion.unirioja.es",
+]);
 const VENTANA_S = 120;
 const MAX_SALTOS = 5;
 const ESPERA_MS = 25000;
@@ -103,13 +109,15 @@ export async function atender(req, env, pedir = fetch, ahora = Date.now()) {
     if (![301, 302, 303, 307, 308].includes(r.status)) {
       const salida = new Headers({ "Content-Type": r.headers.get("content-type") || "application/octet-stream", "x-relay-ms": String(Date.now() - t0) });
       if (recibidas.length) salida.set("x-relay-set-cookies", JSON.stringify(recibidas));
-      for (const linea of recibidas) salida.append("x-relay-set-cookie", linea);
       return new Response(r.body, { status: r.status, headers: salida });
     }
     if (!location) return respuesta(502, "redirección sin destino", { "x-relay-error": "red" });
     if (salto >= MAX_SALTOS) return respuesta(502, "demasiadas redirecciones", { "x-relay-error": "red" });
     destino = new URL(location, destino).href;
-    if (!permitido(destino)) return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+    // Solo dentro del mismo origen: el tarro de cookies es de una sesión con un único organismo.
+    if (!permitido(destino) || new URL(destino).origin !== new URL(url).origin) {
+      return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+    }
     if (r.status !== 307 && r.status !== 308) {
       verbo = "GET";
       datos = undefined;
