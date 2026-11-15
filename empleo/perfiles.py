@@ -7,6 +7,7 @@ título con reglas deterministas (sin servicios externos): gana la primera regla
 case, así que el orden importa. Antes que ellas va ARRANQUE: un título que empieza por «Técnico/a de
 laboratorio» o «de apoyo» es de técnico aunque el resto nombre la gestión o al investigador (salvo
 «de apoyo a la gestión», que sigue las reglas). Sin regla, la oferta queda sin perfil.
+En los títulos «categoría + nombre del proyecto» (areas.PROJECT_TITLES) solo se mira la categoría.
 Los casos revisados están en perfiles_referencia.csv (fuente, título, perfil): los tests exigen que
 sigan saliendo igual; añadir allí una oferta es darla por revisada. `python -m empleo.perfiles
 informe` lista las ofertas abiertas sin revisar que quedan sin perfil o en las que casan reglas de
@@ -20,10 +21,13 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from .areas import project_category
+
 PERFILES = (
     ("predoctoral", "Predoctoral y en formación", r"predoc|pre-doc|\br1\b|phd (call|student|position)|en practicas|investigador\w* en formaci|doctoral student"),
+    # «investigador en formación», «predoctoral» o «en prácticas» ya es el perfil anterior: aquí no casa
     ("investigador", "Investigador/a (postdoctoral y sénior)",
-     r"postdoc|posdoc|\br[234]a?\b|investigador|researcher|research fellow|\bdoctor\b|doctoral degree"),
+     r"postdoc|posdoc|\br[234]a?\b|investigador(?!\w* (?:en formaci|predoc|en practicas))|researcher|research fellow|\bdoctor\b|doctoral degree"),
     ("ensayos", "Ensayos clínicos",
      r"ensayos? (clinic|(en |de )?fase)|assaigs? (clinic|(en |de )?fase)|clinical trial|study (coordinator|nurse)|\bcra\b|\bcta\b"
      r"|\bmonitor(a|s|es|as)?\b|clinical research assistant"),
@@ -36,7 +40,8 @@ PERFILES = (
      r"|\bfinan(z|cier|cer|ceir)|\bfinanc(e|ial)\b|ethics|fundraising"
      r"|health and safety|tecnico de proyecto"),
     ("tecnico", "Técnico/a de laboratorio y apoyo",
-     r"tecnic|technician|laborator|suport recerca|apoyo a la investigacion|research (assistant|support)|auxiliary|titulad[oa]"),
+     r"tecnic|technician|laborator|suport recerca|apoyo a la investigacion|research (assistant|support)|auxiliary|titulad[oa]"
+     r"|tecnolog[oa]\b|personal especialista"),
 )
 NAMES = {key: name for key, name, _ in PERFILES}
 ARRANQUE = ("tecnico", r"^(?:un |una )?(?:personal )?tecnic\w* (?:de |d')?"
@@ -57,15 +62,15 @@ def normalize(text: str) -> str:
     return GENDER.sub("", text)
 
 
-def matches(title: str) -> list[str]:
+def matches(title: str, source: str = "") -> list[str]:
     """Perfiles con alguna regla que case, en el orden de las reglas: el primero es el que gana."""
-    text = normalize(title)
+    text = normalize(project_category(title, source) or title)
     return list(dict.fromkeys(key for key, rule in RULES if rule.search(text)))
 
 
-def classify(title: str) -> str:
+def classify(title: str, source: str = "") -> str:
     """Clave del perfil, o «» si el título no lo dice."""
-    return next(iter(matches(title)), "")
+    return next(iter(matches(title, source)), "")
 
 
 def reference(path: Path = REFERENCE) -> list[dict]:
@@ -83,7 +88,7 @@ def report(offers: list[dict], reviewed: set | None = None) -> str:
     for offer in sorted(offers, key=lambda o: (o["source"], o.get("title") or "")):
         if (offer["source"], offer.get("title")) in reviewed:
             continue
-        found = matches(offer.get("title") or "")
+        found = matches(offer.get("title") or "", offer["source"])
         if not found:
             missing.append((offer, ""))
         elif len(found) > 1:
