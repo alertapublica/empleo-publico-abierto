@@ -12,7 +12,7 @@
 // no son de este dominio: x-relay-cookie (de entrada, como Cookie) y x-relay-set-cookies (de salida:
 // lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
 // y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
-// Cada origen tiene que estar también en VIA_RELAY_CF de empleo/http.py (lo comprueba tests/test_relay.py).
+// Cada origen tiene que estar también en VIA_RELAY_CF o RESPALDO_CF de empleo/http.py (lo comprueba tests/test_relay.py).
 
 export const ORIGENES = new Set([
   "https://rrhhcandidato.tragsa.es:8443",
@@ -20,6 +20,11 @@ export const ORIGENES = new Set([
   "https://agenciaefe.es",
   "https://www.agenciaefe.es",
   "https://fundacion.unirioja.es",
+  // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
+  "https://rrhh.uib.cat",
+  "https://www.ulpgc.es",
+  "https://vrprofesorado.unex.es",
+  "https://aps.unirioja.es",
 ]);
 const VENTANA_S = 120;
 const MAX_SALTOS = 5;
