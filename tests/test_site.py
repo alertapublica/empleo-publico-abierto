@@ -792,6 +792,7 @@ class Site(unittest.TestCase):
             "Diplomatura/Grado en Enfermería": False,
             "TCAI – Auxiliar Clinic/Auxiliar Sanitari pel grup Hematologia i Oncologia": False,
             "Administrativo de compras": False,
+            "Platform Engineer": False,  # informática sin investigación en el título: también en la portada
             "Técnico/a de comunicación científica y divulgación": False,
         }
         for title, only in cases.items():

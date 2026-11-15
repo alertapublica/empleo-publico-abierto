@@ -207,7 +207,8 @@ PALABRAS = [
     # tic
     (r"\binformatic\w*|\bprogramador\w*|\bdesarrollador\w*|\bdeveloper\w*|\bsoftware|"
      r"\bsoc\b|\bsap\b|\btic\b|\bict\b|\btelecomunicacion\w*|\btelecomunicacio\w*|\bphp\b|"
-     r"\bjava\b|\bpython\b|\bcloud\b|\binformatika\w*|\bbioinformatic\w*|\bcis\b|\bdevops\b",
+     r"\bjava\b|\bpython\b|\bcloud\b|\binformatika\w*|\bbioinformatic\w*|\bcis\b|\bdevops\b|"
+     r"\bplatform engineer\w*",
      {"tic": 3}),
     (r"\bdigitalizacion|\bdigital\b|\bdatos\b|\bdata\b|\bsistemas\b|\bsistemes\b|\bsoporte\b|"
      r"\bsupport\b|\banalista\w*", {"tic": 1}),
