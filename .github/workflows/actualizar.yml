@@ -146,6 +146,27 @@ jobs:
             gh issue edit "$NUM" --body-file informe-areas.md
           fi
 
+      # Lo mismo para el perfil de las ofertas de investigación (empleo/perfiles.py): las que quedan sin
+      # perfil o casan con reglas de más de uno y aún no están en empleo/perfiles_referencia.csv.
+      - name: Avisar de las ofertas con perfil dudoso
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITULO: "Clasificador de perfiles: ofertas por revisar"
+        run: |
+          python -m empleo.perfiles informe informe-perfiles.md
+          NUM=$(gh issue list --state open --label clasificador --json number,title \
+            --jq "map(select(.title == env.TITULO)) | .[0].number // empty")
+          if [ ! -s informe-perfiles.md ]; then
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "Ya no queda ninguna oferta abierta por revisar."
+            fi
+          elif [ -z "$NUM" ]; then
+            gh label create clasificador --color FBCA04 --description "Clasificador de áreas" 2>/dev/null || true
+            gh issue create --title "$TITULO" --label clasificador --body-file informe-perfiles.md
+          elif [ "$(gh issue view "$NUM" --json body --jq .body)" != "$(cat informe-perfiles.md)" ]; then
+            gh issue edit "$NUM" --body-file informe-perfiles.md
+          fi
+
       # Quién convoca cada registro y qué parece repetido entre fuentes (empleo/entidades.py). Solo
       # informa en el resumen de la ejecución: no cambia los datos ni la web.
       - name: Informe de convocantes y solapamientos

@@ -41,8 +41,60 @@ class Reglas(unittest.TestCase):
         self.assertEqual(perfiles.classify("Personal investigador en formació"), "predoctoral")
         self.assertEqual(perfiles.classify("Técnico/a de laboratorio en formación"), "tecnico")
 
+    def test_subcadenas_que_no_son_gestion(self):
+        # «financiado» y «digestión» no son finanzas ni gestión
+        self.assertEqual(perfiles.classify("Técnico/a de laboratorio para proyecto financiado por el ISCIII"), "tecnico")
+        self.assertEqual(perfiles.classify("Técnico/a de laboratorio en digestión anaerobia"), "tecnico")
+        self.assertEqual(perfiles.classify("Técnico/a superior del área financiera"), "gestion")
+        self.assertEqual(perfiles.classify("Head of Finance"), "gestion")
+        self.assertEqual(perfiles.classify("Tècnic/a de gestió financera"), "gestion")
+        self.assertEqual(perfiles.classify("Técnico/a financeiro"), "gestion")
+
+    def test_ensayos_solo_los_clinicos(self):
+        self.assertEqual(perfiles.classify("Técnico de laboratorio para ensayos de materiales"), "tecnico")
+        self.assertEqual(perfiles.classify("Técnico/a de apoyo para la monitorización de reactores"), "tecnico")
+        self.assertEqual(perfiles.classify("Coordinador/a de ensayos clínicos"), "ensayos")
+        self.assertEqual(perfiles.classify("Monitor/a de ensayos"), "ensayos")
+        self.assertEqual(perfiles.classify("Monitores/as de ensayos"), "ensayos")
+        self.assertEqual(perfiles.classify("Clinical Research Monitors"), "ensayos")
+        self.assertEqual(perfiles.classify("Coordinador/a de ensayos fase I/II"), "ensayos")
+
+    def test_el_arranque_de_tecnico_manda(self):
+        # El complemento («para la gestión de…», «al investigador») no cambia el puesto
+        self.assertEqual(perfiles.classify("Técnico/a de laboratorio para la gestión de muestras del biobanco"), "tecnico")
+        self.assertEqual(perfiles.classify("Técnico/a de apoyo al investigador principal"), "tecnico")
+        self.assertEqual(perfiles.classify("Tècnic/a de suport a la recerca"), "tecnico")
+        # …pero el técnico de gestión sigue siendo de gestión
+        for title in ("Técnico/a de apoyo a la gestión de proyectos", "Técnico/a de apoyo a gestión de proyectos",
+                      "Técnico/a de apoyo en la gestión de proyectos", "Técnico/a de apoyo a la administración de proyectos",
+                      "Tècnic/a de suport a la gestió de projectes"):
+            self.assertEqual(perfiles.classify(title), "gestion", title)
+        self.assertEqual(perfiles.classify("Técnico/a de gestión de la investigación"), "gestion")
+
     def test_sin_perfil(self):
         self.assertEqual(perfiles.classify("Titulación Universitaria en Biología"), "")
+
+
+class Informe(unittest.TestCase):
+    def offer(self, title, source="irb"):
+        return {"source": source, "title": title, "url": "https://x.example/1"}
+
+    def test_avisa_de_las_dudosas_y_de_las_sin_perfil(self):
+        text = perfiles.report([
+            self.offer("Técnico/a de laboratorio para la gestión de muestras"),
+            self.offer("Titulación Universitaria en Biología"),
+            self.offer("Técnico/a de laboratorio"),  # una sola regla: no se avisa
+        ], reviewed=set())
+        self.assertIn("## Con más de un perfil posible (1)", text)
+        self.assertIn("- `irb` [Técnico/a de laboratorio para la gestión de muestras](https://x.example/1)"
+                      " → Técnico/a de laboratorio y apoyo (también casa: Gestión y administración)", text)
+        self.assertIn("## Sin perfil (1)", text)
+        self.assertNotIn("[Técnico/a de laboratorio](", text)
+
+    def test_las_revisadas_no_salen(self):
+        offers = [self.offer("Titulación Universitaria en Biología")]
+        self.assertEqual(perfiles.report(offers, reviewed={("irb", "Titulación Universitaria en Biología")}), "")
+        self.assertEqual(perfiles.report([self.offer("Research Assistant")], reviewed=set()), "")
 
 
 if __name__ == "__main__":
