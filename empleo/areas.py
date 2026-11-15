@@ -61,6 +61,7 @@ SOURCE_AREAS = {
     "correos": "transporte",
     "sarga": "ambiente", "cetarsa": "ambiente",
     "ua": "investigacion",  # de momento solo sus plazas para proyectos de investigación
+    "uhu": "investigacion",  # ídem: Personal Técnico de Apoyo a la Investigación
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
@@ -68,6 +69,7 @@ GROUP_AREAS = {"investigacion": "investigacion"}
 # nombre del proyecto. Por fuente y por formato, para no esconder otro tipo de plaza de la fuente.
 PROJECT_TITLES = {
     "ifapa": re.compile(r"^(.+?) · "),
+    "uhu": re.compile(r"^(.+?) · "),
     "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
 }
 
