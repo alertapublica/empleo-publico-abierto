@@ -3,7 +3,8 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from email.utils import format_datetime
-from xml.sax.saxutils import escape
+import re
+from xml.sax.saxutils import escape as _escape
 
 from .text import humane_caps
 
@@ -15,6 +16,12 @@ FEED_KINDS = {
     "positions_changed": "Plazas modificadas: ",
 }
 LIMIT = 100
+INVALID_XML = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff]")
+
+
+def escape(text: str) -> str:
+    """Texto seguro en XML: sin los caracteres de control que XML 1.0 no admite y que romperían el feed."""
+    return _escape(INVALID_XML.sub("", text))
 
 
 def _when(value: str) -> datetime:

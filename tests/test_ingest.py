@@ -1,6 +1,7 @@
 import re
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -445,6 +446,12 @@ class RunSource(unittest.TestCase):
         events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T08:00:00+00:00"}]
         items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
         self.assertEqual(items[0]["title"], "Técnico/a de laboratorio ref.110_2026")
+
+    def test_caracter_de_control_no_rompe_el_rss(self):
+        item = {"title": "A\x0bB", "link": "https://x.example/1", "guid": "g", "text": "t\x00",
+                "date": datetime(2026, 11, 10, tzinfo=timezone.utc)}
+        xml = feeds.render("T", "D", "https://x.example/f.xml", "https://x.example/", [item], NOW)
+        self.assertEqual(ET.fromstring(xml.encode()).findtext(".//item/title"), "AB")
 
     def test_con_plazo_en_el_listado_la_vencida_no_vuelve_a_leerse(self):
         source = FakeSource([listed(deadline="2026-11-06")], OfferDetail())
