@@ -13,6 +13,9 @@ class Source(ABC):
     name: str
     homepage: str
     group: str = ""  # clave de GROUPS: la pone el catálogo de `sources/__init__.py`
+    # Fuentes del mismo servidor: se leen una tras otra, nunca a la vez. Lo pone el catálogo (SHARED_SERVER);
+    # sin él, la fuente va sola.
+    concurrency_group: str | None = None
     scope: str = "Estatal"  # ámbito: «Estatal» o la comunidad autónoma (nombre de REGIONS)
     delay: float = DEFAULT_DELAY  # pausa entre peticiones: más si el portal la pide (Crawl-delay)
     # Procesos que la fuente nunca da por terminados: pasan a «sin novedades» a los N días de verlos,

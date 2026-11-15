@@ -45,15 +45,15 @@ peticiones a la vez. Las fuentes que comparten servidor van en el mismo grupo, e
 - Un `Client` por fuente: cookies, sesión y `_relay_cookies` (ya separadas por origen desde #76) propios; el
   `Client` sigue sin ser compartible entre hilos. Dentro de un grupo se conserva la pausa al pasar de una
   fuente a la siguiente (máximo de sus `delay`).
-- `tragsa.py:219`: sustituir `warnings.catch_warnings()` (estado global, no seguro con hilos) por un
-  filtro fijo a nivel de módulo.
-- Precalentar las cachés de `regions` (`_municipalities()` etc.) antes de arrancar.
+- `tragsa.py:219`: quitar `warnings.catch_warnings()` (estado global, no seguro con hilos). Hecho quitando la
+  declaración XML antes de analizar la paginación, así BeautifulSoup no avisa; ni filtro global ni `warnings`.
 - Adaptar `tests/test_http.py:33` (hoy exige orden secuencial): comprobar pausa por fuente y orden dentro
   del grupo, no entre grupos.
 
 ## PR 3 — Pool de hilos por grupo
 
 - `ThreadPoolExecutor` con N tareas de grupo (variable de entorno, por defecto 4; con 1, como hoy).
+- Precalentar las cachés de `regions` (`_municipalities()` etc.) antes de arrancar el pool.
   Cada tarea recorre su grupo en orden de catálogo; una fuente, un único hilo (no se paralelizan fichas).
 - Errores: capturados por fuente dentro del grupo, sigue con la siguiente; código de salida 1 si alguna
   falla (como hoy).
