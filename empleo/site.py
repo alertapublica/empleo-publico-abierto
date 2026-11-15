@@ -1232,7 +1232,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <li>Las listas por comunidad autónoma, por área, de teletrabajo y por empresa incluyen solo ofertas.</li>
 <li>Las áreas se asignan de forma automática a partir del título y de la ficha, por lo que pueden contener errores. Una oferta puede figurar en más de un área.</li>
 <li>«Ofertas que mencionan el teletrabajo» incluye las ofertas cuya ficha lo menciona. Las ofertas sin texto en la ficha no pueden comprobarse.</li>
-<li>Cada oferta aparece al publicarse y de nuevo si cambia el plazo o el número de plazas, o si se reabre o se vuelve a publicar.</li>
+<li>Cada oferta aparece cuando este portal la detecta y de nuevo si cambia el plazo o el número de plazas, o si se reabre o se vuelve a publicar. Las ofertas que ya se han cerrado dejan de aparecer.</li>
 <li>Algunos organismos publican ofertas de varias empresas: bajo su nombre puede seguirse una sola de ellas.</li>
 <li>En <a href="../anuncios/">Procesos</a>, cada proceso en marcha dispone además de su propia lista.</li>
 </ul>

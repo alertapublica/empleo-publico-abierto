@@ -35,7 +35,7 @@ def offer_items(offers: dict, events: list, offer_url, summary) -> list[dict]:
     extended = {(event["offer"], event["at"]) for event in events if event["kind"] == "deadline_changed"}
     for event in events:
         offer = offers.get(event["offer"])
-        if offer is None or event["kind"] not in FEED_KINDS:
+        if offer is None or offer["status"] != "open" or event["kind"] not in FEED_KINDS:
             continue
         if event["kind"] == "reopened" and (event["offer"], event["at"]) in extended:
             continue
