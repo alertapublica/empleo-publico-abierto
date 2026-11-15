@@ -1,4 +1,6 @@
 """Cliente HTTP: los intermedios añadidos y la pausa de cada fuente."""
+import contextlib
+import io
 import ssl
 import unittest
 from unittest import mock
@@ -38,3 +40,35 @@ class Pausa(unittest.TestCase):
                 mock.patch.object(ingest, "run_source", lambda s, client, *_: seen.append((s.id, client.delay))):
             ingest.main()
         self.assertEqual(seen, [("lenta", 10.0), ("normal", http.DEFAULT_DELAY)])
+
+
+class Reintentos(unittest.TestCase):
+    def test_no_espera_tras_el_ultimo_intento(self):
+        client = http.Client(delay=0)
+        client._opener = mock.Mock(open=mock.Mock(side_effect=http.urllib.error.URLError("caída")))
+        with mock.patch.object(http.time, "sleep") as sleep, self.assertRaisesRegex(RuntimeError, "caída"):
+            client.get("https://example.org/")
+        self.assertEqual([c.args for c in sleep.call_args_list], [(5,), (15,)])
+        self.assertEqual((client.attempts, client.failures), (3, 3))
+
+
+class Registro(unittest.TestCase):
+    def test_inicio_y_fin_de_cada_fuente_tambien_si_falla(self):
+        sources = [type("S", (), {"id": i, "delay": 0})() for i in ("rota", "sana")]
+
+        def run(source, client, *_):
+            client.attempts += 2
+            if source.id == "rota":
+                client.failures += 1
+                raise RuntimeError("No se pudo leer")
+
+        out = io.StringIO()
+        with mock.patch.object(ingest, "ACTIVE", sources), mock.patch.object(ingest, "run_source", run), \
+                contextlib.redirect_stdout(out), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(ingest.main(), 1)
+        expected = ["INICIO rota", r"FIN rota error \d+ s, 2 peticiones, 1 fallidas",
+                    "INICIO sana", r"FIN sana bien \d+ s, 2 peticiones, 0 fallidas"]
+        lines = out.getvalue().splitlines()
+        self.assertEqual(len(lines), len(expected), lines)
+        for line, pattern in zip(lines, expected):
+            self.assertRegex(line, f"^{pattern}$")
