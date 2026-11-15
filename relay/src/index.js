@@ -7,8 +7,8 @@
 //   POST|GET /?url=<codificada>   con cabeceras x-ts y x-firma
 //
 // firma = HMAC-SHA256(RELAY_CLAVE, ts + "\n" + método + "\n" + url + "\n" + cuerpo); caduca a los
-// VENTANA_S segundos. Solo a los orígenes de ORIGENES, también en las redirecciones, que sigue él
-// mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
+// VENTANA_S segundos. Solo a los orígenes de ORIGENES; las redirecciones, solo dentro del mismo origen,
+// y las sigue él mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
 // no son de este dominio: x-relay-cookie (de entrada, como Cookie) y x-relay-set-cookies (de salida:
 // lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
 // y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
@@ -114,7 +114,10 @@ export async function atender(req, env, pedir = fetch, ahora = Date.now()) {
     if (!location) return respuesta(502, "redirección sin destino", { "x-relay-error": "red" });
     if (salto >= MAX_SALTOS) return respuesta(502, "demasiadas redirecciones", { "x-relay-error": "red" });
     destino = new URL(location, destino).href;
-    if (!permitido(destino)) return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+    // Solo dentro del mismo origen: el tarro de cookies es de una sesión con un único organismo.
+    if (!permitido(destino) || new URL(destino).origin !== new URL(url).origin) {
+      return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+    }
     if (r.status !== 307 && r.status !== 308) {
       verbo = "GET";
       datos = undefined;

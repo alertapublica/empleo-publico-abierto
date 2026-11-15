@@ -68,7 +68,8 @@ def parse_page(html: str) -> list[dict]:
         title, link = block.select_one("h2"), block.select_one("a[href*='/empleo-publico/']")
         if title is None or link is None:
             raise SourceLayoutError("SEPI: proceso sin título o enlace")
-        url = urljoin(PAGE, link["href"])
+        # Con www: es el host que va por el Worker (en 2025 el listado enlazaba algunas fichas sin www).
+        url = re.sub(r"^https?://sepi\.es/", "https://www.sepi.es/", urljoin(PAGE, link["href"]))
         status = block.select_one(".plazo")
         found.append({
             "ref": url.rstrip("/").rsplit("/", 1)[-1], "title": _clean(title.get_text(" ")), "url": url,

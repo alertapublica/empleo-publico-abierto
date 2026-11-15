@@ -57,6 +57,12 @@ def relay_cf(url: str, data: bytes | None) -> tuple[str, dict[str, str]] | None:
     return base.rstrip("/") + "/?" + urllib.parse.urlencode({"url": url}), {"x-ts": ts, "x-firma": firma}
 
 
+def _origin(url: str) -> str:
+    """Esquema, host y puerto: el Worker no sigue redirecciones a otro origen, así que sus cookies son de este."""
+    parts = urllib.parse.urlsplit(url)
+    return f"{parts.scheme}://{parts.netloc.lower()}"
+
+
 class Client:
     def __init__(self, delay: float = DEFAULT_DELAY, retries: int = 3, timeout: float = 60):
         self.delay = delay
@@ -67,8 +73,9 @@ class Client:
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
         )
         self._last = 0.0
-        # Cookies de las sesiones que pasan por el Worker: no son de su dominio y no van al CookieJar.
-        self._relay_cookies: dict[str, str] = {}
+        # Cookies de las sesiones que pasan por el Worker, por origen del destino: no son del dominio del
+        # Worker y no van al CookieJar. Un mismo Client lee varios organismos: no se mezclan.
+        self._relay_cookies: dict[str, dict[str, str]] = {}
 
     def get(self, url: str) -> str:
         return self._request(url, None).decode("utf-8", "replace")
@@ -88,8 +95,9 @@ class Client:
                 time.sleep(pause)
             via_cf = relay_cf(url, data)
             target, signed = via_cf or (url, {})
-            if via_cf and self._relay_cookies:
-                signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in self._relay_cookies.items())
+            jar = self._relay_cookies.setdefault(_origin(url), {}) if via_cf else {}
+            if jar:
+                signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
             try:
                 with self._opener.open(request, timeout=self.timeout) as response:
@@ -97,7 +105,7 @@ class Client:
                         for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
                             if name.strip():
-                                self._relay_cookies[name.strip()] = value.strip()
+                                jar[name.strip()] = value.strip()
                     body = response.read()
                     if response.headers.get("Content-Encoding") == "gzip":
                         body = gzip.decompress(body)

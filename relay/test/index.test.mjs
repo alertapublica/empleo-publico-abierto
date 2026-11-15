@@ -141,6 +141,10 @@ test("no sigue redirecciones fuera del origen ni sin fin", async () => {
   const fuera = servidor([new Response(null, { status: 302, headers: { location: "https://otro.example/" } })]);
   assert.equal((await atender(await peticion(PORTAL), env, fuera.pedir, AHORA)).status, 502);
   assert.equal(fuera.vistas.length, 1);
+  // Tampoco a otro origen de la lista: las cookies de un organismo no van a otro.
+  const otro = servidor([new Response(null, { status: 302, headers: { location: "https://www.sepi.es/es/empleo-publico" } })]);
+  assert.equal((await atender(await peticion(PORTAL), env, otro.pedir, AHORA)).status, 502);
+  assert.equal(otro.vistas.length, 1);
   const bucle = servidor(Array.from({ length: 10 }, () => new Response(null, { status: 302, headers: { location: PORTAL } })));
   const r = await atender(await peticion(PORTAL), env, bucle.pedir, AHORA);
   assert.equal(r.status, 502);

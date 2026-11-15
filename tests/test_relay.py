@@ -8,7 +8,8 @@ import hashlib
 import hmac
 import io
 import json
-import re
+import shutil
+import subprocess
 import threading
 import unittest
 import urllib.parse
@@ -88,6 +89,14 @@ class RelayCloudflare(unittest.TestCase):
             self.assertEqual(http.Client(delay=0).get(url), f"GET {url} ")
         self.assertEqual(len(FakeWorker.seen), 4)
 
+    def test_las_cookies_de_un_organismo_no_van_a_otro(self):
+        client = http.Client(delay=0)
+        client.get(PORTAL_TRAGSA)
+        client.get(SEPI)
+        client.post(PORTAL_TRAGSA, {"ICAction": "abajo"})
+        client.get(SEPI)
+        self.assertEqual([s["cookie"] for s in FakeWorker.seen], [None, None, "PAGINA=1; FIJA=1", "PAGINA=2; FIJA=1"])
+
     def test_firma_nueva_en_cada_intento(self):
         FakeWorker.answers = [522]  # el Worker no conectó con SEPI: se reintenta con otra firma
         with mock.patch.object(http, "relay_cf", wraps=http.relay_cf) as relay_cf:
@@ -134,10 +143,12 @@ class Directa(unittest.TestCase):
 
 class MismaListaQueElWorker(unittest.TestCase):
     def test_los_hosts_del_cliente_son_los_origenes_del_worker_y_todos_https(self):
-        bloque = re.search(r"ORIGENES = new Set\(\[(.*?)\]\)", WORKER.read_text(), re.S).group(1)
-        origenes = re.findall(r'"([^"]+)"', bloque)
+        node = shutil.which("node") or "node"  # sin node, falla: no se salta en silencio
+        # El Set exportado tal cual lo ve el Worker, no una lectura del texto del fichero.
+        code = f"import({json.dumps(WORKER.as_uri())}).then(m => console.log(JSON.stringify([...m.ORIGENES])))"
+        origenes = json.loads(subprocess.run([node, "-e", code], capture_output=True, text=True, check=True).stdout)
         self.assertTrue(origenes)
-        self.assertTrue(all(o.startswith("https://") for o in origenes), origenes)
+        self.assertTrue(all(urllib.parse.urlsplit(o).scheme == "https" for o in origenes), origenes)
         self.assertEqual({urllib.parse.urlsplit(o).hostname for o in origenes}, http.VIA_RELAY_CF)
 
 
