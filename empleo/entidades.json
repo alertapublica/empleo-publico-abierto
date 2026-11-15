@@ -344,6 +344,11 @@
    "alias": []
   },
   {
+   "id": "ua",
+   "nombre": "Universidad de Alicante",
+   "alias": []
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [

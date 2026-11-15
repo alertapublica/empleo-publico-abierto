@@ -782,7 +782,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
 {"".join(blocks)}
 {planned_html}<script src="../assets/organismos.js" defer></script>"""
     return page("Organismos", body, "../", "organismos", checked=checked,
-                description="Empresas, fundaciones y centros de investigación del sector público cuyas ofertas "
+                description="Empresas, fundaciones, centros de investigación y universidades del sector público cuyas ofertas "
                             "de empleo reúne este portal.")
 
 
@@ -1200,7 +1200,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
                 ("datos-personales", "Datos personales"), ("accesibilidad", "Accesibilidad"), ("contacto", "Contacto")]
     index = "".join(f'<li><a href="#{key}">{label}</a></li>' for key, label in sections)
     body = f"""<h1>Acerca de este portal</h1>
-<p>{SITE_NAME} reúne las ofertas de empleo que las empresas públicas, las fundaciones y los centros de investigación del sector público publican en sus propias webs. Estas webs tienen formatos distintos, rara vez ofrecen alertas, no siempre son accesibles y sus ofertas no suelen figurar en otros buscadores de empleo. Este portal las consulta de forma periódica, presenta sus ofertas en un único lugar y avisa de las novedades.</p>
+<p>{SITE_NAME} reúne las ofertas de empleo que las empresas públicas, las fundaciones, los centros de investigación y las universidades del sector público publican en sus propias webs. Estas webs tienen formatos distintos, rara vez ofrecen alertas, no siempre son accesibles y sus ofertas no suelen figurar en otros buscadores de empleo. Este portal las consulta de forma periódica, presenta sus ofertas en un único lugar y avisa de las novedades.</p>
 <nav aria-label="En esta página"><ul class="indice-grupos">{index}</ul></nav>
 <h2 id="que-hay">Contenido del portal</h2>
 <ul>

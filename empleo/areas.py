@@ -56,6 +56,7 @@ SOURCE_AREAS = {
     "puertos": "transporte", "adif": "transporte", "renfe": "transporte", "fgc": "transporte",
     "correos": "transporte",
     "sarga": "ambiente", "cetarsa": "ambiente",
+    "ua": "investigacion",  # de momento solo sus plazas para proyectos de investigación
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
