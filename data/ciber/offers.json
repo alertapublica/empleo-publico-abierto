@@ -1,0 +1,522 @@
+{
+ "3901": {
+  "apply_url": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3901",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3391/3901",
+  "company": "CIBER",
+  "contract": "Indefinido",
+  "deadline": "2026-11-18",
+  "deadline_time": null,
+  "department": "UT",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3901",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-18",
+  "location": "MADRID",
+  "missed_runs": 0,
+  "opens_on": "2026-11-04",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3901",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Titulación superior en Informática o Telecomunicaciones para la realización de tareas de gestión y soporte de infraestructuras tecnológicas, desarrollo de aplicaciones y análisis de datos avanzados aplicados al entorno sanitario.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>- Soporte y mantenimiento de infraestructuras tecnológicas para proyectos de investigación: administración de firewalls, máquinas virtuales, redes, sistemas operativos (Linux, Windows), cabinas de almacenamiento, bases de datos (PostgreSQL, MySQL/MariaDB, MongoDB)</p><p>- Análisis, desarrollo e implementación de software destinado a la investigación científica en el ámbito de la salud.</p><p>- Programación en Python, Java, C, R.</p><p>- Metodologías Ágiles: Scrum</p><p>- Gestión y desarrollo con tecnología de contenedores: docker, kubernetes, alpine linux, podman, rancher...</p><p>- Análisis de datos heterogéneos mediante técnicas estadísticas, inteligencia artificial y aprendizaje automático</p><p>- Gestión e implantación de proyectos mediante la herramienta REDCap, destinada a la creación de Cuadernos de Recogida de Datos</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>(Licenciatura/Ingeniería o Grado+Máster universitario MECES 3) en Ingeniería Informática o de Telecomunicaciones.</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Mínimo 2 años de experiencia global en Tecnologías de la Información y las Comunicaciones, de los cuales se valorarán en el proceso selectivo los siguientes aspectos:</p><p>- Experiencia en soporte y mantenimiento de infraestructuras tecnológicas en organismos públicos o privados: sistemas operativos, redes, máquinas virtuales, almacenamiento, bases de datos</p><p>- Experiencia en desarrollo de aplicaciones basadas en IA: Agentes, NLP</p><p>- Experiencia en proyectos basados en contenedores</p><p>- Experiencia en gestión de la plataforma REDCap</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorarán asimismo en el proceso selectivo los siguientes aspectos:</p><p>- Se valorará positivamente dominio profesional en inglés (mínimo C1 o equivalente)</p><p>- Conocimientos de keycloack (especificar proyectos que incluyan esta tecnología)</p><p>- Conocimientos de software beacon para descubrimiento de datos genómicos y de salud (especificar proyectos que incluyan esta tecnología)</p><p>- Conocimientos de gobernanza del dato en entornos científicos (especificar proyectos en lo que se ha participado)</p><p>- Habilidades de trabajo en equipo y en entornos complejos (detallar proyectos en los que se ha participado)</p><p>- Habilidades de comunicación y capacidad de interacción en un entorno científico de alto nivel (detallar proyectos científicos en los que se ha participado)</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> SIN ESPECIFICAR</p><p><strong>Provincia:</strong> MADRID</p><p><strong>Tipo de contrato:</strong> Indefinido</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · (Licenciatura/Ingeniería o Grado+Máster universitario MECES 3) en Ingeniería Informática o de Telecomunicaciones",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3901"
+ },
+ "3902": {
+  "apply_url": "https://intranet.cientifis.com/CiberOBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3902",
+  "category": "Doctor",
+  "closed_at": null,
+  "code": "3379/3902",
+  "company": "CIBER",
+  "contract": "Indefinido actividades científico-técnicas",
+  "deadline": "2026-11-16",
+  "deadline_time": null,
+  "department": "CIBEROBN",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3902",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-16",
+  "location": "HOSPITAL UNIVERSITARIO DE BELLVITGE; BARCELONA",
+  "missed_runs": 0,
+  "opens_on": "2026-10-16",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3902",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Investigador/a postdoctoral con formación avanzada en Psicología Clínica y/o Neuropsicología, y experiencia en adicciones comportamentales, para incorporarse a un equipo multidisciplinar centrado en el estudio de la psiconeurobiología de los trastornos de la conducta alimentaria y las conductas adictivas, así como de sus correlatos neurocognitivos, emocionales y conductuales. Se requiere experiencia contrastada en investigación científica y en la publicación de artículos en el ámbito de las Neurociencias Cognitivas, especialmente en adicciones comportamentales, obesidad y/o trastornos alimentarios. Este contrato está financiado por el Programa de Investigación e Innovación de la Unión Europea &quot;Horizon Europe&quot;, proyecto eprObes GA No 101080219.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>1. Diseñar, planificar y supervisar las actividades de investigación relacionadas con adicciones comportamentales dentro de los Work Packages pertinentes (especialmente WP4 y WP5).</p><p>2. Desarrollo y armonización de protocolos</p><p>• Elaborar y actualizar protocolos de evaluación de conductas adictivas, impulsividad, regulación emocional y recompensa.</p><p>• Garantizar la armonización de instrumentos psicométricos, neuropsicológicos y clínicos entre los países participantes.</p><p>• Supervisar la calidad de los datos y la adherencia a estándares éticos y regulatorios europeos.</p><p>3. Gestión de cohortes y recogida de datos</p><p>• Coordinar el reclutamiento y seguimiento de participantes en las cohortes eprObes, incluyendo subgrupos con obesidad y uso problemático de pantallas, trastorno de juego y otras adicciones comportamentales.</p><p>• Supervisar la implementación de entrevistas clínicas, cuestionarios, tareas conductuales y medidas digitales.</p><p>• Asegurar la trazabilidad, integridad y seguridad de los datos en plataformas compartidas del consorcio.</p><p>4. Contribución a la integración multidisciplinar</p><p>• Colaborar estrechamente con resto de equipos para generar modelos integrados (mecanismos de recompensa, control inhibitorio, regulación emocional y compulsividad, etc).</p><p>• Facilitar la comunicación entre disciplinas para asegurar interpretaciones coherentes y clínicamente relevantes.</p><p>5. Producción científica y transferencia</p><p>• Redactar artículos científicos de alto impacto, informes técnicos, deliverables y documentos de seguimiento para la Comisión Europea.</p><p>• Presentar resultados en congresos internacionales de neurociencia, obesidad, psiquiatría y salud pública.</p><p>• Contribuir a la elaboración de guías, recomendaciones y materiales de transferencia para profesionales sanitarios.</p><p>6. Innovación y desarrollo de nuevas líneas</p><p>• Proponer nuevas hipótesis, subestudios y aproximaciones metodológicas dentro del marco eprObes.</p><p>• Identificar oportunidades para intervenciones personalizadas basadas en perfiles conductuales y neurobiológicos.</p><p>• Participar en la preparación de nuevas propuestas competitivas (Horizon Europe, ISCIII, AES, etc.).</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Doctor/a en Psicologia Clínica o afines.</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>El/la candidato/a ideal deberá demostrar:</p><p>• Formación doctoral en Psicología Clínica o áreas afines.</p><p>• Conocimientos sólidos en neuropsicología y procesos cognitivos implicados en la desregulación del control inhibitorio, toma de decisiones y recompensa.</p><p>• Experiencia en investigación con poblaciones clínicas y/o en contextos de adicciones.</p><p>• Competencia en análisis estadístico y manejo de bases de datos (R, SPSS, Python u otros).</p><p>• Capacidad para trabajar en equipos multidisciplinares y en entornos de investigación colaborativa.</p><p>• Excelentes habilidades de comunicación científica (artículos, informes, presentaciones).</p><p>• Proactividad, autonomía y orientación a resultados.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorará experiencia previa en evaluación psicopatológica, administración e interpretación de baterías neuropsicológicas, así como en el uso de instrumentos para la evaluación de adicciones (incluyendo adicciones comportamentales como juego, uso problemático de tecnologías, ejercicio compulsivo, etc.).</p><p>Se valorará adicionalmente:</p><p>• Experiencia en estudios longitudinales o multicéntricos.</p><p>• Publicaciones en el área de adicciones comportamentales o trastornos del control de impulsos.</p><p>• Intervenciones psicológicas basadas en evidencia en adicciones o trastornos del control de impulsos.</p><p>• Participación previa en proyectos financiados (Mineco, FIS, UE, etc.).</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> HOSPITAL UNIVERSITARIO DE BELLVITGE</p><p><strong>Provincia:</strong> BARCELONA</p><p><strong>Tipo de contrato:</strong> Indefinido actividades científico-técnicas</p><p><strong>Financiación:</strong> Fondos Externos</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 37.300,35 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Doctor · Doctor/a en Psicologia Clínica o afines",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3902"
+ },
+ "3913": {
+  "apply_url": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3913",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3393/3913",
+  "company": "CIBER",
+  "contract": "Indefinido",
+  "deadline": "2026-11-20",
+  "deadline_time": null,
+  "department": "UT",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3913",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-20",
+  "location": "MADRID",
+  "missed_runs": 0,
+  "opens_on": "2026-11-06",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3913",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Se busca incorporar dos personas con experiencia y conocimientos en biotecnología para incorporarse al Departamento de Bases de Datos y apoyar en las tareas técnicas que se necesitan en los diferentes proyectos de investigación que se desarrollan en CIBER. Se trata de perfiles mixtos con conocimientos tanto en Biología como en Informática para mejorar la interlocución con los investigadores de CIBER.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Supervisión, creación y migración de bases de datos para investigación biomédica con especial énfasis en modelos estándar como OMOP</p><p>Programación en Python, R</p><p>Gestión de software basado en contenedores</p><p>Software de gestión de flujos de trabajo científico</p><p>Análisis estadístico de datos en el ámbito biosanitario</p><p>Gestión, diseño y coordinación de cuadernos de recogida de datos biomédicos, principalmente en REDCap</p><p>Colaboración en la creación de infraestructuras tecnológicas para la cobertura de proyectos de investigación biomédica: redes, máquinas virtuales</p><p>Desarrollo de aplicaciones web</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Titulación superior: Licenciatura o Grado+Master universitario Meces 3) en biotecnología, biología o ingeniería biomédica</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Mínimo 1 año de experiencia en proyectos informáticos aplicados al ámbito biosanitario, valorándose en el proceso de selección los siguientes aspectos:</p><p>-Experiencia con Bases de Datos (PostgreSQL y MongoDB) y Sistemas Operativos (Linux, Windows)</p><p>-Experiencia en Análisis de Datos Biomédicos mediante software Atlas</p><p>-Experiencia con OHDSI WebAPI</p><p>-Experiencia en migración de datos al estándar OMOP Common Data Model</p><p>-Experiencia en programación en Python y/o R</p><p>-Experiencia en creación de formularios e instrumentos en REDCap</p><p>-Experiencia en gestión de redes: reglas de firewall, vpns</p><p>-Experiencia con entornos de virtualización para la creación de máquinas virtuales</p><p>-Experiencia en desarrollo web</p><p>-Interlocución con expertos e investigadores en el área de la salud</p><p>En todos los casos se debe indicar claramente los proyectos en los que se han aplicado una o varias de las citadas tecnologías</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorarán asimismo en el proceso selectivo los siguientes aspectos:</p><p>-Conocimientos de gestión de software basado en contenedores: docker</p><p>-Conocimientos de software de gestión de flujos de trabajo científico: nextflow</p><p>-Conocimiento del paquete Achilles de R</p><p>-Conocimientos de firewall Sophos</p><p>-Conocimientos de herramientas de virtualización: proxmox, vmware</p><p>-Conocimientos de software de ticketing: GLPI, Zammad</p><p>-Nivel mínimo B2 de inglés</p><p>-Habilidades de comunicación y capacidad de interacción en un entorno científico de alto nivel</p><p>-Habilidades de trabajo en equipo y en entornos complejos</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> SIN ESPECIFICAR</p><p><strong>Provincia:</strong> MADRID</p><p><strong>Tipo de contrato:</strong> Indefinido</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · Titulación superior: Licenciatura o Grado+Master universitario Meces 3) en biotecnología, biología o ingeniería biomédica",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3913"
+ },
+ "3914": {
+  "apply_url": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3914",
+  "category": "Doctor",
+  "closed_at": null,
+  "code": "3390/3914",
+  "company": "CIBER",
+  "contract": "Indefinido",
+  "deadline": "2026-11-20",
+  "deadline_time": null,
+  "department": "CIBERBBN",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3914",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-20",
+  "location": "BARCELONA",
+  "missed_runs": 0,
+  "opens_on": "2026-11-06",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3914",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Se requiere Doctor/a en el área de ingeniería de proteínas y producción recombinante para la participación en una línea de investigación dirigida al desarrollo de nanopartículas y nanoconjugados proteicos para la entrega dirigida de fármacos.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Ejecución de una línea de investigación dedicada al diseño y desarrollo de nuevas nanomedicinas proteicas para el direccionamiento activo de terapias antitumorales en modelos de cáncer y otras aplicaciones. Las tareas incluirán la producción, la purificación y la caracterización de nanopartículas desarrolladas en la línea, así como el diseño de nuevas nanopartículas y la coordinación de estudiantes de postgrado junto al IP dentro de la línea.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Doctorado en biotecnología, bioquímica, biomedicina o similar</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Experiencia en manipulación genética y biología molecular. Experiencia en técnicas de microbiología y cultivos bacterianos. Experiencia en el diseño de péptidos y proteínas. Experiencia en producción recombinante de proteínas en sistemas de expresión bacterianos (E.coli). Experiencia en purificación de proteínas usando sistemas FPLC Akta (Cytiva). Experiencia en conjugaciones proteína-fármacos. Experiencia en técnicas de caracterización de nanopartículas. Conocimientos de proteómica. Experiencia en cultivos celulares.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Experiencia en otros sistemas de expresión de proteína recombinantes. Experiencia en producción de proteínas en biorreactores. Experiencia con sistemas siRNA o CRISPR. Experiencia en péptidos antimicrobianos. Experiencia en citometría de flujo. Capacidad de análisis estadístico (Graphpad y R). Nivel alto de Castellano e Inglés.</p><p>La posesión de certificado R3 como investigador/a establecido/a será reconocido en este proceso de selección y se tendrá en cuenta a los efectos de su valoración como méritos investigadores, proyectándose en la fase de valoración del currículo del personal investigador que forma parte de este proceso. Se otorgará una puntuación mínima de 40 puntos en la fase de valoración de méritos.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> SIN ESPECIFICAR</p><p><strong>Provincia:</strong> BARCELONA</p><p><strong>Tipo de contrato:</strong> Indefinido</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 37.300,35 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Doctor · Doctorado en biotecnología, bioquímica, biomedicina o similar",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3914"
+ },
+ "3917": {
+  "apply_url": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3917",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3389/3917",
+  "company": "CIBER",
+  "contract": "Indefinido",
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": "UT",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3917",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-17",
+  "location": "MADRID",
+  "missed_runs": 0,
+  "opens_on": "2026-11-03",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3917",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Persona con titulación MECES 3 en Comunicación o Ciencias de la Información para comunicación científica con especial foco en comunicación online y desarrollo de actividades de divulgación y difusión de la ciencia. Las tareas incluyen la elaboración de contenidos para web y redes sociales, producción de vídeos y materiales, coordinación con asociaciones de pacientes e instituciones, organización de eventos divulgativos, entre otros.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Funciones a desarrollar:</p><p>-\tDesarrollo de las acciones planteadas en el Plan de Comunicación del CIBER y su Unidad de Cultura Científica.</p><p>-\tGeneración de contenidos para web y redes sociales, incluyendo vídeos, entrevistas y materiales divulgativos.</p><p>-\tCreación y gestión de materiales de presentación para diferentes proyectos: imagen corporativa, dosier, web y canales digitales.</p><p>-\tCoordinación y difusión de los avances y resultados de los grupos del CIBER en colaboración con instituciones, equipos de investigación y asociaciones de pacientes.</p><p>-\tElaboración de materiales periodísticos: argumentarios, notas de prensa y otras piezas para trasladar los contenidos científicos a la sociedad.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Licenciatura en Comunicación o Grado en Comunicación + Master universitario (Meces 3)</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>2 años de experiencia en las funciones descritas en centros de investigación públicos o privados, siendo valorable la experiencia en comunicación en redes sociales, capacidad resolutiva y buenas habilidades en la comunicación oral y escrita.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorarán conocimientos de comunicación científica y divulgación para audiencias generales, así como de redacción y edición de contenidos para web, redes sociales y, especialmente, materiales audiovisuales. Nivel de inglés B2 o superior y se valorará positivamente el manejo de otras lenguas oficiales. Persona con buena comunicación oral, trabajo en equipo, flexible y capacidad organizativa.</p><p>Expresión oral y capacidad de comunicación</p><p>Interés en el puesto y propuesta de ideas de comunicación específicas (orientación inicial de propuestas/ideas)</p><p>Interés por el sector de la comunicación científica</p><p>Proactividad</p><p>Capacidad de resolución y trabajo en equipo</p><p>Intereses futuros en el puesto / orientación de carrera profesional</p><p>Ejemplos de trabajos fructíferos durante su carrera y exposición de los mismos</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> SIN ESPECIFICAR</p><p><strong>Provincia:</strong> MADRID</p><p><strong>Tipo de contrato:</strong> Indefinido</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · Licenciatura en Comunicación o Grado en Comunicación + Master universitario (Meces 3)",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3917"
+ },
+ "3918": {
+  "apply_url": "https://intranet.cientifis.com/CiberEHD/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3918",
+  "category": "Doctor",
+  "closed_at": null,
+  "code": "3388/3918",
+  "company": "CIBER",
+  "contract": "Postdoctoral Ley de la ciencia",
+  "deadline": "2026-11-17",
+  "deadline_time": null,
+  "department": "CIBEREHD",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3918",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-17",
+  "location": "CENTRO ESTHER KOPLOWITZ; BARCELONA",
+  "missed_runs": 0,
+  "opens_on": "2026-11-03",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3918",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Buscamos una persona investigadora postdoctoral con formación en bioquímica, con más de 5 años de experiencia como Postdoc y movilidad internacional. Debe tener sólida experiencia en el manejo de muestras de modelos animales, biopsias humanas, técnicas de laboratorio para el estudio traslacional del hígado y análisis estadísticos y bioinformáticos complejos. La contratación se formalizará mediante un contrato de acceso de personal investigador doctor, recogido en la Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación. La duración del contrato será al menos de tres años, y podrá prorrogarse hasta el límite máximo de seis años. Las prórrogas no podrán tener una duración inferior a un año. No obstante, cuando el contrato se concierte con una persona con discapacidad, el contrato podrá alcanzar una duración máxima de ocho años, prórrogas incluidas, teniendo en cuenta las características de la actividad investigadora y el grado de las limitaciones en la actividad. Será requisito indispensable no haber sido contratado/a mediante esta modalidad de contrato postdoctoral, en la misma o distinta entidad, por un tiempo superior a seis años, salvo en el caso de las personas con discapacidad indicadas en el párrafo anterior para las que el tiempo no podrá ser superior a ocho años. El/la candidato/a deberá aportar en la inscripción el INFORME DE VIDA LABORAL para acreditar este cumplimiento. Se valorará muy positivamente la experiencia del/la candidata/a en transferencia de tecnología.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>- Análisis de muestras humanas y de rata: procesamiento de tejidos, aislamiento y cultivo de células hepáticas primarias (hepatocitos y células no parenquimales), y obtención y cultivo de cortes hepáticos de precisión (PCLS). Aplicación de técnicas de RT-PCR, Western blot, inmunohistoquímica/inmunofluorescencia y ELISA.</p><p>- Participación en el desarrollo, caracterización y validación de biomodelos hepáticos en el marco de la plataforma de biomodelos del CIBER, incluyendo la estandarización de protocolos, el control de calidad y su aplicación al estudio de mecanismos de enfermedad y a la evaluación de nuevas estrategias terapéuticas.</p><p>- Análisis bioinformáticos de datos de transcriptómica bulk, transcriptómica espacial, single-cell RNA-seq y proteómica, incluyendo control de calidad, caracterización de tipos celulares, análisis de vías moleculares, GSEA y comunicación intercelular.</p><p>- Presentación de resultados en reuniones científicas, seminarios y congresos.</p><p>- Redacción y publicación de artículos científicos, elaboración de protocolos e informes técnicos y participación en solicitudes de proyectos de investigación y de desarrollo de nuevas tecnologías.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Doctorado en Medicina</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>- Experiencia postdoctoral acreditada de al menos 5 años en investigación biomédica traslacional, preferentemente en el ámbito de las enfermedades hepáticas. Estancia internacional de investigación de duración superior a 3 años.</p><p>- Amplia experiencia en el manejo y procesamiento de muestras humanas y animales (rata/ratón), incluyendo tejidos y aislamiento y cultivo de células primarias hepáticas: hepatocitos, células endoteliales sinusoidales, células hepáticas estrelladas y células de Kupffer.</p><p>- Experiencia demostrada en la obtención, mantenimiento y análisis de cortes hepáticos de precisión (PCLS) y otros modelos experimentales ex vivo, así como en su aplicación al estudio de mecanismos de enfermedad y a la evaluación de estrategias terapéuticas.</p><p>- Experiencia en el desarrollo, caracterización y validación de biomodelos, incluyendo la estandarización de procedimientos, la definición de criterios de calidad y la evaluación de su reproducibilidad y relevancia traslacional.</p><p>- Dominio de técnicas de biología molecular y celular, incluyendo cultivo celular, RT-PCR, Western blot, inmunohistoquímica, inmunofluorescencia y ELISA.</p><p>- Experiencia sólida en el análisis bioinformático de datos ómicos complejos, incluyendo transcriptómica bulk, transcriptómica espacial, secuenciación de ARN de célula única (single-cell RNA-seq) y proteómica.</p><p>- Conocimientos avanzados en control de calidad y procesamiento de datos, análisis de expresión génica diferencial, análisis funcional y de vías moleculares, Gene Set Enrichment Analysis (GSEA), análisis de comunicación intercelular y caracterización de poblaciones celulares. Dominio de programación en R y Python.</p><p>- Capacidad para proporcionar apoyo científico-técnico a proyectos colaborativos de la plataforma de biomodelos del CIBER, elaborar y transferir protocolos y formar a personal investigador en su implementación.</p><p>- Experiencia en la presentación de resultados científicos en reuniones de grupo, seminarios nacionales e internacionales y congresos científicos.</p><p>- Historial acreditado de publicaciones científicas en revistas internacionales revisadas por pares.</p><p>- Experiencia en la redacción de proyectos de investigación competitivos, memorias científicas, informes técnicos y solicitudes de financiación, así como participación en el desarrollo de nuevas metodologías o tecnologías de investigación.</p><p>- Fluidez oral y escrita en catalán, castellano e inglés.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorará muy positivamente la capacidad de trabajo en equipo, la proactividad científica y la experiencia en la colaboración con grupos clínicos.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> CENTRO ESTHER KOPLOWITZ</p><p><strong>Provincia:</strong> BARCELONA</p><p><strong>Tipo de contrato:</strong> Postdoctoral Ley de la ciencia</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 37.300,35 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Doctor · Doctorado en Medicina",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3918"
+ },
+ "3919": {
+  "apply_url": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3919",
+  "category": "Doctor",
+  "closed_at": null,
+  "code": "3392/3919",
+  "company": "CIBER",
+  "contract": "Interinidad",
+  "deadline": "2026-11-19",
+  "deadline_time": null,
+  "department": "CIBERBBN",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3919",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-19",
+  "location": "Instituto Interuniversitario de Investigación de Reconocimiento Molecular y Desarrollo Tecnológico; VALENCIA",
+  "missed_runs": 0,
+  "opens_on": "2026-11-05",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3919",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Se requiere Doctorado en el ámbito de las Ciencias Biomédicas para coordinación de la infraestructura NANBIOSIS. Gestión y coordinación general de la ICTS distribuida, asegurando el seguimiento de los protocolos para favorecer una gestión on line y centralizada de NANBIOSIS en las modalidades de acceso competitivo y a demanda.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Plaza de sustitución de coordinación de la infraestructura NANBIOSIS. Representación e interlocución con el Ministerio y/o Agencia Financiadora. En coordinación con la Dirección Científica de NANBIOSIS y del área de BBN, búsqueda de colaboraciones a nivel nacional e internacional, elaboración de planes estratégicos y planes de inversiones. Elaboración de propuestas para conseguir financiación competitiva y seguimiento de los proyectos concedidos. Participación en foros, conferencias y eventos de partnering para promocionar la infraestructura. Seguimiento de la actividad realizada por las unidades y elaboración de informes periódicos. Diseño y optimización de nuevas soluciones biomédicas avanzadas coordinando a las unidades participantes. Consolidación del servicio integral de caracterización y asesoría en cascada.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Doctorado en Biología, Biomedicina, Biotecnología, Bioquímica o áreas afines</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Se requiere conocimiento previo en proyectos de investigación a nivel europeo (Horizon 2020, Horizon Europa) en el área de investigación biomédica. Conocimiento de la gestión de infraestructuras de investigación. Conocimiento de los agentes del Sistema Español de Ciencia, Tecnología e Innovación (SECTI), incluyendo el Mapa de Infraestructuras Científicas y Técnicas Singulares de España y de otros agentes públicos y privados a nivel internacional con los que buscar oportunidades. Conocimiento del funcionamiento de centros de investigación pública. Se valorará experiencia en la coordinación de equipos de trabajo en el ámbito científico (biomedicina) en un entorno de alto nivel. Conocimiento de los estándares de calidad en la investigación biomédica (ISO, ASTM, GLP) y de los procesos de implantación. Conocimiento de técnicas analíticas, equipamiento singular y servicios científico-técnicos en el ámbito de la investigación en biomedicina. Redacción y publicación de informes y artículos científicos. Experiencia en solicitud y en gestión de proyectos de I+D en colaboración con empresas. Nivel alto de inglés.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Manejo a nivel avanzado de herramientas informáticas MS Office (Word, Excel). Disponibilidad para viajar. Se valorará experiencia en difusión, en comunicación digital (estrategias SEO) y formación en manejo de animales de laboratorio. Se busca una persona dinámica y proactiva, con iniciativa y actitud positiva, versátil, resolutiva, con elevada capacidad de análisis y planificación. Alta motivación para el trabajo en equipo. Habilidades de comunicación tanto escrita como oral. Capacidad de interacción en un entorno científico de alto nivel y disposición para aprender. Aptitudes para estructurar y organizar de forma autónoma el trabajo, capacidad para trabajar con fechas de entrega y gestión de multitarea.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> Instituto Interuniversitario de Investigación de Reconocimiento Molecular y Desarrollo Tecnológico</p><p><strong>Provincia:</strong> VALENCIA</p><p><strong>Tipo de contrato:</strong> Interinidad</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 37.300,35 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Doctor · Doctorado en Biología, Biomedicina, Biotecnología, Bioquímica o áreas afines",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3919"
+ },
+ "3921": {
+  "apply_url": "https://intranet.cientifis.com/CiberEHD/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3921",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3394/3921",
+  "company": "CIBER",
+  "contract": "Predoctoral Ley de la ciencia",
+  "deadline": "2026-11-15",
+  "deadline_time": null,
+  "department": "CIBEREHD",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "ciber:3921",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-15",
+  "location": "CIC BIOGUNE; VIZCAYA",
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3921",
+  "region": "País Vasco",
+  "sections": [
+   {
+    "html": "<p>Se requiere un/a Titulado/a Superior (Licenciatura o Grado + Máster equivalente Meces 3) en Biomedicina para desarrollar una tesis doctoral centrada en el estudio de cómo la disrupción circadiana y las alteraciones del metabolismo del sulfuro de hidrógeno (H₂S) contribuyen a la progresión del carcinoma hepatocelular. El proyecto investigará los mecanismos metabólicos, mitocondriales e inmunológicos implicados y el potencial preventivo de intervenciones nutricionales basadas en proteínas vegetales, en colaboración entre CIC bioGUNE y CIMA–Universidad de Navarra. La contratación se formalizará mediante un contrato PREDOCTORAL, por este motivo al presentar la solicitud se deberá acompañar de ESCRITO DE ADMISIÓN AL PROGRAMA DE DOCTORADO expedido por la unidad responsable de dicho programa o por la escuela de doctorado o postgrado en su caso. Será requisito indispensable para poder participar en el proceso de selección, acompañar al menos de certificado de preadmisión al programa de doctorado expedido por la unidad responsable de dicho programa, o por la escuela de doctorado o postgrado en su caso, siendo causa de exclusión no adjuntarlo con el título al presentar la solicitud. Tras el proceso de selección, la formalización contractual estará supeditada a la aportación previa del escrito de admisión definitiva al mismo y de su correspondiente matrícula del año en curso, todo ello conforme a lo que se recoge en el art. 21 b) de la Ley 14/2011, de 1 de junio. Será requisito indispensable no haber sido contratado/a mediante esta modalidad de contrato predoctoral, en la misma o distinta entidad, por un tiempo superior a cuatro años, para su acreditación se presentará INFORME DE VIDA LABORAL, siendo causa de exclusión no adjuntarlo.</p><p>La presente convocatoria se rige por los plazos del Procedimiento de Urgencia.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>•\tDesarrollo de modelos experimentales de disrupción circadiana y hepatocarcinogénesis.</p><p>•\tCaracterización del metabolismo de un carbono, transulfuración y señalización por H₂S mediante técnicas bioquímicas, moleculares y metabolómicas.</p><p>•\tEstudio de la función mitocondrial, homeostasis redox y persulfidación de proteínas.</p><p>•\tCaracterización del microambiente tumoral y de las poblaciones inmunitarias hepáticas mediante citometría de flujo y técnicas complementarias.</p><p>•\tEvaluación de intervenciones nutricionales dirigidas a modular el metabolismo del azufre.</p><p>•\tAnálisis e interpretación de resultados experimentales, elaboración de publicaciones científicas y presentación de resultados en reuniones y congresos.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Titulación Superior (MECES-3) en Biomedicina</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Se valorará positivamente la experiencia previa en laboratorios de investigación biomédica, particularmente en biología molecular, cultivos celulares, modelos animales, metabolismo, inmunología, citometría de flujo, técnicas ómicas y análisis bioinformático.</p><p>Se valorará especialmente la autoría o coautoría de artículos científicos publicados en revistas internacionales revisadas por pares, así como la participación demostrable en proyectos de investigación y comunicaciones a congresos científicos.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>•\tBuen nivel de inglés científico, oral y escrito.</p><p>•\tConocimientos de análisis estadístico y tratamiento de datos experimentales.</p><p>•\tFamiliaridad con herramientas bioinformáticas para el análisis de datos transcriptómicos, metabolómicos o proteómicos.</p><p>•\tCapacidad para trabajar en equipos multidisciplinares, iniciativa científica y disposición para realizar estancias formativas en centros colaboradores.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> CIC BIOGUNE</p><p><strong>Provincia:</strong> VIZCAYA</p><p><strong>Tipo de contrato:</strong> Predoctoral Ley de la ciencia</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · Titulación Superior (MECES-3) en Biomedicina",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3921"
+ }
+}

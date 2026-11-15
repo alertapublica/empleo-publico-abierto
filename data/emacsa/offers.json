@@ -1,0 +1,162 @@
+{
+ "25": {
+  "apply_url": "https://cuestionarios.emacsa.es/inscripciones/25",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMACSA",
+  "contract": null,
+  "deadline": "2026-11-27",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "emacsa:25",
+  "kind": null,
+  "listed_deadline": "2026-11-27",
+  "location": "Córdoba",
+  "missed_runs": 0,
+  "opens_on": "2026-10-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-10-26",
+  "ref": "25",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>27 de octubre - 27 de noviembre</p>",
+    "level": 2,
+    "title": "Plazo de inscripción"
+   },
+   {
+    "html": "<p>Proceso selectivo para la cobertura de 1 plaza de titulado/a de grado medio en Prevención de Riesgos Laborales</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://cuestionarios.emacsa.es/convocatorias/DescargarDoc.aspx?idApartadoDoc=Mjk%3d\">Convocatoria y bases</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases"
+   },
+   {
+    "html": "<ul><li><a href=\"https://cuestionarios.emacsa.es/convocatorias/DescargarDoc.aspx?idApartadoDoc=NDM%3d\">Anuncio de rectificación de error material en las bases de convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Rectificación de error material en las bases"
+   }
+  ],
+  "source": "emacsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado/a de Grado Medio PRL",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/25"
+ },
+ "27": {
+  "apply_url": "https://cuestionarios.emacsa.es/inscripciones/27",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMACSA",
+  "contract": null,
+  "deadline": "2026-11-27",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "emacsa:27",
+  "kind": null,
+  "listed_deadline": "2026-11-27",
+  "location": "Córdoba",
+  "missed_runs": 0,
+  "opens_on": "2026-10-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 2,
+  "published_on": "2026-10-26",
+  "ref": "27",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>27 de octubre - 27 de noviembre</p>",
+    "level": 2,
+    "title": "Plazo de inscripción"
+   },
+   {
+    "html": "<p>Proceso selectivo para la cobertura de 2 plazas de Auxiliar Técnico de Logística</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://cuestionarios.emacsa.es/convocatorias/DescargarDoc.aspx?idApartadoDoc=MzE%3d\">Convocatoria y bases</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases"
+   },
+   {
+    "html": "<ul><li><a href=\"https://cuestionarios.emacsa.es/convocatorias/DescargarDoc.aspx?idApartadoDoc=NDI%3d\">Anuncio de rectificación de error material en las bases de convocatoria</a></li></ul><p><br/></p>",
+    "level": 2,
+    "title": "Rectificación de error material en las bases"
+   }
+  ],
+  "source": "emacsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Auxiliar Técnico de Logística",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/27"
+ },
+ "28": {
+  "apply_url": "https://cuestionarios.emacsa.es/inscripciones/28",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMACSA",
+  "contract": null,
+  "deadline": "2026-11-30",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T14:06:29+00:00",
+  "id": "emacsa:28",
+  "kind": null,
+  "listed_deadline": "2026-11-30",
+  "location": "Córdoba",
+  "missed_runs": 0,
+  "opens_on": "2026-11-04",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 3,
+  "published_on": "2026-11-03",
+  "ref": "28",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>04 de noviembre - 30 de noviembre</p>",
+    "level": 2,
+    "title": "Plazo de inscripción"
+   },
+   {
+    "html": "<p>Proceso selectivo para la cobertura de 3 plazas de Auxiliar Técnico Operaciones</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://cuestionarios.emacsa.es/convocatorias/DescargarDoc.aspx?idApartadoDoc=NDA%3d\">Convocatoria y bases</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases"
+   }
+  ],
+  "source": "emacsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Auxiliar Técnico Operaciones",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/28"
+ }
+}
