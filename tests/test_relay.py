@@ -141,6 +141,13 @@ class Directa(unittest.TestCase):
             self.assertIsNotNone(http.relay_cf(SEPI, None))
 
 
+class Origen(unittest.TestCase):
+    def test_mismo_origen_con_y_sin_puerto_por_defecto(self):
+        self.assertEqual(http._origin("https://WWW.sepi.es:443/a"), http._origin("https://www.sepi.es/b"))
+        self.assertEqual(http._origin(PORTAL_TRAGSA), "https://rrhhcandidato.tragsa.es:8443")
+        self.assertNotEqual(http._origin("https://agenciaefe.es/"), http._origin("https://www.agenciaefe.es/"))
+
+
 class MismaListaQueElWorker(unittest.TestCase):
     def test_los_hosts_del_cliente_son_los_origenes_del_worker_y_todos_https(self):
         node = shutil.which("node") or "node"  # sin node, falla: no se salta en silencio

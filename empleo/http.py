@@ -60,7 +60,8 @@ def relay_cf(url: str, data: bytes | None) -> tuple[str, dict[str, str]] | None:
 def _origin(url: str) -> str:
     """Esquema, host y puerto: el Worker no sigue redirecciones a otro origen, así que sus cookies son de este."""
     parts = urllib.parse.urlsplit(url)
-    return f"{parts.scheme}://{parts.netloc.lower()}"
+    port = parts.port if parts.port not in (None, {"https": 443, "http": 80}.get(parts.scheme)) else None
+    return f"{parts.scheme}://{parts.hostname}" + (f":{port}" if port else "")
 
 
 class Client:

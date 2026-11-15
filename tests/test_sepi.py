@@ -80,6 +80,9 @@ class Sepi(unittest.TestCase):
         urls = [row["url"] for row in sepi.parse_page(fixture("sepi-empleo-2025-06.html"))]
         self.assertTrue(urls)
         self.assertTrue(all(url.startswith("https://www.sepi.es/es/empleo-publico/") for url in urls), urls)
+        for href in ("https://SEPI.ES/es/empleo-publico/x", "http://sepi.es:443/es/empleo-publico/x?a=1"):
+            page = f'<div class="bloque-empleo"><h2>T</h2><a href="{href}">ver</a></div>'
+            self.assertEqual(sepi.parse_page(page)[0]["url"].split("?")[0], "https://www.sepi.es/es/empleo-publico/x")
 
     def test_cierra_a_la_hora(self):
         page = "sepi-empleo-2026-01.html"

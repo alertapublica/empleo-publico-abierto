@@ -23,7 +23,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timezone
 from html import escape
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
@@ -69,7 +69,10 @@ def parse_page(html: str) -> list[dict]:
         if title is None or link is None:
             raise SourceLayoutError("SEPI: proceso sin título o enlace")
         # Con www: es el host que va por el Worker (en 2025 el listado enlazaba algunas fichas sin www).
-        url = re.sub(r"^https?://sepi\.es/", "https://www.sepi.es/", urljoin(PAGE, link["href"]))
+        url = urljoin(PAGE, link["href"])
+        parts = urlsplit(url)
+        if parts.hostname == "sepi.es" and parts.port in (None, 80, 443):
+            url = urlunsplit(("https", "www.sepi.es", parts.path, parts.query, parts.fragment))
         status = block.select_one(".plazo")
         found.append({
             "ref": url.rstrip("/").rsplit("/", 1)[-1], "title": _clean(title.get_text(" ")), "url": url,
