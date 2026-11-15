@@ -674,7 +674,7 @@ class RunSource(unittest.TestCase):
         self.assertEqual((record["deadline"], record["deadline_time"], source.detail_calls), ("2026-11-20", None, 2))
 
     def test_plazo_calculado_la_ficha_corrige_fecha_y_regla(self):
-        # UDC: el listado calcula con 5 días hábiles; el PDF de la ficha dice 10 y corrige las dos cosas.
+        # Una regla provisional del listado la corrige la ficha, como la fecha, y la lectura siguiente no la pisa.
         source = FakeSource([listed(deadline="2026-11-17", deadline_rule="5 días hábiles")],
                             OfferDetail(deadline="2026-11-24", deadline_rule="10 días hábiles"))
         ingest.run_source(source, None, self.data, NOW)
@@ -682,6 +682,26 @@ class RunSource(unittest.TestCase):
         record = self.stored()["1"]
         self.assertEqual((record["deadline"], record["deadline_rule"]), ("2026-11-24", "10 días hábiles"))
         self.assertEqual(source.detail_calls, 1)
+
+    def test_plazo_calculado_solo_desde_la_ficha(self):
+        # UDC: el listado no da plazo; si la ficha falla, no hay fecha (ni regla), no una supuesta.
+        source = FakeSource([listed(deadline=None)], OfferDetail(deadline="2026-11-24", deadline_rule="5 días hábiles"))
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["deadline"], self.stored()["1"]["deadline_rule"]), ("2026-11-24", "5 días hábiles"))
+        failing = FakeSource([listed(ref="2", deadline=None)], None)
+        failing.fetch_detail = lambda http, offer: (_ for _ in ()).throw(RuntimeError("PDF ilegible"))
+        ingest.run_source(failing, None, self.data, NOW)
+        self.assertEqual((self.stored()["2"]["deadline"], self.stored()["2"].get("deadline_rule")), (None, None))
+
+    def test_fecha_nueva_de_la_ficha_sin_regla_deja_de_ser_calculada(self):
+        source = FakeSource([listed(deadline=None)], OfferDetail(deadline="2026-11-24", deadline_rule="5 días hábiles"))
+        ingest.run_source(source, None, self.data, NOW)
+        records = self.stored()
+        records["1"]["detail_ok"] = False
+        store.save(self.data / "enusa" / "offers.json", records)
+        source.detail = OfferDetail(deadline="2026-11-26")
+        ingest.run_source(source, None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["deadline"], self.stored()["1"]["deadline_rule"]), ("2026-11-26", None))
 
     def test_plazas_de_la_ficha_si_el_listado_no_las_trae(self):
         source = FakeSource([listed(positions=None)], OfferDetail(positions=4))

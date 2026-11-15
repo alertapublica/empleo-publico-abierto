@@ -21,10 +21,14 @@ todos (art. 30.6 de la Ley 39/2015); los de Ferrol y Oleiros solo alargan el pla
 el 31 de diciembre (oficinas cerradas) y el 30 de enero (día de la Universidade) son dudosos: cuentan como hábiles,
 y así sale la fecha más temprana posible. Un año sin calendario en `HOLIDAYS` detiene la fuente.
 
-El listado calcula el plazo con 5 días; la ficha lee el PDF una sola vez (`fetch_detail`; pesa unos 400 KB) y, si da
-otro número de días, corrige el plazo; sin regla legible, la ficha avisa. Del PDF se copia también el título del
-proyecto. Dos plantillas de PDF: una de ellas (LaTeX) separa las tildes («d ´ ıas h´ abiles»): se recomponen.
-Correcciones de una convocatoria abierta («Corrección erros»): se enlazan en la ficha, sin cambiar el plazo.
+El listado no da plazo: con los 5 días solo decide qué convocatorias siguen abiertas (y no abre la ficha de las
+vencidas). La fecha y la regla las pone la ficha, que lee el PDF una sola vez (`fetch_detail`; pesa unos 400 KB),
+y solo si su texto dice literalmente «PLAZO: 5 días hábiles a partir del día siguiente al de la publicación en el
+tablón…»: otro número de días, otra redacción o un año sin calendario dejan la oferta con «Plazo: no consta» y la
+ficha avisa (revisión de Codex, respuesta45). Del PDF se copia también el título del proyecto. Dos plantillas de
+PDF: una de ellas (LaTeX) separa las tildes («d ´ ıas h´ abiles»): se recomponen. Correcciones de una convocatoria
+abierta («Corrección erros»): se enlazan en la ficha si ya están al leerla (una posterior no llega: la ficha no se
+relee) y no cambian el plazo.
 Sin municipio: hay centros en A Coruña y en Ferrol.
 """
 from __future__ import annotations
@@ -66,11 +70,13 @@ NOT_CALL = re.compile(r"resoluci|listax|\blista|\bacta\b|rvit|\bvit\b|correcc|cu
                       r"puntua|recurso", re.I)
 CORRECTION = re.compile(r"correcc", re.I)
 PUBLISHED = re.compile(r"Data de publicación:\s*(\d{2}/\d{2}/\d{4})")
-PLAIN_RULE = re.compile(r"plazo:\s*(\d+) dias habiles a partir del dia siguiente al de la publicacion en el tablon "
-                        r"de anuncios de la sede electronica")
-LITERAL_RULE = re.compile(r"PLAZO:\s*(\d+ días hábiles a partir del día siguiente al de la publicación en el tablón de "
-                          r"anuncios de la Sede electrónica de la UDC)", re.I)
-PROJECT = re.compile(r"Título:\s*(.+?)\s+Línea de investigación")
+# En castellano o en gallego (algún anuncio «ES» va en gallego: 2026/CP/260).
+PLAIN_RULE = re.compile(r"(?:plazo|prazo):\s*(\d+) dias habiles a partir d(?:el dia siguiente al de la|o dia seguinte ao da) "
+                        r"publicacion (?:en el tablon|no taboleiro) de anuncios d(?:e la|a) sede electronica d(?:e la|a) udc")
+LITERAL_RULE = re.compile(r"(?:PLAZO|PRAZO):\s*(\d+ días hábiles a partir d(?:el día siguiente al de la|o día seguinte ao da) "
+                          r"publicación (?:en el tablón|no taboleiro) de anuncios d(?:e la|a) Sede electrónica d(?:e la|a) UDC)",
+                          re.I)
+PROJECT = re.compile(r"Título:\s*(.+?)\s+(?:Línea|Liña) de investigación\s*(?::|/)")
 
 
 def _clean(text: str) -> str:
@@ -125,9 +131,13 @@ def parse_ficha(html: str) -> dict:
     if not (published and title):
         raise SourceLayoutError("Universidade da Coruña: ficha sin «Data de publicación» o sin título")
     heading = _clean(title.get_text(" "))
-    texts = [_clean(p.get_text(" ")) for p in box.select("p") if "date" not in (p.get("class") or [])]
-    description = next((text for text in texts if text.startswith(heading)), "")
-    category = description[len(heading):].strip(" ,.") or None
+    texts = [text for p in box.select("p") if "date" not in (p.get("class") or []) and (text := _clean(p.get_text(" ")))]
+    # «título, categoría.», «título. categoría.» o la categoría en el párrafo de después del título (o sola).
+    rest = [text for text in texts if text != heading]
+    if rest and rest[0].startswith(heading):
+        category = rest[0][len(heading):].strip(" ,.") or None
+    else:
+        category = rest[0].strip(" .") if len(rest) == 1 else None
     documents = [(_clean(a.get_text(" ")), urljoin(SITE, a["href"])) for a in box.select("ul a[href]")]
     pdf = next((url for label, url in documents if label.startswith("Anuncio ES")), None)
     pdf = pdf or next((url for label, url in documents if label.startswith("Anuncio")), None)
@@ -200,9 +210,11 @@ class UdcSource(Source):
             if deadline_passed(deadline, None, now):
                 continue
             title = f"{ficha['category']} · {center}" if ficha["category"] else row["title"]
+            # Sin plazo en el listado: lo pone la ficha cuando el PDF confirma la regla. Si no la confirma,
+            # la oferta queda con «Plazo: no consta», nunca con una fecha supuesta.
             offers.append(ListedOffer(
                 ref=ref, title=title, company=COMPANY, url=row["url"], apply_url=row["url"], kind=None,
-                published_on=ficha["published_on"], deadline=deadline, code=code, deadline_rule=RULE,
+                published_on=ficha["published_on"], code=code,
                 source_title=row["title"] if ficha["category"] else None,
             ))
         return offers
@@ -212,17 +224,20 @@ class UdcSource(Source):
         if not ficha["pdf"]:
             raise SourceLayoutError("Universidade da Coruña: ficha sin el anuncio en PDF")
         found = parse_pdf(read_pdf(http, ficha["pdf"], f"Universidade da Coruña, anuncio {offer.code}"))
-        if found["days"] is None:
-            raise SourceLayoutError(f"Universidade da Coruña: el anuncio {offer.code} no trae «PLAZO: N días hábiles…»")
-        deadline = business_deadline(date.fromisoformat(ficha["published_on"]), found["days"]).isoformat()
+        if found["days"] != DAYS or not found["rule"]:
+            # Otro número de días: el listado deja de ver la convocatoria a los cinco y la cerraría antes de tiempo.
+            raise SourceLayoutError(f"Universidade da Coruña: el anuncio {offer.code} no dice «PLAZO: {DAYS} días hábiles "
+                                    f"a partir del día siguiente al de la publicación en el tablón…» (días: {found['days']})")
+        deadline = business_deadline(date.fromisoformat(ficha["published_on"])).isoformat()
         sections = []
         if found["project"]:
             sections.append({"title": "Proyecto", "level": 2, "html": f"<p>{escape(found['project'])}</p>"})
-        sections.append({"title": "Plazo de presentación", "level": 2,
-                         "html": f"<p>{escape(found['rule'] or RULE.replace('5 días', str(found['days']) + ' días'))}.</p>"})
+        rule = {"title": "Plazo de presentación", "level": 2, "html": f"<p>{escape(found['rule'])}.</p>"}
+        if "seguinte" in found["rule"]:  # redactado en gallego
+            rule["lang"] = self.text_lang
+        sections.append(rule)
         documents = ficha["documents"] + self._corrections.get(offer.code or "", [])
         if documents:
             items = "".join(f'<li><a href="{escape(url, quote=True)}">{escape(label)}</a></li>' for label, url in documents)
             sections.append({"title": "Documentos", "level": 2, "html": sanitize(f"<ul>{items}</ul>")})
-        return OfferDetail(sections=sections, deadline=deadline,
-                           deadline_rule=found["rule"] or RULE.replace("5 días", f"{found['days']} días"))
+        return OfferDetail(sections=sections, deadline=deadline, deadline_rule=found["rule"])

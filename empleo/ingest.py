@@ -237,7 +237,8 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
         record.update(sections=detail.sections or (record["sections"] if recheck else []), detail_ok=True,
                       detail_version=source.detail_version, parent_ref=detail.parent_ref)
         record["deadline"] = detail.deadline or record["deadline"]
-        if detail.deadline_rule:
+        # La regla va con la fecha: una fecha nueva de la ficha sin regla deja de ser calculada.
+        if detail.deadline and (detail.deadline_rule or record.get("deadline_rule")):
             record["deadline_rule"] = detail.deadline_rule
         for field in LISTING_OR_DETAIL:
             record[field] = getattr(detail, field) or record.get(field)

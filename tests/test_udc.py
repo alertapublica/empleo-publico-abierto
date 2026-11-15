@@ -26,10 +26,12 @@ def old_page():
 class Http:
     """Las dos primeras páginas reales de «Anuncios institucionais» del 2026-11-15 (gallego, como las lee el portal)
     y las fichas reales de 2026/CP/263 (10/11) y 2026/CP/259 (06/11). Las de 262, 261 y 260, del mismo día que la
-    263, salen con la suya; cualquier otra, con la de la 259."""
+    263, salen con la suya; las de 254 a 258 (05/11), con la de la 259. Otra dirección hace fallar la prueba."""
 
     FICHAS = {"/011907": "udc-ficha-cp263.html", "/011906": "udc-ficha-cp263.html", "/011905": "udc-ficha-cp263.html",
-              "/011904": "udc-ficha-cp263.html"}
+              "/011904": "udc-ficha-cp263.html", "/011800": "udc-ficha-cp259.html", "/011757": "udc-ficha-cp259.html",
+              "/011744": "udc-ficha-cp259.html", "/011743": "udc-ficha-cp259.html", "/011741": "udc-ficha-cp259.html",
+              "/011736": "udc-ficha-cp259.html"}
 
     def __init__(self):
         self.asked = []
@@ -42,7 +44,7 @@ class Http:
             return fixture("udc-taboleiro-p2.html")
         if url == udc.INDEX + "?page=3":
             return old_page()
-        return fixture(next((name for end, name in self.FICHAS.items() if url.endswith(end)), "udc-ficha-cp259.html"))
+        return fixture(next(name for end, name in self.FICHAS.items() if url.endswith(end)))
 
 
 class Calendar(unittest.TestCase):
@@ -87,6 +89,13 @@ class Ficha(unittest.TestCase):
         self.assertEqual([label for label, _ in ficha["documents"]], ["Anuncio GL [pdf]", "Anuncio ES [pdf]"])
         self.assertTrue(ficha["pdf"] == ficha["documents"][1][1])  # el castellano
 
+    def test_categoria_en_su_propio_parrafo(self):
+        html = fixture("udc-ficha-cp263.html")
+        start = html.index("<p>", html.index('class="date"'))
+        end = html.index("</p>", start) + 4
+        html = html[:start] + "<p>Conv. contrat. 2026/CP/263. Facultade de Dereito</p><p>Técnico de apoio á investigación.</p>" + html[end:]
+        self.assertEqual(udc.parse_ficha(html)["category"], "Técnico de apoio á investigación")
+
     def test_categoria_tras_coma(self):
         ficha = udc.parse_ficha(fixture("udc-ficha-cp259.html"))
         self.assertEqual(ficha["category"], "Técnico de Apoio á Investigación a tempo completo")
@@ -99,8 +108,19 @@ class Ficha(unittest.TestCase):
         self.assertEqual((latex["days"], latex["project"]), (5, "Grupos de referencia competitiva (GRC)"))
         self.assertIn("5 días hábiles a partir del día siguiente", latex["rule"])
 
+    def test_pdf_en_gallego(self):  # el «Anuncio ES» de 2026/CP/260 está en gallego
+        found = udc.parse_pdf(fixture("udc-anuncio-cp260.txt"))
+        self.assertEqual((found["days"], found["rule"]), (5, "5 días hábiles a partir do día seguinte ao da publicación no "
+                                                             "taboleiro de anuncios da Sede electrónica da UDC"))
+        self.assertTrue(found["project"].startswith("ENACT- Regulatory Attenuation"))
+
     def test_pdf_sin_regla(self):
         self.assertIsNone(udc.parse_pdf("PLAZO: el que diga el BOE")["days"])
+
+    def test_titulo_del_proyecto_con_linea_dentro(self):
+        text = fixture("udc-anuncio-cp263.txt").replace(
+            "Título: ENACT- Regulatory", "Título: ENACT: Línea de investigación sobre regulación. Regulatory")
+        self.assertTrue(udc.parse_pdf(text)["project"].startswith("ENACT: Línea de investigación sobre regulación."))
 
 
 class Source(unittest.TestCase):
@@ -108,19 +128,22 @@ class Source(unittest.TestCase):
         http = Http()
         offers = udc.UdcSource(now=at(11, 15)).list_offers(http)
         # 263, 262, 261 y 260 (10/11, hasta el 17/11). Las del 05 y 06/11 vencieron el 12 y el 13: ni se abren.
-        self.assertEqual([(o.code, o.deadline) for o in offers],
-                         [(f"2026/CP/{n}", "2026-11-17") for n in (263, 262, 261, 260)])
+        # Sin plazo en el listado: lo pone la ficha al leer el PDF.
+        self.assertEqual([(o.code, o.deadline, o.deadline_rule) for o in offers],
+                         [(f"2026/CP/{n}", None, None) for n in (263, 262, 261, 260)])
         first = offers[0]
-        self.assertEqual((first.ref, first.title, first.source_title, first.published_on, first.deadline_rule),
+        self.assertEqual((first.ref, first.title, first.source_title, first.published_on),
                          ("2026-cp-263", "Colaborador de investigación a tempo completo · Facultade de Dereito",
-                          "Conv. contrat. 2026/CP/263. Facultade de Dereito", "2026-11-10", udc.RULE))
+                          "Conv. contrat. 2026/CP/263. Facultade de Dereito", "2026-11-10"))
         self.assertEqual(http.asked[:3], [udc.INDEX, udc.INDEX + "?page=2", udc.INDEX + "?page=3"])
         self.assertEqual(len(http.asked), 7)  # tres páginas y cuatro fichas
 
     def test_resoluciones_listas_y_correcciones_no_son_ofertas(self):
         offers = udc.UdcSource(now=at(11, 11)).list_offers(Http())
-        self.assertNotIn("2026/CP/253", [o.code for o in offers])  # solo «Lista Definitiva» en el tablón
-        self.assertIn("2026/CP/259", [o.code for o in offers])  # 06/11: hasta el 13/11
+        codes = [o.code for o in offers]
+        self.assertNotIn("2026/CP/253", codes)  # solo «Lista Definitiva» en el tablón
+        self.assertNotIn("2026/CP/248", codes)  # «Resolución Definitiva»
+        self.assertIn("2026/CP/259", codes)  # 06/11: hasta el 13/11
 
     def test_ficha_lee_el_pdf_y_marca_el_calculo(self):
         source = udc.UdcSource(now=at(11, 15))
@@ -132,15 +155,21 @@ class Source(unittest.TestCase):
         self.assertEqual((detail.deadline, detail.deadline_rule), ("2026-11-17", udc.RULE))
         self.assertEqual([s["title"] for s in detail.sections], ["Proyecto", "Plazo de presentación", "Documentos"])
 
-    def test_otro_numero_de_dias_corrige_el_plazo(self):
+    def test_otro_numero_de_dias_avisa_y_no_pone_fecha(self):
         source = udc.UdcSource(now=at(11, 15))
         http = Http()
         offer = source.list_offers(http)[0]
         text = fixture("udc-anuncio-cp263.txt").replace("PLAZO: 5 días", "PLAZO: 10 días")
-        with mock.patch.object(udc, "read_pdf", return_value=text):
-            detail = source.fetch_detail(http, offer)
-        self.assertEqual(detail.deadline, "2026-11-24")
-        self.assertTrue(detail.deadline_rule.startswith("10 días hábiles"))
+        with mock.patch.object(udc, "read_pdf", return_value=text), self.assertRaises(SourceLayoutError):
+            source.fetch_detail(http, offer)
+
+    def test_otra_redaccion_no_se_suple_con_la_frase_de_la_udc(self):
+        source = udc.UdcSource(now=at(11, 15))
+        http = Http()
+        offer = source.list_offers(http)[0]
+        text = fixture("udc-anuncio-cp263.txt").replace("Sede electrónica de la UDC", "Sede electrónica del BOE")
+        with mock.patch.object(udc, "read_pdf", return_value=text), self.assertRaises(SourceLayoutError):
+            source.fetch_detail(http, offer)
 
     def test_pdf_sin_regla_avisa(self):
         source = udc.UdcSource(now=at(11, 15))
