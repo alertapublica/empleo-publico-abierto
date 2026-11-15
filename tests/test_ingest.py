@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from empleo import feeds, ingest, store
+from empleo.http import OutOfTime
 from empleo.model import Announcement, ListedOffer, OfferDetail, SourceLayoutError
 from empleo.sources.base import Source
 
@@ -288,6 +289,55 @@ class RunSource(unittest.TestCase):
         self.assertEqual(record["published_on"], "2026-11-02")
         self.assertTrue(record["detail_ok"])
         self.assertEqual(len(self.stored("announcements.json")), 1)
+
+    class Cut(FakeSource):
+        """Se queda sin plazo tras `fichas` fichas, o en el portal."""
+
+        def __init__(self, offers, fichas=None, portal=False):
+            super().__init__(offers, OfferDetail(location="Salamanca"), {})
+            self.fichas, self.portal, self.read = fichas, portal, []
+
+        def fetch_detail(self, http, offer):
+            if self.fichas is not None and len(self.read) >= self.fichas:
+                raise OutOfTime(f"sin tiempo para leer {offer.url}")
+            self.read.append(offer.ref)
+            return super().fetch_detail(http, offer)
+
+        def enrich(self, http):
+            if self.portal:
+                raise OutOfTime("sin tiempo para leer el portal")
+            return super().enrich(http)
+
+    def test_sin_tiempo_en_las_fichas_guarda_las_leidas_y_la_siguiente_sigue(self):
+        offers = [listed(ref) for ref in "123"]
+        with self.assertRaises(OutOfTime):
+            ingest.run_source(self.Cut(offers, fichas=2), None, self.data, NOW)
+        self.assertEqual([r["detail_ok"] for r in self.stored().values()], [True, True, False])
+        self.assertEqual(self.stored()["1"]["region"], "Castilla y León")
+        self.assertEqual([e["kind"] for e in self.stored("events.json")], ["new"] * 3)
+        self.assertEqual(self.stored("announcements.json"), {})  # esperan a la lectura siguiente
+        source = self.Cut(offers)
+        ingest.run_source(source, None, self.data, NOW + timedelta(hours=1))
+        self.assertEqual(source.read, ["3"])
+        self.assertTrue(all(r["detail_ok"] for r in self.stored().values()))
+        self.assertEqual(len(self.stored("events.json")), 3)
+        self.assertEqual(len(self.stored("announcements.json")), 1)
+
+    def test_sin_tiempo_en_el_portal_guarda_las_fichas(self):
+        with self.assertRaises(OutOfTime):
+            ingest.run_source(self.Cut([listed()], portal=True), None, self.data, NOW)
+        self.assertTrue(self.stored()["1"]["detail_ok"])
+        self.assertEqual(self.stored()["1"]["portal_tries"], 0)
+
+    def test_las_altas_se_leen_antes_que_las_relecturas(self):
+        ingest.run_source(self.Cut([listed("1")]), None, self.data, NOW)
+        source = self.Cut([listed("1"), listed("2")], fichas=1)
+        source.detail_version = 2  # hay que releer la 1
+        with self.assertRaises(OutOfTime):
+            ingest.run_source(source, None, self.data, NOW + timedelta(hours=1))
+        self.assertEqual(source.read, ["2"])
+        self.assertEqual(self.stored()["2"]["detail_version"], 2)
+        self.assertEqual(self.stored()["1"]["detail_version"], 1)
 
     def test_comunidad_desconocida_se_recalcula_con_la_tabla_actual(self):
         detail = OfferDetail(location="Juzbado")

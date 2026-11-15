@@ -133,7 +133,7 @@ ACTIVE = [source for sources in CATALOG.values() for source in sources]
 # cuenta: cada petición es independiente y lo que importa es el servidor de destino.
 # Al dar de alta una fuente, añádela aquí si comparte servidor con otra.
 SHARED_SERVER = {
-    "junta-andalucia": ("andalucia", "ifapa"),  # mismo host
+    "junta-andalucia": ("andalucia", "ifapa", "veiasa"),  # mismo host; Veiasa, misma red (217.12.19.0/24)
     "usc": ("ciqus", "cimus"),
     "successfactors": ("correos", "navantia", "fgc", "bsm", "renfe"),
     "fundanet": ("idibell", "fisabio", "idival", "imas12"),
