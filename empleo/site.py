@@ -718,7 +718,8 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
         ("Plazo", plazo(offer)),
         ("Teletrabajo", remote_text(teletrabajo.read(offer))),
         ("Fecha de publicación", time_tag(offer["published_on"]) if offer.get("published_on") else "No consta"),
-        ("Detectada por este portal", time_tag(offer["first_seen"])),
+        ("Detectada por este portal",
+         time_tag(datetime.fromisoformat(offer["first_seen"]).astimezone(MADRID).date().isoformat())),
     ]
     if offer.get("code"):
         rows.append(("Código de oferta", e(offer["code"])))
