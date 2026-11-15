@@ -57,7 +57,7 @@
  "691687": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/691687.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-15T05:07:27+00:00",
   "code": null,
   "company": "Agencia Pública Empresarial de la Radio y Televisión de Andalucía",
   "contract": "Duración determinada- interinidad",
@@ -72,7 +72,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-14",
   "location": "SEVILLA (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -100,7 +100,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "AUDITOR/A",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/691687.html"
  },
@@ -327,7 +327,7 @@
  "692362": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692362.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-15T05:07:27+00:00",
   "code": "01-2026-49554",
   "company": "Agencia de Medio Ambiente y Agua de Andalucía, M.P.",
   "contract": "Duración determinada- interinidad",
@@ -342,7 +342,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-14",
   "location": "Sevilla (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": null,
@@ -375,7 +375,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico Facultativo Consultoría (Residuos)",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692362.html"
  },
