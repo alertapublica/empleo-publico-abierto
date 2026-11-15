@@ -822,7 +822,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
                    bot: str = "") -> str:
     """Organismos por grupo, primero los que más ofertas tienen. Los que tienen ofertas o procesos en
     marcha llevan a su página; los procesos se muestran como dato secundario. Un buscador (con JS)
-    filtra por nombre o comunidad."""
+    filtra por nombre."""
     processes = processes or {}
 
     def count(source_id: str) -> int:
@@ -834,7 +834,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
         return html + (f'<p class="dato">{running_count(running)}</p>' if running else "")
 
     def searchable(source) -> str:
-        return e(f"{source.name} {source.scope}")
+        return e(source.name)
 
     blocks, index = [], []
     for key, label, members in by_group(sources):
@@ -873,8 +873,8 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
 <p>Para recibir las novedades de un organismo, puede suscribirse a los <a href="../avisos/">avisos por {via}</a>.</p>
 <nav aria-label="Grupos de organismos"><ul class="indice-grupos">{"".join(index)}</ul></nav>
 <form id="buscar-organismos" class="buscador" role="search" aria-label="Buscar organismos" hidden>
-<label for="q-organismos" class="sr-only">Buscar un organismo por nombre o comunidad autónoma</label>
-<input id="q-organismos" type="search" autocomplete="off" placeholder="Nombre o comunidad autónoma">
+<label for="q-organismos" class="sr-only">Buscar un organismo por nombre</label>
+<input id="q-organismos" type="search" autocomplete="off" placeholder="Nombre del organismo">
 </form>
 <p id="estado-organismos" role="status"></p>
 {"".join(blocks)}

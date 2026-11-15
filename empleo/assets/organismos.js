@@ -1,5 +1,5 @@
 // Página de organismos. Mejora progresiva: sin JavaScript se ve todo y el buscador no aparece.
-// Con él, filtra tarjetas y listas «Sin ofertas» por nombre o comunidad, sin tener en cuenta acentos.
+// Con él, filtra tarjetas y listas «Sin ofertas» por nombre, sin tener en cuenta acentos.
 (function () {
   "use strict";
   var form = document.getElementById("buscar-organismos");
