@@ -295,6 +295,11 @@ def until(offer: dict) -> str:
     return f"{time_tag(offer['deadline'], weekday=True)}{hour}"
 
 
+def calculated(offer: dict) -> str:
+    """« (fecha calculada)» si la fecha de cierre no la publica la fuente: sale de su regla (`deadline_rule`)."""
+    return " (fecha calculada)" if offer.get("deadline_rule") else ""
+
+
 def deadline_text(offer: dict, today: date) -> str:
     opens = offer.get("opens_on")
     if opens and date.fromisoformat(opens) > today:
@@ -303,7 +308,7 @@ def deadline_text(offer: dict, today: date) -> str:
     if not offer.get("deadline"):
         return "Plazo: no consta"
     days = (date.fromisoformat(offer["deadline"]) - today).days
-    label = f"Plazo: hasta el {until(offer)}"
+    label = f"Plazo: hasta el {until(offer)}{calculated(offer)}"
     if days == 0:
         return f'<span class="urgente">Finaliza hoy.</span> {label}'
     if days == 1:
@@ -552,8 +557,13 @@ def plazo(offer: dict) -> str:
     if not offer.get("deadline"):
         return "No consta"
     if offer.get("opens_on"):
-        return f"Del {time_tag(offer['opens_on'], weekday=True)} al {until(offer)}"
-    return until(offer)
+        text = f"Del {time_tag(offer['opens_on'], weekday=True)} al {until(offer)}"
+    else:
+        text = until(offer)
+    if offer.get("deadline_rule"):
+        text += (f'<br><span class="nota-plazo">El organismo no publica la fecha de cierre: la calcula este portal '
+                 f'con el calendario oficial. La convocatoria dice: «{e(offer["deadline_rule"])}».</span>')
+    return text
 
 
 def remote_text(remote: teletrabajo.Remote) -> str:
@@ -1447,6 +1457,7 @@ OFFER_FIELDS = [
     (("tipo_contrato", "contrato"), "Tipo de contrato (<code>tipos_contrato</code> en listas.json), solo si la fuente lo indica con claridad, y texto literal del contrato."),
     (("convocatoria", "tipo_puesto", "departamento"), "Datos que la fuente publica con esas denominaciones, si los publica."),
     (("plazo_inicio", "plazo_fin", "plazo_hora"), "Fechas de inicio y fin del plazo (<code>AAAA-MM-DD</code>) y hora de cierre (<code>HH:MM</code>, hora peninsular). Sin hora, el último día cuenta completo."),
+    (("plazo_regla",), "Si el organismo no publica la fecha de cierre, la regla literal de la convocatoria («5 días hábiles a partir del día siguiente al de la publicación…») con la que este portal calcula <code>plazo_fin</code>; <code>null</code> en las demás."),
     (("publicada",), "Fecha de publicación según la fuente."),
     (("detectada", "cerrada"), "Momentos (ISO 8601) en que este portal detectó la oferta y en que se cerró."),
     (("republica",), "Código de la oferta anterior, si es una nueva publicación de aquella."),
@@ -1622,7 +1633,8 @@ def offer_summary(offer: dict, published: bool = False) -> str:
     parts = [
         offer.get("company"), where(offer), seats(offer.get("positions")),
         f"Plazo: {long_date(offer.get('deadline'))}"
-        + (f", a las {offer['deadline_time']}" if offer.get("deadline") and offer.get("deadline_time") else ""),
+        + (f", a las {offer['deadline_time']}" if offer.get("deadline") and offer.get("deadline_time") else "")
+        + (calculated(offer) if offer.get("deadline") else ""),
         f"Publicada el {long_date(offer['published_on'])}" if published and offer.get("published_on") else None,
     ]
     return " · ".join(str(p) for p in parts if p)
@@ -1737,7 +1749,8 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "convocatoria": offer.get("category"), "tipo_puesto": offer.get("family"),
         "departamento": offer.get("department"),
         "plazo_inicio": offer.get("opens_on"), "plazo_fin": offer.get("deadline"),
-        "plazo_hora": offer.get("deadline_time"), "publicada": offer.get("published_on"),
+        "plazo_hora": offer.get("deadline_time"), "plazo_regla": offer.get("deadline_rule"),
+        "publicada": offer.get("published_on"),
         "detectada": offer["first_seen"], "cerrada": offer.get("closed_at"), "republica": offer.get("parent_ref"),
         "areas": areas.offer_areas(offer, group)[0],
         "perfil": (perfiles.classify(offer["title"], offer["source"]) or None) if group in RESEARCH_GROUPS else None,

@@ -179,6 +179,7 @@ main.ancho { padding-top: 1rem; padding-bottom: 3rem; }
 .nota.alerta { border-color: var(--alert); background: var(--alert-bg); }
 .nota > :first-child { margin-top: 0; }
 .nota > :last-child { margin-bottom: 0; }
+.nota-plazo { color: var(--muted); font-size: 0.95em; }
 
 /* Buscador a lo ancho; debajo, una fila discreta de pastillas con «Ordenar» al final; luego el panel de filtros plegado. */
 form.filtros { display: flex; flex-direction: column; gap: 0.6rem; margin: 0 0 0.9rem; }

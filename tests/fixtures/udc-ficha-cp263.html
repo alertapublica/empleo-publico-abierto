@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true"/>
+  <meta name="description" lang="" content="" />
+  <meta name="keywords" content="Sede Electrónica, Universidade da Coruña, UDC, universidade, facultades, departamentos, investigación, becas, campus" />
+  <meta name="robots" content="index, follow" />
+  <meta name="rating" content="general" />
+  <title>
+    Sede electrónica da UDC
+          -
+          Información do anuncio
+  </title>
+
+  <link rel="shortcut icon" type="image/png" href="/public/images/favicon.ico" />
+  
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.less" charset="utf-8" ></link>
+  <link rel="stylesheet" type="text/css" href="/public/stylesheets/smoothness/jquery-ui.min.css" charset="utf-8" ></link>
+    
+  <script type="text/javascript" src="/public/javascripts/application.js"></script>
+  <script type="text/javascript" src="/public/javascripts/validations.js"></script>
+  
+  <script type="text/javascript" src="/public/javascripts/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="/public/javascripts/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+  <script type="text/javascript" src="/public/javascripts/jquery/jquery-ui-i18n.min.js"></script>
+  <script type="text/javascript" src="/public/javascripts/jquery/jquery.simplemodal.1.4.4.min.js"></script>
+  <script type="text/javascript" src="/public/javascripts/jquery/jquery.tinysort.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/plugins/jqClock.js"></script>
+  <script type="text/javascript" src="/public/javascripts/clock/clock.js"></script>
+  <script type="text/javascript" src="/public/javascripts/afirma/afirma.js"></script>
+
+  <script src="/public/trileuco_play_plugin/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/public/trileuco_play_plugin/javascripts/pagination.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    var applicationURL = 'https://sede.udc.gal';
+    var applicationContext = '';
+  </script>
+
+  <script type="text/javascript" src="/public/firma_miniapplet/constantes.js"></script>
+  <script type="text/javascript" src="/public/firma_miniapplet/miniapplet.js"></script>
+  <script type="text/javascript" src="/public/autoscript/autoscript.js"></script>
+
+  
+  <script type="text/javascript">
+    
+    var urlBase = location.protocol + '//' + location.hostname + (location.port ? ':'+location.port: '');
+      
+     
+    $(function() {
+      var clockUrl = function(options) {var pattern = '/current_timestamp';for(key in options) {var val = options[key];pattern = pattern.replace(':' + encodeURIComponent(key), val || '');}return pattern;}
+;
+      getClock({
+        url : clockUrl(),
+        update_selector : '.official_time'
+      });
+      addGetDateAndHourOnModalEvent({
+        url : clockUrl(),
+        event_selector : 'a.show_date_and_hour',
+        modal_selector : '#clock_modal',
+        update_selector : '.modal_official_time, .official_time'
+      });
+      showAuthenticationModalEvent({
+        event_selector: '.authentication a',
+        modal_selector : '#auth_with_certificate'
+      });
+
+      validationInit({
+        max_upload_size: 5,
+        max_upload_message: "Tamaño máximo 5MB"
+      });
+    });
+  </script>
+
+  
+  
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57013240-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  <style type="text/css">
+    .lightbox { display: none; }
+  </style>
+  
+</head>
+<body>
+    
+  <div class="header single_page">
+          <div class="header_top">
+  <div class="header_content">
+    <div class="top_section">
+      <div class="sede_title">
+        <h1>
+          <a id="home_link" href="/">Sede Electrónica</a>
+        </h1>
+      </div>
+	<!-- # -{if _('helpers.SessionHelper').isSedeMantenimiento()}
+	<div class="logo_mantenimiento">
+	    <img src="/public/images/error.gif" />
+	</div>
+	#  -{/if}-->
+      <div class="logo_single">
+        <a id="logo_udc" href="http://www.udc.es">
+          <img src="/public/images/udc_logo.png" alt="Sede Electrónica" />
+        </a>
+      </div>
+    </div>
+    <div class="bottom_section">
+      <div class="section_trail">
+        <p>  <a href="/" >Inicio</a> &raquo;
+  <a href="/services/electronic_board" >Taboleiro de anuncios</a> &raquo;
+  Información do anuncio
+</p>
+      </div>
+      <ul class="language">
+      <li class="first-child "><a href="/change_lang?language=es" title="Castelán" >es</a></li><!-- FIXME -->
+      <li class=" selected"><a href="/change_lang?language=gl" title="Galego" >gl</a></li><!-- FIXME -->
+  </ul>    </div>
+  </div>
+</div>
+<div class="header_bottom">
+  <div class="header_content">
+                      <div class="authentication"> 
+          <a href="#">Identificarse con certificado</a>
+        </div>
+            </div>
+</div>
+      </div>
+
+  <div class="page_container">
+    <div class="page_content">
+      <div class="sidebar">
+       <a href="" onClick="location.href=urlBase+'/info/technical_aspects';return false;">Aviso uso de certificados</a>
+          
+        <div class="clock">
+	<div class="time_info">
+		<p class="time_title">Hora oficial da Sede:</p>
+  	<div class="official_time"></div>
+	</div>
+	<a href="#" class="show_date_and_hour">
+		<img src="/public/images/clock.png" title="Refrescar" alt="Refrescar" />
+	</a>
+</div>                
+                  <div class="main_menu">
+  <p>Servizos</p>
+  <ul>
+    <li><a href="/services/electronic_board" >Taboleiro de anuncios</a></li>
+    <li><a href="/services/procedures/catalog" >Catálogo de trámites</a></li>
+    <li><a href="/services/telematic_register" >Rexistro electrónico</a></li>
+    <li><a href="/services/citizen_folder" >Cartafol cidadán</a></li>
+    <li><a href="/services/documents_validation" >Validación de documentos</a></li>
+    <!-- <li><a href="#">Notificacións electrónicas</a></li>  -->
+  </ul>
+  <p>A Sede</p>
+  <ul>
+    <li><a href="/info/about" >Sobre a Sede</a></li>
+    <li><a href="/info/regulation" >Normativa</a></li>
+    <li><a href="/info/official_calendar" >Calendario oficial</a></li>
+    <li><a href="/info/technical_aspects" >Aspectos técnicos</a></li>
+    <li><a href="/info/help" >Axuda e soporte</a></li>
+    <li><a href="/info/suggestions" >Queixas e suxestións</a></li>
+  </ul>
+</div>              </div>
+
+	<script type="text/javascript" src="/public/stylesheets/featherlight/featherlight.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/featherlight/featherlight.min.css" charset="utf-8" ></link>
+
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/featherlight/iframes.css" charset="utf-8" ></link>
+
+
+<script type="text/javascript">
+
+    function cAlert (title, message){
+	var alertBox = $(document.createElement('div'));
+	alertBox.className = 'lightbox';
+	alertBox.html('<div id="myModal" class="h2_iframe">'+title+'</div><br><p>'+message+'</p><p><a href="#" class="featherlight-close">Cerrar</a></p>');
+	$.featherlight(alertBox);
+    }
+    
+    function cConfirm (title, message, confirmButton, cancelButton, confirm, cancel){
+	var confirmBox = $(document.createElement('div'));
+	confirmBox.className = 'lightbox';
+	confirmBox.html('<div id="myModal" class="h2_iframe">'+title+'</div><br><p>'+message+'</p><p><a href="#" onclick="'+confirm+'"; class="featherlight-close">'+confirmButton+'</a>&nbsp;&nbsp;<a href="#" onclick="'+cancel+';" class="featherlight-close">'+cancelButton+'</a></p>');
+	$.featherlight(confirmBox);
+    }
+    
+</script>	
+      <div class="current_page_content">
+        <div id="flash">
+      </div>        
+
+
+
+
+<div id ="announcement" class="content">
+  <p class="date">Data de publicación: 10/11/2026</p>
+  <h1>Conv. contrat. 2026/CP/263. Facultade de Dereito</h1>
+
+  <p>Conv. contrat. 2026/CP/263. Facultade de Dereito
+
+Colaborador de investigaci&oacute;n a tempo completo</p>
+
+
+  <h3>Documentos:</h3>
+  <ul>
+          <li><a onclick="this.target='_blank'" href="/services/electronic_board/EXP2026/011907/document?logicalId=f3a193eb-dbd4-4ecf-9cd4-b2ff47e8aeed&documentCsv=A7GKNLOVR8967KOOLPMF88DT">Anuncio GL [pdf]</a></li>
+          <li><a onclick="this.target='_blank'" href="/services/electronic_board/EXP2026/011907/document?logicalId=a814c122-2a3d-43d6-b957-64b6a5ff7512&documentCsv=FMFB29UCMRO5GGOCUDNA936E">Anuncio ES [pdf]</a></li>
+      </ul>
+
+</div>      </div>
+    </div>
+  </div>
+
+  <div id="form_sending" class="modal hide">
+  <div class="modal-header">
+    <h2>Enviando solicitude...</h2>
+  </div>
+  <div class="modal-body ">
+        <p>
+      Por favor, agarde uns momentos mentres se envía a solicitude. Dependendo do tamaño dos documentos adxuntados esto pode levar máis dun minuto.<br/><br>Se o proceso ten éxito, visualizará un aviso en pantalla e poderá descargar un xustificante da súa solicitude.
+    </p>
+    </div>
+  <div class="modal-footer">
+          </div>
+</div>    
+    
+  <div id="clock_modal" class="modal hide">
+  <div class="modal-header">
+    <h2>Data e hora oficiais</h2>
+  </div>
+  <div class="modal-body loading">
+        <span class="modal_official_time"></span>
+    </div>
+  <div class="modal-footer">
+           <a href="#" class="close_modal">Pechar</a>
+          </div>
+</div>
+  <div id="auth_with_certificate" class="modal hide">
+  <div class="modal-header">
+    <h2>Autenticaci&oacute;n con certificado</h2>
+  </div>
+  <div class="modal-body ">
+        <div>
+      <a href="/auth_with_certificate" class="add-button-style">Seleccionar certificado</a>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+      <a class="add-margin-bottom" href="" onClick="location.href=urlBase+'/info/technical_aspects';return false;">Instalar AutoFirma</a>
+   </div>
+    </div>
+  <div class="modal-footer">
+           <a href="#" class="close_modal">Pechar</a>
+          </div>
+</div>
+  
+  <script type="text/javascript">
+    // Detect JS support
+    document.body.className = document.body.className + " js_enabled";
+    
+    function ocultar(){
+	hideElement(document.getElementById("cookie-message"));
+    }
+</script>
+
+<div id="cookie-message" data-cookie-expiry="60" class="show">
+    <br>
+    <br>
+    <p>
+        Na Sede Electrónica da UDC usamos cookies para ofrecer unha mellor experiencia nesta páxina.
+	<br>
+	<a href="/info/cookie_policy" >Saber máis sobre Cookies</a>
+	<br>
+	<a href="#" onclick="ocultar(); return false;">Aceptar e seguir</a>
+    </p>
+</div>
+
+<script type="text/javascript" src="/public/javascripts/cookie-message.js"></script>
+  
+  <div class="footer">
+  <div class="footer_content">
+    <ul class="footer_box">
+      <li class="address">Universidade da Coruña<br/> Rúa da Maestranza, 9<br/> 15001 A Coruña <br/>+34 981 167 000</li>
+    </ul>
+    <ul class="footer_box">
+      <li><a href="http://www.udc.es/sobreUDC/localizacion/index.html">Localización</a></li>
+      <li><a href="http://directorio.udc.es/">Directorio telefónico</a></li>
+      <li><a href="/info/suggestions" >Suxestións</a></li>
+      <li><a href="/sitemap" >Mapa do sitio</a></li>
+    </ul>
+    <ul class="footer_box">
+      <li><a href="http://www.udc.es/pe/aviso_legal/">Aviso legal</a></li>
+      <li><a href="http://www.udc.es/identidadecorporativa/">Identidade corporativa</a></li>
+      <li><a href="http://www.udc.es/pe/accesibilidade/">Accesibilidade</a></li>
+      <li>Validación <a href="http://validator.w3.org/check?uri=referer">HTML</a>/<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS</a></li>
+    </ul>
+    <ul class="footer_box">
+     <li><a href="https://twitter.com/UDC_gal" class="social twitter">Twitter</a></li>
+     <li><a href="http://www.facebook.com/udc.gal" class="social facebook">Facebook</a></li>
+     <li><a href="http://www.udc.es/rss/" class="social rss">RSS</a></li>
+    </ul>
+    <ul class="footer_box last-child">
+      <li><a href="http://achecker.ca/checker/index.php?uri=referer"><img src="/public/images/wcag2AA-blue.png" alt="http://achecker.ca/checker/index.php" title="Validar accesibilidade" /></a></li>
+      <li><a href="http://validator.w3.org/check?uri=referer"><img src="/public/images/valid-xhtml11-blue.png" alt="Valid XHTML 1.1" title="Validar HTML"/></a></li>
+      <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img src="/public/images/valid-css-blue.png" alt="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Validar CSS"/></a></li>
+    </ul>
+  </div>
+</div>
+  
+  <div class="lightbox" id="fl1">
+    <div class="h2_iframe">¡Autofirma non atopado!</div>
+    <br/>
+        <p>
+            A sede electrónica da UDC usa como aplicación de autenticación e asinado o cliente de escritorio da Administración Xeral do Estado (AUTOFIRMA). Para poder usar certificados electrónicos deberá ter instalada esta aplicación. Pode descargala para diferentes sistemas operativos desde <a href="https://sede.udc.gal/info/technical_aspects"> aquí</a>.
+        </p>
+  </div>
+
+</body>
+</html>
