@@ -83,8 +83,23 @@ class Source(unittest.TestCase):
         self.assertEqual(offers[0].apply_url, "https://sede.uvigo.gal/public/catalog-detail/27660208")
         self.assertEqual(http.asked, [uvigo.INDEX, offers[0].url])  # FPI, Juan de la Cierva…: ni se abren
 
-    def test_cerrado_al_dia_siguiente(self):
-        self.assertEqual(uvigo.UvigoSource(now=datetime(2026, 11, 18, 23, 30, tzinfo=timezone.utc)).list_offers(Http()), [])
+    def test_cierra_a_las_23_59(self):
+        self.assertEqual(len(uvigo.UvigoSource(now=datetime(2026, 11, 18, 22, 58, tzinfo=timezone.utc)).list_offers(Http())), 1)
+        self.assertEqual(uvigo.UvigoSource(now=datetime(2026, 11, 18, 22, 59, tzinfo=timezone.utc)).list_offers(Http()), [])
+
+    def test_titulo_sin_la_etiqueta_de_cerrado(self):
+        rows = uvigo.parse_list(fixture("uvigo-investigar.html"))
+        self.assertEqual(rows[7]["title"], "CONCURSO PÚBLICO DE MÉRITOS 13/26 PARA A CONTRATACIÓN DE PERSOAL DE INVESTIGACIÓN")
+
+    def test_concurso_sin_plazo_en_la_tarjeta_detiene(self):
+        index = fixture("uvigo-investigar.html").replace("05/11/2026 - 18/11/2026", "")
+        with self.assertRaises(SourceLayoutError):
+            uvigo.UvigoSource(now=at(11, 15)).list_offers(Http(index=index))
+
+    def test_hora_imposible_detiene(self):
+        html = fixture("uvigo-ficha-1426.html").replace("23:59 horas do 18", "24:00 horas do 18")
+        with self.assertRaises(SourceLayoutError):
+            uvigo.parse_ficha(html, "https://secretaria.uvigo.gal/x")
 
     def test_ficha_en_gallego_y_sin_fases_posteriores(self):
         source = uvigo.UvigoSource(now=at(11, 15))

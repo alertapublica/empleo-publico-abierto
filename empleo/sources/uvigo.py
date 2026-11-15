@@ -2,9 +2,10 @@
 
 Taboleiro de convocatorias de la Secretaría (`secretaria.uvigo.gal`, sin robots.txt), categoría
 «Investigar»: 20 tarjetas por página, primero las abiertas (por fin de plazo) y luego las cerradas.
-Cada tarjeta (`.uvigo-card-box`) enlaza la ficha (`/show/<número>`) y trae el título, el tipo, el
+Cada tarjeta (`.uvigo-card-box`) enlaza la ficha (`/show/<número>`) y trae el título (las cerradas, con la
+etiqueta «Prazo de presentación de solicitudes finalizado», que no se usa: mandan las fechas), el tipo, el
 organismo convocante y «Prazo: 05/11/2026 - 18/11/2026». Se lee solo la primera página: si su última
-tarjeta sigue en plazo, puede haber más y la fuente se detiene.
+tarjeta con plazo sigue abierta, puede haber más y la fuente se detiene; un concurso sin «Prazo», también.
 
 Solo entran los «CONCURSO PÚBLICO DE MÉRITOS NN/26 PARA A CONTRATACIÓN DE PERSOAL DE INVESTIGACIÓN»
 de la propia universidad (14 en 2026, uno cada tres semanas, abiertos dos). El resto de la categoría
@@ -59,6 +60,8 @@ def parse_list(html: str) -> list[dict]:
         link, title = card.select_one("a[href]"), card.select_one(".uvigo-card-link")
         path = SHOW.search(link["href"]) if link else None
         summary = _clean(card.select_one(".uvigo-card-summary").get_text(" ")) if card.select_one(".uvigo-card-summary") else ""
+        for label in title.select(".label") if title else []:  # «Prazo de presentación de solicitudes finalizado»
+            label.decompose()
         if not (path and title and _clean(title.get_text(" "))):
             raise SourceLayoutError(f"Universidade de Vigo: tarjeta sin ficha o sin título ({_clean(card.get_text(' '))[:120]!r})")
         period = PERIOD.search(summary)
@@ -80,6 +83,8 @@ def _closing_hour(text: str, deadline: str) -> str | None:
         if date(int(year), MESES.index(month.lower()) + 1, int(day)).isoformat() != deadline:
             raise SourceLayoutError(f"Universidade de Vigo: el texto cierra el {day} de {month} de {year} y la "
                                     f"ficha, el {deadline}")
+        if int(hour) > 23 or int(minute) > 59:
+            raise SourceLayoutError(f"Universidade de Vigo: hora de cierre imposible ({hour}:{minute})")
         hours.add(f"{int(hour):02d}:{minute}")
     if len(hours) > 1:
         raise SourceLayoutError(f"Universidade de Vigo: varias horas de cierre ({sorted(hours)})")
@@ -133,12 +138,17 @@ class UvigoSource(Source):
     def list_offers(self, http: Client) -> list[ListedOffer]:
         now = self._now or datetime.now(timezone.utc)
         rows = parse_list(http.get(INDEX))
-        if rows[-1]["deadline"] and not deadline_passed(rows[-1]["deadline"], None, now):
-            raise SourceLayoutError("Universidade de Vigo: la última tarjeta de la primera página sigue en plazo")
+        # Las abiertas van primero: si la última tarjeta con plazo de la página sigue abierta, puede haber más.
+        dated = [row for row in rows if row["deadline"]]
+        if not dated or not deadline_passed(dated[-1]["deadline"], None, now):
+            raise SourceLayoutError("Universidade de Vigo: la última tarjeta con plazo de la primera página sigue "
+                                    "abierta (o ninguna trae plazo)")
         offers = []
         for row in rows:
-            if not (row["own"] and CONCURSO.fullmatch(row["title"]) and row["deadline"]):
+            if not (row["own"] and CONCURSO.fullmatch(row["title"])):
                 continue
+            if not row["deadline"]:
+                raise SourceLayoutError(f"Universidade de Vigo: el concurso {row['ref']} no trae «Prazo» en su tarjeta")
             if deadline_passed(row["deadline"], None, now):
                 continue
             ficha = self._fichas[row["ref"]] = parse_ficha(http.get(row["url"]), row["url"])
