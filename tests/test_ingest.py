@@ -1,6 +1,7 @@
 import re
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -439,6 +440,31 @@ class RunSource(unittest.TestCase):
         items = feeds.offer_items({r["id"]: r for r in self.stored().values()}, self.stored("events.json"),
                                   lambda offer: offer["url"], lambda offer: "")
         self.assertEqual([item["title"] for item in items], ["Oferta (Madrid)", "Plazo modificado: Oferta (Madrid)"])
+
+    def test_titulo_en_mayusculas_va_legible_en_el_rss(self):
+        offer = {"id": "x:1", "title": "TÉCNICO/A DE LABORATORIO REF.110_2026", "url": "https://x.example/1", "status": "open"}
+        events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T08:00:00+00:00"}]
+        items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
+        self.assertEqual(items[0]["title"], "Técnico/a de laboratorio ref.110_2026")
+
+    def test_fecha_del_rss_es_la_de_deteccion(self):
+        # Como la API (novedades.json): la publicada en la fuente puede ser anterior y hundiría la novedad.
+        offer = {"id": "x:1", "title": "Oferta", "url": "https://x.example/1", "status": "open", "published_on": "2026-11-01"}
+        events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T09:30:00+00:00"}]
+        items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
+        self.assertEqual(items[0]["date"], datetime(2026, 11, 10, 9, 30, tzinfo=timezone.utc))
+
+    def test_las_cerradas_no_salen_en_el_rss(self):
+        # Como novedades.json: un feed solo avisa de lo que aún se puede pedir.
+        offer = {"id": "x:1", "title": "Oferta", "url": "https://x.example/1", "status": "closed"}
+        events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T09:30:00+00:00"}]
+        self.assertEqual(feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: ""), [])
+
+    def test_caracter_de_control_no_rompe_el_rss(self):
+        item = {"title": "A\x0bB", "link": "https://x.example/1", "guid": "g", "text": "t\x00",
+                "date": datetime(2026, 11, 10, tzinfo=timezone.utc)}
+        xml = feeds.render("T", "D", "https://x.example/f.xml", "https://x.example/", [item], NOW)
+        self.assertEqual(ET.fromstring(xml.encode()).findtext(".//item/title"), "AB")
 
     def test_con_plazo_en_el_listado_la_vencida_no_vuelve_a_leerse(self):
         source = FakeSource([listed(deadline="2026-11-06")], OfferDetail())

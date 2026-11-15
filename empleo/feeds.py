@@ -3,7 +3,8 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from email.utils import format_datetime
-from xml.sax.saxutils import escape
+import re
+from xml.sax.saxutils import escape as _escape
 
 from .text import humane_caps
 
@@ -15,6 +16,12 @@ FEED_KINDS = {
     "positions_changed": "Plazas modificadas: ",
 }
 LIMIT = 100
+INVALID_XML = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff]")
+
+
+def escape(text: str) -> str:
+    """Texto seguro en XML: sin los caracteres de control que XML 1.0 no admite y que romperían el feed."""
+    return _escape(INVALID_XML.sub("", text))
 
 
 def _when(value: str) -> datetime:
@@ -28,16 +35,15 @@ def offer_items(offers: dict, events: list, offer_url, summary) -> list[dict]:
     extended = {(event["offer"], event["at"]) for event in events if event["kind"] == "deadline_changed"}
     for event in events:
         offer = offers.get(event["offer"])
-        if offer is None or event["kind"] not in FEED_KINDS:
+        if offer is None or offer["status"] != "open" or event["kind"] not in FEED_KINDS:
             continue
         if event["kind"] == "reopened" and (event["offer"], event["at"]) in extended:
             continue
-        original = event["kind"] in ("new", "republished")
         items.append({
-            "title": FEED_KINDS[event["kind"]] + offer["title"],
+            "title": FEED_KINDS[event["kind"]] + humane_caps(offer["title"]),
             "link": offer_url(offer),
             "guid": f"{event['offer']}/{event['kind']}/{event['at']}",
-            "date": _when(offer.get("published_on") or event["at"]) if original else _when(event["at"]),
+            "date": _when(event["at"]),
             "text": summary(offer),
             "offer": offer,
         })
