@@ -181,4 +181,5 @@ class UaSource(Source):
         ficha = self._fichas.get(offer.ref) or parse_ficha(http.get(offer.url))
         if ficha is None:
             return None
-        return OfferDetail(sections=ficha["sections"], location="Alicante")
+        # Sin lugar de trabajo en la ficha (hay sedes fuera de Alicante): queda el ámbito de la fuente.
+        return OfferDetail(sections=ficha["sections"])

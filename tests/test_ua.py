@@ -121,7 +121,7 @@ class Source(unittest.TestCase):
         first = offers[0]
         self.assertEqual((first.ref, first.kind, first.opens_on, first.deadline, first.url),
                          ("2026-pi57", "temporal", "2026-11-16", "2026-11-27", first.apply_url))
-        self.assertEqual(source.fetch_detail(http, first).location, "Alicante")
+        self.assertIsNone(source.fetch_detail(http, first).location)  # la ficha no da el lugar de trabajo
         # La fecha del DOGV y el departamento llegan por enrich: el motor solo lo llama si falta la fecha.
         self.assertIsNone(first.published_on)
         self.assertEqual(source.enrich(http)["2026-pi57"], {
