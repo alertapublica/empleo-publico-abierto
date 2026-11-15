@@ -1,0 +1,23 @@
+empleo({
+  "IdConvocatoria": "3391",
+  "IdPerfil": "3901",
+  "FechaDesde": "04/11/2026",
+  "FechaHasta": "18/11/2026",
+  "Estado": "Publicada",
+  "Titulacion": "(Licenciatura/Ingeniería o Grado+Máster universitario MECES 3) en Ingeniería Informática o de Telecomunicaciones.",
+  "Perfil": "Titulación superior en Informática o Telecomunicaciones para la realización de tareas de gestión y soporte de infraestructuras tecnológicas, desarrollo de aplicaciones y análisis de datos avanzados aplicados al entorno sanitario.\r\n",
+  "FuncionesDesarrollar": "- Soporte y mantenimiento de infraestructuras tecnológicas para proyectos de investigación: administración de firewalls, máquinas virtuales, redes, sistemas operativos (Linux, Windows), cabinas de almacenamiento, bases de datos (PostgreSQL, MySQL/MariaDB, MongoDB)\r\n- Análisis, desarrollo e implementación de software destinado a la investigación científica en el ámbito de la salud. \r\n- Programación en Python, Java, C, R. \r\n- Metodologías Ágiles: Scrum \r\n- Gestión y desarrollo con tecnología de contenedores: docker, kubernetes, alpine linux, podman, rancher...\r\n- Análisis de datos heterogéneos mediante técnicas estadísticas, inteligencia artificial y aprendizaje automático \r\n- Gestión e implantación de proyectos mediante la herramienta REDCap, destinada a la creación de Cuadernos de Recogida de Datos",
+  "ExperienciaRequerida": "Mínimo 2 años de experiencia global en Tecnologías de la Información y las Comunicaciones, de los cuales se valorarán en el proceso selectivo los siguientes aspectos: \r\n- Experiencia en soporte y mantenimiento de infraestructuras tecnológicas en organismos públicos o privados: sistemas operativos, redes, máquinas virtuales, almacenamiento, bases de datos \r\n- Experiencia en desarrollo de aplicaciones basadas en IA: Agentes, NLP\r\n- Experiencia en proyectos basados en contenedores\r\n- Experiencia en gestión de la plataforma REDCap ",
+  "OtrosConocimientos": "Se valorarán asimismo en el proceso selectivo los siguientes aspectos: \r\n- Se valorará positivamente dominio profesional en inglés (mínimo C1 o equivalente)\r\n- Conocimientos de keycloack (especificar proyectos que incluyan esta tecnología)\r\n- Conocimientos de software beacon para descubrimiento de datos genómicos y de salud (especificar proyectos que incluyan esta tecnología)\r\n- Conocimientos de gobernanza del dato en entornos científicos (especificar proyectos en lo que se ha participado)\r\n- Habilidades de trabajo en equipo y en entornos complejos (detallar proyectos en los que se ha participado) \r\n- Habilidades de comunicación y capacidad de interacción en un entorno científico de alto nivel (detallar proyectos científicos en los que se ha participado)\r\n",
+  "Centro": "SIN ESPECIFICAR",
+  "Provincia": "MADRID",
+  "TipoContrato": "Indefinido",
+  "Jornada": "Si",
+  "HorasSemanales": "35,00",
+  "CategoriaProfesional": "Titulado Superior",
+  "SalarioBrutoAnual": "31.648,78 €",
+  "URLPaginaSolicitud": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3901",
+  "Financiacion": "Subven.Nom",
+  "ContieneErrores": false,
+  "URLFicheroErrores": ""
+});

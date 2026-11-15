@@ -219,6 +219,13 @@
    "alias": []
   },
   {
+   "id": "ciber",
+   "nombre": "CIBER (Centro de Investigación Biomédica en Red)",
+   "alias": [
+    "CIBER"
+   ]
+  },
+  {
    "id": "idibell",
    "nombre": "IDIBELL",
    "alias": []

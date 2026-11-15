@@ -1,0 +1,23 @@
+empleo({
+  "IdConvocatoria": "3392",
+  "IdPerfil": "3919",
+  "FechaDesde": "05/11/2026",
+  "FechaHasta": "19/11/2026",
+  "Estado": "Publicada",
+  "Titulacion": "Doctorado en Biología, Biomedicina, Biotecnología, Bioquímica o áreas afines",
+  "Perfil": "Se requiere Doctorado en el ámbito de las Ciencias Biomédicas para coordinación de la infraestructura NANBIOSIS. Gestión y coordinación general de la ICTS distribuida, asegurando el seguimiento de los protocolos para favorecer una gestión on line y centralizada de NANBIOSIS en las modalidades de acceso competitivo y a demanda.",
+  "FuncionesDesarrollar": "Plaza de sustitución de coordinación de la infraestructura NANBIOSIS. Representación e interlocución con el Ministerio y/o Agencia Financiadora. En coordinación con la Dirección Científica de NANBIOSIS y del área de BBN, búsqueda de colaboraciones a nivel nacional e internacional, elaboración de planes estratégicos y planes de inversiones. Elaboración de propuestas para conseguir financiación competitiva y seguimiento de los proyectos concedidos. Participación en foros, conferencias y eventos de partnering para promocionar la infraestructura. Seguimiento de la actividad realizada por las unidades y elaboración de informes periódicos. Diseño y optimización de nuevas soluciones biomédicas avanzadas coordinando a las unidades participantes. Consolidación del servicio integral de caracterización y asesoría en cascada.",
+  "ExperienciaRequerida": "Se requiere conocimiento previo en proyectos de investigación a nivel europeo (Horizon 2020, Horizon Europa) en el área de investigación biomédica. Conocimiento de la gestión de infraestructuras de investigación. Conocimiento de los agentes del Sistema Español de Ciencia, Tecnología e Innovación (SECTI), incluyendo el Mapa de Infraestructuras Científicas y Técnicas Singulares de España y de otros agentes públicos y privados a nivel internacional con los que buscar oportunidades. Conocimiento del funcionamiento de centros de investigación pública. Se valorará experiencia en la coordinación de equipos de trabajo en el ámbito científico (biomedicina) en un entorno de alto nivel. Conocimiento de los estándares de calidad en la investigación biomédica (ISO, ASTM, GLP) y de los procesos de implantación. Conocimiento de técnicas analíticas, equipamiento singular y servicios científico-técnicos en el ámbito de la investigación en biomedicina. Redacción y publicación de informes y artículos científicos. Experiencia en solicitud y en gestión de proyectos de I+D en colaboración con empresas. Nivel alto de inglés.",
+  "OtrosConocimientos": "Manejo a nivel avanzado de herramientas informáticas MS Office (Word, Excel). Disponibilidad para viajar. Se valorará experiencia en difusión, en comunicación digital (estrategias SEO) y formación en manejo de animales de laboratorio. Se busca una persona dinámica y proactiva, con iniciativa y actitud positiva, versátil, resolutiva, con elevada capacidad de análisis y planificación. Alta motivación para el trabajo en equipo. Habilidades de comunicación tanto escrita como oral. Capacidad de interacción en un entorno científico de alto nivel y disposición para aprender. Aptitudes para estructurar y organizar de forma autónoma el trabajo, capacidad para trabajar con fechas de entrega y gestión de multitarea.",
+  "Centro": "Instituto Interuniversitario de Investigación de Reconocimiento Molecular y Desarrollo Tecnológico",
+  "Provincia": "VALENCIA",
+  "TipoContrato": "Interinidad",
+  "Jornada": "Si",
+  "HorasSemanales": "35,00",
+  "CategoriaProfesional": "Doctor",
+  "SalarioBrutoAnual": "37.300,35 €",
+  "URLPaginaSolicitud": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3919",
+  "Financiacion": "Subven.Nom",
+  "ContieneErrores": false,
+  "URLFicheroErrores": ""
+});

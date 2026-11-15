@@ -1,0 +1,23 @@
+empleo({
+  "IdConvocatoria": "3390",
+  "IdPerfil": "3914",
+  "FechaDesde": "06/11/2026",
+  "FechaHasta": "20/11/2026",
+  "Estado": "Publicada",
+  "Titulacion": "Doctorado en biotecnología, bioquímica, biomedicina o similar",
+  "Perfil": "Se requiere Doctor/a en el área de ingeniería de proteínas y producción recombinante para la participación en una línea de investigación dirigida al desarrollo de nanopartículas y nanoconjugados proteicos para la entrega dirigida de fármacos. ",
+  "FuncionesDesarrollar": "Ejecución de una línea de investigación dedicada al diseño y desarrollo de nuevas nanomedicinas proteicas para el direccionamiento activo de terapias antitumorales en modelos de cáncer y otras aplicaciones. Las tareas incluirán la producción, la purificación y la caracterización de nanopartículas desarrolladas en la línea, así como el diseño de nuevas nanopartículas y la coordinación de estudiantes de postgrado junto al IP dentro de la línea. ",
+  "ExperienciaRequerida": "Experiencia en manipulación genética y biología molecular. Experiencia en técnicas de microbiología y cultivos bacterianos. Experiencia en el diseño de péptidos y proteínas. Experiencia en producción recombinante de proteínas en sistemas de expresión bacterianos (E.coli). Experiencia en purificación de proteínas usando sistemas FPLC Akta (Cytiva). Experiencia en conjugaciones proteína-fármacos. Experiencia en técnicas de caracterización de nanopartículas. Conocimientos de proteómica. Experiencia en cultivos celulares. ",
+  "OtrosConocimientos": "Experiencia en otros sistemas de expresión de proteína recombinantes. Experiencia en producción de proteínas en biorreactores. Experiencia con sistemas siRNA o CRISPR. Experiencia en péptidos antimicrobianos. Experiencia en citometría de flujo. Capacidad de análisis estadístico (Graphpad y R). Nivel alto de Castellano e Inglés. \r\nLa posesión de certificado R3 como investigador/a establecido/a será reconocido en este proceso de selección y se tendrá en cuenta a los efectos de su valoración como méritos investigadores, proyectándose en la fase de valoración del currículo del personal investigador que forma parte de este proceso. Se otorgará una puntuación mínima de 40 puntos en la fase de valoración de méritos.",
+  "Centro": "SIN ESPECIFICAR",
+  "Provincia": "BARCELONA",
+  "TipoContrato": "Indefinido",
+  "Jornada": "Si",
+  "HorasSemanales": "35,00",
+  "CategoriaProfesional": "Doctor",
+  "SalarioBrutoAnual": "37.300,35 €",
+  "URLPaginaSolicitud": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3914",
+  "Financiacion": "Subven.Nom",
+  "ContieneErrores": false,
+  "URLFicheroErrores": ""
+});

@@ -1,0 +1,23 @@
+empleo({
+  "IdConvocatoria": "3393",
+  "IdPerfil": "3913",
+  "FechaDesde": "06/11/2026",
+  "FechaHasta": "20/11/2026",
+  "Estado": "Publicada",
+  "Titulacion": "Titulación superior: Licenciatura o Grado+Master universitario Meces 3) en biotecnología, biología o ingeniería biomédica",
+  "Perfil": "Se busca incorporar dos personas con experiencia y conocimientos en biotecnología para incorporarse al Departamento de Bases de Datos y apoyar en las tareas técnicas que se necesitan en los diferentes proyectos de investigación que se desarrollan en CIBER. Se trata de perfiles mixtos con conocimientos tanto en Biología como en Informática para mejorar la interlocución con los investigadores de CIBER.",
+  "FuncionesDesarrollar": "Supervisión, creación y migración de bases de datos para investigación biomédica con especial énfasis en modelos estándar como OMOP\r\nProgramación en Python, R \r\nGestión de software basado en contenedores\r\nSoftware de gestión de flujos de trabajo científico\r\nAnálisis estadístico de datos en el ámbito biosanitario\r\nGestión, diseño y coordinación de cuadernos de recogida de datos biomédicos, principalmente en REDCap\r\nColaboración en la creación de infraestructuras tecnológicas para la cobertura de proyectos de investigación biomédica: redes, máquinas virtuales\r\nDesarrollo de aplicaciones web",
+  "ExperienciaRequerida": "Mínimo 1 año de experiencia en proyectos informáticos aplicados al ámbito biosanitario, valorándose en el proceso de selección los siguientes aspectos:\r\n-Experiencia con Bases de Datos (PostgreSQL y MongoDB) y Sistemas Operativos (Linux, Windows)\r\n-Experiencia en Análisis de Datos Biomédicos mediante software Atlas\r\n-Experiencia con OHDSI WebAPI\r\n-Experiencia en migración de datos al estándar OMOP Common Data Model\r\n-Experiencia en programación en Python y/o R\r\n-Experiencia en creación de formularios e instrumentos en REDCap\r\n-Experiencia en gestión de redes: reglas de firewall, vpns\r\n-Experiencia con entornos de virtualización para la creación de máquinas virtuales\r\n-Experiencia en desarrollo web\r\n-Interlocución con expertos e investigadores en el área de la salud\r\nEn todos los casos se debe indicar claramente los proyectos en los que se han aplicado una o varias de las citadas tecnologías",
+  "OtrosConocimientos": "Se valorarán asimismo en el proceso selectivo los siguientes aspectos: \r\n-Conocimientos de gestión de software basado en contenedores: docker\r\n-Conocimientos de software de gestión de flujos de trabajo científico: nextflow\r\n-Conocimiento del paquete Achilles de R\r\n-Conocimientos de firewall Sophos\r\n-Conocimientos de herramientas de virtualización: proxmox, vmware\r\n-Conocimientos de software de ticketing: GLPI, Zammad\r\n-Nivel mínimo B2 de inglés\r\n-Habilidades de comunicación y capacidad de interacción en un entorno científico de alto nivel\r\n-Habilidades de trabajo en equipo y en entornos complejos",
+  "Centro": "SIN ESPECIFICAR",
+  "Provincia": "MADRID",
+  "TipoContrato": "Indefinido",
+  "Jornada": "Si",
+  "HorasSemanales": "35,00",
+  "CategoriaProfesional": "Titulado Superior",
+  "SalarioBrutoAnual": "31.648,78 €",
+  "URLPaginaSolicitud": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3913",
+  "Financiacion": "Subven.Nom",
+  "ContieneErrores": false,
+  "URLFicheroErrores": ""
+});
