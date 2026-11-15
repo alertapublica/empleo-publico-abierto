@@ -4,7 +4,9 @@ Las fuentes no traen un dato común sobre el tipo de puesto, así que se deduce 
 reglas deterministas (sin servicios externos). Si el título no basta, se mira el principio de la
 ficha y, en último término, el ámbito de la fuente (SOURCE_AREAS). Lo que queda sin área o solo
 con el de la fuente se lista en el informe (`python -m empleo.areas informe`), que en Actions
-abre o actualiza un issue para revisarlo.
+abre o actualiza un issue para revisarlo. En los centros de investigación y las universidades el
+área decide además si la oferta sale también en la portada (site.research_only): el informe
+lista las decididas con menos seguridad.
 
 Reglas sobre el texto normalizado (sin tildes, minúsculas, sin «/a», sin códigos con cifras):
 - FRASES, en orden: suman y se «comen» el texto, para que las palabras sueltas no lo vuelvan a
@@ -386,29 +388,43 @@ def reference(path: Path = REFERENCE) -> list[dict]:
 
 def report(offers: list[dict], groups: dict[str, str], reviewed: set | None = None) -> str:
     """Markdown con las ofertas abiertas sin área o con la de la fuente que no estén ya revisadas
-    (en areas_referencia.csv); vacío si no queda ninguna."""
+    (en areas_referencia.csv) y, de los centros de investigación y las universidades, las que quedan
+    solo en «Investigación» por la ficha o salen también en la portada teniendo el área de
+    investigación; vacío si no queda ninguna."""
+    from . import site  # importación tardía: site importa este módulo
+
     if reviewed is None:
         reviewed = {(row["fuente"], row["titulo"]) for row in reference()}
-    missing, by_source = [], []
+    missing, by_source, placed = [], [], []
     for offer in sorted(offers, key=lambda o: (o["source"], o.get("title") or "")):
         if (offer["source"], offer.get("title")) in reviewed:
             continue
-        found, origin = offer_areas(offer, groups.get(offer["source"], ""))
+        group = groups.get(offer["source"], "")
+        found, origin = offer_areas(offer, group)
+        names = ", ".join(AREAS[area] for area in found)
         if not found and not multi_post(offer.get("title") or ""):  # sin área a propósito
             missing.append(offer)
         elif origin == "fuente":
             by_source.append((offer, found[0]))
+        elif group not in site.RESEARCH_GROUPS:
+            continue
+        elif site.research_only(offer, group):
+            if origin == "ficha":
+                placed.append((offer, f" → solo en «Investigación», por la ficha ({names})"))
+        elif "investigacion" in found:
+            placed.append((offer, f" → también en la portada ({names})"))
 
     def line(offer: dict, note: str = "") -> str:
         title = (offer.get("title") or "").replace("|", "/").replace("\n", " ")
         link = f"[{title}]({offer['url']})" if offer.get("url") else title
         return f"- `{offer['source']}` {link}{note}"
 
-    if not missing and not by_source:
+    if not missing and not by_source and not placed:
         return ""
     out = [
         "Ofertas abiertas que el clasificador de áreas (`empleo/areas.py`) no resuelve con el "
-        "título ni con la ficha. Para cada una: si el título dice el área, añade o corrige una "
+        "título ni con la ficha o, en los centros de investigación, decide con menos seguridad. "
+        "Para cada una: si el título dice el área, añade o corrige una "
         "regla; después, añádela a `empleo/areas_referencia.csv` con su área correcta (o vacía, "
         "si no tiene) y deja de salir aquí.",
         "",
@@ -421,6 +437,11 @@ def report(offers: list[dict], groups: dict[str, str], reviewed: set | None = No
         out += ["", f"## Con el área de la fuente ({len(by_source)})", "",
                 "El título no dice nada; se les ha dado el ámbito del organismo. Comprueba que encaja.", ""]
         out += [line(o, f" → {AREAS[area]}") for o, area in by_source]
+    if placed:
+        out += ["", f"## Centros de investigación y universidades: dónde salen ({len(placed)})", "",
+                "El área decide si la oferta sale solo en «Investigación» o también en la portada. "
+                "Comprueba que estas están donde deben.", ""]
+        out += [line(o, note) for o, note in placed]
     return "\n".join(out) + "\n"
 
 

@@ -103,6 +103,25 @@ class Informe(unittest.TestCase):
         for absent in ("Programador", "Tasa de reposición", "Ya revisada"):
             self.assertNotIn(absent, text)
 
+    def test_centros_de_investigacion_lo_decidido_con_menos_seguridad(self):
+        ficha = [{"title": "Funciones", "html": "<p>Apoyo al grupo de investigación en el laboratorio.</p>"}]
+        offers = [
+            offer("Specialist Technician", "irb", sections=ficha),                    # solo allí, por la ficha
+            offer("UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)", "fisabio"),  # también en la portada
+            offer("Postdoctoral researcher", "irb"),          # el título lo dice: no se lista
+            offer("Administrativo de compras", "irb"),        # en la portada sin área de investigación: tampoco
+            offer("Investigador/a de mercados", "tragsa"),    # fuera de los centros no decide nada
+            offer("Research support technician", "irb", sections=ficha),
+        ]
+        text = areas.report(offers, GROUP_OF, reviewed={("irb", "Research support technician")})
+        self.assertIn("## Centros de investigación y universidades: dónde salen (2)", text)
+        self.assertIn("`irb` [Specialist Technician](https://x.example/o) → solo en «Investigación», por la ficha "
+                      "(Investigación y laboratorio)", text)
+        self.assertIn("(M3)](https://x.example/o) → también en la portada (Administración y gestión, "
+                      "Investigación y laboratorio)", text)
+        for absent in ("Postdoctoral", "Administrativo", "mercados", "Research support", "## Sin área"):
+            self.assertNotIn(absent, text)
+
     def test_vacio_si_no_queda_nada(self):
         self.assertEqual(areas.report([offer("Programador/a PHP")], GROUP_OF, reviewed=set()), "")
 
