@@ -364,6 +364,12 @@ class Site(unittest.TestCase):
         self.assertTrue(any(t.startswith("Plazo modificado: ") for t in titles))
         self.assertTrue(any("bases de Tragsa" in t for t in titles))
         self.assertTrue(all(item.findtext("pubDate") for item in root.iter("item")))
+        # La fecha de la entrada es la de detección: la de publicación en la fuente va en el texto.
+        self.assertTrue(any("Publicada el 5 de noviembre de 2026" in item.findtext("description") for item in root.iter("item")))
+        self.assertNotIn("Publicada el", self.read("api/novedades.json"))  # los avisos no cambian
+        ficha = self.read("ofertas/tragsa-2/index.html")
+        self.assertIn('<dt>Fecha de publicación</dt><dd><time datetime="2026-11-05">', ficha)
+        self.assertIn("<dt>Detectada por este portal</dt><dd><time", ficha)
 
     def test_feeds_por_comunidad_y_empresa(self):
         galicia = ET.fromstring(self.read("feeds/comunidad-galicia.xml"))
@@ -1001,6 +1007,13 @@ class Site(unittest.TestCase):
         self.assertIn('<div class="texto-oficial"><p>Bases</p></div>', sheet)
         plain = site.offer_page(offer("9"), self.sources(), NOW, "ahora")
         self.assertNotIn(" lang=", plain.split("<html lang=\"es\">", 1)[1])
+
+    def test_publicada_y_detectada_no_se_mezclan_en_la_ficha(self):
+        # Sin fecha de la fuente no se da la de detección por publicación; la detección va en día de Madrid.
+        record = offer("5", published_on=None, first_seen="2026-11-14T23:30:00+00:00")
+        sheet = site.offer_page(record, self.sources(), NOW, "ahora")
+        self.assertIn("<dt>Fecha de publicación</dt><dd>No consta</dd>", sheet)
+        self.assertIn('<dt>Detectada por este portal</dt><dd><time datetime="2026-11-15">', sheet)
 
     def test_codigo_de_oferta_solo_si_lo_publica_el_portal(self):
         sheet = site.offer_page(offer("5", code=None), self.sources(), NOW, "ahora")
