@@ -15,6 +15,7 @@ from .cesga import CesgaSource
 from .ciqus import CiqusSource
 from .cofivacasa import CofivacasaSource
 from .efe import EfeSource
+from .emacsa import EmacsaSource
 from .emasesa import EmasesaSource
 from .emt import EmtSource
 from .enresa import EnresaSource
@@ -105,7 +106,7 @@ CATALOG = {
     ],
     "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource(), AndaluciaSource()],
-    "local": [TmbSource(), EmtSource(), BSM, EmasesaSource()],
+    "local": [TmbSource(), EmtSource(), BSM, EmasesaSource(), EmacsaSource()],
     "investigacion": [
         CiberSource(), IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),

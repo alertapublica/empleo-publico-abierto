@@ -219,6 +219,13 @@
    "alias": []
   },
   {
+   "id": "emacsa",
+   "nombre": "EMACSA (Aguas de Córdoba)",
+   "alias": [
+    "EMACSA"
+   ]
+  },
+  {
    "id": "ciber",
    "nombre": "CIBER (Centro de Investigación Biomédica en Red)",
    "alias": [
