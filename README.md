@@ -9,7 +9,7 @@ Portal independiente y **no oficial** que reúne en un solo sitio las ofertas de
 
 **Web: <https://alertapublica.es/>**
 
-Lee las páginas oficiales de 68 organismos: Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas y locales, fundaciones y centros de investigación, y universidades públicas. La lista completa está en [`empleo/sources/__init__.py`](empleo/sources/__init__.py) y en la página «Organismos» de la web.
+Lee las páginas oficiales de 69 organismos: Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas y locales, fundaciones y centros de investigación, y universidades públicas. La lista completa está en [`empleo/sources/__init__.py`](empleo/sources/__init__.py) y en la página «Organismos» de la web.
 
 ## Qué ofrece
 
