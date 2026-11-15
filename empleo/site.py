@@ -717,7 +717,8 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
         ("Departamento", e(offer.get("department") or "No consta")),
         ("Plazo", plazo(offer)),
         ("Teletrabajo", remote_text(teletrabajo.read(offer))),
-        ("Fecha de publicación", time_tag(offer.get("published_on") or offer["first_seen"])),
+        ("Fecha de publicación", time_tag(offer["published_on"]) if offer.get("published_on") else "No consta"),
+        ("Detectada por este portal", time_tag(offer["first_seen"])),
     ]
     if offer.get("code"):
         rows.append(("Código de oferta", e(offer["code"])))
@@ -1612,11 +1613,14 @@ def write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def offer_summary(offer: dict) -> str:
+def offer_summary(offer: dict, published: bool = False) -> str:
+    """Datos de la oferta en una línea. `published` (RSS): añade la fecha de publicación de la fuente,
+    porque la de la entrada es la de detección."""
     parts = [
         offer.get("company"), where(offer), seats(offer.get("positions")),
         f"Plazo: {long_date(offer.get('deadline'))}"
         + (f", a las {offer['deadline_time']}" if offer.get("deadline") and offer.get("deadline_time") else ""),
+        f"Publicada el {long_date(offer['published_on'])}" if published and offer.get("published_on") else None,
     ]
     return " · ".join(str(p) for p in parts if p)
 
@@ -1783,7 +1787,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     ), base_url, None))
 
     offer_url = lambda offer: base_url + offer_path(offer)
-    offer_feed = feeds.offer_items(offers, events, offer_url, offer_summary)
+    offer_feed = feeds.offer_items(offers, events, offer_url, lambda offer: offer_summary(offer, published=True))
     notice_feed = feeds.announcement_items(announcements)
 
     def emit(path: str, title: str, items: list) -> None:

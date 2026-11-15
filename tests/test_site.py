@@ -364,6 +364,12 @@ class Site(unittest.TestCase):
         self.assertTrue(any(t.startswith("Plazo modificado: ") for t in titles))
         self.assertTrue(any("bases de Tragsa" in t for t in titles))
         self.assertTrue(all(item.findtext("pubDate") for item in root.iter("item")))
+        # La fecha de la entrada es la de detección: la de publicación en la fuente va en el texto.
+        self.assertTrue(any("Publicada el 5 de noviembre de 2026" in item.findtext("description") for item in root.iter("item")))
+        self.assertNotIn("Publicada el", self.read("api/novedades.json"))  # los avisos no cambian
+        ficha = self.read("ofertas/tragsa-2/index.html")
+        self.assertIn('<dt>Fecha de publicación</dt><dd><time datetime="2026-11-05">', ficha)
+        self.assertIn("<dt>Detectada por este portal</dt><dd><time", ficha)
 
     def test_feeds_por_comunidad_y_empresa(self):
         galicia = ET.fromstring(self.read("feeds/comunidad-galicia.xml"))
