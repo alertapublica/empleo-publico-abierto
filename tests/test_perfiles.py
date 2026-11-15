@@ -36,6 +36,11 @@ class Reglas(unittest.TestCase):
         self.assertEqual(perfiles.classify("Gestor/a de datos"), "datos")
         self.assertEqual(perfiles.classify("Técnico/a de gestión de la investigación"), "gestion")
 
+    def test_en_formacion_solo_del_investigador(self):
+        self.assertEqual(perfiles.classify("Personal investigador en formación"), "predoctoral")
+        self.assertEqual(perfiles.classify("Personal investigador en formació"), "predoctoral")
+        self.assertEqual(perfiles.classify("Técnico/a de laboratorio en formación"), "tecnico")
+
     def test_sin_perfil(self):
         self.assertEqual(perfiles.classify("Titulación Universitaria en Biología"), "")
 
