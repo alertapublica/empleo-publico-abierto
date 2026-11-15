@@ -25,20 +25,22 @@ PERFILES = (
     ("investigador", "Investigador/a (postdoctoral y sénior)",
      r"postdoc|posdoc|\br[234]a?\b|investigador|researcher|research fellow|\bdoctor\b|doctoral degree"),
     ("ensayos", "Ensayos clínicos",
-     r"ensayos? clinic|assaigs? clinic|clinical trial|study (coordinator|nurse)|\bcra\b|\bcta\b|\bmonitora?\b|clinical research assistant"),
+     r"ensayos? (clinic|(en |de )?fase)|assaigs? (clinic|(en |de )?fase)|clinical trial|study (coordinator|nurse)|\bcra\b|\bcta\b"
+     r"|\bmonitor(a|s|es|as)?\b|clinical research assistant"),
     ("sanitario", "Enfermería y sanitario",
      r"enfermer|infermer|nurse|auxiliar (clinic|sanitari)|farmaceutic|facultativ"),
     ("datos", "Datos y bioinformática",
      r"bioinformatic|bioestadist|biostatistic|data (manager|entry|scientist|analyst)|gestor(a)? de datos|software|platform engineer"),
     ("gestion", "Gestión y administración",
-     r"\bgestion|gestor|manager|administrativ|administratiu|administrative|director|head of|recursos humanos|rrhh|\bfinanz|\bfinancier|\bfinanc(e|ial)\b|ethics|fundraising"
+     r"\bgestio|gestor|manager|administrativ|administratiu|administrative|\badministra[ct]io|director|head of|recursos humanos|rrhh"
+     r"|\bfinan(z|cier|cer|ceir)|\bfinanc(e|ial)\b|ethics|fundraising"
      r"|health and safety|tecnico de proyecto"),
     ("tecnico", "Técnico/a de laboratorio y apoyo",
      r"tecnic|technician|laborator|suport recerca|apoyo a la investigacion|research (assistant|support)|auxiliary|titulad[oa]"),
 )
 NAMES = {key: name for key, name, _ in PERFILES}
 ARRANQUE = ("tecnico", r"^(?:un |una )?(?:personal )?tecnic\w* (?:de |d')?"
-                       r"(?:laborator|(?:apoyo|suport)\b(?! (?:a la |a l')?(?:gestio|administra)))")
+                       r"(?:laborator|(?:apoyo|suport)\b(?! (?:(?:a|en|de|para|per a)(?: la | l'| ))?(?:gestio|administra)))")
 RULES = [(key, re.compile(rx)) for key, rx in (ARRANQUE, *((key, rx) for key, _, rx in PERFILES))]
 BY_NAME = sorted(NAMES.items(), key=lambda kv: kv[1])
 NONE = "sin-perfil"

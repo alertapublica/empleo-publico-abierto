@@ -47,12 +47,17 @@ class Reglas(unittest.TestCase):
         self.assertEqual(perfiles.classify("Técnico/a de laboratorio en digestión anaerobia"), "tecnico")
         self.assertEqual(perfiles.classify("Técnico/a superior del área financiera"), "gestion")
         self.assertEqual(perfiles.classify("Head of Finance"), "gestion")
+        self.assertEqual(perfiles.classify("Tècnic/a de gestió financera"), "gestion")
+        self.assertEqual(perfiles.classify("Técnico/a financeiro"), "gestion")
 
     def test_ensayos_solo_los_clinicos(self):
         self.assertEqual(perfiles.classify("Técnico de laboratorio para ensayos de materiales"), "tecnico")
         self.assertEqual(perfiles.classify("Técnico/a de apoyo para la monitorización de reactores"), "tecnico")
         self.assertEqual(perfiles.classify("Coordinador/a de ensayos clínicos"), "ensayos")
         self.assertEqual(perfiles.classify("Monitor/a de ensayos"), "ensayos")
+        self.assertEqual(perfiles.classify("Monitores/as de ensayos"), "ensayos")
+        self.assertEqual(perfiles.classify("Clinical Research Monitors"), "ensayos")
+        self.assertEqual(perfiles.classify("Coordinador/a de ensayos fase I/II"), "ensayos")
 
     def test_el_arranque_de_tecnico_manda(self):
         # El complemento («para la gestión de…», «al investigador») no cambia el puesto
@@ -60,7 +65,10 @@ class Reglas(unittest.TestCase):
         self.assertEqual(perfiles.classify("Técnico/a de apoyo al investigador principal"), "tecnico")
         self.assertEqual(perfiles.classify("Tècnic/a de suport a la recerca"), "tecnico")
         # …pero el técnico de gestión sigue siendo de gestión
-        self.assertEqual(perfiles.classify("Técnico/a de apoyo a la gestión de proyectos"), "gestion")
+        for title in ("Técnico/a de apoyo a la gestión de proyectos", "Técnico/a de apoyo a gestión de proyectos",
+                      "Técnico/a de apoyo en la gestión de proyectos", "Técnico/a de apoyo a la administración de proyectos",
+                      "Tècnic/a de suport a la gestió de projectes"):
+            self.assertEqual(perfiles.classify(title), "gestion", title)
         self.assertEqual(perfiles.classify("Técnico/a de gestión de la investigación"), "gestion")
 
     def test_sin_perfil(self):
