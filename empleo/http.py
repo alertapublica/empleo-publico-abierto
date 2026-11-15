@@ -74,6 +74,8 @@ class Client:
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
         )
         self._last = 0.0
+        self.attempts = 0  # peticiones hechas, contando reintentos (para el registro de la ingesta)
+        self.failures = 0
         # Cookies de las sesiones que pasan por el Worker, por origen del destino: no son del dominio del
         # Worker y no van al CookieJar. Un mismo Client lee varios organismos: no se mezclan.
         self._relay_cookies: dict[str, dict[str, str]] = {}
@@ -100,6 +102,7 @@ class Client:
             if jar:
                 signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
+            self.attempts += 1
             try:
                 with self._opener.open(request, timeout=self.timeout) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
@@ -113,9 +116,11 @@ class Client:
                     return body
             except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
                 last_error = error
+                self.failures += 1
                 if isinstance(error, urllib.error.HTTPError) and error.code < 500:
                     break
-                time.sleep(5 * 3**attempt)
+                if attempt + 1 < self.retries:  # tras el último intento no hay nada que esperar
+                    time.sleep(5 * 3**attempt)
             finally:
                 self._last = time.monotonic()
         raise RuntimeError(f"No se pudo leer {url}: {last_error}")

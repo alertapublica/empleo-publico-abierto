@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import sys
+import time
 from dataclasses import asdict, replace
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -353,11 +354,19 @@ def main(ids: list[str] | None = None) -> int:
     failed = False
     for source in chosen(ids or []):
         http.delay = source.delay
+        # INICIO/FIN al momento, también si la fuente falla o se corta la ejecución: dónde se va el tiempo.
+        print(f"INICIO {source.id}", flush=True)
+        start, attempts, failures, result = time.monotonic(), http.attempts, http.failures, "cortada"
         try:
             run_source(source, http, DATA, now)
+            result = "bien"
         except Exception as error:  # cada fuente es independiente
-            print(f"ERROR {source.id}: {error}", file=sys.stderr)
+            result = "error"
+            print(f"ERROR {source.id}: {error}", file=sys.stderr, flush=True)
             failed = True
+        finally:
+            print(f"FIN {source.id} {result} {time.monotonic() - start:.0f} s, "
+                  f"{http.attempts - attempts} peticiones, {http.failures - failures} fallidas", flush=True)
     return 1 if failed else 0
 
 
