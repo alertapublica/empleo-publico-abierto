@@ -928,7 +928,8 @@ class Site(unittest.TestCase):
         self.assertIn('<li><a href="#grupo-sepi">Grupo SEPI</a> <span class="dato">(5)</span></li>', html)
         self.assertIn('<form id="buscar-organismos" class="buscador" role="search" aria-label="Buscar organismos" hidden>', html)
         self.assertIn('<p id="estado-organismos" role="status"></p>', html)
-        self.assertIn('data-texto="Épsilon Galicia"', html)
+        self.assertIn('data-texto="Épsilon"', html)
+        self.assertNotIn('data-texto="Épsilon Galicia"', html)  # se busca por nombre, no por el ámbito del organismo
         self.assertIn('<details class="sin-ofertas-grupo"><summary>Sin ofertas abiertas en este momento <span class="dato">(2)</span>', html)
         self.assertIn('avisos por Telegram o RSS', html)
         self.assertIn('src="../assets/organismos.js"', html)
