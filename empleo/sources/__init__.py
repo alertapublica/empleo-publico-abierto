@@ -9,6 +9,7 @@ from .cesce import CesceSource
 from .centinela import SentinelSource
 from .cetarsa import CetarsaSource
 from .cimus import CimusSource
+from .ciber import CiberSource
 from .cnic import CnicSource
 from .cesga import CesgaSource
 from .ciqus import CiqusSource
@@ -57,6 +58,7 @@ from .sepides import SepidesSource
 from .successfactors import SuccessFactorsSource
 from .tmb import TmbSource
 from .tragsa import TragsaSource
+from .ua import UaSource
 from .veiasa import VeiasaSource
 from .zarzuela import ZarzuelaSource
 
@@ -105,10 +107,11 @@ CATALOG = {
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource(), AndaluciaSource()],
     "local": [TmbSource(), EmtSource(), BSM, EmasesaSource()],
     "investigacion": [
-        IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
+        CiberSource(), IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
         IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(),
     ],
+    "universidades": [UaSource()],
 }
 for _group, _sources in CATALOG.items():
     for _source in _sources:

@@ -3,7 +3,7 @@
 1. Crea `empleo/sources/<organismo>.py` con una clase que herede de `Source`, o reutiliza una plataforma ya hecha (SuccessFactors, por ejemplo). Si es autonómico, declara su `scope` con el nombre de la comunidad.
 2. Implementa `list_offers`, que debe lanzar `SourceLayoutError` si la página cambia.
 3. Implementa, si procede, `fetch_detail`, `enrich` y `list_announcements`.
-4. Añádelo a su grupo en `CATALOG` (`empleo/sources/__init__.py`): Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas, empresas públicas locales o fundaciones y centros de investigación. Quítalo de `PLANNED`.
+4. Añádelo a su grupo en `CATALOG` (`empleo/sources/__init__.py`): Grupo SEPI, otras empresas del Estado, empresas públicas autonómicas, empresas públicas locales, fundaciones y centros de investigación o universidades públicas. Quítalo de `PLANNED`.
 
 El motor, la web y los feeds no necesitan cambios. La clase `FakeSource` de `tests/test_ingest.py` es un ejemplo mínimo.
 
@@ -13,7 +13,7 @@ Antes de escribir el analizador, mira cómo se lee un portal nuevo y qué se sab
 
 Lo decide la forma en que publica el propio portal, no una clasificación nuestra:
 
-- **Oferta** (`ListedOffer`, portada): algo a lo que una persona de fuera puede presentarse ahora, con ficha y plazo. Incluye bolsas, prácticas y becas.
+- **Oferta** (`ListedOffer`, portada; las de los grupos de investigación y universidades, en «Investigación»): algo a lo que una persona de fuera puede presentarse ahora, con ficha y plazo. Incluye bolsas, prácticas y becas.
 - **Proceso** (`Announcement`, «Procesos selectivos»): comunicados de un proceso publicado por fases. Solo título, fecha y enlace.
 - **No se lee:** ayudas a proyectos, resoluciones con nombres, exámenes, listas de personas y la promoción interna como oferta.
 

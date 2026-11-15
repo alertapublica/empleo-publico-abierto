@@ -124,7 +124,8 @@ jobs:
             -H "Authorization: Bearer $AVISOS_CLAVE" -H "Content-Type: application/json" \
             --data-binary @carga.json https://avisos.alertapublica.es/interno/publicado
 
-      # Ofertas abiertas sin área (o solo con la de su organismo) que aún no están revisadas en
+      # Ofertas abiertas sin área (o solo con la de su organismo) y, de los centros de investigación,
+      # las que el área coloca con menos seguridad, que aún no están revisadas en
       # empleo/areas_referencia.csv: un único issue que se crea, se actualiza y se cierra solo.
       - name: Avisar de las ofertas sin área
         env:

@@ -1,0 +1,23 @@
+empleo({
+  "IdConvocatoria": "3394",
+  "IdPerfil": "3921",
+  "FechaDesde": "11/11/2026",
+  "FechaHasta": "15/11/2026",
+  "Estado": "Publicada",
+  "Titulacion": "Titulación Superior (MECES-3) en Biomedicina",
+  "Perfil": "Se requiere un/a Titulado/a Superior (Licenciatura o Grado + Máster equivalente Meces 3) en Biomedicina para desarrollar una tesis doctoral centrada en el estudio de cómo la disrupción circadiana y las alteraciones del metabolismo del sulfuro de hidrógeno (H₂S) contribuyen a la progresión del carcinoma hepatocelular. El proyecto investigará los mecanismos metabólicos, mitocondriales e inmunológicos implicados y el potencial preventivo de intervenciones nutricionales basadas en proteínas vegetales, en colaboración entre CIC bioGUNE y CIMA–Universidad de Navarra. La contratación se formalizará mediante un contrato PREDOCTORAL, por este motivo al presentar la solicitud se deberá acompañar de ESCRITO DE ADMISIÓN AL PROGRAMA DE DOCTORADO expedido por la unidad responsable de dicho programa o por la escuela de doctorado o postgrado en su caso. Será requisito indispensable para poder participar en el proceso de selección, acompañar al menos de certificado de preadmisión al programa de doctorado expedido por la unidad responsable de dicho programa, o por la escuela de doctorado o postgrado en su caso, siendo causa de exclusión no adjuntarlo con el título al presentar la solicitud. Tras el proceso de selección, la formalización contractual estará supeditada a la aportación previa del escrito de admisión definitiva al mismo y de su correspondiente matrícula del año en curso, todo ello conforme a lo que se recoge en el art. 21 b) de la Ley 14/2011, de 1 de junio. Será requisito indispensable no haber sido contratado/a mediante esta modalidad de contrato predoctoral, en la misma o distinta entidad, por un tiempo superior a cuatro años, para su acreditación se presentará INFORME DE VIDA LABORAL, siendo causa de exclusión no adjuntarlo.\r\nLa presente convocatoria se rige por los plazos del Procedimiento de Urgencia.",
+  "FuncionesDesarrollar": "•\tDesarrollo de modelos experimentales de disrupción circadiana y hepatocarcinogénesis.\r\n•\tCaracterización del metabolismo de un carbono, transulfuración y señalización por H₂S mediante técnicas bioquímicas, moleculares y metabolómicas.\r\n•\tEstudio de la función mitocondrial, homeostasis redox y persulfidación de proteínas.\r\n•\tCaracterización del microambiente tumoral y de las poblaciones inmunitarias hepáticas mediante citometría de flujo y técnicas complementarias.\r\n•\tEvaluación de intervenciones nutricionales dirigidas a modular el metabolismo del azufre.\r\n•\tAnálisis e interpretación de resultados experimentales, elaboración de publicaciones científicas y presentación de resultados en reuniones y congresos.",
+  "ExperienciaRequerida": "Se valorará positivamente la experiencia previa en laboratorios de investigación biomédica, particularmente en biología molecular, cultivos celulares, modelos animales, metabolismo, inmunología, citometría de flujo, técnicas ómicas y análisis bioinformático.\r\nSe valorará especialmente la autoría o coautoría de artículos científicos publicados en revistas internacionales revisadas por pares, así como la participación demostrable en proyectos de investigación y comunicaciones a congresos científicos.\r\n",
+  "OtrosConocimientos": "•\tBuen nivel de inglés científico, oral y escrito.\r\n•\tConocimientos de análisis estadístico y tratamiento de datos experimentales.\r\n•\tFamiliaridad con herramientas bioinformáticas para el análisis de datos transcriptómicos, metabolómicos o proteómicos.\r\n•\tCapacidad para trabajar en equipos multidisciplinares, iniciativa científica y disposición para realizar estancias formativas en centros colaboradores.",
+  "Centro": "CIC BIOGUNE",
+  "Provincia": "VIZCAYA",
+  "TipoContrato": "Predoctoral Ley de la ciencia",
+  "Jornada": "Si",
+  "HorasSemanales": "35,00",
+  "CategoriaProfesional": "Titulado Superior",
+  "SalarioBrutoAnual": "31.648,78 €",
+  "URLPaginaSolicitud": "https://intranet.cientifis.com/CiberEHD/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3921",
+  "Financiacion": "Subven.Nom",
+  "ContieneErrores": false,
+  "URLFicheroErrores": ""
+});

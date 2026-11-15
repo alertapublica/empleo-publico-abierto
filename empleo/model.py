@@ -32,6 +32,7 @@ GROUPS = {
     "autonomica": "Empresas públicas autonómicas",
     "local": "Empresas públicas locales",
     "investigacion": "Fundaciones y centros de investigación",
+    "universidades": "Universidades públicas",
 }
 STATE_SCOPE = "Estatal"
 

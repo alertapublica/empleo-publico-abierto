@@ -219,6 +219,13 @@
    "alias": []
   },
   {
+   "id": "ciber",
+   "nombre": "CIBER (Centro de Investigación Biomédica en Red)",
+   "alias": [
+    "CIBER"
+   ]
+  },
+  {
    "id": "idibell",
    "nombre": "IDIBELL",
    "alias": []
@@ -341,6 +348,11 @@
   {
    "id": "imdea-energia",
    "nombre": "IMDEA Energía",
+   "alias": []
+  },
+  {
+   "id": "ua",
+   "nombre": "Universidad de Alicante",
    "alias": []
   },
   {

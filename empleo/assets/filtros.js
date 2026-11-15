@@ -20,7 +20,6 @@
   var sinResultados = document.getElementById("sin-resultados");
   var ordenCampo = document.getElementById("orden-campo");
   var names = ["q"].concat(selects, form.orden ? ["orden"] : []);
-  var hayPlazas = items.some(function (item) { return item.dataset.plazas !== undefined; });
   var uno = form.dataset.uno || "oferta encontrada";
   var varios = form.dataset.varios || "ofertas encontradas";
   var timer = null;
@@ -43,7 +42,6 @@
     var words = plain(form.q.value).split(/\s+/).filter(Boolean);
     var marcadas = casillas.filter(function (n) { return form[n].checked; });
     var shown = 0;
-    var seats = 0;
     items.forEach(function (item) {
       var d = item.dataset;
       var match =
@@ -54,10 +52,7 @@
         }) &&
         marcadas.every(function (n) { return d[n] === "1"; });
       item.hidden = !match;
-      if (match) {
-        shown += 1;
-        seats += Number(d.plazas) || 0;
-      }
+      if (match) shown += 1;
     });
     var activos = plegados.filter(function (n) { return form[n].value; }).length;
     // «Quitar filtros» solo aparece cuando hay algo que quitar.
@@ -68,16 +63,26 @@
     }
     var contador = document.getElementById("n-filtros");
     if (contador) contador.textContent = activos ? " (" + activos + (activos === 1 ? " activo)" : " activos)") : "";
-    // Sin resultados, se propone la misma búsqueda entre los procesos selectivos.
+    // Sin resultados, se propone la misma búsqueda entre los procesos selectivos y, si la página lo
+    // declara (data-otras), en la otra lista de ofertas (portada o «Investigación»).
     if (sinResultados) {
       var procesos = form.dataset.procesos;
       sinResultados.hidden = shown !== 0;
       sinResultados.textContent = "";
       if (shown === 0 && procesos && words.length) {
-        var enlace = document.createElement("a");
-        enlace.href = procesos + "?q=" + encodeURIComponent(form.q.value.trim());
-        enlace.textContent = "Buscar «" + form.q.value.trim() + "» en los procesos selectivos";
-        sinResultados.append("Ninguna oferta abierta coincide con la búsqueda. ", enlace, ".");
+        var texto = form.q.value.trim();
+        var enlace = function (destino, etiqueta) {
+          var a = document.createElement("a");
+          a.href = destino + "?q=" + encodeURIComponent(texto);
+          a.textContent = etiqueta;
+          return a;
+        };
+        sinResultados.append("Ninguna oferta abierta coincide con la búsqueda. ",
+          enlace(procesos, "Buscar «" + texto + "» en los procesos selectivos"));
+        if (form.dataset.otras) {
+          sinResultados.append(" o ", enlace(form.dataset.otras, "en " + form.dataset.otrasTexto));
+        }
+        sinResultados.append(".");
       } else if (shown === 0) {
         sinResultados.textContent = "Ningún resultado coincide con estos filtros. Pruebe a quitar alguno.";
       }
@@ -89,7 +94,7 @@
     if (announce && status) {
       status.textContent = shown === 1
         ? "1 " + uno + "."
-        : shown + " " + varios + (hayPlazas ? ", con " + seats + " plazas" : "") + ".";
+        : shown + " " + varios + ".";
     }
     var params = new URLSearchParams();
     names.forEach(function (name) {
@@ -103,6 +108,14 @@
   }
 
   var initial = new URLSearchParams(location.search);
+  // ?organismo= de un organismo que se lee en la otra lista (portada o «Investigación»): allí, con la misma búsqueda.
+  var pedido = initial.get("organismo");
+  var aqui = form.organismo && Array.prototype.some.call(form.organismo.options, function (o) { return o.value === pedido; });
+  if (pedido && !aqui && form.dataset.otras &&
+      (form.dataset.organismosOtra || "").split(" ").indexOf(pedido) !== -1) {
+    location.replace(form.dataset.otras + location.search);
+    return;
+  }
   names.forEach(function (name) {
     if (initial.has(name)) form[name].value = initial.get(name);
   });

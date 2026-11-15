@@ -63,6 +63,26 @@ class Reglas(unittest.TestCase):
         ficha = "Correcciones en los bloques de incendios, embarcaciones y saneamiento ganadero."
         self.assertEqual(areas.classify("Tasa de reposición específica 2026 Grupo Tragsa", ficha), ([], ""))
 
+    def test_gestion_de_la_investigacion_y_formacion_del_investigador(self):
+        # La gestión de un centro es gestión (sale también en la portada, site.research_only);
+        # el personal investigador «en formación» (predoctoral) no es un puesto de formación.
+        self.assertEqual(areas.classify("UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)", group="investigacion")[0],
+                         ["admin", "investigacion"])
+        self.assertEqual(areas.classify("Personal investigador en formación", group="universidades")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Contrato predoctoral de formación")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Técnico/a de formación")[0], ["personas"])
+
+    def test_el_nombre_del_instituto_no_da_el_area(self):
+        title = ("Convocatoria para la cobertura de una plaza de técnico/a gestor en recursos humanos de la Fundación "
+                 "Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)")
+        self.assertEqual(areas.classify(title, group="investigacion")[0], ["personas"])
+
+    def test_quien_financia_no_da_el_area(self):
+        # «financiada» dice quién paga: con economía, la plaza saldría también en la portada (site.research_only)
+        title = "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Astrofísica Masiva»"
+        self.assertEqual(areas.classify(title, source="ua", group="universidades")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Técnico/a de gestión financiera")[0], ["economia"])
+
     def test_presentacion_fija_de_la_empresa_no_cuenta(self):
         ficha = ("Tragsatec, empresa especializada en la realización de actividades de ingeniería, consultoría "
                  "y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca...")
@@ -88,6 +108,25 @@ class Informe(unittest.TestCase):
         self.assertIn("## Con el área de la fuente (1)", text)
         self.assertIn("Personal técnico especialista](https://x.example/o) → Aeronáutica, espacio y defensa", text)
         for absent in ("Programador", "Tasa de reposición", "Ya revisada"):
+            self.assertNotIn(absent, text)
+
+    def test_centros_de_investigacion_lo_decidido_con_menos_seguridad(self):
+        ficha = [{"title": "Funciones", "html": "<p>Apoyo al grupo de investigación en el laboratorio.</p>"}]
+        offers = [
+            offer("Specialist Technician", "irb", sections=ficha),                    # solo allí, por la ficha
+            offer("UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)", "fisabio"),  # también en la portada
+            offer("Postdoctoral researcher", "irb"),          # el título lo dice: no se lista
+            offer("Administrativo de compras", "irb"),        # en la portada sin área de investigación: tampoco
+            offer("Investigador/a de mercados", "tragsa"),    # fuera de los centros no decide nada
+            offer("Research support technician", "irb", sections=ficha),
+        ]
+        text = areas.report(offers, GROUP_OF, reviewed={("irb", "Research support technician")})
+        self.assertIn("## Centros de investigación y universidades: dónde salen (2)", text)
+        self.assertIn("`irb` [Specialist Technician](https://x.example/o) → solo en «Investigación», por la ficha "
+                      "(Investigación y laboratorio)", text)
+        self.assertIn("(M3)](https://x.example/o) → también en la portada (Administración y gestión, "
+                      "Investigación y laboratorio)", text)
+        for absent in ("Postdoctoral", "Administrativo", "mercados", "Research support", "## Sin área"):
             self.assertNotIn(absent, text)
 
     def test_vacio_si_no_queda_nada(self):
