@@ -447,6 +447,13 @@ class RunSource(unittest.TestCase):
         items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
         self.assertEqual(items[0]["title"], "Técnico/a de laboratorio ref.110_2026")
 
+    def test_fecha_del_rss_es_la_de_deteccion(self):
+        # Como la API (novedades.json): la publicada en la fuente puede ser anterior y hundiría la novedad.
+        offer = {"id": "x:1", "title": "Oferta", "url": "https://x.example/1", "published_on": "2026-11-01"}
+        events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T09:30:00+00:00"}]
+        items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
+        self.assertEqual(items[0]["date"], datetime(2026, 11, 10, 9, 30, tzinfo=timezone.utc))
+
     def test_caracter_de_control_no_rompe_el_rss(self):
         item = {"title": "A\x0bB", "link": "https://x.example/1", "guid": "g", "text": "t\x00",
                 "date": datetime(2026, 11, 10, tzinfo=timezone.utc)}

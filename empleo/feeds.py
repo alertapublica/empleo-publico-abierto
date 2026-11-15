@@ -39,12 +39,11 @@ def offer_items(offers: dict, events: list, offer_url, summary) -> list[dict]:
             continue
         if event["kind"] == "reopened" and (event["offer"], event["at"]) in extended:
             continue
-        original = event["kind"] in ("new", "republished")
         items.append({
             "title": FEED_KINDS[event["kind"]] + humane_caps(offer["title"]),
             "link": offer_url(offer),
             "guid": f"{event['offer']}/{event['kind']}/{event['at']}",
-            "date": _when(offer.get("published_on") or event["at"]) if original else _when(event["at"]),
+            "date": _when(event["at"]),
             "text": summary(offer),
             "offer": offer,
         })
