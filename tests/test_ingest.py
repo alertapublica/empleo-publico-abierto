@@ -440,6 +440,12 @@ class RunSource(unittest.TestCase):
                                   lambda offer: offer["url"], lambda offer: "")
         self.assertEqual([item["title"] for item in items], ["Oferta (Madrid)", "Plazo modificado: Oferta (Madrid)"])
 
+    def test_titulo_en_mayusculas_va_legible_en_el_rss(self):
+        offer = {"id": "x:1", "title": "TÉCNICO/A DE LABORATORIO REF.110_2026", "url": "https://x.example/1"}
+        events = [{"offer": "x:1", "kind": "new", "at": "2026-11-10T08:00:00+00:00"}]
+        items = feeds.offer_items({"x:1": offer}, events, lambda o: o["url"], lambda o: "")
+        self.assertEqual(items[0]["title"], "Técnico/a de laboratorio ref.110_2026")
+
     def test_con_plazo_en_el_listado_la_vencida_no_vuelve_a_leerse(self):
         source = FakeSource([listed(deadline="2026-11-06")], OfferDetail())
         ingest.run_source(source, None, self.data, NOW - timedelta(days=2))
