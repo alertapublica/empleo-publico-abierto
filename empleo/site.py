@@ -583,6 +583,10 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
     source = sources[offer["source"]]
     if offer["status"] != "open" or expired(offer, now):
         return "cerrada"
+    # Solo las fichas de la portada: entre las de investigación entran becas y ayudas que no son un
+    # contrato, y los centros suelen publicar ya su propio marcado. Las de gestión salen en portada.
+    if research_only(offer, getattr(source, "group", "")):
+        return "solo investigación"
     if (offer.get("opens_on") or "") > now.astimezone(MADRID).date().isoformat():
         return "plazo no iniciado"
     # Con `validThrough`, Google la retira sola al vencer aunque no vuelva a leer la ficha.

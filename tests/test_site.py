@@ -1081,6 +1081,15 @@ class JobPosting(unittest.TestCase):
         self.assertNotIn("directApply", data)
         self.assertNotIn("baseSalary", data)
 
+    def test_solo_las_de_portada_llevan_marcado(self):
+        research = [{"title": "Funciones", "level": 2, "html": "<p>" + " ".join(
+            ["Investigación en biología molecular dentro del grupo y del proyecto de investigación."] * 8) + "</p>"}]
+        postdoc = posting("8", source="irb", title="Investigador postdoctoral", family=None, sections=research)
+        self.assertEqual(self.reason(postdoc), "solo investigación")
+        self.assertIsNone(self.data(postdoc))
+        clerk = posting("9", source="irb", title="Técnico/a de administración", family=None)
+        self.assertIsNone(self.reason(clerk))
+
     def test_varias_plazas_del_mismo_perfil_llevan_marcado(self):
         self.assertIsNone(self.reason(posting(positions=2)))
 
