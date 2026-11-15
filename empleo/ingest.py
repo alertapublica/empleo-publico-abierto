@@ -176,7 +176,9 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
                   undated: frozenset = frozenset()) -> None:
     """Lee las fichas pendientes. `undated`: ofertas que esta lectura ha listado sin plazo."""
     checked = extended = unread = 0
-    for record in offers.values():
+    # Primero las que nunca se han leído (las altas): si se acaba el plazo, quedan pendientes las relecturas
+    # (un `detail_version` nuevo) y no las ofertas nuevas, que se publican y avisan con lo que haya.
+    for record in sorted(offers.values(), key=lambda record: record["detail_ok"]):
         # Si el plazo solo está en la ficha (Correos, Navantia, BSM), una prórroga no llega por el
         # listado: mientras la oferta siga listada se vuelve a mirar la ficha, una vez al día.
         recheck = _extension_due(record, undated, now)
@@ -331,10 +333,20 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     for offer in listed:
         check_dates(offer, ("deadline", "published_on", "opens_on"))
     new_events = reconcile(offers, listed, source.id, now)
-    fetch_details(source, http, offers, new_events, now,
-                  frozenset(offer.ref for offer in listed if offer.deadline is None))
+    # Si se acaba el plazo en las fichas o en el portal, lo leído se guarda igual y la lectura siguiente sigue
+    # desde ahí: si no, una fuente con muchas fichas por releer no terminaría nunca. Los anuncios esperan.
+    cut: OutOfTime | None = None
+    try:
+        fetch_details(source, http, offers, new_events, now,
+                      frozenset(offer.ref for offer in listed if offer.deadline is None))
+    except OutOfTime as error:
+        cut = error
     close_expired(offers, new_events, now)
-    apply_enrichment(source, http, offers)
+    if cut is None:
+        try:
+            apply_enrichment(source, http, offers)
+        except OutOfTime as error:
+            cut = error
     for record in offers.values():
         if record["status"] == "open":
             if record["region"] in (None, UNKNOWN):  # también si la tabla de comunidades ha mejorado
@@ -347,6 +359,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     events.extend(new_events)
     store.save(folder / "offers.json", offers)
     store.save(folder / "events.json", events)
+    if cut is not None:
+        raise cut
 
     sync_announcements(source, http, announcements, now)
     store.save(folder / "announcements.json", announcements)
@@ -379,7 +393,7 @@ def run_one(source: Source, http: Client, now: datetime) -> str:
     try:
         run_source(source, http, DATA, now)
         result = "bien"
-    except OutOfTime as error:  # lo guardado hasta aquí se queda, como con cualquier error
+    except OutOfTime as error:  # las fichas leídas ya se guardaron (run_source)
         result = "sin tiempo"
         say(f"ERROR {source.id}: {error}", error=True)
     except Exception as error:  # cada fuente es independiente
