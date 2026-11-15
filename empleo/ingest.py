@@ -1,14 +1,17 @@
 """Compara lo publicado con lo guardado y registra los cambios."""
 from __future__ import annotations
 
+import os
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, replace
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import store
-from .http import Client
+from . import regions, store
+from .http import Client, OutOfTime
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
                     SourceLayoutError, deadline_passed, today_madrid)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
@@ -21,6 +24,10 @@ MIN_VISIBLE_RATIO = 0.3  # si desaparece casi todo, lo raro es la lectura
 MAX_PORTAL_TRIES = 4
 EXTENSION_DAYS = 14  # días tras el plazo en que se sigue mirando si la ficha lo ha ampliado
 EXTENSION_TRIES = 3  # lecturas al día de una ficha vencida de la que no se consigue leer el plazo
+# Lectura en paralelo por servidor (docs/plan-concurrencia.md). Plazos a revisar con lo que mida el registro.
+WORKERS = 4  # grupos a la vez; INGESTA_HILOS lo cambia (con 1, en serie)
+SOURCE_BUDGET = 10 * 60  # s por fuente
+TOTAL_BUDGET = 25 * 60  # s de toda la lectura: el job tiene 30 min y luego publica (≈20 s)
 TRACKED = ("title", "code", "source_title", "category", "url", "apply_url")
 
 
@@ -45,6 +52,15 @@ def _record(source_id: str, offer: ListedOffer, now: str) -> dict:
         "parent_ref": None,
         "portal_tries": 0,
     }
+
+
+_say_lock = threading.Lock()
+
+
+def say(text: str, error: bool = False) -> None:
+    """Una línea entera y al momento: con varios hilos, `print` puede partirla."""
+    with _say_lock:
+        print(text, file=sys.stderr if error else sys.stdout, flush=True)
 
 
 def _event(events: list, record: dict, kind: str, now: str, **extra) -> None:
@@ -175,7 +191,7 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
             if detail is not None:
                 check_dates(detail, ("deadline", "opens_on", "published_before"))
         except Exception as error:  # una ficha mala no debe parar el resto
-            print(f"AVISO {record['id']}: {error}", file=sys.stderr)
+            say(f"AVISO {record['id']}: {error}", error=True)
             detail = None
         if recheck:
             checked += 1
@@ -224,10 +240,10 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
                     event["kind"] = "republished"
         _locate(record)
     if checked:
-        print(f"{source.id}: prórrogas: {checked} fichas vencidas consultadas, {extended} con plazo ampliado, "
-              f"{unread} sin plazo legible")
+        say(f"{source.id}: prórrogas: {checked} fichas vencidas consultadas, {extended} con plazo ampliado, "
+            f"{unread} sin plazo legible")
         if unread == checked:
-            print(f"AVISO {source.id}: no se pudo leer el plazo de ninguna ficha vencida", file=sys.stderr)
+            say(f"AVISO {source.id}: no se pudo leer el plazo de ninguna ficha vencida", error=True)
 
 
 def apply_enrichment(source: Source, http: Client, offers: dict) -> None:
@@ -247,7 +263,7 @@ def apply_enrichment(source: Source, http: Client, offers: dict) -> None:
     try:
         extra = source.enrich(http)
     except Exception as error:  # el portal aporta extras: su fallo no bloquea
-        print(f"AVISO {source.id}: datos adicionales no disponibles: {error}", file=sys.stderr)
+        say(f"AVISO {source.id}: datos adicionales no disponibles: {error}", error=True)
         return
     for record in pending:
         record["portal_tries"] += 1
@@ -336,8 +352,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     store.save(folder / "announcements.json", announcements)
 
     open_count = sum(record["status"] == "open" for record in offers.values())
-    print(f"{source.id}: {open_count} abiertas, {len(new_events)} eventos, "
-          f"{len(announcements)} anuncios")
+    say(f"{source.id}: {open_count} abiertas, {len(new_events)} eventos, "
+        f"{len(announcements)} anuncios")
 
 
 def chosen(ids: list[str]) -> list[Source]:
@@ -356,38 +372,58 @@ def by_server(sources: list[Source]) -> list[list[Source]]:
     return list(groups.values())
 
 
-def run_one(source: Source, http: Client, now: datetime) -> bool:
+def run_one(source: Source, http: Client, now: datetime) -> str:
     """Lee una fuente con INICIO/FIN al momento, también si falla o se corta: dónde se va el tiempo."""
-    print(f"INICIO {source.id}", flush=True)
+    say(f"INICIO {source.id}")
     start, result = time.monotonic(), "cortada"
     try:
         run_source(source, http, DATA, now)
         result = "bien"
+    except OutOfTime as error:  # lo guardado hasta aquí se queda, como con cualquier error
+        result = "sin tiempo"
+        say(f"ERROR {source.id}: {error}", error=True)
     except Exception as error:  # cada fuente es independiente
         result = "error"
-        print(f"ERROR {source.id}: {error}", file=sys.stderr, flush=True)
+        say(f"ERROR {source.id}: {error}", error=True)
     finally:
-        print(f"FIN {source.id} {result} {time.monotonic() - start:.0f} s, "
-              f"{http.attempts} peticiones, {http.failures} fallidas", flush=True)
-    return result == "bien"
+        say(f"FIN {source.id} {result} {time.monotonic() - start:.0f} s, "
+            f"{http.attempts} peticiones, {http.failures} fallidas")
+    return result
 
 
-def run_group(group: list[Source], now: datetime) -> bool:
+def run_group(group: list[Source], now: datetime, end: float) -> dict[str, str]:
     """Las fuentes de un servidor, una tras otra y cada una con su `Client`. Al pasar a la siguiente se
-    respeta la pausa, como si fuera el mismo cliente (la mayor de las dos)."""
-    ok, previous = True, None
+    respeta la pausa, como si fuera el mismo cliente (la mayor de las dos). Cada fuente tiene su plazo,
+    sin pasar del de toda la lectura (`end`)."""
+    results, previous = {}, None
     for source in group:
         if previous is not None:
-            time.sleep(max(0.0, previous.last + max(previous.delay, source.delay) - time.monotonic()))
-        previous = Client(source.delay)
-        ok = run_one(source, previous, now) and ok
-    return ok
+            wait = previous.last + max(previous.delay, source.delay) - time.monotonic()
+            time.sleep(max(0.0, min(wait, end - time.monotonic())))
+        previous = Client(source.delay, deadline=min(time.monotonic() + SOURCE_BUDGET, end))
+        results[source.id] = run_one(source, previous, now)
+    return results
 
 
 def main(ids: list[str] | None = None) -> int:
     now = datetime.now(timezone.utc)
-    results = [run_group(group, now) for group in by_server(chosen(ids or []))]
-    return 0 if all(results) else 1
+    end = time.monotonic() + TOTAL_BUDGET
+    sources = chosen(ids or [])
+    workers = int(os.environ.get("INGESTA_HILOS") or WORKERS)
+    regions.warm()
+    results: dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for done in pool.map(lambda group: run_group(group, now, end), by_server(sources)):
+            results.update(done)
+    wrong = {}
+    for source in sources:  # resumen en el orden del catálogo
+        if results[source.id] != "bien":
+            wrong.setdefault(results[source.id], []).append(source.id)
+    say(f"RESUMEN {len(sources)} fuentes, {workers} a la vez: "
+        f"{sum(result == 'bien' for result in results.values())} bien"
+        + "".join(f"; {result}: {' '.join(ids)}" for result, ids in wrong.items()))
+    return 1 if wrong else 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
