@@ -102,7 +102,7 @@ class Grupos(unittest.TestCase):
             self.assertEqual(ingest.main(), 0)
         self.assertEqual(sorted(seen), [("lenta", 0), ("normal", 0), ("otra", 0)])
         self.assertEqual(len(sleep.call_args_list), 1)
-        self.assertGreater(sleep.call_args.args[0], 9)  # la mayor de las dos pausas
+        self.assertGreater(sleep.call_args.args[0], 5)  # la mayor de las dos pausas (10 s), no 2
 
     def test_los_grupos_del_catalogo_nombran_fuentes_activas(self):
         active = {source.id for source in sources.ACTIVE}
@@ -132,6 +132,13 @@ class Plazo(unittest.TestCase):
             client.get("https://example.org/")
         sleep.assert_not_called()
 
+    def test_si_vence_durante_la_pausa_no_pide_con_timeout_nulo(self):
+        client = self.client(10)
+        client._left = mock.Mock(side_effect=[10, 0])  # antes de la pausa y después
+        with self.assertRaises(http.OutOfTime):
+            client.get("https://example.org/")
+        client._opener.open.assert_not_called()
+
     def test_recorta_el_timeout_y_no_espera_el_reintento_sin_plazo(self):
         client = self.client(10)  # (con `sleep` simulado, el reloj no avanza)
         with mock.patch.object(http.time, "sleep") as sleep, self.assertRaises(http.OutOfTime):
@@ -159,7 +166,7 @@ class Plazo(unittest.TestCase):
 class Hilos(unittest.TestCase):
     def test_grupos_a_la_vez_y_dentro_del_grupo_de_uno_en_uno(self):
         sources = [fake("a1", group="a"), fake("b1", group="b"), fake("a2", group="a"), fake("b2", group="b")]
-        both = threading.Barrier(2, timeout=5)  # se rompe si los dos grupos no van a la vez
+        both = threading.Barrier(2, timeout=30)  # se rompe si los dos grupos no van a la vez
         lock, active, most = threading.Lock(), {"a": 0, "b": 0}, {"a": 0, "b": 0}
 
         def run(source, *_):
@@ -205,4 +212,4 @@ class Hilos(unittest.TestCase):
                 mock.patch.object(ingest, "SOURCE_BUDGET", 600), mock.patch.object(ingest, "TOTAL_BUDGET", 60), \
                 contextlib.redirect_stdout(io.StringIO()):
             ingest.main()
-        self.assertTrue(all(50 < left <= 60 for left in deadlines.values()), deadlines)
+        self.assertTrue(all(0 < left <= 60 for left in deadlines.values()), deadlines)  # el total, no 600

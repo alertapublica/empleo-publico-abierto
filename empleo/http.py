@@ -118,10 +118,13 @@ class Client:
             if jar:
                 signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
+            left = self._left()  # el plazo puede vencer durante la pausa: urllib no admite timeout <= 0
+            if left <= 0:
+                raise OutOfTime(f"sin tiempo para leer {url}")
             self.attempts += 1
             try:
                 # Por operación de socket: una respuesta que llega a goteo puede pasarse algo del plazo.
-                with self._opener.open(request, timeout=min(self.timeout, self._left())) as response:
+                with self._opener.open(request, timeout=min(self.timeout, left)) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
                         for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
