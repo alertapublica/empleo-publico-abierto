@@ -26,13 +26,20 @@ function servidor(respuestas) {
   return { vistas, pedir };
 }
 
-test("solo admite el origen del portal, con su puerto y sin credenciales", () => {
+test("solo admite los orígenes de la lista, con su puerto y sin credenciales", () => {
   assert.ok(permitido(PORTAL));
   assert.ok(!permitido("https://rrhhcandidato.tragsa.es/psc/portalrh/x.GBL"));
   assert.ok(!permitido("http://rrhhcandidato.tragsa.es:8443/"));
   assert.ok(!permitido("https://www.tragsa.es/"));
   assert.ok(!permitido("https://u:p@rrhhcandidato.tragsa.es:8443/"));
   assert.ok(!permitido("no es una url"));
+  for (const url of ["https://www.sepi.es/es/empleo-publico", "https://agenciaefe.es/empleo-efe-temporal/",
+    "https://www.agenciaefe.es/empleo-efe-indefinido/", "https://fundacion.unirioja.es/transparencia/ofertas-empleo"]) {
+    assert.ok(permitido(url), url);
+  }
+  // sepi.es sin www no: la fuente no lo usa y desde el Worker da 522.
+  assert.ok(!permitido("https://sepi.es/es/empleo-publico"));
+  assert.ok(!permitido("http://www.sepi.es/es/empleo-publico"));
 });
 
 test("sin firma válida, caducada o con otra clave no pide nada", async () => {
@@ -119,9 +126,8 @@ test("varias cookies, una cambiada en la redirección: todas, en orden y en una 
   assert.equal(vistas[1].headers.cookie, "S=1; B=x");
   assert.deepEqual(JSON.parse(r.headers.get("x-relay-set-cookies")),
     ["S=1; path=/; HttpOnly", "B=x; Expires=Wed, 21 Oct 2026 07:28:00 GMT; path=/", "S=2; path=/"]);
-  // La antigua sigue saliendo durante la transición (un cliente anterior la lee como antes).
-  assert.equal(r.headers.get("x-relay-set-cookie"),
-    "S=1; path=/; HttpOnly, B=x; Expires=Wed, 21 Oct 2026 07:28:00 GMT; path=/, S=2; path=/");
+  // La cabecera antigua, una por Set-Cookie, ya no sale.
+  assert.equal(r.headers.has("x-relay-set-cookie"), false);
 });
 
 test("sin Set-Cookie no hay cabecera de cookies", async () => {

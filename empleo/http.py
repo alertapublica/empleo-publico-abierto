@@ -35,29 +35,11 @@ def tls_context() -> ssl.SSLContext:
     return context
 
 
-# Hosts que no responden a las IP de GitHub Actions: se leen por un relay con IP española, firmado con
-# RELAY_CLAVE y situado en RELAY_URL (secretos del repo). Cada host tiene que estar también en la lista
-# de hosts permitidos del relay.
-VIA_RELAY = {"agenciaefe.es", "www.agenciaefe.es", "sepi.es", "www.sepi.es"}
-
-
-def relay(url: str) -> tuple[str, dict[str, str]]:
-    """URL y cabeceras con las que leer `url`: por el relay si su host lo pide y hay clave; si no, directa.
-
-    La firma caduca a los 120 s, así que se calcula en cada intento. Solo para GET.
-    """
-    clave, base = os.environ.get("RELAY_CLAVE"), os.environ.get("RELAY_URL")
-    if not (clave and base) or urllib.parse.urlsplit(url).hostname not in VIA_RELAY:
-        return url, {}
-    ts = str(int(time.time()))
-    firma = hmac.new(clave.encode(), f"{ts}\n{url}".encode(), hashlib.sha256).hexdigest()
-    return base.rstrip("/") + "/?" + urllib.parse.urlencode({"url": url}), {"x-ts": ts, "x-firma": firma}
-
-
-# Hosts a los que tampoco llega el relay de Piensa (el portal de candidatos de Tragsa solo atiende en el
-# puerto 8443, que Piensa bloquea de salida): van por el Worker de Cloudflare de relay/, que sale por
-# Madrid, con GET y POST y las cookies de la sesión. Secretos RELAY_CF_URL y RELAY_CF_CLAVE.
-VIA_RELAY_CF = {"rrhhcandidato.tragsa.es"}
+# Hosts que no responden a las IP de GitHub Actions (EE. UU.): se leen por el Worker de Cloudflare de relay/,
+# que sale por Madrid, con GET y POST y las cookies de la sesión. Secretos RELAY_CF_URL y RELAY_CF_CLAVE.
+# Tragsa (portal de candidatos, solo en el puerto 8443): timeout. SEPI: no responde. EFE: 403. Fundación de
+# la Universidad de La Rioja: 429. Cada host tiene que estar también en ORIGENES de relay/src/index.js.
+VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
 
 
 def relay_cf(url: str, data: bytes | None) -> tuple[str, dict[str, str]] | None:
@@ -105,20 +87,14 @@ class Client:
             if pause > 0:
                 time.sleep(pause)
             via_cf = relay_cf(url, data)
-            if via_cf:
-                target, signed = via_cf
-                if self._relay_cookies:
-                    signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in self._relay_cookies.items())
-            else:
-                target, signed = relay(url) if data is None else (url, {})
+            target, signed = via_cf or (url, {})
+            if via_cf and self._relay_cookies:
+                signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in self._relay_cookies.items())
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
             try:
                 with self._opener.open(request, timeout=self.timeout) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
-                        listed = response.headers.get("x-relay-set-cookies")
-                        # Sin ella, un Worker anterior: una cabecera por Set-Cookie (se pierden atributos con coma).
-                        legacy = response.headers.get_all("x-relay-set-cookie") or []
-                        for line in json.loads(listed) if listed else legacy:
+                        for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
                             if name.strip():
                                 self._relay_cookies[name.strip()] = value.strip()
