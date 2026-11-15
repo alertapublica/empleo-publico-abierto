@@ -15,7 +15,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from .http import FALLO_DIRECTO, HEADERS, relay_cf, tls_context
+from .http import FALLO_DIRECTO, HEADERS, headers_for, relay_cf, tls_context
 
 DELAY = 3.0
 MAX_BYTES = 3_000_000
@@ -169,11 +169,17 @@ def fetch(url: str) -> dict:
     return result
 
 
+def _open(request: urllib.request.Request):
+    """Con los intermedios de empleo/certs/ y cookies solo para esta página (la ULPGC vuelve del CAS con una)."""
+    opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=TLS), urllib.request.HTTPCookieProcessor())
+    return opener.open(request, timeout=TIMEOUT)
+
+
 def _read(url: str, via_cf: tuple[str, dict[str, str]] | None) -> dict:
     target, signed = via_cf or (url, {})
-    request = urllib.request.Request(target, headers={**HEADERS, **signed})
+    request = urllib.request.Request(target, headers={**headers_for(url), **signed})
     try:
-        with urllib.request.urlopen(request, timeout=TIMEOUT, context=TLS) as response:
+        with _open(request) as response:
             # Por el relay, geturl() sería la del relay, no la de destino tras las redirecciones.
             status, headers, final = response.status, response.headers, url if signed else response.geturl()
             body = response.read(MAX_BYTES)
