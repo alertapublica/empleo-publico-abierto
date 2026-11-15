@@ -1,0 +1,62 @@
+{
+ "1955": {
+  "apply_url": "https://sede.uvigo.gal/public/catalog-detail/27660208",
+  "category": null,
+  "closed_at": null,
+  "code": "14/26_CONC",
+  "company": "Universidade de Vigo",
+  "contract": null,
+  "deadline": "2026-11-18",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-15T17:59:21+00:00",
+  "id": "uvigo:1955",
+  "kind": null,
+  "listed_deadline": "2026-11-18",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-05",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "1955",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>O obxecto da presente convocatoria é a selección de persoal investigador e de apoio á investigación, coas características especificadas nos anexos III e IV para o desenvolvemento das actividades de investigación que conten con financiamento na Universidade de Vigo, dentro da normativa legal vixente.</p>\n<p>O sistema de selección será o de concurso a través da valoración dos méritos especificados nos anexos III e IV desta convocatoria.</p>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<ol>\n<li>Para seren admitidas as persoas aspirantes, ademais de cumprir, de ser o caso, os requisitos específicos que figuran nos anexos III e IV desta convocatoria, deberán posuír no día de remate de presentación de solicitudes e mantelos ata a formalización do contrato, os seguintes requisitos:\r\n<ol>\n<li>Ter a nacionalidade española ou calquera outra á que as normas do Estado atribúan iguais dereitos a efectos laborais na Administración Pública. Dispor da titulación indicada e cumprir o resto de requisitos publicados coa convocatoria da oferta de contrato.</li>\n<li>Ter cumpridos os dezaseis anos de idade e non exceder, de ser o caso, a idade máxima de xubilación</li>\n<li>Posuír a capacidade funcional necesaria para o desenvolvemento das correspondentes funcións ou</li>\n<li>Non ter sido separada mediante expediente disciplinario do servizo de ningunha administración pública ou dos órganos constitucionais ou estatutarios das comunidades autónomas, nin estar en inhabilitación absoluta ou especial para empregos e cargos públicos por resolución xudicial, para o acceso a corpos ou escalas de persoal funcionario, ou para exercer funcións similares ásque desempeñaban no caso do persoal laboral, na que fora separado ou</li>\n</ol>\n</li>\n<li>No caso de ser nacional doutro Estado, non estar inhabilitada ou en situación equivalente nin ter sido sometida a sanción disciplinaria ou equivalente que impida, no seu Estado, nos mesmos termos o acceso ao emprego público.</li>\n<li>Non se esixen requisitos específicos no referente á nacionalidade ou residencia das persoas aspirantes para a participación nos concursos. Non obstante, a contratación de persoas investigadoras estranxeiras de países non comunitarios, condiciónase á obtención dos permisos esixidos na normativa sobre estranxeiría, polo que as datas de inicio dos contratos que se establezan nas convocatorias poderían retrasarse en función dos prazos para a obtención dos devanditos permisos.</li>\n<li>As persoas aspirantes non deberán estar incursas en ningunha das causas de incompatibilidade previstas na lexislación vixente</li>\n</ol>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p><a href=\"https://sede.uvigo.gal/public/catalog-detail/27660208\">Solicitudes</a> ata as 23:59 horas do 18 de novembro de 2026</p>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentación"
+   },
+   {
+    "html": "<ul><li><a href=\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/fase/documento/downloadbyhash/612e8326c3673b77848af813c4e7f2007aaf5c69dcc05bf55a7e50bb42273ea7\">Bases do concurso</a></li><li><a href=\"https://secretaria.uvigo.gal/uv/web/convocatoria/public/convocatoria/fase/documento/downloadbyhash/d678a240f6cdea10c8b26da01181b8c66bbdd193ac2331c1b7dc4c7698000c04\">Declaración responsable editable</a></li></ul>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "uvigo",
+  "source_title": null,
+  "status": "open",
+  "title": "CONCURSO PÚBLICO DE MÉRITOS 14/26 PARA A CONTRATACIÓN DE PERSOAL DE INVESTIGACIÓN",
+  "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/show/1955"
+ }
+}
