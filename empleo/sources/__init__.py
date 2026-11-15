@@ -33,6 +33,7 @@ from .gpex import GpexSource
 from .hunosa import HunosaSource
 from .ibsal import IbsalSource
 from .idibaps import IdibapsSource
+from .ifapa import IfapaSource
 from .idisna import IdisnaSource
 from .idisba import IdisbaSource
 from .iisaragon import IisAragonSource
@@ -110,7 +111,7 @@ CATALOG = {
     "investigacion": [
         CiberSource(), IDIBELL, IdibapsSource(), FISABIO, IDIVAL, IdisnaSource(), IdisbaSource(), IbsalSource(), NavarrabiomedSource(), FundesaludSource(), IisAragonSource(),
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
-        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(),
+        IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(), IfapaSource(),
     ],
     "universidades": [UaSource()],
 }

@@ -17,7 +17,7 @@ los documentos: por eso se lee el HTML. El estado «En curso» no sigue el plazo
 
 Se leen las ofertas de empleo, las de estabilización, las ofertas genéricas del SAE (la persona se
 inscribe a través del Servicio Andaluz de Empleo) y las bolsas. No se leen la promoción interna,
-las entidades que tienen fuente propia (FISEVI, FIBAO, VEIASA) ni lo que publican las consejerías
+las entidades que tienen fuente propia (FISEVI, FIBAO, VEIASA, IFAPA) ni lo que publican las consejerías
 como tales (administración general, no empresas): solo entidades con forma de agencia, fundación,
 sociedad, consorcio, empresa, escuela o instituto en el nombre. Una convocatoria subida varias veces
 (mismo organismo, código, plazo y lugar, como las cuatro «2487» de Progreso y Salud del 2026-11-12) se
@@ -52,7 +52,7 @@ TYPES = {
     "Bolsa de trabajo": True,
     "Promoción interna": False,
 }
-OWN_SOURCE = re.compile(r"\((?:FISEVI|FIBAO)\)|Verificaciones Industriales de Andalucía", re.I)
+OWN_SOURCE = re.compile(r"\((?:FISEVI|FIBAO|IFAPA)\)|Verificaciones Industriales de Andalucía|Instituto Andaluz de Investigación y Formación Agraria", re.I)
 ENTITY = re.compile(r"\b(?:Agencia|Fundación|Sociedad|Consorcio|Empresa|Escuela|Instituto)\b|\bS\.\s?A\b", re.I)
 PLAZO = re.compile(r"(\d{2})/(\d{2})/(\d{4})\s*-\s*(\d{2})/(\d{2})/(\d{4})")
 CODE = re.compile(r"[\w./-]*\d[\w./-]*")

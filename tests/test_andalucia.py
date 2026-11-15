@@ -100,7 +100,8 @@ class Andalucia(unittest.TestCase):
                 ("2", "Técnico", "Fundación Pública Andaluza para la Gestión de la Investigación en Salud de Sevilla (FISEVI)"),
                 ("3", "Técnico", "Fundación Pública Andaluza para la Investigación Biosanitaria en Andalucía Oriental Alejandro Otero (FIBAO)"),
                 ("4", "Inspector", "Verificaciones Industriales de Andalucía S.A."),
-                ("5", "Administrativo", "Salud y Familias")),
+                ("5", "Administrativo", "Salud y Familias"),
+                ("6", "Técnico", "Instituto Andaluz de Investigación y Formación Agraria, Pesquera, Alimentaria y de la Producción Ecológica (IFAPA)")),
             FICHA.format(1): interna,
         })
         self.assertEqual(andalucia.AndaluciaSource(at(2026, 11, 12, 12, 0)).list_offers(http), [])
