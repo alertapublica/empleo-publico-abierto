@@ -96,12 +96,12 @@
         if (nota) nota.hidden = true;
         return;
       }
+      var form = casilla.form;
       if (!nota) {
         nota = doc.createElement("div");
         nota.className = "nota";
         nota.id = "guardadas-cerradas";
         var resultados = doc.querySelector(".resultados");
-        var form = casilla.form;
         form.parentNode.insertBefore(nota, resultados || form.nextSibling);
       }
       var partes = [];
