@@ -64,6 +64,7 @@ SOURCE_AREAS = {
     "uhu": "investigacion",  # ídem: Personal Técnico de Apoyo a la Investigación
     "uvigo": "investigacion",  # ídem: concursos de personal de investigación
     "usc": "investigacion",  # ídem: convocatorias de personal para proyectos de investigación
+    "udc": "investigacion",  # ídem: contratación con cargo a proyectos (PCTI)
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 

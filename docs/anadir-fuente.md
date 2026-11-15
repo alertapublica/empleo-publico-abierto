@@ -22,5 +22,6 @@ Lo decide la forma en que publica el propio portal, no una clasificación nuestr
 - El contrato va con el texto literal de la fuente en `contract`. `kind` solo se rellena si la fuente lo dice sin ambigüedad. No se deduce nada del título.
 - Si el portal pega un código interno al título («OE 25/26 - Analista»), la fuente declara `title_code`: el título queda limpio, el código va a `code` y el literal a `source_title`. `ref_code` dice qué `ref` son el código que publica el portal; los ids de URL, hashes y slugs no se enseñan.
 - Abierta o cerrada se decide por las fechas (`opens_on`, `deadline`, `deadline_time`), no por la etiqueta de la web.
+- Un plazo relativo («20 días hábiles desde la publicación») no se publica como fecha salvo que la fuente pueda calcularlo sin dudas (fecha de publicación cierta y calendario oficial del organismo). Entonces la fuente da la fecha y la regla literal en `deadline_rule`, y la web y la API la marcan como calculada (`plazo_regla`). Hoy, solo la Universidade da Coruña.
 - Si el portal pide una pausa mayor entre peticiones, se respeta.
 - No se copian listas de personas candidatas, se omiten los códigos de candidatura y nunca se automatiza una inscripción.

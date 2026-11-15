@@ -103,6 +103,8 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
                    before=record["deadline"], after=offer.deadline)
             record["deadline"] = offer.deadline
             record["deadline_time"] = None  # la hora del plazo anterior no vale para el nuevo
+            if offer.deadline_rule or record.get("deadline_rule"):  # ni la regla con que se calculó (UDC)
+                record["deadline_rule"] = offer.deadline_rule
             record["detail_ok"] = False
         if offer.deadline is not None:
             record["listed_deadline"] = offer.deadline
@@ -116,6 +118,9 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
         for field in LISTING_OR_DETAIL:  # si el listado no lo trae, vale lo leído en la ficha
             if getattr(offer, field) is not None:
                 record[field] = getattr(offer, field)
+        # La regla del plazo calculado: la del listado es provisional y la de la ficha la corrige, como la fecha.
+        if offer.deadline_rule and not record.get("deadline_rule"):
+            record["deadline_rule"] = offer.deadline_rule
 
     for ref, record in offers.items():
         if record["status"] != "open":
@@ -232,6 +237,8 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
         record.update(sections=detail.sections or (record["sections"] if recheck else []), detail_ok=True,
                       detail_version=source.detail_version, parent_ref=detail.parent_ref)
         record["deadline"] = detail.deadline or record["deadline"]
+        if detail.deadline_rule:
+            record["deadline_rule"] = detail.deadline_rule
         for field in LISTING_OR_DETAIL:
             record[field] = getattr(detail, field) or record.get(field)
         if detail.published_before and detail.published_before < (record["published_on"] or "9999"):

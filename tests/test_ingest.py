@@ -14,10 +14,10 @@ from empleo.sources.base import Source
 NOW = datetime(2026, 11, 7, 12, 0, tzinfo=timezone.utc)
 
 
-def listed(ref="1", deadline="2026-11-20", positions=2, title="Oferta (Madrid)", published_on=None):
+def listed(ref="1", deadline="2026-11-20", positions=2, title="Oferta (Madrid)", published_on=None, **extra):
     return ListedOffer(ref=ref, title=title, company="Empresa", url=f"https://a/{ref}",
                        apply_url=f"https://a/i/{ref}", positions=positions, deadline=deadline,
-                       published_on=published_on)
+                       published_on=published_on, **extra)
 
 
 class FakeSource(Source):
@@ -672,6 +672,16 @@ class RunSource(unittest.TestCase):
         ingest.run_source(source, None, self.data, NOW)
         record = self.stored()["1"]
         self.assertEqual((record["deadline"], record["deadline_time"], source.detail_calls), ("2026-11-20", None, 2))
+
+    def test_plazo_calculado_la_ficha_corrige_fecha_y_regla(self):
+        # UDC: el listado calcula con 5 días hábiles; el PDF de la ficha dice 10 y corrige las dos cosas.
+        source = FakeSource([listed(deadline="2026-11-17", deadline_rule="5 días hábiles")],
+                            OfferDetail(deadline="2026-11-24", deadline_rule="10 días hábiles"))
+        ingest.run_source(source, None, self.data, NOW)
+        ingest.run_source(source, None, self.data, NOW)
+        record = self.stored()["1"]
+        self.assertEqual((record["deadline"], record["deadline_rule"]), ("2026-11-24", "10 días hábiles"))
+        self.assertEqual(source.detail_calls, 1)
 
     def test_plazas_de_la_ficha_si_el_listado_no_las_trae(self):
         source = FakeSource([listed(positions=None)], OfferDetail(positions=4))

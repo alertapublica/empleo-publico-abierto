@@ -117,6 +117,9 @@ class ListedOffer:
     deadline_time: str | None = None  # HH:MM, si el plazo acaba a una hora concreta
     code: str | None = None  # código que el portal publica con la oferta (Source.labels)
     source_title: str | None = None  # título literal, si se le ha quitado el código
+    # Regla literal del plazo cuando la fuente no publica la fecha de cierre y la calcula la fuente
+    # («5 días hábiles a partir del día siguiente al de la publicación…»): la web marca la fecha como calculada.
+    deadline_rule: str | None = None
 
 
 @dataclass
@@ -136,6 +139,7 @@ class OfferDetail:
     # Publicación anterior que declara la propia ficha («proceso publicado el pasado …» al ampliar el
     # plazo): vale como `published_on` si es más antigua que la guardada.
     published_before: str | None = None
+    deadline_rule: str | None = None  # ver ListedOffer.deadline_rule
 
 
 # Datos de la oferta que pueden venir del listado o de la ficha.

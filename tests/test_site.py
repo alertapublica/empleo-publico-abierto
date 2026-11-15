@@ -405,7 +405,7 @@ class Site(unittest.TestCase):
         self.assertEqual(list(ofertas["tragsa:2"]), [
             "id", "organismo", "codigo", "titulo", "titulo_original", "empresa", "estado", "ubicacion", "localidad",
             "comunidad", "ccaa", "provincia", "municipio", "plazas", "tipo_contrato", "contrato", "convocatoria", "tipo_puesto",
-            "departamento", "plazo_inicio", "plazo_fin", "plazo_hora", "publicada", "detectada", "cerrada",
+            "departamento", "plazo_inicio", "plazo_fin", "plazo_hora", "plazo_regla", "publicada", "detectada", "cerrada",
             "republica", "areas", "perfil", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle",
             "url", "url_inscripcion", "url_portal"])
         self.assertEqual((ofertas["tragsa:2"]["estado"], ofertas["tragsa:3"]["estado"]), ("abierta", "cerrada"))
@@ -1042,6 +1042,17 @@ class Site(unittest.TestCase):
         self.assertIn("Finaliza mañana.", site.offer_card(started, NOW.date()))
         self.assertIn("a las 08:00", site.offer_card(started, NOW.date()))
         self.assertNotIn("a las", site.offer_card(offer("7"), NOW.date()))
+
+    def test_plazo_calculado_se_marca(self):
+        rule = "5 días hábiles a partir del día siguiente al de la publicación en el tablón de anuncios"
+        record = offer("8", deadline_rule=rule)
+        self.assertIn("20 de noviembre de 2026</time> (fecha calculada)", site.offer_card(record, NOW.date()))
+        sheet = site.offer_page(record, self.sources(), NOW, "ahora")
+        self.assertIn("la calcula este portal", sheet)
+        self.assertIn(f"La convocatoria dice: «{rule}».", sheet)
+        self.assertIn("(fecha calculada)", site.offer_summary(record))
+        self.assertNotIn("calculada", site.offer_card(offer("9"), NOW.date()))
+        self.assertNotIn("la calcula este portal", site.offer_page(offer("9"), self.sources(), NOW, "ahora"))
 
     def sources(self):
         tragsa = type("S", (), {"name": "Tragsa", "apply_label": "Inscribirse en la web oficial"})()
