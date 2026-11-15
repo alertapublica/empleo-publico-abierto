@@ -5,6 +5,7 @@ import gzip
 import hashlib
 import hmac
 import json
+import math
 import http.cookiejar
 import os
 import ssl
@@ -64,11 +65,18 @@ def _origin(url: str) -> str:
     return f"{parts.scheme}://{parts.hostname}" + (f":{port}" if port else "")
 
 
+class OutOfTime(BaseException):
+    """Se acabó el plazo de la fuente o de la lectura. Hereda de BaseException para que ningún
+    `except Exception` (una ficha mala, datos adicionales) la trague: corta la fuente entera."""
+
+
 class Client:
-    def __init__(self, delay: float = DEFAULT_DELAY, retries: int = 3, timeout: float = 60):
+    def __init__(self, delay: float = DEFAULT_DELAY, retries: int = 3, timeout: float = 60,
+                 deadline: float | None = None):
         self.delay = delay
         self.retries = retries
         self.timeout = timeout
+        self.deadline = deadline  # time.monotonic() desde el que no se pide nada más
         self._opener = urllib.request.build_opener(
             urllib.request.HTTPSHandler(context=tls_context()),
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
@@ -90,12 +98,20 @@ class Client:
     def post(self, url: str, fields: dict[str, str]) -> str:
         return self._request(url, urllib.parse.urlencode(fields).encode()).decode("utf-8", "replace")
 
+    def _left(self) -> float:
+        return math.inf if self.deadline is None else self.deadline - time.monotonic()
+
+    def _wait(self, seconds: float, url: str) -> None:
+        """Espera, salvo que al acabar ya no quede plazo para pedir nada."""
+        if max(seconds, 0) >= self._left():
+            raise OutOfTime(f"sin tiempo para leer {url}")
+        if seconds > 0:
+            time.sleep(seconds)
+
     def _request(self, url: str, data: bytes | None) -> bytes:
         last_error: Exception | None = None
         for attempt in range(self.retries):
-            pause = self.last + self.delay - time.monotonic()
-            if pause > 0:
-                time.sleep(pause)
+            self._wait(self.last + self.delay - time.monotonic(), url)
             via_cf = relay_cf(url, data)
             target, signed = via_cf or (url, {})
             jar = self._relay_cookies.setdefault(_origin(url), {}) if via_cf else {}
@@ -104,7 +120,8 @@ class Client:
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
             self.attempts += 1
             try:
-                with self._opener.open(request, timeout=self.timeout) as response:
+                # Por operación de socket: una respuesta que llega a goteo puede pasarse algo del plazo.
+                with self._opener.open(request, timeout=min(self.timeout, self._left())) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
                         for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
@@ -120,7 +137,7 @@ class Client:
                 if isinstance(error, urllib.error.HTTPError) and error.code < 500:
                     break
                 if attempt + 1 < self.retries:  # tras el último intento no hay nada que esperar
-                    time.sleep(5 * 3**attempt)
+                    self._wait(5 * 3**attempt, url)
             finally:
                 self.last = time.monotonic()
         raise RuntimeError(f"No se pudo leer {url}: {last_error}")

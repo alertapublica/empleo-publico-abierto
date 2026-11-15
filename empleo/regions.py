@@ -224,6 +224,13 @@ def _municipalities() -> dict[str, list[tuple[str, str]]]:
     return names
 
 
+def warm() -> None:
+    """Construye las tablas perezosas antes de leer en paralelo, para no hacerlo en varios hilos a la vez."""
+    _municipalities()
+    _ccaa_provinces()
+    provinces()
+
+
 def _area_name(plain: str) -> bool:
     """El texto es exactamente el nombre de una provincia o comunidad («Sevilla», «Murcia»)."""
     return (any(alias == plain for alias, _ in _PROVINCE_TABLE) or plain in _NOT_A_PLACE
