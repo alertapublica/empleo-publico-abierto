@@ -260,9 +260,9 @@ class Site(unittest.TestCase):
     def test_menu_con_acerca_y_accesibilidad_en_el_pie(self):
         html = self.read("index.html")
         nav = html.split('id="nav-principal"')[1].split("</nav>")[0]
-        self.assertEqual(nav.count("<li>"), 6)
-        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Procesos tras Ofertas, Histórico al final
-        self.assertEqual(labels, ["Ofertas", "Procesos", "Organismos", "Avisos", "Acerca de", "Histórico"])
+        self.assertEqual(nav.count("<li>"), 7)
+        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación y Procesos tras Ofertas, Histórico al final
+        self.assertEqual(labels, ["Ofertas", "Investigación", "Procesos", "Organismos", "Avisos", "Acerca de", "Histórico"])
         self.assertIn(">Procesos</a>", nav)
         self.assertIn('<a href="acerca/">Acerca de</a>', nav)
         self.assertIn('aria-current="page">Acerca de</a>', self.read("acerca/index.html").split("</nav>")[0])
@@ -740,6 +740,39 @@ class Site(unittest.TestCase):
         self.assertIn("No tiene ofertas abiertas en este momento", sola)
         self.assertNotIn('role="search"', sola)
         self.assertNotIn('<section class="procesos"', sola)
+
+    def test_investigacion_en_su_seccion_y_lo_demas_tambien_en_la_portada(self):
+        def source(ident, name, group):
+            return type("S", (), {"id": ident, "name": name, "group": group, "homepage": f"https://{ident}.example/",
+                                  "apply_label": "Inscribirse"})()
+        sources = {"tragsa": source("tragsa", "Tragsa", "sepi"), "irb": source("irb", "IRB Barcelona", "investigacion"),
+                   "ua": source("ua", "Universidad de Alicante", "universidades")}
+        offers = [offer("1"), offer("2", source="irb", title="Postdoctoral researcher", company="IRB Barcelona"),
+                  offer("3", source="irb", title="Administrativo de compras", company="IRB Barcelona"),
+                  offer("4", source="ua", title="Personal investigador en formación", company="Universidad de Alicante")]
+        portada = site.index_page(offers, NOW.date(), "ahora", sources)
+        # La investigación sale solo en su sección; el administrativo del IRB, en las dos.
+        self.assertEqual(re.findall(r'data-guardar="o:(\w+-\d)"', portada), ["tragsa-1", "irb-3"])
+        self.assertIn('sección: <a href="investigacion/">Investigación</a>, con 3 ofertas abiertas.', portada)
+        self.assertIn('data-otras="investigacion/" data-otras-texto="las ofertas de investigación"', portada)
+        self.assertIn('id="empresa"', portada)
+        html = site.research_page(offers, NOW.date(), "ahora", sources)
+        self.assertEqual(sorted(re.findall(r'data-guardar="o:(\w+-\d)"', html)), ["irb-2", "irb-3", "ua-4"])
+        self.assertIn('<a href="../ofertas/irb-2/">', html)
+        self.assertIn('data-procesos="../anuncios/" data-otras="../"', html)
+        self.assertIn('href="../acerca/#como-buscar"', html)
+        self.assertIn('aria-current="page">Investigación</a>', html)
+        self.assertNotIn('id="empresa"', html)  # en los centros, la empresa es el propio organismo
+        self.assertIn('<option value="universidades">Universidades públicas</option>', html)
+        self.assertNotIn('<option value="sepi">', html)
+        # La ficha vuelve a su lista y el buscador del organismo filtra su sección.
+        self.assertIn('href="../../investigacion/">Volver a las ofertas de investigación',
+                      site.offer_page(offers[1], sources, NOW, "ahora"))
+        self.assertIn('<a href="../../">Volver al listado de ofertas', site.offer_page(offers[2], sources, NOW, "ahora"))
+        self.assertIn('action="../../investigacion/"', site.organism_page(sources["irb"], offers, NOW.date(), "ahora"))
+        sin = site.research_page(offers[:1], NOW.date(), "ahora", sources)
+        self.assertIn("no hay ofertas abiertas de investigación", sin)
+        self.assertNotIn("Investigación</a>, con", site.index_page(offers[:1], NOW.date(), "ahora", sources))
 
     def test_filtro_organismo_solo_con_varias_fuentes(self):
         def source(ident, name, group="sepi"):

@@ -57,6 +57,7 @@ API_HEAD = {
 }
 NAV = [
     ("index", "", "Ofertas"),
+    ("investigacion", "investigacion/", "Investigación"),
     ("anuncios", "anuncios/", "Procesos"),
     ("organismos", "organismos/", "Organismos"),
     ("avisos", "avisos/", "Avisos"),
@@ -373,7 +374,52 @@ def area_options(open_offers: list[dict], group_of: dict) -> str:
     return "".join(f'<option value="{key}">{e(label)}</option>' for key, label in choices)
 
 
+# Sección «Investigación»: todas las ofertas abiertas de estos grupos. Las que el clasificador no pone
+# en el área de investigación (gestión, administración, enfermería…) salen también en la portada.
+RESEARCH_GROUPS = ("investigacion", "universidades")
+
+
+def research_only(offer: dict, group: str) -> bool:
+    """La oferta sale solo en «Investigación», no en la portada."""
+    return group in RESEARCH_GROUPS and "investigacion" in areas.offer_areas(offer, group)[0]
+
+
+def group_of_source(sources: dict, source_id: str) -> str:
+    source = sources.get(source_id)
+    return getattr(source, "group", "") if source else ""
+
+
 def index_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
+    """Portada: las ofertas abiertas, menos las de investigación de su sección."""
+    front = [o for o in open_offers if not research_only(o, group_of_source(sources, o["source"]))]
+    research = sum(group_of_source(sources, o["source"]) in RESEARCH_GROUPS for o in open_offers)
+    empty = "" if front else '<p class="nota">En este momento no hay ofertas abiertas.</p>'
+    section = (f'<p class="nota">Las ofertas de los centros de investigación y las universidades tienen su propia '
+               f'sección: <a href="investigacion/">Investigación</a>, con {open_count(research)}.</p>\n'
+               if research else "")
+    body = f"""<h1 class="sr-only">Ofertas de empleo abiertas</h1>
+{empty}
+{offer_list(front, today, sources, "", ("investigacion/", "las ofertas de investigación") if research else None, note=section)}"""
+    return page(SITE_NAME, body, "", "index", checked=checked)
+
+
+def research_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
+    """Sección «Investigación»: las ofertas de los grupos de investigación y universidades."""
+    found = [o for o in open_offers if group_of_source(sources, o["source"]) in RESEARCH_GROUPS]
+    empty = "" if found else '<p class="nota">En este momento no hay ofertas abiertas de investigación.</p>'
+    body = f"""<h1>Investigación</h1>
+<p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. Las que no son de investigación (gestión, administración, enfermería…) aparecen también en <a href="../">Ofertas</a>.</p>
+{empty}
+{offer_list(found, today, sources, "../", ("../", "el resto de ofertas"), companies=False)}"""
+    return page("Ofertas de investigación", body, "../", "investigacion",
+                description="Ofertas de empleo abiertas en fundaciones, centros de investigación y universidades "
+                            "públicas, leídas de sus webs oficiales.", checked=checked)
+
+
+def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
+               others: tuple[str, str] | None = None, companies: bool = True, note: str = "") -> str:
+    """Buscador, filtros y lista de ofertas, de la más reciente a la más antigua. `others`: dónde más
+    proponer la búsqueda si no da resultados (dirección y texto del enlace); `note`, bajo el recuento."""
     ordered = sorted(
         open_offers,
         key=lambda o: (o.get("published_on") or o["first_seen"][:10]),
@@ -381,8 +427,7 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
     )
     total_seats = sum(o.get("positions") or 0 for o in open_offers)
     group_of = {s.id: s.group for s in sources.values()}
-    cards = "\n".join(offer_card(o, today, group=group_of.get(o["source"], "")) for o in ordered)
-    empty = "" if open_offers else '<p class="nota">En este momento no hay ofertas abiertas.</p>'
+    cards = "\n".join(offer_card(o, today, root, group=group_of.get(o["source"], "")) for o in ordered)
     remote = [teletrabajo.mention(o) for o in open_offers]
     remote_filter = remote_hint = ""
     if any(isinstance(r, str) for r in remote):
@@ -410,15 +455,18 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
             '<div class="campo"><label for="grupo">Grupo de organismos</label>\n'
             f'<select id="grupo" name="grupo"><option value="">Todos</option>{choices}</select></div>\n'
         ) + organism_filter
-    body = f"""<h1 class="sr-only">Ofertas de empleo abiertas</h1>
-{empty}
-<noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa o suscribirse a los <a href="avisos/">avisos por comunidad autónoma</a>.</p></noscript>
-<form id="filtros" class="filtros" role="search" aria-label="Buscar ofertas" data-procesos="anuncios/" hidden>
+    company_filter = (
+        '<div class="campo"><label for="empresa">Empresa</label>\n'
+        f'<select id="empresa" name="empresa"><option value="">Todas</option>{options(o.get("company") for o in open_offers)}</select></div>\n'
+    ) if companies else ""
+    other = f' data-otras="{e(others[0])}" data-otras-texto="{e(others[1])}"' if others else ""
+    return f"""<noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa o suscribirse a los <a href="{root}avisos/">avisos por comunidad autónoma</a>.</p></noscript>
+<form id="filtros" class="filtros" role="search" aria-label="Buscar ofertas" data-procesos="{root}anuncios/"{other} hidden>
 {search_bar("Buscar ofertas por palabra", "Puesto, empresa o localidad")}
 <div class="pastillas">
 {FILTERS_BUTTON}
 <label class="pastilla"><input type="checkbox" name="pronto" value="1"> Cierran en {SOON_DAYS} días</label>
-{remote_filter}{saved_filter("o", "Guardadas")}<a class="como-buscar" href="acerca/#como-buscar">Cómo buscar</a>
+{remote_filter}{saved_filter("o", "Guardadas")}<a class="como-buscar" href="{root}acerca/#como-buscar">Cómo buscar</a>
 {order_field(ORDER_OPTIONS)}</div>
 <div class="panel rejilla" id="mas-filtros" hidden>
 <div class="campo"><label for="comunidad">Comunidad autónoma</label>
@@ -427,15 +475,12 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
 <select id="area" name="area"><option value="">Todas</option>{area_options(open_offers, group_of)}</select></div>
 <div class="campo"><label for="tipo">Tipo de contrato</label>
 <select id="tipo" name="tipo"><option value="">Todos</option>{options((o.get('kind') for o in open_offers), KINDS)}</select></div>
-<div class="campo"><label for="empresa">Empresa</label>
-<select id="empresa" name="empresa"><option value="">Todas</option>{options(o.get('company') for o in open_offers)}</select></div>
-{organism_filter}</div>
+{company_filter}{organism_filter}</div>
 {remote_hint}</form>
 {results_bar(f"{open_count(len(open_offers))}, con {seats(total_seats)}.", reset=True)}
-<ol class="ofertas" id="lista-ofertas">
+{note}<ol class="ofertas" id="lista-ofertas">
 {cards}
 </ol>"""
-    return page(SITE_NAME, body, "", "index", checked=checked)
 
 
 ORDER_OPTIONS = (
@@ -653,7 +698,10 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
         parent = (
             f'<p class="nota">Esta oferta es una nueva publicación de la oferta {e(offer["parent_ref"])}.</p>'
         )
-    body = f"""<p><a href="{root}">Volver al listado de ofertas</a></p>
+    back = (f'<a href="{root}investigacion/">Volver a las ofertas de investigación</a>'
+            if research_only(offer, group_of_source(sources, offer["source"]))
+            else f'<a href="{root}">Volver al listado de ofertas</a>')
+    body = f"""<p>{back}</p>
 <h1{lang_attr(getattr(sources[offer['source']], 'text_lang', None))}>{e(offer['title'])}</h1>
 <p class="guardar-ficha" data-guardar="{e(saved_id(offer))}" hidden></p>
 {status}{parent}
@@ -798,8 +846,9 @@ def organism_page(source, open_offers: list[dict], today: date, checked: str,
     )
     cards = "\n".join(offer_card(o, today, root) for o in ordered)
     offers = open_count(len(ordered)) if ordered else "No tiene ofertas abiertas en este momento"
-    # Se busca en la portada, ya filtrada por el organismo, con el resto de filtros a mano.
-    search = (f"""<form class="buscador" role="search" aria-label="Buscar en sus ofertas" action="{root}" method="get">
+    # Se busca en la portada (o en «Investigación»), ya filtrada por el organismo, con el resto de filtros a mano.
+    listing = root + ("investigacion/" if getattr(source, "group", "") in RESEARCH_GROUPS else "")
+    search = (f"""<form class="buscador" role="search" aria-label="Buscar en sus ofertas" action="{listing}" method="get">
 <input type="hidden" name="organismo" value="{e(source.id)}">
 <label class="sr-only" for="q-organismo">Buscar en las {len(ordered)} ofertas de {e(source.name)}</label>
 <input type="search" id="q-organismo" name="q" placeholder="Buscar en sus {len(ordered)} ofertas">
@@ -1205,6 +1254,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <h2 id="que-hay">Contenido del portal</h2>
 <ul>
 <li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases.</li>
+<li><strong>Investigación:</strong> las ofertas de las fundaciones, los centros de investigación y las universidades públicas están en su propia sección, <a href="../investigacion/">Investigación</a>. Las que no son de investigación (gestión, administración, enfermería…) salen también en la portada.</li>
 <li><strong>No incluye</strong> las oposiciones de las Administraciones públicas (Administración General del Estado, comunidades autónomas y entidades locales). Para ellas, consulte los buscadores oficiales de empleo público y los boletines oficiales.</li>
 </ul>
 <h2 id="organismos">Organismos incluidos</h2>
@@ -1655,6 +1705,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         write(out / path / "index.html", head_url(html, base_url, path))
 
     put("", index_page(open_offers, today, checked, sources))
+    put("investigacion/", research_page(open_offers, today, checked, sources))
     groups = process_groups(announcements)
     live = [g for g in groups if is_live(g)]
     running = {s.id: sum(g[0]["source"] == s.id for g in live) for s in ACTIVE}
