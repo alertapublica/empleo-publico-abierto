@@ -62,6 +62,7 @@ SOURCE_AREAS = {
     "sarga": "ambiente", "cetarsa": "ambiente",
     "ua": "investigacion",  # de momento solo sus plazas para proyectos de investigación
     "uhu": "investigacion",  # ídem: Personal Técnico de Apoyo a la Investigación
+    "uvigo": "investigacion",  # ídem: concursos de personal de investigación
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
