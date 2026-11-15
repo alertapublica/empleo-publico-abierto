@@ -58,7 +58,8 @@ class Ficha(unittest.TestCase):
     def test_codigo_entre_parentesis(self):
         contract = ifapa.parse_ficha(fixture("ifapa-ficha-65478.html"))["contract"]
         self.assertEqual(contract["code"], "PR.INTC.ATIDRAI26.004")
-        self.assertTrue(contract["title"].startswith("Titulado Superior · (ATIDRAI_AGRO) Alianza estratégica"))
+        self.assertTrue(contract["title"].startswith("Titulado Superior · Alianza estratégica"))
+        self.assertTrue(contract["title"].endswith("(ATIDRAI_AGRO)"))
         self.assertEqual(contract["location"], "IFAPA Centro Camino de Purchil (Granada)")
 
     def test_otras_formas_del_codigo_y_de_la_categoria(self):

@@ -41,10 +41,11 @@ COMPANY = "IFAPA"
 MAX_PAGES = 3
 BLOCK = re.compile(r"Proyecto IDF\s*:\s*(.+?)\s*Centro\s*:\s*(.+?)\s*Titulaci[óo]n\s*:\s*(.+)$", re.S)
 # «PR.FEMPA.DIP2023A.003», «(PR.INTC.ATIDRAI26.004)», «(CAICEM 2025-180)», «CAICEM 192/2025»; el acrónimo
-# sin cifras que a veces lo sigue («(ATIDRAI_AGRO)») es parte del nombre.
+# sin cifras que a veces lo sigue («(ATIDRAI_AGRO)») es parte del nombre y pasa al final del título.
 PROJECT_CODE = re.compile(r"^\(?(PR\.[\w.-]+|[A-Z]{2,}[\w.-]* \d[\d/.-]*)\)?\s+")
 # Categoría: lo que va antes de «:» o del primer punto («Titulado Grado Medio. Ingeniería…»).
 CATEGORY = re.compile(r"^([^:.]{3,40}?)\s*[:.]\s")
+ACRONYM = re.compile(r"^\(([\w-]+)\)\s+(.+)$", re.S)
 POSITIONS = re.compile(r"Se convoca\s*(\d+)\s*contratos?\b", re.I)
 
 
@@ -80,6 +81,9 @@ def contract_of(body) -> dict | None:
     project, centre, degree = (part.strip() for part in match.groups())
     category, code = CATEGORY.match(degree), PROJECT_CODE.match(project)
     name = project[code.end():] if code else project
+    acronym = ACRONYM.match(name)  # «(ATIDRAI_AGRO) Alianza…»: el nombre va primero y la sigla, al final como en las demás
+    if acronym:
+        name = f"{acronym.group(2).rstrip('. ')} ({acronym.group(1)})"
     if category is None or not name:
         return None
     seats = POSITIONS.search(blocks[0].get_text(" "))
