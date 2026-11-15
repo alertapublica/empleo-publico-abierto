@@ -4,6 +4,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import hmac
+import json
 import http.cookiejar
 import os
 import ssl
@@ -113,10 +114,14 @@ class Client:
             request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
             try:
                 with self._opener.open(request, timeout=self.timeout) as response:
-                    for line in response.headers.get_all("x-relay-set-cookie") or []:
-                        name, _, value = line.split(";")[0].partition("=")
-                        if name.strip():
-                            self._relay_cookies[name.strip()] = value.strip()
+                    if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
+                        listed = response.headers.get("x-relay-set-cookies")
+                        # Sin ella, un Worker anterior: una cabecera por Set-Cookie (se pierden atributos con coma).
+                        legacy = response.headers.get_all("x-relay-set-cookie") or []
+                        for line in json.loads(listed) if listed else legacy:
+                            name, _, value = line.split(";")[0].partition("=")
+                            if name.strip():
+                                self._relay_cookies[name.strip()] = value.strip()
                     body = response.read()
                     if response.headers.get("Content-Encoding") == "gzip":
                         body = gzip.decompress(body)

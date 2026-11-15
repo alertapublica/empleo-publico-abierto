@@ -20,7 +20,7 @@ MIN_VISIBLE_RATIO = 0.3  # si desaparece casi todo, lo raro es la lectura
 MAX_PORTAL_TRIES = 4
 EXTENSION_DAYS = 14  # días tras el plazo en que se sigue mirando si la ficha lo ha ampliado
 EXTENSION_TRIES = 3  # lecturas al día de una ficha vencida de la que no se consigue leer el plazo
-TRACKED = ("title", "code", "source_title", "company", "category", "url", "apply_url")
+TRACKED = ("title", "code", "source_title", "category", "url", "apply_url")
 
 
 def _record(source_id: str, offer: ListedOffer, now: str) -> dict:
@@ -172,7 +172,7 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
         try:
             detail = source.fetch_detail(http, listed)
             if detail is not None:
-                check_dates(detail, ("deadline", "opens_on"))
+                check_dates(detail, ("deadline", "opens_on", "published_before"))
         except Exception as error:  # una ficha mala no debe parar el resto
             print(f"AVISO {record['id']}: {error}", file=sys.stderr)
             detail = None
@@ -203,13 +203,20 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
             del record["deadline_checked"]
         if detail is None:
             continue
+        # Hasta leer la ficha, la ubicación es provisional (la del título, el ámbito de la fuente): manda la de
+        # la ficha (58786: «Lleida o Barcelona», no «Cataluña»). En una relectura se queda la guardada.
+        if record["detail_ok"]:
+            record["location"] = record["location"] or detail.location
+        else:
+            record["location"] = detail.location or record["location"]
         # Una relectura que llega sin texto no borra el que ya había.
         record.update(sections=detail.sections or (record["sections"] if recheck else []), detail_ok=True,
                       detail_version=source.detail_version, parent_ref=detail.parent_ref)
-        record["location"] = record["location"] or detail.location
         record["deadline"] = detail.deadline or record["deadline"]
         for field in LISTING_OR_DETAIL:
             record[field] = getattr(detail, field) or record.get(field)
+        if detail.published_before and detail.published_before < (record["published_on"] or "9999"):
+            record["published_on"] = detail.published_before
         if detail.parent_ref:
             for event in events:
                 if event["offer"] == record["id"] and event["kind"] == "new":
@@ -223,10 +230,15 @@ def fetch_details(source: Source, http: Client, offers: dict, events: list, now:
 
 
 def apply_enrichment(source: Source, http: Client, offers: dict) -> None:
+    """Completa con `enrich` lo que falta; lo que ya se tiene (de la ficha o de una lectura anterior) se queda.
+
+    La ubicación de la ficha es más precisa y literal que la del portal, y la primera fecha de publicación
+    vale más que la que el portal pone al ampliar el plazo.
+    """
     pending = [
         record for record in offers.values()
         if record["status"] == "open"
-        and not record["published_on"]
+        and any(not record[field] for field in source.enrich_fields)
         and record["portal_tries"] < MAX_PORTAL_TRIES
     ]
     if not pending:
@@ -240,7 +252,9 @@ def apply_enrichment(source: Source, http: Client, offers: dict) -> None:
         record["portal_tries"] += 1
         values = extra.get(record["ref"])
         if values:
-            record.update({key: value for key, value in values.items() if value})
+            record.update({key: value for key, value in values.items() if value and not record.get(key)
+                           # la ubicación de la ficha manda: la del portal, solo si ya se leyó y no la daba
+                           and (key != "location" or record["detail_ok"])})
             _locate(record)
 
 

@@ -37,6 +37,13 @@ class Reglas(unittest.TestCase):
         self.assertLessEqual(set(areas.SOURCE_AREAS.values()) | set(areas.GROUP_AREAS.values()), set(areas.AREAS))
         self.assertLessEqual(set(areas.GROUP_AREAS), set(GROUPS))
 
+    def test_defensa_judicial_no_es_defensa_militar(self):
+        # Tragsa 58747
+        title = ("Especialista en representación y defensa de procedimientos judiciales civiles, penales, "
+                 "mercantiles y laborales Gerencia de Asuntos Contenciosos (TRAGSA)")
+        self.assertEqual(areas.classify(title)[0], ["juridico"])
+        self.assertIn("aeroespacial", areas.classify("Técnico/a de sistemas de defensa")[0])
+
     def test_resultado_estable_a_igualdad_de_puntos(self):
         # Sin orden fijo en los empates, el orden variaría entre ejecuciones.
         self.assertEqual(areas.classify("Ingeniero/a o Graduado/a + Máster de Montes - Obras")[0], ["ambiente", "obras"])
