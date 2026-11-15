@@ -213,3 +213,39 @@ class Hilos(unittest.TestCase):
                 contextlib.redirect_stdout(io.StringIO()):
             ingest.main()
         self.assertTrue(all(0 < left <= 60 for left in deadlines.values()), deadlines)  # el total, no 600
+
+
+class AgenteDeNavegador(unittest.TestCase):
+    """La ULPGC da 403 a nuestro agente: solo a ella (y a lo que redirija) le va el de un navegador."""
+    ULPGC = "https://www.ulpgc.es/conv-pdi-cont/convocatorias-contratacion-pdi-ano-2026"
+
+    def _agentes(self, opener_owner, call):
+        seen = []
+
+        class Respuesta(io.BytesIO):
+            headers = {}
+
+        def open_(request, *args, **kwargs):
+            seen.append(request.get_header("User-agent"))
+            return Respuesta(b"ok")
+        with mock.patch.object(opener_owner, "open", side_effect=open_):
+            call()
+        return seen
+
+    def test_el_cliente_solo_cambia_el_agente_de_la_ulpgc(self):
+        client = http.Client(delay=0)
+        seen = self._agentes(client._opener, lambda: (client.get(self.ULPGC), client.get("https://www.uco.es/")))
+        self.assertEqual(seen, [http.AGENTE_NAVEGADOR, http.HEADERS["User-Agent"]])
+        self.assertEqual(http.HEADERS["User-Agent"], "empleo-publico-abierto/0.1")  # no se toca el de siempre
+
+    def test_el_sondeo_tambien(self):
+        from empleo import sondeo
+        seen = []
+
+        def open_(request):
+            seen.append(request.get_header("User-agent"))
+            raise http.urllib.error.URLError("sin red")
+        with mock.patch.object(sondeo, "_open", side_effect=open_):
+            sondeo.fetch(self.ULPGC)
+            sondeo.fetch("https://www.uco.es/")
+        self.assertEqual(seen, [http.AGENTE_NAVEGADOR, http.HEADERS["User-Agent"]])

@@ -22,6 +22,19 @@ HEADERS = {
     "Accept-Encoding": "gzip",
 }
 
+# Hosts que dan 403 a nuestro User-Agent y 200 al de un navegador (comprobado desde una IP española, 2026-11-15).
+# ULPGC: además manda al CAS (identificate.ulpgc.es, gateway) y vuelve con una cookie de sesión: sin
+# CookieJar entra en un bucle de redirecciones. El agente sigue a la redirección (urllib copia las cabeceras).
+AGENTE_NAVEGADOR = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+CON_AGENTE_NAVEGADOR = {"www.ulpgc.es"}
+
+
+def headers_for(url: str) -> dict[str, str]:
+    """Cabeceras de siempre, con el agente de navegador para los hosts que lo exigen."""
+    if urllib.parse.urlsplit(url).hostname in CON_AGENTE_NAVEGADOR:
+        return {**HEADERS, "User-Agent": AGENTE_NAVEGADOR}
+    return dict(HEADERS)
+
 
 DEFAULT_DELAY = 2.0  # segundos entre peticiones, salvo que el portal pida más
 # Intermedios que algunos servidores oficiales no envían bien (ver certs/README.md).
@@ -42,10 +55,11 @@ def tls_context() -> ssl.SSLContext:
 # la Universidad de La Rioja: 429. Cada host tiene que estar también en ORIGENES de relay/src/index.js.
 VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
 # Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker.
-# Universidades que desde España responden y desde Actions no (sondeo, ronda 7, 2026-11-15): UIB (timeout),
-# ULPGC y UEx (403), La Rioja (429). Una vez que un host falla directo, el resto de la lectura (el mismo Client)
-# va ya por el Worker.
-RESPALDO_CF = {"rrhh.uib.cat", "www.ulpgc.es", "vrprofesorado.unex.es", "aps.unirioja.es"}
+# Una vez que un host falla directo, el resto de la lectura (el mismo Client) va ya por el Worker.
+# Universidades (sondeo, ronda 7, 2026-11-15): La Rioja da 429 a Actions y entra por el Worker; la UIB dio
+# timeout una vez y la siguiente entró directa. La UEx (vrprofesorado, rrhhinvestigacion) da 403 a Actions, al
+# Worker y al hosting de Piensa, y 200 desde una IP doméstica: no hay respaldo que sirva.
+RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es"}
 FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 
@@ -127,7 +141,7 @@ class Client:
             jar = self._relay_cookies.setdefault(_origin(url), {}) if via_cf else {}
             if jar:
                 signed["x-relay-cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
-            request = urllib.request.Request(target, data=data, headers={**HEADERS, **signed})
+            request = urllib.request.Request(target, data=data, headers={**headers_for(url), **signed})
             left = self._left()  # el plazo puede vencer durante la pausa: urllib no admite timeout <= 0
             if left <= 0:
                 raise OutOfTime(f"sin tiempo para leer {url}")

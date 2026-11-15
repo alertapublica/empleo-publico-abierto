@@ -24,7 +24,7 @@ from empleo import http, sondeo
 CLAVE = "clave-de-prueba"
 SEPI = "https://www.sepi.es/es/empleo-publico"
 PORTAL_TRAGSA = "https://rrhhcandidato.tragsa.es:8443/psc/portalrh/EMPLOYEE/HRMS/c/X.GBL?Page=A"
-UEX = "https://vrprofesorado.unex.es/concursos/pdi_l/concursos-pdi-laboral-2025-2026/"  # host de RESPALDO_CF
+RIOJA = "https://aps.unirioja.es/contratacionPDI/convocatorias"  # host de RESPALDO_CF
 WORKER = Path(__file__).parent.parent / "relay" / "src" / "index.js"
 
 
@@ -125,11 +125,11 @@ class RelayCloudflare(unittest.TestCase):
         self.assertEqual(client._relay_cookies, {})
 
     def _directa_falla(self, opener, error):
-        """Las peticiones directas a UEx fallan con `error`; el resto (el Worker local) va de verdad."""
+        """Las peticiones directas a La Rioja fallan con `error`; el resto (el Worker local) va de verdad."""
         real = opener.open
 
         def open_(request, *args, **kwargs):
-            if request.full_url.startswith("https://vrprofesorado.unex.es/"):
+            if request.full_url.startswith("https://aps.unirioja.es/"):
                 raise error
             return real(request, *args, **kwargs)
         return mock.patch.object(opener, "open", side_effect=open_)
@@ -137,25 +137,25 @@ class RelayCloudflare(unittest.TestCase):
     def test_respaldo_directa_primero_y_si_falla_por_el_worker(self):
         client = http.Client(delay=0)
         with self._directa_falla(client._opener, urllib.error.URLError(TimeoutError("timed out"))) as open_:
-            self.assertEqual(client.get(UEX), f"GET {UEX} ")
+            self.assertEqual(client.get(RIOJA), f"GET {RIOJA} ")
             # Ya sabe que directa no va: la siguiente, al Worker sin probar directa.
-            self.assertEqual(client.get(UEX + "?p=2"), f"GET {UEX}?p=2 ")
+            self.assertEqual(client.get(RIOJA + "?p=2"), f"GET {RIOJA}?p=2 ")
         directas = [c.args[0].full_url for c in open_.call_args_list if c.args[0].full_url.startswith("https://")]
-        self.assertEqual(directas, [UEX])
-        self.assertEqual([s["url"] for s in FakeWorker.seen], [UEX, UEX + "?p=2"])
+        self.assertEqual(directas, [RIOJA])
+        self.assertEqual([s["url"] for s in FakeWorker.seen], [RIOJA, RIOJA + "?p=2"])
 
     def test_respaldo_con_403_429_y_5xx_pero_no_con_404(self):
         for code, worker in ((403, 1), (429, 1), (503, 1), (404, 0)):
             FakeWorker.seen = []
             client = http.Client(delay=0)
-            error = urllib.error.HTTPError(UEX, code, "x", email.message.Message(), io.BytesIO())
+            error = urllib.error.HTTPError(RIOJA, code, "x", email.message.Message(), io.BytesIO())
             self.addCleanup(error.close)
             with self._directa_falla(client._opener, error):
                 if worker:
-                    self.assertEqual(client.get(UEX), f"GET {UEX} ")
+                    self.assertEqual(client.get(RIOJA), f"GET {RIOJA} ")
                 else:
                     with self.assertRaisesRegex(RuntimeError, "404"):
-                        client.get(UEX)
+                        client.get(RIOJA)
             self.assertEqual(len(FakeWorker.seen), worker, code)
 
     def test_respaldo_sin_clave_se_queda_en_directa(self):
@@ -163,22 +163,22 @@ class RelayCloudflare(unittest.TestCase):
             client = http.Client(delay=0)
             with self._directa_falla(client._opener, urllib.error.URLError("refused")) as open_:
                 with self.assertRaises(RuntimeError):
-                    client.get(UEX)
+                    client.get(RIOJA)
         self.assertEqual(open_.call_count, 3)
         self.assertEqual(FakeWorker.seen, [])
 
     def test_el_sondeo_prueba_directa_y_luego_el_worker(self):
-        real = urllib.request.urlopen
+        real = sondeo._open
 
-        def urlopen(request, *args, **kwargs):
-            if request.full_url.startswith("https://vrprofesorado.unex.es/"):
+        def open_(request):
+            if request.full_url.startswith("https://aps.unirioja.es/"):
                 raise urllib.error.URLError(TimeoutError("timed out"))
-            return real(request, *args, **kwargs)
-        with mock.patch.object(sondeo.urllib.request, "urlopen", side_effect=urlopen):
-            result = sondeo.fetch(UEX)
-        self.assertEqual((result["estado"], result["via"], result["url_final"]), (200, "relay", UEX))
+            return real(request)
+        with mock.patch.object(sondeo, "_open", side_effect=open_):
+            result = sondeo.fetch(RIOJA)
+        self.assertEqual((result["estado"], result["via"], result["url_final"]), (200, "relay", RIOJA))
         self.assertIn("timed out", result["fallo_directo"])
-        self.assertIn("(relay; directa: ", sondeo.summary({"paginas": [{"organismo": "unex", "url": UEX, **result}]}))
+        self.assertIn("(relay; directa: ", sondeo.summary({"paginas": [{"organismo": "unirioja", "url": RIOJA, **result}]}))
 
     def test_el_sondeo_tambien_y_no_enseña_el_worker(self):
         result = sondeo.fetch(SEPI)

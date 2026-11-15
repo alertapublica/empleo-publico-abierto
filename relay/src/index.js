@@ -22,8 +22,6 @@ export const ORIGENES = new Set([
   "https://fundacion.unirioja.es",
   // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
   "https://rrhh.uib.cat",
-  "https://www.ulpgc.es",
-  "https://vrprofesorado.unex.es",
   "https://aps.unirioja.es",
 ]);
 const VENTANA_S = 120;
