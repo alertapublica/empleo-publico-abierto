@@ -20,7 +20,6 @@
   var sinResultados = document.getElementById("sin-resultados");
   var ordenCampo = document.getElementById("orden-campo");
   var names = ["q"].concat(selects, form.orden ? ["orden"] : []);
-  var hayPlazas = items.some(function (item) { return item.dataset.plazas !== undefined; });
   var uno = form.dataset.uno || "oferta encontrada";
   var varios = form.dataset.varios || "ofertas encontradas";
   var timer = null;
@@ -43,7 +42,6 @@
     var words = plain(form.q.value).split(/\s+/).filter(Boolean);
     var marcadas = casillas.filter(function (n) { return form[n].checked; });
     var shown = 0;
-    var seats = 0;
     items.forEach(function (item) {
       var d = item.dataset;
       var match =
@@ -54,10 +52,7 @@
         }) &&
         marcadas.every(function (n) { return d[n] === "1"; });
       item.hidden = !match;
-      if (match) {
-        shown += 1;
-        seats += Number(d.plazas) || 0;
-      }
+      if (match) shown += 1;
     });
     var activos = plegados.filter(function (n) { return form[n].value; }).length;
     // «Quitar filtros» solo aparece cuando hay algo que quitar.
@@ -99,7 +94,7 @@
     if (announce && status) {
       status.textContent = shown === 1
         ? "1 " + uno + "."
-        : shown + " " + varios + (hayPlazas ? ", con " + seats + " plazas" : "") + ".";
+        : shown + " " + varios + ".";
     }
     var params = new URLSearchParams();
     names.forEach(function (name) {
@@ -113,6 +108,14 @@
   }
 
   var initial = new URLSearchParams(location.search);
+  // ?organismo= de un organismo que se lee en la otra lista (portada o «Investigación»): allí, con la misma búsqueda.
+  var pedido = initial.get("organismo");
+  var aqui = form.organismo && Array.prototype.some.call(form.organismo.options, function (o) { return o.value === pedido; });
+  if (pedido && !aqui && form.dataset.otras &&
+      (form.dataset.organismosOtra || "").split(" ").indexOf(pedido) !== -1) {
+    location.replace(form.dataset.otras + location.search);
+    return;
+  }
   names.forEach(function (name) {
     if (initial.has(name)) form[name].value = initial.get(name);
   });

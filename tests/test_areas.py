@@ -56,6 +56,20 @@ class Reglas(unittest.TestCase):
         ficha = "Correcciones en los bloques de incendios, embarcaciones y saneamiento ganadero."
         self.assertEqual(areas.classify("Tasa de reposición específica 2026 Grupo Tragsa", ficha), ([], ""))
 
+    def test_gestion_de_la_investigacion_y_formacion_del_investigador(self):
+        # La gestión de un centro es gestión (sale también en la portada, site.research_only);
+        # el personal investigador «en formación» (predoctoral) no es un puesto de formación.
+        self.assertEqual(areas.classify("UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)", group="investigacion")[0],
+                         ["admin", "investigacion"])
+        self.assertEqual(areas.classify("Personal investigador en formación", group="universidades")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Contrato predoctoral de formación")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Técnico/a de formación")[0], ["personas"])
+
+    def test_el_nombre_del_instituto_no_da_el_area(self):
+        title = ("Convocatoria para la cobertura de una plaza de técnico/a gestor en recursos humanos de la Fundación "
+                 "Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)")
+        self.assertEqual(areas.classify(title, group="investigacion")[0], ["personas"])
+
     def test_presentacion_fija_de_la_empresa_no_cuenta(self):
         ficha = ("Tragsatec, empresa especializada en la realización de actividades de ingeniería, consultoría "
                  "y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca...")

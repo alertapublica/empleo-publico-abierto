@@ -63,6 +63,7 @@ GROUP_AREAS = {"investigacion": "investigacion"}
 FRASES = [
     # nombres de organismos y fórmulas que no dicen nada del puesto
     (r"autoridad portuaria[^)]*|puertos del estado|grupo tragsa|correos express|jovenes talentos?|"
+     r"(fundacion )?instituto de investigacion sanitaria[^)]*|"
      r"convocatoria (publica|externa|interna)|banco de datos|proceso libre", {}),
     # presentaciones fijas de la empresa al principio de las fichas
     (r"especializada en (la realizacion de actividades de ingenieria[^.]*medioambiental|"
@@ -133,6 +134,11 @@ FRASES = [
     (r"oficial\w* (de )?(puente|maquinas)|jefe\w* de maquinas|patron\w* (de|del) "
      r"(embarcacion|litoral|cabotaje|altura|buque|pesca)\w*|marina mercante|\bm\.?m\.?",
      {"transporte": 3}),
+    # gestión de un centro de investigación: puesto de gestión, también en la portada (site.research_only)
+    (r"gestion de (la )?investigacion|gestion del conocimiento|research management|gestio de la recerca",
+     {"admin": 3, "investigacion": 1}),
+    # la formación del personal investigador (predoctoral) no es un puesto de formación
+    (r"(investigador\w*|predoctoral\w*|predoc) (en|de) formacion|investigador\w* en formacio", {"investigacion": 3}),
     (r"apoyo a la investigacion|research support|suport a la recerca", {"investigacion": 3}),
     (r"grupo de investigacion|research group|grup de recerca|\bgroup\b", {"investigacion": 2}),
     (r"ensayos? clinic\w*|clinical (trial|research)|study coordinator|assaigs? clinic\w*",
@@ -225,7 +231,7 @@ PALABRAS = [
      r"\brecruit\w*|\bprestakuntza\w*", {"personas": 3}),
     # investigación y laboratorio
     (r"\binvestigador\w*|\binvestigacion\b|\bresearch\w*|\brecerca\b|\bpostdoc\w*|"
-     r"\bpostdoctoral\w*|\bikertzaile\w*|\bikerketa\w*|\bscientist|\bcientific[oa]s?\b|"
+     r"\bpostdoctoral\w*|\bpredoc\w*|\bikertzaile\w*|\bikerketa\w*|\bscientist|\bcientific[oa]s?\b|"
      r"\bbioestadist\w*|\bbiostatistic\w*|\binvestigacio\b", {"investigacion": 3}),
     (r"\blaboratori\w*|\blaboratory|\blab\b", {"investigacion": 2}),
     (r"\bdoctor[ae]?\b|\bphd\b|\bbiotecnolog\w*|\bbioquimic\w*|\bquimic\w*|\bgenetic\w*|"

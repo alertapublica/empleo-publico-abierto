@@ -211,7 +211,8 @@ class Site(unittest.TestCase):
         html = self.read("index.html")
         self.assertIn("ofertas/tragsa-2/", html)
         self.assertNotIn("ofertas/tragsa-3/", html)
-        self.assertIn("4 ofertas abiertas, con 8 plazas", html)
+        self.assertIn("4 ofertas abiertas.", html)
+        self.assertNotIn("con 8 plazas", html)  # sin total de plazas: muchas fichas no lo dan
 
     def panel(self, html):
         """El panel plegado de «Filtros»: lo que va entre su apertura y la ayuda o el fin del formulario."""
@@ -770,9 +771,31 @@ class Site(unittest.TestCase):
                       site.offer_page(offers[1], sources, NOW, "ahora"))
         self.assertIn('<a href="../../">Volver al listado de ofertas', site.offer_page(offers[2], sources, NOW, "ahora"))
         self.assertIn('action="../../investigacion/"', site.organism_page(sources["irb"], offers, NOW.date(), "ahora"))
+        # Guardadas: las abiertas que solo están en la otra lista no se dan por cerradas; ?organismo= de la
+        # otra lista se redirige allí (filtros.js).
+        self.assertIn('id="lista-ofertas" data-en-otra="o:irb-2 o:ua-4"', portada)
+        self.assertIn('data-organismos-otra="irb ua"', portada)
+        self.assertIn('id="lista-ofertas" data-en-otra="o:tragsa-1"', html)
+        self.assertIn('data-organismos-otra="tragsa"', html)
         sin = site.research_page(offers[:1], NOW.date(), "ahora", sources)
         self.assertIn("no hay ofertas abiertas de investigación", sin)
         self.assertNotIn("Investigación</a>, con", site.index_page(offers[:1], NOW.date(), "ahora", sources))
+
+    def test_solo_en_investigacion_lo_de_investigacion_sin_gestion(self):
+        cases = {
+            "Postdoctoral Researcher in Bioinformatics": True,
+            "Personal investigador en formación": True,
+            "Clinical Trials Study Nurse - Vascular Risk Unit": True,  # investigación y sanidad
+            "UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)": False,
+            "Técnico/a gestor en recursos humanos de la Fundación Instituto de Investigación Sanitaria": False,
+            "Diplomatura/Grado en Enfermería": False,
+            "Administrativo de compras": False,
+            "Técnico/a de comunicación científica y divulgación": False,
+        }
+        for title, only in cases.items():
+            with self.subTest(title):
+                self.assertIs(site.research_only(offer("1", source="irb", title=title), "investigacion"), only)
+        self.assertFalse(site.research_only(offer("1", title="Postdoctoral Researcher"), "sepi"))
 
     def test_filtro_organismo_solo_con_varias_fuentes(self):
         def source(ident, name, group="sepi"):

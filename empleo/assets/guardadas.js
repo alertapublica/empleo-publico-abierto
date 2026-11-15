@@ -85,10 +85,14 @@
     var presentes = lista
       ? Array.prototype.map.call(lista.querySelectorAll("li[data-guardar]"), function (li) { return li.dataset.guardar; })
       : [];
+    // Abiertas que solo están en la otra lista (portada o «Investigación»): no han cerrado.
+    var enOtra = lista && lista.dataset.enOtra ? lista.dataset.enOtra.split(" ") : [];
+    var abiertas = presentes.concat(enOtra);
 
     function pintarNota(tipo) {
-      var cerradas = fuera(estado, tipo, presentes);
-      if (!casilla.checked || !cerradas.length) {
+      var cerradas = fuera(estado, tipo, abiertas);
+      var alli = deTipo(estado, tipo).filter(function (id) { return enOtra.indexOf(id) !== -1; });
+      if (!casilla.checked || (!cerradas.length && !alli.length)) {
         if (nota) nota.hidden = true;
         return;
       }
@@ -99,6 +103,20 @@
         var resultados = doc.querySelector(".resultados");
         var form = casilla.form;
         form.parentNode.insertBefore(nota, resultados || form.nextSibling);
+      }
+      var partes = [];
+      if (alli.length && form.dataset.otras) {
+        var otra = doc.createElement("p");
+        var enlace = doc.createElement("a");
+        enlace.href = form.dataset.otras + "?guardadas=1";
+        enlace.textContent = form.dataset.otrasTexto;
+        otra.append(alli.length === 1 ? "Otra guardada está en " : "Otras " + alli.length + " guardadas están en ", enlace, ".");
+        partes.push(otra);
+      }
+      if (!cerradas.length) {
+        nota.replaceChildren.apply(nota, partes);
+        nota.hidden = false;
+        return;
       }
       var t = TEXTOS[tipo];
       var p = doc.createElement("p");
@@ -118,12 +136,12 @@
       quitar.textContent = t.quitar;
       quitar.addEventListener("click", function () {
         estado = cargar();
-        fuera(estado, tipo, presentes).forEach(function (id) { delete estado[id]; });
+        fuera(estado, tipo, abiertas).forEach(function (id) { delete estado[id]; });
         guardar(estado);
         pintar();
         casilla.focus();  // la nota desaparece: el foco no se pierde
       });
-      nota.replaceChildren(p, ul, quitar);
+      nota.replaceChildren.apply(nota, partes.concat([p, ul, quitar]));
       nota.hidden = false;
     }
 
