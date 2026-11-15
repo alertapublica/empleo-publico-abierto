@@ -63,6 +63,7 @@ SOURCE_AREAS = {
     "ua": "investigacion",  # de momento solo sus plazas para proyectos de investigación
     "uhu": "investigacion",  # ídem: Personal Técnico de Apoyo a la Investigación
     "uvigo": "investigacion",  # ídem: concursos de personal de investigación
+    "usc": "investigacion",  # ídem: convocatorias de personal para proyectos de investigación
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 

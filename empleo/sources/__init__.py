@@ -62,6 +62,7 @@ from .tmb import TmbSource
 from .tragsa import TragsaSource
 from .ua import UaSource
 from .uhu import UhuSource
+from .usc import UscSource
 from .uvigo import UvigoSource
 from .veiasa import VeiasaSource
 from .zarzuela import ZarzuelaSource
@@ -122,7 +123,7 @@ CATALOG = {
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
         IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(), IfapaSource(), FURIOJA,
     ],
-    "universidades": [UaSource(), UhuSource(), UvigoSource()],
+    "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource()],
 }
 for _group, _sources in CATALOG.items():
     for _source in _sources:
@@ -136,7 +137,7 @@ ACTIVE = [source for sources in CATALOG.values() for source in sources]
 # Al dar de alta una fuente, añádela aquí si comparte servidor con otra.
 SHARED_SERVER = {
     "junta-andalucia": ("andalucia", "ifapa", "veiasa"),  # mismo host; Veiasa, misma red (217.12.19.0/24)
-    "usc": ("ciqus", "cimus"),
+    "usc": ("ciqus", "cimus", "usc"),  # usc.gal: www, ciqus y cimus, sin confirmar que sea la misma máquina
     "successfactors": ("correos", "navantia", "fgc", "bsm", "renfe"),
     "fundanet": ("idibell", "fisabio", "idival", "imas12"),
     "seleccion": ("isdefe", "canal"),
