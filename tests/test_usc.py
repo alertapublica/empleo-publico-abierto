@@ -87,6 +87,23 @@ class Ficha(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             usc.parse_ficha(html)
 
+    def test_correccion_que_amplia_el_plazo_detiene(self):
+        html = fixture("usc-ficha-13.html").replace(
+            "Corrección erros praza 2026-CE020.",
+            "Corrección erros praza 2026-CE020. O prazo de presentación de solicitudes dende o día 21/10/2026 ata o 30/10/2026.")
+        with self.assertRaises(SourceLayoutError):
+            usc.parse_ficha(html)
+
+    def test_inicio_despues_del_fin_detiene(self):
+        html = fixture("usc-ficha-13.html").replace("dende o 20/10/2026", "dende o 27/10/2026")
+        with self.assertRaises(SourceLayoutError):
+            usc.parse_ficha(html)
+
+    def test_plazo_de_tarjeta_desconocido_detiene(self):
+        html = fixture("usc-convocatorias.html").replace("26/10/2026", "26/10/2026 23:59", 1)
+        with self.assertRaises(SourceLayoutError):
+            usc.parse_list(html)
+
     def test_proxima_sin_plazo_detiene(self):
         with self.assertRaises(SourceLayoutError):
             usc.parse_ficha(fixture("usc-ficha-14-proxima.html"))
@@ -101,8 +118,9 @@ class Source(unittest.TestCase):
         self.assertEqual(offers[0].title, "Convocatoria Pública Ordinaria 13/2026 de contratración de persoal para "
                                           "colaborar nas actividades e proxectos de investigación")
         self.assertEqual(offers[0].apply_url, "https://sede.usc.es/formularios/solicitudes/contratacion.htm")
-        # La 11/2026 (01/10) ya no es candidata: solo se abre la ficha de la 13/2026.
-        self.assertEqual(http.asked, [usc.INDEX, usc.INDEX + "?page=1", offers[0].url])
+        # También se abre la de la 11/2026 (01/10, de los últimos 30 días), ya vencida.
+        self.assertEqual(http.asked[:3], [usc.INDEX, usc.INDEX + "?page=1", offers[0].url])
+        self.assertEqual(len(http.asked), 4)
 
     def test_urgente_abierta_aunque_el_campo_haya_pasado(self):
         index = fixture("usc-convocatorias.html")
@@ -114,7 +132,8 @@ class Source(unittest.TestCase):
     def test_hoy_ninguna(self):
         http = Http()
         self.assertEqual(usc.UscSource(now=at(11, 15)).list_offers(http), [])
-        self.assertEqual(http.asked, [usc.INDEX, usc.INDEX + "?page=1"])
+        self.assertEqual(http.asked[:2], [usc.INDEX, usc.INDEX + "?page=1"])
+        self.assertEqual(len(http.asked), 3)  # la ficha de la 13/2026 (26/10), vencida
 
     def test_ficha_en_gallego(self):
         source = usc.UscSource(now=at(10, 22))
@@ -123,7 +142,23 @@ class Source(unittest.TestCase):
         self.assertEqual([(s["title"], s["lang"]) for s in detail.sections], [("La convocatoria", "gl"), ("Documentos", "gl")])
         self.assertIn("O obxecto da presente convocatoria", detail.sections[0]["html"])
         self.assertIn('href="https://assets.usc.gal/', detail.sections[1]["html"])
-        self.assertEqual(len(http.asked), 3)
+        self.assertEqual(len(http.asked), 4)  # listado (2), fichas 13 y 11: la de la 13 no se repite
+
+    def test_lee_dos_paginas_aunque_la_primera_sea_antigua(self):
+        old = fixture("usc-convocatorias-p1.html")
+        class Swapped(Http):
+            def get(self, url):
+                self.asked.append(url)
+                if url == usc.INDEX:
+                    return old.replace('href="?page=2"', 'href="?page=1"')
+                if url == usc.INDEX + "?page=1":
+                    return fixture("usc-convocatorias.html").replace('href="?page=1"', 'href="?page=2"')
+                if url == usc.INDEX + "?page=2":
+                    return old.replace('rel="next"', "")
+                return fixture("usc-ficha-11.html" if "-112026-" in url else "usc-ficha-13.html")
+        http = Swapped()
+        offers = usc.UscSource(now=at(10, 22)).list_offers(http)
+        self.assertEqual([o.deadline for o in offers], ["2026-10-26"])
 
     def test_demasiadas_paginas_detiene(self):
         class Endless(Http):
