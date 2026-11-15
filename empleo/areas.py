@@ -241,7 +241,8 @@ PALABRAS = [
     # sanidad
     (r"\bmedic[oa]s?\b|\bmetge\w*|\bphysician|\bmediku\w*|\benfermer\w*|\binfermer\w*|"
      r"\bnurse\w*|\berizain\w*|\benfermeir\w*|\bfisioterap\w*|\bcelador\w*|\bmatron\w*|"
-     r"\bpsicolog\w*|\bodontolog\w*|\bfarmaceutic\w*|\bpharmacist", {"sanidad": 3}),
+     r"\bpsicolog\w*|\bodontolog\w*|\bfarmaceutic\w*|\bpharmacist|\btca[ei]\b|"
+     r"\bauxiliar\w* (de |d')?(clinic|sanitari|enfermer|infermer)\w*", {"sanidad": 3}),
     (r"\bsanitari\w*|\bhospital\w*|\bclinic\w*|\bsalud\b|\bsalut\b|\bhealth\b|\bosasun\w*|"
      r"\bmedicina\b|\bfarmacia\b|\bcancer\b|\boncolog\w*|\bpneumolog\w*|\bneumolog\w*",
      {"sanidad": 1}),

@@ -790,6 +790,7 @@ class Site(unittest.TestCase):
             "UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)": False,
             "Técnico/a gestor en recursos humanos de la Fundación Instituto de Investigación Sanitaria": False,
             "Diplomatura/Grado en Enfermería": False,
+            "TCAI – Auxiliar Clinic/Auxiliar Sanitari pel grup Hematologia i Oncologia": False,
             "Administrativo de compras": False,
             "Técnico/a de comunicación científica y divulgación": False,
         }
