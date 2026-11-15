@@ -65,6 +65,8 @@ FRASES = [
     (r"autoridad portuaria[^)]*|puertos del estado|grupo tragsa|correos express|jovenes talentos?|"
      r"(fundacion )?instituto de investigacion sanitaria[^)]*|"
      r"convocatoria (publica|externa|interna)|banco de datos|proceso libre", {}),
+    # quién paga el contrato, no qué se hace («línea de investigación financiada», UA)
+    (r"\bfinanciad[oa]s?\b", {}),
     # presentaciones fijas de la empresa al principio de las fichas
     (r"especializada en (la realizacion de actividades de ingenieria[^.]*medioambiental|"
      r"trabajos relacionados con el desarrollo del medio rural y conservacion de la naturaleza)|"

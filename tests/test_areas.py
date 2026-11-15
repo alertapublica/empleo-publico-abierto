@@ -70,6 +70,12 @@ class Reglas(unittest.TestCase):
                  "Instituto de Investigación Sanitaria de les Illes Balears (IdISBa)")
         self.assertEqual(areas.classify(title, group="investigacion")[0], ["personas"])
 
+    def test_quien_financia_no_da_el_area(self):
+        # «financiada» dice quién paga: con economía, la plaza saldría también en la portada (site.research_only)
+        title = "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Astrofísica Masiva»"
+        self.assertEqual(areas.classify(title, source="ua", group="universidades")[0], ["investigacion"])
+        self.assertEqual(areas.classify("Técnico/a de gestión financiera")[0], ["economia"])
+
     def test_presentacion_fija_de_la_empresa_no_cuenta(self):
         ficha = ("Tragsatec, empresa especializada en la realización de actividades de ingeniería, consultoría "
                  "y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca...")

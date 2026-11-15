@@ -786,6 +786,7 @@ class Site(unittest.TestCase):
             "Postdoctoral Researcher in Bioinformatics": True,
             "Personal investigador en formación": True,
             "Clinical Trials Study Nurse - Vascular Risk Unit": True,  # investigación y sanidad
+            "Personal investigador colaborador para colaborar con la línea de investigación financiada «Nanofísica»": True,
             "UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)": False,
             "Técnico/a gestor en recursos humanos de la Fundación Instituto de Investigación Sanitaria": False,
             "Diplomatura/Grado en Enfermería": False,
