@@ -41,13 +41,11 @@ def tls_context() -> ssl.SSLContext:
 # Tragsa (portal de candidatos, solo en el puerto 8443): timeout. SEPI: no responde. EFE: 403. Fundación de
 # la Universidad de La Rioja: 429. Cada host tiene que estar también en ORIGENES de relay/src/index.js.
 VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
-# Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker:
-# universidades que no responden a otros rastreadores (AlertaPDI, 2026-11-14) y que desde España sí responden.
-# Una vez que un host falla directo, el resto de la lectura (el mismo Client) va ya por el Worker.
-RESPALDO_CF = {
-    "www.uco.es", "www.uhu.es", "rrhh.uib.cat", "www.ulpgc.es", "www.upf.edu", "www.uji.es",
-    "vrprofesorado.unex.es", "convocum.um.es", "aps.unirioja.es",
-}
+# Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker.
+# Universidades que desde España responden y desde Actions no (sondeo, ronda 7, 2026-11-15): UIB (timeout),
+# ULPGC y UEx (403), La Rioja (429). Una vez que un host falla directo, el resto de la lectura (el mismo Client)
+# va ya por el Worker.
+RESPALDO_CF = {"rrhh.uib.cat", "www.ulpgc.es", "vrprofesorado.unex.es", "aps.unirioja.es"}
 FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 
