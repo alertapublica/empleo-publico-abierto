@@ -5,6 +5,7 @@ Algunos servidores oficiales envían un certificado intermedio equivocado y la v
 | Archivo | Lo necesita | Comprobado |
 |---|---|---|
 | `digicert-global-g2-tls-rsa-sha256-2020-ca1.pem` | `www.senasa.es` (envía «RapidSSL TLS RSA CA G1») | 2026-11-08: emitido por DigiCert Global Root G2, `CA:TRUE`, caduca el 29-03-2031. SHA-256 `C8:02:5F:9F:…:D0:B6:25:A9` |
+| `harica-geant-tls-rsa-1.pem` | `www.uhu.es` (no envía el intermedio) | 2026-11-15: «GEANT TLS RSA 1», emitido por HARICA TLS RSA Root CA 2021, `CA:TRUE, pathlen:0`, caduca el 31-12-2039. SHA-256 `5B:67:8D:C4:…:A5:FB:8C:79` |
 | `sectigo-public-server-authentication-ca-dv-r36.pem` | `www.gpex.es`, `candidato.gpex.es` (envían «Thawte RSA CA 2018») | 2026-11-08: emitido por Sectigo Public Server Authentication Root R46, `CA:TRUE`, caduca el 21-03-2036. SHA-256 `8C:54:C3:34:…:A5:A4:EF:22:E0` |
 
 Se descargan desde la dirección «CA Issuers» del certificado del propio servidor y se comprueban con `openssl verify -CApath /etc/ssl/certs`. Solo se añaden intermedios, nunca raíces: `tests/test_http.py` lo comprueba.

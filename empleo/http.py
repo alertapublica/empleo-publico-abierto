@@ -41,15 +41,25 @@ def tls_context() -> ssl.SSLContext:
 # Tragsa (portal de candidatos, solo en el puerto 8443): timeout. SEPI: no responde. EFE: 403. Fundación de
 # la Universidad de La Rioja: 429. Cada host tiene que estar también en ORIGENES de relay/src/index.js.
 VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
+# Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker:
+# universidades que no responden a otros rastreadores (AlertaPDI, 2026-11-14) y que desde España sí responden.
+# Una vez que un host falla directo, el resto de la lectura (el mismo Client) va ya por el Worker.
+RESPALDO_CF = {
+    "www.uco.es", "www.uhu.es", "rrhh.uib.cat", "www.ulpgc.es", "www.upf.edu", "www.uji.es",
+    "vrprofesorado.unex.es", "convocum.um.es", "aps.unirioja.es",
+}
+FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 
-def relay_cf(url: str, data: bytes | None) -> tuple[str, dict[str, str]] | None:
+def relay_cf(url: str, data: bytes | None, respaldo: bool = False) -> tuple[str, dict[str, str]] | None:
     """URL y cabeceras firmadas para leer `url` por el Worker, o None si no le toca o falta la clave.
 
+    Le toca a los hosts de VIA_RELAY_CF y, con `respaldo`, a los de RESPALDO_CF.
     La firma cubre hora, método, URL y cuerpo, y caduca a los 120 s: se calcula en cada intento.
     """
     clave, base = os.environ.get("RELAY_CF_CLAVE"), os.environ.get("RELAY_CF_URL")
-    if not (clave and base) or urllib.parse.urlsplit(url).hostname not in VIA_RELAY_CF:
+    host = urllib.parse.urlsplit(url).hostname
+    if not (clave and base) or not (host in VIA_RELAY_CF or (respaldo and host in RESPALDO_CF)):
         return None
     ts = str(int(time.time()))
     method = "GET" if data is None else "POST"
@@ -87,6 +97,7 @@ class Client:
         # Cookies de las sesiones que pasan por el Worker, por origen del destino: no son del dominio del
         # Worker y no van al CookieJar. Un mismo Client lee varios organismos: no se mezclan.
         self._relay_cookies: dict[str, dict[str, str]] = {}
+        self._respaldo: set[str] = set()  # hosts de RESPALDO_CF que ya fallaron directos: van por el Worker
 
     def get(self, url: str) -> str:
         return self._request(url, None).decode("utf-8", "replace")
@@ -110,9 +121,10 @@ class Client:
 
     def _request(self, url: str, data: bytes | None) -> bytes:
         last_error: Exception | None = None
+        host = urllib.parse.urlsplit(url).hostname
         for attempt in range(self.retries):
             self._wait(self.last + self.delay - time.monotonic(), url)
-            via_cf = relay_cf(url, data)
+            via_cf = relay_cf(url, data, respaldo=host in self._respaldo)
             target, signed = via_cf or (url, {})
             jar = self._relay_cookies.setdefault(_origin(url), {}) if via_cf else {}
             if jar:
@@ -137,7 +149,12 @@ class Client:
             except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
                 last_error = error
                 self.failures += 1
-                if isinstance(error, urllib.error.HTTPError) and error.code < 500:
+                code = error.code if isinstance(error, urllib.error.HTTPError) else None
+                if (not via_cf and (code is None or code >= 500 or code in FALLO_DIRECTO)
+                        and relay_cf(url, data, respaldo=True)):
+                    self._respaldo.add(host)  # siguiente intento, ya por el Worker y sin esperar más
+                    continue
+                if code is not None and code < 500:
                     break
                 if attempt + 1 < self.retries:  # tras el último intento no hay nada que esperar
                     self._wait(5 * 3**attempt, url)

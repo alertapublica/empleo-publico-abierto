@@ -15,11 +15,12 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from .http import HEADERS, relay_cf
+from .http import FALLO_DIRECTO, HEADERS, relay_cf, tls_context
 
 DELAY = 3.0
 MAX_BYTES = 3_000_000
 TIMEOUT = 40
+TLS = tls_context()  # con los intermedios de empleo/certs/, como la ingesta
 
 # (organismo, URL). Solo páginas públicas de lectura; ninguna es de inicio de sesión ni de inscripción.
 TARGETS = [
@@ -95,7 +96,24 @@ TARGETS_6 = [
     ("rtva", "https://www.canalsur.es/rtva/transparencia/oposiciones-canal-sur/"),
     ("rtva", "https://www.canalsur.es/robots.txt"),
 ]
-ROUNDS = {"1": TARGETS, "2": TARGETS_2, "3": TARGETS_3, "4": TARGETS_4, "5": TARGETS_5, "6": TARGETS_6}
+# Universidades que AlertaPDI no pudo leer el 2026-11-14 («No responde»): directas y, si fallan, por el Worker.
+TARGETS_7 = [
+    ("uco", "https://www.uco.es/gestion/laboral/convocatorias-empleo-pdi/convocatorias-bolsas-trabajo-pdi"),
+    ("uco", "https://www.uco.es/gestion/laboral/convocatorias-empleo-pdi/pdi-contratado-ordinarias"),
+    ("uhu", "https://www.uhu.es/ordenacion-academica/plazas-de-profesorado/plazas-personal-docente-investigador-contratado"),
+    ("uhu", "https://www.uhu.es/ordenacion-academica/convocatorias?field_call_type_target_id%5B192%5D=192"),
+    ("uib", "https://rrhh.uib.cat/arees/pdi/convocatories/professorat-associat"),
+    ("uib", "https://rrhh.uib.cat/arees/pdi/convocatories/ajudant-doctor-2"),
+    ("uib", "https://rrhh.uib.cat/arees/pdi/convocatories/ppl"),
+    ("ulpgc", "https://www.ulpgc.es/conv-pdi-cont/convocatorias-contratacion-pdi-ano-2026"),
+    ("upf", "https://www.upf.edu/web/personal/ofertes-pdi"),
+    ("uji", "https://www.uji.es/seu/info-adm/tao/?pCategoria=3&pAccion=Cerca"),
+    ("unex", "https://vrprofesorado.unex.es/concursos/pdi_l/concursos-pdi-laboral-2025-2026/concursos-curso-2025-2026/"),
+    ("um", "https://convocum.um.es/convocum2/paginas/pdi/home.seam"),
+    ("unirioja", "https://aps.unirioja.es/contratacionPDI/convocatorias"),
+]
+ROUNDS = {"1": TARGETS, "2": TARGETS_2, "3": TARGETS_3, "4": TARGETS_4, "5": TARGETS_5, "6": TARGETS_6,
+          "7": TARGETS_7}
 
 # Pistas de la tecnología con la que se publica: sirven para decidir qué parser hace falta.
 HINTS = {
@@ -138,11 +156,24 @@ def analyse(html: str) -> dict:
 
 
 def fetch(url: str) -> dict:
-    """Una sola petición. Devuelve estado, cabeceras útiles y cuerpo (o el error)."""
-    target, signed = relay_cf(url, None) or (url, {})
+    """Una sola petición; dos si un host de RESPALDO_CF falla directo (la segunda, por el Worker).
+    Devuelve estado, cabeceras útiles y cuerpo (o el error)."""
+    result = _read(url, relay_cf(url, None))
+    estado = result["estado"]
+    if result.get("via") != "relay" and (estado is None or estado >= 500 or estado in FALLO_DIRECTO):
+        signed = relay_cf(url, None, respaldo=True)
+        if signed:
+            failed = result.get("error") or estado
+            result = _read(url, signed)
+            result["fallo_directo"] = failed
+    return result
+
+
+def _read(url: str, via_cf: tuple[str, dict[str, str]] | None) -> dict:
+    target, signed = via_cf or (url, {})
     request = urllib.request.Request(target, headers={**HEADERS, **signed})
     try:
-        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+        with urllib.request.urlopen(request, timeout=TIMEOUT, context=TLS) as response:
             # Por el relay, geturl() sería la del relay, no la de destino tras las redirecciones.
             status, headers, final = response.status, response.headers, url if signed else response.geturl()
             body = response.read(MAX_BYTES)
@@ -194,7 +225,8 @@ def summary(report: dict) -> str:
     for page in report["paginas"]:
         analysis = page.get("analisis") or {}
         rows.append(
-            f"| {page['organismo']} | {page.get('estado') or page.get('error', '?')} "
+            f"| {page['organismo']} | {page.get('estado') or page.get('error', '?')}"
+            f"{' (relay; directa: ' + str(page['fallo_directo']) + ')' if page.get('fallo_directo') else ''} "
             f"| {analysis.get('texto_visible', '')} | {analysis.get('enlaces_pdf', '')} "
             f"| {analysis.get('scripts', '')} | {'sí' if analysis.get('marca_de_carga') else ''} "
             f"| {', '.join(analysis.get('pistas', []))} | {page['url']} |"
