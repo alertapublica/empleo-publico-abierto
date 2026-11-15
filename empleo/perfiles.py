@@ -16,7 +16,7 @@ import unicodedata
 from pathlib import Path
 
 PERFILES = (
-    ("predoctoral", "Predoctoral y en formación", r"predoc|pre-doc|\br1\b|phd (call|student|position)|en practicas|doctoral student"),
+    ("predoctoral", "Predoctoral y en formación", r"predoc|pre-doc|\br1\b|phd (call|student|position)|en practicas|en formacion|doctoral student"),
     ("investigador", "Investigador/a (postdoctoral y sénior)",
      r"postdoc|posdoc|\br[234]a?\b|investigador|researcher|research fellow|\bdoctor\b|doctoral degree"),
     ("ensayos", "Ensayos clínicos",
