@@ -13,7 +13,7 @@ from html import escape as e
 from pathlib import Path
 from urllib.parse import quote
 
-from . import areas, feeds, store, teletrabajo
+from . import areas, feeds, perfiles, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
                     SYSTEMS, process_type, today_madrid)
 from .regions import (CCAA, NATIONAL, REGIONS, SEVERAL, UNKNOWN, codes_of, location_from_title, municipality_name, province_name,
@@ -347,7 +347,8 @@ def offer_card(offer: dict, today: date, root: str = "", group: str = "") -> str
         if offer.get("published_on") else ""
     )
     area = " ".join(areas.offer_areas(offer, group)[0]) or areas.NONE
-    return f"""<li data-texto="{e(plain_search(offer))}" data-comunidad="{e(offer.get('region') or UNKNOWN)}" data-organismo="{e(offer['source'])}" data-grupo="{e(group)}" data-empresa="{e(offer.get('company') or '')}" data-area="{e(area)}" data-tipo="{e(offer.get('kind') or '')}" data-teletrabajo="{int(remote.state == teletrabajo.MENTIONS)}" data-plazo="{e(offer.get('deadline') or '9999')}" data-publicada="{e(offer.get('published_on') or offer['first_seen'][:10])}" data-pronto="{1 if days <= SOON_DAYS else 0}" data-guardar="{e(saved_id(offer))}">
+    perfil = f' data-perfil="{perfiles.classify(offer["title"]) or perfiles.NONE}"' if group in RESEARCH_GROUPS else ""
+    return f"""<li data-texto="{e(plain_search(offer))}" data-comunidad="{e(offer.get('region') or UNKNOWN)}" data-organismo="{e(offer['source'])}" data-grupo="{e(group)}" data-empresa="{e(offer.get('company') or '')}" data-area="{e(area)}"{perfil} data-tipo="{e(offer.get('kind') or '')}" data-teletrabajo="{int(remote.state == teletrabajo.MENTIONS)}" data-plazo="{e(offer.get('deadline') or '9999')}" data-publicada="{e(offer.get('published_on') or offer['first_seen'][:10])}" data-pronto="{1 if days <= SOON_DAYS else 0}" data-guardar="{e(saved_id(offer))}">
 <h2><a href="{root}{offer_path(offer)}">{e(offer['title'])}</a></h2>
 <p>{e(' · '.join(str(f) for f in facts if f))}{extra}</p>
 <p class="plazo">{deadline_text(offer, today)}{published}</p>
@@ -371,6 +372,15 @@ def area_options(open_offers: list[dict], group_of: dict) -> str:
     choices = [(key, label) for key, label in areas.BY_NAME if key in present]
     if areas.NONE in present:
         choices.append((areas.NONE, "Sin área"))
+    return "".join(f'<option value="{key}">{e(label)}</option>' for key, label in choices)
+
+
+def profile_options(open_offers: list[dict]) -> str:
+    """Perfiles con alguna oferta abierta, por nombre; «Sin perfil» al final."""
+    present = {perfiles.classify(o["title"]) or perfiles.NONE for o in open_offers}
+    choices = [(key, label) for key, label in perfiles.BY_NAME if key in present]
+    if perfiles.NONE in present:
+        choices.append((perfiles.NONE, "Sin perfil"))
     return "".join(f'<option value="{key}">{e(label)}</option>' for key, label in choices)
 
 
@@ -421,7 +431,7 @@ def research_page(open_offers: list[dict], today: date, checked: str, sources: d
     body = f"""<h1>Investigación</h1>
 <p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) aparecen también en <a href="../">Ofertas</a>.</p>
 {empty}
-{offer_list(found, today, sources, "../", ("../", "el resto de ofertas"), companies=False,
+{offer_list(found, today, sources, "../", ("../", "el resto de ofertas"), companies=False, profiles=True,
             other_ids=front_only, other_sources=other_sources)}"""
     return page("Ofertas de investigación", body, "../", "investigacion",
                 description="Ofertas de empleo abiertas en fundaciones, centros de investigación y universidades "
@@ -429,7 +439,7 @@ def research_page(open_offers: list[dict], today: date, checked: str, sources: d
 
 
 def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
-               others: tuple[str, str] | None = None, companies: bool = True, note: str = "",
+               others: tuple[str, str] | None = None, companies: bool = True, note: str = "", profiles: bool = False,
                other_ids: list[str] = (), other_sources: list[str] = ()) -> str:
     """Buscador, filtros y lista de ofertas, de la más reciente a la más antigua. `others`: la otra lista
     (dirección y texto del enlace), donde se propone la búsqueda si no da resultados; `other_ids`, las
@@ -476,6 +486,13 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
     other = (f' data-otras="{e(others[0])}" data-otras-texto="{e(others[1])}"'
              f' data-organismos-otra="{e(" ".join(other_sources))}"') if others else ""
     elsewhere = f' data-en-otra="{e(" ".join(other_ids))}"' if others and other_ids else ""
+    area_or_profile = (
+        '<div class="campo"><label for="perfil">Perfil (orientativo)</label>\n'
+        f'<select id="perfil" name="perfil"><option value="">Todos</option>{profile_options(open_offers)}</select></div>'
+    ) if profiles else (
+        '<div class="campo"><label for="area">Área (orientativa)</label>\n'
+        f'<select id="area" name="area"><option value="">Todas</option>{area_options(open_offers, group_of)}</select></div>'
+    )
     return f"""<noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa o suscribirse a los <a href="{root}avisos/">avisos por comunidad autónoma</a>.</p></noscript>
 <form id="filtros" class="filtros" role="search" aria-label="Buscar ofertas" data-procesos="{root}anuncios/"{other} hidden>
 {search_bar("Buscar ofertas por palabra", "Puesto, empresa o localidad")}
@@ -487,8 +504,7 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
 <div class="panel rejilla" id="mas-filtros" hidden>
 <div class="campo"><label for="comunidad">Comunidad autónoma</label>
 <select id="comunidad" name="comunidad"><option value="">Todas</option>{options(o.get('region') for o in open_offers)}</select></div>
-<div class="campo"><label for="area">Área (orientativa)</label>
-<select id="area" name="area"><option value="">Todas</option>{area_options(open_offers, group_of)}</select></div>
+{area_or_profile}
 <div class="campo"><label for="tipo">Tipo de contrato</label>
 <select id="tipo" name="tipo"><option value="">Todos</option>{options((o.get('kind') for o in open_offers), KINDS)}</select></div>
 {company_filter}{organism_filter}</div>
@@ -806,7 +822,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
                    bot: str = "") -> str:
     """Organismos por grupo, primero los que más ofertas tienen. Los que tienen ofertas o procesos en
     marcha llevan a su página; los procesos se muestran como dato secundario. Un buscador (con JS)
-    filtra por nombre o comunidad."""
+    filtra por nombre."""
     processes = processes or {}
 
     def count(source_id: str) -> int:
@@ -818,7 +834,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
         return html + (f'<p class="dato">{running_count(running)}</p>' if running else "")
 
     def searchable(source) -> str:
-        return e(f"{source.name} {source.scope}")
+        return e(source.name)
 
     blocks, index = [], []
     for key, label, members in by_group(sources):
@@ -857,8 +873,8 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
 <p>Para recibir las novedades de un organismo, puede suscribirse a los <a href="../avisos/">avisos por {via}</a>.</p>
 <nav aria-label="Grupos de organismos"><ul class="indice-grupos">{"".join(index)}</ul></nav>
 <form id="buscar-organismos" class="buscador" role="search" aria-label="Buscar organismos" hidden>
-<label for="q-organismos" class="sr-only">Buscar un organismo por nombre o comunidad autónoma</label>
-<input id="q-organismos" type="search" autocomplete="off" placeholder="Nombre o comunidad autónoma">
+<label for="q-organismos" class="sr-only">Buscar un organismo por nombre</label>
+<input id="q-organismos" type="search" autocomplete="off" placeholder="Nombre del organismo">
 </form>
 <p id="estado-organismos" role="status"></p>
 {"".join(blocks)}
@@ -1431,6 +1447,7 @@ OFFER_FIELDS = [
     (("detectada", "cerrada"), "Momentos (ISO 8601) en que este portal detectó la oferta y en que se cerró."),
     (("republica",), "Código de la oferta anterior, si es una nueva publicación de aquella."),
     (("areas",), "Áreas profesionales (<code>areas</code> en listas.json). Clasificación orientativa que asigna este portal; puede haber varias o ninguna."),
+    (("perfil",), "Solo en las ofertas de centros de investigación y universidades: perfil del puesto (<code>perfiles</code> en listas.json), deducido del título por este portal. <code>null</code> en el resto o si el título no lo dice."),
     (("teletrabajo",), "Frase literal de la ficha que menciona el teletrabajo; <code>false</code> si la ficha tiene texto y no lo menciona, o lo niega; <code>null</code> si no puede saberse porque la ficha apenas tiene texto (solo remite a las bases, por ejemplo)."),
     (("teletrabajo_estado",), "<code>menciona</code>; <code>sin</code> si la ficha lo niega expresamente («100% presencial»); <code>no_menciona</code> si la ficha tiene texto y no lo nombra (no significa que no lo haya); <code>no_consta</code> si la ficha apenas tiene texto. Es una lectura automática del texto, orientativa."),
     (("teletrabajo_detalle",), "Cuánto teletrabajo dice la frase, si lo dice: «hasta el 50 %», «1 día a la semana», «algunos días». <code>null</code> si no lo concreta."),
@@ -1467,8 +1484,8 @@ LIST_FIELDS = [
     (("comunidades",), "Comunidades autónomas: <code>ccaa</code> (código del INE) y <code>nombre</code>."),
     (("provincias",), "Provincias: <code>provincia</code> (código del INE), <code>nombre</code> en castellano y <code>ccaa</code>, su comunidad autónoma."),
     (("organismos",), "Organismos: <code>id</code>, <code>nombre</code>, <code>grupo</code> y <code>url</code>, la página oficial de empleo que lee este portal."),
-    (("areas", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
-     "Áreas profesionales, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
+    (("areas", "perfiles", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
+     "Áreas profesionales, perfiles de investigación, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
 ]
 
 
@@ -1659,6 +1676,7 @@ def lists(sources: dict) -> dict:
         "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
         "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group, "url": s.homepage} for s in sources.values()],
         "areas": named(dict(areas.BY_NAME)),
+        "perfiles": named(dict(perfiles.BY_NAME)),
         "grupos": named(GROUPS),
         "tipos_contrato": named(KINDS),
         "tipos_proceso": named(PROCESS_TYPES),
@@ -1714,7 +1732,9 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "plazo_inicio": offer.get("opens_on"), "plazo_fin": offer.get("deadline"),
         "plazo_hora": offer.get("deadline_time"), "publicada": offer.get("published_on"),
         "detectada": offer["first_seen"], "cerrada": offer.get("closed_at"), "republica": offer.get("parent_ref"),
-        "areas": areas.offer_areas(offer, group)[0], **remote_fields(offer),
+        "areas": areas.offer_areas(offer, group)[0],
+        "perfil": (perfiles.classify(offer["title"]) or None) if group in RESEARCH_GROUPS else None,
+        **remote_fields(offer),
         "url": offer["url"], "url_inscripcion": offer.get("apply_url"), "url_portal": base_url + offer_path(offer),
     }
 

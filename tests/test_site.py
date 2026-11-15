@@ -400,7 +400,7 @@ class Site(unittest.TestCase):
             "id", "organismo", "codigo", "titulo", "titulo_original", "empresa", "estado", "ubicacion", "localidad",
             "comunidad", "ccaa", "provincia", "municipio", "plazas", "tipo_contrato", "contrato", "convocatoria", "tipo_puesto",
             "departamento", "plazo_inicio", "plazo_fin", "plazo_hora", "publicada", "detectada", "cerrada",
-            "republica", "areas", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle",
+            "republica", "areas", "perfil", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle",
             "url", "url_inscripcion", "url_portal"])
         self.assertEqual((ofertas["tragsa:2"]["estado"], ofertas["tragsa:3"]["estado"]), ("abierta", "cerrada"))
         self.assertEqual(ofertas["tragsa:4"]["republica"], "77")
@@ -487,6 +487,7 @@ class Site(unittest.TestCase):
         self.assertIn("tragsa", {o["id"] for o in listas["organismos"]})
         self.assertTrue(all(o["url"].startswith("https://") for o in listas["organismos"]))
         self.assertIn("tic", {a["id"] for a in listas["areas"]})
+        self.assertIn("predoctoral", {p["id"] for p in listas["perfiles"]})
 
     def test_teletrabajo_con_la_frase_literal_y_sin_inventar(self):
         portada = self.read("index.html")
@@ -764,6 +765,15 @@ class Site(unittest.TestCase):
         self.assertIn('href="../acerca/#como-buscar"', html)
         self.assertIn('aria-current="page">Investigación</a>', html)
         self.assertNotIn('id="empresa"', html)  # en los centros, la empresa es el propio organismo
+        # En Investigación el filtro es el perfil (el área sale casi siempre «Investigación»); en la portada, el área.
+        self.assertIn('id="perfil"', html)
+        self.assertNotIn('id="area"', html)
+        self.assertIn('data-perfil="investigador"', html)
+        self.assertIn('data-perfil="gestion"', html)
+        self.assertIn('data-perfil="predoctoral"', html)
+        self.assertIn('<option value="predoctoral">', html)
+        self.assertIn('id="area"', portada)
+        self.assertNotIn("data-perfil", portada.replace('data-perfil="gestion"', ""))
         self.assertIn('<option value="universidades">Universidades públicas</option>', html)
         self.assertNotIn('<option value="sepi">', html)
         # La ficha vuelve a su lista y el buscador del organismo filtra su sección.
@@ -928,7 +938,8 @@ class Site(unittest.TestCase):
         self.assertIn('<li><a href="#grupo-sepi">Grupo SEPI</a> <span class="dato">(5)</span></li>', html)
         self.assertIn('<form id="buscar-organismos" class="buscador" role="search" aria-label="Buscar organismos" hidden>', html)
         self.assertIn('<p id="estado-organismos" role="status"></p>', html)
-        self.assertIn('data-texto="Épsilon Galicia"', html)
+        self.assertIn('data-texto="Épsilon"', html)
+        self.assertNotIn('data-texto="Épsilon Galicia"', html)  # se busca por nombre, no por el ámbito del organismo
         self.assertIn('<details class="sin-ofertas-grupo"><summary>Sin ofertas abiertas en este momento <span class="dato">(2)</span>', html)
         self.assertIn('avisos por Telegram o RSS', html)
         self.assertIn('src="../assets/organismos.js"', html)

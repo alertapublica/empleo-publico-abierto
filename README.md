@@ -68,5 +68,5 @@ Las ideas, los fallos y las fuentes nuevas son bienvenidos: mira [`CONTRIBUTING.
 ## Licencia
 
 - **Código:** [Licencia Pública de la Unión Europea (EUPL) 1.2](LICENSE).
-- **Datos elaborados por el proyecto** (la API, los códigos INE asignados, las áreas y la detección del teletrabajo): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden reutilizar citando «Empleo en Empresas Públicas» y enlazando el portal.
+- **Datos elaborados por el proyecto** (la API, los códigos INE asignados, las áreas, los perfiles de investigación y la detección del teletrabajo): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden reutilizar citando «Empleo en Empresas Públicas» y enlazando el portal.
 - **Textos, documentos y enlaces de cada oferta y comunicado:** son de su organismo, que es la fuente oficial y la que prevalece.
