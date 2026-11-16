@@ -15105,6 +15105,112 @@
   "title": "Técnico/a gestión y seguimiento - FCAS (Madrid con desplazamiento de larga duración a Guatemala)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58468"
  },
+ "58469": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58469",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58469",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Producción/Mercados/I.Agrarias",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-16T13:37:25+00:00",
+  "id": "tragsa:58469",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-29",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-16",
+  "ref": "58469",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 2 Licenciados/as, Ingenieros/as, Arquitectos/as o Graduados/as + Máster Oficial para prestar apoyo técnico en un importante proyecto de la Administración Pública en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo en la elaboración de propuestas de admisión de expedientes de protección internacional.</li><li>Apoyo en la elaboración de propuestas de resolución de expedientes.</li><li>Revisión y grabación de documentación relacionada.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación universitaria oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato laboral en protección internacional, extranjería o cooperación internacional</li></ul>Otros Requisitos Imprescindibles<ul><li>Manejo de Microsoft Excel a nivel medio (se comprobará en la valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación universitaria oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación universitaria oficial de Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral en protección internacional, extranjería o cooperación internacional</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo de Microsoft Excel a nivel medio (se comprobará en la valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación acreditada en ofimática</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 1 año de experiencia en trabajos en la Administración Pública u ONG (contrato laboral)</li></ul>Otros Factores Meritorios<ul><li>Poseer desde 6 meses hasta 24 meses de experiencia con contrato laboral en derecho administrativo o derecho comunitario</li><li>Poseer desde 6 meses hasta 24 meses de experiencia con contrato laboral en plataformas de la Administración General del Estado (se comprobará en la valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación acreditada en ofimática</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación acreditada en ofimática</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 1 año de experiencia en trabajos en la Administración Pública u ONG (contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Poseer desde 6 meses hasta 24 meses de experiencia con contrato laboral en derecho administrativo o derecho comunitario</li><li>Poseer desde 6 meses hasta 24 meses de experiencia con contrato laboral en plataformas de la Administración General del Estado (se comprobará en la valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada con una duración estimada de 5 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación  y Resiliencia o con financiación  que provenga de Fondos de la Unión Europea.  <br/><br/>- Jornada completa de 37,50 horas semanales.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 16/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciatura, Ingeniería, Arquitectura o Grado + Máster Oficial - Apoyo Tramitación Expedientes (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58469"
+ },
  "58471": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58471",
   "category": "Específica",

@@ -53,6 +53,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/ENFEMP_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
   "via": "bolsa"
  },
+ "rtve:0cfef2642604": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T13:37:25+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Enfermería de empresa · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Solicitud 2º llamamiento _ Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/ENFEMP_BD_Solicitud-2%C2%BA-llamamiento-_-Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
+  "via": "bolsa"
+ },
  "rtve:1bacd764d4d4": {
   "access": "libre",
   "apply_url": null,
@@ -141,6 +159,24 @@
   "system": null,
   "title": "Listado Candidaturas Admitidas Provisional",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESCOA_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
+  "via": "bolsa"
+ },
+ "rtve:2a6f76dd28cc": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T13:37:25+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Enfermería de empresa · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Solicitud Medidas Adaptativas _ Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/ENFEMP_BD_Solicitud-Medidas-Adaptativas-_-Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
   "via": "bolsa"
  },
  "rtve:2f973e9c1e19": {
@@ -375,6 +411,24 @@
   "system": null,
   "title": "Listado Candidaturas Admitidas Provisional",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TECINFO_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
+  "via": "bolsa"
+ },
+ "rtve:610efebab045": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T13:37:25+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Enfermería de empresa · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/ENFEMP_BD_Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
   "via": "bolsa"
  },
  "rtve:63108a3a7c68": {
