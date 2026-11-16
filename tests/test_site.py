@@ -1,3 +1,4 @@
+import gzip
 import json
 import re
 import tempfile
@@ -65,7 +66,8 @@ class Site(unittest.TestCase):
             "2": offer("2", deadline="2026-11-08", region="Galicia", location="Lugo", company="Tragsa"),
             "3": offer("3", status="closed", closed_at="2026-11-07T00:00:00+00:00", deadline="2026-11-06"),
             "4": offer("4", parent_ref="77", sections=[{"title": "Condiciones", "level": 2, "html": TELETRABAJO}]),
-            "5": offer("5", title="Analista programador", sections=[{"title": "Funciones", "level": 2, "html": RELLENO}]),
+            "5": offer("5", title="Analista programador", location="Dos Hermanas (Sevilla)",
+                       sections=[{"title": "Funciones", "level": 2, "html": RELLENO}]),
         }
         events = [{"offer": f"tragsa:{r}", "kind": "new", "at": "2026-11-07T06:00:00+00:00"} for r in offers]
         events.append({"offer": "tragsa:2", "kind": "deadline_changed", "at": "2026-11-07T07:00:00+00:00",
@@ -437,8 +439,16 @@ class Site(unittest.TestCase):
         self.assertEqual({k for p in json.loads(self.read("api/procesos.json"))["procesos"] for k in p},
                          documented(site.PROCESS_FIELDS))
         self.assertEqual({k for n in novedades["novedades"] for k in n}, documented(site.NEWS_FIELDS))
-        self.assertEqual(set(json.loads(self.read("api/listas.json"))) - documented(site.FILE_FIELDS),
-                         documented(site.LIST_FIELDS))
+        listas = json.loads(self.read("api/listas.json"))
+        self.assertEqual(set(listas) - documented(site.FILE_FIELDS), documented(site.LIST_FIELDS))
+        # Las claves de cada comunicado y de cada elemento de una lista, dentro de la descripción.
+        comunicados = dict(site.PROCESS_FIELDS)[("comunicados",)]
+        for key in {k for p in json.loads(self.read("api/procesos.json"))["procesos"] for c in p["comunicados"] for k in c}:
+            self.assertIn(f"<code>{key}</code>", comunicados, key)
+        described = {name: text for names, text in site.LIST_FIELDS for name in names}
+        for name, items in {**listas, "municipios": site.lists({}, {"15030"})["municipios"]}.items():
+            for key in {k for item in items for k in item} if isinstance(items, list) else ():
+                self.assertIn(f"<code>{key}</code>", described[name], (name, key))
         datos = self.read("datos/index.html")
         self.assertEqual(datos.count('<table class="campos">'), 5)
         self.assertIn('<form id="buscar-campos"', datos)
@@ -450,6 +460,77 @@ class Site(unittest.TestCase):
         self.assertTrue((site.ASSETS / "datos.js").exists())
         self.assertIn('aria-current="page">Datos abiertos</a>', datos.split("<footer")[1])
         self.assertIn("datos/", self.read("sitemap.xml"))
+
+    def test_api_usa_las_claves_de_listas(self):
+        """Cada valor codificado de la API tiene su nombre en listas.json."""
+        listas = json.loads(self.read("api/listas.json"))
+        ids = lambda name, key="id": {item[key] for item in listas[name]}
+        known = {"organismo": ids("organismos"), "ccaa": ids("comunidades", "ccaa"),
+                 "provincia": ids("provincias", "provincia"), "municipio": ids("municipios", "municipio"),
+                 "tipo_contrato": ids("tipos_contrato"), "areas": ids("areas"), "perfil": ids("perfiles"),
+                 "tipo": ids("tipos_proceso"), "acceso": ids("accesos"), "sistema": ids("sistemas"),
+                 "estado": ids("estados_proceso")}
+        files = {"ofertas": ("organismo", "ccaa", "provincia", "municipio", "tipo_contrato", "areas", "perfil"),
+                 "procesos": ("organismo", "ccaa", "provincia", "tipo", "acceso", "tipo_contrato", "sistema", "estado"),
+                 "novedades": ("organismo", "ccaa", "areas")}
+        for name, keys in files.items():
+            for item in json.loads(self.read(f"api/{name}.json"))[name]:
+                for key in keys:
+                    value = item.get(key)
+                    for one in value if isinstance(value, list) else [value]:
+                        self.assertTrue(one is None or one in known[key], (name, key, one))
+        self.assertTrue({o["grupo"] for o in listas["organismos"]} <= ids("grupos"))
+
+    def test_listas_con_los_municipios_de_las_ofertas(self):
+        # Solo los que usa alguna oferta, con su nombre en castellano y no el oficial («Coruña, A»).
+        self.assertEqual(site.lists({}, {"41038", "15030"})["municipios"], [
+            {"municipio": "15030", "nombre": "A Coruña", "provincia": "15", "ccaa": "12"},
+            {"municipio": "41038", "nombre": "Dos Hermanas", "provincia": "41", "ccaa": "01"}])
+        # Al publicar, los de las ofertas: la 5 está en Dos Hermanas.
+        ofertas = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
+        self.assertEqual(ofertas["tragsa:5"]["municipio"], "41038")
+        self.assertEqual(json.loads(self.read("api/listas.json"))["municipios"],
+                         [{"municipio": "41038", "nombre": "Dos Hermanas", "provincia": "41", "ccaa": "01"}])
+        self.assertEqual(site.lists({})["municipios"], [])
+
+    def test_fecha_de_la_relacion_de_municipios(self):
+        """La fecha que cita «Datos abiertos» es la de la relación del INE que trae territorios-es."""
+        import territorios_es
+        reference = territorios_es.load().reference_date
+        reference = reference() if callable(reference) else reference
+        self.assertEqual(site.INE_FECHA, site.long_date(str(reference)))
+        self.assertIn(f"Relación de municipios del INE</a> a {site.INE_FECHA}", self.read("datos/index.html"))
+
+    def test_datos_abiertos_con_registros_tamanos_y_horario(self):
+        datos = self.read("datos/index.html")
+        procesos = json.loads(self.read("api/procesos.json"))["procesos"]
+        novedades = json.loads(self.read("api/novedades.json"))["novedades"]
+        records = {"ofertas.json": "5 ofertas, 4 abiertas",
+                   "procesos.json": f"5 procesos, {sum(p['estado'] in ('abierto', 'curso') for p in procesos)} en marcha",
+                   "novedades.json": f"{len(novedades)} novedades",
+                   "listas.json": f"{len(site.lists({}))} listas"}
+        for name, text in records.items():
+            raw = (self.out / "api" / name).read_bytes()
+            self.assertIn(f'<h3><a href="../api/{name}">{name}</a></h3>', datos)
+            self.assertIn(f'<p class="dato">{text}<br>{site.size_label(len(raw))} · '
+                          f'{site.size_label(len(gzip.compress(raw)))} comprimido</p>', datos)
+        self.assertEqual(datos.count('class="campos-de"'), 4)
+        self.assertIn('<ul class="ficheros" role="list">', datos)
+        self.assertIn("Registros y tamaños de la publicación del 7 de noviembre de 2026 a las 13:00.", datos)
+        self.assertIn('<a href="#ofertas">Campos<span class="sr-only"> de ofertas.json</span></a>', datos)
+        self.assertIn("curl -s --compressed " + BASE + "api/ofertas.json", datos)
+        # El horario, en la página y resumido en «Avisos» y «Acerca de», con enlace al detalle.
+        for when, how in site.SCHEDULE:
+            self.assertIn(f"<dt>{when}</dt><dd>{how}</dd>", datos)
+        for path in ("avisos/", "acerca/"):
+            self.assertIn(f'{site.SCHEDULE_SUMMARY} (<a href="../datos/#actualizacion">', self.read(path + "index.html"))
+
+    def test_cantidades_y_tamanos(self):
+        self.assertEqual(site.amount(1, "novedad", "novedades"), "1 novedad")
+        self.assertEqual(site.amount(2, "novedad", "novedades"), "2 novedades")
+        self.assertEqual(site.amount(0, "oferta"), "0 ofertas")
+        self.assertEqual((site.size_label(10), site.size_label(805_000), site.size_label(2_500_000)),
+                         ("1 KB", "786 KB", "2,4 MB"))
 
     def test_prevalece_la_web_oficial_en_la_ficha_y_no_en_el_pie(self):
         ficha = self.read("ofertas/tragsa-1/index.html")

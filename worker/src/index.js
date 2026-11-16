@@ -4,6 +4,7 @@
 // Horario en hora de Madrid. El cron se dispara a :07 y a :37 (UTC) y esta función decide si toca:
 // lunes a viernes, cada 30 min de 6:00 a 15:59 y cada hora hasta las 23:59; sábado y domingo, cada hora
 // de 6:00 a 15:59 y a las 19 y las 22 h; de madrugada, nunca. El minuto < 30 es la lectura «en punto».
+// La web lo publica en «Datos abiertos» (`SCHEDULE`, empleo/site.py): si cambia aquí, hay que cambiarlo allí.
 export function toca(fecha) {
   const partes = Object.fromEntries(
     new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Madrid", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })

@@ -1,6 +1,7 @@
 """Genera la web estática: ofertas, fichas, anuncios, histórico y feeds."""
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import os
@@ -49,6 +50,24 @@ WEEKDAYS = "lunes martes miércoles jueves viernes sábado domingo".split()
 SOON_DAYS = 7
 URGENT_DAYS = 3
 NEWS_DAYS = 14  # días que guarda api/novedades.json
+# Si api/ofertas.json pasa de este tamaño, la publicación avisa en Actions: toca añadir un fichero solo
+# con las abiertas (docs/api.md).
+API_SPLIT_BYTES = 2 * 1024 ** 2
+# Horario de lectura de las webs oficiales, en hora peninsular; tras cada lectura se publica la web. Lo
+# decide `toca()` en worker/src/index.js (ver docs/worker.md): si cambia allí, hay que cambiarlo aquí.
+SCHEDULE = (
+    ("De lunes a viernes, de 6:00 a 16:00", "Cada 30 minutos"),
+    ("De lunes a viernes, de 16:00 a 24:00", "Cada hora"),
+    ("Sábados y domingos, de 6:00 a 16:00", "Cada hora"),
+    ("Sábados y domingos, de 16:00 a 24:00", "Dos veces: a las 19:07 y a las 22:07"),
+    ("Todos los días, de 0:00 a 6:00", "Ninguna"),
+)
+SCHEDULE_SUMMARY = ("cada 30 minutos de lunes a viernes de 6:00 a 16:00, con menos frecuencia por la tarde y "
+                    "en fin de semana, y nunca de 0:00 a 6:00")
+# Relación de municipios de la que salen los códigos (vía territorios-es). Un test comprueba que la fecha es la
+# de la versión instalada de territorios-es.
+INE_MUNICIPIOS = "https://www.ine.es/daco/daco42/codmun/codmunmapa.htm"
+INE_FECHA = "1 de enero de 2026"
 # Cabecera común de los ficheros de api/. Cambiar o quitar una clave obliga a subir la versión.
 API_VERSION = 1
 API_HEAD = {
@@ -105,6 +124,18 @@ def seats(count: int | None) -> str:
     if count is None:
         return "Plazas: no consta"
     return "1 plaza" if count == 1 else f"{count} plazas"
+
+
+def amount(count: int, singular: str, plural: str | None = None) -> str:
+    """«1 oferta», «590 ofertas»; `plural` cuando no basta con añadir una s («novedades»)."""
+    return f"{count} {singular if count == 1 else plural or singular + 's'}"
+
+
+def size_label(size: int) -> str:
+    """Tamaño de un fichero: «786 KB», «1,2 MB»."""
+    if size < 1024 ** 2:
+        return f"{max(1, round(size / 1024))} KB"
+    return f"{size / 1024 ** 2:.1f} MB".replace(".", ",")
 
 
 GENERIC_PLACES = ("Comunidad de", "Sede", "Varios", "Nacional")
@@ -1254,7 +1285,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <li>Elija una de las listas que figuran más abajo y copie su enlace.</li>
 <li>Pegue el enlace en el lector, en la opción «Añadir fuente» o «Suscribirse».</li>
 </ol>
-<p>Las webs oficiales se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Cada lista incluye lo siguiente:</p>
+<p>Las webs oficiales se consultan varias veces al día: {SCHEDULE_SUMMARY} (<a href="../datos/#actualizacion">horario detallado</a>). Cada lista incluye lo siguiente:</p>
 <ul>
 <li>«Todas las novedades» y las listas por organismo incluyen las ofertas y los anuncios de procesos.</li>
 <li>Las listas por comunidad autónoma, por área, de teletrabajo y por entidad incluyen solo ofertas.</li>
@@ -1351,7 +1382,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 </ul>
 <p>Todas las listas y las instrucciones paso a paso figuran en <a href="../avisos/">Recibir avisos</a>.</p>
 <h2 id="de-donde">Origen de los datos</h2>
-<p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
+<p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: {SCHEDULE_SUMMARY} (<a href="../datos/#actualizacion">horario detallado</a>). Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
 <p>El área de cada oferta (en «Filtros») no la facilita el organismo: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo; una oferta puede tener dos áreas o ninguna. Sirve para filtrar y para decidir si una oferta de un centro de investigación o de una universidad sale también en la portada.</p>
 <p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Cuando la frase indica cuánto («hasta el 50 %», «1 día a la semana»), se añade a la etiqueta. Si la ficha no menciona el teletrabajo, no se deduce que no lo haya: solo se indica «sin teletrabajo» cuando la ficha lo dice. Si la ficha apenas tiene texto y solo remite a las bases, no es posible saberlo y así se indica.</p>
 <h2 id="datos">Datos abiertos</h2>
@@ -1450,7 +1481,7 @@ OFFER_FIELDS = [
     (("empresa",), "Empresa o entidad que contrata."),
     (("estado",), "<code>abierta</code> o <code>cerrada</code>, según las fechas del plazo y no según la etiqueta de la web."),
     (("ubicacion", "localidad", "comunidad"), "Ubicación literal, localidad deducida del título o de la ficha, y nombre de la comunidad autónoma."),
-    (("ccaa", "provincia", "municipio"), "Códigos del INE de comunidad autónoma, provincia y municipio. Solo se asignan cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital, y se queda en provincia."),
+    (("ccaa", "provincia", "municipio"), f"Códigos del INE de comunidad autónoma, provincia y municipio. Solo se asignan cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital, y se queda en provincia. El municipio lleva cinco cifras, las dos de la provincia y tres más, como en la <a href=\"{INE_MUNICIPIOS}\">Relación de municipios del INE</a> a {INE_FECHA}. Sus nombres están en <code>comunidades</code>, <code>provincias</code> y <code>municipios</code> de listas.json."),
     (("plazas",), "Número de plazas."),
     (("tipo_contrato", "contrato"), "Tipo de contrato (<code>tipos_contrato</code> en listas.json), solo si la fuente lo indica con claridad, y texto literal del contrato."),
     (("convocatoria", "tipo_puesto", "departamento"), "Datos que la fuente publica con esas denominaciones, si los publica."),
@@ -1496,6 +1527,7 @@ NEWS_FIELDS = [
 LIST_FIELDS = [
     (("comunidades",), "Comunidades autónomas: <code>ccaa</code> (código del INE) y <code>nombre</code>."),
     (("provincias",), "Provincias: <code>provincia</code> (código del INE), <code>nombre</code> en castellano y <code>ccaa</code>, su comunidad autónoma."),
+    (("municipios",), f"Municipios que aparecen en ofertas.json: <code>municipio</code> (código del INE), <code>nombre</code> en castellano, <code>provincia</code> y <code>ccaa</code>. Solo figuran los de alguna oferta; los demás están en la <a href=\"{INE_MUNICIPIOS}\">Relación de municipios del INE</a>."),
     (("organismos",), "Organismos: <code>id</code>, <code>nombre</code>, <code>grupo</code> y <code>url</code>, la página oficial de empleo que lee este portal."),
     (("areas", "perfiles", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
      "Áreas profesionales, perfiles de investigación, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
@@ -1519,46 +1551,62 @@ def code_example(unix: str, windows: str, js: str) -> str:
         for key, label, code in blocks) + "</div>"
 
 
-def open_data_page(checked: str, base_url: str = DEFAULT_BASE_URL) -> str:
+OPEN_DATA_FILES = (  # (fichero, apartado de sus campos, contenido)
+    ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas."),
+    ("procesos.json", "procesos", "Todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases."),
+    ("novedades.json", "novedades", f"Las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios."),
+    ("listas.json", "listas", "El nombre de cada clave que usan los demás ficheros: comunidades autónomas, provincias, municipios, organismos, áreas, tipos de contrato…"),
+)
+
+
+def open_data_page(checked: str, files: dict[str, tuple[str, int, int]], published: str,
+                   base_url: str = DEFAULT_BASE_URL) -> str:
+    """`files`: registros, tamaño y tamaño comprimido de cada fichero de api/, medidos al publicar;
+    `published`: el momento de esa publicación (el `generado` de los ficheros), para leer."""
     api = f"{base_url}api/"
     link = '<li><a href="#{}">{}</a></li>'.format
     fields = "".join(link(*item) for item in (("formato", "Formato común"), ("ofertas", "Ofertas"),
                                               ("procesos", "Procesos"), ("novedades", "Novedades"), ("listas", "Listas")))
-    index = (link("ficheros", "Ficheros") + link("ejemplos", "Ejemplos")
+    index = (link("ficheros", "Ficheros") + link("actualizacion", "Actualización") + link("ejemplos", "Ejemplos")
              + f'<li><a href="#campos">Campos</a>: <ul>{fields}</ul></li>'
              + link("uso-responsable", "Uso responsable") + link("licencia", "Licencia"))
+    cards = "".join(
+        f'<li><h3><a href="../api/{name}">{name}</a></h3><p>{about}</p>'
+        f'<p class="dato">{files[name][0]}<br>{size_label(files[name][1])} · {size_label(files[name][2])} comprimido</p>'
+        f'<p class="campos-de"><a href="#{anchor}">Campos<span class="sr-only"> de {name}</span></a></p></li>'
+        for name, anchor, about in OPEN_DATA_FILES)
+    schedule = "".join(f"<dt>{when}</dt><dd>{how}</dd>" for when, how in SCHEDULE)
     example_open = code_example(
-        f"""curl -s {e(api)}ofertas.json | jq '.ofertas[] | select(.estado == "abierta" and .ccaa == "01") | {{titulo, empresa, plazo_fin, url}}'""",
+        f"""curl -s --compressed {e(api)}ofertas.json | jq '.ofertas[] | select(.estado == "abierta" and .ccaa == "01") | {{titulo, empresa, plazo_fin, url}}'""",
         f"""(Invoke-RestMethod {e(api)}ofertas.json).ofertas |
   Where-Object {{ $_.estado -eq "abierta" -and $_.ccaa -eq "01" }} |
   Select-Object titulo, empresa, plazo_fin, url""",
         f"""const datos = await (await fetch("{e(api)}ofertas.json")).json();
 const abiertas = datos.ofertas.filter(o =&gt; o.estado === "abierta" &amp;&amp; o.ccaa === "01");""")
     example_processes = code_example(
-        f"""curl -s {e(api)}procesos.json | jq '.procesos[] | select(.estado == "abierto") | {{nombre, organismo, plazo_fin, url_inscripcion}}'""",
+        f"""curl -s --compressed {e(api)}procesos.json | jq '.procesos[] | select(.estado == "abierto") | {{nombre, organismo, plazo_fin, url_inscripcion}}'""",
         f"""(Invoke-RestMethod {e(api)}procesos.json).procesos |
   Where-Object {{ $_.estado -eq "abierto" }} |
   Select-Object nombre, organismo, plazo_fin, url_inscripcion""",
         f"""const datos = await (await fetch("{e(api)}procesos.json")).json();
 const abiertos = datos.procesos.filter(p =&gt; p.estado === "abierto");""")
     example_news = code_example(
-        f"""curl -s {e(api)}novedades.json | jq '.novedades[] | select(.tipo == "oferta" and .ccaa == "12") | {{titulo, url}}'""",
+        f"""curl -s --compressed {e(api)}novedades.json | jq '.novedades[] | select(.tipo == "oferta" and .ccaa == "12") | {{titulo, url}}'""",
         f"""(Invoke-RestMethod {e(api)}novedades.json).novedades |
   Where-Object {{ $_.tipo -eq "oferta" -and $_.ccaa -eq "12" }} |
   Select-Object titulo, url""",
         f"""const datos = await (await fetch("{e(api)}novedades.json")).json();
 const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.ccaa === "12");""")
     body = f"""<h1>Datos abiertos</h1>
-<p>Toda la información de este portal está disponible en ficheros JSON para su reutilización en webs, aplicaciones o análisis. No se requiere clave ni registro, y los ficheros pueden leerse desde cualquier web (CORS abierto). Se generan de nuevo con cada actualización del portal, hasta cada 30 minutos en horario laboral.</p>
+<p>Toda la información de este portal está disponible en ficheros JSON para su reutilización en webs, aplicaciones o análisis. No se requiere clave ni registro, y los ficheros pueden leerse desde cualquier web (CORS abierto). Se generan de nuevo tras cada lectura de las webs oficiales (ver <a href="#actualizacion">Actualización</a>).</p>
 <nav class="indice-datos" aria-label="En esta página"><ul>{index}</ul></nav>
 <h2 id="ficheros">Ficheros</h2>
-<ul>
-<li><a href="../api/ofertas.json">ofertas.json</a>: todas las ofertas, abiertas y cerradas.</li>
-<li><a href="../api/procesos.json">procesos.json</a>: todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases.</li>
-<li><a href="../api/novedades.json">novedades.json</a>: las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios.</li>
-<li><a href="../api/listas.json">listas.json</a>: el nombre de cada clave que usan los demás ficheros (comunidades autónomas, organismos, áreas, tipos de contrato…).</li>
-</ul>
+<ul class="ficheros" role="list">{cards}</ul>
+<p>Registros y tamaños de la publicación del {published}. El tamaño comprimido es aproximado (gzip): es lo que se descarga cuando se pide el fichero comprimido, como hacen los navegadores y <code>curl</code> con la opción <code>--compressed</code>.</p>
 <p>Las <a href="../avisos/">listas RSS de avisos</a> también pueden reutilizarse.</p>
+<h2 id="actualizacion">Actualización</h2>
+<p>Las webs oficiales se leen según este horario (hora peninsular). Cada lectura comienza a los 7 o a los 37 minutos de la hora y, al terminar, unos 15 minutos después, se publican de nuevo todos los ficheros. El campo <code>generado</code> indica el momento de la última publicación.</p>
+<dl class="ficha horario">{schedule}</dl>
 <h2 id="ejemplos">Ejemplos</h2>
 <p>En macOS (15 o posterior) y en muchas distribuciones de Linux, <code>curl</code> y <code>jq</code> vienen instalados; si falta <code>jq</code>, puede instalarse con el gestor de paquetes. En Windows, PowerShell no necesita nada más.</p>
 <h3>Ofertas abiertas en Andalucía</h3>
@@ -1608,8 +1656,9 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <h2 id="uso-responsable">Uso responsable</h2>
 <p>Este portal lo mantienen personas ajenas a la Administración, con recursos limitados, gracias a las contribuciones y donaciones de la comunidad. Se ruega hacer un uso responsable de los datos:</p>
 <ul>
-<li>Los ficheros se actualizan, como mucho, cada 30 minutos; no es necesario consultarlos con mayor frecuencia.</li>
+<li>Los ficheros se actualizan, como mucho, cada 30 minutos, y de 0:00 a 6:00 no hay lecturas programadas (ver <a href="#actualizacion">Actualización</a>); no es necesario consultarlos con mayor frecuencia.</li>
 <li>Para detectar novedades, utilice novedades.json en lugar de descargar ofertas.json o procesos.json completos en cada consulta.</li>
+<li>Pida los ficheros comprimidos (con <code>curl</code>, la opción <code>--compressed</code>): se descarga mucho menos.</li>
 <li>Si su servicio tiene muchas personas usuarias, guarde una copia de los ficheros en su servidor en lugar de que cada navegador los descargue de este portal.</li>
 </ul>
 <h2 id="licencia">Licencia y atribución</h2>
@@ -1684,13 +1733,17 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
     return sorted(items, key=lambda item: item["fecha"], reverse=True)
 
 
-def lists(sources: dict) -> dict:
+def lists(sources: dict, municipalities: set[str] = frozenset()) -> dict:
     """Claves de la API con su nombre: las de los avisos (comunidades, organismos y áreas) y las de
-    los campos codificados de ofertas y procesos."""
+    los campos codificados de ofertas y procesos. De los municipios, solo los que usa alguna oferta
+    (`municipalities`): la relación completa del INE tiene más de 8000."""
     named = lambda labels: [{"id": key, "nombre": label} for key, label in labels.items()]
+    ccaa_of = {code: ccaa for code, _, ccaa in provinces()}
     return {
         "comunidades": [{"ccaa": code, "nombre": name} for name, code in CCAA.items()],
         "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
+        "municipios": [{"municipio": code, "nombre": municipality_name(code), "provincia": code[:2],
+                        "ccaa": ccaa_of[code[:2]]} for code in sorted(municipalities)],
         "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group, "url": s.homepage} for s in sources.values()],
         "areas": named(dict(areas.BY_NAME)),
         "perfiles": named(dict(perfiles.BY_NAME)),
@@ -1792,7 +1845,6 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     put("historico/procesos/", closed_processes_page(announcements, checked, sources, today))
     put("acerca/", about_page(sources, checked, TELEGRAM_BOT, base_url, bool(CORREO_SITEKEY)))
     put("accesibilidad/", accessibility_page(checked, bool(CORREO_SITEKEY)))
-    put("datos/", open_data_page(checked, base_url))
     write(out / "404.html", head_url(page(
         "Página no encontrada",
         '<h1>Página no encontrada</h1><p>La página solicitada no existe o ha cambiado de dirección.</p>'
@@ -1855,14 +1907,26 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
                                                  CORREO_SITEKEY, mail_organisms))
 
     stamp = now.isoformat(timespec="seconds")
+    files = {}  # fichero -> (registros, tamaño, tamaño comprimido), para «Datos abiertos»
 
-    def api(name: str, **content) -> None:
-        write(out / "api" / name, json.dumps({**API_HEAD, "documentacion": f"{base_url}datos/", "generado": stamp, **content}, ensure_ascii=False, indent=1))
+    def api(name: str, records: str, **content) -> None:
+        text = json.dumps({**API_HEAD, "documentacion": f"{base_url}datos/", "generado": stamp, **content}, ensure_ascii=False, indent=1)
+        write(out / "api" / name, text)
+        raw = text.encode("utf-8")
+        files[name] = (records, len(raw), len(gzip.compress(raw)))
 
-    api("ofertas.json", ofertas=[public_offer(o, group_of.get(o["source"], ""), base_url) for o in offers.values()])
-    api("novedades.json", dias=NEWS_DAYS, novedades=news(offers, events, announcements, sources, base_url, now))
-    api("procesos.json", procesos=processes(announcements))
-    api("listas.json", **lists(sources))
+    public = [public_offer(o, group_of.get(o["source"], ""), base_url) for o in offers.values()]
+    api("ofertas.json", f"{amount(len(public), 'oferta')}, {amount(len(open_offers), 'abierta')}", ofertas=public)
+    recent = news(offers, events, announcements, sources, base_url, now)
+    api("novedades.json", amount(len(recent), "novedad", "novedades"), dias=NEWS_DAYS, novedades=recent)
+    found = processes(announcements)
+    live_count = sum(p["estado"] in LIVE_STATES for p in found)
+    api("procesos.json", f"{amount(len(found), 'proceso')}, {live_count} en marcha", procesos=found)
+    named = lists(sources, {o["municipio"] for o in public if o["municipio"]})
+    api("listas.json", amount(len(named), "lista"), **named)
+    generated = now.astimezone(MADRID)
+    put("datos/", open_data_page(checked, files, f"{long_date(generated.date().isoformat())} a las {generated:%H:%M}",
+                                 base_url))
     pages = (
         [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
@@ -1887,6 +1951,10 @@ def main() -> None:
         datetime.fromisoformat(checked) if checked else None,
     )
     print("Web generada en _site/")
+    size = Path("_site/api/ofertas.json").stat().st_size
+    if size > API_SPLIT_BYTES:  # anotación de GitHub Actions: se ve en el resumen de la ejecución
+        print(f"::warning title=API::api/ofertas.json pesa {size_label(size)}: toca añadir un fichero "
+              "solo con las abiertas (docs/api.md)")
     print(f"JobPosting: {marks.pop('con marcado', 0)} abiertas con marcado; sin él: "
           + (", ".join(f"{reason} {count}" for reason, count in marks.most_common()) or "ninguna"))
 
