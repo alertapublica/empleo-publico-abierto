@@ -1,6 +1,6 @@
 import unittest
 
-from empleo.regions import (NATIONAL, SEVERAL, UNKNOWN, codes_of, location_from_title, municipality_of,
+from empleo.regions import (NATIONAL, SEVERAL, UNKNOWN, codes_of, country_code, country_name, location_from_title, municipality_of,
                             region_of)
 
 
@@ -83,6 +83,12 @@ class CodigosINE(unittest.TestCase):
         self.assertIsNone(municipality_of("Rioja"))        # hay un Rioja en Almería
         self.assertIsNone(municipality_of("Villanueva"))   # no existe tal cual
         self.assertIsNone(municipality_of(None))
+
+    def test_pais_iso(self):
+        cases = {"España": "ES", "México": "MX", "Perú": "PE", "Costa Rica": "CR", "Otros Países": None,
+                 "Madrid": None, None: None}
+        self.assertEqual({name: country_code(name) for name in cases}, cases)
+        self.assertEqual(country_name("PE"), "Perú")
 
     def test_provincia_y_comunidad(self):
         self.assertEqual(codes_of("Andalucía", "Sevilla"),

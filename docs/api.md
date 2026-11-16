@@ -6,7 +6,7 @@ Hay cuatro ficheros:
 
 | Fichero | Contenido |
 |---|---|
-| `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio |
+| `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio, y país (ISO 3166-1). Es el único sitio con las becas y las ofertas fuera de España (`site.off_front`) |
 | `procesos.json` | Comunicados de procesos selectivos |
 | `novedades.json` | Novedades de los últimos 14 días (lo usa el worker de avisos) |
 | `listas.json` | Nombre legible de cada clave |

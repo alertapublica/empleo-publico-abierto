@@ -16,8 +16,8 @@ from urllib.parse import quote
 
 from . import areas, feeds, perfiles, store, teletrabajo
 from .model import (ACCESS, GROUPS, KINDS, LIVE_STATES, MADRID, PROCESS_TYPES, STATE_SCOPE, STATES,
-                    SYSTEMS, process_type, today_madrid)
-from .regions import (CCAA, NATIONAL, REGIONS, SEVERAL, UNKNOWN, codes_of, location_from_title, municipality_name, province_name,
+                    SYSTEMS, abroad, process_type, today_madrid)
+from .regions import (CCAA, NATIONAL, REGIONS, SEVERAL, UNKNOWN, codes_of, country_code, country_name, location_from_title, municipality_name, province_name,
                       provinces, provinces_named, region_of)
 from .sources import ACTIVE, PLANNED
 from .text import humane_caps
@@ -438,6 +438,13 @@ def research_only(offer: dict, group: str) -> bool:
     return "investigacion" in found and not found & MANAGEMENT_AREAS
 
 
+def off_front(offer: dict) -> bool:
+    """Becas y puestos fuera de España: se publican en api/ofertas.json y tienen su ficha, pero no salen en
+    ningún listado de la web (portada, Investigación, organismo, histórico), ni en los feeds, novedades.json
+    (los avisos) o el sitemap. Quedan para una sección propia."""
+    return offer.get("kind") == "beca" or abroad(offer)
+
+
 def group_of_source(sources: dict, source_id: str) -> str:
     source = sources.get(source_id)
     return getattr(source, "group", "") if source else ""
@@ -667,6 +674,8 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
     # contrato, y los centros suelen publicar ya su propio marcado. Las de gestión salen en portada.
     if research_only(offer, getattr(source, "group", "")):
         return "solo investigación"
+    if off_front(offer):
+        return "fuera de portada"
     if (offer.get("opens_on") or "") > now.astimezone(MADRID).date().isoformat():
         return "plazo no iniciado"
     # Con `validThrough`, Google la retira sola al vencer aunque no vuelva a leer la ficha.
@@ -1481,6 +1490,7 @@ OFFER_FIELDS = [
     (("estado",), "<code>abierta</code> o <code>cerrada</code>, según las fechas del plazo y no según la etiqueta de la web."),
     (("ubicacion", "localidad", "comunidad"), "Ubicación literal, localidad deducida del título o de la ficha, y nombre de la comunidad autónoma."),
     (("ccaa", "provincia", "municipio"), f"Códigos del INE de comunidad autónoma, provincia y municipio. Solo se asignan cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital, y se queda en provincia. El municipio lleva cinco cifras, las dos de la provincia y tres más, como en la <a href=\"{INE_MUNICIPIOS}\">Relación de municipios del INE</a> a {INE_FECHA}. Sus nombres están en <code>comunidades</code>, <code>provincias</code> y <code>municipios</code> de listas.json."),
+    (("pais",), "Código ISO 3166-1 alfa-2 del país (<code>ES</code>, <code>PE</code>…): el del país que indique la fuente o, si no indica ninguno, <code>ES</code> cuando la oferta tiene comunidad autónoma. <code>null</code> si no se sabe. Sus nombres están en <code>paises</code> de listas.json."),
     (("plazas",), "Número de plazas."),
     (("tipo_contrato", "contrato"), "Tipo de contrato (<code>tipos_contrato</code> en listas.json), solo si la fuente lo indica con claridad, y texto literal del contrato."),
     (("convocatoria", "tipo_puesto", "departamento"), "Datos que la fuente publica con esas denominaciones, si los publica."),
@@ -1527,6 +1537,7 @@ LIST_FIELDS = [
     (("comunidades",), "Comunidades autónomas: <code>ccaa</code> (código del INE) y <code>nombre</code>."),
     (("provincias",), "Provincias: <code>provincia</code> (código del INE), <code>nombre</code> en castellano y <code>ccaa</code>, su comunidad autónoma."),
     (("municipios",), f"Municipios que aparecen en ofertas.json: <code>municipio</code> (código del INE), <code>nombre</code> en castellano, <code>provincia</code> y <code>ccaa</code>. Solo figuran los de alguna oferta; los demás están en la <a href=\"{INE_MUNICIPIOS}\">Relación de municipios del INE</a>."),
+    (("paises",), "Países que aparecen en ofertas.json: <code>pais</code> (código ISO 3166-1 alfa-2) y <code>nombre</code> en castellano."),
     (("organismos",), "Organismos: <code>id</code>, <code>nombre</code>, <code>grupo</code> y <code>url</code>, la página oficial de empleo que lee este portal."),
     (("areas", "perfiles", "grupos", "tipos_contrato", "tipos_proceso", "accesos", "sistemas", "estados_proceso"),
      "Áreas profesionales, perfiles de investigación, grupos de organismos, tipos de contrato, tipos de proceso, tipos de acceso, sistemas de selección y estados de los procesos, cada uno con <code>id</code> y <code>nombre</code>."),
@@ -1551,7 +1562,7 @@ def code_example(unix: str, windows: str, js: str) -> str:
 
 
 OPEN_DATA_FILES = (  # (fichero, apartado de sus campos, contenido)
-    ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas."),
+    ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas. Es el único fichero con las becas (<code>tipo_contrato</code> <code>beca</code>) y las ofertas fuera de España (<code>pais</code> distinto de <code>ES</code>): no salen en la web ni en novedades.json."),
     ("procesos.json", "procesos", "Todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases."),
     ("novedades.json", "novedades", f"Las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios."),
     ("listas.json", "listas", "El nombre de cada clave que usan los demás ficheros: comunidades autónomas, provincias, municipios, organismos, áreas, tipos de contrato…"),
@@ -1708,7 +1719,7 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
     for event in events:
         offer = offers.get(event["offer"])
         if (offer is None or offer["status"] != "open" or event["kind"] not in ("new", "republished")
-                or datetime.fromisoformat(event["at"]) < since):
+                or datetime.fromisoformat(event["at"]) < since or off_front(offer)):
             continue
         items.append({
             "id": f"{event['offer']}/{event['kind']}/{event['at']}", "fecha": event["at"],
@@ -1732,10 +1743,10 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
     return sorted(items, key=lambda item: item["fecha"], reverse=True)
 
 
-def lists(sources: dict, municipalities: set[str] = frozenset()) -> dict:
+def lists(sources: dict, municipalities: set[str] = frozenset(), countries: set[str] = frozenset()) -> dict:
     """Claves de la API con su nombre: las de los avisos (comunidades, organismos y áreas) y las de
-    los campos codificados de ofertas y procesos. De los municipios, solo los que usa alguna oferta
-    (`municipalities`): la relación completa del INE tiene más de 8000."""
+    los campos codificados de ofertas y procesos. De los municipios y los países, solo los que usa alguna
+    oferta (`municipalities`, `countries`): la relación completa del INE tiene más de 8000 municipios."""
     named = lambda labels: [{"id": key, "nombre": label} for key, label in labels.items()]
     ccaa_of = {code: ccaa for code, _, ccaa in provinces()}
     return {
@@ -1743,6 +1754,7 @@ def lists(sources: dict, municipalities: set[str] = frozenset()) -> dict:
         "provincias": [{"provincia": code, "nombre": name, "ccaa": ccaa} for code, name, ccaa in provinces()],
         "municipios": [{"municipio": code, "nombre": municipality_name(code), "provincia": code[:2],
                         "ccaa": ccaa_of[code[:2]]} for code in sorted(municipalities)],
+        "paises": [{"pais": code, "nombre": country_name(code)} for code in sorted(countries)],
         "organismos": [{"id": s.id, "nombre": s.name, "grupo": s.group, "url": s.homepage} for s in sources.values()],
         "areas": named(dict(areas.BY_NAME)),
         "perfiles": named(dict(perfiles.BY_NAME)),
@@ -1787,6 +1799,13 @@ def remote_fields(offer: dict) -> dict:
             "teletrabajo_detalle": remote.detail}
 
 
+def offer_country(offer: dict) -> str | None:
+    """ISO 3166-1 alfa-2: el del país que dé la fuente o, si no da ninguno, «ES» si la oferta tiene comunidad."""
+    if offer.get("country"):
+        return country_code(offer["country"])
+    return "ES" if offer.get("region") not in (None, UNKNOWN) else None
+
+
 def public_offer(offer: dict, group: str, base_url: str) -> dict:
     """Oferta de api/ofertas.json: el texto de la fuente tal cual, con claves en castellano."""
     return {
@@ -1794,7 +1813,7 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
         "titulo_original": offer.get("source_title") or offer["title"],
         "empresa": offer.get("company"), "estado": "abierta" if offer["status"] == "open" else "cerrada",
         "ubicacion": offer.get("location"), "localidad": offer.get("place"), "comunidad": offer.get("region"),
-        **offer_codes(offer),
+        **offer_codes(offer), "pais": offer_country(offer),
         "plazas": offer.get("positions"), "tipo_contrato": offer.get("kind"), "contrato": offer.get("contract"),
         "convocatoria": offer.get("category"), "tipo_puesto": offer.get("family"),
         "departamento": offer.get("department"),
@@ -1817,7 +1836,8 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     moment = (checked_at or now).astimezone(MADRID)
     checked = f"{long_date(moment.date().isoformat())} a las {moment:%H:%M}"
     open_offers = [o for o in offers.values() if o["status"] == "open"]
-    closed = [o for o in offers.values() if o["status"] == "closed"]
+    shown = [o for o in open_offers if not off_front(o)]  # las de los listados de la web
+    closed = [o for o in offers.values() if o["status"] == "closed" and not off_front(o)]
     group_of = {s.id: s.group for s in ACTIVE}
 
     if out.exists():
@@ -1828,15 +1848,15 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     def put(path: str, html: str) -> None:
         write(out / path / "index.html", head_url(html, base_url, path))
 
-    put("", index_page(open_offers, today, checked, sources))
-    put("investigacion/", research_page(open_offers, today, checked, sources))
+    put("", index_page(shown, today, checked, sources))
+    put("investigacion/", research_page(shown, today, checked, sources))
     groups = process_groups(announcements)
     live = [g for g in groups if is_live(g)]
     running = {s.id: sum(g[0]["source"] == s.id for g in live) for s in ACTIVE}
-    put("organismos/", organisms_page(sources, open_offers, checked, running, TELEGRAM_BOT))
+    put("organismos/", organisms_page(sources, shown, checked, running, TELEGRAM_BOT))
     for source in ACTIVE:
         put(f"organismos/{source.id}/", organism_page(
-            source, open_offers, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
+            source, shown, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
     for offer in offers.values():
         put(offer_path(offer), offer_page(offer, sources, now, checked, base_url))
     put("anuncios/", announcements_page(announcements, checked, sources, today))
@@ -1852,7 +1872,9 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     ), base_url, None))
 
     offer_url = lambda offer: base_url + offer_path(offer)
-    offer_feed = feeds.offer_items(offers, events, offer_url, lambda offer: offer_summary(offer, published=True))
+    offer_feed = [item for item in feeds.offer_items(offers, events, offer_url,
+                                                     lambda offer: offer_summary(offer, published=True))
+                  if not off_front(item["offer"])]
     notice_feed = feeds.announcement_items(announcements)
 
     def emit(path: str, title: str, items: list) -> None:
@@ -1921,7 +1943,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     found = processes(announcements)
     live_count = sum(p["estado"] in LIVE_STATES for p in found)
     api("procesos.json", f"{amount(len(found), 'proceso')}, {live_count} en marcha", procesos=found)
-    named = lists(sources, {o["municipio"] for o in public if o["municipio"]})
+    named = lists(sources, {o["municipio"] for o in public if o["municipio"]}, {o["pais"] for o in public if o["pais"]})
     api("listas.json", amount(len(named), "lista"), **named)
     generated = now.astimezone(MADRID)
     put("datos/", open_data_page(checked, files, f"{long_date(generated.date().isoformat())} a las {generated:%H:%M}",
@@ -1930,7 +1952,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
         # Las cerradas, y las de plazo vencido aún sin cerrar, siguen publicadas, pero no se anuncian.
-        + [offer_path(o) for o in open_offers if not expired(o, now)]
+        + [offer_path(o) for o in shown if not expired(o, now)]
     )
     write(out / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'

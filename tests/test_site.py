@@ -412,7 +412,7 @@ class Site(unittest.TestCase):
         ofertas = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
         self.assertEqual(list(ofertas["tragsa:2"]), [
             "id", "organismo", "codigo", "titulo", "titulo_original", "empresa", "estado", "ubicacion", "localidad",
-            "comunidad", "ccaa", "provincia", "municipio", "plazas", "tipo_contrato", "contrato", "convocatoria", "tipo_puesto",
+            "comunidad", "ccaa", "provincia", "municipio", "pais", "plazas", "tipo_contrato", "contrato", "convocatoria", "tipo_puesto",
             "departamento", "plazo_inicio", "plazo_fin", "plazo_hora", "plazo_regla", "publicada", "detectada", "cerrada",
             "republica", "areas", "perfil", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle",
             "url", "url_inscripcion", "url_portal"])
@@ -465,12 +465,12 @@ class Site(unittest.TestCase):
         """Cada valor codificado de la API tiene su nombre en listas.json."""
         listas = json.loads(self.read("api/listas.json"))
         ids = lambda name, key="id": {item[key] for item in listas[name]}
-        known = {"organismo": ids("organismos"), "ccaa": ids("comunidades", "ccaa"),
+        known = {"organismo": ids("organismos"), "ccaa": ids("comunidades", "ccaa"), "pais": ids("paises", "pais"),
                  "provincia": ids("provincias", "provincia"), "municipio": ids("municipios", "municipio"),
                  "tipo_contrato": ids("tipos_contrato"), "areas": ids("areas"), "perfil": ids("perfiles"),
                  "tipo": ids("tipos_proceso"), "acceso": ids("accesos"), "sistema": ids("sistemas"),
                  "estado": ids("estados_proceso")}
-        files = {"ofertas": ("organismo", "ccaa", "provincia", "municipio", "tipo_contrato", "areas", "perfil"),
+        files = {"ofertas": ("organismo", "ccaa", "provincia", "municipio", "pais", "tipo_contrato", "areas", "perfil"),
                  "procesos": ("organismo", "ccaa", "provincia", "tipo", "acceso", "tipo_contrato", "sistema", "estado"),
                  "novedades": ("organismo", "ccaa", "areas")}
         for name, keys in files.items():
@@ -1158,6 +1158,65 @@ def luminance(color):
 def contrast(a, b):
     high, low = sorted((luminance(a), luminance(b)), reverse=True)
     return (high + 0.05) / (low + 0.05)
+
+
+class FueraDePortada(unittest.TestCase):
+    """Becas y puestos fuera de España: solo en ofertas.json y en su ficha, sin enlazar."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        root = Path(cls.tmp.name)
+        cls.out = root / "_site"
+        offers = {
+            "1": offer("1", title="Puesto en Sevilla"),
+            "6": offer("6", title="Beca de estructuras", kind="beca", country="España", location="Madrid",
+                       region="Comunidad de Madrid"),
+            "7": offer("7", title="Técnico de carreteras", kind=None, country="Perú", location="Lima", region=None),
+            "8": offer("8", title="Puesto en otros países", kind=None, country="Otros Países", location=None,
+                       region=None),
+            "9": offer("9", title="Beca ya cerrada", kind="beca", status="closed",
+                       closed_at="2026-11-07T00:00:00+00:00", deadline="2026-11-06"),
+        }
+        events = [{"offer": f"tragsa:{r}", "kind": "new", "at": "2026-11-07T06:00:00+00:00"} for r in offers]
+        store.save(root / "data/tragsa/offers.json", offers)
+        store.save(root / "data/tragsa/events.json", events)
+        store.save(root / "data/tragsa/announcements.json", {})
+        cls.marks = site.build(root / "data", cls.out, BASE, NOW)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def read(self, path):
+        return (self.out / path).read_text(encoding="utf-8")
+
+    def test_no_salen_en_los_listados_ni_en_los_feeds(self):
+        hidden = ("Beca de estructuras", "Técnico de carreteras", "Puesto en otros países", "Beca ya cerrada")
+        for path in ("index.html", "investigacion/index.html", "organismos/index.html",
+                     "organismos/tragsa/index.html", "historico/index.html", "feed.xml",
+                     "feeds/organismo-tragsa.xml", "api/novedades.json", "sitemap.xml"):
+            text = self.read(path)
+            for title in hidden:
+                self.assertNotIn(title, text, (path, title))
+        self.assertIn("Puesto en Sevilla", self.read("index.html"))
+        self.assertIn("Puesto en Sevilla", self.read("api/novedades.json"))
+        self.assertNotIn("tragsa-6", self.read("sitemap.xml"))
+
+    def test_si_en_ofertas_json_con_su_pais(self):
+        ofertas = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
+        self.assertEqual({k: (o["pais"], o["tipo_contrato"]) for k, o in ofertas.items()}, {
+            "tragsa:1": ("ES", "temporal"), "tragsa:6": ("ES", "beca"), "tragsa:7": ("PE", None),
+            "tragsa:8": (None, None), "tragsa:9": ("ES", "beca")})
+        self.assertEqual(json.loads(self.read("api/listas.json"))["paises"],
+                         [{"pais": "ES", "nombre": "España"}, {"pais": "PE", "nombre": "Perú"}])
+
+    def test_tienen_ficha_sin_marcado(self):
+        for ref in ("6", "7", "8"):
+            html = self.read(f"ofertas/tragsa-{ref}/index.html")
+            self.assertIn("<h1", html)
+            self.assertNotIn("application/ld+json", html)
+        self.assertEqual(self.marks["fuera de portada"], 3)
 
 
 class Contrast(unittest.TestCase):

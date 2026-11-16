@@ -360,6 +360,19 @@ class RunSource(unittest.TestCase):
         ingest.run_source(concreta, None, self.data, NOW)
         self.assertEqual(self.stored()["2"]["location"], "Huesca")
 
+    def test_fuera_de_espana_no_se_busca_en_las_comunidades(self):
+        ingest.run_source(FakeSource([listed(title="Oferta", country="México")], OfferDetail(location="León")),
+                          None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["location"], self.stored()["1"]["region"], self.stored()["1"]["country"]),
+                         ("León", None, "México"))
+        ingest.run_source(FakeSource([listed(ref="2", title="Oferta", country="España")], OfferDetail(location="León")),
+                          None, self.data, NOW)
+        self.assertEqual(self.stored()["2"]["region"], "Castilla y León")
+        sin_lugar = FakeSource([listed(ref="3", title="Oferta", country="Otros Países")], OfferDetail())
+        sin_lugar.scope = "Aragón"  # no se le pone la comunidad de la fuente
+        ingest.run_source(sin_lugar, None, self.data, NOW)
+        self.assertEqual((self.stored()["3"]["location"], self.stored()["3"]["region"]), (None, None))
+
     def test_parentesis_del_titulo_que_no_es_un_lugar_no_es_la_ubicacion(self):
         source = FakeSource([listed(title="Ingeniero/a de Plataformas (2026-T00434)")], OfferDetail())
         ingest.run_source(source, None, self.data, NOW)

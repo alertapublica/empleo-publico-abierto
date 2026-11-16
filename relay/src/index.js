@@ -3,6 +3,7 @@
 //   - Tragsa: el portal de candidatos da timeout desde Actions y solo atiende en el puerto 8443.
 //   - SEPI y EFE: no responden (SEPI) o dan 403 (EFE) a las IP de Actions.
 //   - Fundación de la Universidad de La Rioja: HTTP 429 a las IP de Actions.
+//   - Ineco (ePreselec): Imperva da 405 a un cliente sin agente de navegador; desde aquí, con él, entra.
 //
 //   POST|GET /?url=<codificada>   con cabeceras x-ts y x-firma
 //
@@ -20,6 +21,8 @@ export const ORIGENES = new Set([
   "https://agenciaefe.es",
   "https://www.agenciaefe.es",
   "https://fundacion.unirioja.es",
+  // Ineco (ofertas ordinarias en ePreselec, tras Imperva): entra con agente de navegador desde Cloudflare.
+  "https://ineco.epreselec.com",
   // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
   "https://rrhh.uib.cat",
   "https://aps.unirioja.es",

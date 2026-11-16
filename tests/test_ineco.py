@@ -3,6 +3,8 @@ from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from bs4 import BeautifulSoup
+
 from empleo import ingest
 from empleo.model import SourceLayoutError
 from empleo.sources import ineco
@@ -153,7 +155,114 @@ class Fuente(unittest.TestCase):
     def test_lee_las_dos_landings(self):
         items = ineco.InecoSource().list_announcements(FakeHttp(), now=datetime(2026, 11, 16, 12, tzinfo=timezone.utc))
         self.assertEqual(len({i.process for i in items}), 6)
-        self.assertEqual(ineco.InecoSource().list_offers(FakeHttp()), [])
+
+
+# Páginas reales de ePreselec del 16/11/2026, leídas desde un Worker de Cloudflare y recortadas: 7 de las
+# 197 ofertas y 3 de los ~700 trozos de __VIEWSTATE. La ficha es la respuesta al postback de la 28942.
+LISTA = "ineco-epreselec-lista.html"
+FICHA = "ineco-epreselec-ficha.html"
+TECNICO, BECA, PERU = "3363422", "3256126", "3378652"
+
+
+class Epreselec(unittest.TestCase):
+    def setUp(self):
+        self.offers, self.form = ineco.parse_list(fixture(LISTA), "Ineco")
+        self.by_ref = {o.ref: o for o in self.offers}
+
+    def test_listado(self):
+        self.assertEqual(len(self.offers), 7)
+        tecnico = self.by_ref[TECNICO]
+        self.assertEqual((tecnico.title, tecnico.company, tecnico.kind, tecnico.country, tecnico.published_on),
+                         ("28942 - Técnico/a de Instalacions en Edificación de Cliente.", "Ineco", None, "España",
+                          "2026-11-16"))
+        self.assertEqual((tecnico.url, tecnico.apply_url), (ineco.EPRESELEC, ineco.EPRESELEC))
+        self.assertIsNone(tecnico.deadline)  # ePreselec no da plazo
+
+    def test_tipo_y_pais(self):
+        self.assertEqual({o.ref: (o.kind, o.country) for o in self.offers}, {
+            TECNICO: (None, "España"), BECA: ("beca", "España"), PERU: (None, "Perú"),
+            "3364044": (None, "Costa Rica"), "3362430": ("beca", "España"), "3343119": (None, "Otros Países"),
+            "3340991": ("beca", "México")})
+
+    def test_codigo_con_y_sin_guion(self):
+        source = ineco.InecoSource()
+        self.assertEqual(source.labels(self.by_ref[BECA].title, BECA),
+                         {"title": "Beca Ingeniero/a de Estructuras", "code": "27600",
+                          "source_title": "27600- Beca Ingeniero/a de Estructuras"})
+        self.assertEqual(source.labels(self.by_ref["3362430"].title, "3362430")["code"], "28943")
+
+    def test_total_que_no_cuadra(self):
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_list(fixture(LISTA).replace("Total ofertas: 7", "Total ofertas: 8"), "Ineco")
+
+    def test_pagina_de_imperva(self):
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_list("<title>Pardon Our Interruption</title>", "Ineco")
+
+    def test_tipo_desconocido(self):
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_list(fixture(LISTA).replace("(BECA)", "(PRÁCTICAS)", 1), "Ineco")
+
+    def test_formulario_del_postback(self):
+        self.assertEqual(self.form["rows"][TECNICO], "ctl02")
+        self.assertEqual(self.form["fields"]["ctl00$_repostcheckcode"], "4a23e8ec-1e25-414e-92de-5f9f40780002")
+        self.assertIn("__VIEWSTATE2", self.form["fields"])
+
+
+class EpreselecHttp:
+    """Listado en GET; en POST, la ficha de la 28942 o, para otra fila, el listado (no era la ficha)."""
+
+    def __init__(self):
+        self.gets, self.posts = 0, []
+
+    def get(self, url):
+        assert url == ineco.EPRESELEC
+        self.gets += 1
+        return fixture(LISTA)
+
+    def post(self, url, fields):
+        assert url == ineco.EPRESELEC
+        self.posts.append(fields)
+        return fixture(FICHA) if fields["__EVENTTARGET"].endswith("$ctl02$lbMostrarOferta") else fixture(LISTA)
+
+
+class EpreselecFicha(unittest.TestCase):
+    def setUp(self):
+        self.http = EpreselecHttp()
+        self.source = ineco.InecoSource()
+        self.offers = {o.ref: o for o in self.source.list_offers(self.http)}
+
+    def test_ficha_por_postback(self):
+        detail = self.source.fetch_detail(self.http, self.offers[TECNICO])
+        post = self.http.posts[0]
+        self.assertEqual(post["__EVENTTARGET"], "ctl00$CPH_Body$rptVacancies$ctl02$lbMostrarOferta")
+        self.assertEqual(post["ctl00$_repostcheckcode"], "4a23e8ec-1e25-414e-92de-5f9f40780002")
+        self.assertEqual([s["title"] for s in detail.sections],
+                         ["Oficina", "Descripción", "Funciones", "Requisitos", "Se ofrece"])
+        self.assertEqual(detail.sections[0]["html"], "<p>CIVIL</p>")
+        self.assertIn("<br/>- Redacción de las Especificaciones Técnicas de Instalaciones.", detail.sections[2]["html"])
+        self.assertEqual((detail.location, detail.positions), ("Madrid", 1))
+
+    def test_el_postback_siguiente_sale_de_la_ficha(self):
+        self.source.fetch_detail(self.http, self.offers[TECNICO])
+        self.source.fetch_detail(self.http, self.offers[TECNICO])
+        self.assertEqual(self.http.posts[1]["ctl00$_repostcheckcode"], "04cc7203-ac43-43ae-852e-d98e84350db6")
+        self.assertEqual(self.http.gets, 1)
+
+    def test_si_no_vuelve_la_ficha_relee_el_listado_y_luego_para(self):
+        with self.assertRaises(SourceLayoutError):
+            self.source.fetch_detail(self.http, self.offers[BECA])
+        self.assertEqual((self.http.gets, len(self.http.posts)), (2, 2))
+
+    def test_oferta_que_ya_no_esta(self):
+        gone = ineco.ListedOffer(ref="1", title="x", company="Ineco", url=ineco.EPRESELEC, apply_url=ineco.EPRESELEC)
+        self.assertIsNone(self.source.fetch_detail(self.http, gone))
+        self.assertEqual(self.http.posts, [])
+
+    def test_ficha_sin_funciones(self):
+        html = fixture(FICHA).replace('id="ctl00_CPH_Body_lFunciones"', 'id="otra"')
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_detail(BeautifulSoup(html, "html.parser"), TECNICO)
 
 
 if __name__ == "__main__":
