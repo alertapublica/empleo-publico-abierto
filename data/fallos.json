@@ -1,22 +1,22 @@
 {
  "andalucia": {
   "desde": "2026-11-16T17:37:43+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  },
  "galiciasur": {
   "desde": "2026-11-16T17:37:43+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-16T16:37:27+00:00",
-  "lecturas": 2,
+  "lecturas": 3,
   "resultado": "error"
  },
  "veiasa": {
   "desde": "2026-11-16T17:37:43+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  }
 }
