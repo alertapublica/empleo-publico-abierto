@@ -68,6 +68,7 @@ SOURCE_AREAS = {
     "udc": "investigacion",  # ídem: contratación con cargo a proyectos (PCTI)
     "unirioja": "investigacion",  # ídem: contratos con cargo a proyectos y de talento investigador
     "uco": "investigacion",  # ídem: tandas de contratos de personal investigador y técnico (PIT)
+    "uji": "investigacion",  # ídem: plazas de personal investigador y tecnólogo con cargo a proyectos
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
@@ -79,6 +80,7 @@ PROJECT_TITLES = {
     "uhu": re.compile(r"^(.+?) · "),
     "udc": re.compile(r"^(.+?) · "),  # «categoría · centro»; todas son contratos PCTI
     "unirioja": re.compile(r"^(.+?) · "),
+    "uji": re.compile(r"^(.+?) · "),
     "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
 }
 
