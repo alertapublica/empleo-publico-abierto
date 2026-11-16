@@ -2,7 +2,7 @@
  "asesor-a-juridico-a-letrado-a": {
   "apply_url": "https://www.mercasa.es/wp-content/uploads/2026/10/BASES-EXTERNAS_ASESORIA-JURIDICA-LETRADA_-T05-26.pdf",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T11:07:26+00:00",
   "code": null,
   "company": "Mercasa",
   "deadline": "2026-11-16",
@@ -37,7 +37,7 @@
   ],
   "source": "mercasa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Asesor/a jurídico/a letrado/a",
   "url": "https://www.mercasa.es/que-es-mercasa/unete-a-mercasa/"
  }
