@@ -170,6 +170,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/18",
   "via": "otro"
  },
+ "emacsa:942962613fec": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T12:37:32+00:00",
+  "location": null,
+  "process": "Auxiliar Administrativo/a",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/17",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Nueva ampliación del plazo para presentar impugnaciones a las preguntas y respuestas de las plantillas provisionales del primer ejercicio teórico",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/17",
+  "via": "otro"
+ },
  "emacsa:aedda37fe418": {
   "access": null,
   "apply_url": null,
