@@ -49,6 +49,52 @@
   "title": "Convocatoria del proceso selectivo para cubrir una plaza de técnico o técnica titulado medio de apoyo a la investigación, del grupo profesional B, para el proyecto «Investigación clínica y traslacional en cáncer colorrectal y cirugía oncológica avanzada» (GISE/CIRCOLO)",
   "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-"
  },
+ "2026-57-NAHUSE": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5111/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-superior-de-apoyo-a-la-investigacion-del-grupo-profesional-a-pa",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-57-NAHUSE",
+  "company": "IdISBa",
+  "contract": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T06:07:27+00:00",
+  "id": "idisba:2026-57-NAHUSE",
+  "kind": null,
+  "listed_deadline": "2026-12-04",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "2026-57-NAHUSE",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 16/11/2026 - Fin: 04/12/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 146 - 14/11/2026. <a href=\"https://www.caib.es/eboibfront/ca/2026/12359/seccio-ii-autoritats-i-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria del proceso selectivo para cubrir una plaza de técnico o técnica titulado superior de apoyo a la investigación, del grupo profesional A, para el proyecto «EXPOSOMICS as strategy to explore determinants and develop personalized lifestyle intervention for SUCCESSFUL AGING»",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5111/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-superior-de-apoyo-a-la-investigacion-del-grupo-profesional-a-pa"
+ },
  "L03110004": {
   "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5103/convocatoria-para-la-cobertura-de-una-plaza-de-tecnico-a-superior-en-gestion-del-conocimiento-y-calidad-de-la-fundacion-instituto-de-investigacion-san",
   "category": null,
