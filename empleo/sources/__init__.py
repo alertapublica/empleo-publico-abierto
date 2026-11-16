@@ -63,6 +63,7 @@ from .tragsa import TragsaSource
 from .ua import UaSource
 from .udc import UdcSource
 from .uhu import UhuSource
+from .unirioja import UniriojaSource
 from .upf import UpfSource
 from .usc import UscSource
 from .uvigo import UvigoSource
@@ -125,7 +126,7 @@ CATALOG = {
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
         IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(), IfapaSource(), FURIOJA,
     ],
-    "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource(), UdcSource(), UpfSource()],
+    "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource(), UdcSource(), UpfSource(), UniriojaSource()],
 }
 for _group, _sources in CATALOG.items():
     for _source in _sources:
