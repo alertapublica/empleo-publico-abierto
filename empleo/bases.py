@@ -37,7 +37,7 @@ MAX_PHRASES = 3  # por campo y PDF
 MAX_CHARS = 240
 
 HREF = re.compile(r'href="([^"]+)"', re.I)
-SENTENCE = re.compile(r"(?<=[.;:])\s+(?=[-–•¿¡\"«(]?[A-ZÁÉÍÓÚÑÀÈÒÇ0-9])")
+SENTENCE = re.compile(r"(?<=[.;])\s+(?=[-–•¿¡\"«(]?[A-ZÁÉÍÓÚÑÀÈÒÇ0-9])")
 # Qué se busca en las bases, por campo. Cada uno da frases literales; el informe no clasifica nada.
 FIELDS = {
     "teletrabajo": teletrabajo.MENTION,
