@@ -19,5 +19,6 @@
     "WORKFLOW": "actualizar.yml",
     "REF": "main"
   }
-  // Secreto: GITHUB_TOKEN (token de grano fino, solo este repo, permiso «Actions: read and write»).
+  // Secretos: GITHUB_TOKEN (token de grano fino, este repo y el del PAG, permiso «Actions: read and write») y
+  // PAG_REPO (dueño/nombre del repo privado de la lectura nocturna del PAG; sin él, no se lanza).
 }

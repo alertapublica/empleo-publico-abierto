@@ -1,4 +1,5 @@
-// Lanza la ingesta en GitHub Actions (workflow_dispatch sin fuentes: lee todas).
+// Lanza la ingesta en GitHub Actions (workflow_dispatch sin fuentes: lee todas) y la lectura nocturna del PAG
+// (noche.yml del repo privado PAG_REPO, que va en un secreto para no publicar su nombre).
 
 // Horario en hora de Madrid. El cron se dispara a :07 y a :37 (UTC) y esta función decide si toca:
 // lunes a viernes, cada 30 min de 6:00 a 15:59 y cada hora hasta las 23:59; sábado y domingo, cada hora
@@ -16,9 +17,15 @@ export function toca(fecha) {
   return enPunto && (!finDeSemana || hora === 19 || hora === 22);
 }
 
-export async function lanzar(env, fetcher = fetch) {
+// Lectura nocturna del PAG, en UTC: su robots.txt la permite de 01:00 a 06:45 GMT. Tres intentos (2:07, 3:07 y 5:07);
+// noche.yml no hace nada si ya está la lectura del día.
+export function tocaPag(fecha) {
+  return [2, 3, 5].includes(fecha.getUTCHours()) && fecha.getUTCMinutes() < 30;
+}
+
+export async function lanzar(env, fetcher = fetch, { repo = env.REPO, workflow = env.WORKFLOW, ref = env.REF, inputs } = {}) {
   if (!env.GITHUB_TOKEN) throw new Error("Falta el secreto GITHUB_TOKEN");
-  const url = `https://api.github.com/repos/${env.REPO}/actions/workflows/${env.WORKFLOW}/dispatches`;
+  const url = `https://api.github.com/repos/${repo}/actions/workflows/${workflow}/dispatches`;
   const respuesta = await fetcher(url, {
     method: "POST",
     headers: {
@@ -28,17 +35,25 @@ export async function lanzar(env, fetcher = fetch) {
       "User-Agent": "empleo-cron",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ ref: env.REF }),
+    body: JSON.stringify(inputs ? { ref, inputs } : { ref }),
   });
   // GitHub responde 204 sin cuerpo; cualquier otra cosa es un fallo y debe verse en los registros.
   if (respuesta.status !== 204) {
     const texto = (await respuesta.text()).slice(0, 300);
-    throw new Error(`GitHub respondió ${respuesta.status}: ${texto}`);
+    throw new Error(`GitHub respondió ${respuesta.status} (${workflow}): ${texto}`);
   }
 }
 
 export default {
   async scheduled(evento, env, _ctx) {
-    if (toca(new Date(evento.scheduledTime))) await lanzar(env);
+    const fecha = new Date(evento.scheduledTime);
+    const lanzamientos = [];
+    if (toca(fecha)) lanzamientos.push(lanzar(env));
+    if (env.PAG_REPO && tocaPag(fecha)) {
+      lanzamientos.push(lanzar(env, undefined, { repo: env.PAG_REPO, workflow: "noche.yml", ref: "main", inputs: { si_falta: "true" } }));
+    }
+    // Uno que falle no impide el otro; el fallo se ve en los registros del worker.
+    const fallos = (await Promise.allSettled(lanzamientos)).filter((r) => r.status === "rejected").map((r) => r.reason);
+    if (fallos.length) throw new AggregateError(fallos, fallos.map((f) => f.message).join("; "));
   },
 };

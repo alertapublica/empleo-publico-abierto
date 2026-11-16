@@ -1,6 +1,6 @@
 # Worker de Cloudflare (cron de la ingesta)
 
-El cron de GitHub se salta muchas ejecuciones, así que un worker (`worker/`, cuenta `empleo-publico`) lanza `actualizar.yml` con `workflow_dispatch`. Se despliega solo al fusionar en `main` (`.github/workflows/worker.yml`).
+El cron de GitHub se salta muchas ejecuciones, así que un worker (`worker/`, cuenta `empleo-publico`) lanza `actualizar.yml` con `workflow_dispatch`. También lanza la lectura nocturna del PAG (`noche.yml` de un repo privado aparte, el del secreto `PAG_REPO`) a las 2:07, 3:07 y 5:07 UTC (`tocaPag()`), dentro del horario que permite su robots.txt (01:00–06:45 GMT), con `si_falta`: la lectura solo se hace si ese día aún no hay. Se despliega solo al fusionar en `main` (`.github/workflows/worker.yml`).
 
 ## Horario (hora de Madrid)
 
@@ -19,10 +19,10 @@ Una oferta se da por cerrada tras 3 lecturas seguidas sin verla (`MISSED_RUNS_TO
 ## Secretos
 
 - **Del repo:** `CLOUDFLARE_API_TOKEN` (token acotado de despliegue), `CLOUDFLARE_ACCOUNT_ID` y `AVISOS_CLAVE` (ver [avisos](avisos.md)).
-- **Del worker:** `GITHUB_TOKEN`, un token de grano fino solo para este repo con «Actions: read and write».
+- **Del worker:** `GITHUB_TOKEN`, un token de grano fino solo para este repo y el del PAG con «Actions: read and write», y `PAG_REPO` (`dueño/nombre`; sin él no se lanza la lectura del PAG).
 
   ```bash
-  cd worker && wrangler secret put GITHUB_TOKEN
+  cd worker && wrangler secret put GITHUB_TOKEN && wrangler secret put PAG_REPO
   ```
 
 ## Tests
