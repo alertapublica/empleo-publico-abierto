@@ -56,10 +56,11 @@ def tls_context() -> ssl.SSLContext:
 VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
 # Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker.
 # Una vez que un host falla directo, el resto de la lectura (el mismo Client) va ya por el Worker.
-# Universidades (sondeo, ronda 7, 2026-11-15): La Rioja da 429 a Actions y entra por el Worker; la UIB dio
+# Universidades (sondeo, ronda 7, 2026-11-15): La Rioja da 429 a Actions y entra por el Worker (aps; www, sin
+# probar desde Actions, por si acaso); la UIB dio
 # timeout una vez y la siguiente entró directa. La UEx (vrprofesorado, rrhhinvestigacion) da 403 a Actions, al
 # Worker y al hosting de Piensa, y 200 desde una IP doméstica: no hay respaldo que sirva.
-RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es"}
+RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es", "www.unirioja.es"}
 FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 

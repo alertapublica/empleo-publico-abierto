@@ -34,7 +34,8 @@ test("solo admite los orígenes de la lista, con su puerto y sin credenciales", 
   assert.ok(!permitido("https://u:p@rrhhcandidato.tragsa.es:8443/"));
   assert.ok(!permitido("no es una url"));
   for (const url of ["https://www.sepi.es/es/empleo-publico", "https://agenciaefe.es/empleo-efe-temporal/",
-    "https://www.agenciaefe.es/empleo-efe-indefinido/", "https://fundacion.unirioja.es/transparencia/ofertas-empleo"]) {
+    "https://www.agenciaefe.es/empleo-efe-indefinido/", "https://fundacion.unirioja.es/transparencia/ofertas-empleo",
+    "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/talento/"]) {
     assert.ok(permitido(url), url);
   }
   // sepi.es sin www no: la fuente no lo usa y desde el Worker da 522.

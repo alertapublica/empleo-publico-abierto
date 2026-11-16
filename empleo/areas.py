@@ -66,6 +66,7 @@ SOURCE_AREAS = {
     "uvigo": "investigacion",  # ídem: concursos de personal de investigación
     "usc": "investigacion",  # ídem: convocatorias de personal para proyectos de investigación
     "udc": "investigacion",  # ídem: contratación con cargo a proyectos (PCTI)
+    "unirioja": "investigacion",  # ídem: contratos con cargo a proyectos y de talento investigador
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
@@ -76,6 +77,7 @@ PROJECT_TITLES = {
     "ifapa": re.compile(r"^(.+?) · "),
     "uhu": re.compile(r"^(.+?) · "),
     "udc": re.compile(r"^(.+?) · "),  # «categoría · centro»; todas son contratos PCTI
+    "unirioja": re.compile(r"^(.+?) · "),
     "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
 }
 

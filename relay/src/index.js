@@ -23,6 +23,7 @@ export const ORIGENES = new Set([
   // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
   "https://rrhh.uib.cat",
   "https://aps.unirioja.es",
+  "https://www.unirioja.es",
 ]);
 const VENTANA_S = 120;
 const MAX_SALTOS = 5;

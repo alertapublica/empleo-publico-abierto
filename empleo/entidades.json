@@ -405,6 +405,11 @@
    ]
   },
   {
+   "id": "unirioja",
+   "nombre": "Universidad de La Rioja",
+   "alias": []
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [
