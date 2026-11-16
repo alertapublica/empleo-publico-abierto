@@ -11,8 +11,8 @@ los de la convocatoria.
 Las ofertas de las autoridades portuarias (`offer_type=107`) no dan fecha: sus bases dicen «veinte
 (20) días hábiles, a partir del día siguiente al de la publicación de esta convocatoria», sin decir
 cuándo ni dónde se publica, y el listado conserva las antiguas sin añadirles nada. Por eso son
-procesos sin plazo: el listado da puesto, autoridad portuaria y ficha, y el motor las pasa a «sin
-novedades» a los 30 días de verlas (`stale_after_days`). Las autoridades con fuente propia (OWN_SOURCE)
+procesos sin plazo («no consta el plazo de inscripción»): el listado da puesto, autoridad portuaria
+y ficha, y el motor las pasa a «sin novedades» a los 30 días de verlas (`stale_after_days`). Las autoridades con fuente propia (OWN_SOURCE)
 no se leen aquí: su portal da plazo, oferta y seguimiento, y saldrían dos veces.
 """
 from __future__ import annotations
@@ -139,7 +139,7 @@ class PuertosSource(Source):
             Announcement(
                 date="", process=f"{entry['title']} (Autoridad Portuaria: {entry['provider']})",
                 title="Aparece en el portal de Puertos del Estado", url=entry["url"],
-                access="libre", process_url=entry["url"], location=entry["provider"],
+                access="libre", process_url=entry["url"], location=entry["provider"], state="no_consta",
             )
             for entry in entries if not INTERNAL.search(entry["title"]) and entry["provider"] not in OWN_SOURCE
         ]

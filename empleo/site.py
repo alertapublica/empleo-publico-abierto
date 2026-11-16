@@ -453,8 +453,9 @@ def group_of_source(sources: dict, source_id: str) -> str:
     return getattr(source, "group", "") if source else ""
 
 
-def index_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
-    """Portada: las ofertas abiertas, menos las becas y las de investigación de su sección."""
+def index_page(open_offers: list[dict], today: date, checked: str, sources: dict, open_processes: int = 0) -> str:
+    """Portada: las ofertas abiertas, menos las becas y las de investigación de su sección. Si hay procesos
+    selectivos con la inscripción abierta (tasas de reposición…), que no van a la portada, un enlace a ellos."""
     grants = [saved_id(o) for o in open_offers if is_grant(o)]
     jobs = [o for o in open_offers if not is_grant(o)]
     hidden = [o for o in jobs if research_only(o, group_of_source(sources, o["source"]))]
@@ -462,8 +463,11 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
     research = sum(group_of_source(sources, o["source"]) in RESEARCH_GROUPS for o in jobs)
     research_sources = [s.id for s in sources.values() if getattr(s, "group", "") in RESEARCH_GROUPS]
     empty = "" if front else '<p class="nota">En este momento no hay ofertas abiertas.</p>'
+    processes = ("1 proceso selectivo" if open_processes == 1 else f"{open_processes} procesos selectivos")
+    processes = (f'<p class="nota">Hay <a href="anuncios/?situacion=abierto">{processes} con la inscripción '
+                 f'abierta</a>.</p>' if open_processes else "")
     body = f"""<h1 class="sr-only">Ofertas de empleo abiertas</h1>
-{empty}
+{processes}{empty}
 {offer_list(front, today, sources, "", ("investigacion/", "las ofertas de investigación") if research else None,
             other_ids=[saved_id(o) for o in hidden], other_sources=research_sources, open_ids=grants)}"""
     return page("Empleo en empresas y entidades públicas", body, "", "index", checked=checked)
@@ -1075,7 +1079,7 @@ def process_card(notices: list[dict], names: dict, today: date, root: str, feed:
         "title": " ".join(n["title"] for n in notices),
         "company": names.get(latest["source"], ""), "family": latest["process"],
     })
-    return f"""<li data-texto="{e(search)}" data-organismo="{e(latest['source'])}" data-tipo="{e(via_of(latest))}" data-acceso="{e(latest.get('access') or '')}" data-contrato="{e(latest.get('contract') or '')}" data-sistema="{e(latest.get('system') or '')}" data-guardar="p:{process_id(notices)}">
+    return f"""<li data-texto="{e(search)}" data-organismo="{e(latest['source'])}" data-situacion="{e(state)}" data-tipo="{e(via_of(latest))}" data-acceso="{e(latest.get('access') or '')}" data-contrato="{e(latest.get('contract') or '')}" data-sistema="{e(latest.get('system') or '')}" data-guardar="p:{process_id(notices)}">
 <h{level}>{heading}</h{level}>
 <p class="dato">{e(' · '.join(f for f in facts if f))}</p>
 {status}
@@ -1111,6 +1115,12 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
     ])
     more_button = FILTERS_BUTTON if more else ""
     more_filters = f'<div class="panel rejilla" id="mas-filtros" hidden>{more}</div>' if more else ""
+    # Situación (inscripción abierta, en curso…): solo si hay más de una entre los procesos en marcha.
+    states = {n.get("state", "curso") for n in latest}
+    state_options = "".join(f'<option value="{s}">{e(STATES[s])}</option>' for s in LIVE_STATES if s in states)
+    state_filter = (f'<div class="campo en-linea"><label for="situacion">Situación</label>\n'
+                    f'<select id="situacion" name="situacion"><option value="">Todas</option>{state_options}</select></div>\n'
+                    if len(states) > 1 else "")
     notices = sum(len(g) for g in live)
     process_word = "1 proceso en marcha" if len(live) == 1 else f"{len(live)} procesos en marcha"
     notice_word = "1 comunicado" if notices == 1 else f"{notices} comunicados"
@@ -1126,7 +1136,7 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
 <div class="pastillas">
 <div class="campo en-linea"><label for="organismo">Organismo</label>
 <select id="organismo" name="organismo"><option value="">Todos</option>{options((n['source'] for n in latest), names)}</select></div>
-<div class="campo en-linea"><label for="tipo">Tipo de proceso</label>
+{state_filter}<div class="campo en-linea"><label for="tipo">Tipo de proceso</label>
 <select id="tipo" name="tipo"><option value="">Todos</option>{options((via_of(n) for n in latest), PROCESS_TYPES)}</select></div>
 {saved_filter("p", "Guardados")}{more_button}<button type="reset" class="quitar">Quitar filtros</button></div>
 {more_filters}
@@ -1551,7 +1561,7 @@ PROCESS_FIELDS = [
     (("nombre",), "Nombre literal del proceso."),
     (("tipo",), "Tipo de proceso (<code>tipos_proceso</code> en listas.json). Siempre tiene valor: <code>otro</code> es un proceso selectivo sin un tipo más concreto."),
     (("acceso", "tipo_contrato", "sistema"), "Tipo de acceso, tipo de contrato y sistema de selección (<code>accesos</code>, <code>tipos_contrato</code> y <code>sistemas</code> en listas.json), solo si el organismo los indica."),
-    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code> y los <code>curso</code>."),
+    (("estado",), "Situación del proceso (<code>estados_proceso</code> en listas.json): <code>abierto</code>, con la inscripción abierta; <code>curso</code>, en curso, sin inscripción abierta; <code>no_consta</code>, si el organismo no publica cuándo acaba la inscripción (puede estar abierta o no); <code>finalizado</code>, si el organismo lo da por concluido; <code>retirado</code>, si ya no figura entre los procesos activos de la web oficial y no consta cómo concluyó (no significa que se haya anulado). Los procesos de las autoridades portuarias (organismo <code>puertos</code>), que no indican cuándo acaba el plazo, están en <code>no_consta</code> y pasan a <code>retirado</code> a los 30 días de detectarse. Los procesos en marcha son los <code>abierto</code>, los <code>curso</code> y los <code>no_consta</code>."),
     (("ubicacion", "ccaa", "provincia"), "Ubicación literal del proceso, si el organismo la da (un centro de trabajo o, en las autoridades portuarias, el nombre de la autoridad), y códigos del INE de comunidad autónoma y provincia, solo cuando el texto no deja dudas. No se asigna municipio: un centro o una autoridad portuaria no fijan una localidad."),
     (("plazo_fin", "plazo_hora", "url_inscripcion"), "Fin del plazo (<code>AAAA-MM-DD</code>), hora de cierre (<code>HH:MM</code>, hora peninsular) y enlace de inscripción, solo mientras la inscripción está abierta. Sin hora, el último día cuenta completo."),
     (("url",), "Página o documento oficial del proceso."),
@@ -1888,11 +1898,12 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     def put(path: str, html: str) -> None:
         write(out / path / "index.html", head_url(html, base_url, path))
 
-    put("", index_page(open_offers, today, checked, sources))
-    put("investigacion/", research_page(open_offers, today, checked, sources))
-    put("becas/", grants_page(open_offers, today, checked, sources))
     groups = process_groups(announcements)
     live = [g for g in groups if is_live(g)]
+    put("", index_page(open_offers, today, checked, sources,
+                       open_processes=sum(g[0].get("state") == "abierto" for g in live)))
+    put("investigacion/", research_page(open_offers, today, checked, sources))
+    put("becas/", grants_page(open_offers, today, checked, sources))
     running = {s.id: sum(g[0]["source"] == s.id for g in live) for s in ACTIVE}
     put("organismos/", organisms_page(sources, open_offers, checked, running, TELEGRAM_BOT))
     for source in ACTIVE:

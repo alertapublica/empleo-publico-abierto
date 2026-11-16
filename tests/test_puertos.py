@@ -109,7 +109,7 @@ class AutoridadesPortuarias(unittest.TestCase):
         first = items[0]
         self.assertEqual(first.process, "Responsable de Operaciones y Servicios Portuarios (Digitalización) "
                                         "(Autoridad Portuaria: Bahía de Algeciras)")
-        self.assertEqual((first.date, first.state, first.deadline), ("", "curso", None))
+        self.assertEqual((first.date, first.state, first.deadline), ("", "no_consta", None))
         self.assertEqual(first.location, "Bahía de Algeciras")  # la autoridad, tal cual
         self.assertEqual(first.process_url, BASE + "responsable-de-operaciones-y-servicios-portuarios-digitalizacion")
         self.assertFalse(any("Intraportuaria" in item.process for item in items))

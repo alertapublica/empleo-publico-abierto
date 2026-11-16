@@ -68,10 +68,12 @@ SYSTEMS = {
 STATES = {
     "abierto": "Inscripción abierta",
     "curso": "En curso",
+    # La fuente no publica cuándo acaba la inscripción (autoridades portuarias): puede estar abierta o no.
+    "no_consta": "No consta el plazo de inscripción",
     "finalizado": "Finalizado",
     "retirado": "Sin novedades en la web oficial",
 }
-LIVE_STATES = ("abierto", "curso")
+LIVE_STATES = ("abierto", "curso", "no_consta")
 
 
 def process_type(name: str) -> str:

@@ -21,6 +21,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from . import store
+from .model import LIVE_STATES
 from .text import slug
 
 TABLE = Path(__file__).with_name("entidades.json")
@@ -70,7 +71,7 @@ def _records(data: Path) -> list[dict]:
         for notice in store.load(folder / "announcements.json", {}).values():
             state = notice.get("state")
             found.append({"source": source, "kind": "proceso", "title": notice["process"], "state": state,
-                          "live": state in ("abierto", "curso"), "url": notice.get("process_url"),
+                          "live": state in LIVE_STATES, "url": notice.get("process_url"),
                           "convocante": convocante(notice, source, "procesos")})
     return found
 

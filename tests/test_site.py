@@ -963,6 +963,19 @@ class Site(unittest.TestCase):
         self.assertIn("Inscripción abierta", html)
         self.assertIn("https://plataforma.example/entrar", html)
 
+    def test_filtro_de_situacion_de_los_procesos_en_marcha(self):
+        html = self.read("anuncios/index.html")
+        self.assertIn('<select id="situacion" name="situacion"><option value="">Todas</option>'
+                      '<option value="abierto">Inscripción abierta</option><option value="curso">En curso</option>'
+                      '</select>', html)  # solo las que hay, y nunca las de procesos terminados
+        self.assertIn('data-situacion="abierto"', html)
+        self.assertIn('data-situacion="curso"', html)
+
+    def test_portada_enlaza_los_procesos_con_inscripcion_abierta(self):
+        self.assertIn('Hay <a href="anuncios/?situacion=abierto">1 proceso selectivo con la inscripción abierta</a>.',
+                      self.read("index.html"))
+        self.assertNotIn("situacion=abierto", site.index_page([], NOW.date(), "ahora", {}))
+
     def test_filtros_de_anuncios_solo_con_valores_reales(self):
         html = self.read("anuncios/index.html")
         for campo in ('id="acceso"', 'id="sistema"', 'id="contrato"', 'data-acceso="libre"', 'data-sistema="concurso-oposicion"'):
