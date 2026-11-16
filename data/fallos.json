@@ -1,1 +1,17 @@
-{}
+{
+ "fgv": {
+  "desde": "2026-11-16T15:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "idival": {
+  "desde": "2026-11-16T15:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepi": {
+  "desde": "2026-11-16T15:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ }
+}
