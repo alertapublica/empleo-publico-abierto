@@ -1,14 +1,31 @@
 """Cliente HTTP y lectura: intermedios, pausas, grupos por servidor, hilos y plazos."""
 import contextlib
 import io
+import json
 import ssl
+import tempfile
 import threading
 import time
 import unittest
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from unittest import mock
 
 from empleo import http, ingest, sources
 from empleo.model import ListedOffer
+
+
+_tmp = tempfile.TemporaryDirectory()
+_failures = mock.patch.object(ingest, "FAILURES", Path(_tmp.name) / "fallos.json")
+
+
+def setUpModule():  # main() anota los fallos: nunca en data/ del repositorio
+    _failures.start()
+
+
+def tearDownModule():
+    _failures.stop()
+    _tmp.cleanup()
 
 
 def decoded(pem):
@@ -73,10 +90,11 @@ class Registro(unittest.TestCase):
         with mock.patch.object(ingest, "ACTIVE", sources), mock.patch.object(ingest, "run_source", run), \
                 mock.patch.dict("os.environ", {"INGESTA_HILOS": "1"}), \
                 contextlib.redirect_stdout(out), contextlib.redirect_stderr(io.StringIO()):
-            self.assertEqual(ingest.main(), 1)
+            self.assertEqual(ingest.main(), 0)  # un fallo suelto no pone la lectura en rojo
         expected = ["INICIO rota", r"FIN rota error \d+ s, 2 peticiones, 1 fallidas",
                     "INICIO sana", r"FIN sana bien \d+ s, 2 peticiones, 0 fallidas",
-                    "RESUMEN 2 fuentes, 1 a la vez: 1 bien; error: rota"]
+                    "RESUMEN 2 fuentes, 1 a la vez: 1 bien; error: rota",
+                    r"FALLA rota desde \S+ \(1 lecturas seguidas\)"]
         lines = out.getvalue().splitlines()
         self.assertEqual(len(lines), len(expected), lines)
         for line, pattern in zip(lines, expected):
@@ -196,7 +214,7 @@ class Hilos(unittest.TestCase):
         out = io.StringIO()
         with mock.patch.object(ingest, "ACTIVE", sources), mock.patch.object(ingest, "run_source", run), \
                 contextlib.redirect_stdout(out), contextlib.redirect_stderr(io.StringIO()):
-            self.assertEqual(ingest.main(), 1)
+            ingest.main()
         self.assertEqual(sorted(seen), ["otra", "sana"])
         self.assertRegex(out.getvalue(), r"FIN lenta sin tiempo \d+ s")
         self.assertIn(": 2 bien; sin tiempo: lenta", out.getvalue())
@@ -249,3 +267,54 @@ class AgenteDeNavegador(unittest.TestCase):
             sondeo.fetch(self.ULPGC)
             sondeo.fetch("https://www.uco.es/")
         self.assertEqual(seen, [http.AGENTE_NAVEGADOR, http.HEADERS["User-Agent"]])
+
+
+class Fallos(unittest.TestCase):
+    def setUp(self):
+        self.path = Path(self.enterContext(tempfile.TemporaryDirectory())) / "fallos.json"
+        self.enterContext(mock.patch.object(ingest, "ACTIVE", [fake("a"), fake("b"), fake("c")]))
+        self.t0 = datetime(2026, 11, 16, 7, 37, tzinfo=timezone.utc)
+
+    def test_cuenta_desde_el_primer_fallo_y_borra_al_leer_bien(self):
+        ingest.track_failures(self.path, {"a": "error", "b": "bien"}, self.t0)
+        failing = ingest.track_failures(self.path, {"a": "sin tiempo"}, self.t0 + timedelta(minutes=30))
+        self.assertEqual(failing, {"a": {"desde": "2026-11-16T07:37:00+00:00", "lecturas": 2,
+                                         "resultado": "sin tiempo"}})
+        self.assertEqual(ingest.track_failures(self.path, {"a": "bien"}, self.t0 + timedelta(hours=1)), {})
+        self.assertEqual(json.loads(self.path.read_text()), {})
+
+    def test_una_lectura_parcial_no_toca_las_demas_y_se_olvidan_las_retiradas(self):
+        self.path.write_text(json.dumps({"b": {"desde": "2026-11-16T05:00:00+00:00", "lecturas": 3},
+                                         "vieja": {"desde": "2026-11-01T05:00:00+00:00", "lecturas": 9}}))
+        self.assertEqual(ingest.track_failures(self.path, {"a": "bien"}, self.t0), {})
+        self.assertEqual(set(json.loads(self.path.read_text())), {"b"})
+
+    def test_rojo_solo_si_lleva_dos_horas_sin_leerse(self):
+        def run(source, *_):
+            raise RuntimeError("HTTP Error 522")
+
+        def main_at(when):
+            now = mock.Mock(wraps=datetime)
+            now.now.return_value = when
+            with mock.patch.object(ingest, "FAILURES", self.path), mock.patch.object(ingest, "datetime", now), \
+                    mock.patch.object(ingest, "ACTIVE", [fake("a")]), mock.patch.object(ingest, "run_source", run), \
+                    contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()) as err:
+                return ingest.main(), err.getvalue()
+
+        self.assertEqual(main_at(self.t0)[0], 0)
+        self.assertEqual(main_at(self.t0 + timedelta(hours=1, minutes=59))[0], 0)
+        code, err = main_at(self.t0 + timedelta(hours=2))
+        self.assertEqual(code, 1)
+        self.assertIn("ROJO: más de 2 h sin leer a", err)
+
+    def test_los_fallos_van_al_resumen_de_la_ejecucion(self):
+        summary = self.path.with_name("resumen.md")
+
+        def run(source, *_):
+            raise RuntimeError("caída")
+
+        with mock.patch.object(ingest, "FAILURES", self.path), mock.patch.object(ingest, "run_source", run), \
+                mock.patch.dict("os.environ", {"GITHUB_STEP_SUMMARY": str(summary)}), \
+                contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(ingest.main(["a"]), 0)
+        self.assertIn("- FALLA a desde ", summary.read_text())
