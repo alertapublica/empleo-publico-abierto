@@ -27,14 +27,17 @@ DEADLINE = re.compile(
     r"(\d{1,2})\s+de\s+(" + "|".join(MONTHS) + r")\s+de\s+(\d{4})", re.I)
 
 
-def pdf_text(data: bytes, what: str) -> str:
-    """Texto de todas las páginas, con los espacios normalizados."""
+def page_texts(data: bytes, what: str) -> list[str]:
+    """El texto de cada página, tal como sale (puede estar vacío: página escaneada)."""
     try:
-        pages = PdfReader(io.BytesIO(data)).pages
-        text = " ".join(page.extract_text() or "" for page in pages)
+        return [page.extract_text() or "" for page in PdfReader(io.BytesIO(data)).pages]
     except (PyPdfError, ValueError, OSError) as error:
         raise SourceLayoutError(f"{what}: el PDF no se puede leer ({error})") from error
-    text = re.sub(r"\s+", " ", text).strip()
+
+
+def pdf_text(data: bytes, what: str) -> str:
+    """Texto de todas las páginas, con los espacios normalizados."""
+    text = re.sub(r"\s+", " ", " ".join(page_texts(data, what))).strip()
     if not text:
         raise SourceLayoutError(f"{what}: el PDF no tiene texto")
     return text
