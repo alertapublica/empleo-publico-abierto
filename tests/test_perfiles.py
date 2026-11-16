@@ -77,6 +77,10 @@ class Reglas(unittest.TestCase):
         self.assertEqual(perfiles.matches(title, "ua"), ["tecnico"])
         self.assertEqual(perfiles.classify("Personal especialista para colaborar con el proyecto «X»", "ua"), "tecnico")
         self.assertEqual(perfiles.classify("Técnico Superior · Gestión de plagas para el investigador", "ifapa"), "tecnico")
+        # udc: «categoría · centro»; el colaborador de investigación es titulado sin doctorado
+        self.assertEqual(perfiles.matches("Colaborador/a de Investigación a tempo completo · CITIC", "udc"), ["tecnico"])
+        self.assertEqual(perfiles.classify("Investigador/a Contratado/a Doutor/a a tempo completo · CICA", "udc"),
+                         "investigador")
 
     def test_investigador_en_formacion_no_es_dudoso(self):
         for title in ("Personal investigador en formación para colaborar con el proyecto «X»",
