@@ -29,7 +29,9 @@ va tras el punto, con minúsculas fuera del paréntesis; el paréntesis, literal
 investigador y técnico · Clave AG424_II». La clave va a `code`. Otros formatos y el PTGAS: el literal con
 `humane_caps`. Plazas: «2 Plazas» del título o «- 5 plazas» del paréntesis.
 
-Identificador = slug de la ficha (Drupal añade «-1», «-2» a los repetidos). Sin municipio (León y Ponferrada).
+Identificador = número de nodo de Drupal, del `<link rel="shortlink" href="…/node/112604">` de la ficha: el
+slug de la dirección (al que Drupal añade «-1», «-2» si se repite) cambia si se renombra la página; el nodo,
+no. Sin municipio (León y Ponferrada).
 Fuera: PDI (profesorado), PTGAS funcionario, bolsas y procesos internos. Sondeo (Codex, encargo 53) y lectura
 puntual del 2026-11-16.
 """
@@ -66,6 +68,7 @@ POOL = re.compile(r"\bbolsas?\b", re.I)  # «Bolsa Sucesiva…» va a veces con 
 PLACES = re.compile(r"\b(\d+) plazas\b", re.I)
 UNTIL = re.compile(r"hasta las (\d{1,2})[:.](\d{2}) horas del día (\d{1,2}) de ([a-záéíóú]+) de (\d{4})", re.I)
 CALL_FILE = re.compile(r"^Convocatoria \((\d{2}/\d{2}/\d{4})\)$")
+NODE = re.compile(r"/node/(\d+)$")
 
 
 def _clean(text: str) -> str:
@@ -109,7 +112,7 @@ def parse_list(html: str) -> tuple[list[dict], str | None]:
         opens_on, deadline = _day(card, "Desde", title), _day(card, "- Hasta", title)
         if opens_on > deadline:
             raise SourceLayoutError(f"ULE: plazo al revés en «{title[:80]}» ({opens_on} > {deadline})")
-        rows.append({"ref": url.rstrip("/").rsplit("/", 1)[-1], "kind": kind, "access": access, "title": title,
+        rows.append({"slug": url.rstrip("/").rsplit("/", 1)[-1], "kind": kind, "access": access, "title": title,
                      "url": url, "opens_on": opens_on, "deadline": deadline})
     following = soup.select_one("nav.pager-nav a[rel=next]")
     return rows, urljoin(LIST, following["href"]) if following else None
@@ -147,6 +150,10 @@ def parse_ficha(html: str, deadline: str) -> dict:
     if title is None:
         raise SourceLayoutError("ULE: ficha sin título")
     title = _clean(title.get_text(" ")).removeprefix("Título").strip()
+    shortlink = soup.select_one("link[rel=shortlink][href]")
+    node = NODE.search(shortlink["href"]) if shortlink else None
+    if node is None:
+        raise SourceLayoutError(f"ULE: la ficha de «{title[:80]}» no trae su número de nodo (link rel=shortlink)")
     body = content.select_one(".field--name-body")
     files = content.select_one(".field--name-field-archivos-publicos")
     text = _clean(body.get_text(" ")) if body else ""
@@ -175,8 +182,8 @@ def parse_ficha(html: str, deadline: str) -> dict:
         parts.append(f"<p>Archivos públicos:</p><ul>{''.join(links)}</ul>")
     if not parts:
         raise SourceLayoutError(f"ULE: la ficha de «{title[:80]}» no trae cuerpo ni adjuntos")
-    return {"deadline_time": hours.pop() if hours else None, "published_on": min(published) if published else None,
-            "html": sanitize("".join(parts))}
+    return {"node": node.group(1), "deadline_time": hours.pop() if hours else None,
+            "published_on": min(published) if published else None, "html": sanitize("".join(parts))}
 
 
 class UnileonSource(Source):
@@ -202,17 +209,17 @@ class UnileonSource(Source):
             raise SourceLayoutError(f"ULE: más de {MAX_PAGES} páginas de convocatorias en {WINDOW_DAYS} días")
         offers, seen = [], set()
         for row in rows:
-            if (row["ref"] in seen or row["access"] != FREE or POOL.search(row["title"])
+            if (row["slug"] in seen or row["access"] != FREE or POOL.search(row["title"])
                 or deadline_passed(row["deadline"], None, now)):
                 continue
-            seen.add(row["ref"])
+            seen.add(row["slug"])
             ficha = parse_ficha(http.get(row["url"]), row["deadline"])
             if deadline_passed(row["deadline"], ficha["deadline_time"], now):
                 continue
-            self._fichas[row["ref"]] = ficha
+            self._fichas[ficha["node"]] = ficha
             found = labels(row)
             offers.append(ListedOffer(
-                ref=row["ref"], title=found["title"], company=COMPANY, url=row["url"], apply_url=row["url"],
+                ref=ficha["node"], title=found["title"], company=COMPANY, url=row["url"], apply_url=row["url"],
                 kind=None, positions=found["positions"], category=found["category"], code=found["code"],
                 source_title=found["source_title"], published_on=ficha["published_on"], opens_on=row["opens_on"],
                 deadline=row["deadline"], deadline_time=ficha["deadline_time"],

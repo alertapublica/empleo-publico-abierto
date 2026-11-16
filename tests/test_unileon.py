@@ -1,4 +1,5 @@
 import unittest
+import zlib
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -21,7 +22,7 @@ def at(year, month, day, hour=10, minute=0):
 
 class Http:
     """Primera página para cualquier URL del listado sin `page=1`; la ficha AG433 para la suya y la de PTGAS
-    (sin hora ni fecha en el cuerpo) para las demás."""
+    (sin hora ni fecha en el cuerpo, con un número de nodo distinto por URL) para las demás."""
 
     def __init__(self, page_1=PAGE_1, ficha=FICHA):
         self.asked, self.page_1, self.ficha = [], page_1, ficha
@@ -30,7 +31,9 @@ class Http:
         self.asked.append(url)
         if "?" in url:
             return PAGE_2 if "page=1" in url else self.page_1
-        return self.ficha if url.endswith(AG433) else PTGAS
+        if url.endswith(AG433):
+            return self.ficha
+        return PTGAS.replace("/node/111907", f"/node/{zlib.crc32(url.encode())}")  # un nodo por ficha
 
 
 def row(title, kind="Personal Investigador"):
@@ -43,7 +46,7 @@ class List(unittest.TestCase):
         self.assertEqual(len(rows), 20)
         self.assertIn("&page=1", following)
         self.assertTrue(following.startswith(unileon.LIST + "?"))
-        first = next(r for r in rows if r["ref"] == AG433)
+        first = next(r for r in rows if r["slug"] == AG433)
         self.assertEqual((first["kind"], first["access"], first["opens_on"], first["deadline"]),
                          ("Personal Investigador", "Libre", "2026-11-12", "2026-11-26"))
         self.assertEqual(first["url"], f"{unileon.LIST}/{AG433}")
@@ -108,7 +111,7 @@ class Labels(unittest.TestCase):
 class Ficha(unittest.TestCase):
     def test_hora_publicacion_y_adjuntos(self):
         ficha = unileon.parse_ficha(FICHA, "2026-11-26")
-        self.assertEqual((ficha["deadline_time"], ficha["published_on"]), ("12:00", "2026-11-12"))
+        self.assertEqual((ficha["node"], ficha["deadline_time"], ficha["published_on"]), ("112604", "12:00", "2026-11-12"))
         self.assertIn("hasta las 12:00 horas del día 26 de noviembre de 2026", ficha["html"])
         self.assertIn('<a href="https://script.google.com/', ficha["html"])
         self.assertIn('<li><a href="http://www.unileon.es/files/2026-11/convocatoria_ag433_20261112nw.pdf">'
@@ -126,6 +129,8 @@ class Ficha(unittest.TestCase):
             unileon.parse_ficha(FICHA, "2026-11-27")
         with self.assertRaisesRegex(SourceLayoutError, "ficha sin título"):
             unileon.parse_ficha("<html><body><p>Error</p></body></html>", "2026-11-26")
+        with self.assertRaisesRegex(SourceLayoutError, "número de nodo"):
+            unileon.parse_ficha(FICHA.replace('rel="shortlink"', 'rel="alternate"'), "2026-11-26")
 
 
 class Offers(unittest.TestCase):
@@ -134,12 +139,14 @@ class Offers(unittest.TestCase):
         source = unileon.UnileonSource(now=at(2026, 11, 16))
         [offer] = source.list_offers(http)
         self.assertEqual((offer.ref, offer.title, offer.code, offer.category, offer.kind),
-                         (AG433, "Personal técnico · Proyecto AG433", "AG433", "Personal técnico", None))
+                         ("112604", "Personal técnico · Proyecto AG433", "AG433", "Personal técnico", None))
         self.assertEqual((offer.published_on, offer.opens_on, offer.deadline, offer.deadline_time),
                          ("2026-11-12", "2026-11-12", "2026-11-26", "12:00"))
         self.assertEqual(offer.apply_url, offer.url)
         self.assertEqual(len(http.asked), 3)  # dos páginas y la ficha; bolsa y traslados abiertos, sin ficha
-        detail = source.fetch_detail(Http(page_1="sin uso"), offer)
+        cached = Http(page_1="sin uso")
+        detail = source.fetch_detail(cached, offer)
+        self.assertEqual(cached.asked, [])  # la ficha ya leída en list_offers no se vuelve a pedir
         self.assertEqual((detail.deadline_time, detail.sections[0]["title"]), ("12:00", "La convocatoria"))
         self.assertIn("Formulario de Solicitud", detail.sections[0]["html"])
 
@@ -151,7 +158,7 @@ class Offers(unittest.TestCase):
         # El 25/10: «Convocatoria Bolsa Sucesiva…» (22/10–28/10, acceso «Libre»), cinco plazas en plazo y cinco que
         # aún no han abierto (también salen)
         offers = unileon.UnileonSource(now=at(2026, 10, 25)).list_offers(Http())
-        self.assertEqual(len(offers), 10)
+        self.assertEqual(len({o.ref for o in offers}), 10)
         self.assertEqual(sum(o.opens_on > "2026-10-25" for o in offers), 5)
         self.assertFalse(any("bolsa" in o.title.lower() for o in offers))
         self.assertTrue(all(" · Proyecto " in o.title for o in offers))
