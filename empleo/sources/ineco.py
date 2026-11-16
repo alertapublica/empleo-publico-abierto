@@ -8,10 +8,13 @@ de relay/ y con agente de navegador da la página entera (comprobado el 16/11/20
   (el `ref`), «28942 - Técnico/a…» (código y título; a veces sin guion), «(PLANTILLA / OFERTA)» o
   «(BECA)», «Madrid, España» (o solo el país: «Costa Rica», «Otros Países») y la fecha de publicación.
   Ningún plazo: la oferta sigue abierta mientras esté en el listado.
-- La ficha no tiene URL propia (`?IdOferta=` no la abre): sale por postback, con todos los campos
-  ocultos del formulario (`__VIEWSTATE` en cientos de trozos) y la cookie de sesión. La respuesta trae
-  otra vez el listado y campos nuevos: el postback siguiente sale de ella, como en un navegador. El enlace
-  de cada oferta es el listado.
+- La ficha se abre con `Ofertas.aspx?Id_Oferta=<data_idOferta>`, con guion bajo (`?IdOferta=` no): es la
+  URL que el propio listado pone en la barra al abrir una ficha, y en GET y sin sesión el servidor la
+  devuelve con el listado debajo (comprobado con Chromium el 16/11/2026). Es el enlace de cada oferta.
+- Tras un centenar de fichas seguidas (primera lectura, 16/11/2026, entonces por postback), Imperva
+  contesta a todo con «Pardon Our Interruption» y un captcha, también al Worker. Por eso cada lectura
+  pide como mucho FICHAS_POR_LECTURA fichas (las pendientes, en las siguientes) y, al primer captcha,
+  deja las demás.
 
 Becas y ofertas fuera de España se leen como las demás; la web no las saca en la portada (site.off_front).
 
@@ -65,9 +68,10 @@ NAMES = {"TRO": "Tasa de reposición ordinaria", "TRE": "Tasa de reposición esp
 
 EPRESELEC = "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
 TOTAL = re.compile(r"Total ofertas:\s*(\d+)")
-ROW = re.compile(r"^ctl00_CPH_Body_rptVacancies_(ctl\d+)_lbMostrarOferta$")
 PUBLISHED = re.compile(r"^(\d{1,2}) de ([a-záéíóú]+),\s*(\d{4})$", re.I)
 OFFER_TYPES = {"PLANTILLA / OFERTA": None, "BECA": "beca"}
+FICHAS_POR_LECTURA = 20
+IMPERVA = "Pardon Our Interruption"
 # Apartados de la ficha, en su orden: id del `span` y título.
 DETAIL_SECTIONS = (("lCentroOficina", "Oficina"), ("lDescripcionEmpresa", "Descripción"),
                    ("lFunciones", "Funciones"), ("lRequisitos", "Requisitos"), ("lSeOfrece", "Se ofrece"))
@@ -213,18 +217,8 @@ def parse_page(html: str, page: str, today: date) -> list[Announcement]:
     return items
 
 
-def postback_form(soup: BeautifulSoup) -> dict:
-    """Campos ocultos del formulario y fila de cada oferta (`data_idOferta` → `ctlNN`) para el postback."""
-    fields = {node["name"]: node.get("value", "") for node in soup.select("input[type=hidden][name]")}
-    rows = {}
-    for link in soup.select("a[data_idoferta]"):
-        found = ROW.match(link.get("id", ""))
-        if not found:
-            raise SourceLayoutError(f"Ineco (ePreselec): fila de oferta sin postback: {link.get('id')!r}")
-        rows[link["data_idoferta"]] = found.group(1)
-    if "__VIEWSTATE" not in fields:
-        raise SourceLayoutError("Ineco (ePreselec): formulario sin __VIEWSTATE")
-    return {"fields": fields, "rows": rows}
+def offer_url(ref: str) -> str:
+    return f"{EPRESELEC}?Id_Oferta={ref}"
 
 
 def _published(text: str) -> str:
@@ -235,8 +229,8 @@ def _published(text: str) -> str:
     return day.isoformat()
 
 
-def parse_list(html: str, company: str) -> tuple[list[ListedOffer], dict]:
-    """Ofertas del listado de ePreselec y el formulario para pedir sus fichas."""
+def parse_list(html: str, company: str) -> list[ListedOffer]:
+    """Ofertas del listado de ePreselec."""
     soup = BeautifulSoup(html, "html.parser")
     total = TOTAL.search(_text(soup.select_one(".total-vacancies") or soup))
     if not total:
@@ -250,15 +244,16 @@ def parse_list(html: str, company: str) -> tuple[list[ListedOffer], dict]:
         if kind_text not in OFFER_TYPES:
             raise SourceLayoutError(f"Ineco (ePreselec): tipo de oferta desconocido «{kind_text}»")
         place = _text(parts["provincia"])
+        ref = link["data_idoferta"]
         offers.append(ListedOffer(
-            ref=link["data_idoferta"], title=_text(parts["titulo"]), company=company,
-            url=EPRESELEC, apply_url=EPRESELEC, kind=OFFER_TYPES[kind_text],
+            ref=ref, title=_text(parts["titulo"]), company=company,
+            url=offer_url(ref), apply_url=offer_url(ref), kind=OFFER_TYPES[kind_text],
             published_on=_published(_text(parts["fecha"])),
             country=place.rpartition(",")[2].strip(),
         ))
     if len(offers) != int(total.group(1)):
         raise SourceLayoutError(f"Ineco (ePreselec): {len(offers)} ofertas y el total dice {total.group(1)}")
-    return offers, postback_form(soup)
+    return offers
 
 
 def _span(soup: BeautifulSoup, name: str):
@@ -288,30 +283,30 @@ class InecoSource(Source):
     name = "Ineco"
     homepage = "https://www.ineco.com/ineco/talento/ofertas-de-empleo-publico"
     title_code = re.compile(r"(?P<code>\d{5})\s*-?\s*(?P<title>\S.*)")
+    delay = 5.0  # fichas pesadas (el listado entero cada vez) tras Imperva: sin prisa
 
     def __init__(self):
-        self._form: dict | None = None  # formulario de la última página de ePreselec, para el postback
+        self._fichas = 0  # fichas pedidas en esta lectura
+        self._blocked = False  # Imperva ya ha pedido captcha en esta lectura
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
-        offers, self._form = parse_list(http.get(EPRESELEC), self.name)
-        return offers
+        self._fichas, self._blocked = 0, False
+        return parse_list(http.get(EPRESELEC), self.name)
+
+    def _page(self, html: str) -> BeautifulSoup:
+        if IMPERVA in html:
+            self._blocked = True
+            raise SourceLayoutError("Ineco (ePreselec): captcha de Imperva; las fichas que faltan, en otra lectura")
+        return BeautifulSoup(html, "html.parser")
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
-        for attempt in range(2):
-            if self._form is None or attempt:  # sin formulario, o la respuesta no era la ficha: listado nuevo
-                self._form = postback_form(BeautifulSoup(http.get(EPRESELEC), "html.parser"))
-            row = self._form["rows"].get(offer.ref)
-            if row is None:
-                return None  # ya no está en el listado
-            soup = BeautifulSoup(http.post(EPRESELEC, {
-                **self._form["fields"],
-                "__EVENTTARGET": f"ctl00$CPH_Body$rptVacancies${row}$lbMostrarOferta", "__EVENTARGUMENT": "",
-            }), "html.parser")
-            detail = parse_detail(soup, offer.ref)
-            if detail is not None:
-                self._form = postback_form(soup)
-                return detail
-        raise SourceLayoutError(f"Ineco (ePreselec): el postback no devuelve la ficha {offer.ref}")
+        if self._blocked or self._fichas >= FICHAS_POR_LECTURA:
+            return None  # sigue pendiente: se lee en la lectura siguiente
+        self._fichas += 1
+        detail = parse_detail(self._page(http.get(offer_url(offer.ref))), offer.ref)
+        if detail is None:
+            raise SourceLayoutError(f"Ineco (ePreselec): ?Id_Oferta= no devuelve la ficha {offer.ref}")
+        return detail
 
     def list_announcements(self, http: Client, now: datetime | None = None) -> list[Announcement]:
         today = (now or datetime.now(MADRID)).astimezone(MADRID).date()
