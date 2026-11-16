@@ -302,7 +302,7 @@
  "138": {
   "apply_url": "https://iisgm.com/ofertas-de-empleo/138/tecnico-a-de-laboratorio-ref-111-2026",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T15:07:28+00:00",
   "code": null,
   "company": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
   "contract": null,
@@ -318,7 +318,7 @@
   "kind": null,
   "listed_deadline": "2026-11-25",
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": null,
@@ -346,7 +346,7 @@
   ],
   "source": "iisgm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "TÉCNICO/A DE LABORATORIO REF. 111_2026",
   "url": "https://iisgm.com/ofertas-de-empleo/138/tecnico-a-de-laboratorio-ref-111-2026"
  }

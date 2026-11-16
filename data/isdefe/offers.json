@@ -1225,5 +1225,46 @@
   "status": "open",
   "title": "Ingeniero/a - Mantenimiento de Helicópteros",
   "url": "https://seleccionisdefe.es/convocatoria-2641"
+ },
+ "2642": {
+  "apply_url": "https://seleccionisdefe.es/registro-2642",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00381 (2)",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "deadline": "2026-11-20",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T15:07:28+00:00",
+  "id": "isdefe:2642",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-20",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-16",
+  "ref": "2642",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a Ingeniero/a de sistemas de información logísticos</p><p><strong>Titulaciones </strong></p><p>Titulación STEM</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>Apoyo en la gestión del ciclo de vida del sistema de información de mantenimiento e ingeniería.</li>\n<li>Recopilación de necesidades de usuario y traducción a requisitos funcionales o historias de usuario.</li>\n<li>Gestión del backlog de requisitos.</li>\n<li>Análisis funcional de incidencias, evolutivos y mejoras.</li>\n<li>Evaluación de impacto funcional y operativo de cambios.</li>\n<li>Ejecución de pruebas funcionales (testing) de nuevos desarrollos.</li>\n<li>Estudio y optimización de procesos logísticos (mantenimiento e ingeniería).</li>\n<li>Participación en implantaciones del sistema.</li>\n<li>Elaboración de documentación funcional y de procesos.</li>\n<li>Apoyo técnico en la gestión del mantenimiento e ingeniería del ciclo de vida dentro del sistema de información.</li>\n<li>Análisis de necesidades de ingeniería RAMS.</li>\n<li>Validación y carga de informes de ejecución de mantenimiento en varadas e inmovilizaciones.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Entre 5 y 12 años</p><ul>\n<li>Análisis funcional de sistemas de información</li>\n<li>Sistemas de gestión del mantenimiento (GMAO/EAM)</li>\n<li>Gestión de requisitos</li>\n<li>Testing funcional</li>\n<li>Procesos logísticos o de mantenimientos.</li>\n</ul><p><strong>Conocimientos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Gestión de requisitos (metodologías Agile / Scrum o similar)    </li>\n<li>Elaboración de:\r\n\t<ul>\n<li>Requisitos funcionales</li>\n<li>Historias de usuario  </li>\n<li>Casos de prueba</li>\n</ul>\n</li>\n<li>Modelado básico de procesos (BPMN o equivalente)</li>\n<li>Uso de herramientas ALM (Jira, Azure DevOps o similares)</li>\n<li>Ofimática avanzada</li>\n</ul><p><strong>Conocimientos valorables:</strong></p><ul>\n<li>Conocimientos de apoyo logístico, en particular de: \r\n\t<ul>\n<li>Gestión de la configuración</li>\n<li>Material sujeto a control unitario</li>\n<li>Procesos de certificación técnica en entornos regulados (aeronáutica, submarinos, equipos a presión u otros sistemas críticos)</li>\n</ul>\n</li>\n</ul><p><strong>Inglés valorable 700 TOEIC</strong></p><p><strong>SE OFRECE CONTRATO INDEFINIDO</strong><br/>\r\n </p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de sistemas de información logísticos (2026-T00381) (2)",
+  "status": "open",
+  "title": "Ingeniero/a de sistemas de información logísticos",
+  "url": "https://seleccionisdefe.es/convocatoria-2642"
  }
 }
