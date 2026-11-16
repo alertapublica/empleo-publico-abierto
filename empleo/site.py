@@ -22,8 +22,9 @@ from .sources import ACTIVE, PLANNED
 from .text import humane_caps
 
 ASSETS = Path(__file__).parent / "assets"
-SITE_NAME = "Empleo en Empresas Públicas"
-TAGLINE = "Ofertas de empleo de las empresas y entidades del sector público, reunidas en un único portal"
+SITE_NAME = "Empleo Público Abierto"
+TAGLINE = ("Ofertas de empleo de empresas, fundaciones, centros de investigación y universidades del sector "
+           "público. No incluye oposiciones de las Administraciones")
 REPO = "https://github.com/alertapublica/empleo-publico-abierto"
 # Titular del portal y responsable de los datos del bot (LSSI art. 10, RGPD art. 13).
 TITULAR = "Voceiro - JJAA"
@@ -62,10 +63,10 @@ NAV = [
     ("organismos", "organismos/", "Organismos"),
     ("avisos", "avisos/", "Avisos"),
     ("acerca", "acerca/", "Acerca de"),
-    ("historico", "historico/", "Histórico"),
 ]
-# En el pie, y enlazada también desde el diálogo de apariencia.
+# En el pie. Accesibilidad se enlaza también desde el diálogo de apariencia.
 FOOTER_NAV = [
+    ("historico", "historico/", "Histórico"),
     ("accesibilidad", "accesibilidad/", "Accesibilidad"),
     ("datos", "datos/", "Datos abiertos"),
 ]
@@ -251,7 +252,7 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 <a class="salto" href="#contenido">Saltar al contenido</a>
 <header class="sitio">
 <div class="ancho cab">
-<a class="marca" href="{root}"><img src="{root}assets/icono.svg" alt="" width="28" height="28">{SITE_NAME}</a>
+<a class="marca" href="{root}"><img src="{root}assets/icono.svg" alt="" width="28" height="28"><span class="marca-texto">{SITE_NAME}</span></a>
 <div class="cab-acciones">
 {SETTINGS_BUTTON}
 <button type="button" id="btn-menu" class="btn-cab" hidden aria-expanded="false" aria-controls="nav-principal">Menú</button>
@@ -419,14 +420,11 @@ def index_page(open_offers: list[dict], today: date, checked: str, sources: dict
     research = sum(group_of_source(sources, o["source"]) in RESEARCH_GROUPS for o in open_offers)
     research_sources = [s.id for s in sources.values() if getattr(s, "group", "") in RESEARCH_GROUPS]
     empty = "" if front else '<p class="nota">En este momento no hay ofertas abiertas.</p>'
-    section = (f'<p class="nota">Las ofertas de los centros de investigación y las universidades tienen su propia '
-               f'sección: <a href="investigacion/">Investigación</a>, con {open_count(research)}.</p>\n'
-               if research else "")
     body = f"""<h1 class="sr-only">Ofertas de empleo abiertas</h1>
 {empty}
 {offer_list(front, today, sources, "", ("investigacion/", "las ofertas de investigación") if research else None,
-            note=section, other_ids=[saved_id(o) for o in hidden], other_sources=research_sources)}"""
-    return page(SITE_NAME, body, "", "index", checked=checked)
+            other_ids=[saved_id(o) for o in hidden], other_sources=research_sources)}"""
+    return page("Empleo en empresas y entidades públicas", body, "", "index", checked=checked)
 
 
 def research_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
@@ -436,7 +434,7 @@ def research_page(open_offers: list[dict], today: date, checked: str, sources: d
     other_sources = [s.id for s in sources.values() if getattr(s, "group", "") not in RESEARCH_GROUPS]
     empty = "" if found else '<p class="nota">En este momento no hay ofertas abiertas de investigación.</p>'
     body = f"""<h1>Investigación</h1>
-<p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) aparecen también en <a href="../">Ofertas</a>.</p>
+<p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. No incluye las plazas de profesorado universitario. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) aparecen también en <a href="../">Ofertas</a>.</p>
 {empty}
 {offer_list(found, today, sources, "../", ("../", "el resto de ofertas"), companies=False, profiles=True,
             other_ids=front_only, other_sources=other_sources)}"""
@@ -446,12 +444,12 @@ def research_page(open_offers: list[dict], today: date, checked: str, sources: d
 
 
 def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
-               others: tuple[str, str] | None = None, companies: bool = True, note: str = "", profiles: bool = False,
+               others: tuple[str, str] | None = None, companies: bool = True, profiles: bool = False,
                other_ids: list[str] = (), other_sources: list[str] = ()) -> str:
     """Buscador, filtros y lista de ofertas, de la más reciente a la más antigua. `others`: la otra lista
     (dirección y texto del enlace), donde se propone la búsqueda si no da resultados; `other_ids`, las
     ofertas abiertas que solo están allí (Guardadas no las da por cerradas) y `other_sources`, los
-    organismos que se buscan allí (`?organismo=`); `note`, bajo el recuento."""
+    organismos que se buscan allí (`?organismo=`)."""
     ordered = sorted(
         open_offers,
         key=lambda o: (o.get("published_on") or o["first_seen"][:10]),
@@ -487,7 +485,7 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
             f'<select id="grupo" name="grupo"><option value="">Todos</option>{choices}</select></div>\n'
         ) + organism_filter
     company_filter = (
-        '<div class="campo"><label for="empresa">Empresa</label>\n'
+        '<div class="campo"><label for="empresa">Entidad</label>\n'
         f'<select id="empresa" name="empresa"><option value="">Todas</option>{options(o.get("company") for o in open_offers)}</select></div>\n'
     ) if companies else ""
     other = (f' data-otras="{e(others[0])}" data-otras-texto="{e(others[1])}"'
@@ -502,7 +500,7 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
     )
     return f"""<noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa o suscribirse a los <a href="{root}avisos/">avisos por comunidad autónoma</a>.</p></noscript>
 <form id="filtros" class="filtros" role="search" aria-label="Buscar ofertas" data-procesos="{root}anuncios/"{other} hidden>
-{search_bar("Buscar ofertas por palabra", "Puesto, empresa o localidad")}
+{search_bar("Buscar ofertas por palabra", "Puesto, entidad o localidad")}
 <div class="pastillas">
 {FILTERS_BUTTON}
 <label class="pastilla"><input type="checkbox" name="pronto" value="1"> Cierran en {SOON_DAYS} días</label>
@@ -517,14 +515,14 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
 {company_filter}{organism_filter}</div>
 {remote_hint}</form>
 {results_bar(f"{open_count(len(open_offers))}.", reset=True)}
-{note}<ol class="ofertas" id="lista-ofertas"{elsewhere}>
+<ol class="ofertas" id="lista-ofertas"{elsewhere}>
 {cards}
 </ol>"""
 
 
 ORDER_OPTIONS = (
     '<option value="reciente">Más recientes</option><option value="plazo">Plazo más próximo</option>'
-    '<option value="empresa">Empresa (A-Z)</option>'
+    '<option value="empresa">Entidad (A-Z)</option>'
 )
 # Abre y cierra el panel de filtros (filtros.js); el número de filtros activos va en n-filtros.
 FILTERS_BUTTON = ('<button type="button" class="pastilla" id="btn-filtros" aria-expanded="false" '
@@ -719,7 +717,7 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
     root = "../../"
     closed = offer["status"] == "closed"
     rows = [
-        ("Empresa", e(offer.get("company") or "No consta")),
+        ("Entidad", e(offer.get("company") or "No consta")),
         ("Plazas", e(str(offer.get("positions") or "No consta"))),
         ("Ubicación", e(where(offer))),
         ("Comunidad autónoma", e(offer.get("region") or UNKNOWN)),
@@ -895,7 +893,7 @@ def organisms_page(sources: dict, open_offers: list[dict], checked: str, process
 {planned_html}<script src="../assets/organismos.js" defer></script>"""
     return page("Organismos", body, "../", "organismos", checked=checked,
                 description="Empresas, fundaciones, centros de investigación y universidades del sector público cuyas ofertas "
-                            "de empleo reúne este portal.")
+                            "de empleo recoge este portal.")
 
 
 def organism_page(source, open_offers: list[dict], today: date, checked: str,
@@ -1074,7 +1072,7 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
 </ol>
 {closed_link}"""
     return page("Anuncios de procesos", body, "../", "anuncios", checked=checked,
-                description="Procesos selectivos en marcha en las empresas y entidades del sector público, "
+                description="Procesos selectivos en marcha de los organismos incluidos en este portal, "
                             "con sus comunicados por fases.")
 
 
@@ -1092,7 +1090,7 @@ def closed_processes_page(items: list[dict], checked: str, sources: dict, today:
 {cards}
 </ol>"""
     return page("Procesos finalizados", body, "../../", "historico", checked=checked,
-                description="Procesos selectivos ya finalizados de las empresas y entidades del sector público.")
+                description="Procesos selectivos finalizados o sin novedades de los organismos incluidos en este portal.")
 
 
 def history_page(closed: list[dict], checked: str, closed_processes: int = 0) -> str:
@@ -1107,9 +1105,9 @@ def history_page(closed: list[dict], checked: str, closed_processes: int = 0) ->
     empty = "" if closed else '<p class="nota">Aún no hay ofertas cerradas. Se recogen desde el 7 de noviembre de 2026.</p>'
     search = f"""<noscript><p class="nota">El buscador requiere JavaScript. Sin él, puede consultar la lista completa.</p></noscript>
 <form id="filtros" class="filtros" role="search" aria-label="Buscar en el histórico" hidden>
-{search_bar("Buscar ofertas cerradas por palabra", "Puesto, empresa o localidad")}
+{search_bar("Buscar ofertas cerradas por palabra", "Puesto, entidad o localidad")}
 <div class="pastillas">
-<div class="campo en-linea"><label for="empresa">Empresa</label>
+<div class="campo en-linea"><label for="empresa">Entidad</label>
 <select id="empresa" name="empresa"><option value="">Todas</option>{options(o.get('company') for o in closed)}</select></div>
 <button type="reset" class="quitar">Quitar filtros</button></div>
 </form>
@@ -1127,7 +1125,7 @@ def history_page(closed: list[dict], checked: str, closed_processes: int = 0) ->
 {rows}
 </ol>"""
     return page("Histórico", body, "../", "historico", checked=checked,
-                description="Ofertas de empleo ya cerradas de las empresas y entidades del sector público.")
+                description="Ofertas de empleo cerradas de los organismos incluidos en este portal.")
 
 
 COPY_BUTTON = ('<button type="button" class="copiar" hidden>Copiar'
@@ -1259,11 +1257,11 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <p>Las webs oficiales se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Cada lista incluye lo siguiente:</p>
 <ul>
 <li>«Todas las novedades» y las listas por organismo incluyen las ofertas y los anuncios de procesos.</li>
-<li>Las listas por comunidad autónoma, por área, de teletrabajo y por empresa incluyen solo ofertas.</li>
+<li>Las listas por comunidad autónoma, por área, de teletrabajo y por entidad incluyen solo ofertas.</li>
 <li>Las áreas se asignan de forma automática a partir del título y de la ficha, por lo que pueden contener errores. Una oferta puede figurar en más de un área.</li>
 <li>«Ofertas que mencionan el teletrabajo» incluye las ofertas cuya ficha lo menciona. Las ofertas sin texto en la ficha no pueden comprobarse.</li>
 <li>Cada oferta aparece cuando este portal la detecta y de nuevo si cambia el plazo o el número de plazas, o si se reabre o se vuelve a publicar. Las ofertas que ya se han cerrado dejan de aparecer.</li>
-<li>Algunos organismos publican ofertas de varias empresas: bajo su nombre puede seguirse una sola de ellas.</li>
+<li>Algunos organismos publican ofertas de varias entidades: bajo su nombre puede seguirse una sola de ellas.</li>
 <li>En <a href="../anuncios/">Procesos</a>, cada proceso en marcha dispone además de su propia lista.</li>
 </ul>
 <h3>Listas generales</h3>
@@ -1271,8 +1269,8 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
             ("Ofertas que mencionan el teletrabajo", "feeds/teletrabajo.xml")])}
 <h3>Otras listas</h3>
 <form id="buscar-listas" class="buscador" role="search" aria-label="Buscar listas" hidden>
-<label for="q-listas" class="sr-only">Buscar una comunidad autónoma, área, organismo o empresa</label>
-<input id="q-listas" type="search" autocomplete="off" placeholder="Comunidad, área, organismo o empresa">
+<label for="q-listas" class="sr-only">Buscar una comunidad autónoma, área, organismo o entidad</label>
+<input id="q-listas" type="search" autocomplete="off" placeholder="Comunidad, área, organismo o entidad">
 </form>
 <p id="estado-listas" role="status"></p>
 {feed_group("Por comunidad", region_feeds)}
@@ -1283,7 +1281,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <p>Los datos también están disponibles en formato JSON, sin clave de acceso. La descripción de los ficheros y algunos ejemplos de uso figuran en <a href="../datos/">Datos abiertos</a>.</p>
 <script src="../assets/listas.js" defer></script>"""
     return page("Recibir avisos", body, "../", "avisos", checked=checked, csp=CSP_CORREO if sitekey else CSP,
-                description="Avisos de las ofertas nuevas de empleo en empresas y entidades del sector público, "
+                description="Avisos de las ofertas nuevas de los organismos incluidos en este portal, "
                             "por comunidad autónoma, área u organismo.")
 
 
@@ -1313,13 +1311,13 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
                 ("datos-personales", "Datos personales"), ("accesibilidad", "Accesibilidad"), ("contacto", "Contacto")]
     index = "".join(f'<li><a href="#{key}">{label}</a></li>' for key, label in sections)
     body = f"""<h1>Acerca de este portal</h1>
-<p>{SITE_NAME} reúne las ofertas de empleo que las empresas públicas, las fundaciones, los centros de investigación y las universidades del sector público publican en sus propias webs. Estas webs tienen formatos distintos, rara vez ofrecen alertas, no siempre son accesibles y sus ofertas no suelen figurar en otros buscadores de empleo. Este portal las consulta de forma periódica, presenta sus ofertas en un único lugar y avisa de las novedades.</p>
+<p>{SITE_NAME} reúne las ofertas de empleo que publican en sus propias webs las empresas públicas estatales, autonómicas y locales, las fundaciones y los centros de investigación del sector público y las universidades públicas. Estas webs tienen formatos distintos, rara vez ofrecen alertas, no siempre son accesibles y sus ofertas no suelen figurar en otros buscadores de empleo. Este portal las consulta de forma periódica, presenta sus ofertas en un único lugar y avisa de las novedades.</p>
 <nav aria-label="En esta página"><ul class="indice-grupos">{index}</ul></nav>
 <h2 id="que-hay">Contenido del portal</h2>
 <ul>
-<li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases.</li>
+<li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases. De las universidades, por ahora solo recoge los puestos de investigación y de apoyo técnico a la investigación.</li>
 <li><strong>Investigación:</strong> las ofertas de las fundaciones, los centros de investigación y las universidades públicas están en su propia sección, <a href="../investigacion/">Investigación</a>. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) salen también en la portada; lo decide el área que el portal asigna a cada oferta.</li>
-<li><strong>No incluye</strong> las oposiciones de las Administraciones públicas (Administración General del Estado, comunidades autónomas y entidades locales). Para ellas, consulte los buscadores oficiales de empleo público y los boletines oficiales.</li>
+<li><strong>No incluye</strong> las oposiciones de las Administraciones públicas (Administración General del Estado, comunidades autónomas y entidades locales) ni las plazas de profesorado universitario. Para las oposiciones, consulte los buscadores oficiales de empleo público y los boletines oficiales.</li>
 </ul>
 <h2 id="organismos">Organismos incluidos</h2>
 <p>Actualmente se consultan {webs}, en {grupos}: {links}. La lista completa, con sus ofertas y su web oficial, figura en <a href="../organismos/">Organismos</a>.{planned} Para proponer la incorporación de un organismo, abra una <a href="{REPO}/issues">incidencia en GitHub</a>.</p>
@@ -1336,9 +1334,9 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <li><strong>Basta con parte de una palabra:</strong> «adm» encuentra «administrativo» y «administración».</li>
 <li><strong>Admite varias palabras:</strong> se muestran las ofertas que contienen todas ellas. «adm trag» encuentra las de Tragsa con «adm» en algún dato; «administrativ trag» es más precisa.</li>
 <li><strong>No distingue mayúsculas ni tildes:</strong> «tecnico» encuentra «Técnico».</li>
-<li><strong>Dónde busca:</strong> en el título, el código, la empresa, la ubicación y la comunidad autónoma, el departamento, el tipo de puesto, la convocatoria y el contrato. No busca en el texto completo de la ficha.</li>
-<li><strong>Filtros:</strong> la búsqueda puede combinarse con «Filtros» (comunidad autónoma, área, tipo de contrato, empresa u organismo), con «Cierran en {SOON_DAYS} días» y, cuando hay ofertas que lo mencionan, con «Menciona teletrabajo». «Quitar filtros» restablece la búsqueda inicial.</li>
-<li><strong>Orden:</strong> «Ordenar por» muestra primero las ofertas más recientes, las de plazo más próximo o las ordenadas por empresa.</li>
+<li><strong>Dónde busca:</strong> en el título, el código, la entidad, la ubicación y la comunidad autónoma, el departamento, el tipo de puesto, la convocatoria y el contrato. No busca en el texto completo de la ficha.</li>
+<li><strong>Filtros:</strong> la búsqueda puede combinarse con «Filtros» (comunidad autónoma, área, tipo de contrato, entidad u organismo), con «Cierran en {SOON_DAYS} días» y, cuando hay ofertas que lo mencionan, con «Menciona teletrabajo». «Quitar filtros» restablece la búsqueda inicial.</li>
+<li><strong>Orden:</strong> «Ordenar por» muestra primero las ofertas más recientes, las de plazo más próximo o las ordenadas por entidad.</li>
 <li><strong>Sin resultados:</strong> si ninguna oferta abierta coincide, el portal ofrece buscar el mismo término en los procesos selectivos y en la otra lista de ofertas (la portada o Investigación).</li>
 <li><strong>Enlace a la búsqueda:</strong> la dirección de la página conserva la búsqueda y los filtros. Si la guarda en marcadores o la comparte, se abrirá con los mismos criterios.</li>
 </ul>
@@ -1354,7 +1352,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <p>Todas las listas y las instrucciones paso a paso figuran en <a href="../avisos/">Recibir avisos</a>.</p>
 <h2 id="de-donde">Origen de los datos</h2>
 <p>Las páginas públicas de empleo de cada organismo se consultan varias veces al día: cada 30 minutos por la mañana entre semana y con menos frecuencia por la tarde, de noche y en fin de semana. Solo se utilizan datos publicados y accesibles sin necesidad de cuenta, y nunca se realizan inscripciones de forma automatizada. El texto de cada oferta se reproduce tal como lo publica su organismo.</p>
-<p>El área de cada oferta (en «Filtros») no la facilita la empresa: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo; una oferta puede tener dos áreas o ninguna. Sirve para filtrar y para decidir si una oferta de un centro de investigación o de una universidad sale también en la portada.</p>
+<p>El área de cada oferta (en «Filtros») no la facilita el organismo: este portal la asigna a partir del título y, si no es suficiente, de la ficha o del sector del organismo. Tiene carácter orientativo; una oferta puede tener dos áreas o ninguna. Sirve para filtrar y para decidir si una oferta de un centro de investigación o de una universidad sale también en la portada.</p>
 <p>El dato «Menciona teletrabajo» procede de la ficha: se buscan expresiones como «teletrabajo» o «trabajo a distancia» y se reproduce la frase literal, ya que las condiciones varían mucho entre ofertas. Cuando la frase indica cuánto («hasta el 50 %», «1 día a la semana»), se añade a la etiqueta. Si la ficha no menciona el teletrabajo, no se deduce que no lo haya: solo se indica «sin teletrabajo» cuando la ficha lo dice. Si la ficha apenas tiene texto y solo remite a las bases, no es posible saberlo y así se indica.</p>
 <h2 id="datos">Datos abiertos</h2>
 <p>Toda la información del portal está disponible en ficheros JSON, sin clave ni registro, con licencia CC BY 4.0, para su reutilización en webs, aplicaciones o análisis. La descripción de cada fichero y de cada campo, con ejemplos, figura en <a href="../datos/">Datos abiertos</a>.</p>
@@ -1619,7 +1617,7 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <p>Si ofrece un servicio basado en estos datos, indique a sus personas usuarias que la inscripción se realiza en la web oficial de cada organismo: cada oferta incluye sus enlaces en <code>url</code> y <code>url_inscripcion</code>, y cada proceso con la inscripción abierta, en <code>url_inscripcion</code>.</p>
 <script src="../assets/datos.js" defer></script>"""
     return page("Datos abiertos", body, "../", "datos", checked=checked,
-                description="Ofertas de empleo del sector público en ficheros JSON abiertos, con licencia CC BY 4.0")
+                description="Ofertas y procesos de los organismos incluidos en este portal, en ficheros JSON abiertos con licencia CC BY 4.0")
 
 
 def write(path: Path, text: str) -> None:

@@ -33,7 +33,7 @@ export function pagina(titulo, cuerpo, status = 200) {
   return new Response(
     `<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">`
     + `<title>${escapar(titulo)}</title><body style="font:1.2rem/1.5 system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem">`
-    + `<h1>${escapar(titulo)}</h1>${cuerpo}<p><a href="${PORTAL}avisos/">Volver a Empleo en Empresas Públicas</a></p></body></html>`,
+    + `<h1>${escapar(titulo)}</h1>${cuerpo}<p><a href="${PORTAL}avisos/">Volver a Empleo Público Abierto</a></p></body></html>`,
     { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } },
   );
 }

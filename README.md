@@ -1,11 +1,11 @@
-# Empleo en Empresas Públicas
+# Empleo Público Abierto
 
 [![Tests](https://github.com/alertapublica/empleo-publico-abierto/actions/workflows/ci.yml/badge.svg)](https://github.com/alertapublica/empleo-publico-abierto/actions/workflows/ci.yml)
 [![Actualización](https://github.com/alertapublica/empleo-publico-abierto/actions/workflows/actualizar.yml/badge.svg)](https://github.com/alertapublica/empleo-publico-abierto/actions/workflows/actualizar.yml)
 [![Código: EUPL 1.2](https://img.shields.io/badge/código-EUPL%201.2-blue)](LICENSE)
 [![Datos: CC BY 4.0](https://img.shields.io/badge/datos-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/deed.es)
 
-Portal independiente y **no oficial** que reúne en un solo sitio las ofertas de empleo de las empresas públicas españolas, con una web accesible, avisos por RSS, Telegram y correo y una API JSON abierta.
+Portal independiente y **no oficial** que reúne en un solo sitio las ofertas de empleo de empresas públicas, fundaciones, centros de investigación y universidades del sector público español (no incluye oposiciones de las Administraciones), con una web accesible, avisos por RSS, Telegram y correo y una API JSON abierta.
 
 **Web: <https://alertapublica.es/>**
 
@@ -68,5 +68,5 @@ Las ideas, los fallos y las fuentes nuevas son bienvenidos: mira [`CONTRIBUTING.
 ## Licencia
 
 - **Código:** [Licencia Pública de la Unión Europea (EUPL) 1.2](LICENSE).
-- **Datos elaborados por el proyecto** (la API, los códigos INE asignados, las áreas, los perfiles de investigación y la detección del teletrabajo): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden reutilizar citando «Empleo en Empresas Públicas» y enlazando el portal.
+- **Datos elaborados por el proyecto** (la API, los códigos INE asignados, las áreas, los perfiles de investigación y la detección del teletrabajo): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden reutilizar citando «Empleo Público Abierto» y enlazando el portal.
 - **Textos, documentos y enlaces de cada oferta y comunicado:** son de su organismo, que es la fuente oficial y la que prevalece.

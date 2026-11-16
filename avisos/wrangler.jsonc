@@ -35,7 +35,7 @@
     // repo, que hace aparecer el formulario en la web.
     "CORREO_ACTIVO": "si",
     "CORREO_REMITENTE": "avisos@alertapublica.es",
-    "CORREO_NOMBRE": "Empleo en Empresas Públicas",
+    "CORREO_NOMBRE": "Empleo Público Abierto",
     // Correos por tanda (una por minuto). Ajustar al límite de envío del buzón.
     "CORREO_POR_TANDA": "20",
     "SMTP_SERVIDOR": "smtp.buzondecorreo.com",

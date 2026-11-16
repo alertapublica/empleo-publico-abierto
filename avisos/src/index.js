@@ -71,7 +71,7 @@ export default {
           await enviarUno(env, {
             para,
             asunto: "Prueba del correo de avisos de empleo público",
-            texto: "Este es un correo de prueba del servicio de avisos de Empleo en Empresas Públicas.\n\n"
+            texto: "Este es un correo de prueba del servicio de avisos de Empleo Público Abierto.\n\n"
               + "Si lo has recibido, el envío funciona. No hace falta que hagas nada.",
             baja: enlaceBaja(env, "prueba"),
           });
@@ -84,7 +84,7 @@ export default {
       if (ruta === "GET /correo/confirmar") return await confirmar(env, url);
       if (url.pathname === "/correo/baja" && ["GET", "POST"].includes(request.method)) return await baja(env, request, url);
       if (ruta === "GET /") {
-        return pagina("Avisos de empleo público", '<p>Servicio de avisos del portal <a href="https://alertapublica.es/">Empleo en Empresas Públicas</a>.</p>');
+        return pagina("Avisos de empleo público", '<p>Servicio de avisos del portal <a href="https://alertapublica.es/">Empleo Público Abierto</a>.</p>');
       }
       return new Response("No encontrado", { status: 404 });
     } catch (error) {

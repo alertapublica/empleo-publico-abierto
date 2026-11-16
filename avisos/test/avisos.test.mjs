@@ -308,7 +308,7 @@ test("el bot ignora los grupos y respeta el máximo de avisos", async () => {
 // --- Correo ------------------------------------------------------------------------------------
 
 const correoEnv = (db, smtp, extra = {}) => ({
-  DB: db, CORREO_ACTIVO: "si", CORREO_REMITENTE: "avisos@ejemplo.es", CORREO_NOMBRE: "Empleo en Empresas Públicas",
+  DB: db, CORREO_ACTIVO: "si", CORREO_REMITENTE: "avisos@ejemplo.es", CORREO_NOMBRE: "Empleo Público Abierto",
   SMTP_SERVIDOR: "smtp.ejemplo.es", SMTP_PUERTO: "465", SMTP_USUARIO: "avisos@ejemplo.es", SMTP_CLAVE: "c,là`ve@",
   URL_PUBLICA: "https://avisos.ejemplo.es", TURNSTILE_SECRETO: "s", CONECTAR_SMTP: smtp.conectar, ...extra,
 });
@@ -321,7 +321,7 @@ const formAlta = (correo, campos = [["palabras", "analista"]]) => new Request("h
 test("mensaje: cabeceras con tildes codificadas y cuerpo quoted-printable", () => {
   const largo = `Analista de sistemas con experiencia en ${"administración ".repeat(8)}= fin `;
   const crudo = componer({
-    de: "avisos@ejemplo.es", nombre: "Empleo en Empresas Públicas", para: "ana@ejemplo.es",
+    de: "avisos@ejemplo.es", nombre: "Empleo Público Abierto", para: "ana@ejemplo.es",
     asunto: `3 novedades para tus avisos de empleo público ${"ñ".repeat(40)}\r\nBcc: otro@ejemplo.es`,
     texto: `Hola\n${largo}\n.línea que empieza por punto`, baja: "https://avisos.ejemplo.es/correo/baja?t=abc",
     fecha: new Date("2026-11-09T06:00:00Z"), id: "id-1",
@@ -331,7 +331,7 @@ test("mensaje: cabeceras con tildes codificadas y cuerpo quoted-printable", () =
   assert.doesNotMatch(crudo, /\r\nBcc:/, "el asunto no puede inyectar cabeceras");
   const { cabeceras, texto } = leerMensaje(crudo);
   assert.equal(cabeceras.Subject, `3 novedades para tus avisos de empleo público ${"ñ".repeat(40)} Bcc: otro@ejemplo.es`);
-  assert.equal(cabeceras.From, "Empleo en Empresas Públicas <avisos@ejemplo.es>");
+  assert.equal(cabeceras.From, "Empleo Público Abierto <avisos@ejemplo.es>");
   assert.equal(cabeceras.To, "<ana@ejemplo.es>");
   assert.equal(cabeceras.Date, "Mon, 09 Nov 2026 06:00:00 +0000");
   assert.equal(cabeceras["Message-ID"], "<id-1@ejemplo.es>");

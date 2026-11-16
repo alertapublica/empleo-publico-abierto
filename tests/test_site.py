@@ -119,13 +119,15 @@ class Site(unittest.TestCase):
 
     def test_titulo_y_descripcion_propios_de_cada_pagina(self):
         ficha = self.read("ofertas/tragsa-2/index.html")
-        self.assertIn("<title>Oferta 2 – Tragsa · Empleo en Empresas Públicas</title>", ficha)
+        self.assertIn("<title>Oferta 2 – Tragsa · Empleo Público Abierto</title>", ficha)
         self.assertIn('<meta name="description" content="Tragsa, Lugo. Contrato: Temporal. 2 plazas. '
                       'Plazo hasta el 8 de noviembre de 2026.">', ficha)
         self.assertIn("Cerrada el 7 de noviembre de 2026.", self.read("ofertas/tragsa-3/index.html").split("</head>")[0])
         organismo = self.read("organismos/tragsa/index.html")
-        self.assertIn("<title>Empleo en Grupo Tragsa · Empleo en Empresas Públicas</title>", organismo)
+        self.assertIn("<title>Empleo en Grupo Tragsa · Empleo Público Abierto</title>", organismo)
         self.assertIn('<meta name="description" content="4 ofertas abiertas', organismo)
+        self.assertIn("<title>Empleo en empresas y entidades públicas · Empleo Público Abierto</title>",
+                      self.read("index.html"))
         descriptions = {re.search(r'<meta name="description" content="([^"]*)"', self.read(path + "index.html")).group(1)
                         for path in ("", "organismos/", "anuncios/", "historico/", "avisos/", "acerca/", "datos/")}
         self.assertEqual(len(descriptions), 7)
@@ -261,15 +263,19 @@ class Site(unittest.TestCase):
     def test_menu_con_acerca_y_accesibilidad_en_el_pie(self):
         html = self.read("index.html")
         nav = html.split('id="nav-principal"')[1].split("</nav>")[0]
-        self.assertEqual(nav.count("<li>"), 7)
-        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación y Procesos tras Ofertas, Histórico al final
-        self.assertEqual(labels, ["Ofertas", "Investigación", "Procesos", "Organismos", "Avisos", "Acerca de", "Histórico"])
+        self.assertEqual(nav.count("<li>"), 6)
+        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación y Procesos tras Ofertas; Histórico, en el pie
+        self.assertEqual(labels, ["Ofertas", "Investigación", "Procesos", "Organismos", "Avisos", "Acerca de"])
         self.assertIn(">Procesos</a>", nav)
         self.assertIn('<a href="acerca/">Acerca de</a>', nav)
         self.assertIn('aria-current="page">Acerca de</a>', self.read("acerca/index.html").split("</nav>")[0])
+        # La marca enlaza a la portada con el nombre como texto (en móvil, oculto a la vista: solo el logo).
+        self.assertIn(f'alt="" width="28" height="28"><span class="marca-texto">{site.SITE_NAME}</span></a>', html)
         footer = html.split('<footer')[1]
         self.assertNotIn("Acerca de", footer)
         self.assertIn('<a href="accesibilidad/">Accesibilidad</a>', footer)
+        self.assertIn('<a href="historico/">Histórico</a>', footer)
+        self.assertIn('aria-current="page">Histórico</a>', self.read("historico/index.html").split("<footer")[1])
         self.assertIn('aria-current="page">Accesibilidad</a>', self.read("accesibilidad/index.html").split("<footer")[1])
         self.assertIn("accesibilidad/", self.read("sitemap.xml"))
         # Los controles van antes del menú: abierto en móvil, el foco pasa del botón a sus enlaces.
@@ -761,7 +767,7 @@ class Site(unittest.TestCase):
         portada = site.index_page(offers, NOW.date(), "ahora", sources)
         # La investigación sale solo en su sección; el administrativo del IRB, en las dos.
         self.assertEqual(re.findall(r'data-guardar="o:(\w+-\d)"', portada), ["tragsa-1", "irb-3"])
-        self.assertIn('sección: <a href="investigacion/">Investigación</a>, con 3 ofertas abiertas.', portada)
+        self.assertNotIn("propia sección", portada)  # sin aviso de la sección: ya está en el menú
         self.assertIn('data-otras="investigacion/" data-otras-texto="las ofertas de investigación"', portada)
         self.assertIn('id="empresa"', portada)
         html = site.research_page(offers, NOW.date(), "ahora", sources)
@@ -795,7 +801,6 @@ class Site(unittest.TestCase):
         self.assertIn('data-organismos-otra="tragsa"', html)
         sin = site.research_page(offers[:1], NOW.date(), "ahora", sources)
         self.assertIn("no hay ofertas abiertas de investigación", sin)
-        self.assertNotIn("Investigación</a>, con", site.index_page(offers[:1], NOW.date(), "ahora", sources))
 
     def test_solo_en_investigacion_lo_de_investigacion_sin_gestion(self):
         cases = {
