@@ -81,6 +81,7 @@ PROJECT_TITLES = {
     "udc": re.compile(r"^(.+?) · "),  # «categoría · centro»; todas son contratos PCTI
     "unirioja": re.compile(r"^(.+?) · "),
     "uji": re.compile(r"^(.+?) · "),
+    "unileon": re.compile(r"^(.+?) · "),  # solo las de investigación; el PTGAS va con el título literal
     "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
 }
 

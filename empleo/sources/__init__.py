@@ -65,6 +65,7 @@ from .uco import UcoSource
 from .uji import UjiSource
 from .udc import UdcSource
 from .uhu import UhuSource
+from .unileon import UnileonSource
 from .unirioja import UniriojaSource
 from .upf import UpfSource
 from .usc import UscSource
@@ -129,7 +130,7 @@ CATALOG = {
         IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(), IfapaSource(), FURIOJA,
     ],
     "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource(), UdcSource(), UpfSource(), UniriojaSource(),
-                      UcoSource(), UjiSource()],
+                      UcoSource(), UjiSource(), UnileonSource()],
 }
 for _group, _sources in CATALOG.items():
     for _source in _sources:
