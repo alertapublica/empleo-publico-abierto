@@ -71,6 +71,24 @@
   "url": "https://www.enusa.es/trabaja-con-nosotros/",
   "via": "otro"
  },
+ "enusa:67d4b88f2ee6": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T08:07:32+00:00",
+  "location": null,
+  "process": "ADMINISTRATIVO/A UNIDAD ORGANIZATIVA (875-ADMUO)",
+  "process_url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "source": "enusa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Resultado de la revisión de requisitos mínimos",
+  "url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "via": "otro"
+ },
  "enusa:72437345fe01": {
   "access": "libre",
   "apply_url": null,
