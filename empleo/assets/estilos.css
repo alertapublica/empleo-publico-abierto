@@ -435,6 +435,16 @@ pre { overflow-x: auto; padding: 0.6rem 0.8rem; background: var(--surface); bord
 .indice-datos li li a { font-size: 0.9rem; }
 .indice-datos a { display: inline-flex; align-items: center; min-height: 44px; }
 
+/* «Datos abiertos»: un recuadro por fichero, con «Campos» al pie para que queden alineados; y el horario. */
+.ficheros { list-style: none; padding: 0; margin: 0.8rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 0.8rem; }
+.ficheros > li { display: flex; flex-direction: column; padding: 0.8rem 1rem 0.3rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.ficheros h3 { margin: 0 0 0.3rem; font-size: 1.1rem; }
+.ficheros p { margin: 0 0 0.5rem; }
+.ficheros .dato { font-variant-numeric: tabular-nums; }
+.ficheros .campos-de { margin: auto 0 0; }
+.ficheros .campos-de a { display: inline-flex; align-items: center; min-height: 44px; }
+dl.horario { max-width: 40rem; }
+
 /* «Datos abiertos»: campos de cada fichero en tablas «Campo | Descripción»; en móvil, cada fila apilada. */
 section.campos-fichero[hidden], table.campos tr[hidden] { display: none; }
 #estado-campos { font-weight: 600; min-height: 1.6em; margin: 0 0 0.4rem; }

@@ -14,7 +14,7 @@ El cron se dispara a :07 y a :37 de cada hora (UTC) y `toca()` (`worker/src/inde
 | Sábado y domingo | 16:00–23:59 | a las 19:07 y a las 22:07 |
 | Todos | 0:00–5:59 | ninguna |
 
-Una oferta se da por cerrada tras 3 lecturas seguidas sin verla (`MISSED_RUNS_TO_CLOSE`, `empleo/ingest.py`): entre semana por la mañana, 1,5 h. Si cambias el horario, revisa ese valor y los textos de la web que lo mencionan (`empleo/site.py`, `docs/api.md`).
+Una oferta se da por cerrada tras 3 lecturas seguidas sin verla (`MISSED_RUNS_TO_CLOSE`, `empleo/ingest.py`): entre semana por la mañana, 1,5 h. Si cambias el horario, revisa ese valor y el horario que publica la web (`SCHEDULE` y `SCHEDULE_SUMMARY`, `empleo/site.py`).
 
 ## Secretos
 
