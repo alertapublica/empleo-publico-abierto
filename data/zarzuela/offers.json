@@ -43,7 +43,7 @@
  "responsable-tic": {
   "apply_url": "https://www.hipodromodelazarzuela.es/sites/default/files/2026-10/PROCESO%20SELECTIVO%20Oferta%20Responsable%20TIC_2026_09_v6.pdf",
   "category": "Tasa de reposición",
-  "closed_at": null,
+  "closed_at": "2026-11-16T16:07:27+00:00",
   "code": null,
   "company": "Hipódromo de la Zarzuela",
   "deadline": "2026-11-16",
@@ -55,7 +55,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-16",
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -77,7 +77,7 @@
   ],
   "source": "zarzuela",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Responsable TIC",
   "url": "https://www.hipodromodelazarzuela.es/informacion-corporativa"
  },

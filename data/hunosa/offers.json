@@ -2,7 +2,7 @@
  "P2026.02": {
   "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/10/BASES-CONVOCATORIA.GEOLOGO-DE-EXPLORACION.P2026.02.pdf",
   "category": "Tasa de reposición",
-  "closed_at": null,
+  "closed_at": "2026-11-16T16:07:27+00:00",
   "code": "P2026.02",
   "company": "SADIM",
   "deadline": "2026-11-16",
@@ -37,14 +37,14 @@
   ],
   "source": "hunosa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Geólogo de exploración",
   "url": "https://www.sadim.es/empleo/"
  },
  "P2026.03": {
   "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/10/BASES-CONVOCATORIA.JEFE-DE-PROYECTOS-EN-INGENIERIA-MINERA.P2026.03.pdf",
   "category": "Tasa de reposición",
-  "closed_at": null,
+  "closed_at": "2026-11-16T16:07:27+00:00",
   "code": "P2026.03",
   "company": "SADIM",
   "deadline": "2026-11-16",
@@ -79,7 +79,7 @@
   ],
   "source": "hunosa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jefe de proyectos en ingeniería minera",
   "url": "https://www.sadim.es/empleo/"
  }
