@@ -22079,6 +22079,107 @@
   "title": "Veterinarios/as - Apoyo Sanidad Animal (Valencia - Paterna)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58639"
  },
+ "58641": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58641",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58641",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Islas Baleares",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-16T07:54:15+00:00",
+  "id": "tragsa:58641",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Mallorca",
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": "Mallorca - Islas Baleares",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-16",
+  "ref": "58641",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Licenciado/a o Grado+Master en Derecho, Relaciones Laborales o Psicología - Asistencia Técnica (Mallorca - Islas Baleares)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Mallorca</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo técnico-jurídico en los expedientes del departamento</li><li>Apoyo en la verificación documental de solicitudes.</li><li>Soporte en reclamaciones y gestión de procesos</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Grado o Diplomatura + Máster o Licenciatura en el campo de estudio de las Ciencias Sociales y Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia laboral y/o académica en gestión de personal (con contrato laboral y/o académico)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Grado o Diplomatura + Máster o Licenciatura en el campo de estudio de las Ciencias Sociales y Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Grado o Diplomatura + Máster o Licenciatura en el campo de estudio de las Ciencias Sociales y Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia laboral y/o académica en gestión de personal (con contrato laboral y/o académico)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria Ley de Contratos del Sector Público 9/2017</li></ul>Idiomas<ul><li>Catalán Nivel: C1</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en gestorías, empresas de tramitación de expedientes, bufetes (con contrato laboral y/o académico)</li><li>Desde 6 meses Hasta 2 años de experiencia en empresas del sector público (con contrato laboral y/o académico)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria Ley de Contratos del Sector Público 9/2017</li></ul>Idiomas<ul><li>Catalán Nivel: C1</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria Ley de Contratos del Sector Público 9/2017</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Catalán Nivel: C1</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en gestorías, empresas de tramitación de expedientes, bufetes (con contrato laboral y/o académico)</li><li>Desde 6 meses Hasta 2 años de experiencia en empresas del sector público (con contrato laboral y/o académico)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 16/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece:<br/><br/>- Contrato de duración determinada con una duración estimada de 12  meses, asociado a la ejecución del encargo detallado en la publicación para el plan de<br/>Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada completa: 37,5 h<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado/a Universitario/a - Asistencia Técnica (Mallorca - Islas Baleares)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58641"
+ },
  "58643": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58643",
   "category": "Específica",
@@ -25228,6 +25329,112 @@
   "status": "open",
   "title": "Oficiales/as 2ª Administrativos/as (refuerzo) - Apoyo Prestaciones Sociales (Asturias)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58758"
+ },
+ "58760": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58760",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58760",
+  "company": "Tragsa",
+  "contract": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Islas Baleares",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-16T07:54:15+00:00",
+  "id": "tragsa:58760",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Ibiza",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Ibiza",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-16",
+  "ref": "58760",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Arquitectura Técnica/Superior o Ingeniería Técnica o Superior en Edificación, Civil, ICCP, Industrial, Agronomo o Montes - Apoyo Proyectos de Edificación y Obra Civil (Ibiza)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Ibiza</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo al estudio de proyectos de edificación, revisión de documentación técnica, análisis de soluciones constructivas y colaboración en la planificación y programación de las actuaciones.</li><li>Apoyo en la preparación y elaboración de documentación técnica y administrativa necesaria para la tramitación de expedientes de contratación, incluyendo mediciones, presupuestos, pliegos y documentación complementaria.</li><li>Seguimiento y control de la ejecución de las obras de edificación, incluyendo supervisión de los trabajos, comprobación de unidades ejecutadas, mediciones, controles de ejecución y seguimiento de los plazos previstos.</li><li>Apoyo en la toma de datos, elaboración y revisión de mediciones y preparación de la documentación necesaria para la elaboración de certificaciones de obra, así como seguimiento de la ejecución económica de las actuaciones.</li><li>Apoyo a la implantación, seguimiento y cumplimiento de los planes de seguridad y salud, calidad y gestión medioambiental de las obras, colaborando en el control documental y en el seguimiento de las medidas preventivas y correctoras.</li><li>Apoyo a la coordinación de las actuaciones de edificación en Ibiza, colaborando en el seguimiento de la planificación, gestión de incidencias, coordinación con los distintos agentes intervinientes y elaboración de informes de seguimiento del estado de las obras.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees una de las siguientes Titulaciones Universitarias (Nivel MECES 2 o 3) Homologadas en España o con certificado de equivalencia emitido por la Secretaría General de Universidades: <br/>- Arquitectura o Arquitectura técnica o Grado en Arquitectura o Grado + Máster Oficial en Arquitectura <br/>- Ingeniería o Ingeniería Técnica o Grado o Grado + Máster Oficial en Ingeniería de la Edificación, Obra Civil, Obras Públicas, Caminos Canales y Puertos, Industrial, de Montes o Agronómica</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia con contrato laboral y/o académico en obras de edificación u obra civil (se comprobará en valoración técnica)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees una de las siguientes Titulaciones Universitarias (Nivel MECES 2 o 3) Homologadas en España o con certificado de equivalencia emitido por la Secretaría General de Universidades: <br/>- Arquitectura o Arquitectura técnica o Grado en Arquitectura o Grado + Máster Oficial en Arquitectura <br/>- Ingeniería o Ingeniería Técnica o Grado o Grado + Máster Oficial en Ingeniería de la Edificación, Obra Civil, Obras Públicas, Caminos Canales y Puertos, Industrial, de Montes o Agronómica</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees una de las siguientes Titulaciones Universitarias (Nivel MECES 2 o 3) Homologadas en España o con certificado de equivalencia emitido por la Secretaría General de Universidades: <br/>- Arquitectura o Arquitectura técnica o Grado en Arquitectura o Grado + Máster Oficial en Arquitectura <br/>- Ingeniería o Ingeniería Técnica o Grado o Grado + Máster Oficial en Ingeniería de la Edificación, Obra Civil, Obras Públicas, Caminos Canales y Puertos, Industrial, de Montes o Agronómica</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia con contrato laboral y/o académico en obras de edificación u obra civil (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Disponer de Formación de Nivel Básico de PRL de 50 o 60h</li><li>Formación complementaria en BIM, metodología de proyectos o modelado de edificios.</li><li>Formación en construcción, rehabilitación de edificios, instalaciones y patología de la edificación.</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en obras de edificación, rehabilitación y/o reforma de edificios, incluyendo asistencia técnica, dirección, ejecución o seguimiento de obras (experiencia con contrato laboral y/o académico) (se comprobará en valoración técnica)</li></ul>Otros Factores Meritorios<ul><li>Conocimientos de CAD, CYPE o Presto (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Disponer de Formación de Nivel Básico de PRL de 50 o 60h</li><li>Formación complementaria en BIM, metodología de proyectos o modelado de edificios.</li><li>Formación en construcción, rehabilitación de edificios, instalaciones y patología de la edificación.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de Formación de Nivel Básico de PRL de 50 o 60h</li><li>Formación complementaria en BIM, metodología de proyectos o modelado de edificios.</li><li>Formación en construcción, rehabilitación de edificios, instalaciones y patología de la edificación.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en obras de edificación, rehabilitación y/o reforma de edificios, incluyendo asistencia técnica, dirección, ejecución o seguimiento de obras (experiencia con contrato laboral y/o académico) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos de CAD, CYPE o Presto (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde el día 16/11/2026 hasta el próximo 30/11/2026 a las 23:59h (hora peninsular).<br/><br/>SE OFRECE:<br/>- Contrato de duración determinada de 6  meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/>- Jornada completa 37,5h semanales<br/><br/>Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por la persona seleccionada de las indicadas en la oferta.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitectura Técnica/Superior o Ingeniería Técnica o Superior en Edificación, Civil, ICCP, Industrial, Agronomo o Montes - Apoyo Proyectos de Edificación y Obra Civil (Ibiza)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58760"
  },
  "58786": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58786",
