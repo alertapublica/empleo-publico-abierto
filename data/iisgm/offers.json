@@ -52,7 +52,7 @@
  "132": {
   "apply_url": "https://iisgm.com/ofertas-de-empleo/132/coordinador-a-ensayos-clinicos-106-2026",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T05:07:26+00:00",
   "code": null,
   "company": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
   "contract": null,
@@ -67,7 +67,7 @@
   "kind": null,
   "listed_deadline": "2026-11-15",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -95,7 +95,7 @@
   ],
   "source": "iisgm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "COORDINADOR/A ENSAYOS CLÍNICOS 106_2026",
   "url": "https://iisgm.com/ofertas-de-empleo/132/coordinador-a-ensayos-clinicos-106-2026"
  },

@@ -382,7 +382,7 @@
  "692707": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692707.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T05:07:26+00:00",
   "code": null,
   "company": "Canal Sur Radio y Televisión, S.A.",
   "contract": "Duración determinada- eventual por circunstancias de la producción",
@@ -397,7 +397,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-15",
   "location": "SAN JUAN DE AZNALFARACHE (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -425,14 +425,14 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "SECRETARIO/A DE REDACCIÓN",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692707.html"
  },
  "692710": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692710.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T05:07:26+00:00",
   "code": null,
   "company": "Canal Sur Radio y Televisión, S.A.",
   "contract": "Duración determinada- interinidad",
@@ -447,7 +447,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-15",
   "location": "MÁLAGA (Málaga)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -475,7 +475,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "AYUDANTE TÉCNICO/A ELECTRÓNICO",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692710.html"
  }

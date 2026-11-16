@@ -2,7 +2,7 @@
  "3316": {
   "apply_url": "https://seleccio.3cat.cat/seleccio/convocatoria.jsf?idConv=3316",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-16T05:07:26+00:00",
   "code": null,
   "company": "CCMA, SA",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-15",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-26",
   "parent_ref": null,
   "place": null,
@@ -55,7 +55,7 @@
   ],
   "source": "ccma",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "2026 ENGINYER/A ESPECIALISTA EN PROJECTES D'INSTAL·LACIONS",
   "url": "https://seleccio.3cat.cat/seleccio/convocatoria.jsf?idConv=3316"
  }
