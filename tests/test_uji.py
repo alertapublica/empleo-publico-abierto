@@ -155,7 +155,9 @@ class Offers(unittest.TestCase):
                           "2026-11-13", "2026-11-26", None))
         self.assertEqual(first.apply_url, first.url)
         self.assertEqual(len(http.asked), 4)  # el tablón y las tres fichas
-        detail = source.fetch_detail(Http(page="sin uso"), first)
+        cached = Http(page="sin uso")
+        detail = source.fetch_detail(cached, first)
+        self.assertEqual(cached.asked, [])  # la ficha ya leída en list_offers no se vuelve a pedir
         self.assertEqual(detail.location, "Castelló de la Plana")
         self.assertEqual((detail.sections[0]["title"], detail.sections[0]["lang"]), ("La convocatoria", "ca"))
 
