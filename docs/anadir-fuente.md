@@ -13,7 +13,7 @@ Antes de escribir el analizador, mira cómo se lee un portal nuevo y qué se sab
 
 Lo decide la forma en que publica el propio portal, no una clasificación nuestra:
 
-- **Oferta** (`ListedOffer`, portada; las de los grupos de investigación y universidades, en «Investigación»): algo a lo que una persona de fuera puede presentarse ahora, con ficha y plazo. Incluye bolsas, prácticas y becas.
+- **Oferta** (`ListedOffer`, portada; las de los grupos de investigación y universidades, en «Investigación»): algo a lo que una persona de fuera puede presentarse ahora, con ficha y plazo. Incluye bolsas, prácticas y becas; las becas (`kind="beca"`) van a la sección «Becas», y un puesto fuera de España (`country`) a «Extranjero».
 - **Proceso** (`Announcement`, «Procesos selectivos»): comunicados de un proceso publicado por fases. Solo título, fecha y enlace.
 - **No se lee:** ayudas a proyectos, resoluciones con nombres, exámenes, listas de personas y la promoción interna como oferta.
 

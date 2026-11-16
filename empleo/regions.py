@@ -9,6 +9,7 @@ import territorios_es
 
 NATIONAL = "Ámbito nacional"
 SEVERAL = "Varias comunidades"
+ABROAD = "Extranjero"  # la fuente da otro país (`model.abroad`): un lugar más, sin códigos INE
 UNKNOWN = "Sin ubicación"
 
 _ALIASES = {
@@ -35,7 +36,7 @@ _ALIASES = {
 # "palma" solo se evalúa después de "las palmas" y "la palma": gana el alias más largo.
 _ALIASES["Illes Balears"] += " palma"
 
-REGIONS = sorted(_ALIASES) + [NATIONAL, SEVERAL, UNKNOWN]
+REGIONS = sorted(_ALIASES) + [NATIONAL, SEVERAL, ABROAD, UNKNOWN]
 
 
 def _normalize(text: str) -> str:

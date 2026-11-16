@@ -6,9 +6,9 @@ Hay cuatro ficheros:
 
 | Fichero | Contenido |
 |---|---|
-| `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio, y país (ISO 3166-1). Es el único sitio con las becas y las ofertas fuera de España (`site.off_front`) |
+| `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio, y país (ISO 3166-1). Las becas (`tipo_contrato` `beca`) van en todos los ficheros; en la web, solo en Becas (`site.is_grant`). Un puesto fuera de España lleva `comunidad` «Extranjero» (`regions.ABROAD`), `ccaa` `null` y su `pais` |
 | `procesos.json` | Comunicados de procesos selectivos |
-| `novedades.json` | Novedades de los últimos 14 días (lo usa el worker de avisos) |
+| `novedades.json` | Novedades de los últimos 14 días (lo usa el worker de avisos). Cada oferta lleva `tipo_contrato` y `extranjero` (bool): los avisos solo mandan becas y puestos en el extranjero a quien los pide |
 | `listas.json` | Nombre legible de cada clave |
 
 La documentación para quien reutiliza los datos, con cada campo, ejemplos, horario, uso responsable y licencia, está en la página [Datos abiertos](https://alertapublica.es/datos/) del portal. El campo `documentacion` de cada fichero enlaza a ella. Los registros y el tamaño de cada fichero no se apuntan aquí: la página los mide en cada publicación.

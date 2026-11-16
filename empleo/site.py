@@ -77,6 +77,7 @@ API_HEAD = {
 NAV = [
     ("index", "", "Ofertas"),
     ("investigacion", "investigacion/", "Investigación"),
+    ("becas", "becas/", "Becas"),
     ("anuncios", "anuncios/", "Procesos"),
     ("organismos", "organismos/", "Organismos"),
     ("avisos", "avisos/", "Avisos"),
@@ -142,6 +143,9 @@ GENERIC_PLACES = ("Comunidad de", "Sede", "Varios", "Nacional")
 
 def where(offer: dict) -> str:
     """Ubicación para mostrar: la localidad cuando la ubicación guardada solo dice la comunidad."""
+    if abroad(offer):  # «Lima, Perú»; sin ubicación, el país tal cual («Otros Países»)
+        location, country = offer.get("location"), offer["country"]
+        return f"{location}, {country}" if location and country.lower() not in location.lower() else location or country
     location = offer.get("location") or UNKNOWN
     place = offer.get("place")
     if not place or not location.startswith(GENERIC_PLACES):
@@ -438,11 +442,10 @@ def research_only(offer: dict, group: str) -> bool:
     return "investigacion" in found and not found & MANAGEMENT_AREAS
 
 
-def off_front(offer: dict) -> bool:
-    """Becas y puestos fuera de España: se publican en api/ofertas.json y tienen su ficha, pero no salen en
-    ningún listado de la web (portada, Investigación, organismo, histórico), ni en los feeds, novedades.json
-    (los avisos) o el sitemap. Quedan para una sección propia."""
-    return offer.get("kind") == "beca" or abroad(offer)
+def is_grant(offer: dict) -> bool:
+    """Lo que la fuente publica como beca: no es un contrato laboral. Va en su sección, «Becas», y en su
+    feed, no en la portada, en Investigación ni en los demás feeds. Una beca de investigación, también."""
+    return offer.get("kind") == "beca"
 
 
 def group_of_source(sources: dict, source_id: str) -> str:
@@ -451,42 +454,61 @@ def group_of_source(sources: dict, source_id: str) -> str:
 
 
 def index_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
-    """Portada: las ofertas abiertas, menos las de investigación de su sección."""
-    hidden = [o for o in open_offers if research_only(o, group_of_source(sources, o["source"]))]
-    front = [o for o in open_offers if o not in hidden]
-    research = sum(group_of_source(sources, o["source"]) in RESEARCH_GROUPS for o in open_offers)
+    """Portada: las ofertas abiertas, menos las becas y las de investigación de su sección."""
+    grants = [saved_id(o) for o in open_offers if is_grant(o)]
+    jobs = [o for o in open_offers if not is_grant(o)]
+    hidden = [o for o in jobs if research_only(o, group_of_source(sources, o["source"]))]
+    front = [o for o in jobs if o not in hidden]
+    research = sum(group_of_source(sources, o["source"]) in RESEARCH_GROUPS for o in jobs)
     research_sources = [s.id for s in sources.values() if getattr(s, "group", "") in RESEARCH_GROUPS]
     empty = "" if front else '<p class="nota">En este momento no hay ofertas abiertas.</p>'
     body = f"""<h1 class="sr-only">Ofertas de empleo abiertas</h1>
 {empty}
 {offer_list(front, today, sources, "", ("investigacion/", "las ofertas de investigación") if research else None,
-            other_ids=[saved_id(o) for o in hidden], other_sources=research_sources)}"""
+            other_ids=[saved_id(o) for o in hidden], other_sources=research_sources, open_ids=grants)}"""
     return page("Empleo en empresas y entidades públicas", body, "", "index", checked=checked)
 
 
 def research_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
     """Sección «Investigación»: las ofertas de los grupos de investigación y universidades."""
-    found = [o for o in open_offers if group_of_source(sources, o["source"]) in RESEARCH_GROUPS]
-    front_only = [saved_id(o) for o in open_offers if o not in found]
+    grants = [saved_id(o) for o in open_offers if is_grant(o)]
+    jobs = [o for o in open_offers if not is_grant(o)]
+    found = [o for o in jobs if group_of_source(sources, o["source"]) in RESEARCH_GROUPS]
+    front_only = [saved_id(o) for o in jobs if o not in found]
     other_sources = [s.id for s in sources.values() if getattr(s, "group", "") not in RESEARCH_GROUPS]
     empty = "" if found else '<p class="nota">En este momento no hay ofertas abiertas de investigación.</p>'
     body = f"""<h1>Investigación</h1>
-<p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. No incluye las plazas de profesorado universitario. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) aparecen también en <a href="../">Ofertas</a>.</p>
+<p>Ofertas de las fundaciones, los centros de investigación y las universidades públicas: personal investigador, técnico y de apoyo, a menudo con contrato ligado a un proyecto. No incluye las plazas de profesorado universitario. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) aparecen también en <a href="../">Ofertas</a>, y las becas, en <a href="../becas/">Becas</a>.</p>
 {empty}
 {offer_list(found, today, sources, "../", ("../", "el resto de ofertas"), companies=False, profiles=True,
-            other_ids=front_only, other_sources=other_sources)}"""
+            other_ids=front_only, other_sources=other_sources, open_ids=grants)}"""
     return page("Ofertas de investigación", body, "../", "investigacion",
                 description="Ofertas de empleo abiertas en fundaciones, centros de investigación y universidades "
                             "públicas, leídas de sus webs oficiales.", checked=checked)
 
 
+def grants_page(open_offers: list[dict], today: date, checked: str, sources: dict) -> str:
+    """Sección «Becas»: las becas abiertas de cualquier organismo."""
+    found = [o for o in open_offers if is_grant(o)]
+    jobs = [saved_id(o) for o in open_offers if not is_grant(o)]
+    empty = "" if found else '<p class="nota">En este momento no hay becas abiertas.</p>'
+    body = f"""<h1>Becas</h1>
+<p>Lo que las empresas y entidades públicas publican como beca, de formación o de investigación. Una beca no es un contrato laboral: sus condiciones son las de cada convocatoria. Las prácticas con contrato laboral están en <a href="../">Ofertas</a>.</p>
+{empty}
+{offer_list(found, today, sources, "../", open_ids=jobs)}"""
+    return page("Becas", body, "../", "becas",
+                description="Becas abiertas de empresas y entidades públicas, leídas de sus webs oficiales.",
+                checked=checked)
+
+
 def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
                others: tuple[str, str] | None = None, companies: bool = True, profiles: bool = False,
-               other_ids: list[str] = (), other_sources: list[str] = ()) -> str:
+               other_ids: list[str] = (), other_sources: list[str] = (), open_ids: list[str] = ()) -> str:
     """Buscador, filtros y lista de ofertas, de la más reciente a la más antigua. `others`: la otra lista
     (dirección y texto del enlace), donde se propone la búsqueda si no da resultados; `other_ids`, las
     ofertas abiertas que solo están allí (Guardadas no las da por cerradas) y `other_sources`, los
-    organismos que se buscan allí (`?organismo=`)."""
+    organismos que se buscan allí (`?organismo=`). `open_ids`: las abiertas de otras secciones (las becas,
+    o las ofertas en Becas), que Guardadas tampoco da por cerradas."""
     ordered = sorted(
         open_offers,
         key=lambda o: (o.get("published_on") or o["first_seen"][:10]),
@@ -528,6 +550,7 @@ def offer_list(open_offers: list[dict], today: date, sources: dict, root: str,
     other = (f' data-otras="{e(others[0])}" data-otras-texto="{e(others[1])}"'
              f' data-organismos-otra="{e(" ".join(other_sources))}"') if others else ""
     elsewhere = f' data-en-otra="{e(" ".join(other_ids))}"' if others and other_ids else ""
+    elsewhere += f' data-abiertas="{e(" ".join(open_ids))}"' if open_ids else ""
     area_or_profile = (
         '<div class="campo"><label for="perfil">Perfil (orientativo)</label>\n'
         f'<select id="perfil" name="perfil"><option value="">Todos</option>{profile_options(open_offers)}</select></div>'
@@ -670,12 +693,14 @@ def jobposting_reason(offer: dict, sources: dict, now: datetime) -> str | None:
     source = sources[offer["source"]]
     if offer["status"] != "open" or expired(offer, now):
         return "cerrada"
+    if is_grant(offer):
+        return "beca"
+    if abroad(offer):  # el marcado lleva la provincia española
+        return "extranjero"
     # Solo las fichas de la portada: entre las de investigación entran becas y ayudas que no son un
     # contrato, y los centros suelen publicar ya su propio marcado. Las de gestión salen en portada.
     if research_only(offer, getattr(source, "group", "")):
         return "solo investigación"
-    if off_front(offer):
-        return "fuera de portada"
     if (offer.get("opens_on") or "") > now.astimezone(MADRID).date().isoformat():
         return "plazo no iniciado"
     # Con `validThrough`, Google la retira sola al vencer aunque no vuelva a leer la ficha.
@@ -799,7 +824,8 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
         parent = (
             f'<p class="nota">Esta oferta es una nueva publicación de la oferta {e(offer["parent_ref"])}.</p>'
         )
-    back = (f'<a href="{root}investigacion/">Volver a las ofertas de investigación</a>'
+    back = (f'<a href="{root}becas/">Volver a las becas</a>' if is_grant(offer)
+            else f'<a href="{root}investigacion/">Volver a las ofertas de investigación</a>'
             if research_only(offer, group_of_source(sources, offer["source"]))
             else f'<a href="{root}">Volver al listado de ofertas</a>')
     body = f"""<p>{back}</p>
@@ -1214,19 +1240,22 @@ def telegram_section(bot: str) -> str:
     return f"""<h2 id="telegram">Por Telegram</h2>
 <ol>
 <li>Abra <a href="https://t.me/{e(bot)}">@{e(bot)}</a> en Telegram y pulse «Iniciar».</li>
-<li>Escriba <code>/nuevo</code> y responda a las preguntas: palabras del título, áreas, comunidades autónomas y organismos. Puede omitir las que no le interesen.</li>
+<li>Escriba <code>/nuevo</code> y responda a las preguntas: palabras del título, áreas, teletrabajo, becas, comunidades autónomas o el extranjero, y organismos. Puede omitir las que no le interesen.</li>
 <li>A partir de ese momento, el bot le enviará un mensaje cada vez que se publique una oferta que cumpla sus criterios.</li>
 </ol>
 <p>La oferta debe cumplir todos los criterios elegidos: «analista» y Galicia avisa solo de las ofertas de analista en Galicia. Si elige organismos, también puede recibir los comunicados de sus procesos selectivos; a ellos se aplican las palabras (en el nombre del proceso y en el comunicado) y las comunidades, si el proceso indica la suya.</p>
+<p>Las becas y las ofertas en el extranjero solo se avisan si se piden: puede recibirlas además de las otras ofertas o solo ellas.</p>
 <p>Las palabras se buscan en el título por su comienzo y sin distinguir tildes: «ingenier» encuentra «Ingeniero/a» e «Ingeniera». El título se compara tal como lo publica cada organismo, por lo que las ofertas en inglés o en catalán solo coinciden con palabras en ese idioma.</p>
 <p>El bot avisa de las ofertas nuevas y de las que se vuelven a publicar. Los cambios de plazo o de número de plazas solo se notifican por RSS.</p>
 <p>Puede tener hasta 10 avisos. Con <code>/avisos</code> puede consultar y borrar sus avisos, y con <code>/ayuda</code>, obtener la explicación completa. El bot solo guarda el identificador del chat y sus criterios; con <code>/baja</code> se borran de inmediato. Más información en <a href="../acerca/#datos-personales">Datos personales</a>.</p>
 """
 
 
-def casillas(name: str, options: list[tuple[str, str]]) -> str:
-    return "".join(f'<label class="casilla"><input type="checkbox" name="{name}" value="{e(value)}"> {e(label)}</label>\n'
-                   for value, label in options)
+def casillas(name: str, options: list[tuple[str, str]], kind: str = "checkbox") -> str:
+    """Casillas o, con `kind="radio"`, botones de opción, el primero marcado."""
+    return "".join(f'<label class="casilla"><input type="{kind}" name="{name}" value="{e(value)}"'
+                   f'{" checked" if kind == "radio" and not i else ""}> {e(label)}</label>\n'
+                   for i, (value, label) in enumerate(options))
 
 
 def mail_section(sitekey: str, organisms: list) -> str:
@@ -1250,10 +1279,17 @@ def mail_section(sitekey: str, organisms: list) -> str:
 <fieldset><legend>Áreas</legend>
 <div class="opciones">
 {casillas("areas", areas.BY_NAME)}</div></fieldset>
+<fieldset><legend>Becas</legend>
+<div class="opciones">
+{casillas("becas", [("no", "Sin becas"), ("tambien", "También becas"), ("solo", "Solo becas")], "radio")}</div></fieldset>
 <fieldset><legend>Comunidades autónomas</legend>
 <div class="opciones">
 {casillas("ccaa", [(code, name) for name, code in CCAA.items()])}</div>
 <label class="casilla"><input type="checkbox" name="sin_ccaa" value="1" checked> Incluir también las ofertas y los procesos sin comunidad concreta</label></fieldset>
+<fieldset><legend>Ofertas en el extranjero</legend>
+<div class="opciones">
+{casillas("extranjero", [("no", "No incluirlas"), ("tambien", "Incluirlas también"), ("solo", "Solo las ofertas en el extranjero")], "radio")}</div>
+<p class="dato">Con «Solo las ofertas en el extranjero» no se tienen en cuenta las comunidades autónomas.</p></fieldset>
 <fieldset><legend>Organismos</legend>
 <p class="dato">Si no marca ninguno, recibirá avisos de todos, también de los que se incorporen al portal.</p>
 {groups}<label class="casilla"><input type="checkbox" name="comunicados" value="1"> Recibir también los comunicados de los procesos selectivos de los organismos elegidos</label></fieldset>
@@ -1298,6 +1334,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <li>«Todas las novedades» y las listas por organismo incluyen las ofertas y los anuncios de procesos.</li>
 <li>Las listas por comunidad autónoma, por área, de teletrabajo y por entidad incluyen solo ofertas.</li>
 <li>Las áreas se asignan de forma automática a partir del título y de la ficha, por lo que pueden contener errores. Una oferta puede figurar en más de un área.</li>
+<li>Las becas solo figuran en «Becas», no en las demás listas. Las ofertas en el extranjero tienen su lista en «Por comunidad», «Extranjero».</li>
 <li>«Ofertas que mencionan el teletrabajo» incluye las ofertas cuya ficha lo menciona. Las ofertas sin texto en la ficha no pueden comprobarse.</li>
 <li>Cada oferta aparece cuando este portal la detecta y de nuevo si cambia el plazo o el número de plazas, o si se reabre o se vuelve a publicar. Las ofertas que ya se han cerrado dejan de aparecer.</li>
 <li>Algunos organismos publican ofertas de varias entidades: bajo su nombre puede seguirse una sola de ellas.</li>
@@ -1305,7 +1342,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 </ul>
 <h3>Listas generales</h3>
 {feed_list([("Todas las novedades", "feed.xml"), ("Solo anuncios de procesos", "feeds/anuncios.xml"),
-            ("Ofertas que mencionan el teletrabajo", "feeds/teletrabajo.xml")])}
+            ("Ofertas que mencionan el teletrabajo", "feeds/teletrabajo.xml"), ("Becas", "feeds/becas.xml")])}
 <h3>Otras listas</h3>
 <form id="buscar-listas" class="buscador" role="search" aria-label="Buscar listas" hidden>
 <label for="q-listas" class="sr-only">Buscar una comunidad autónoma, área, organismo o entidad</label>
@@ -1339,7 +1376,8 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
     planned = f" Previstas: {e(and_join([p['name'] for p in PLANNED]))}." if PLANNED else ""
     via = "por " + and_join(["Telegram"] * bool(bot) + ["correo electrónico"] * mail + ["RSS"]).replace(" y ", " o ")
     telegram = ("<li><strong>Telegram:</strong> un bot le envía un mensaje cuando se publica una oferta que cumple "
-                "sus criterios: palabras del título, áreas, comunidades autónomas u organismos.</li>\n") if bot else ""
+                "sus criterios: palabras del título, áreas, comunidades autónomas u organismos, y si quiere también becas u "
+                "ofertas en el extranjero.</li>\n") if bot else ""
     if mail:
         telegram += ("<li><strong>Correo electrónico:</strong> dos resúmenes al día entre semana (mañana y tarde) y uno en fin de semana, con las ofertas que cumplen sus "
                      "criterios, con los mismos apartados que el bot.</li>\n")
@@ -1356,6 +1394,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <ul>
 <li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases. De las universidades recoge los puestos de investigación y de apoyo técnico a la investigación y, de algunas, las plazas laborales del personal técnico, de gestión y de administración y servicios (PTGAS).</li>
 <li><strong>Investigación:</strong> las ofertas de las fundaciones, los centros de investigación y las universidades públicas están en su propia sección, <a href="../investigacion/">Investigación</a>. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) salen también en la portada; lo decide el área que el portal asigna a cada oferta.</li>
+<li><strong>Becas:</strong> lo que los organismos publican como beca, que no es un contrato laboral, está en su propia sección, <a href="../becas/">Becas</a>, y no en la portada ni en Investigación. Las ofertas en el extranjero figuran con las demás, con «Extranjero» en lugar de la comunidad autónoma.</li>
 <li><strong>No incluye</strong> las oposiciones de las Administraciones públicas (Administración General del Estado, comunidades autónomas y entidades locales) ni las plazas de profesorado universitario. Para las oposiciones, consulte los buscadores oficiales de empleo público y los boletines oficiales.</li>
 </ul>
 <h2 id="organismos">Organismos incluidos</h2>
@@ -1488,11 +1527,11 @@ OFFER_FIELDS = [
     (("titulo", "titulo_original"), "Título sin el código interno que algunos portales añaden, y título literal del portal."),
     (("empresa",), "Empresa o entidad que contrata."),
     (("estado",), "<code>abierta</code> o <code>cerrada</code>, según las fechas del plazo y no según la etiqueta de la web."),
-    (("ubicacion", "localidad", "comunidad"), "Ubicación literal, localidad deducida del título o de la ficha, y nombre de la comunidad autónoma."),
+    (("ubicacion", "localidad", "comunidad"), "Ubicación literal, localidad deducida del título o de la ficha, y nombre de la comunidad autónoma o, si el puesto está fuera de España, <code>Extranjero</code>."),
     (("ccaa", "provincia", "municipio"), f"Códigos del INE de comunidad autónoma, provincia y municipio. Solo se asignan cuando el texto no deja dudas: «Sevilla» puede ser la provincia o la capital, y se queda en provincia. El municipio lleva cinco cifras, las dos de la provincia y tres más, como en la <a href=\"{INE_MUNICIPIOS}\">Relación de municipios del INE</a> a {INE_FECHA}. Sus nombres están en <code>comunidades</code>, <code>provincias</code> y <code>municipios</code> de listas.json."),
     (("pais",), "Código ISO 3166-1 alfa-2 del país (<code>ES</code>, <code>PE</code>…): el del país que indique la fuente o, si no indica ninguno, <code>ES</code> cuando la oferta tiene comunidad autónoma. <code>null</code> si no se sabe. Sus nombres están en <code>paises</code> de listas.json."),
     (("plazas",), "Número de plazas."),
-    (("tipo_contrato", "contrato"), "Tipo de contrato (<code>tipos_contrato</code> en listas.json), solo si la fuente lo indica con claridad, y texto literal del contrato."),
+    (("tipo_contrato", "contrato"), "Tipo de contrato (<code>tipos_contrato</code> en listas.json), solo si la fuente lo indica con claridad, y texto literal del contrato. Las becas (<code>beca</code>) están en la sección Becas del portal y no en la portada."),
     (("convocatoria", "tipo_puesto", "departamento"), "Datos que la fuente publica con esas denominaciones, si los publica."),
     (("plazo_inicio", "plazo_fin", "plazo_hora"), "Fechas de inicio y fin del plazo (<code>AAAA-MM-DD</code>) y hora de cierre (<code>HH:MM</code>, hora peninsular). Sin hora, el último día cuenta completo."),
     (("plazo_regla",), "Si el organismo no publica la fecha de cierre, la regla literal de la convocatoria («5 días hábiles a partir del día siguiente al de la publicación…») con la que este portal calcula <code>plazo_fin</code>; <code>null</code> en las demás."),
@@ -1525,7 +1564,8 @@ NEWS_FIELDS = [
     (("evento",), "Solo ofertas: <code>new</code> (nueva) o <code>republished</code> (nueva publicación)."),
     (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
     (("ccaa",), "Código del INE de la comunidad autónoma, como en ofertas.json o, en los comunicados, como en procesos.json."),
-    (("areas", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle"), "Solo ofertas: como en ofertas.json."),
+    (("extranjero",), "Solo ofertas: <code>true</code> si el puesto está fuera de España (<code>ccaa</code> es entonces <code>null</code>)."),
+    (("tipo_contrato", "areas", "teletrabajo", "teletrabajo_estado", "teletrabajo_detalle"), "Solo ofertas: como en ofertas.json. Las becas llevan <code>tipo_contrato</code> <code>beca</code>."),
     (("proceso", "proceso_id"), "Solo comunicados: nombre del proceso y su <code>id</code> en procesos.json."),
     (("titulo",), "Título de la oferta o del comunicado. Si el organismo lo escribe en mayúsculas, aquí (y en <code>proceso</code>) va en minúsculas con mayúscula inicial, para facilitar la lectura; el texto literal está en ofertas.json y procesos.json."),
     (("detalle",), "Solo ofertas: resumen en una línea con la empresa, la ubicación, las plazas y el plazo."),
@@ -1719,12 +1759,13 @@ def news(offers: dict, events: list, announcements: list, sources: dict, base_ur
     for event in events:
         offer = offers.get(event["offer"])
         if (offer is None or offer["status"] != "open" or event["kind"] not in ("new", "republished")
-                or datetime.fromisoformat(event["at"]) < since or off_front(offer)):
+                or datetime.fromisoformat(event["at"]) < since):
             continue
         items.append({
             "id": f"{event['offer']}/{event['kind']}/{event['at']}", "fecha": event["at"],
             "tipo": "oferta", "evento": event["kind"], "organismo": offer["source"],
-            "ccaa": CCAA.get(offer.get("region") or ""),
+            "ccaa": CCAA.get(offer.get("region") or ""), "extranjero": abroad(offer),
+            "tipo_contrato": offer.get("kind"),
             "areas": areas.offer_areas(offer, group_of.get(offer["source"], ""))[0],
             **remote_fields(offer),
             "titulo": humane_caps(offer["title"]), "detalle": offer_summary(offer),
@@ -1836,8 +1877,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     moment = (checked_at or now).astimezone(MADRID)
     checked = f"{long_date(moment.date().isoformat())} a las {moment:%H:%M}"
     open_offers = [o for o in offers.values() if o["status"] == "open"]
-    shown = [o for o in open_offers if not off_front(o)]  # las de los listados de la web
-    closed = [o for o in offers.values() if o["status"] == "closed" and not off_front(o)]
+    closed = [o for o in offers.values() if o["status"] == "closed"]
     group_of = {s.id: s.group for s in ACTIVE}
 
     if out.exists():
@@ -1848,15 +1888,16 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     def put(path: str, html: str) -> None:
         write(out / path / "index.html", head_url(html, base_url, path))
 
-    put("", index_page(shown, today, checked, sources))
-    put("investigacion/", research_page(shown, today, checked, sources))
+    put("", index_page(open_offers, today, checked, sources))
+    put("investigacion/", research_page(open_offers, today, checked, sources))
+    put("becas/", grants_page(open_offers, today, checked, sources))
     groups = process_groups(announcements)
     live = [g for g in groups if is_live(g)]
     running = {s.id: sum(g[0]["source"] == s.id for g in live) for s in ACTIVE}
-    put("organismos/", organisms_page(sources, shown, checked, running, TELEGRAM_BOT))
+    put("organismos/", organisms_page(sources, open_offers, checked, running, TELEGRAM_BOT))
     for source in ACTIVE:
         put(f"organismos/{source.id}/", organism_page(
-            source, shown, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
+            source, open_offers, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
     for offer in offers.values():
         put(offer_path(offer), offer_page(offer, sources, now, checked, base_url))
     put("anuncios/", announcements_page(announcements, checked, sources, today))
@@ -1872,9 +1913,8 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     ), base_url, None))
 
     offer_url = lambda offer: base_url + offer_path(offer)
-    offer_feed = [item for item in feeds.offer_items(offers, events, offer_url,
-                                                     lambda offer: offer_summary(offer, published=True))
-                  if not off_front(item["offer"])]
+    offer_items = feeds.offer_items(offers, events, offer_url, lambda offer: offer_summary(offer, published=True))
+    offer_feed = [item for item in offer_items if not is_grant(item["offer"])]  # las becas, solo en el suyo
     notice_feed = feeds.announcement_items(announcements)
 
     def emit(path: str, title: str, items: list) -> None:
@@ -1884,6 +1924,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
 
     emit("feed.xml", "Todas las novedades", offer_feed + notice_feed)
     emit("feeds/anuncios.xml", "Anuncios de procesos", notice_feed)
+    emit("feeds/becas.xml", "Becas", [i for i in offer_items if is_grant(i["offer"])])
     region_feeds = []
     for region in REGIONS:
         path = f"feeds/comunidad-{slug(region)}.xml"
@@ -1952,7 +1993,7 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
         [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
         # Las cerradas, y las de plazo vencido aún sin cerrar, siguen publicadas, pero no se anuncian.
-        + [offer_path(o) for o in shown if not expired(o, now)]
+        + [offer_path(o) for o in open_offers if not expired(o, now)]
     )
     write(out / "sitemap.xml",
           '<?xml version="1.0" encoding="UTF-8"?>\n'

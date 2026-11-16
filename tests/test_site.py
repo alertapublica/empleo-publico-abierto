@@ -265,9 +265,9 @@ class Site(unittest.TestCase):
     def test_menu_con_acerca_y_accesibilidad_en_el_pie(self):
         html = self.read("index.html")
         nav = html.split('id="nav-principal"')[1].split("</nav>")[0]
-        self.assertEqual(nav.count("<li>"), 6)
-        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación y Procesos tras Ofertas; Histórico, en el pie
-        self.assertEqual(labels, ["Ofertas", "Investigación", "Procesos", "Organismos", "Avisos", "Acerca de"])
+        self.assertEqual(nav.count("<li>"), 7)
+        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación, Becas y Procesos tras Ofertas; Histórico, en el pie
+        self.assertEqual(labels, ["Ofertas", "Investigación", "Becas", "Procesos", "Organismos", "Avisos", "Acerca de"])
         self.assertIn(">Procesos</a>", nav)
         self.assertIn('<a href="acerca/">Acerca de</a>', nav)
         self.assertIn('aria-current="page">Acerca de</a>', self.read("acerca/index.html").split("</nav>")[0])
@@ -1160,8 +1160,8 @@ def contrast(a, b):
     return (high + 0.05) / (low + 0.05)
 
 
-class FueraDePortada(unittest.TestCase):
-    """Becas y puestos fuera de España: solo en ofertas.json y en su ficha, sin enlazar."""
+class BecasYExtranjero(unittest.TestCase):
+    """Becas: en su sección y su feed, no en la portada ni en los demás feeds. Extranjero: un lugar más."""
 
     @classmethod
     def setUpClass(cls):
@@ -1172,9 +1172,10 @@ class FueraDePortada(unittest.TestCase):
             "1": offer("1", title="Puesto en Sevilla"),
             "6": offer("6", title="Beca de estructuras", kind="beca", country="España", location="Madrid",
                        region="Comunidad de Madrid"),
-            "7": offer("7", title="Técnico de carreteras", kind=None, country="Perú", location="Lima", region=None),
+            "7": offer("7", title="Técnico de carreteras", kind=None, country="Perú", location="Lima",
+                       region="Extranjero"),
             "8": offer("8", title="Puesto en otros países", kind=None, country="Otros Países", location=None,
-                       region=None),
+                       region="Extranjero"),
             "9": offer("9", title="Beca ya cerrada", kind="beca", status="closed",
                        closed_at="2026-11-07T00:00:00+00:00", deadline="2026-11-06"),
         }
@@ -1191,32 +1192,55 @@ class FueraDePortada(unittest.TestCase):
     def read(self, path):
         return (self.out / path).read_text(encoding="utf-8")
 
-    def test_no_salen_en_los_listados_ni_en_los_feeds(self):
-        hidden = ("Beca de estructuras", "Técnico de carreteras", "Puesto en otros países", "Beca ya cerrada")
-        for path in ("index.html", "investigacion/index.html", "organismos/index.html",
-                     "organismos/tragsa/index.html", "historico/index.html", "feed.xml",
-                     "feeds/organismo-tragsa.xml", "api/novedades.json", "sitemap.xml"):
-            text = self.read(path)
-            for title in hidden:
-                self.assertNotIn(title, text, (path, title))
-        self.assertIn("Puesto en Sevilla", self.read("index.html"))
-        self.assertIn("Puesto en Sevilla", self.read("api/novedades.json"))
-        self.assertNotIn("tragsa-6", self.read("sitemap.xml"))
+    def test_becas_solo_en_su_seccion_y_su_feed(self):
+        for path in ("index.html", "investigacion/index.html", "feed.xml", "feeds/organismo-tragsa.xml",
+                     "feeds/comunidad-comunidad-de-madrid.xml", "feeds/empresa-tragsatec.xml"):
+            self.assertNotIn("Beca de estructuras", self.read(path), path)
+        for path in ("becas/index.html", "feeds/becas.xml", "organismos/tragsa/index.html", "sitemap.xml",
+                     "api/novedades.json"):
+            self.assertIn("tragsa-6" if path == "sitemap.xml" else "Beca de estructuras", self.read(path), path)
+        becas = self.read("becas/index.html")
+        self.assertNotIn("Puesto en Sevilla", becas)
+        self.assertIn('href="becas/"', self.read("index.html"))  # en el menú
+        self.assertIn("Beca ya cerrada", self.read("historico/index.html"))
+        self.assertNotIn("Beca ya cerrada", becas)
+        self.assertIn("Volver a las becas", self.read("ofertas/tragsa-6/index.html"))
+        self.assertIn("feeds/becas.xml", self.read("avisos/index.html"))
 
-    def test_si_en_ofertas_json_con_su_pais(self):
+    def test_guardadas_no_dan_por_cerradas_las_de_otra_seccion(self):
+        self.assertRegex(self.read("index.html"), r'data-abiertas="[^"]*tragsa-6')
+        self.assertRegex(self.read("becas/index.html"), r'data-abiertas="[^"]*tragsa-1')
+
+    def test_extranjero_es_un_lugar(self):
+        portada = self.read("index.html")
+        for title in ("Técnico de carreteras", "Puesto en otros países"):
+            self.assertIn(title, portada)
+            self.assertIn(title, self.read("feed.xml"))
+            self.assertIn(title, self.read("feeds/comunidad-extranjero.xml"))
+            self.assertNotIn(title, self.read("feeds/comunidad-sin-ubicacion.xml"))
+        self.assertIn('<option value="Extranjero">Extranjero</option>', portada)
+        self.assertIn("Lima, Perú", portada)
+        self.assertIn("Otros Países", portada)
+
+    def test_api(self):
         ofertas = {o["id"]: o for o in json.loads(self.read("api/ofertas.json"))["ofertas"]}
-        self.assertEqual({k: (o["pais"], o["tipo_contrato"]) for k, o in ofertas.items()}, {
-            "tragsa:1": ("ES", "temporal"), "tragsa:6": ("ES", "beca"), "tragsa:7": ("PE", None),
-            "tragsa:8": (None, None), "tragsa:9": ("ES", "beca")})
+        self.assertEqual({k: (o["pais"], o["tipo_contrato"], o["comunidad"], o["ccaa"]) for k, o in ofertas.items()}, {
+            "tragsa:1": ("ES", "temporal", "Andalucía", "01"), "tragsa:6": ("ES", "beca", "Comunidad de Madrid", "13"),
+            "tragsa:7": ("PE", None, "Extranjero", None), "tragsa:8": (None, None, "Extranjero", None),
+            "tragsa:9": ("ES", "beca", "Andalucía", "01")})
         self.assertEqual(json.loads(self.read("api/listas.json"))["paises"],
                          [{"pais": "ES", "nombre": "España"}, {"pais": "PE", "nombre": "Perú"}])
+        novedades = {n["id"].split("/")[0]: n for n in json.loads(self.read("api/novedades.json"))["novedades"]}
+        self.assertEqual({k: (n["tipo_contrato"], n["extranjero"], n["ccaa"]) for k, n in novedades.items()}, {
+            "tragsa:1": ("temporal", False, "01"), "tragsa:6": ("beca", False, "13"),
+            "tragsa:7": (None, True, None), "tragsa:8": (None, True, None)})
 
-    def test_tienen_ficha_sin_marcado(self):
+    def test_sin_marcado(self):
         for ref in ("6", "7", "8"):
             html = self.read(f"ofertas/tragsa-{ref}/index.html")
             self.assertIn("<h1", html)
             self.assertNotIn("application/ld+json", html)
-        self.assertEqual(self.marks["fuera de portada"], 3)
+        self.assertEqual((self.marks["beca"], self.marks["extranjero"]), (1, 2))
 
 
 class Contrast(unittest.TestCase):

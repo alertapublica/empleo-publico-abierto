@@ -14,7 +14,7 @@ from . import regions, store
 from .http import Client, OutOfTime
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
                     SourceLayoutError, abroad, deadline_passed, today_madrid)
-from .regions import UNKNOWN, location_from_title, place_of, region_of
+from .regions import ABROAD, UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
 
@@ -161,7 +161,7 @@ def check_dates(item, fields: tuple[str, ...]) -> None:
 
 def _locate(record: dict) -> None:
     if abroad(record):  # «León» o «Lima» de otro país no se buscan en la tabla de comunidades
-        record["region"] = None
+        record["region"] = ABROAD
         return
     title_hint = location_from_title(record["title"])
     # El paréntesis final del título solo vale si es un lugar: en Isdefe es la referencia
