@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import worker, { lanzar, toca } from "../src/index.js";
+import worker, { lanzar, toca, tocaPag } from "../src/index.js";
 
 const env = { GITHUB_TOKEN: "t", REPO: "dueño/repo", WORKFLOW: "actualizar.yml", REF: "main" };
 
@@ -19,7 +19,7 @@ test("lanza el workflow en la rama indicada", async () => {
 test("falla si GitHub no responde 204", async () => {
   await assert.rejects(
     lanzar(env, async () => new Response("Bad credentials", { status: 401 })),
-    /GitHub respondió 401: Bad credentials/,
+    /GitHub respondió 401 \(actualizar.yml\): Bad credentials/,
   );
 });
 
@@ -73,6 +73,62 @@ test("scheduled lanza el workflow solo cuando toca", async () => {
     assert.equal(llamadas, 0);
     await worker.scheduled({ scheduledTime: Date.parse("2026-11-10T05:37:00Z") }, env, {});
     assert.equal(llamadas, 1);
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("lectura del PAG: a las 2:07, 3:07 y 5:07 UTC, todo el año", () => {
+  const pag = (iso) => tocaPag(new Date(iso));
+  assert.equal(pag("2026-11-16T02:07:00Z"), true);
+  assert.equal(pag("2026-11-16T03:07:00Z"), true);
+  assert.equal(pag("2026-11-16T05:07:00Z"), true);
+  assert.equal(pag("2026-07-07T02:07:00Z"), true); // en verano, también en UTC
+  assert.equal(pag("2026-11-16T02:37:00Z"), false);
+  assert.equal(pag("2026-11-16T04:07:00Z"), false);
+  assert.equal(pag("2026-11-16T01:07:00Z"), false);
+  assert.equal(pag("2026-11-16T06:07:00Z"), false);
+});
+
+test("lanza noche.yml del PAG con si_falta, junto a la ingesta si coinciden", async () => {
+  const original = globalThis.fetch;
+  const llamadas = [];
+  globalThis.fetch = async (url, opciones) => { llamadas.push({ url, cuerpo: JSON.parse(opciones.body) }); return new Response(null, { status: 204 }); };
+  const conPag = { ...env, PAG_REPO: "dueño/pag" };
+  try {
+    await worker.scheduled({ scheduledTime: Date.parse("2026-11-16T02:07:00Z") }, conPag, {});
+    assert.deepEqual(llamadas, [{
+      url: "https://api.github.com/repos/dueño/pag/actions/workflows/noche.yml/dispatches",
+      cuerpo: { ref: "main", inputs: { si_falta: "true" } },
+    }]);
+    llamadas.length = 0;
+    await worker.scheduled({ scheduledTime: Date.parse("2026-11-16T05:07:00Z") }, conPag, {}); // 6:07 en Madrid
+    assert.deepEqual(llamadas.map((l) => l.url).sort(), [
+      "https://api.github.com/repos/dueño/pag/actions/workflows/noche.yml/dispatches",
+      "https://api.github.com/repos/dueño/repo/actions/workflows/actualizar.yml/dispatches",
+    ]);
+    llamadas.length = 0;
+    await worker.scheduled({ scheduledTime: Date.parse("2026-11-16T02:07:00Z") }, env, {}); // sin PAG_REPO
+    assert.equal(llamadas.length, 0);
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("si falla un lanzamiento, el otro se hace igual y el fallo se ve", async () => {
+  const original = globalThis.fetch;
+  let ingesta = 0;
+  globalThis.fetch = async (url) => {
+    if (url.includes("noche.yml")) return new Response("Not Found", { status: 404 });
+    ingesta++;
+    return new Response(null, { status: 204 });
+  };
+  try {
+    await assert.rejects(
+      worker.scheduled({ scheduledTime: Date.parse("2026-11-16T05:07:00Z") }, { ...env, PAG_REPO: "dueño/pag" }, {}),
+      /GitHub respondió 404 \(noche.yml\)/,
+    );
+    assert.equal(ingesta, 1);
   } finally {
     globalThis.fetch = original;
   }
