@@ -1,6 +1,6 @@
 {
  "3085454": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3085454",
   "category": null,
   "closed_at": null,
   "code": "25118",
@@ -11,31 +11,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3085454",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Lleida",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-30",
   "ref": "3085454",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Inspección de vía<br/>- Inspección de infra<br/>- Inspección de aparatos de vía<br/>- Control del mantenimiento correctivo del contratista</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: Se valorará experiencia en el sector ferroviario <br/>Titulación: Bachillerato, BUP, COU - Otros ,Formación Profesional <br/>Programas: MS Word - Usuario,MS Excel - Usuario </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>•\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>•\tContamos con beneficios flexibles adaptables a cada persona.<br/>•\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>•\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>•\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la transparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "25118 - Inspector/a de infraestructura y vía",
   "status": "open",
   "title": "Inspector/a de infraestructura y vía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3085454"
  },
  "3130079": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3130079",
   "category": null,
   "closed_at": null,
   "code": "25686",
@@ -46,31 +73,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3130079",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Lleida",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-16",
   "ref": "3130079",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>La función principal es la de asegurar el buen estado y seguridad de las vías de comunicación.<br/>Tareas y responsabilidades:<br/>- Vigilante conservación carreteras <br/>- Supervisión de trabajos<br/>- Realización de informes<br/>- Mantenimiento básico<br/>- Control de señalización<br/>- Control de obras y actividades colindantes<br/>- Elaboración de informes<br/>- Colaboración en labores de vialidad invernal<br/></p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Más de 5 años de experiencia en vigilancia conservación carreteras<br/>- Titulación: Formación Profesional / Otros</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "25686 - Vigilante de conservación de carreteras",
   "status": "open",
   "title": "Vigilante de conservación de carreteras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3130079"
  },
  "3136556": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136556",
   "category": null,
   "closed_at": null,
   "code": "25773",
@@ -81,31 +135,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3136556",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Madrid",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2025-09-03",
   "ref": "3136556",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Automatización de Sistemas ATM.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Grado en Ingeniería Aeroespacial, Grado en Ingeniería de Telecomunicación, Grado en Ingeniería Informática o equivalente (titulación homologada en España)<br/>- Más de 2 años de experiencia en automatización de Sistemas ATM. <br/></p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.<br/><br/><br/><br/></p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "25773 - Ingeniero/a Automatización Sistemas ATM",
   "status": "open",
   "title": "Ingeniero/a Automatización Sistemas ATM",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136556"
  },
  "3136926": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136926",
   "category": null,
   "closed_at": null,
   "code": "25923",
@@ -116,31 +197,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3136926",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Lleida",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-19",
   "ref": "3136926",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>1. Inspecciones de vía para determinar el estado de los materiales (balasto, carril, sujeción, traviesas, canaleta de comunicaciones, otras instalaciones, etc.).<br/>2. Inspecciones de infraestructura para determinar el estado de los activos (Terraplenes, desmontes, estructuras, túneles, caminos de servicio, cerramiento, zonas de dominio público, etc.) <br/>3. Vigilancia y seguimiento de las obras de inversión y de obras a terceros. <br/>4. Control del mantenimiento correctivo del adjudicatario del mantenimiento (Bateos, sustitución de carril, soldaduras, recargues, limpieza de cunetas, saneo de cárcavas, desbroce, descaste de conejos, etc.).</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: Se valorará la experiencia en el sector ferroviario.<br/>Titulación: Bachillerato, BUP, COU, Formación Profesional - Otros.<br/>Office nivel usuario</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>•\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>•\tContamos con beneficios flexibles adaptables a cada persona.<br/>•\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>•\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>•\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la transparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "25923 - Auxiliar Inspección de infra y vía (Montagut)",
   "status": "open",
   "title": "Auxiliar Inspección de infra y vía (Montagut)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136926"
  },
  "3142903": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3142903",
   "category": null,
   "closed_at": null,
   "code": "26000",
@@ -151,31 +259,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3142903",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Madrid",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-16",
   "ref": "3142903",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Técnico/a de Material Rodante, procesos de autorización: Personal que lleva a cabo la revisión y tramitación de los expedientes de autorización de material rodante ferroviario.<br/>1.\tEvaluación de expedientes de material rodante para su autorización en el marco del Directiva (UE) 2016/797 y de acuerdo al Reglamento (UE) 2018/545<br/>2.\tEvaluación de expedientes de modificación de material rodante en el marco del Directiva (UE) 2016/797 y de acuerdo al Reglamento (UE) 2018/545<br/>3.\tTramitación de solicitudes de excepción de cumplimiento de normativa nacional en el marco del RD 929/2020<br/>4.\tParticipación en grupos de trabajo de desarrollo de normativa técnica</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: <br/>Procesos de autorización de tipo y de puesta en mercado del material rodante ferroviario, nuevo o modificado. <br/>Años de experiencia en el puesto: 2 años <br/>Titulación: FP/CICLO FORMATIVO - Ingeniería Técnica Industrial, GRADOS - Ingeniería Técnica Industrial -  Master en Ingeniería Industrial <br/>Programas: MS Word - Usuario,MS Excel - Usuario <br/>Idiomas: Inglés - B2</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26000 - Técnico/a MR Encomienda",
   "status": "open",
   "title": "Técnico/a MR Encomienda",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3142903"
  },
  "3156809": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3156809",
   "category": null,
   "closed_at": null,
   "code": "26174",
@@ -186,31 +321,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3156809",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Madrid",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-09-29",
   "ref": "3156809",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Apoyo a dirección de obra de pasos a nivel.<br/>- Elaboración de inventario de elementos de la infraestructura.<br/>- Seguimiento y control de las obras.<br/>- Elaboración de informes técnicos.<br/>- Conocimiento en obras ferroviarias de montaje y/o renovación de vía.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia en: obras ferroviarias de montaje y/o renovación de vía. <br/>- Años de experiencia en el puesto: al menos 2 años.<br/>- Titulación: Ingeniería de Caminos, Canales y Puertos, Máster en Ingeniería de Caminos, Canales y Puertos, Grado en Ingeniería Civil, Ingeniería Industrial, Ingeniería Técnica Induslrial.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/><br/>•\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>•\tContamos con beneficios flexibles adaptables a cada persona.<br/>•\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>•\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>•\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/><br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/><br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.<br/></p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26174 - Técnico/a de Apoyo de Obras de Pasos a Nivel",
   "status": "open",
   "title": "Técnico/a de Apoyo de Obras de Pasos a Nivel",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3156809"
  },
  "3172169": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3172169",
   "category": null,
   "closed_at": null,
   "code": "26437",
@@ -221,31 +383,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3172169",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Madrid",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-21",
   "ref": "3172169",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>CONSULTORÍA</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>-\tApoyo técnico en proyectos nacionales e internacionales. <br/>-\tAnálisis de servicios ferroviarios y estudios de explotación. <br/>-\tDesarrollo de mallas de circulación y esquemas de ocupación de vías. <br/>-\tEvaluación técnica de trazados ferroviarios.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en<br/>o\tAnálisis de servicios ferroviarios y estudios de explotación.<br/>o\tDesarrollo de mallas de circulación y esquemas de ocupación de vías en estaciones y terminales.<br/>o\tEvaluación técnica de trazados ferroviarios para líneas de pasajeros y mercancías.<br/>o\tParticipación en proyectos de planificación de capacidad y diseño de programas de explotación.<br/><br/>Competencias clave:<br/>\u0007\tAnálisis de demanda y capacidad ferroviaria.<br/>\u0007\tDiseño y optimización de mallas de circulación.<br/>\u0007\tElaboración de planes de explotación y esquemas operativos.<br/>\u0007\tConocimiento de normativa ferroviaria y herramientas de simulación (DPL Simultren, RailSYS o similares).<br/>\u0007\tCapacidad de análisis técnico y toma de decisiones estratégicas.<br/>\u0007\tTrabajo en equipo y comunicación efectiva con equipos multidisciplinares. <br/><br/>*Años de experiencia en el puesto: más de 5 años <br/><br/>*Titulación: <br/>     - Titulación no exigida, valorable formación universitaria en Ingeniería de Caminos, Canales y Puertos, Ingeniería Civil, Ingeniería de Transporte, Ingeniería Ferroviaria o similares.<br/>     - Valorable formación complementaria en planificación del transporte, modelización de demanda o simulación ferroviaria (deseable).<br/><br/><br/>*Programas: <br/>     - MS Word - nivel usuario<br/>     - MS Excel - nivel usuario<br/>     - MS Power Point - nivel usuario<br/>     - Autocad - nivel usuario<br/>     - DPL Simultrain, RailSYS o similares<br/><br/>*Idiomas: Inglés: nivel profesional (mínimo B2/C1).<br/><br/>*El proceso de selección podrá ser gestionado por una entidad colaboradora especializada.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26437 - Consultor/a Ferroviario de Explotación y Capacidad",
   "status": "open",
   "title": "Consultor/a Ferroviario de Explotación y Capacidad",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3172169"
  },
  "3193510": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3193510",
   "category": null,
   "closed_at": null,
   "code": "26636",
@@ -304,10 +493,10 @@
   "source_title": "26636 - Técnico/a de Edificación",
   "status": "open",
   "title": "Técnico/a de Edificación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3193510"
  },
  "3205940": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3205940",
   "category": null,
   "closed_at": null,
   "code": "26790",
@@ -318,31 +507,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3205940",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Madrid",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-10-05",
   "ref": "3205940",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Consultor/a IA. Necesario experiencia en:<br/>\u0007\tIntegración con API´s<br/>\u0007\tExperiencia en el entramiento con LLM<br/>\u0007\tExperiencia principalmente en Phyton <br/>\u0007\tExperiencia en modelos de IA.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: <br/>Consultor/a IA. Necesario experiencia en:<br/>\u0007\tIntegración con API´s<br/>\u0007\tExperiencia en el entramiento con LLM<br/>\u0007\tExperiencia principalmente en Phyton <br/>\u0007\tExperiencia en modelos de IA. <br/><br/>Años de experiencia en el puesto:  2 años <br/><br/>Titulación: Ingeniería Informática, Master en Ingeniería del Software, Grado en Ciencias de Datos e Inteligencia Artificial, Informática <br/>Formación Profesional en Informática.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26790 - Consultor/a de Inteligencia Artificial",
   "status": "open",
   "title": "Consultor/a de Inteligencia Artificial",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3205940"
  },
  "3211404": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3211404",
   "category": null,
   "closed_at": null,
   "code": "26772",
@@ -353,31 +569,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3211404",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "La Rioja",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-08-04",
   "ref": "3211404",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "La Rioja",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Coordinador/a en obra del equipo de trabajo para control y vigilancias de las obras: ejecución de obras, instalaciones de enclavamientos, sistemas de protección, sistemas auxiliares de detección, telecomunicación fijas y móviles, etc.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia en sistemas de señalización ferroviaria.<br/>- Aportar más de 5 años de experiencia profesional, de los cuales al menos 3  como responsable de instalación de asistencia técnica a obra y mantenimiento de señalización ferroviaria.<br/>- Titulación: Ingeniería Técnica Industrial y/o Telecomunicación, Grado en Ingeniería Industrial y/o  Telecomunicaciones.<br/>- Programas: Word, Excel, Power Point , Project, y AutoCAD  a nivel usuario.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26772 - Responsable de Instalación de asistencia técnica de señalización ferroviaria",
   "status": "open",
   "title": "Responsable de Instalación de asistencia técnica de señalización ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3211404"
  },
  "3211405": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3211405",
   "category": null,
   "closed_at": null,
   "code": "26773",
@@ -388,31 +631,58 @@
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
-  "detail_ok": false,
+  "detail_ok": true,
+  "detail_version": 1,
   "family": null,
   "first_seen": "2026-11-16T16:37:27+00:00",
   "id": "ineco:3211405",
   "kind": null,
   "listed_deadline": null,
-  "location": null,
+  "location": "Zaragoza",
   "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
   "portal_tries": 0,
-  "positions": null,
+  "positions": 1,
   "published_on": "2026-07-28",
   "ref": "3211405",
-  "region": "Sin ubicación",
-  "sections": [],
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Entre sus principales funciones estarán la realización de <br/>- Replanteos.<br/>- Control de ejecución de las obras.<br/>- Análisis y propuesta de soluciones.<br/>En obras de señalización ferroviaria. <br/>Este puesto puede desempeñarse desde las ubicaciones de Madrid, La Rioja y/o Zaragoza. Requerirá desplazamientos puntuales a las obras. </p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia en: Sistemas de Señalización Ferroviaria.<br/>- Al menos 5 años de experiencia en el puesto.<br/>- Titulación: Grado en Ingeniería Industrial, Ingeniería de Telecomunicación, Master en Ingeniería Industrial y/o en Ingeniería de Telecomunicación.<br/>- Programas: Word, Excel, Power Point, Project, AutoCAD  a nivel usuario.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
   "source": "ineco",
   "source_title": "26773 Jefe/a Técnico/a de Señalización Ferroviaria",
   "status": "open",
   "title": "Jefe/a Técnico/a de Señalización Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3211405"
  },
  "3214523": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3214523",
   "category": null,
   "closed_at": null,
   "code": "26858",
@@ -444,10 +714,10 @@
   "source_title": "26858 - Técnico/a de mantenimiento de instalaciones de suministro de energía eléctrica",
   "status": "open",
   "title": "Técnico/a de mantenimiento de instalaciones de suministro de energía eléctrica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3214523"
  },
  "3220435": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3220435",
   "category": null,
   "closed_at": null,
   "code": "26935",
@@ -479,10 +749,10 @@
   "source_title": "26935 - Técnico/a en Planificación de Infraestructuras de Transporte Terrestre",
   "status": "open",
   "title": "Técnico/a en Planificación de Infraestructuras de Transporte Terrestre",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3220435"
  },
  "3225099": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225099",
   "category": null,
   "closed_at": null,
   "code": "26883",
@@ -541,10 +811,10 @@
   "source_title": "26883 Director/a Obra Línea Aérea de Contacto Ferroviaria",
   "status": "open",
   "title": "Director/a Obra Línea Aérea de Contacto Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225099"
  },
  "3225100": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225100",
   "category": null,
   "closed_at": null,
   "code": "26915",
@@ -576,10 +846,10 @@
   "source_title": "26915 - Director/a Obra LAC Pórticos Sup. Pantógrafos",
   "status": "open",
   "title": "Director/a Obra LAC Pórticos Sup. Pantógrafos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225100"
  },
  "3225145": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225145",
   "category": null,
   "closed_at": null,
   "code": "26977",
@@ -611,10 +881,10 @@
   "source_title": "26977- Técnico/a de elaboración de Pliegos y Proyectos de Instalaciones de Edificación",
   "status": "open",
   "title": "Técnico/a de elaboración de Pliegos y Proyectos de Instalaciones de Edificación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225145"
  },
  "3225147": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225147",
   "category": null,
   "closed_at": null,
   "code": "26979",
@@ -646,10 +916,10 @@
   "source_title": "26979 - Técnico/a de elaboración de Pliegos y Proyectos de Instalaciones de Edificación",
   "status": "open",
   "title": "Técnico/a de elaboración de Pliegos y Proyectos de Instalaciones de Edificación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3225147"
  },
  "3227788": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3227788",
   "category": null,
   "closed_at": null,
   "code": "27097",
@@ -681,10 +951,10 @@
   "source_title": "27097 - Técnico/a de Apoyo de Autorizaciones de Entrada en Servicio",
   "status": "open",
   "title": "Técnico/a de Apoyo de Autorizaciones de Entrada en Servicio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3227788"
  },
  "3229317": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3229317",
   "category": null,
   "closed_at": null,
   "code": "27036",
@@ -716,10 +986,10 @@
   "source_title": "27036 - Experto/a en viabilidad Constructiva en fase de Proyecto en la Dirección de Proyectos de edificación.",
   "status": "open",
   "title": "Experto/a en viabilidad Constructiva en fase de Proyecto en la Dirección de Proyectos de edificación.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3229317"
  },
  "3234073": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234073",
   "category": null,
   "closed_at": null,
   "code": "27149",
@@ -751,10 +1021,10 @@
   "source_title": "27149 - Jefe/a Unidad Pórticos Inspección Pantógrafos",
   "status": "open",
   "title": "Jefe/a Unidad Pórticos Inspección Pantógrafos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234073"
  },
  "3234478": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234478",
   "category": null,
   "closed_at": null,
   "code": "27163",
@@ -786,10 +1056,10 @@
   "source_title": "27163 - Técnico/a para supervisión ambiental de proyectos",
   "status": "open",
   "title": "Técnico/a para supervisión ambiental de proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234478"
  },
  "3234480": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234480",
   "category": null,
   "closed_at": null,
   "code": "27164",
@@ -821,10 +1091,10 @@
   "source_title": "27164 - Técnico/a para supervisión ambiental de proyectos",
   "status": "open",
   "title": "Técnico/a para supervisión ambiental de proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234480"
  },
  "3234824": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234824",
   "category": null,
   "closed_at": null,
   "code": "27170",
@@ -856,10 +1126,10 @@
   "source_title": "27170 - Coordinador/a Ambiental de Obra",
   "status": "open",
   "title": "Coordinador/a Ambiental de Obra",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234824"
  },
  "3234864": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234864",
   "category": null,
   "closed_at": null,
   "code": "27215",
@@ -891,10 +1161,10 @@
   "source_title": "27215 - Apoyo Técnico/a Puestas en Servicio",
   "status": "open",
   "title": "Apoyo Técnico/a Puestas en Servicio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234864"
  },
  "3234865": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234865",
   "category": null,
   "closed_at": null,
   "code": "27216",
@@ -926,10 +1196,10 @@
   "source_title": "27216 - Apoyo técnico/a en seguridad ferroviaria",
   "status": "open",
   "title": "Apoyo técnico/a en seguridad ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3234865"
  },
  "3235009": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3235009",
   "category": null,
   "closed_at": null,
   "code": "27169",
@@ -961,10 +1231,10 @@
   "source_title": "27169 - Coordinador/a Ambiental de Obra",
   "status": "open",
   "title": "Coordinador/a Ambiental de Obra",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3235009"
  },
  "3235171": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3235171",
   "category": null,
   "closed_at": null,
   "code": "27211",
@@ -996,10 +1266,10 @@
   "source_title": "27211 - Dirección de obra ferroviaria",
   "status": "open",
   "title": "Dirección de obra ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3235171"
  },
  "3238963": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3238963",
   "category": null,
   "closed_at": null,
   "code": "27264",
@@ -1031,10 +1301,10 @@
   "source_title": "27264 - Técnico/a en Gestión de Riesgos",
   "status": "open",
   "title": "Técnico/a en Gestión de Riesgos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3238963"
  },
  "3242137": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3242137",
   "category": null,
   "closed_at": null,
   "code": "27322",
@@ -1093,10 +1363,10 @@
   "source_title": "27322 - Técnico/a de gestión de inmuebles/mantenimiento",
   "status": "open",
   "title": "Técnico/a de gestión de inmuebles/mantenimiento",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3242137"
  },
  "3244410": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244410",
   "category": null,
   "closed_at": null,
   "code": "27353",
@@ -1128,10 +1398,10 @@
   "source_title": "27353 - Técnico/a para proyectos de innovación",
   "status": "open",
   "title": "Técnico/a para proyectos de innovación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244410"
  },
  "3244678": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244678",
   "category": null,
   "closed_at": null,
   "code": "27396",
@@ -1163,10 +1433,10 @@
   "source_title": "27396 Soporte Técnico laboratorio",
   "status": "open",
   "title": "Soporte Técnico laboratorio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244678"
  },
  "3245299": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3245299",
   "category": null,
   "closed_at": null,
   "code": "27409",
@@ -1198,10 +1468,10 @@
   "source_title": "27409 - Experto/a en Supervisión de Proyectos",
   "status": "open",
   "title": "Experto/a en Supervisión de Proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3245299"
  },
  "3248385": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248385",
   "category": null,
   "closed_at": null,
   "code": "27413",
@@ -1233,10 +1503,10 @@
   "source_title": "27413 - Técnico/a de Apoyo a Dirección de Proyectos",
   "status": "open",
   "title": "Técnico/a de Apoyo a Dirección de Proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248385"
  },
  "3248386": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248386",
   "category": null,
   "closed_at": null,
   "code": "27414",
@@ -1268,10 +1538,10 @@
   "source_title": "27414 - Técnico/a de Apoyo a Dirección de Proyectos",
   "status": "open",
   "title": "Técnico/a de Apoyo a Dirección de Proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248386"
  },
  "3248951": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248951",
   "category": null,
   "closed_at": null,
   "code": "27455",
@@ -1303,10 +1573,10 @@
   "source_title": "27455 - Experto/a en Transporte Ferroviario de Mercancías y Regulación en el ámbito del transporte por ferrocarril",
   "status": "open",
   "title": "Experto/a en Transporte Ferroviario de Mercancías y Regulación en el ámbito del transporte por ferrocarril",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3248951"
  },
  "3249139": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3249139",
   "category": null,
   "closed_at": null,
   "code": "27457",
@@ -1338,10 +1608,10 @@
   "source_title": "27457 - Técnico/a en Gestión de Riesgos Ferroviarios",
   "status": "open",
   "title": "Técnico/a en Gestión de Riesgos Ferroviarios",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3249139"
  },
  "3251138": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3251138",
   "category": null,
   "closed_at": null,
   "code": "27390",
@@ -1373,10 +1643,10 @@
   "source_title": "27390 - Gerente de Planificación de Transporte Terrestre",
   "status": "open",
   "title": "Gerente de Planificación de Transporte Terrestre",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3251138"
  },
  "3256126": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3256126",
   "category": null,
   "closed_at": null,
   "code": "27600",
@@ -1435,10 +1705,10 @@
   "source_title": "27600- Beca Ingeniero/a de Estructuras",
   "status": "open",
   "title": "Beca Ingeniero/a de Estructuras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3256126"
  },
  "3257039": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3257039",
   "category": null,
   "closed_at": null,
   "code": "27550",
@@ -1470,10 +1740,10 @@
   "source_title": "27550 - Ingeniero/a de Sistemas Radar Aeronáuticos",
   "status": "open",
   "title": "Ingeniero/a de Sistemas Radar Aeronáuticos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3257039"
  },
  "3260875": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3260875",
   "category": null,
   "closed_at": null,
   "code": "27584",
@@ -1505,10 +1775,10 @@
   "source_title": "27584 - Técnico/a de Redacción de Proyectos de Infraestructura Ferroviaria",
   "status": "open",
   "title": "Técnico/a de Redacción de Proyectos de Infraestructura Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3260875"
  },
  "3261508": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3261508",
   "category": null,
   "closed_at": null,
   "code": "27501",
@@ -1540,10 +1810,10 @@
   "source_title": "27501 - Analista de desarrollo Java",
   "status": "open",
   "title": "Analista de desarrollo Java",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3261508"
  },
  "3266872": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3266872",
   "category": null,
   "closed_at": null,
   "code": "27717",
@@ -1575,10 +1845,10 @@
   "source_title": "27717 - Contract Manager.",
   "status": "open",
   "title": "Contract Manager.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3266872"
  },
  "3269120": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269120",
   "category": null,
   "closed_at": null,
   "code": "27835",
@@ -1637,10 +1907,10 @@
   "source_title": "27835 - Técnico/a de Almacenes",
   "status": "open",
   "title": "Técnico/a de Almacenes",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269120"
  },
  "3270808": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3270808",
   "category": null,
   "closed_at": null,
   "code": "27708",
@@ -1672,10 +1942,10 @@
   "source_title": "27708 - Técnico/a Comunicaciones aeronáuticas",
   "status": "open",
   "title": "Técnico/a Comunicaciones aeronáuticas",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3270808"
  },
  "3272484": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3272484",
   "category": null,
   "closed_at": null,
   "code": "27297",
@@ -1707,10 +1977,10 @@
   "source_title": "27297 - Gestión y operación de sistemas",
   "status": "open",
   "title": "Gestión y operación de sistemas",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3272484"
  },
  "3272754": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3272754",
   "category": null,
   "closed_at": null,
   "code": "27800",
@@ -1742,10 +2012,10 @@
   "source_title": "27800 - Técnico/a BIM en Obra",
   "status": "open",
   "title": "Técnico/a BIM en Obra",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3272754"
  },
  "3273845": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273845",
   "category": null,
   "closed_at": null,
   "code": "27920",
@@ -1777,10 +2047,10 @@
   "source_title": "27920 - Soporte técnico/a mantenimiento ferroviario",
   "status": "open",
   "title": "Soporte técnico/a mantenimiento ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273845"
  },
  "3273859": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273859",
   "category": null,
   "closed_at": null,
   "code": "27922",
@@ -1812,10 +2082,10 @@
   "source_title": "27922 - Técnico/a de Mantenimiento Ferroviario",
   "status": "open",
   "title": "Técnico/a de Mantenimiento Ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273859"
  },
  "3273860": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273860",
   "category": null,
   "closed_at": null,
   "code": "27921",
@@ -1847,10 +2117,10 @@
   "source_title": "27921 - Soporte técnico/a mantenimiento ferroviario",
   "status": "open",
   "title": "Soporte técnico/a mantenimiento ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273860"
  },
  "3273863": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273863",
   "category": null,
   "closed_at": null,
   "code": "27924",
@@ -1882,10 +2152,10 @@
   "source_title": "27924 - Soporte Técnico/a de mantenimiento ferroviario",
   "status": "open",
   "title": "Soporte Técnico/a de mantenimiento ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273863"
  },
  "3273864": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273864",
   "category": null,
   "closed_at": null,
   "code": "27925",
@@ -1917,10 +2187,10 @@
   "source_title": "27925 - Soporte Técnico/a de mantenimiento ferroviario",
   "status": "open",
   "title": "Soporte Técnico/a de mantenimiento ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273864"
  },
  "3273865": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273865",
   "category": null,
   "closed_at": null,
   "code": "27928",
@@ -1952,10 +2222,10 @@
   "source_title": "27928 - Soporte Técnico/a de mantenimiento ferroviario",
   "status": "open",
   "title": "Soporte Técnico/a de mantenimiento ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273865"
  },
  "3273882": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273882",
   "category": null,
   "closed_at": null,
   "code": "27776",
@@ -1987,10 +2257,10 @@
   "source_title": "27776 - Director/a de Proyectos de Infraestructuras Ferroviarias",
   "status": "open",
   "title": "Director/a de Proyectos de Infraestructuras Ferroviarias",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3273882"
  },
  "3275492": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3275492",
   "category": null,
   "closed_at": null,
   "code": "27919",
@@ -2022,10 +2292,10 @@
   "source_title": "27919 - Supervisor/a de Obra",
   "status": "open",
   "title": "Supervisor/a de Obra",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3275492"
  },
  "3275508": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3275508",
   "category": null,
   "closed_at": null,
   "code": "27966",
@@ -2084,10 +2354,10 @@
   "source_title": "27966 - Director/a de Obra de Señalización Ferroviaria",
   "status": "open",
   "title": "Director/a de Obra de Señalización Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3275508"
  },
  "3277555": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3277555",
   "category": null,
   "closed_at": null,
   "code": "28012",
@@ -2119,10 +2389,10 @@
   "source_title": "28012 - Director/a de Obra Ferroviaria",
   "status": "open",
   "title": "Director/a de Obra Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3277555"
  },
  "3278335": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3278335",
   "category": null,
   "closed_at": null,
   "code": "27964",
@@ -2154,10 +2424,10 @@
   "source_title": "27964 - Técnico/a de Supervisión de Proyectos",
   "status": "open",
   "title": "Técnico/a de Supervisión de Proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3278335"
  },
  "3279967": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3279967",
   "category": null,
   "closed_at": null,
   "code": "28066",
@@ -2189,10 +2459,10 @@
   "source_title": "28066 - Técnico/a de Suministros de vía",
   "status": "open",
   "title": "Técnico/a de Suministros de vía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3279967"
  },
  "3280876": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3280876",
   "category": null,
   "closed_at": null,
   "code": "28079",
@@ -2224,10 +2494,10 @@
   "source_title": "28079 - Técnico/a de contabilidad financiera",
   "status": "open",
   "title": "Técnico/a de contabilidad financiera",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3280876"
  },
  "3281597": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3281597",
   "category": null,
   "closed_at": null,
   "code": "28049",
@@ -2259,10 +2529,10 @@
   "source_title": "28049 - Generalista de Proyectos de Carreteras y Viales",
   "status": "open",
   "title": "Generalista de Proyectos de Carreteras y Viales",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3281597"
  },
  "3281599": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3281599",
   "category": null,
   "closed_at": null,
   "code": "28067",
@@ -2294,10 +2564,10 @@
   "source_title": "28067 - Técnico/a de Circulación en Obra",
   "status": "open",
   "title": "Técnico/a de Circulación en Obra",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3281599"
  },
  "3283219": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3283219",
   "category": null,
   "closed_at": null,
   "code": "28126",
@@ -2329,10 +2599,10 @@
   "source_title": "28126 - Técnico/a Experto/a en Semiconductores",
   "status": "open",
   "title": "Técnico/a Experto/a en Semiconductores",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3283219"
  },
  "3285205": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3285205",
   "category": null,
   "closed_at": null,
   "code": "28150",
@@ -2364,10 +2634,10 @@
   "source_title": "28150 - Auxiliar Inspección Infraestructura Ferroviaria",
   "status": "open",
   "title": "Auxiliar Inspección Infraestructura Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3285205"
  },
  "3286248": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3286248",
   "category": null,
   "closed_at": null,
   "code": "28068",
@@ -2399,10 +2669,10 @@
   "source_title": "28068 - Técnico/a en CRC App.",
   "status": "open",
   "title": "Técnico/a en CRC App.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3286248"
  },
  "3286421": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3286421",
   "category": null,
   "closed_at": null,
   "code": "28120",
@@ -2434,10 +2704,10 @@
   "source_title": "28120 -Técnico/a Asistencia Técnica de Obra de Señalización Ferroviaria",
   "status": "open",
   "title": "Técnico/a Asistencia Técnica de Obra de Señalización Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3286421"
  },
  "3287090": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287090",
   "category": null,
   "closed_at": null,
   "code": "28207",
@@ -2469,10 +2739,10 @@
   "source_title": "28207 - Becario/a de proyectos ferroviarios",
   "status": "open",
   "title": "Becario/a de proyectos ferroviarios",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287090"
  },
  "3287910": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287910",
   "category": null,
   "closed_at": null,
   "code": "28189",
@@ -2504,10 +2774,10 @@
   "source_title": "28189 - Técnico/a de infra y vía (Antequera)",
   "status": "open",
   "title": "Técnico/a de infra y vía (Antequera)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287910"
  },
  "3289839": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3289839",
   "category": null,
   "closed_at": null,
   "code": "28226",
@@ -2539,10 +2809,10 @@
   "source_title": "28226 - Técnico/a de Infraestructura y Vía para Obras Ferroviarias",
   "status": "open",
   "title": "Técnico/a de Infraestructura y Vía para Obras Ferroviarias",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3289839"
  },
  "3290210": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290210",
   "category": null,
   "closed_at": null,
   "code": "28208",
@@ -2601,10 +2871,10 @@
   "source_title": "28208-Técnico/a Línea Aérea Contacto Ferroviaria",
   "status": "open",
   "title": "Técnico/a Línea Aérea Contacto Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290210"
  },
  "3290211": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290211",
   "category": null,
   "closed_at": null,
   "code": "28209",
@@ -2636,10 +2906,10 @@
   "source_title": "28209 -Ingeniero/a Linea Aérea de Contacto",
   "status": "open",
   "title": "Ingeniero/a Linea Aérea de Contacto",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290211"
  },
  "3290653": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290653",
   "category": null,
   "closed_at": null,
   "code": "28193",
@@ -2671,10 +2941,10 @@
   "source_title": "28193- Analista Programador/a JAVA",
   "status": "open",
   "title": "Analista Programador/a JAVA",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290653"
  },
  "3291880": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3291880",
   "category": null,
   "closed_at": null,
   "code": "28250",
@@ -2706,10 +2976,10 @@
   "source_title": "28250 - Técnico/a Seguimiento Servicios Afectados",
   "status": "open",
   "title": "Técnico/a Seguimiento Servicios Afectados",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3291880"
  },
  "3293464": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3293464",
   "category": null,
   "closed_at": null,
   "code": "28100",
@@ -2741,10 +3011,10 @@
   "source_title": "28100 - Consultor/a Destinos Turísticos Inteligentes",
   "status": "open",
   "title": "Consultor/a Destinos Turísticos Inteligentes",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3293464"
  },
  "3294521": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3294521",
   "category": null,
   "closed_at": null,
   "code": "28260",
@@ -2776,10 +3046,10 @@
   "source_title": "28260 - Responsable de Metodología y Calidad del Ciclo de Vida del Software",
   "status": "open",
   "title": "Responsable de Metodología y Calidad del Ciclo de Vida del Software",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3294521"
  },
  "3295558": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3295558",
   "category": null,
   "closed_at": null,
   "code": "28099",
@@ -2811,10 +3081,10 @@
   "source_title": "28099 - Director/a Obra Videovigilancia (CCTV) , Control de Accesos y Anti -Intrusión Alta Velocidad",
   "status": "open",
   "title": "Director/a Obra Videovigilancia (CCTV) , Control de Accesos y Anti -Intrusión Alta Velocidad",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3295558"
  },
  "3295644": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3295644",
   "category": null,
   "closed_at": null,
   "code": "28233",
@@ -2846,10 +3116,10 @@
   "source_title": "28233 - Consultor/a técnico/a en Fondos Europeos",
   "status": "open",
   "title": "Consultor/a técnico/a en Fondos Europeos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3295644"
  },
  "3296948": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3296948",
   "category": null,
   "closed_at": null,
   "code": "28296",
@@ -2881,10 +3151,10 @@
   "source_title": "28296 - Técnico/a en Consultoría de Transporte Terrestre, Modelización y Estudios de Demanda y Tráfico - Deslocalizable toda España",
   "status": "open",
   "title": "Técnico/a en Consultoría de Transporte Terrestre, Modelización y Estudios de Demanda y Tráfico - Deslocalizable toda España",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3296948"
  },
  "3298461": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298461",
   "category": null,
   "closed_at": null,
   "code": "28143",
@@ -2916,10 +3186,10 @@
   "source_title": "28143 - Analista Programador/a de Procesos ETL y PLSQL",
   "status": "open",
   "title": "Analista Programador/a de Procesos ETL y PLSQL",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298461"
  },
  "3298478": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298478",
   "category": null,
   "closed_at": null,
   "code": "28145",
@@ -2951,10 +3221,10 @@
   "source_title": "28145 - Programador/a PLSQL",
   "status": "open",
   "title": "Programador/a PLSQL",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298478"
  },
  "3298913": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298913",
   "category": null,
   "closed_at": null,
   "code": "28252",
@@ -2986,10 +3256,10 @@
   "source_title": "28252 - Técnico/a de Operaciones de Software en el Sector Energético",
   "status": "open",
   "title": "Técnico/a de Operaciones de Software en el Sector Energético",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3298913"
  },
  "3299660": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3299660",
   "category": null,
   "closed_at": null,
   "code": "28281",
@@ -3021,10 +3291,10 @@
   "source_title": "28281 - Consultor/a técnico/a IA - Arquitectura y Soluciones",
   "status": "open",
   "title": "Consultor/a técnico/a IA - Arquitectura y Soluciones",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3299660"
  },
  "3301538": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3301538",
   "category": null,
   "closed_at": null,
   "code": "28340",
@@ -3056,10 +3326,10 @@
   "source_title": "28340- Ingeniero/a de Telecomunicaciones. Redes Fijas",
   "status": "open",
   "title": "Ingeniero/a de Telecomunicaciones. Redes Fijas",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3301538"
  },
  "3302183": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3302183",
   "category": null,
   "closed_at": null,
   "code": "28357",
@@ -3091,10 +3361,10 @@
   "source_title": "28357 - Técnico/a en Servidumbres Aeronáuticas",
   "status": "open",
   "title": "Técnico/a en Servidumbres Aeronáuticas",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3302183"
  },
  "3303867": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3303867",
   "category": null,
   "closed_at": null,
   "code": "28339",
@@ -3153,10 +3423,10 @@
   "source_title": "28339 - Técnico/a Instalaciones en Edificación en Cliente.",
   "status": "open",
   "title": "Técnico/a Instalaciones en Edificación en Cliente.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3303867"
  },
  "3304168": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3304168",
   "category": null,
   "closed_at": null,
   "code": "28335",
@@ -3188,10 +3458,10 @@
   "source_title": "28335- Analista Programador/a Java con Spring Boot",
   "status": "open",
   "title": "Analista Programador/a Java con Spring Boot",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3304168"
  },
  "3304534": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3304534",
   "category": null,
   "closed_at": null,
   "code": "28370",
@@ -3223,10 +3493,10 @@
   "source_title": "28370 - Director/a de Obra de Señalización Ferroviaria.",
   "status": "open",
   "title": "Director/a de Obra de Señalización Ferroviaria.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3304534"
  },
  "3305260": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3305260",
   "category": null,
   "closed_at": null,
   "code": "27774",
@@ -3258,10 +3528,10 @@
   "source_title": "27774 - Técnico/a de seguridad y factores humanos",
   "status": "open",
   "title": "Técnico/a de seguridad y factores humanos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3305260"
  },
  "3305558": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3305558",
   "category": null,
   "closed_at": null,
   "code": "28401",
@@ -3320,10 +3590,10 @@
   "source_title": "28401- Jefe/a de Unidad de Obra Ferroviaria",
   "status": "open",
   "title": "Jefe/a de Unidad de Obra Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3305558"
  },
  "3306221": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3306221",
   "category": null,
   "closed_at": null,
   "code": "28341",
@@ -3382,10 +3652,10 @@
   "source_title": "28341- Analista de Datos de Business Intelligence",
   "status": "open",
   "title": "Analista de Datos de Business Intelligence",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3306221"
  },
  "3307671": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3307671",
   "category": null,
   "closed_at": null,
   "code": "28429",
@@ -3417,10 +3687,10 @@
   "source_title": "28429 - Beca en Proyectos de Ingeniería Civil",
   "status": "open",
   "title": "Beca en Proyectos de Ingeniería Civil",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3307671"
  },
  "3308439": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3308439",
   "category": null,
   "closed_at": null,
   "code": "28405",
@@ -3452,10 +3722,10 @@
   "source_title": "28405 - Técnico/a Línea Aérea de Contacto",
   "status": "open",
   "title": "Técnico/a Línea Aérea de Contacto",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3308439"
  },
  "3309143": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3309143",
   "category": null,
   "closed_at": null,
   "code": "28422",
@@ -3487,10 +3757,10 @@
   "source_title": "28422 - Técnico/a de Gestión de Fondos Europeos",
   "status": "open",
   "title": "Técnico/a de Gestión de Fondos Europeos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3309143"
  },
  "3311196": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311196",
   "category": null,
   "closed_at": null,
   "code": "28432",
@@ -3522,10 +3792,10 @@
   "source_title": "28432 - Analista de sistemas técnicos para integraciones",
   "status": "open",
   "title": "Analista de sistemas técnicos para integraciones",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311196"
  },
  "3311197": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311197",
   "category": null,
   "closed_at": null,
   "code": "28433",
@@ -3557,10 +3827,10 @@
   "source_title": "28433- Analista de sistemas técnicos para integraciones",
   "status": "open",
   "title": "Analista de sistemas técnicos para integraciones",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311197"
  },
  "3314089": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3314089",
   "category": null,
   "closed_at": null,
   "code": "28495",
@@ -3619,10 +3889,10 @@
   "source_title": "28495 - Técnico/a de Apoyo en Gabinete de la DG",
   "status": "open",
   "title": "Técnico/a de Apoyo en Gabinete de la DG",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3314089"
  },
  "3314760": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3314760",
   "category": null,
   "closed_at": null,
   "code": "28511",
@@ -3654,10 +3924,10 @@
   "source_title": "28511 - Ingeniero/a Material Rodante RAMS",
   "status": "open",
   "title": "Ingeniero/a Material Rodante RAMS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3314760"
  },
  "3315473": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3315473",
   "category": null,
   "closed_at": null,
   "code": "28521",
@@ -3689,10 +3959,10 @@
   "source_title": "28521 - Coordinador/a de Coordinadores de SyS",
   "status": "open",
   "title": "Coordinador/a de Coordinadores de SyS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3315473"
  },
  "3316044": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316044",
   "category": null,
   "closed_at": null,
   "code": "28528",
@@ -3724,10 +3994,10 @@
   "source_title": "28528 - Técnico/a para aplicación del MCS, Riegos y Puestas en Servicio",
   "status": "open",
   "title": "Técnico/a para aplicación del MCS, Riegos y Puestas en Servicio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316044"
  },
  "3316083": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316083",
   "category": null,
   "closed_at": null,
   "code": "28517",
@@ -3759,10 +4029,10 @@
   "source_title": "28517 - Técnico/a Sistemas Gestión Seguridad Ferroviaria",
   "status": "open",
   "title": "Técnico/a Sistemas Gestión Seguridad Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316083"
  },
  "3316470": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316470",
   "category": null,
   "closed_at": null,
   "code": "28524",
@@ -3794,10 +4064,10 @@
   "source_title": "28524- Técnico/a de Auscultación de Línea Aérea de Contacto Ferroviaria",
   "status": "open",
   "title": "Técnico/a de Auscultación de Línea Aérea de Contacto Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316470"
  },
  "3318716": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3318716",
   "category": null,
   "closed_at": null,
   "code": "28415",
@@ -3829,10 +4099,10 @@
   "source_title": "28415- Técnico/a ERTMS en obras alta velocidad",
   "status": "open",
   "title": "Técnico/a ERTMS en obras alta velocidad",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3318716"
  },
  "3318717": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3318717",
   "category": null,
   "closed_at": null,
   "code": "28562",
@@ -3864,10 +4134,10 @@
   "source_title": "28562- Técnico/a de gestión de proyectos y cambio organizacional",
   "status": "open",
   "title": "Técnico/a de gestión de proyectos y cambio organizacional",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3318717"
  },
  "3319837": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3319837",
   "category": null,
   "closed_at": null,
   "code": "28564",
@@ -3899,10 +4169,10 @@
   "source_title": "28564 - Técnico/a en consultoría de navegación aérea",
   "status": "open",
   "title": "Técnico/a en consultoría de navegación aérea",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3319837"
  },
  "3320871": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3320871",
   "category": null,
   "closed_at": null,
   "code": "28554",
@@ -3934,10 +4204,10 @@
   "source_title": "28554 - Técnico/a de Gestión de Trabajos Extraordinarios",
   "status": "open",
   "title": "Técnico/a de Gestión de Trabajos Extraordinarios",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3320871"
  },
  "3321133": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3321133",
   "category": null,
   "closed_at": null,
   "code": "28578",
@@ -3969,10 +4239,10 @@
   "source_title": "28578 - Trazadista Ferroviario",
   "status": "open",
   "title": "Trazadista Ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3321133"
  },
  "3322584": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3322584",
   "category": null,
   "closed_at": null,
   "code": "28582",
@@ -4004,10 +4274,10 @@
   "source_title": "28582 - Técnico/a oficina técnica en proyectos y obras de carreteras",
   "status": "open",
   "title": "Técnico/a oficina técnica en proyectos y obras de carreteras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3322584"
  },
  "3323135": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323135",
   "category": null,
   "closed_at": null,
   "code": "28598",
@@ -4039,10 +4309,10 @@
   "source_title": "28598 - Técnico/a de Soporte N1",
   "status": "open",
   "title": "Técnico/a de Soporte N1",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323135"
  },
  "3323635": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323635",
   "category": null,
   "closed_at": null,
   "code": "27415",
@@ -4101,10 +4371,10 @@
   "source_title": "27415 - Apoyo técnico Dirección de Proyectos",
   "status": "open",
   "title": "Apoyo técnico Dirección de Proyectos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323635"
  },
  "3323821": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323821",
   "category": null,
   "closed_at": null,
   "code": "28599",
@@ -4136,10 +4406,10 @@
   "source_title": "28599 - Técnico/a de Riesgos y Puestas en Servicio",
   "status": "open",
   "title": "Técnico/a de Riesgos y Puestas en Servicio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3323821"
  },
  "3324493": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3324493",
   "category": null,
   "closed_at": null,
   "code": "28631",
@@ -4171,10 +4441,10 @@
   "source_title": "28631 - Técnico/a en gestión aeroportuaria",
   "status": "open",
   "title": "Técnico/a en gestión aeroportuaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3324493"
  },
  "3324541": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3324541",
   "category": null,
   "closed_at": null,
   "code": "28508",
@@ -4206,10 +4476,10 @@
   "source_title": "28508 - Supervisor/a BIM",
   "status": "open",
   "title": "Supervisor/a BIM",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3324541"
  },
  "3325065": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3325065",
   "category": null,
   "closed_at": null,
   "code": "28510",
@@ -4241,10 +4511,10 @@
   "source_title": "28510 - Técnico/a de Apoyo al Mantenimiento Ferroviario",
   "status": "open",
   "title": "Técnico/a de Apoyo al Mantenimiento Ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3325065"
  },
  "3325839": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3325839",
   "category": null,
   "closed_at": null,
   "code": "28151",
@@ -4276,10 +4546,10 @@
   "source_title": "28151 - Técnico/a aeronáutico en ámbito de servidumbres / Superficies limitadoras de obstáculos (SLO)",
   "status": "open",
   "title": "Técnico/a aeronáutico en ámbito de servidumbres / Superficies limitadoras de obstáculos (SLO)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3325839"
  },
  "3326067": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3326067",
   "category": null,
   "closed_at": null,
   "code": "28640",
@@ -4311,10 +4581,10 @@
   "source_title": "28640 - Director/a Obra Catenaria Talleres",
   "status": "open",
   "title": "Director/a Obra Catenaria Talleres",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3326067"
  },
  "3326371": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3326371",
   "category": null,
   "closed_at": null,
   "code": "28634",
@@ -4346,10 +4616,10 @@
   "source_title": "28634- Dirección de Obras de Sistemas de Señalización Ferroviaria",
   "status": "open",
   "title": "Dirección de Obras de Sistemas de Señalización Ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3326371"
  },
  "3330127": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3330127",
   "category": null,
   "closed_at": null,
   "code": "28665",
@@ -4381,10 +4651,10 @@
   "source_title": "28665 - Ingeniero/a de Vigilancia Espacial SST",
   "status": "open",
   "title": "Ingeniero/a de Vigilancia Espacial SST",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3330127"
  },
  "3330128": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3330128",
   "category": null,
   "closed_at": null,
   "code": "28639",
@@ -4416,10 +4686,10 @@
   "source_title": "28639- Ingeniero/a de Sistemas de monitorización remota CNS",
   "status": "open",
   "title": "Ingeniero/a de Sistemas de monitorización remota CNS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3330128"
  },
  "3334175": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334175",
   "category": null,
   "closed_at": null,
   "code": "28711",
@@ -4451,10 +4721,10 @@
   "source_title": "28711- Técnico/a de Material Rodante Ferroviario",
   "status": "open",
   "title": "Técnico/a de Material Rodante Ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334175"
  },
  "3334502": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334502",
   "category": null,
   "closed_at": null,
   "code": "28628",
@@ -4486,10 +4756,10 @@
   "source_title": "28628 - Consultor/a Estratégico/a en Inteligencia Artificial",
   "status": "open",
   "title": "Consultor/a Estratégico/a en Inteligencia Artificial",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334502"
  },
  "3335111": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3335111",
   "category": null,
   "closed_at": null,
   "code": "28720",
@@ -4521,10 +4791,10 @@
   "source_title": "28720 - Técnico/a de Infraestructura y Vía",
   "status": "open",
   "title": "Técnico/a de Infraestructura y Vía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3335111"
  },
  "3338491": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3338491",
   "category": null,
   "closed_at": null,
   "code": "28748",
@@ -4556,10 +4826,10 @@
   "source_title": "28748 - Consultor/a de Economía del Transporte",
   "status": "open",
   "title": "Consultor/a de Economía del Transporte",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3338491"
  },
  "3340991": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3340991",
   "category": null,
   "closed_at": null,
   "code": "28789",
@@ -4585,16 +4855,16 @@
   "positions": null,
   "published_on": "2026-07-21",
   "ref": "3340991",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "28789 - Becario/a BIM",
   "status": "open",
   "title": "Becario/a BIM",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3340991"
  },
  "3341519": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3341519",
   "category": null,
   "closed_at": null,
   "code": "28703",
@@ -4653,10 +4923,10 @@
   "source_title": "28703 - Gerente de proyecto",
   "status": "open",
   "title": "Gerente de proyecto",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3341519"
  },
  "3343119": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3343119",
   "category": null,
   "closed_at": null,
   "code": "28786",
@@ -4682,16 +4952,16 @@
   "positions": null,
   "published_on": "2026-07-27",
   "ref": "3343119",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "28786 - Cost and Financial Monitoring Manager",
   "status": "open",
   "title": "Cost and Financial Monitoring Manager",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3343119"
  },
  "3343177": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3343177",
   "category": null,
   "closed_at": null,
   "code": "28603",
@@ -4723,10 +4993,10 @@
   "source_title": "28603 - Especialista en facility management y coordinación de operación de instalaciones críticas",
   "status": "open",
   "title": "Especialista en facility management y coordinación de operación de instalaciones críticas",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3343177"
  },
  "3345220": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3345220",
   "category": null,
   "closed_at": null,
   "code": "28819",
@@ -4758,10 +5028,10 @@
   "source_title": "28819 - Beca de Topografía",
   "status": "open",
   "title": "Beca de Topografía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3345220"
  },
  "3350963": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3350963",
   "category": null,
   "closed_at": null,
   "code": "28835",
@@ -4793,10 +5063,10 @@
   "source_title": "28835 - Técnico/a en Navegación Aérea para el equipo de Operaciones Aeroportuarias lado Aire y Ruta y TMA. GOA - GORT",
   "status": "open",
   "title": "Técnico/a en Navegación Aérea para el equipo de Operaciones Aeroportuarias lado Aire y Ruta y TMA. GOA - GORT",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3350963"
  },
  "3353090": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3353090",
   "category": null,
   "closed_at": null,
   "code": "28850",
@@ -4855,10 +5125,10 @@
   "source_title": "28850 - Calculista de estructuras",
   "status": "open",
   "title": "Calculista de estructuras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3353090"
  },
  "3356901": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3356901",
   "category": null,
   "closed_at": null,
   "code": "28810",
@@ -4890,10 +5160,10 @@
   "source_title": "28810 - Jefe/a de oficina técnica.",
   "status": "open",
   "title": "Jefe/a de oficina técnica.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3356901"
  },
  "3358601": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3358601",
   "category": null,
   "closed_at": null,
   "code": "28807",
@@ -4925,10 +5195,10 @@
   "source_title": "28807- Ingeniero/a compras repuestos Material Rodante",
   "status": "open",
   "title": "Ingeniero/a compras repuestos Material Rodante",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3358601"
  },
  "3358921": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3358921",
   "category": null,
   "closed_at": null,
   "code": "28880",
@@ -4960,10 +5230,10 @@
   "source_title": "28880 - Técnico/a de desarrollo de procesos de seguridad aérea",
   "status": "open",
   "title": "Técnico/a de desarrollo de procesos de seguridad aérea",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3358921"
  },
  "3359716": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3359716",
   "category": null,
   "closed_at": null,
   "code": "28887",
@@ -4995,10 +5265,10 @@
   "source_title": "28887 - Técnico/a de mantenimiento de instalaciones de suministro de energía eléctrica",
   "status": "open",
   "title": "Técnico/a de mantenimiento de instalaciones de suministro de energía eléctrica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3359716"
  },
  "3360101": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3360101",
   "category": null,
   "closed_at": null,
   "code": "28868",
@@ -5057,10 +5327,10 @@
   "source_title": "28868 - Técnico/a de Explotación de Carreteras",
   "status": "open",
   "title": "Técnico/a de Explotación de Carreteras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3360101"
  },
  "3361118": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361118",
   "category": null,
   "closed_at": null,
   "code": "28898",
@@ -5092,10 +5362,10 @@
   "source_title": "28898 - Técnico/a de Material Rodante, sistemas electromecánicos",
   "status": "open",
   "title": "Técnico/a de Material Rodante, sistemas electromecánicos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361118"
  },
  "3361130": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361130",
   "category": null,
   "closed_at": null,
   "code": "28808",
@@ -5127,10 +5397,10 @@
   "source_title": "28808 - Técnico/a Material Rodante (MR) compras.",
   "status": "open",
   "title": "Técnico/a Material Rodante (MR) compras.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361130"
  },
  "3361264": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361264",
   "category": null,
   "closed_at": null,
   "code": "28907",
@@ -5189,10 +5459,10 @@
   "source_title": "28907- Técnico/a de infra y vía (Madrid)",
   "status": "open",
   "title": "Técnico/a de infra y vía (Madrid)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361264"
  },
  "3361750": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361750",
   "category": null,
   "closed_at": null,
   "code": "28867",
@@ -5224,10 +5494,10 @@
   "source_title": "28867- Técnico/a de automatización (Sistemas ATM)",
   "status": "open",
   "title": "Técnico/a de automatización (Sistemas ATM)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361750"
  },
  "3361817": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361817",
   "category": null,
   "closed_at": null,
   "code": "28944",
@@ -5253,16 +5523,16 @@
   "positions": null,
   "published_on": "2026-09-21",
   "ref": "3361817",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "28944 - Delineante/Modelador/a en Proyectos de Infraestructuras del Transporte",
   "status": "open",
   "title": "Delineante/Modelador/a en Proyectos de Infraestructuras del Transporte",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3361817"
  },
  "3362557": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3362557",
   "category": null,
   "closed_at": null,
   "code": "28951",
@@ -5294,10 +5564,10 @@
   "source_title": "28951 Técnico/a de Apoyo a la subdirección de Estrategia de Negocio",
   "status": "open",
   "title": "Técnico/a de Apoyo a la subdirección de Estrategia de Negocio",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3362557"
  },
  "3363419": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363419",
   "category": null,
   "closed_at": null,
   "code": "28950",
@@ -5329,10 +5599,10 @@
   "source_title": "28950 - Jefe/a de Unidad (La Mezquita)",
   "status": "open",
   "title": "Jefe/a de Unidad (La Mezquita)",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363419"
  },
  "3363421": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363421",
   "category": null,
   "closed_at": null,
   "code": "28941",
@@ -5364,10 +5634,10 @@
   "source_title": "28941 - Técnico/a en Asistencia Técnica a Obras de Edificación",
   "status": "open",
   "title": "Técnico/a en Asistencia Técnica a Obras de Edificación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363421"
  },
  "3363422": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363422",
   "category": null,
   "closed_at": null,
   "code": "28942",
@@ -5426,10 +5696,10 @@
   "source_title": "28942 - Técnico/a de Instalacions en Edificación de Cliente.",
   "status": "open",
   "title": "Técnico/a de Instalacions en Edificación de Cliente.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363422"
  },
  "3363423": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363423",
   "category": null,
   "closed_at": null,
   "code": "28949",
@@ -5461,10 +5731,10 @@
   "source_title": "28949 - Jefe/a de Unidad",
   "status": "open",
   "title": "Jefe/a de Unidad",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363423"
  },
  "3363426": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363426",
   "category": null,
   "closed_at": null,
   "code": "28917",
@@ -5523,10 +5793,10 @@
   "source_title": "28917 - TÉCNICO/A INSTALACIONES DE EDIFICACIÓN EN ASISTENCIA TÉCNICA EN OBRA",
   "status": "open",
   "title": "TÉCNICO/A INSTALACIONES DE EDIFICACIÓN EN ASISTENCIA TÉCNICA EN OBRA",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3363426"
  },
  "3364044": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3364044",
   "category": null,
   "closed_at": null,
   "code": "28914",
@@ -5552,16 +5822,16 @@
   "positions": null,
   "published_on": "2026-09-25",
   "ref": "3364044",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "28914 - Analista de Adquisiciones Costa Rica",
   "status": "open",
   "title": "Analista de Adquisiciones Costa Rica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3364044"
  },
  "3364045": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3364045",
   "category": null,
   "closed_at": null,
   "code": "28731",
@@ -5593,10 +5863,10 @@
   "source_title": "28731 - Ingeniero/a de Sistemas de monitorización remota CNS",
   "status": "open",
   "title": "Ingeniero/a de Sistemas de monitorización remota CNS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3364045"
  },
  "3365874": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365874",
   "category": null,
   "closed_at": null,
   "code": "28843",
@@ -5628,10 +5898,10 @@
   "source_title": "28843 Vigilante de campo para control de vegetación",
   "status": "open",
   "title": "Vigilante de campo para control de vegetación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365874"
  },
  "3365888": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365888",
   "category": null,
   "closed_at": null,
   "code": "28906",
@@ -5663,10 +5933,10 @@
   "source_title": "28906 - Adjunto/a Dirección Obra Granada",
   "status": "open",
   "title": "Adjunto/a Dirección Obra Granada",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365888"
  },
  "3365891": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365891",
   "category": null,
   "closed_at": null,
   "code": "28901",
@@ -5698,10 +5968,10 @@
   "source_title": "28901-Técnico/a de Material Rodante Eléctrico",
   "status": "open",
   "title": "Técnico/a de Material Rodante Eléctrico",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3365891"
  },
  "3366047": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366047",
   "category": null,
   "closed_at": null,
   "code": "28796",
@@ -5733,10 +6003,10 @@
   "source_title": "28796 - Técnico/a de sistemas ADS",
   "status": "open",
   "title": "Técnico/a de sistemas ADS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366047"
  },
  "3366065": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366065",
   "category": null,
   "closed_at": null,
   "code": "28849",
@@ -5768,10 +6038,10 @@
   "source_title": "28849 - Director/a de Obra ferroviaria",
   "status": "open",
   "title": "Director/a de Obra ferroviaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366065"
  },
  "3366328": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366328",
   "category": null,
   "closed_at": null,
   "code": "28968",
@@ -5803,10 +6073,10 @@
   "source_title": "28968 - Técnico/a en diseño de instalaciones de suministro de energía",
   "status": "open",
   "title": "Técnico/a en diseño de instalaciones de suministro de energía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366328"
  },
  "3367422": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367422",
   "category": null,
   "closed_at": null,
   "code": "28752",
@@ -5838,10 +6108,10 @@
   "source_title": "28752 - Analista Estratégico/a de Mercados Ferroviarios",
   "status": "open",
   "title": "Analista Estratégico/a de Mercados Ferroviarios",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367422"
  },
  "3367441": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367441",
   "category": null,
   "closed_at": null,
   "code": "28963",
@@ -5873,10 +6143,10 @@
   "source_title": "28963-OB/ - Técnico/a de Edificación en Asistencia Técnica en Cliente",
   "status": "open",
   "title": "OB/ - Técnico/a de Edificación en Asistencia Técnica en Cliente",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367441"
  },
  "3367442": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367442",
   "category": null,
   "closed_at": null,
   "code": "28961",
@@ -5908,10 +6178,10 @@
   "source_title": "28961 - Técnico/a de Contratación para Innovación",
   "status": "open",
   "title": "Técnico/a de Contratación para Innovación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367442"
  },
  "3367626": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367626",
   "category": null,
   "closed_at": null,
   "code": "28751",
@@ -5943,10 +6213,10 @@
   "source_title": "28751-OB/ - TÉCNICO/A INSTALACIONES DE EDIFICACIÓN EN CLIENTE",
   "status": "open",
   "title": "OB/ - TÉCNICO/A INSTALACIONES DE EDIFICACIÓN EN CLIENTE",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367626"
  },
  "3367673": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367673",
   "category": null,
   "closed_at": null,
   "code": "28976",
@@ -5978,10 +6248,10 @@
   "source_title": "28976 - Becario/a estructuras BIM",
   "status": "open",
   "title": "Becario/a estructuras BIM",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367673"
  },
  "3368184": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3368184",
   "category": null,
   "closed_at": null,
   "code": "28830",
@@ -6013,10 +6283,10 @@
   "source_title": "28830 - Especialista en eficiencia energética y calidad del aire",
   "status": "open",
   "title": "Especialista en eficiencia energética y calidad del aire",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3368184"
  },
  "3368688": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3368688",
   "category": null,
   "closed_at": null,
   "code": "28966",
@@ -6048,10 +6318,10 @@
   "source_title": "28966 - Ingeniero/a ADS",
   "status": "open",
   "title": "Ingeniero/a ADS",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3368688"
  },
  "3369199": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369199",
   "category": null,
   "closed_at": null,
   "code": "28984",
@@ -6083,10 +6353,10 @@
   "source_title": "28984 - Beca Responsabilidad Social Corporativa",
   "status": "open",
   "title": "Beca Responsabilidad Social Corporativa",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369199"
  },
  "3369249": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369249",
   "category": null,
   "closed_at": null,
   "code": "28691",
@@ -6145,10 +6415,10 @@
   "source_title": "28691 - Técnico/a especialista en instrumentación técnica y científica",
   "status": "open",
   "title": "Técnico/a especialista en instrumentación técnica y científica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369249"
  },
  "3369395": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369395",
   "category": null,
   "closed_at": null,
   "code": "28777",
@@ -6180,10 +6450,10 @@
   "source_title": "28777-Técnico/a de bases de datos",
   "status": "open",
   "title": "Técnico/a de bases de datos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369395"
  },
  "3369396": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369396",
   "category": null,
   "closed_at": null,
   "code": "28778",
@@ -6215,10 +6485,10 @@
   "source_title": "28778- Técnico/a de bases de datos",
   "status": "open",
   "title": "Técnico/a de bases de datos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3369396"
  },
  "3370101": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3370101",
   "category": null,
   "closed_at": null,
   "code": "28977",
@@ -6277,10 +6547,10 @@
   "source_title": "28977 - Técnico/a de contratación",
   "status": "open",
   "title": "Técnico/a de contratación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3370101"
  },
  "3370233": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3370233",
   "category": null,
   "closed_at": null,
   "code": "28979",
@@ -6339,10 +6609,10 @@
   "source_title": "28979 - Experto/a en DevOps",
   "status": "open",
   "title": "Experto/a en DevOps",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3370233"
  },
  "3371799": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371799",
   "category": null,
   "closed_at": null,
   "code": "28622",
@@ -6374,10 +6644,10 @@
   "source_title": "28622 - Analista funcional junior",
   "status": "open",
   "title": "Analista funcional junior",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371799"
  },
  "3372199": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372199",
   "category": null,
   "closed_at": null,
   "code": "29018",
@@ -6409,10 +6679,10 @@
   "source_title": "29018 - Beca de Planificación Aeroportuaria",
   "status": "open",
   "title": "Beca de Planificación Aeroportuaria",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372199"
  },
  "3372227": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372227",
   "category": null,
   "closed_at": null,
   "code": "29022",
@@ -6444,10 +6714,10 @@
   "source_title": "29022 - Becario/a apoyo equipo de proyectos ferroviarios",
   "status": "open",
   "title": "Becario/a apoyo equipo de proyectos ferroviarios",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372227"
  },
  "3372350": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372350",
   "category": null,
   "closed_at": null,
   "code": "28895",
@@ -6479,10 +6749,10 @@
   "source_title": "28895 - Técnico/a de soporte y automatización de Procesos",
   "status": "open",
   "title": "Técnico/a de soporte y automatización de Procesos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372350"
  },
  "3372419": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372419",
   "category": null,
   "closed_at": null,
   "code": "28024",
@@ -6514,10 +6784,10 @@
   "source_title": "28024 - Ingeniero/a Asistencia Obra Despliegue CTC Ferroviario",
   "status": "open",
   "title": "Ingeniero/a Asistencia Obra Despliegue CTC Ferroviario",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372419"
  },
  "3373200": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3373200",
   "category": null,
   "closed_at": null,
   "code": "29021",
@@ -6543,16 +6813,16 @@
   "positions": null,
   "published_on": "2026-10-22",
   "ref": "3373200",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "29021 - Tecnico/a de proyectos de carreteras/viales y riesgos.",
   "status": "open",
   "title": "Tecnico/a de proyectos de carreteras/viales y riesgos.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3373200"
  },
  "3374291": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374291",
   "category": null,
   "closed_at": null,
   "code": "29048",
@@ -6584,10 +6854,10 @@
   "source_title": "29048 - Beca Ingeniería Industrial",
   "status": "open",
   "title": "Beca Ingeniería Industrial",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374291"
  },
  "3374391": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374391",
   "category": null,
   "closed_at": null,
   "code": "28939",
@@ -6619,10 +6889,10 @@
   "source_title": "28939 - Especialista en Analítica de Datos y Business Intelligence para Movilidad",
   "status": "open",
   "title": "Especialista en Analítica de Datos y Business Intelligence para Movilidad",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374391"
  },
  "3374392": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374392",
   "category": null,
   "closed_at": null,
   "code": "29016",
@@ -6654,10 +6924,10 @@
   "source_title": "29016 - Técnico/a de Soporte N1",
   "status": "open",
   "title": "Técnico/a de Soporte N1",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374392"
  },
  "3374393": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374393",
   "category": null,
   "closed_at": null,
   "code": "28715",
@@ -6716,10 +6986,10 @@
   "source_title": "28715 - Técnico/a Destinos Turísticos Inteligentes - Tecnología",
   "status": "open",
   "title": "Técnico/a Destinos Turísticos Inteligentes - Tecnología",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374393"
  },
  "3374394": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374394",
   "category": null,
   "closed_at": null,
   "code": "28987",
@@ -6778,10 +7048,10 @@
   "source_title": "28987 - Coordinación de infraestructura y servicio de asistencia de Oficina Técnica",
   "status": "open",
   "title": "Coordinación de infraestructura y servicio de asistencia de Oficina Técnica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374394"
  },
  "3374395": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374395",
   "category": null,
   "closed_at": null,
   "code": "28985",
@@ -6840,10 +7110,10 @@
   "source_title": "28985 - Administración y Mantenimiento de servidores de aplicaciones y Servicio de asistencia de Oficina Técnica",
   "status": "open",
   "title": "Administración y Mantenimiento de servidores de aplicaciones y Servicio de asistencia de Oficina Técnica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374395"
  },
  "3374396": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374396",
   "category": null,
   "closed_at": null,
   "code": "28988",
@@ -6875,10 +7145,10 @@
   "source_title": "28988 - Administración y Mantenimiento de infraestructura y Servicio de asistencia de Oficina Técnica",
   "status": "open",
   "title": "Administración y Mantenimiento de infraestructura y Servicio de asistencia de Oficina Técnica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374396"
  },
  "3374397": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374397",
   "category": null,
   "closed_at": null,
   "code": "28986",
@@ -6910,10 +7180,10 @@
   "source_title": "28986 - Coordinación especializada en Puesto Digital Inteligente",
   "status": "open",
   "title": "Coordinación especializada en Puesto Digital Inteligente",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374397"
  },
  "3374420": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374420",
   "category": null,
   "closed_at": null,
   "code": "29037",
@@ -6939,16 +7209,16 @@
   "positions": null,
   "published_on": "2026-10-30",
   "ref": "3374420",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "29037 - Gerente Técnico Proyectos Carreteras",
   "status": "open",
   "title": "Gerente Técnico Proyectos Carreteras",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374420"
  },
  "3374421": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374421",
   "category": null,
   "closed_at": null,
   "code": "29040",
@@ -6974,16 +7244,16 @@
   "positions": null,
   "published_on": "2026-10-29",
   "ref": "3374421",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "29040 - Especialista en monitoreo de estándares de desempeño.",
   "status": "open",
   "title": "Especialista en monitoreo de estándares de desempeño.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374421"
  },
  "3374422": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374422",
   "category": null,
   "closed_at": null,
   "code": "29041",
@@ -7009,16 +7279,16 @@
   "positions": null,
   "published_on": "2026-10-29",
   "ref": "3374422",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "29041 - Especialista en monitoreo de estándares de desempeño.",
   "status": "open",
   "title": "Especialista en monitoreo de estándares de desempeño.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374422"
  },
  "3374423": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374423",
   "category": null,
   "closed_at": null,
   "code": "29013",
@@ -7077,10 +7347,10 @@
   "source_title": "29013 - Técnico/a de Edificación en Asistencia Técnica en Cliente",
   "status": "open",
   "title": "Técnico/a de Edificación en Asistencia Técnica en Cliente",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374423"
  },
  "3374583": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374583",
   "category": null,
   "closed_at": null,
   "code": "29049",
@@ -7112,10 +7382,10 @@
   "source_title": "29049 - Becario/a de Ingenieria Civil o Ingeniería de Caminos, Canales y Puertos",
   "status": "open",
   "title": "Becario/a de Ingenieria Civil o Ingeniería de Caminos, Canales y Puertos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374583"
  },
  "3375194": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375194",
   "category": null,
   "closed_at": null,
   "code": "29038",
@@ -7141,16 +7411,16 @@
   "positions": null,
   "published_on": "2026-10-29",
   "ref": "3375194",
-  "region": null,
+  "region": "Extranjero",
   "sections": [],
   "source": "ineco",
   "source_title": "29038 - Gerente de Operación",
   "status": "open",
   "title": "Gerente de Operación",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375194"
  },
  "3375685": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375685",
   "category": null,
   "closed_at": null,
   "code": "29061",
@@ -7182,10 +7452,10 @@
   "source_title": "29061 - Becario/a de Ingenieria Industrial especialidad eléctrica o electrónica",
   "status": "open",
   "title": "Becario/a de Ingenieria Industrial especialidad eléctrica o electrónica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375685"
  },
  "3375686": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375686",
   "category": null,
   "closed_at": null,
   "code": "29062",
@@ -7217,10 +7487,10 @@
   "source_title": "29062 - Becario/a en entorno ferroviario de energía",
   "status": "open",
   "title": "Becario/a en entorno ferroviario de energía",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375686"
  },
  "3376019": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376019",
   "category": null,
   "closed_at": null,
   "code": "29020",
@@ -7279,10 +7549,10 @@
   "source_title": "29020 - Especialista en sistemas de gases industriales y especiales.",
   "status": "open",
   "title": "Especialista en sistemas de gases industriales y especiales.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376019"
  },
  "3376200": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376200",
   "category": null,
   "closed_at": null,
   "code": "28999",
@@ -7341,10 +7611,10 @@
   "source_title": "28999 - Técnico/a Especialista en medidas de concentración de componentes atmosféricos",
   "status": "open",
   "title": "Técnico/a Especialista en medidas de concentración de componentes atmosféricos",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376200"
  },
  "3376525": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376525",
   "category": null,
   "closed_at": null,
   "code": "28900",
@@ -7376,10 +7646,10 @@
   "source_title": "28900 - Arquitecto/a MLOps",
   "status": "open",
   "title": "Arquitecto/a MLOps",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376525"
  },
  "3376734": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376734",
   "category": null,
   "closed_at": null,
   "code": "29071",
@@ -7411,10 +7681,10 @@
   "source_title": "29071- Becario/a de Ingeniería Aeronáutica",
   "status": "open",
   "title": "Becario/a de Ingeniería Aeronáutica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376734"
  },
  "3376753": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376753",
   "category": null,
   "closed_at": null,
   "code": "29073",
@@ -7446,10 +7716,10 @@
   "source_title": "29073 - Becario/a de Ingeniería Aeronáutica",
   "status": "open",
   "title": "Becario/a de Ingeniería Aeronáutica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376753"
  },
  "3376754": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376754",
   "category": null,
   "closed_at": null,
   "code": "29074",
@@ -7508,10 +7778,10 @@
   "source_title": "29074 - Becario/a de Ingeniería Aeronáutica",
   "status": "open",
   "title": "Becario/a de Ingeniería Aeronáutica",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376754"
  },
  "3376868": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376868",
   "category": null,
   "closed_at": null,
   "code": "28991",
@@ -7543,10 +7813,10 @@
   "source_title": "28991 - Técnico/a de Instalaciones de edificación en Cliente",
   "status": "open",
   "title": "Técnico/a de Instalaciones de edificación en Cliente",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376868"
  },
  "3378652": {
-  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx",
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3378652",
   "category": null,
   "closed_at": null,
   "code": "29082",
@@ -7573,7 +7843,7 @@
   "positions": 1,
   "published_on": "2026-11-10",
   "ref": "3378652",
-  "region": null,
+  "region": "Extranjero",
   "sections": [
    {
     "html": "<p>CIVIL</p>",
@@ -7605,6 +7875,6 @@
   "source_title": "29082 - Tecnico/a de Proyectos de carreteras, viales y riesgos.",
   "status": "open",
   "title": "Tecnico/a de Proyectos de carreteras, viales y riesgos.",
-  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx"
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3378652"
  }
 }
