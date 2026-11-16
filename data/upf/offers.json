@@ -46,5 +46,53 @@
   "status": "open",
   "title": "Tècnic/a de Laboratori (6 places): Docència, Recerca i Sala de Dissecció",
   "url": "https://www.upf.edu/web/personal/ofertes-pas/-/asset_publisher/IRiYJaUWRmJS/content/tecnic-a-de-laboratori-docencia-recerca-sala-disseccio/213063326/maximized"
+ },
+ "tecnic-a-superior-comunicacio": {
+  "apply_url": "https://www.upf.edu/web/personal/ofertes-pas/-/asset_publisher/IRiYJaUWRmJS/content/tecnic-a-superior-comunicacio/213063326/maximized",
+  "category": null,
+  "closed_at": null,
+  "code": "UPF26-TSC-SIBS",
+  "company": "Universitat Pompeu Fabra",
+  "contract": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T12:07:36+00:00",
+  "id": "upf:tecnic-a-superior-comunicacio",
+  "kind": null,
+  "listed_deadline": "2026-11-30",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-16",
+  "ref": "tecnic-a-superior-comunicacio",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "Convocatòria  UPF26-TSC-SIBS\n                    <br/>\n                    Adscripció:  Servei d'Innovació - UPF Business Shuttle\n\n                    <br/>\n<p>Règim jurídic: PTGAS Laboral<br/>\nSubgrup/Nivell/Dedicació: 1-T<br/>\nDedicació: Jornada Completa</p>\nTermini de sol·licituds:  30/11/2026",
+    "lang": "ca",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><p><strong>Tècnic/a Superior - Comunicació</strong>: 16 nov. 2026</p><ul>\n<li><a href=\"https://www.upf.edu/documents/d/wiarhio/upf26-tsc_sibs_oferta_definitiva\">Oferta UPF26-TSC-SIBS</a></li>\n<li><a href=\"https://forms.gle/8KxSgj2ZYzJzwmyG6\">Formulari d'inscripció de candidatures i enviament de documentació</a></li>\n</ul></li><li><p><strong>Termini d'inscripció de candidatures</strong>: 30 nov. 2026</p></li><li><p><strong>Consultes</strong></p><p>Per consultes relacionades a<em>dreceu-vos al <a href=\"https://cau.upf.edu/rrhh\">Centre d'Atenció a l'Usuari</a>.</em></p>\n<p><em>(atendrem la vostra consulta en horari de 9.30h a 14.00h)</em></p></li></ul>",
+    "lang": "ca",
+    "level": 2,
+    "title": "Fases"
+   }
+  ],
+  "source": "upf",
+  "source_title": null,
+  "status": "open",
+  "title": "Tècnic/a Superior - Comunicació",
+  "url": "https://www.upf.edu/web/personal/ofertes-pas/-/asset_publisher/IRiYJaUWRmJS/content/tecnic-a-superior-comunicacio/213063326/maximized"
  }
 }
