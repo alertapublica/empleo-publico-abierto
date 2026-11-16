@@ -30,7 +30,7 @@
   "process_url": "https://www.etsa.es/conductor-a-internacional-de-vehiculos-articulados-con-adr/",
   "source": "etsa",
   "state": "curso",
-  "system": "concurso",
+  "system": "concurso-oposicion",
   "title": "Listado definitivo de admitidos/as",
   "url": "https://www.etsa.es/etsa/wp-content/uploads/4.-Oferta_RH2026040_Listado-definitivo-admitidos.pdf",
   "via": "otro"
@@ -48,9 +48,27 @@
   "process_url": "https://www.etsa.es/conductor-a-internacional-de-vehiculos-articulados-con-adr/",
   "source": "etsa",
   "state": "curso",
-  "system": "concurso",
+  "system": "concurso-oposicion",
   "title": "Resultado fase concurso",
   "url": "https://www.etsa.es/etsa/wp-content/uploads/5.-Oferta_RH2026040_resultado-fase-concurso.pdf",
+  "via": "otro"
+ },
+ "etsa:938ef9e8c47c": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-10-14",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T09:07:24+00:00",
+  "location": null,
+  "process": "Conductor/a internacional de vehículos articulados con ADR (RH2026040)",
+  "process_url": "https://www.etsa.es/conductor-a-internacional-de-vehiculos-articulados-con-adr/",
+  "source": "etsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Resultado fase final",
+  "url": "https://www.etsa.es/etsa/wp-content/uploads/6.-Oferta_RH2026040_resultado-fase-final-concurso-oposicion.pdf",
   "via": "otro"
  },
  "etsa:ed017dd8266c": {
