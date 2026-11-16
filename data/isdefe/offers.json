@@ -1184,5 +1184,46 @@
   "status": "open",
   "title": "Técnico/a apoyo al mantenimiento de sistemas microinformáticos y redes - Reservistas de Especial Disponibilidad (RED) 2026-T00414",
   "url": "https://seleccionisdefe.es/convocatoria-2640"
+ },
+ "2641": {
+  "apply_url": "https://seleccionisdefe.es/registro-2641",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00113 5",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "deadline": "2026-11-20",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T10:07:26+00:00",
+  "id": "isdefe:2641",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-20",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-16",
+  "ref": "2641",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a Ingeniero/a para mantenimiento de helicopteros</p><p><strong>Titulaciones </strong></p><p>Titulacion STEM preferentemente Aeronáutico</p><p><strong>Funciones habituales:</strong></p><p>Apoyo en labores de mantenimiento de las flotas NH90/Tigre de Ejercito de Tierra<br/>\r\nApoyo en labores de gestión de material <br/>\r\nApoyo en la elaboración de informes técnicos de apoyo al sostenimiento de las flotas de helicopteros<br/>\r\nAsistencia a reuniones nacionales e internacionales de apoyo a las flotas de helicopteros<br/>\r\nRevisión y apoyo a la validacion de documentacion técnica de los fabricantes<br/>\r\nApoyo en el uso de los sistemas informaticos (SIGLE y Pulydo) del ET<br/>\r\nApoyo en el análisis de procesos de PCMHEL </p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Experiencia entre 2 y 4 años</p><p>Experiencia en el sector aeronáutico o en gestión de material</p><p>Conocimientos en el sector aeronáutico en áreas de sostenimiento (abastecimiento, mantenimiento o ingenería)</p><p><strong>Inglés igual o superior a 700 puntos  TOEIC</strong></p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.<br/>\r\nExcepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa).</em></p><p><strong>Requisitos Valorables</strong></p><ul>\n<li>Conocimientos en mantenimiento de helicopteros civiles o militares</li>\n<li> conocimientos de bases de datos (MS-Access) o Excel avanzado</li>\n</ul><p><strong>SE OFRECE CONTRATO INDEFINIDO</strong></p><p><br/>\r\n </p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a - Mantenimiento de Helicópteros(2026-T00113)5",
+  "status": "open",
+  "title": "Ingeniero/a - Mantenimiento de Helicópteros",
+  "url": "https://seleccionisdefe.es/convocatoria-2641"
  }
 }
