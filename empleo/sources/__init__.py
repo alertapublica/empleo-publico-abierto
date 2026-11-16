@@ -61,6 +61,7 @@ from .successfactors import SuccessFactorsSource
 from .tmb import TmbSource
 from .tragsa import TragsaSource
 from .ua import UaSource
+from .uco import UcoSource
 from .udc import UdcSource
 from .uhu import UhuSource
 from .unirioja import UniriojaSource
@@ -126,7 +127,8 @@ CATALOG = {
         LaFeSource(), IrbSource(), CiqusSource(), CimusSource(), FiseviSource(), ImibSource(), IrycisSource(), CnicSource(),
         IdisSource(), GaliciaSurSource(), FibaoSource(), IMAS12, CesgaSource(), IisgmSource(), ImdeaEnergiaSource(), IfapaSource(), FURIOJA,
     ],
-    "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource(), UdcSource(), UpfSource(), UniriojaSource()],
+    "universidades": [UaSource(), UhuSource(), UvigoSource(), UscSource(), UdcSource(), UpfSource(), UniriojaSource(),
+                      UcoSource()],
 }
 for _group, _sources in CATALOG.items():
     for _source in _sources:
