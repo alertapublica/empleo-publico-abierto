@@ -1,1 +1,32 @@
-{}
+{
+ "bsm": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "correos": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "fgc": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "navantia": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "renfe": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepi": {
+  "desde": "2026-11-16T10:37:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ }
+}
