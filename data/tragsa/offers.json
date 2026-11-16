@@ -24362,6 +24362,102 @@
   "title": "Licenciado/a o Graduado/a + Máster Oficial - Apoyo en contratación (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58674"
  },
+ "58677": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58677",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58677",
+  "company": "Tragsatec",
+  "contract": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sist.Inf. Gest.Doc.y Consult.",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-16T09:37:28+00:00",
+  "id": "tragsa:58677",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-16",
+  "ref": "58677",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista para prestar apoyo en un importante proyecto de la Administración Publica en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Análisis y diseño de las nuevas funcionalidades y arquitecturas de aplicaciones</li><li>Integración continua y pruebas de software</li><li>Gestión de releases</li><li>Soporte al equipo de desarrollo y mantenimiento de aplicaciones</li><li>Redacción de la documentación del proyecto</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>Experiencia Previa<ul><li>Al menos 3 años de experiencia con contrato laboral como Analista en proyectos con tecnología Java</li><li>Al menos 3 años de experiencia con contrato laboral desarrollando aplicaciones Web Java con Bases de datos Oracle y frameworks tipo Angular</li><li>Al menos 2 años de experiencia con contrato laboral en metodologías de integración y despliegue de aplicaciones</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 3 años de experiencia con contrato laboral como Analista en proyectos con tecnología Java</li><li>Al menos 3 años de experiencia con contrato laboral desarrollando aplicaciones Web Java con Bases de datos Oracle y frameworks tipo Angular</li><li>Al menos 2 años de experiencia con contrato laboral en metodologías de integración y despliegue de aplicaciones</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en Angular</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 3 años de experiencia en proyectos con metodologías ágiles (con contrato laboral)</li><li>Desde 2 años Hasta 3 años de experiencia en Spring Boot (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en diseño de APIs RESTful (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en el uso de git, sql server, eclipse, VS Code (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en automatización de pruebas (con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en Angular</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en Angular</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 3 años de experiencia en proyectos con metodologías ágiles (con contrato laboral)</li><li>Desde 2 años Hasta 3 años de experiencia en Spring Boot (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en diseño de APIs RESTful (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en el uso de git, sql server, eclipse, VS Code (con contrato laboral)</li><li>Desde 1 año Hasta 2 años de experiencia en automatización de pruebas (con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>-Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 16/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista- Java /Angular (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58677"
+ },
  "58678": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58678",
   "category": "Específica",
