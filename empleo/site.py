@@ -65,7 +65,7 @@ SCHEDULE_SUMMARY = ("cada 30 minutos de lunes a viernes de 6:00 a 19:00, con men
                     "en fin de semana, y nunca de 0:00 a 6:00")
 # Relación de municipios de la que salen los códigos (vía territorios-es). Un test comprueba que la fecha es la
 # de la versión instalada de territorios-es.
-INE_MUNICIPIOS = "https://www.ine.es/daco/daco42/codmun/codmunmapa.htm"
+INE_MUNICIPIOS = "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177031&menu=ultiDatos&idp=1254734710990"
 INE_FECHA = "1 de enero de 2026"
 # Cabecera común de los ficheros de api/. Cambiar o quitar una clave obliga a subir la versión.
 API_VERSION = 1
