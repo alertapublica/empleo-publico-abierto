@@ -1602,7 +1602,7 @@ def code_example(unix: str, windows: str, js: str) -> str:
 
 
 OPEN_DATA_FILES = (  # (fichero, apartado de sus campos, contenido)
-    ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas. Es el único fichero con las becas (<code>tipo_contrato</code> <code>beca</code>) y las ofertas fuera de España (<code>pais</code> distinto de <code>ES</code>): no salen en la web ni en novedades.json."),
+    ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas, también las becas (<code>tipo_contrato</code> <code>beca</code>) y las ofertas en el extranjero (<code>comunidad</code> <code>Extranjero</code>)."),
     ("procesos.json", "procesos", "Todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases."),
     ("novedades.json", "novedades", f"Las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios."),
     ("listas.json", "listas", "El nombre de cada clave que usan los demás ficheros: comunidades autónomas, provincias, municipios, organismos, áreas, tipos de contrato…"),

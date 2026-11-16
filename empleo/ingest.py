@@ -123,6 +123,9 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
         for field in LISTING_OR_DETAIL:  # si el listado no lo trae, vale lo leído en la ficha
             if getattr(offer, field) is not None:
                 record[field] = getattr(offer, field)
+        # Otro país (de Madrid a Lima): la ubicación guardada ya no vale; se vuelve a leer la ficha.
+        if offer.country is not None and offer.country != record.get("country"):
+            record.update(country=offer.country, location=None, region=None, detail_ok=False)
         # La regla del plazo calculado: la del listado es provisional y la de la ficha la corrige, como la fecha.
         if offer.deadline_rule and not record.get("deadline_rule"):
             record["deadline_rule"] = offer.deadline_rule
@@ -364,6 +367,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
         except OutOfTime as error:
             cut = error
     for record in offers.values():
+        if abroad(record) != (record["region"] == ABROAD):  # también las cerradas, guardadas con region None
+            _locate(record)
         if record["status"] == "open":
             if record["region"] in (None, UNKNOWN):  # también si la tabla de comunidades ha mejorado
                 _locate(record)
