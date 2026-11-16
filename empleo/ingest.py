@@ -13,7 +13,7 @@ from pathlib import Path
 from . import regions, store
 from .http import Client, OutOfTime
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
-                    SourceLayoutError, deadline_passed, today_madrid)
+                    SourceLayoutError, abroad, deadline_passed, today_madrid)
 from .regions import UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
@@ -160,6 +160,9 @@ def check_dates(item, fields: tuple[str, ...]) -> None:
 
 
 def _locate(record: dict) -> None:
+    if abroad(record):  # «León» o «Lima» de otro país no se buscan en la tabla de comunidades
+        record["region"] = None
+        return
     title_hint = location_from_title(record["title"])
     # El paréntesis final del título solo vale si es un lugar: en Isdefe es la referencia
     # («2026-T00056») o un número. Lo que ya se guardó así se borra.
@@ -365,7 +368,7 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
             if record["region"] in (None, UNKNOWN):  # también si la tabla de comunidades ha mejorado
                 _locate(record)
             # Sin ubicación en la ficha: en un organismo de una sola comunidad, esa comunidad.
-            if not record["location"] and source.scope != STATE_SCOPE:
+            if not record["location"] and source.scope != STATE_SCOPE and not abroad(record):
                 record["location"] = source.scope
                 _locate(record)
             record["place"] = place_of(record["title"], record["sections"])

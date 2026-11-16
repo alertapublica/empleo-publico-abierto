@@ -35,6 +35,12 @@ GROUPS = {
     "universidades": "Universidades públicas",
 }
 STATE_SCOPE = "Estatal"
+SPAIN = "España"
+
+
+def abroad(offer: dict) -> bool:
+    """La fuente dice que el puesto está fuera de España (`country`, literal)."""
+    return (offer.get("country") or SPAIN) != SPAIN
 
 KINDS = {
     "temporal": "Temporal",
@@ -120,6 +126,9 @@ class ListedOffer:
     # Regla literal del plazo cuando la fuente no publica la fecha de cierre y la calcula la fuente
     # («5 días hábiles a partir del día siguiente al de la publicación…»): la web marca la fecha como calculada.
     deadline_rule: str | None = None
+    # País literal, si la fuente lo da («España», «Perú», «Otros Países»); None si no consta. Las de fuera de
+    # España se publican en la API, pero no en la portada (site.off_front).
+    country: str | None = None
 
 
 @dataclass

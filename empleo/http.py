@@ -26,7 +26,9 @@ HEADERS = {
 # ULPGC: además manda al CAS (identificate.ulpgc.es, gateway) y vuelve con una cookie de sesión: sin
 # CookieJar entra en un bucle de redirecciones. El agente sigue a la redirección (urllib copia las cabeceras).
 AGENTE_NAVEGADOR = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
-CON_AGENTE_NAVEGADOR = {"www.ulpgc.es"}
+# Ineco (ePreselec, tras Imperva): «Pardon Our Interruption» (405) a nuestro agente y 200 al de un navegador,
+# desde el Worker (2026-11-16); el resto de cabeceras da igual. Va además por VIA_RELAY_CF.
+CON_AGENTE_NAVEGADOR = {"www.ulpgc.es", "ineco.epreselec.com"}
 
 
 def headers_for(url: str) -> dict[str, str]:
@@ -52,8 +54,11 @@ def tls_context() -> ssl.SSLContext:
 # Hosts que no responden a las IP de GitHub Actions (EE. UU.): se leen por el Worker de Cloudflare de relay/,
 # que sale por Madrid, con GET y POST y las cookies de la sesión. Secretos RELAY_CF_URL y RELAY_CF_CLAVE.
 # Tragsa (portal de candidatos, solo en el puerto 8443): timeout. SEPI: no responde. EFE: 403. Fundación de
-# la Universidad de La Rioja: 429. Cada host tiene que estar también en ORIGENES de relay/src/index.js.
-VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es"}
+# la Universidad de La Rioja: 429. Ineco (ePreselec): Imperva no deja entrar desde una IP doméstica sin
+# navegador (curl se queda colgado) y sí desde el Worker. Cada host tiene que estar también en ORIGENES de
+# relay/src/index.js.
+VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.agenciaefe.es", "fundacion.unirioja.es",
+                "ineco.epreselec.com"}
 # Hosts que se leen directos y, solo si eso falla (error de red, timeout o HTTP 403, 429 o 5xx), por el Worker.
 # Una vez que un host falla directo, el resto de la lectura (el mismo Client) va ya por el Worker.
 # Universidades (sondeo, ronda 7, 2026-11-15): La Rioja da 429 a Actions y entra por el Worker (aps; www, sin

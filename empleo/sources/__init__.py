@@ -39,6 +39,7 @@ from .idisba import IdisbaSource
 from .iisaragon import IisAragonSource
 from .iisgm import IisgmSource
 from .imdea import ImdeaEnergiaSource
+from .ineco import InecoSource
 from .imib import ImibSource
 from .irycis import IrycisSource
 from .mayasa import MayasaSource
@@ -121,7 +122,8 @@ CATALOG = {
         EnresaSource(), EtsaSource(), CetarsaSource(), CofivacasaSource(),
         ZarzuelaSource(), MercasaSource(), HunosaSource(), SepidesSource(), MayasaSource(),
     ],
-    "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE],
+    "estatal": [ENAIRE, AENA, PuertosSource(), ApbSource(), SenasaSource(), IsdefeSource(), FnmtSource(), CesceSource(), MercasturiasSource(), ADIF, RENFE,
+                InecoSource()],
     "autonomica": [FgcSource(), FgvSource(), GpexSource(), GesplanSource(), SargaSource(), SerpaSource(), CanalSource(), VeiasaSource(), CcmaSource(), AndaluciaSource()],
     "local": [TmbSource(), EmtSource(), BSM, EmasesaSource(), EmacsaSource()],
     "investigacion": [

@@ -279,6 +279,19 @@ def codes_of(region: str | None, *texts: str | None) -> dict:
 
 
 @cache
+def country_code(name: str | None) -> str | None:
+    """Código ISO 3166-1 alfa-2 de un país por su nombre, de territorios-es: «Perú» da «PE».
+    None si no es un país («Otros Países»)."""
+    found = territorios_es.search(name, levels=("country",)) if name else []
+    return found[0]["id"].removeprefix("pais:") if found else None
+
+
+def country_name(code: str) -> str:
+    """Nombre en castellano de un país por su código ISO 3166-1 alfa-2."""
+    return territorios_es.load().name(f"pais:{code}", "es")
+
+
+@cache
 def _ccaa_provinces() -> tuple[tuple[str, str], ...]:
     """(provincia, comunidad) según la relación del INE."""
     pairs = {(code[:2], ccaa) for entries in _municipalities().values() for code, ccaa in entries}
