@@ -3,7 +3,9 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { atender } from "../src/bot.js";
 import { alta, baja, confirmar, direccion, resumenCorreo } from "../src/correo.js";
-import { coincide, describir, empiezaPalabra, limpiar, reconocerComunidades, reconocerOrganismos } from "../src/criterios.js";
+import {
+  coincide, describir, empiezaPalabra, limpiar, reconocerComunidades, reconocerLugares, reconocerOrganismos,
+} from "../src/criterios.js";
 import { vaciar } from "../src/envios.js";
 import worker, { CRON_ENVIOS, CRONS_CORREO } from "../src/index.js";
 import { MAX_MENSAJE, mensajeTelegram, recibir } from "../src/novedades.js";
@@ -57,6 +59,45 @@ test("ofertas sin comunidad concreta: incluidas salvo que se desactive", () => {
   assert.ok(!coincide({ ccaa: ["12"], sin_ccaa: false }, sin));
 });
 
+test("becas: no llegan salvo que se pidan; «solo» deja fuera el resto", () => {
+  const beca = oferta(1, { tipo_contrato: "beca" });
+  const plantilla = oferta(2, { tipo_contrato: "temporal" });
+  assert.ok(!coincide({}, beca), "un aviso guardado antes de las becas no las recibe");
+  assert.ok(!coincide({ becas: "no" }, beca));
+  assert.ok(coincide({ becas: "tambien" }, beca));
+  assert.ok(coincide({ becas: "tambien" }, plantilla));
+  assert.ok(coincide({ becas: "solo" }, beca));
+  assert.ok(!coincide({ becas: "solo" }, plantilla));
+  assert.ok(!coincide({ becas: "solo" }, oferta(3)), "novedades.json antiguo, sin tipo_contrato: no es beca");
+  const com = { tipo: "comunicado", organismo: "tragsa", proceso: "Analista", titulo: "Lista", url: "u" };
+  assert.ok(coincide({ organismos: ["tragsa"], comunicados: true, becas: "solo" }, com), "los comunicados van por su casilla");
+});
+
+test("extranjero: un lugar más, que no entra por «sin comunidad concreta» ni por un aviso sin comunidades", () => {
+  const lima = oferta(1, { ccaa: null, extranjero: true });
+  const lugo = oferta(2);
+  const nacional = oferta(3, { ccaa: null, extranjero: false });
+  assert.ok(!coincide({}, lima), "un aviso guardado antes no la recibe");
+  assert.ok(!coincide({ ccaa: ["12"], sin_ccaa: true }, lima));
+  assert.ok(coincide({ extranjero: "tambien" }, lima));
+  assert.ok(coincide({ extranjero: "tambien" }, lugo));
+  assert.ok(coincide({ ccaa: ["12"], sin_ccaa: false, extranjero: "tambien" }, lima), "Galicia y extranjero");
+  assert.ok(!coincide({ ccaa: ["13"], sin_ccaa: false, extranjero: "tambien" }, lugo));
+  assert.ok(coincide({ extranjero: "solo" }, lima));
+  assert.ok(!coincide({ extranjero: "solo" }, lugo));
+  assert.ok(!coincide({ extranjero: "solo" }, nacional), "con «solo», tampoco las de ámbito nacional");
+  const becaMexico = oferta(4, { ccaa: null, extranjero: true, tipo_contrato: "beca" });
+  assert.ok(!coincide({ extranjero: "tambien" }, becaMexico), "una beca en el extranjero pide las dos cosas");
+  assert.ok(!coincide({ becas: "tambien" }, becaMexico));
+  assert.ok(coincide({ becas: "solo", extranjero: "tambien" }, becaMexico));
+  const solo = limpiar({ ccaa: ["12"], sin_ccaa: false, extranjero: "solo" }, LISTAS);
+  assert.deepEqual([solo.ccaa, solo.sin_ccaa], [[], true], "con «solo» las comunidades no cuentan");
+  assert.equal(describir(solo, LISTAS), "solo extranjero");
+  assert.equal(describir(limpiar({ ccaa: ["12"], extranjero: "tambien", becas: "solo" }, LISTAS), LISTAS),
+    "solo becas · Galicia (y sin comunidad concreta) y extranjero");
+  assert.equal(describir(limpiar({ extranjero: "tambien", becas: "tambien" }, LISTAS), LISTAS), "también becas · España y extranjero");
+});
+
 test("comunicados solo con la casilla y del organismo elegido", () => {
   const com = { tipo: "comunicado", organismo: "tragsa", proceso: "Analista de sistemas (AB-1)", titulo: "Lista provisional", url: "u" };
   assert.ok(!coincide({ organismos: ["tragsa"] }, com));
@@ -78,7 +119,12 @@ test("comunicados: la comunidad del proceso, como en las ofertas", () => {
 
 test("limpiar descarta claves desconocidas y valores raros", () => {
   const c = limpiar({ palabras: [" Analista ", "analista"], ccaa: ["12", "99"], organismos: ["nadie"], comunicados: true, areas: ["tic"] }, LISTAS);
-  assert.deepEqual(c, { palabras: ["analista"], areas: ["tic"], ccaa: ["12"], organismos: [], sin_ccaa: true, teletrabajo: false, comunicados: false });
+  assert.deepEqual(c, {
+    palabras: ["analista"], areas: ["tic"], ccaa: ["12"], organismos: [], sin_ccaa: true, teletrabajo: false, comunicados: false,
+    becas: "no", extranjero: "no",
+  });
+  assert.equal(limpiar({ becas: "todas", extranjero: true }, LISTAS).becas, "no", "valores desconocidos: «no»");
+  assert.equal(limpiar({ becas: "todas", extranjero: true }, LISTAS).extranjero, "no");
   assert.equal(limpiar({ palabras: Array.from({ length: 11 }, (_, i) => `p${i}`) }, LISTAS), null);
   assert.equal(describir(c, LISTAS), "«analista» · Informática y telecomunicaciones · Galicia (y sin comunidad concreta)");
 });
@@ -91,6 +137,10 @@ test("reconoce comunidades y organismos escritos a mano", () => {
   assert.deepEqual(reconocerOrganismos("tragsa, grupo correos", LISTAS).ok, ["tragsa", "correos"]);
   assert.equal(reconocerOrganismos("usc", LISTAS).dudas[0].opciones.length, 2);
   assert.equal(reconocerOrganismos("grupo", LISTAS).dudas.length, 1);
+  assert.deepEqual(reconocerLugares("Galicia, extranjero", LISTAS), { ok: ["12"], dudas: [], fallos: [], extranjero: "tambien" });
+  assert.equal(reconocerLugares("Fuera de España", LISTAS).extranjero, "solo");
+  assert.equal(reconocerLugares("galicia", LISTAS).extranjero, "no");
+  assert.deepEqual(reconocerLugares("España", LISTAS).fallos, ["España"], "«España» sola no es el extranjero");
 });
 
 // --- Novedades y envíos ------------------------------------------------------------------------
@@ -228,10 +278,12 @@ test("el bot crea un aviso analista + Galicia + Tragsa con comunicados", async (
   await b.pulsar("saltar");
   assert.match(b.ultimo(), /teletrabajo/);
   await b.pulsar("si");
+  assert.match(b.ultimo(), /becas/);
+  await b.pulsar("becas:tambien");
   assert.match(b.ultimo(), /Paso 3 de 4/);
   await b.escribir("castilla");
   assert.match(b.ultimo(), /puede ser/);
-  await b.escribir("galicia");
+  await b.escribir("galicia, extranjero");
   assert.match(b.ultimo(), /no dicen la comunidad/);
   await b.pulsar("no");
   await b.escribir("tragsa");
@@ -243,12 +295,12 @@ test("el bot crea un aviso analista + Galicia + Tragsa con comunicados", async (
   const aviso = JSON.parse(await b.db.prepare("SELECT criterios FROM avisos").first("criterios"));
   assert.deepEqual(aviso, {
     palabras: ["analista", "ingenier"], areas: ["tic"], ccaa: ["12"], organismos: ["tragsa"], sin_ccaa: false, teletrabajo: true,
-    comunicados: true,
+    comunicados: true, becas: "tambien", extranjero: "tambien",
   });
   assert.equal(await b.db.prepare("SELECT borrador FROM suscriptores").first("borrador"), null);
 
   await b.escribir("/avisos");
-  assert.match(b.ultimo(), /1\. «analista», «ingenier» · Informática y telecomunicaciones · que mencionen teletrabajo · Galicia/);
+  assert.match(b.ultimo(), /1\. «analista», «ingenier» · Informática y telecomunicaciones · que mencionen teletrabajo · también becas · Galicia y extranjero/);
   const id = await b.db.prepare("SELECT id FROM avisos").first("id");
   await b.pulsar(`borrar:${id}`);
   assert.match(b.ultimo(), /No tienes avisos/);
@@ -267,8 +319,9 @@ test("el enlace t.me/<bot>?start=tragsa crea un aviso con el organismo ya elegid
   assert.match(b.ultimo(), /Paso 2 de 3/);
   await b.pulsar("saltar");
   await b.pulsar("no");
+  await b.pulsar("becas:no");
   assert.match(b.ultimo(), /Paso 3 de 3/);
-  await b.pulsar("saltar");
+  await b.pulsar("lugar:solo");
   assert.match(b.ultimo(), /comunicados/, "sin preguntar por los organismos");
   await b.pulsar("si");
   await b.pulsar("guardar");
@@ -276,6 +329,7 @@ test("el enlace t.me/<bot>?start=tragsa crea un aviso con el organismo ya elegid
   const aviso = JSON.parse(await b.db.prepare("SELECT criterios FROM avisos").first("criterios"));
   assert.deepEqual(aviso.organismos, ["tragsa"]);
   assert.equal(aviso.comunicados, true);
+  assert.deepEqual([aviso.ccaa, aviso.extranjero, aviso.becas], [[], "solo", "no"], "«Solo extranjero» no pregunta por la comunidad");
 });
 
 test("cancelar a medias no deja datos y /baja lo borra todo", async () => {
@@ -286,7 +340,7 @@ test("cancelar a medias no deja datos y /baja lo borra todo", async () => {
   assert.equal(await b.db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0);
 
   await b.escribir("/nuevo");
-  for (const paso of ["saltar", "saltar", "no", "saltar", "saltar", "guardar"]) await b.pulsar(paso);
+  for (const paso of ["saltar", "saltar", "no", "becas:no", "saltar", "saltar", "guardar"]) await b.pulsar(paso);
   assert.match(b.ultimo(), /Todas las ofertas nuevas/);
   await b.escribir("/baja");
   await b.pulsar("baja:si");
@@ -471,12 +525,12 @@ test("alta: los criterios llegan como casillas del formulario y se limpian", asy
   await db.prepare("INSERT INTO estado (clave, valor) VALUES ('listas', ?)").bind(JSON.stringify(LISTAS)).run();
   const env = correoEnv(db, smtpFalso());
   const campos = [["palabras", " Analista, ingenier ,"], ["areas", "tic"], ["areas", "inventada"], ["ccaa", "12"], ["ccaa", "03"],
-    ["organismos", "tragsa"], ["comunicados", "1"], ["teletrabajo", "1"]];
+    ["organismos", "tragsa"], ["comunicados", "1"], ["teletrabajo", "1"], ["becas", "solo"], ["extranjero", "tambien"]];
   assert.equal((await alta(env, formAlta("ana@ejemplo.es", campos), { fetcher: turnstileOk, ahora: AHORA })).status, 200);
   const { criterios } = JSON.parse(await db.prepare("SELECT borrador FROM suscriptores").first("borrador"));
   assert.deepEqual(criterios, {
     palabras: ["analista", "ingenier"], areas: ["tic"], ccaa: ["12", "03"], organismos: ["tragsa"],
-    sin_ccaa: false, teletrabajo: true, comunicados: true,
+    sin_ccaa: false, teletrabajo: true, comunicados: true, becas: "solo", extranjero: "tambien",
   }, "sin la casilla «sin comunidad» marcada, se excluyen");
   const muchas = [["palabras", Array.from({ length: 11 }, (_, i) => `p${i}`).join(",")]];
   assert.equal((await alta(env, formAlta("luis@ejemplo.es", muchas), { fetcher: turnstileOk, ahora: AHORA })).status, 400);

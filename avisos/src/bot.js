@@ -1,10 +1,10 @@
 // Bot de Telegram: crear, ver y borrar avisos con una conversación guiada.
-// Pasos de /nuevo: palabras clave → áreas (→ ¿solo con teletrabajo?) → comunidades (→ ¿sin comunidad concreta?) → organismos
-// (→ ¿comunicados?) → resumen y guardar. Cada paso se puede saltar. «/start <organismo>» (enlace t.me/<bot>?start=tragsa)
+// Pasos de /nuevo: palabras clave → áreas (→ ¿solo con teletrabajo? → ¿becas?) → comunidades o extranjero
+// (→ ¿sin comunidad concreta?) → organismos (→ ¿comunicados?) → resumen y guardar. Cada paso se puede saltar. «/start <organismo>» (enlace t.me/<bot>?start=tragsa)
 // hace lo mismo con el organismo ya elegido, sin su paso.
 
 import {
-  MAX_AVISOS, MAX_PALABRAS, describir, limpiar, normalizar, reconocerComunidades, reconocerOrganismos,
+  MAX_AVISOS, MAX_PALABRAS, OPCIONES, describir, limpiar, normalizar, reconocerLugares, reconocerOrganismos,
 } from "./criterios.js";
 import { telegram } from "./envios.js";
 import { escapar, iso, leerListas } from "./novedades.js";
@@ -22,7 +22,8 @@ const AYUDA = `Este bot te avisa de las ofertas nuevas que publica el portal no 
 /nuevo crea un aviso. Puedes combinar:
 • palabras clave del título (por ejemplo «analista»): basta con el comienzo de la palabra, así «ingenier» encuentra Ingeniero/a e Ingeniera;
 • áreas profesionales, y si quieres solo las ofertas que mencionan el teletrabajo;
-• comunidades autónomas;
+• si quieres también becas, o solo becas (no son contratos laborales; por defecto no llegan);
+• comunidades autónomas, y si quieres también las ofertas en el extranjero, o solo esas (por defecto no llegan);
 • organismos (por ejemplo Grupo Tragsa), y si quieres también los comunicados de sus procesos selectivos.
 
 La oferta tiene que cumplir todo lo que elijas: «analista» + Galicia avisa solo de las ofertas de analista en Galicia. Dentro de cada apartado basta con una coincidencia (Galicia o Asturias).
@@ -97,10 +98,17 @@ function pregunta(paso, criterios, listas) {
         text: "¿Quieres solo las ofertas que mencionan el teletrabajo o el trabajo a distancia? Lo busco en el texto de la oferta: si solo enlaza a las bases en PDF no puedo saberlo, y esa oferta no te llegará.",
         reply_markup: teclado([[boton("Sí, solo esas", "si"), boton("No, todas", "no")], CANCELAR]),
       };
+    case "becas":
+      return {
+        text: "¿Quieres también las becas? Son las que el organismo publica como beca: no son un contrato laboral. Las prácticas con contrato llegan siempre.",
+        reply_markup: teclado([[boton("Sin becas", "becas:no"), boton("También becas", "becas:tambien")],
+          [boton("Solo becas", "becas:solo")], CANCELAR]),
+      };
     case "comunidades":
       return {
-        text: `Paso 3 de ${total}. Escribe comunidades autónomas separadas por comas (por ejemplo: Galicia, Asturias), o elige toda España.`,
-        reply_markup: teclado([[boton("Toda España", "saltar")], CANCELAR]),
+        text: `Paso 3 de ${total}. Escribe comunidades autónomas separadas por comas (por ejemplo: Galicia, Asturias), o elige toda España. Para las ofertas en el extranjero, añade «extranjero» (por ejemplo: Galicia, extranjero).`,
+        reply_markup: teclado([[boton("Toda España", "saltar")],
+          [boton("España y extranjero", "lugar:tambien"), boton("Solo extranjero", "lugar:solo")], CANCELAR]),
       };
     case "sin_ccaa":
       return {
@@ -129,7 +137,8 @@ function siguiente(paso, c) {
   switch (paso) {
     case "palabras": return "areas";
     case "areas": return "teletrabajo";
-    case "teletrabajo": return "comunidades";
+    case "teletrabajo": return "becas";
+    case "becas": return "comunidades";
     case "comunidades": return c.ccaa?.length ? "sin_ccaa" : siguiente("sin_ccaa", c);
     case "sin_ccaa": return c.organismos ? "comunicados" : "organismos"; // ya elegidos con /start <organismo>
     case "organismos": return c.organismos?.length ? "comunicados" : "resumen";
@@ -234,11 +243,17 @@ export async function atender(env, update, { fetcher = fetch, ahora = new Date()
     }, fetcher);
   } else if (dato === "saltar") {
     if (paso === "palabras") c.palabras = [];
-    if (paso === "comunidades") c.ccaa = [];
+    if (paso === "comunidades") Object.assign(c, { ccaa: [], extranjero: "no" });
     if (paso === "organismos") c.organismos = [];
     avanzar = ["palabras", "areas", "comunidades", "organismos"].includes(paso);
   } else if ((dato === "si" || dato === "no") && ["sin_ccaa", "teletrabajo", "comunicados"].includes(paso)) {
     c[paso] = dato === "si";
+    avanzar = true;
+  } else if (dato.startsWith("becas:") && paso === "becas" && OPCIONES.includes(dato.slice(6))) {
+    c.becas = dato.slice(6);
+    avanzar = true;
+  } else if (dato.startsWith("lugar:") && paso === "comunidades" && OPCIONES.includes(dato.slice(6))) {
+    Object.assign(c, { ccaa: [], extranjero: dato.slice(6) });
     avanzar = true;
   } else if (dato === "guardar" && paso === "resumen") {
     const limpio = limpiar(c, listas);
@@ -257,11 +272,12 @@ export async function atender(env, update, { fetcher = fetch, ahora = new Date()
     c.palabras = palabras;
     avanzar = true;
   } else if (texto && !comando && (paso === "comunidades" || paso === "organismos")) {
-    const r = paso === "comunidades" ? reconocerComunidades(texto, listas) : reconocerOrganismos(texto, listas);
-    if (r.dudas.length || r.fallos.length || !r.ok.length) {
+    const r = paso === "comunidades" ? reconocerLugares(texto, listas) : reconocerOrganismos(texto, listas);
+    if (r.dudas.length || r.fallos.length || !(r.ok.length || r.extranjero === "solo")) {
       return enviar(chat.id, explicar(r, paso === "comunidades" ? "la comunidad" : "el organismo"));
     }
-    c[paso === "comunidades" ? "ccaa" : "organismos"] = r.ok;
+    if (paso === "comunidades") Object.assign(c, { ccaa: r.ok, extranjero: r.extranjero });
+    else c.organismos = r.ok;
     avanzar = true;
   } else {
     return enviar(chat.id, "Responde a la pregunta de arriba, o usa /cancelar.");

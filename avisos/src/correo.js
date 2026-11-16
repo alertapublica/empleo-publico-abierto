@@ -58,6 +58,8 @@ export function criteriosDelFormulario(form) {
     organismos: form.getAll("organismos"),
     comunicados: form.get("comunicados") === "1",
     teletrabajo: form.get("teletrabajo") === "1",
+    becas: form.get("becas"),
+    extranjero: form.get("extranjero"),
   };
 }
 
