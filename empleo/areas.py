@@ -7,8 +7,9 @@ con el de la fuente se lista en el informe (`python -m empleo.areas informe`), q
 abre o actualiza un issue para revisarlo. En los centros de investigación y las universidades el
 área decide además si la oferta sale también en la portada (site.research_only): el informe
 lista las decididas con menos seguridad. Los contratos con cargo a un proyecto cuyo título es
-«categoría + nombre del proyecto» (PROJECT_TITLES) son siempre de investigación y salen solo allí:
-el nombre del proyecto puede añadir la segunda área, no decidir el puesto.
+«categoría + nombre del proyecto» o «categoría · centro» (PROJECT_TITLES) son siempre de
+investigación y salen solo allí: el proyecto o el centro puede añadir la segunda área, no decidir
+el puesto.
 
 Reglas sobre el texto normalizado (sin tildes, minúsculas, sin «/a», sin códigos con cifras):
 - FRASES, en orden: suman y se «comen» el texto, para que las palabras sueltas no lo vuelvan a
@@ -69,10 +70,12 @@ SOURCE_AREAS = {
 GROUP_AREAS = {"investigacion": "investigacion"}
 
 # Contratos con cargo a un proyecto de investigación: el título es la categoría y, después, el
-# nombre del proyecto. Por fuente y por formato, para no esconder otro tipo de plaza de la fuente.
+# nombre del proyecto (en udc, el centro). Por fuente y por formato, para no esconder otro tipo de
+# plaza de la fuente.
 PROJECT_TITLES = {
     "ifapa": re.compile(r"^(.+?) · "),
     "uhu": re.compile(r"^(.+?) · "),
+    "udc": re.compile(r"^(.+?) · "),  # «categoría · centro»; todas son contratos PCTI
     "ua": re.compile(r"^(.+?) para colaborar con (?:el proyecto|la línea de investigación)\b"),
 }
 
@@ -441,7 +444,8 @@ def report(offers: list[dict], groups: dict[str, str], reviewed: set | None = No
         elif group not in site.RESEARCH_GROUPS:
             continue
         elif site.research_only(offer, group):
-            if origin == "ficha":
+            # con título «categoría + proyecto» sale solo allí por el formato, no por el área
+            if origin == "ficha" and not project_category(offer.get("title") or "", offer["source"]):
                 placed.append((offer, f" → solo en «Investigación», por la ficha ({names})"))
         elif "investigacion" in found:
             placed.append((offer, f" → también en la portada ({names})"))

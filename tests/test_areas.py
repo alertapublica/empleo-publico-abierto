@@ -92,6 +92,11 @@ class Reglas(unittest.TestCase):
         self.assertEqual(areas.classify(ifapa, source="ifapa", group="investigacion")[0], ["investigacion", "ambiente"])
         self.assertEqual(areas.classify("Titulado Superior · Proyecto X", source="ifapa", group="investigacion"),
                          (["investigacion"], "título"))
+        # udc: «categoría · centro»; el centro tampoco lleva la plaza a la portada
+        udc = "Colaborador de investigación a tempo completo · Facultade de Dereito"
+        self.assertEqual(areas.project_category(udc, "udc"), "Colaborador de investigación a tempo completo")
+        self.assertEqual(areas.classify(udc, source="udc", group="universidades")[0], ["investigacion", "juridico"])
+        self.assertTrue(site.research_only(offer(udc, "udc"), "universidades"))
         # solo con ese formato y en esas fuentes
         self.assertEqual(areas.project_category("Administrativo/a de compras", "ua"), "")
         self.assertEqual(areas.project_category("Titulado Superior · Titulación Superior en Biomedicina", "ciber"), "")
@@ -135,6 +140,7 @@ class Informe(unittest.TestCase):
             offer("Administrativo de compras", "irb"),        # en la portada sin área de investigación: tampoco
             offer("Investigador/a de mercados", "tragsa"),    # fuera de los centros no decide nada
             offer("Research support technician", "irb", sections=ficha),
+            offer("Titulado Grado Superior · Catálisis sostenible", "uhu", sections=ficha),  # solo allí por el formato
         ]
         text = areas.report(offers, GROUP_OF, reviewed={("irb", "Research support technician")})
         self.assertIn("## Centros de investigación y universidades: dónde salen (2)", text)
@@ -142,7 +148,7 @@ class Informe(unittest.TestCase):
                       "(Investigación y laboratorio)", text)
         self.assertIn("(M3)](https://x.example/o) → también en la portada (Administración y gestión, "
                       "Investigación y laboratorio)", text)
-        for absent in ("Postdoctoral", "Administrativo", "mercados", "Research support", "## Sin área"):
+        for absent in ("Postdoctoral", "Administrativo", "mercados", "Research support", "Catálisis", "## Sin área"):
             self.assertNotIn(absent, text)
 
     def test_vacio_si_no_queda_nada(self):

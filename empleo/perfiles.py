@@ -41,7 +41,7 @@ PERFILES = (
      r"|health and safety|tecnico de proyecto"),
     ("tecnico", "Técnico/a de laboratorio y apoyo",
      r"tecnic|technician|laborator|suport recerca|apoyo a la investigacion|research (assistant|support)|auxiliary|titulad[oa]"
-     r"|tecnolog[oa]\b|personal especialista"),
+     r"|tecnolog[oa]\b|personal especialista|colaborador\w* de investigaci"),
 )
 NAMES = {key: name for key, name, _ in PERFILES}
 ARRANQUE = ("tecnico", r"^(?:un |una )?(?:personal )?tecnic\w* (?:de |d')?"
