@@ -15,9 +15,10 @@
   // Registros sin datos personales: el código no escribe chats, correos ni mensajes.
   "observability": { "enabled": true },
   "triggers": {
-    // Cada minuto vacía la bandeja de salida; a las 6:00 y a las 13:00 UTC prepara el resumen por correo
-    // (el de la mañana y el de la tarde). Deben coincidir con CRON_ENVIOS y CRONS_CORREO de src/index.js.
-    "crons": ["* * * * *", "0 6 * * *", "0 13 * * *"]
+    // Cada minuto vacía la bandeja de salida; los otros preparan el resumen por correo: de lunes a viernes a las
+    // 6:00 y a las 18:30 UTC, y sábados y domingos a las 19:30 UTC. Deben coincidir con CRON_ENVIOS y
+    // CRONS_CORREO de src/index.js. Los días, por su nombre: en Cloudflare el 1 es el domingo.
+    "crons": ["* * * * *", "0 6 * * mon-fri", "30 18 * * mon-fri", "30 19 * * sat,sun"]
   },
   "d1_databases": [
     {

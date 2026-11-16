@@ -2,8 +2,10 @@
 // (noche.yml del repo privado PAG_REPO, que va en un secreto para no publicar su nombre).
 
 // Horario en hora de Madrid. El cron se dispara a :07 y a :37 (UTC) y esta función decide si toca:
-// lunes a viernes, cada 30 min de 6:00 a 15:59 y cada hora hasta las 23:59; sábado y domingo, cada hora
-// de 6:00 a 15:59 y a las 19 y las 22 h; de madrugada, nunca. El minuto < 30 es la lectura «en punto».
+// lunes a viernes, cada 30 min de 6:00 a 18:59 y a las 20 y las 22 h; sábado y domingo, cada 3 horas de las 8
+// a las 20 h (8, 11, 14, 17 y 20); de madrugada, nunca. El minuto < 30 es la lectura «en punto». Responde a
+// cuándo publican los organismos: casi todo entre semana de 9 a 16 h, algo hasta las 19 h y casi nada después
+// ni en fin de semana (recuento de noviembre de 2026).
 // La web lo publica en «Datos abiertos» (`SCHEDULE`, empleo/site.py): si cambia aquí, hay que cambiarlo allí.
 export function toca(fecha) {
   const partes = Object.fromEntries(
@@ -14,8 +16,9 @@ export function toca(fecha) {
   const enPunto = Number(partes.minute) < 30;
   const finDeSemana = partes.weekday === "Sat" || partes.weekday === "Sun";
   if (hora < 6) return false;
-  if (hora < 16) return finDeSemana ? enPunto : true;
-  return enPunto && (!finDeSemana || hora === 19 || hora === 22);
+  if (finDeSemana) return enPunto && hora >= 8 && hora <= 20 && (hora - 8) % 3 === 0;
+  if (hora < 19) return true;
+  return enPunto && (hora === 20 || hora === 22);
 }
 
 // Lectura nocturna del PAG, en UTC: su robots.txt la permite de 01:00 a 06:45 GMT. Tres intentos (2:07, 3:07 y 5:07);
