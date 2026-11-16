@@ -67,6 +67,7 @@ SOURCE_AREAS = {
     "usc": "investigacion",  # ídem: convocatorias de personal para proyectos de investigación
     "udc": "investigacion",  # ídem: contratación con cargo a proyectos (PCTI)
     "unirioja": "investigacion",  # ídem: contratos con cargo a proyectos y de talento investigador
+    "uco": "investigacion",  # ídem: tandas de contratos de personal investigador y técnico (PIT)
 }
 GROUP_AREAS = {"investigacion": "investigacion"}
 
