@@ -14,7 +14,7 @@ from . import regions, store
 from .http import Client, OutOfTime
 from .model import (LISTING_OR_DETAIL, LIVE_STATES, MADRID, PROCESS_FIELDS, STATE_SCOPE, ListedOffer,
                     SourceLayoutError, abroad, deadline_passed, today_madrid)
-from .regions import UNKNOWN, location_from_title, place_of, region_of
+from .regions import ABROAD, UNKNOWN, location_from_title, place_of, region_of
 from .sources import ACTIVE
 from .sources.base import Source
 
@@ -123,6 +123,9 @@ def reconcile(offers: dict, listed: list[ListedOffer], source_id: str, now: date
         for field in LISTING_OR_DETAIL:  # si el listado no lo trae, vale lo leído en la ficha
             if getattr(offer, field) is not None:
                 record[field] = getattr(offer, field)
+        # Otro país (de Madrid a Lima): la ubicación guardada ya no vale; se vuelve a leer la ficha.
+        if offer.country is not None and offer.country != record.get("country"):
+            record.update(country=offer.country, location=None, region=None, detail_ok=False)
         # La regla del plazo calculado: la del listado es provisional y la de la ficha la corrige, como la fecha.
         if offer.deadline_rule and not record.get("deadline_rule"):
             record["deadline_rule"] = offer.deadline_rule
@@ -161,7 +164,7 @@ def check_dates(item, fields: tuple[str, ...]) -> None:
 
 def _locate(record: dict) -> None:
     if abroad(record):  # «León» o «Lima» de otro país no se buscan en la tabla de comunidades
-        record["region"] = None
+        record["region"] = ABROAD
         return
     title_hint = location_from_title(record["title"])
     # El paréntesis final del título solo vale si es un lugar: en Isdefe es la referencia
@@ -364,6 +367,8 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
         except OutOfTime as error:
             cut = error
     for record in offers.values():
+        if abroad(record) != (record["region"] == ABROAD):  # también las cerradas, guardadas con region None
+            _locate(record)
         if record["status"] == "open":
             if record["region"] in (None, UNKNOWN):  # también si la tabla de comunidades ha mejorado
                 _locate(record)

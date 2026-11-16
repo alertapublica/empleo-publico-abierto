@@ -87,7 +87,9 @@
       : [];
     // Abiertas que solo están en la otra lista (portada o «Investigación»): no han cerrado.
     var enOtra = lista && lista.dataset.enOtra ? lista.dataset.enOtra.split(" ") : [];
-    var abiertas = presentes.concat(enOtra);
+    // Y las abiertas de otras secciones (Becas, o las ofertas desde Becas): tampoco han cerrado.
+    var aparte = lista && lista.dataset.abiertas ? lista.dataset.abiertas.split(" ") : [];
+    var abiertas = presentes.concat(enOtra, aparte);
 
     function pintarNota(tipo) {
       var cerradas = fuera(estado, tipo, abiertas);

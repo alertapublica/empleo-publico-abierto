@@ -127,7 +127,7 @@ class ListedOffer:
     # («5 días hábiles a partir del día siguiente al de la publicación…»): la web marca la fecha como calculada.
     deadline_rule: str | None = None
     # País literal, si la fuente lo da («España», «Perú», «Otros Países»); None si no consta. Las de fuera de
-    # España se publican en la API, pero no en la portada (site.off_front).
+    # España van al lugar «Extranjero» (regions.ABROAD).
     country: str | None = None
 
 

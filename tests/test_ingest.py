@@ -364,14 +364,35 @@ class RunSource(unittest.TestCase):
         ingest.run_source(FakeSource([listed(title="Oferta", country="México")], OfferDetail(location="León")),
                           None, self.data, NOW)
         self.assertEqual((self.stored()["1"]["location"], self.stored()["1"]["region"], self.stored()["1"]["country"]),
-                         ("León", None, "México"))
+                         ("León", "Extranjero", "México"))
         ingest.run_source(FakeSource([listed(ref="2", title="Oferta", country="España")], OfferDetail(location="León")),
                           None, self.data, NOW)
         self.assertEqual(self.stored()["2"]["region"], "Castilla y León")
         sin_lugar = FakeSource([listed(ref="3", title="Oferta", country="Otros Países")], OfferDetail())
         sin_lugar.scope = "Aragón"  # no se le pone la comunidad de la fuente
         ingest.run_source(sin_lugar, None, self.data, NOW)
-        self.assertEqual((self.stored()["3"]["location"], self.stored()["3"]["region"]), (None, None))
+        self.assertEqual((self.stored()["3"]["location"], self.stored()["3"]["region"]), (None, "Extranjero"))
+
+    def test_cambio_de_pais_vuelve_a_ubicar_la_oferta(self):
+        ingest.run_source(FakeSource([listed(title="Oferta", country="España")], OfferDetail(location="León")),
+                          None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["region"], "Castilla y León")
+        ingest.run_source(FakeSource([listed(title="Oferta", country="México")], OfferDetail(location="León")),
+                          None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["country"], self.stored()["1"]["region"]), ("México", "Extranjero"))
+        ingest.run_source(FakeSource([listed(title="Oferta", country="España")], OfferDetail(location="León")),
+                          None, self.data, NOW)
+        self.assertEqual(self.stored()["1"]["region"], "Castilla y León")
+
+    def test_extranjero_guardado_sin_region_se_recoloca_aunque_este_cerrada(self):
+        ingest.run_source(FakeSource([listed(title="Oferta", country="Perú")], OfferDetail(location="Lima")),
+                          None, self.data, NOW)
+        offers = self.stored()
+        offers["1"].update(region=None, status="closed", closed_at=NOW.isoformat())  # como se guardaba en #104
+        store.save(self.data / "enusa" / "offers.json", offers)
+        ingest.run_source(FakeSource([listed(ref="2", title="Otra")], OfferDetail(location="Madrid")),
+                          None, self.data, NOW)
+        self.assertEqual((self.stored()["1"]["status"], self.stored()["1"]["region"]), ("closed", "Extranjero"))
 
     def test_parentesis_del_titulo_que_no_es_un_lugar_no_es_la_ubicacion(self):
         source = FakeSource([listed(title="Ingeniero/a de Plataformas (2026-T00434)")], OfferDetail())
