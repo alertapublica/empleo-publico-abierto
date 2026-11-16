@@ -1,1 +1,48 @@
-{}
+{
+ "1506": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1506/",
+  "category": null,
+  "closed_at": null,
+  "code": "91/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "deadline": "2026-11-26",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T14:37:39+00:00",
+  "id": "fibao:1506",
+  "kind": null,
+  "listed_deadline": "2026-11-26",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-16",
+  "ref": "1506",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO e ibs.GRANADA convocan un contrato de apoyo a la investigación, en régimen de concurrencia competitiva, con dedicación a tiempo completo, vinculado al proyecto de investigación titulado “Herramienta para la integración segura de profesionales de enfermería en entornos clínicos desconocidos: NursingCheck”, con nº de expediente PIGE-0009-2026, financiado por la Consejería de Presidencia, Sanidad y Emergencias, según Resolución de la Dirección General de Investigación, Innovación y Formación por la que se conceden subvenciones, en régimen de concurrencia competitiva, para la financiación de la investigación, desarrollo e innovación (I+D+I) en biomedicina y en ciencias de la salud en Andalucía, para el año 2025-FEDER. Titulación requerida: Diplomatura o Grado Universitario en Enfermería</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/91._ctto_invest._formac._pige_0009_2026(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "91/2026.- Investigador/a en Formación PIGE-0009-2026",
+  "status": "open",
+  "title": "Investigador/a en Formación PIGE-0009-2026",
+  "url": "https://www.fibao.es/ofertas/ficha/1506/"
+ }
+}

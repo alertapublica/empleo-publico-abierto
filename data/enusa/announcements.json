@@ -125,6 +125,24 @@
   "url": "https://www.enusa.es/trabaja-con-nosotros/",
   "via": "otro"
  },
+ "enusa:86486bd16770": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-11-16",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-16T14:37:39+00:00",
+  "location": null,
+  "process": "ADMINISTRATIVO/A DE CONTRATACIÓN Y COMPRAS (876-TECCONTC)",
+  "process_url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "source": "enusa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Resultado de la revisión de requisitos mínimos",
+  "url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "via": "otro"
+ },
  "enusa:d53b866da6ca": {
   "access": "libre",
   "apply_url": null,
