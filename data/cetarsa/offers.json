@@ -2,7 +2,7 @@
  "48a04f9e58": {
   "apply_url": "https://www.cetarsa.es/empleo-2026/",
   "category": "Convocatoria libre",
-  "closed_at": null,
+  "closed_at": "2026-11-16T13:07:29+00:00",
   "code": null,
   "company": "Cetarsa",
   "deadline": "2026-11-16",
@@ -42,14 +42,14 @@
   ],
   "source": "cetarsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Producción Agrícola- Clasificador/a Industrial",
   "url": "https://www.cetarsa.es/empleo-2026/"
  },
  "b4a61ab05f": {
   "apply_url": "https://www.cetarsa.es/empleo-2026/",
   "category": "Convocatoria libre",
-  "closed_at": null,
+  "closed_at": "2026-11-16T13:07:29+00:00",
   "code": null,
   "company": "Cetarsa",
   "deadline": "2026-11-16",
@@ -89,7 +89,7 @@
   ],
   "source": "cetarsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Operador/a Informática",
   "url": "https://www.cetarsa.es/empleo-2026/"
  }
