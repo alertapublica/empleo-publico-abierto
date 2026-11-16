@@ -9741,22 +9741,22 @@
  "58268": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58268",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "58268",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-10",
+  "deadline": "2026-11-26",
   "deadline_time": null,
   "department": "Sistemas de Información",
   "detail_ok": true,
-  "detail_version": 2,
+  "detail_version": 3,
   "family": "Técnicos Titulados",
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58268",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
+  "listed_deadline": "2026-11-26",
   "location": "Sede Madrid Tragsa",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
@@ -9767,7 +9767,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Licenciado/a/Ingeniero/a o Graduado/a o Diplomado/a + Máster Oficial o Diplomado/a, Ingeniero/a Técnica, Arquitecto/a Técnica o Graduado/a para prestar apoyo a un proyecto de Licitaciones TIC en Madrid.</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Licenciado/a/Ingeniero/a o Graduado/a o Diplomado/a + Máster Oficial o Diplomado/a, Ingeniero/a Técnica, Arquitecto/a Técnica o Graduado/a para prestar apoyo a un proyecto de Licitaciones TIC en Madrid.<br/><br/>En relación al proceso publicado el pasado 22/10/2026 se amplía el plazo de recepción de candidaturas desde el 16/11/2026 hasta el 26/11/2026 a las 23:59h (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -9827,14 +9827,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/><br/>- Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por la persona seleccionada de las indicadas en la oferta.<br/><br/>- Jornada Laboral Completa de 37,5 h semanales.<br/><br/>- Flexibilidad horaria.<br/><br/><br/>En relación con la oferta publicada, atendiendo a indecencias técnicas, el plazo de recepción de candidaturas que finalizaba el día 22/10/2026, se ha ampliado hasta el 10/11/2026 a las 23:59 horas (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/><br/>- Se formalizará la contratación atendiendo a la mayor titulación oficial acreditada y homologada aportada por la persona seleccionada de las indicadas en la oferta.<br/><br/>- Jornada Laboral Completa de 37,5 h semanales.<br/><br/>- Flexibilidad horaria.<br/><br/><br/>En relación al proceso publicado el pasado 22/10/2026 se amplía el plazo de recepción de candidaturas desde el 16/11/2026 hasta el 26/11/2026 a las 23:59h (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Licenciatura/Ingeniería o Grado/Diplomatura + Máster Oficial o Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado - Licitaciones TIC (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58268"
  },

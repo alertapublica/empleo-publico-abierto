@@ -1,0 +1,43 @@
+{
+ "08-01-id26": {
+  "apply_url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/",
+  "category": null,
+  "closed_at": null,
+  "code": "08-01-ID26",
+  "company": "Universidad de La Rioja",
+  "contract": null,
+  "deadline": "2026-11-25",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-16T11:37:27+00:00",
+  "id": "unirioja:08-01-id26",
+  "kind": null,
+  "listed_deadline": "2026-11-25",
+  "location": "Logroño",
+  "missed_runs": 0,
+  "opens_on": "2026-11-11",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-10",
+  "ref": "08-01-id26",
+  "region": "La Rioja",
+  "sections": [
+   {
+    "html": "<p>TÉCNICA/O: se convoca el proceso selectivo para la contratación como personal indefinido con cargo a financiación externa de carácter finalista del Proyecto 08-01-ID26, titulado: “Percepción de la igualdad de género en el alumnado universitario: implicaciones para el diseño de políticas educativas y estrategias coeducativas”.</p><p>Investigadora: Iratxe Suberviola Ovejas.</p><p><strong>Plazo presentación de solicitudes: del 11 de noviembre al 25 de noviembre de 2026</strong></p><ul><li><a href=\"https://unirioja.sharepoint.com/:b:/r/sites/inv_publico/Documentos%20compartidos/Forms/AllItems.aspx?id=%2Fsites%2Finv%5Fpublico%2FDocumentos%20compartidos%2FContratos%5Fpersonal%2FIratxe%20Suberviola%5FIns%5FMujeres%2FConv%5FProyecto%2008%2D01%2DID26%2Epdf&amp;parent=%2Fsites%2Finv%5Fpublico%2FDocumentos%20compartidos%2FContratos%5Fpersonal%2FIratxe%20Suberviola%5FIns%5FMujeres&amp;p=true&amp;share=cQo9eyoN0nfiTbVySCmBsopxEgUC5ZNpFkuWwuJwaTx8KPEKtg\">Convocatoria BOR</a><em> (10 de noviembre de 2026)</em></li><li><a href=\"https://unirioja.sharepoint.com/:w:/s/inv_publico/cQq2HilAZ-5EQLx_F8mj2raWEgUCcAG8B8LYsB2sn-ohWR010Q\">Impreso de solicitud</a></li></ul>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "unirioja",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnica/o · Percepción de la igualdad de género en el alumnado universitario: implicaciones para el diseño de políticas educativas y estrategias coeducativas",
+  "url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/"
+ }
+}
