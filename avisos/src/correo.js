@@ -1,4 +1,4 @@
-// Avisos por correo: alta con doble confirmación, baja con un clic y resúmenes dos veces al día.
+// Avisos por correo: alta con doble confirmación, baja con un clic y resúmenes (dos al día entre semana y uno en fin de semana: CRONS_CORREO).
 // Se envían por el SMTP del buzón de alertapublica.es (src/smtp.js). Desactivado mientras
 // CORREO_ACTIVO no sea «si»; además hacen falta las variables SMTP_* y CORREO_REMITENTE, el secreto
 // SMTP_CLAVE y, para el formulario, TURNSTILE_SECRETO.
@@ -130,7 +130,7 @@ export async function confirmar(env, url, { ahora = new Date() } = {}) {
     db.prepare("INSERT INTO avisos (suscriptor, criterios, creado) VALUES (?, ?, ?)").bind(s.id, JSON.stringify(pendiente.criterios), iso(ahora)),
     db.prepare("UPDATE suscriptores SET estado = 'activo', borrador = NULL WHERE id = ?").bind(s.id),
   ]);
-  return pagina("Aviso activado", "<p>Recibirás como mucho dos correos al día (mañana y tarde), solo cuando haya novedades. Cada correo trae un enlace para darte de baja.</p>");
+  return pagina("Aviso activado", "<p>Recibirás como mucho dos correos al día de lunes a viernes (mañana y tarde) y uno los sábados y domingos, solo cuando haya novedades. Cada correo trae un enlace para darte de baja.</p>");
 }
 
 // GET muestra un botón (los antivirus abren los enlaces y no deben dar de baja a nadie);
@@ -144,7 +144,7 @@ export async function baja(env, request, url) {
   return pagina("Baja hecha", "<p>Hemos borrado tu correo y tus avisos.</p>");
 }
 
-// Crons de la mañana y de la tarde: un resumen por persona con las novedades guardadas desde el último. El cursor
+// Crons de los resúmenes (CRONS_CORREO): un resumen por persona con las novedades guardadas desde el último. El cursor
 // es n (orden de llegada, no se reutiliza), no la fecha de la novedad, para no perder las que llegan tarde.
 export async function resumenCorreo(env, ahora = new Date()) {
   if (!correoActivo(env)) return 0;

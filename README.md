@@ -15,7 +15,7 @@ Lee las páginas oficiales de 75 organismos: Grupo SEPI, otras empresas del Esta
 
 - **Ofertas** con ficha y plazo, y **procesos selectivos** con sus comunicados por fases, siempre con enlace a la fuente oficial.
 - **Filtros** por texto, área, comunidad, organismo, tipo de contrato y teletrabajo.
-- **Avisos** por RSS, por Telegram y por correo (dos resúmenes al día) con criterios propios (palabras, áreas, comunidades, organismos).
+- **Avisos** por RSS, por Telegram y por correo (dos resúmenes al día entre semana y uno en fin de semana) con criterios propios (palabras, áreas, comunidades, organismos).
 - **Datos abiertos**: API JSON sin clave y con CORS abierto, con códigos INE de comunidad, provincia y municipio.
 - **Sin cuentas ni cookies**: la web y el RSS no recogen datos de quien los usa.
 
@@ -26,7 +26,7 @@ Webs oficiales → ingesta (hasta cada 30 min) → data/ (JSON) → web estátic
                                                    → worker de avisos → Telegram y correo
 ```
 
-GitHub Actions lee las páginas públicas varias veces al día (cada 30 min las mañanas laborables y menos el resto; ver [`docs/worker.md`](docs/worker.md)), de una en una y con pausas, y guarda los cambios como JSON en `data/` (el histórico queda en git). La web se genera desde esos datos y se publica en GitHub Pages; no hay servidor. Si una página oficial cambia de forma, la ingesta de esa fuente se detiene sin tocar sus datos y la ejecución falla para avisar.
+GitHub Actions lee las páginas públicas varias veces al día (cada 30 min los días laborables de 6:00 a 19:00 y menos el resto; ver [`docs/worker.md`](docs/worker.md)), de una en una y con pausas, y guarda los cambios como JSON en `data/` (el histórico queda en git). La web se genera desde esos datos y se publica en GitHub Pages; no hay servidor. Si una página oficial cambia de forma, la ingesta de esa fuente se detiene sin tocar sus datos y la ejecución falla para avisar.
 
 La web del Grupo Tragsa ([`alertapublica/empleo-tragsa`](https://github.com/alertapublica/empleo-tragsa)) se genera con la API de este portal. Al publicar, `actualizar.yml` la manda regenerar si existe el secreto `TOKEN_WEB_TRAGSA`: un token de grano fino con «Actions: lectura y escritura» solo en ese repo. Sin él, se actualiza con su propio cron.
 

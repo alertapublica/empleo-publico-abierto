@@ -30,38 +30,39 @@ test("falla sin token", async () => {
 // Cada fecha es UTC; entre paréntesis, la hora de Madrid (invierno +1, verano +2).
 const lanza = (iso) => toca(new Date(iso));
 
-test("entre semana: cada 30 min de 6:00 a 15:59, luego cada hora, y nada de madrugada", () => {
-  assert.equal(lanza("2026-11-10T05:07:00Z"), true); // martes 6:07
-  assert.equal(lanza("2026-11-10T05:37:00Z"), true); // martes 6:37
-  assert.equal(lanza("2026-11-10T14:37:00Z"), true); // martes 15:37
-  assert.equal(lanza("2026-11-10T15:07:00Z"), true); // martes 16:07
-  assert.equal(lanza("2026-11-10T15:37:00Z"), false); // martes 16:37
-  assert.equal(lanza("2026-11-10T22:07:00Z"), true); // martes 23:07
-  assert.equal(lanza("2026-11-10T22:37:00Z"), false); // martes 23:37
+// Las lecturas de un día, en hora de Madrid, a partir de los disparos del cron (:07 y :37 UTC).
+const lecturas = (dia) => {
+  const horas = [];
+  for (let t = Date.parse(`${dia}T00:00:00Z`) - 3 * 3600e3; t < Date.parse(`${dia}T00:00:00Z`) + 24 * 3600e3; t += 30 * 60e3) {
+    const fecha = new Date(t + 7 * 60e3);
+    const madrid = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Madrid", day: "2-digit", hour: "numeric", minute: "2-digit", hourCycle: "h23" }).formatToParts(fecha);
+    const parte = (tipo) => madrid.find((p) => p.type === tipo).value;
+    if (parte("day") === dia.slice(8) && toca(fecha)) horas.push(`${Number(parte("hour"))}:${parte("minute")}`);
+  }
+  return horas;
+};
+const cada30 = (desde, hasta) => Array.from({ length: (hasta - desde) * 2 }, (_, i) => `${desde + Math.floor(i / 2)}:${i % 2 ? "37" : "07"}`);
+
+test("entre semana: cada 30 min de 6:00 a 19:00, a las 20 y las 22 h, y nada de madrugada", () => {
+  assert.deepEqual(lecturas("2026-11-10"), [...cada30(6, 19), "20:07", "22:07"]); // martes
+  assert.equal(lecturas("2026-11-10").length, 28);
+  assert.equal(lanza("2026-11-10T17:37:00Z"), true); // martes 18:37
+  assert.equal(lanza("2026-11-10T18:07:00Z"), false); // martes 19:07
   assert.equal(lanza("2026-11-10T04:37:00Z"), false); // martes 5:37
-  assert.equal(lanza("2026-11-10T23:07:00Z"), false); // miércoles 0:07
 });
 
-test("fin de semana: cada hora hasta las 16:00 y solo a las 19 y las 22 h después", () => {
-  assert.equal(lanza("2026-11-14T05:07:00Z"), true); // sábado 6:07
-  assert.equal(lanza("2026-11-14T05:37:00Z"), false); // sábado 6:37
-  assert.equal(lanza("2026-11-14T14:07:00Z"), true); // sábado 15:07
-  assert.equal(lanza("2026-11-14T15:07:00Z"), false); // sábado 16:07
-  assert.equal(lanza("2026-11-14T18:07:00Z"), true); // sábado 19:07
-  assert.equal(lanza("2026-11-15T21:07:00Z"), true); // domingo 22:07
-  assert.equal(lanza("2026-11-15T20:07:00Z"), false); // domingo 21:07
-  assert.equal(lanza("2026-11-15T04:07:00Z"), false); // domingo 5:07
+test("fin de semana: cada 3 horas de las 8 a las 20 h", () => {
+  assert.deepEqual(lecturas("2026-11-14"), ["8:07", "11:07", "14:07", "17:07", "20:07"]); // sábado
+  assert.deepEqual(lecturas("2026-11-15"), ["8:07", "11:07", "14:07", "17:07", "20:07"]); // domingo
 });
 
-test("sigue la hora de Madrid en verano", () => {
-  assert.equal(lanza("2026-07-07T04:07:00Z"), true); // martes 6:07 (+2)
+test("sigue la hora de Madrid en verano y en los cambios de hora", () => {
+  assert.deepEqual(lecturas("2026-07-07"), [...cada30(6, 19), "20:07", "22:07"]); // martes (+2)
+  assert.equal(lanza("2026-07-07T04:07:00Z"), true); // martes 6:07
   assert.equal(lanza("2026-07-07T03:37:00Z"), false); // martes 5:37
-  assert.equal(lanza("2026-07-11T17:07:00Z"), true); // sábado 19:07
-  assert.equal(lanza("2026-07-11T18:07:00Z"), false); // sábado 20:07
-  // El domingo 29 de marzo de 2026 se adelanta la hora: 6:07 ya son las 4:07 UTC.
-  assert.equal(lanza("2026-03-29T04:07:00Z"), true);
-  assert.equal(lanza("2026-03-29T05:07:00Z"), true); // 7:07
-  assert.equal(lanza("2026-03-29T03:07:00Z"), false); // 5:07
+  // Los domingos en que cambia la hora (29 de marzo y 25 de octubre de 2026), las mismas horas de Madrid.
+  assert.deepEqual(lecturas("2026-03-29"), ["8:07", "11:07", "14:07", "17:07", "20:07"]);
+  assert.deepEqual(lecturas("2026-10-25"), ["8:07", "11:07", "14:07", "17:07", "20:07"]);
 });
 
 test("scheduled lanza el workflow solo cuando toca", async () => {
@@ -69,7 +70,7 @@ test("scheduled lanza el workflow solo cuando toca", async () => {
   let llamadas = 0;
   globalThis.fetch = async () => { llamadas++; return new Response(null, { status: 204 }); };
   try {
-    await worker.scheduled({ scheduledTime: Date.parse("2026-11-10T15:37:00Z") }, env, {});
+    await worker.scheduled({ scheduledTime: Date.parse("2026-11-10T18:37:00Z") }, env, {}); // martes 19:37
     assert.equal(llamadas, 0);
     await worker.scheduled({ scheduledTime: Date.parse("2026-11-10T05:37:00Z") }, env, {});
     assert.equal(llamadas, 1);

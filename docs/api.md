@@ -1,6 +1,6 @@
 # API
 
-JSON estático en GitHub Pages (`https://alertapublica.es/api/…`), regenerado en cada publicación, es decir, tras cada lectura: cada 30 minutos entre semana de 6:00 a 16:00 y menos el resto del día (horario en [worker](worker.md); la web lo publica desde `SCHEDULE`, `empleo/site.py`). Se puede leer desde cualquier web (CORS abierto) sin clave.
+JSON estático en GitHub Pages (`https://alertapublica.es/api/…`), regenerado en cada publicación, es decir, tras cada lectura: cada 30 minutos entre semana de 6:00 a 19:00 y menos el resto (horario en [worker](worker.md); la web lo publica desde `SCHEDULE`, `empleo/site.py`). Se puede leer desde cualquier web (CORS abierto) sin clave.
 
 Hay cuatro ficheros:
 

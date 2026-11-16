@@ -8,13 +8,14 @@ El cron se dispara a :07 y a :37 de cada hora (UTC) y `toca()` (`worker/src/inde
 
 | Días | Franja | Lecturas |
 |---|---|---|
-| Lunes a viernes | 6:00–15:59 | cada 30 min |
-| Lunes a viernes | 16:00–23:59 | cada hora |
-| Sábado y domingo | 6:00–15:59 | cada hora |
-| Sábado y domingo | 16:00–23:59 | a las 19:07 y a las 22:07 |
+| Lunes a viernes | 6:00–18:59 | cada 30 min |
+| Lunes a viernes | 19:00–23:59 | a las 20:07 y a las 22:07 |
+| Sábado y domingo | 6:00–23:59 | cada 3 horas: 8:07, 11:07, 14:07, 17:07 y 20:07 |
 | Todos | 0:00–5:59 | ninguna |
 
-Una oferta se da por cerrada tras 3 lecturas seguidas sin verla (`MISSED_RUNS_TO_CLOSE`, `empleo/ingest.py`): entre semana por la mañana, 1,5 h. Si cambias el horario, revisa ese valor y el horario que publica la web (`SCHEDULE` y `SCHEDULE_SUMMARY`, `empleo/site.py`).
+Son 28 lecturas cada día laborable y 5 cada día del fin de semana. El horario sigue a cuándo publican los organismos: en un recuento de novedades por hora de detección (7 días laborables de noviembre de 2026), el 91 % llegó entre las 6:00 y las 16:00, el 9 % de 16:00 a 19:00 y nada después de las 20:00; en fin de semana, casi nada que no fuera el alta de una fuente nueva. Conviene repetir el recuento con más datos.
+
+Una oferta se da por cerrada tras 3 lecturas seguidas sin verla (`MISSED_RUNS_TO_CLOSE`, `empleo/ingest.py`): 1,5 h si las tres caen en la franja de cada 30 minutos; si cruzan la noche o el fin de semana, bastante más: de un día laborable a otro, unas 11,5 h (última vista a las 18:37, cerrada a las 6:07), y en fin de semana hasta 18 h (vista el sábado a las 14:07, cerrada el domingo a las 8:07; 19 h el día que se retrasa el reloj). Las ofertas que vencen se cierran por la fecha del plazo, no por esto. Si cambias el horario, revisa ese valor y el horario que publica la web (`SCHEDULE` y `SCHEDULE_SUMMARY`, `empleo/site.py`).
 
 ## Secretos
 

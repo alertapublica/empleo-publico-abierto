@@ -8,7 +8,10 @@ import { correoConfigurado, enlaceBaja, enviarUno, telegram, vaciar } from "./en
 import { recibir } from "./novedades.js";
 
 export const CRON_ENVIOS = "* * * * *";
-export const CRONS_CORREO = ["0 6 * * *", "0 13 * * *"]; // resumen de la mañana y de la tarde (UTC)
+// Resúmenes por correo (UTC): de lunes a viernes, por la mañana (7:00 en Madrid en invierno, 8:00 en verano) y por la
+// tarde (19:30 / 20:30), después de la última lectura cada 30 minutos; sábados y domingos, uno (20:30 / 21:30),
+// después de la de las 20:07. Ver docs/avisos.md.
+export const CRONS_CORREO = ["0 6 * * mon-fri", "30 18 * * mon-fri", "30 19 * * sat,sun"];
 
 function igual(a, b) { // comparación en tiempo constante
   const x = new TextEncoder().encode(a);
@@ -94,7 +97,10 @@ export default {
   },
 
   async scheduled(evento, env, _ctx) {
-    if (CRONS_CORREO.includes(evento.cron)) await resumenCorreo(env);
+    // Todo cron que no sea el de cada minuto es de un resumen (CRONS_CORREO): así no depende de cómo escriba
+    // Cloudflare la expresión que recibe el evento («mon-fri» o «MON-FRI»). Un cron nuevo que no sea de correo
+    // no se cuela sin querer: el test de los crons exige que wrangler.jsonc tenga solo CRON_ENVIOS y CRONS_CORREO.
+    if (evento.cron !== CRON_ENVIOS) await resumenCorreo(env);
     await vaciar(env);
   },
 };

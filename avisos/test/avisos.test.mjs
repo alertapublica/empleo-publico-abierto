@@ -442,17 +442,25 @@ test("correo activo: alta con doble confirmación, resúmenes y baja con un clic
   assert.equal(await db.prepare("SELECT COUNT(*) AS n FROM suscriptores").first("n"), 0);
 });
 
-test("los crons de wrangler.jsonc coinciden con los del código y el correo sale por la mañana y por la tarde", async () => {
+test("los crons de wrangler.jsonc coinciden con los del código: dos resúmenes entre semana y uno en fin de semana", async () => {
   const jsonc = readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8").replace(/^\s*\/\/.*$/gm, "");
   const { triggers } = JSON.parse(jsonc);
   assert.deepEqual([...triggers.crons].sort(), [CRON_ENVIOS, ...CRONS_CORREO].sort());
-  assert.equal(CRONS_CORREO.length, 2);
+  // Campos: minuto, hora (UTC), día del mes, mes y día de la semana. En Cloudflare el 1 es el domingo, no el lunes:
+  // los días van por su nombre para no confundirse.
+  assert.deepEqual(CRONS_CORREO.map((c) => c.split(" ").slice(1).join(" ")).sort(),
+    ["18 * * mon-fri", "19 * * sat,sun", "6 * * mon-fri"]);
+  assert.ok(CRONS_CORREO.every((c) => /^[a-z,-]+$/.test(c.split(" ")[4])), "días de la semana por su nombre");
   for (const cron of CRONS_CORREO) {
     const db = d1();
     const env = correoEnv(db, smtpFalso());
     await worker.scheduled({ cron }, env, { waitUntil() {} });
     assert.equal(await db.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor"), "0", `${cron} fija el cursor`);
   }
+  // Aunque Cloudflare escriba la expresión de otra forma, sigue siendo un resumen.
+  const otra = d1();
+  await worker.scheduled({ cron: "0 6 * * MON-FRI" }, correoEnv(otra, smtpFalso()), { waitUntil() {} });
+  assert.equal(await otra.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor"), "0");
   const db = d1();
   await worker.scheduled({ cron: CRON_ENVIOS }, correoEnv(db, smtpFalso()), { waitUntil() {} });
   assert.equal(await db.prepare("SELECT valor FROM estado WHERE clave = 'correo_desde'").first("valor"), null, "el cron de envíos no prepara resumen");

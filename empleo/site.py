@@ -56,13 +56,12 @@ API_SPLIT_BYTES = 2 * 1024 ** 2
 # Horario de lectura de las webs oficiales, en hora peninsular; tras cada lectura se publica la web. Lo
 # decide `toca()` en worker/src/index.js (ver docs/worker.md): si cambia allí, hay que cambiarlo aquí.
 SCHEDULE = (
-    ("De lunes a viernes, de 6:00 a 16:00", "Cada 30 minutos"),
-    ("De lunes a viernes, de 16:00 a 24:00", "Cada hora"),
-    ("Sábados y domingos, de 6:00 a 16:00", "Cada hora"),
-    ("Sábados y domingos, de 16:00 a 24:00", "Dos veces: a las 19:07 y a las 22:07"),
+    ("De lunes a viernes, de 6:00 a 19:00", "Cada 30 minutos"),
+    ("De lunes a viernes, de 19:00 a 24:00", "Dos veces: a las 20:07 y a las 22:07"),
+    ("Sábados y domingos", "Cada 3 horas: a las 8:07, 11:07, 14:07, 17:07 y 20:07"),
     ("Todos los días, de 0:00 a 6:00", "Ninguna"),
 )
-SCHEDULE_SUMMARY = ("cada 30 minutos de lunes a viernes de 6:00 a 16:00, con menos frecuencia por la tarde y "
+SCHEDULE_SUMMARY = ("cada 30 minutos de lunes a viernes de 6:00 a 19:00, con menos frecuencia por la noche y "
                     "en fin de semana, y nunca de 0:00 a 6:00")
 # Relación de municipios de la que salen los códigos (vía territorios-es). Un test comprueba que la fecha es la
 # de la versión instalada de territorios-es.
@@ -1232,7 +1231,7 @@ def mail_section(sitekey: str, organisms: list) -> str:
         f'<div class="opciones">\n{casillas("organismos", members)}</div></details>\n'
         for label, members in organisms)
     return f"""<h2 id="correo">Por correo electrónico</h2>
-<p>Recibirá como mucho dos correos al día, por la mañana y por la tarde, solo cuando haya ofertas nuevas o vueltas a publicar que cumplan sus criterios. La oferta debe cumplir todos los apartados que elija y, dentro de cada uno, basta con una opción. Los apartados que deje en blanco no filtran.</p>
+<p>Recibirá como mucho dos correos al día de lunes a viernes, hacia las 7:00 y las 19:30, y uno los sábados y domingos, hacia las 20:30 (con el horario de verano, una hora más tarde), solo cuando haya ofertas nuevas o vueltas a publicar que cumplan sus criterios. La oferta debe cumplir todos los apartados que elija y, dentro de cada uno, basta con una opción. Los apartados que deje en blanco no filtran.</p>
 <form class="form-correo" method="post" action="{AVISOS_URL}/correo/alta">
 <p><label for="correo-direccion">Correo electrónico</label>
 <input id="correo-direccion" name="correo" type="email" autocomplete="email" required></p>
@@ -1268,7 +1267,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
     if bot:
         ways.append('<li><a href="#telegram"><strong>Por Telegram</strong><span>Un bot le envía un mensaje cuando se publica una oferta que cumple sus criterios.</span></a></li>')
     if sitekey:
-        ways.append('<li><a href="#correo"><strong>Por correo electrónico</strong><span>Dos resúmenes al día, mañana y tarde, con las ofertas que cumplen sus criterios.</span></a></li>')
+        ways.append('<li><a href="#correo"><strong>Por correo electrónico</strong><span>Dos resúmenes al día entre semana, mañana y tarde, y uno en fin de semana, con las ofertas que cumplen sus criterios.</span></a></li>')
     if ways:
         ways.append('<li><a href="#rss"><strong>Por RSS</strong><span>Siga una lista desde su lector de RSS, sin registrarse ni facilitar datos personales.</span></a></li>')
         intro = (f'<p>Puede recibir los avisos de {"dos" if len(ways) == 2 else "tres"} formas:</p>\n'
@@ -1333,7 +1332,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
     telegram = ("<li><strong>Telegram:</strong> un bot le envía un mensaje cuando se publica una oferta que cumple "
                 "sus criterios: palabras del título, áreas, comunidades autónomas u organismos.</li>\n") if bot else ""
     if mail:
-        telegram += ("<li><strong>Correo electrónico:</strong> dos resúmenes al día (mañana y tarde) con las ofertas que cumplen sus "
+        telegram += ("<li><strong>Correo electrónico:</strong> dos resúmenes al día entre semana (mañana y tarde) y uno en fin de semana, con las ofertas que cumplen sus "
                      "criterios, con los mismos apartados que el bot.</li>\n")
     sections = [("que-hay", "Contenido del portal"), ("organismos", "Organismos incluidos"),
                 ("antes-de-inscribirte", "Antes de inscribirse"), ("como-buscar", "Cómo buscar"),
