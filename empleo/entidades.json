@@ -393,6 +393,18 @@
    "alias": []
   },
   {
+   "id": "upf",
+   "nombre": "Universitat Pompeu Fabra",
+   "alias": []
+  },
+  {
+   "id": "fundacio-upf",
+   "nombre": "Fundació Universitat Pompeu Fabra",
+   "alias": [
+    "Fundació UPF"
+   ]
+  },
+  {
    "id": "tragsatec",
    "nombre": "Tragsatec",
    "alias": [
@@ -606,6 +618,9 @@
   },
   "puertos": {
    "procesos": "ubicacion"
+  },
+  "upf": {
+   "ofertas": "empresa"
   }
  }
 }
