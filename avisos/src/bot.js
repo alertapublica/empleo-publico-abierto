@@ -17,7 +17,7 @@ export const COMANDOS = [
   { command: "privacidad", description: "Qué datos se guardan" },
 ];
 
-const AYUDA = `Este bot te avisa de las ofertas nuevas de empleo en empresas públicas que publica el portal no oficial «Empleo en Empresas Públicas».
+const AYUDA = `Este bot te avisa de las ofertas nuevas que publica el portal no oficial «Empleo Público Abierto»: empresas públicas, fundaciones, centros de investigación y universidades del sector público. No incluye oposiciones de las Administraciones.
 
 /nuevo crea un aviso. Puedes combinar:
 • palabras clave del título (por ejemplo «analista»): basta con el comienzo de la palabra, así «ingenier» encuentra Ingeniero/a e Ingeniera;
@@ -27,7 +27,7 @@ const AYUDA = `Este bot te avisa de las ofertas nuevas de empleo en empresas pú
 
 La oferta tiene que cumplir todo lo que elijas: «analista» + Galicia avisa solo de las ofertas de analista en Galicia. Dentro de cada apartado basta con una coincidencia (Galicia o Asturias).
 
-Las palabras se buscan en el título tal como lo publica cada empresa: las ofertas en inglés o en catalán solo coinciden con palabras en ese idioma.
+Las palabras se buscan en el título tal como lo publica cada organismo: las ofertas en inglés o en catalán solo coinciden con palabras en ese idioma.
 
 /avisos muestra tus avisos y te deja borrarlos. /baja lo borra todo.
 Puedes tener hasta ${MAX_AVISOS} avisos.`;
@@ -88,7 +88,7 @@ function pregunta(paso, criterios, listas) {
       for (let i = 0; i < botones.length; i += 2) filas.push(botones.slice(i, i + 2));
       filas.push([boton(elegidas.size ? "Listo" : "Todas las áreas", "saltar")], CANCELAR);
       return {
-        text: `Paso 2 de ${total}. Elige una o varias áreas profesionales y pulsa «Listo», o «Todas las áreas». El área es una clasificación orientativa del portal, no de la empresa.`,
+        text: `Paso 2 de ${total}. Elige una o varias áreas profesionales y pulsa «Listo», o «Todas las áreas». El área es una clasificación orientativa del portal, no del organismo.`,
         reply_markup: teclado(filas),
       };
     }
@@ -109,7 +109,7 @@ function pregunta(paso, criterios, listas) {
       };
     case "organismos":
       return {
-        text: "Paso 4 de 4. Escribe organismos o empresas separados por comas (por ejemplo: Tragsa, Correos), o elige todos. La lista completa está en la página «Organismos» del portal.",
+        text: "Paso 4 de 4. Escribe organismos o entidades separados por comas (por ejemplo: Tragsa, Correos), o elige todos. La lista completa está en la página «Organismos» del portal.",
         reply_markup: teclado([[boton("Todos los organismos", "saltar")], CANCELAR]),
       };
     case "comunicados":
