@@ -9,6 +9,10 @@
 //                comunidad concreta (casi todos los procesos son estatales o no dicen dónde)
 //   organismos:  ids de organismo
 //   comunicados: incluir los comunicados de procesos selectivos de esos organismos
+//   becas:       "no" (por defecto), "tambien" o "solo": las ofertas con tipo_contrato «beca»
+//   extranjero:  "no" (por defecto), "tambien" o "solo": las novedades con extranjero = true (puesto fuera
+//                de España). Es un lugar más: no entran por sin_ccaa ni por un aviso sin comunidades, y
+//                con "solo" no llega nada de España
 // Dentro de un mismo criterio basta con que coincida uno; entre criterios, tienen que coincidir todos.
 // Un criterio vacío no filtra.
 
@@ -34,12 +38,20 @@ export function empiezaPalabra(texto, clave) {
 
 const lista = (valor) => (Array.isArray(valor) ? valor : []);
 
+export const OPCIONES = ["no", "tambien", "solo"]; // de `becas` y `extranjero`
+const opcion = (valor) => (OPCIONES.includes(valor) ? valor : "no");
+
+// ¿Pasa una novedad que es (o no es) beca, o del extranjero, con la opción elegida?
+const admite = (elegida, es) => (es ? opcion(elegida) !== "no" : opcion(elegida) !== "solo");
+
 export function coincide(criterios, novedad) {
   const palabras = lista(criterios.palabras);
   const organismos = lista(criterios.organismos);
   if (organismos.length && !organismos.includes(novedad.organismo)) return false;
+  const fuera = novedad.extranjero === true;
+  if (!admite(criterios.extranjero, fuera)) return false;
   const ccaa = lista(criterios.ccaa);
-  if (ccaa.length && !(novedad.ccaa ? ccaa.includes(novedad.ccaa) : criterios.sin_ccaa !== false)) return false;
+  if (!fuera && ccaa.length && !(novedad.ccaa ? ccaa.includes(novedad.ccaa) : criterios.sin_ccaa !== false)) return false;
 
   if (novedad.tipo === "comunicado") {
     if (!criterios.comunicados) return false;
@@ -47,6 +59,7 @@ export function coincide(criterios, novedad) {
     return !palabras.length || palabras.some((p) => empiezaPalabra(texto, p));
   }
   if (novedad.tipo !== "oferta") return false;
+  if (!admite(criterios.becas, novedad.tipo_contrato === "beca")) return false;
 
   const areas = lista(criterios.areas);
   if (areas.length && !lista(novedad.areas).some((a) => areas.includes(a))) return false;
@@ -68,6 +81,9 @@ export function limpiar(criterios, listas) {
   limpio.sin_ccaa = limpio.ccaa.length ? criterios.sin_ccaa !== false : true;
   limpio.teletrabajo = criterios.teletrabajo === true;
   limpio.comunicados = limpio.organismos.length ? Boolean(criterios.comunicados) : false;
+  limpio.becas = opcion(criterios.becas);
+  limpio.extranjero = opcion(criterios.extranjero);
+  if (limpio.extranjero === "solo") Object.assign(limpio, { ccaa: [], sin_ccaa: true }); // las comunidades no cuentan
   return limpio;
 }
 
@@ -79,10 +95,14 @@ export function describir(criterios, listas) {
   if (lista(criterios.palabras).length) partes.push(`«${criterios.palabras.join("», «")}»`);
   if (lista(criterios.areas).length) partes.push(nombre(listas.areas, "id", criterios.areas));
   if (criterios.teletrabajo) partes.push("que mencionen teletrabajo");
-  if (lista(criterios.ccaa).length) {
+  if (opcion(criterios.becas) !== "no") partes.push(opcion(criterios.becas) === "solo" ? "solo becas" : "también becas");
+  const extranjero = opcion(criterios.extranjero);
+  if (extranjero === "solo") partes.push("solo extranjero");
+  else if (lista(criterios.ccaa).length) {
     partes.push(nombre(listas.comunidades, "ccaa", criterios.ccaa)
-      + (criterios.sin_ccaa === false ? "" : " (y sin comunidad concreta)"));
-  }
+      + (criterios.sin_ccaa === false ? "" : " (y sin comunidad concreta)")
+      + (extranjero === "tambien" ? " y extranjero" : ""));
+  } else if (extranjero === "tambien") partes.push("España y extranjero");
   if (lista(criterios.organismos).length) {
     partes.push(nombre(listas.organismos, "id", criterios.organismos)
       + (criterios.comunicados ? " (con comunicados de procesos)" : ""));
@@ -119,5 +139,16 @@ export function reconocer(texto, opciones, alias = {}) {
 
 export const reconocerComunidades = (texto, listas) =>
   reconocer(texto, listas.comunidades.map((c) => ({ id: c.ccaa, nombre: c.nombre })), ALIAS_CCAA);
+
+// Comunidades y, como un lugar más, «extranjero» (o «fuera de España»): { ok, dudas, fallos, extranjero } con
+// extranjero "solo" si es lo único escrito, "tambien" si va con comunidades y "no" si no aparece.
+const FUERA = new Set(["fuera de espana", "fuera", "extranjero", "el extranjero", "en el extranjero"]);
+export function reconocerLugares(texto, listas) {
+  const terminos = String(texto).split(/[,;\n]+/);
+  const fuera = terminos.some((t) => FUERA.has(normalizar(t)));
+  const resto = terminos.filter((t) => !FUERA.has(normalizar(t))).join(",");
+  const r = reconocerComunidades(resto, listas);
+  return { ...r, extranjero: !fuera ? "no" : r.ok.length ? "tambien" : "solo" };
+}
 
 export const reconocerOrganismos = (texto, listas) => reconocer(texto, listas.organismos);
