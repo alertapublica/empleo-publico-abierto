@@ -29,6 +29,11 @@ WORKERS = 4  # grupos a la vez; INGESTA_HILOS lo cambia (con 1, en serie)
 SOURCE_BUDGET = 10 * 60  # s por fuente
 TOTAL_BUDGET = 25 * 60  # s de toda la lectura: el job tiene 30 min y luego publica (≈20 s)
 TRACKED = ("title", "code", "source_title", "category", "url", "apply_url")
+# Desde cuándo falla cada fuente. Los fallos sueltos de servidores ajenos (522, resets, 403 puntuales) no
+# ponen la lectura en rojo; una fuente que lleva FAILING_TOO_LONG sin leerse, sí. Por tiempo y no por
+# número de lecturas, para que avise igual entre semana (cada 30 min) que en fin de semana (cada 3 h).
+FAILURES = DATA / "fallos.json"
+FAILING_TOO_LONG = timedelta(hours=2)
 
 
 def _record(source_id: str, offer: ListedOffer, now: str) -> dict:
@@ -427,6 +432,25 @@ def run_group(group: list[Source], now: datetime, end: float) -> dict[str, str]:
     return results
 
 
+def track_failures(path: Path, results: dict[str, str], now: datetime) -> dict[str, dict]:
+    """Anota en `path` desde cuándo y cuántas lecturas seguidas lleva fallando cada fuente leída; la que
+    lee bien sale del fichero, y también la que ya no está en el catálogo. Devuelve las que fallan ahora."""
+    active = {source.id for source in ACTIVE}
+    failing = {key: value for key, value in store.load(path, {}).items() if key in active}
+    for source_id, result in results.items():
+        if result == "bien":
+            failing.pop(source_id, None)
+            continue
+        entry = failing.setdefault(source_id, {"desde": now.isoformat(timespec="seconds"), "lecturas": 0})
+        entry.update(lecturas=entry["lecturas"] + 1, resultado=result)
+    store.save(path, failing)
+    return {key: value for key, value in failing.items() if key in results}
+
+
+def failing_too_long(entry: dict, now: datetime) -> bool:
+    return now - datetime.fromisoformat(entry["desde"]) >= FAILING_TOO_LONG
+
+
 def main(ids: list[str] | None = None) -> int:
     now = datetime.now(timezone.utc)
     end = time.monotonic() + TOTAL_BUDGET
@@ -444,7 +468,19 @@ def main(ids: list[str] | None = None) -> int:
     say(f"RESUMEN {len(sources)} fuentes, {workers} a la vez: "
         f"{sum(result == 'bien' for result in results.values())} bien"
         + "".join(f"; {result}: {' '.join(ids)}" for result, ids in wrong.items()))
-    return 1 if wrong else 0
+    failing = track_failures(FAILURES, results, now)
+    too_long = sorted(key for key, entry in failing.items() if failing_too_long(entry, now))
+    lines = [f"FALLA {key} desde {entry['desde']} ({entry['lecturas']} lecturas seguidas)"
+             for key, entry in sorted(failing.items())]
+    for line in lines:
+        say(line)
+    if too_long:
+        say(f"ROJO: más de {FAILING_TOO_LONG.seconds // 3600} h sin leer {' '.join(too_long)}", error=True)
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary and lines:  # en la página de la ejecución, aunque salga en verde
+        with open(summary, "a", encoding="utf-8") as out:
+            out.write("### Fuentes que fallan\n\n" + "".join(f"- {line}\n" for line in lines) + "\n")
+    return 1 if too_long else 0
 
 
 if __name__ == "__main__":

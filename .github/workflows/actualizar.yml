@@ -171,7 +171,8 @@ jobs:
         continue-on-error: true
         run: python -m empleo.entidades informe | tee -a "$GITHUB_STEP_SUMMARY"
 
-      # La web se publica igualmente, pero el fallo tiene que verse y avisar.
+      # La web se publica igualmente, pero el fallo tiene que verse y avisar. La ingesta solo falla si una
+      # fuente lleva más de 2 h sin leerse (data/fallos.json); los fallos sueltos van al resumen de la ejecución.
       - name: Señalar si falló la lectura
         if: steps.ingesta.outcome == 'failure'
         run: exit 1
