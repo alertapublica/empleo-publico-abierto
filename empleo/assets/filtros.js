@@ -8,7 +8,7 @@
   if (!form || !list) return;
   var status = document.getElementById("estado-filtros");
   var items = Array.prototype.slice.call(list.children);
-  var selects = ["grupo", "comunidad", "organismo", "empresa", "area", "perfil", "tipo", "situacion", "acceso", "sistema", "contrato"].filter(function (n) { return form[n]; });
+  var selects = ["grupo", "comunidad", "organismo", "empresa", "area", "perfil", "tipo", "situacion", "proceso", "unidad", "acceso", "sistema", "contrato"].filter(function (n) { return form[n]; });
   // Campos con varios valores separados por espacios (una oferta puede tener dos áreas).
   var VARIOS = { area: true };
   // Casillas: nombre del campo y dato de la tarjeta que tiene que valer "1" («guardadas»: lo pone guardadas.js).

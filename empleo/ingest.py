@@ -337,6 +337,30 @@ def sync_announcements(source: Source, http: Client, known: dict, now: datetime)
             record.update(state="retirado", deadline=None, deadline_time=None, apply_url=None)
 
 
+def sync_places(source: Source, http: Client, known: dict, now: datetime) -> None:
+    """Pone al día la relación de puestos de los procesos (clave: fuente y referencia del puesto).
+
+    Cada lectura trae los datos vigentes de cada puesto (una corrección del anexo los sustituye). Un
+    puesto que deja de figurar queda «sin novedades», como un proceso; una lectura vacía no cambia nada.
+    """
+    items = source.list_places(http)
+    if not items:
+        return
+    stamp = now.isoformat(timespec="seconds")
+    listed = set()
+    for item in items:
+        check_dates(item, ("deadline",))
+        key = f"{source.id}:{item.code}"
+        before = known.get(key)
+        known[key] = {**asdict(item), "source": source.id, "first_seen": before["first_seen"] if before else stamp}
+        listed.add(key)
+    for key, record in known.items():
+        if key not in listed and record["state"] != "finalizado":
+            record.update(state="retirado", deadline=None, deadline_time=None, apply_url=None)
+        if record["state"] == "abierto" and deadline_passed(record["deadline"], record.get("deadline_time"), now):
+            record.update(state="curso", deadline=None, deadline_time=None, apply_url=None)
+
+
 def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     folder = data / source.id
     offers = store.load(folder / "offers.json", {})
@@ -385,6 +409,10 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
 
     sync_announcements(source, http, announcements, now)
     store.save(folder / "announcements.json", announcements)
+    places = store.load(folder / "plazas.json", {})
+    sync_places(source, http, places, now)
+    if places:  # solo las fuentes con relación de puestos tienen el fichero
+        store.save(folder / "plazas.json", places)
 
     open_count = sum(record["status"] == "open" for record in offers.values())
     say(f"{source.id}: {open_count} abiertas, {len(new_events)} eventos, "
