@@ -1345,7 +1345,7 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <nav aria-label="En esta página"><ul class="indice-grupos">{index}</ul></nav>
 <h2 id="que-hay">Contenido del portal</h2>
 <ul>
-<li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases. De las universidades, por ahora solo recoge los puestos de investigación y de apoyo técnico a la investigación.</li>
+<li><strong>Incluye</strong> los puestos de entidades del sector público que contratan directamente, con su plazo y su ficha, y los procesos selectivos que anuncian, con sus comunicados por fases. De las universidades recoge los puestos de investigación y de apoyo técnico a la investigación y, de algunas, las plazas laborales del personal técnico, de gestión y de administración y servicios (PTGAS).</li>
 <li><strong>Investigación:</strong> las ofertas de las fundaciones, los centros de investigación y las universidades públicas están en su propia sección, <a href="../investigacion/">Investigación</a>. Las que no son de investigación o son de gestión (administración, recursos humanos, enfermería…) salen también en la portada; lo decide el área que el portal asigna a cada oferta.</li>
 <li><strong>No incluye</strong> las oposiciones de las Administraciones públicas (Administración General del Estado, comunidades autónomas y entidades locales) ni las plazas de profesorado universitario. Para las oposiciones, consulte los buscadores oficiales de empleo público y los boletines oficiales.</li>
 </ul>
