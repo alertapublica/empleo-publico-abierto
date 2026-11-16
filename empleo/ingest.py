@@ -337,6 +337,11 @@ def sync_announcements(source: Source, http: Client, known: dict, now: datetime)
             record.update(state="retirado", deadline=None, deadline_time=None, apply_url=None)
 
 
+# Lo que se guarda de la lectura del anexo de una plaza (`read_annexes`), además de sus datos.
+ANNEX_KEYS = ("degree", "location", "annex_read", "annex_tries")
+MAX_ANNEX_TRIES = 3
+
+
 def sync_places(source: Source, http: Client, known: dict, now: datetime) -> None:
     """Pone al día la relación de puestos de los procesos (clave: fuente y referencia del puesto).
 
@@ -352,13 +357,41 @@ def sync_places(source: Source, http: Client, known: dict, now: datetime) -> Non
         check_dates(item, ("deadline",))
         key = f"{source.id}:{item.code}"
         before = known.get(key)
-        known[key] = {**asdict(item), "source": source.id, "first_seen": before["first_seen"] if before else stamp}
+        record = {**asdict(item), "source": source.id, "first_seen": before["first_seen"] if before else stamp}
+        # Lo leído del anexo vale mientras el anexo sea el mismo.
+        if before and before.get("annex_url") == item.annex_url:
+            record.update({k: before[k] for k in ANNEX_KEYS if k in before and record.get(k) is None})
+        known[key] = record
         listed.add(key)
     for key, record in known.items():
         if key not in listed and record["state"] != "finalizado":
             record.update(state="retirado", deadline=None, deadline_time=None, apply_url=None)
         if record["state"] == "abierto" and deadline_passed(record["deadline"], record.get("deadline_time"), now):
             record.update(state="curso", deadline=None, deadline_time=None, apply_url=None)
+
+
+def read_annexes(source: Source, http: Client, places: dict) -> None:
+    """Lee los anexos de las plazas en marcha que aún no se han leído con la versión actual (las de
+    inscripción abierta primero), como mucho `annexes_per_read` por lectura: el resto, en las siguientes.
+    Un anexo que falla se reintenta en otras lecturas, hasta MAX_ANNEX_TRIES veces."""
+    pending = sorted(
+        (r for r in places.values()
+         if r.get("annex_url") and r["state"] in LIVE_STATES and r.get("annex_tries", 0) < MAX_ANNEX_TRIES
+         and r.get("annex_read") != [r["annex_url"], source.annex_version]),
+        key=lambda r: (r["state"] != "abierto", r["code"]))
+    for record in pending[:source.annexes_per_read]:
+        try:
+            values = source.fetch_annex(http, record)
+        except OutOfTime:
+            raise
+        except Exception as error:  # un anexo malo no para los demás
+            say(f"AVISO {source.id}:{record['code']}: anexo: {error}", error=True)
+            record["annex_tries"] = record.get("annex_tries", 0) + 1
+            continue
+        if values is None:
+            continue
+        record.update({k: values.get(k) for k in ("degree", "location")},
+                      annex_read=[record["annex_url"], source.annex_version], annex_tries=0)
 
 
 def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
@@ -411,8 +444,11 @@ def run_source(source: Source, http: Client, data: Path, now: datetime) -> None:
     store.save(folder / "announcements.json", announcements)
     places = store.load(folder / "plazas.json", {})
     sync_places(source, http, places, now)
-    if places:  # solo las fuentes con relación de puestos tienen el fichero
-        store.save(folder / "plazas.json", places)
+    try:
+        read_annexes(source, http, places)
+    finally:  # si se acaba el plazo, lo leído se guarda igual
+        if places:  # solo las fuentes con relación de puestos tienen el fichero
+            store.save(folder / "plazas.json", places)
 
     open_count = sum(record["status"] == "open" for record in offers.values())
     say(f"{source.id}: {open_count} abiertas, {len(new_events)} eventos, "
