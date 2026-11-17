@@ -260,16 +260,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEM-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEM-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Sevilla",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -281,16 +286,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEM-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEM-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Badajoz",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -302,16 +312,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEM-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEM-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -323,16 +338,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEM-006": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-006.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEM-006.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEM-006",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Tarragona",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -344,16 +364,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media: Grado en Ingeniería Civil o Ingeniería Técnica de Obras Públicas.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -365,16 +390,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Arquitecto: Grado + Máster",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -386,16 +416,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Arquitecto: Grado + Máster",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -407,16 +442,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media en: Ingeniería Eléctrica.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -428,16 +468,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Grado en Ingeniería Civil + Máster, o Ingeniería de Caminos, Canales y Puertos.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -449,16 +494,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-006": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-006.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-006.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-006",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media de Grado en Ingeniería Civil o conocimientos equivalentes equiparados por la empresa. 3.1.- FASE DE CONCURSO DE MÉRITOS (Máximo 40 puntos) La fecha a considerar para la valoración de los méritos será la fecha de finalización del plazo de presentación de solicitudes. Los méritos se podrán acumular pudiendo obtener una puntuación máxima de 40 puntos. A efectos de méritos 1, se considerarán como periodos computables en INECO la contratación laboral directa, por medio de un contrato de puesta a disposición así como las prácticas extracurriculares realizadas en INECO. En los méritos 2 y 3 se considerarán como periodos computables en INECO la contratación laboral directa, por medio de un contrato de puesta a disposición no pudiendo consignarse etapas de prácticas curriculares o extracurriculares realizadas. MÉRITO 1) EXPERIENCIA EN INECO . Periodos de tiempo trabajados en Ineco durante los últimos 5 años anteriores a la fecha de finalización del plazo de presentación de solicitudes, con un máximo de 1.826 días (5 años), prácticas extracurriculares realizadas, así como los tiempos de suspensión de contrato con derecho a reserva de puesto. MÉRITO 2) EXPERIENCIA EN INECO EN EL MISMO PUESTO Y UNIDADES ORGANIZATIVAS REALIZANDO LAS 4 FUNCIONES . Experiencia en Ineco organizativas equivalentes según Mapa de Puestos de Ineco realizando todas las funciones reflejadas en la descripción de funciones del punto 1.14 durante los últimos 5 años anteriores a la fecha de finalización del plazo de presentación de solicitudes, con un máximo de 1.826 días (5 años), teniendo en cuenta a estos efectos los tiempos de suspensión de contrato con derecho a reserva de puesto. MÉRITO 3) EXPERIENCIA EN INECO U OTRAS EMPRESAS REALIZANDO DOS O MÁS FUNCIONES . Experiencia en Ineco o en otras empresas de presentación de solicitudes, con un máximo de 1.826 días (5 años), teniendo en cuenta a estos efect os los tiempos de s uspensión de contrato con derecho a reserva de puesto. No podrán consignarse en este mérito etapas de Beca / Prácticas Extracurriculares ni Curriculares. 3.2.- FASE DE OPOSICIÓN (Máximo 60 puntos) 3.2.1.- Ejercicio 1: Test de Competencias: La puntuación máxima de esta prueba será de La prueba competencial se realizará sobre las siguientes competencias incluidas en el Mapa de Puestos de Ineco y de aplicación al puesto concreto. Competencia Capacidad de mantener una actitud de servicio para identificar, entender y dar prioridad a las necesidades del cliente interno-externo, satisfaciendo con eficacia sus necesidades, anticipándose y aportando valor 1) Foco en el cliente a las soluciones. Implica ofrecer soluciones con un alto nivel de calidad, en el plazo requerido y llevar a cabo el seguimiento del nivel de satisfacción del cliente. Capacidad de buscar la excelencia con rigurosidad y una actitud positiva, intentando hacer su trabajo del mejor modo posible y teniendo en cuenta las expectativas del receptor. Implica enfocar su trabajo hacia 2) Orientación a la calidad un estándar que supera las expectativas de manera oportuna y adecuada. Capacidad para asegurar la generación, actualización y el traspaso de información y conocimiento relativos a su área de actividad, facilitando que las personas que lo necesiten dentro de la Compañía 3) Gestión y Transmisión del conocimiento. dispongan y accedan al conocimiento pertinente en el momento oportuno, garantizando así el proceso de gestión del conocimiento. Habilidad de construir relaciones eficaces, apoyándose los unos en los otros, colaborando juntos para conseguir un objetivo común, tanto a nivel funcional como inter-funcional. Implica compartir con los demás, 4) Trabajo en equipo así como demostrar generosidad realizando esfuerzos en beneficio del equipo y facilitando el avance del mismo hacia la consecución de los objetivos. Implica poder anticiparse e identificar problemas incluso antes de que surjan, reconocer las causas, y establecer alternativas de solución, efectuándolo en el tiempo requerido, incluso en situaciones de riesgo e 5) Iniciativa incertidumbre. Demuestra proactividad en acciones relacionadas con su propio desarrollo y conocimiento de la organización. Capacidad de trabajar independientemente, siguiendo las directrices generales y sin necesidad de una estrecha supervisión, asumiendo las responsabilidades de sus acciones y tomando decisiones en el ámbito 6) Autonomía de su puesto, para lo cual se basa en su propio conocimiento y/o experiencia. 3.2.2.- Ejercicio 2: Entrevista Técnica: La puntuación máxima de esta prueba será de 4.1- Si es usted un/a candidato/a CON VINCULACIÓN LABORAL directa, por contrato de puesta a disposición o realizando prácticas extracurriculares en INECO en el momento de realizar su inscripción, debe presentar la siguiente documentación: Para acreditar REQUISITOS: • Copia del DNI, NIE o identificación vigente. • Copia del carné de conducir en el caso de que así se explicite en el anexo específico del puesto. • Copia del permiso de trabajo, si corresponde. • Currículum vitae, con la descripción de funciones, acreditando experiencia y realización de tareas similares a las de los puestos ofertados. • Declaración responsable a efectos de acreditación de todos los requisitos relativos al puesto según el modelo “Declaración responsable requisitos” de la convocatoria. • Certificado con la información de los periodos trabajados en Ineco que podrá descargarse en la intranet Personal/Certificado Méritos. Para acreditar MÉRITOS: Anexo I: Documento acreditativo de la experiencia/Declaración Responsable correctamente cumplimentado. No obstante, en cualquier momento del proceso podrá ser requerida en un periodo de 10 días la siguiente documentación acreditativa según se establece en la convocatoria: 1. Acreditación de la formación o titulación académica, de acuerdo a lo dispuesto en el punto 2 de la convocatoria. 2. Acreditación de los requisitos específicos que se exigen en el presente anexo, de acuerdo a lo dispuesto en el punto 2 de la convocatoria.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Valencia",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
