@@ -83,5 +83,12 @@
   "at": "2026-11-16T15:37:26+00:00",
   "kind": "closed",
   "offer": "enusa:879-TTCYCE"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-17T16:37:36+00:00",
+  "before": "2026-11-19",
+  "kind": "deadline_changed",
+  "offer": "enusa:878-TTOFYD"
  }
 ]
