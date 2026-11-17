@@ -1841,6 +1841,103 @@
   "title": "Arquitecto/a, Ingeniero/a, Licenciado/a o Grado + Máster en Ingeniería Ingeniería de Montes o Ingeniería de Caminos, Canales y Puertos o Ingeniería Agrónoma o Ingeniería Industrial - Obras (Melilla)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57401"
  },
+ "57447": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57447",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57447",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Madrid",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-17T08:37:23+00:00",
+  "id": "tragsa:57447",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Aranjuez",
+  "portal_tries": 1,
+  "positions": 5,
+  "published_on": "2026-11-17",
+  "ref": "57447",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 5 Técnicos/as agropecuarios/as en Aranjuez, Comunidad de Madrid. <br/><br/><br/>Habiendo quedado pendientes de cubrir 2 posiciones, se amplía el plazo del 17/11/2026 hasta el 30/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid<br/>Dirección: Finca la Chimenea (Aranjuez)</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Manejo y alimentación diaria de animales de las especies bovina, ovina y porcina</li><li>Limpieza de instalaciones: patios, corrales y equipos (comederos y bebederos), retirada de camas sucias y limpieza</li><li>Manejo de los animales, tareas generales: Separación, sujeción y ayuda en tareas de tratamiento, saneamientos, desparasitaciones, identificación, etc.</li><li>Actividades específicas de cada núcleo (ovino, porcino, vacuno): Salidas a parideras, ordeño, enlotado para cubriciones, administración de desinfectante en vados, ayuda en muestreos de semen, etc.</li><li>Desplazamientos al centro de trabajo y ocasionalmente a formaciones</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees el título de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral) de al menos 6 meses</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir B en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees el título de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral) de al menos 6 meses</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees el título de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral) de al menos 6 meses</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir B en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en conducción de maquinaria (Dumper, miniretroexcabadora o tractor)</li><li>Formación acreditada en manejo de desbrozadora</li></ul>Otros Factores Meritorios<ul><li>Coche propio</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en conducción de maquinaria (Dumper, miniretroexcabadora o tractor)</li><li>Formación acreditada en manejo de desbrozadora</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en conducción de maquinaria (Dumper, miniretroexcabadora o tractor)</li><li>Formación acreditada en manejo de desbrozadora</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Coche propio</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:  <br/><br/>- Contrato de duración determinada con una duración estimada de 5 meses.<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnicos/as agropecuarios/as (Aranjuez)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57447"
+ },
  "57450": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57450",
   "category": "Específica",

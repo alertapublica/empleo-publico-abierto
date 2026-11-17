@@ -1300,16 +1300,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-OPT-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-OPT-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: Preferiblemente en Psicología, Pedagogía, Derecho o Relaciones Laborales.",
   "direction": "D. PERSONAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -1321,16 +1326,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-OPT-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-OPT-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: Preferiblemente en Psicología, Pedagogía, Derecho o Relaciones Laborales.",
   "direction": "D. PERSONAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -1342,16 +1352,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-OPT-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-OPT-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-OPT-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "FP en Administración y Finanzas o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. PERSONAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -24232,16 +24247,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior preferiblemente en: Química, Ingeniería Química, Ingeniería Industrial, Ingeniería Ambiental o Biología.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24253,16 +24273,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: preferiblemente en Ingeniería Civil, Ingeniería de Caminos, Canales y Puertos o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24274,16 +24299,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: preferiblemente en Ingeniería Civil, Ingeniería de Caminos, Canales y Puertos o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24295,16 +24325,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Ingeniero de Caminos, Canales y Puertos.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24316,16 +24351,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Ingeniería Aeronáutica/Aeroespacial o Máster en Ingeniería Aeronáutica/Aeroespacial.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24337,16 +24377,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-006": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-006.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-006.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-006",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior. Ingeniería Aeronáutica, Ingeniería Técnica Aeronáutica, Grado en Ingeniería Aeronáutica, Grado en Ingeniería Aeroespacial, Grado en Gestión y Operaciones del Transporte Aéreo; Máster en Ingeniería Aeronáutica, Máster en Sistemas del Transporte Aéreo; o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -24358,16 +24403,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-007": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-007.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECE-007.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECE-007",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior preferiblemente en Economía o Derecho o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
