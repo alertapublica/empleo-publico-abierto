@@ -100,10 +100,9 @@ TITULACIONES = {
         "gl": r"camins,? canles e portos|camiños|obras publicas",
         "eu": r"ingeniaritza zibil\w*",
         "en": r"civil engineering"}),
-    "industrial": ("Ingeniería industrial", {
+    "industrial": ("Ingenierías de la rama industrial", {  # mecánica, eléctrica, electrónica, energía…
         "es": r"\bindustrial\w*|tecnologias industriales|ingenieria (\w+ )?(mecanica|electrica|electronica|energetica|de la energia|de materiales|"
-              r"en automatica|nuclear|de organizacion)(?! de (tele)?comunicaci)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial|"
-              r"energias renovables",
+              r"en automatica|nuclear|de organizacion)(?! de (tele)?comunicaci)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial",  # «Energías Renovables» no es de la rama (SIIU 071301)
         "ca": r"\bindustrials?\b|enginyeria (mecanica|electrica|electronica|de l'energia|de materials)(?! de (tele)?comunicaci)",
         "gl": r"enxenaria (mecanica|electrica|electronica|da enerxia)",
         "eu": r"industria ingeniaritza|ingeniaritza (mekaniko|elektriko|elektroniko)\w*",
@@ -146,7 +145,7 @@ TITULACIONES = {
         "eu": r"nekazaritza\w*",
         "en": r"agronom\w*|agricultur\w*"}),
     "aeroespacial": ("Ingeniería aeroespacial y aeronáutica", {
-        "es": r"aeroespacial|aeronautic\w*|aeroportuari\w*|transporte aereo",
+        "es": r"aeroespacial|aeronautic\w*|sistemas del transporte aereo",  # «transporte aéreo» a secas es otro campo (SIIU 1041)
         "ca": r"aeroespacial|aeronautic\w*",
         "gl": r"aeroespacial|aeronautic\w*",
         "eu": r"aeroespazial\w*|aeronautika\w*",
@@ -231,8 +230,8 @@ TITULACIONES = {
         "en": r"physiotherapy|health sciences?|\bhealth (or|and) \w+ sciences|nutrition"}),
     "economia": ("Economía, ADE y empresa", {
         "es": r"\beconomi\w*|\bade\b|administracion y direccion de empresas|empresariales|finanzas|contabilidad|actuarial|"
-              r"marketing|comercio internacional",
-        "ca": r"\beconomi\w*|administracio i direccio d'empreses|empresarials|finances|marqueting",
+              r"comercio internacional",
+        "ca": r"\beconomi\w*|administracio i direccio d'empreses|empresarials|finances",
         "gl": r"\beconomi\w*|administracion e direccion de empresas|empresariais",
         "eu": r"ekonomia\w*|enpresen administrazio\w*",
         "en": r"economics|business administration|\bmba\b|finance|accounting"}),
@@ -244,9 +243,16 @@ TITULACIONES = {
         "ca": r"relacions laborals|recursos humans", "gl": r"relacions laborais",
         "eu": r"lan harreman\w*", "en": r"human resources|labou?r relations"}),
     "comunicacion": ("Periodismo y comunicación", {
-        "es": r"periodismo|\bcomunicacion\b( audiovisual| digital| corporativa)?|publicidad|ciencias de la informacion|relaciones publicas",
-        "ca": r"periodisme|\bcomunicacio\b|publicitat", "gl": r"xornalismo|\bcomunicacion\b",
+        "es": r"periodismo|\bcomunicacion\b( audiovisual| digital| corporativa)?|ciencias de la informacion",
+        "ca": r"periodisme|\bcomunicacio\b", "gl": r"xornalismo|\bcomunicacion\b",
         "eu": r"kazetaritza\w*|komunikazio\w*", "en": r"journalism|communication"}),
+    "marketing_publicidad": ("Marketing, publicidad y relaciones públicas", {  # ISCED-F 0414
+        "es": r"marketing|publicidad|relaciones publicas", "ca": r"marqueting|publicitat|relacions publiques",
+        "gl": r"marketing|publicidade|relacions publicas", "eu": r"marketin\w*|publizitate\w*",
+        "en": r"marketing|advertising|public relations"}),
+    "politica": ("Ciencias políticas y gestión pública", {  # ISCED-F 0312
+        "es": r"ciencias? politicas?", "ca": r"ciencies politiques|ciencia politica", "gl": r"ciencias? politicas?",
+        "eu": r"zientzia politiko\w*", "en": r"political science"}),
     "humanidades": ("Humanidades, filología y traducción", {
         "es": r"filolog\w*|traduccion|interpretacion|humanidades|(grado|licenciatura|diplomatura) en historia|historia del arte|"
               r"bellas artes|(informacion y )?documentacion(?! sanitaria)(?=\W*$)|biblioteconomia|archivistica|filosofia|arqueologia|"
@@ -256,12 +262,12 @@ TITULACIONES = {
         "eu": r"filologia\w*|itzulpengintza\w*",
         "en": r"philology|translation|humanities|history|archaeology"}),
     "social": ("Trabajo social, educación y sociología", {
-        "es": r"trabajo social|educacion social|\bsociolog\w*|ciencias politicas|magisterio|maestro|pedagog\w*|"
+        "es": r"trabajo social|educacion social|\bsociolog\w*|magisterio|maestro|pedagog\w*|"
               r"ciencias de la educacion|antropologia|intervencion social",
         "ca": r"treball social|educacio social|sociolog\w*|magisteri|pedagog\w*",
         "gl": r"traballo social|educacion social|socioloxi\w*",
         "eu": r"gizarte lan\w*|soziologia\w*",
-        "en": r"social work|\bsociology|political science"}),
+        "en": r"social work|\bsociology"}),
     "turismo": ("Turismo", {
         "es": r"\bturismo\b", "ca": r"\bturisme\b|empreses turistiques", "gl": r"\bturismo\b", "eu": r"turismo\w*",
         "en": r"tourism"}),
@@ -270,19 +276,18 @@ TITULACIONES = {
         "gl": r"actividade fisica e (do )?deporte", "eu": r"jarduera fisiko\w*", "en": r"sports? science"}),
     # genéricas: solo si la ficha lo dice
     "cualquier_ingenieria": ("Cualquier ingeniería", {
-        "es": r"cualquier ingenieria|ingenieria (superior |tecnica )?(en |de )?cualquier (rama|especialidad)|otras ingenierias?\b(?! [a-z]{4,})|ingenierias? en general",
-        "ca": r"qualsevol enginyeria|enginyeria \(qualsevol especialitat\)|altres enginyeries",
+        "es": r"cualquier ingenieria|ingenieria (superior |tecnica )?(en |de )?cualquier (rama|especialidad)|ingenierias? en general",
+        "ca": r"qualsevol enginyeria|enginyeria \(qualsevol especialitat\)",
         "gl": r"calquera enxe\w*ria",
         "eu": r"edozein ingeniaritza",
-        "en": r"any engineering|other engineering"}),
+        "en": r"any engineering"}),
     "cualquier_universitaria": ("Cualquier titulación universitaria", {
         "es": r"cualquier (titulacion|grado|licenciatura|carrera)(?! equivalente)|(?<!ingenieria \()(?<!ingenieria en )(?<!ingenieria de )cualquier (rama|especialidad|area|disciplina)|"
-              r"otr[oa]s (estudios?|titulaciones|carreras|grados|licenciaturas|formaciones) universitari(?:os|as|o|a)\b(?!\s*[-–])(?!\s*equivalent)|"
-              r"titulacion universitaria de cualquier",
-        "ca": r"qualsevol (titulacio|grau|llicenciatura|ambit|branca)|altres (estudis|titulacions) universitari\w*",
+              r"titulacion universitaria de cualquier",  # «otros estudios universitarios» no dice «cualquiera»
+        "ca": r"qualsevol (titulacio|grau|llicenciatura|ambit|branca)",
         "gl": r"calquera (titulacion|grao)",
         "eu": r"edozein (titulazio|gradu)\w*",
-        "en": r"any (degree|discipline|field)|other academic backgrounds"}),
+        "en": r"any (degree|discipline|field)"}),
     "stem": ("Titulación científica o técnica (STEM)", {
         "es": r"\bstem\b|titulacion(es)? (cientific\w*|tecnic\w*)( o tecnic\w*)?|cientifico[- ]tecnic\w*|carreras? tecnic\w*",
         "ca": r"\bstem\b|cientificotecnic\w*|cientific[oa]-tecnic\w*",
@@ -363,7 +368,7 @@ _FP = {
     "fp-informatica": ("Informática y Comunicaciones", {
         "es": r"informatica y comunicaciones|\binformatic\w*", "ca": r"informatica i comunicacions|\binformatic\w*",
         "gl": r"informatica e comunicacions|\binformatic\w*", "eu": r"informatika eta komunikazio\w*", "en": r"\bcomputing|\bit\b"},
-        "sistemas informaticos|aplicaciones informaticas|aplicaciones multiplataforma|aplicaciones web|microinformaticos|\\basir\\b|\\bdaw\\b|\\bdam\\b|\\bsmr\\b"),
+        "sistemas informaticos|sistemas y redes|inteligencia artificial y big data|aplicaciones informaticas|aplicaciones multiplataforma|aplicaciones web|microinformaticos|\\basir\\b|\\bdaw\\b|\\bdam\\b|\\bsmr\\b"),
     "fp-instalacion-mantenimiento": ("Instalación y Mantenimiento", {
         "es": r"instalacion y mantenimiento|(?<!transporte y )\bmantenimiento\b(?! de vehiculos)", "ca": r"installacio i manteniment|\bmanteniment\b",
         "gl": r"instalacion e mantemento", "eu": r"instalazio eta mantentze\w*", "en": r"maintenance"},
@@ -494,6 +499,7 @@ SUMA = re.compile(r"(?:\+|\b(?:y|e|i|con|mas|and|plus)\b)\s*(?:un |una |el |an? 
 _CONECTOR = r"\s|[,/():\-–]|\b(?:o|u|superior(?:es)?|oficial(?:es)?)\b"
 PURO = re.compile(rf"(?:{_CONECTOR})*")  # entre dos títulos de una enumeración
 PURO_INICIO = re.compile(rf"(?:{_CONECTOR}|\b(?:de|del)\b)*")  # al empezar la frase o tras un rótulo
+PURO_ROTULO = re.compile(rf"(?:{_CONECTOR}|\b(?:de|del|en)\b)*")  # tras un rótulo genérico («Titulación universitaria en Ingeniería …»)
 ROTULO = re.compile(r"(?:\s|[():\-–]|\b(?:de|del|en|la|las|el|los|oficial(?:es)?)\b)*")
 ALARMA = re.compile(r"experiencia|experience|conocimientos|tarjetas?\b|\bcarne\b|certificad\w*|\bcursos?\b|\banos\b|\bmeses\b|valora\w*|"
                     r"preferent\w*|preferib\w*|deseable\w*|titulaci\w+|\btitulos?\b|equivalent\w*|acredit\w*|que incluya\w*|plan de estudios|"
@@ -503,6 +509,7 @@ PROFESION = re.compile(r"titulaci\w+ que (?:habilit\w+|d[ae]n? acceso)")  # nomb
 ESPECIALIDAD_DE = re.compile(r"\s*(?:en|de)\s+")
 TECNICA = re.compile(r"ingenier|enginyer|enxe|arquitect")
 SIN_ESPECIALIDAD = re.compile(r"licenci|llicenci|diplom|ingenier|enginyer|enxe")
+ING_CUALQUIERA = re.compile(r"[\s(]*(?:(?:en|de|d'|da) )?(?:cualquier|qualsevol|calquera) (?:rama|especialidad|branca|especialitat|especialidade)\b")
 MECES3_SIN_MASTER = re.compile(r"veterinari|farmaci|medicina|odontolog|arquitectura")  # grados que son MECES 3
 # palabras que no nombran una especialidad (para `sin_clave`)
 VACIAS = set("""de del la el los las lo en a al y e i con para por que su sus un una como segun al menos mas
@@ -634,6 +641,7 @@ def lee(texto: str) -> Requisito:
     titles: list[tuple[int, int, str]] = []  # títulos aceptados: el texto que sigue a cada uno son sus especialidades
     group, pending = 0, ()  # primera vía a la que se refiere la próxima marca de MECES; marca que va delante
     prev_end, at_start, doubtful = 0, True, False
+    after_label = False  # lo anterior es un rótulo genérico («titulación universitaria»)
     for i, (start, end, tipo, levels, word) in enumerate(tokens):
         gap = text[prev_end:start]
         if tipo == "meces":
@@ -644,12 +652,12 @@ def lee(texto: str) -> Requisito:
                 group, pending = len(vias), ()
             else:
                 pending = levels
-            prev_end, at_start = end, True
+            prev_end, at_start, after_label = end, True, False
             continue
         if tipo.endswith("*"):
             following = [t for t in tokens[i + 1:] if t[2] != "meces"]
             if following and ROTULO.fullmatch(text[end:following[0][0]]):  # rótulo del título que sigue
-                prev_end, at_start = end, True
+                prev_end, at_start, after_label = end, True, True
                 continue
             tipo = tipo[:-1]
         if tipo == "titulo_medio" and TECNICA.match(word) and titles and titles[-1][2] in ("grado", "master") \
@@ -665,14 +673,14 @@ def lee(texto: str) -> Requisito:
             elif ";" in gap:
                 is_title = bool(PURO_INICIO.fullmatch(gap.rsplit(";", 1)[1]))
             else:
-                is_title = bool((PURO_INICIO if at_start else PURO).fullmatch(gap))
+                is_title = bool((PURO_ROTULO if after_label else PURO_INICIO if at_start else PURO).fullmatch(gap))
             if not is_title:
                 doubtful = doubtful or bool(re.search(r"\b[ou]\s*$", gap))
                 continue  # especialidad: se queda en el texto
             tipo = "titulo_superior"
         titles.append((start, end, tipo))
         summed = bool(SUMA.search(gap)) and len(vias) > group
-        prev_end, at_start = end, False
+        prev_end, at_start, after_label = end, False, False
         if summed and tipo == "master":
             bound, doubtful_sum = _sumandos(vias[group:], text)
             for via in bound:
@@ -708,6 +716,9 @@ def lee(texto: str) -> Requisito:
             found += [key for key in ("arquitectura_tecnica", "arquitectura") if UNI_RX[key].match(source, start)]
         named = _blank(CORTE, segment(k))
         spans: list[tuple[int, int]] = []
+        if source[start:end].startswith(("ingenier", "enginyer", "enxe")) and ING_CUALQUIERA.match(named):
+            found.append("cualquier_ingenieria")  # «Ingeniería en cualquier especialidad»: el título se lleva «Ingeniería»
+            spans.append(ING_CUALQUIERA.match(named).span())
         for key, rx in vocabulary.items():  # sobre el texto entero, para que las excepciones vean lo que sigue
             hits = [m.span() for m in rx.finditer(named) if not any(a < m.end() and m.start() < b for a, b in spans)
                     and (vocabulary is FP_RX or _cabeza(named, m.start()))]  # (la FP nombra ciclos a medias)

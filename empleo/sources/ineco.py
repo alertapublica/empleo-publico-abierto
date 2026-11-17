@@ -52,6 +52,7 @@ from datetime import date, datetime
 
 from bs4 import BeautifulSoup
 
+from .. import titulaciones
 from ..dates import clock, spanish_date
 from ..http import Client
 from ..model import MADRID, Announcement, ListedOffer, OfferDetail, Plaza, SourceLayoutError, selection_system
@@ -403,6 +404,62 @@ def parse_detail(soup: BeautifulSoup, ref: str) -> OfferDetail | None:
                        positions=int(positions) if positions.isdigit() else None)
 
 
+# ------------------------------------------------------------------------- titulación (ePreselec)
+# En la ficha, «Requisitos» es un texto libre con renglones rotulados («Experiencia en:», «Titulación:»,
+# «Programas:»…). La titulación exigida es el valor de «Titulación:» (o «Formación:»): en el mismo
+# renglón o, si está vacío, en el siguiente; y además los renglones que siguen con otra viñeta que la del
+# rótulo («*Titulación:» y debajo «- Grado en …»). Con la misma viñeta, ya es otro requisito.
+TITULACION_ROTULO = re.compile(r"(?<!\w)(?:Titulaci[óo]n(?:es)?|Formaci[óo]n(?: acad[ée]mica)?)\s*:", re.I)
+TITULACION_SIN_ROTULO = re.compile(r"^\s*[-*•·]?\s*(?:profesional con\s+)?(?=titulaci[óo]n\s+(?:de|en|universitaria)\b)", re.I)
+# sin rótulo, renglones que empiezan por el título («- Grado en Ingeniería Aeroespacial …»)
+TITULO_SUELTO = re.compile(r"^\s*[-*•·]?\s*(?=(?:Grado|M[áa]ster|Licenciatura|Diplomatura|Ingenier[íi]a)\s+(?:en|de)\s)", re.I)
+# Fin del valor: otro rótulo en el mismo renglón, «//», o lo valorable (no es exigido).
+TITULACION_FIN = re.compile(
+    r"//|\s(?=(?:otros\s+)?(?:programas|idiomas|herramientas|experiencia(?:\s+en)?|a[ñn]os\s+de\s+experiencia[^:]{0,30}|"
+    r"conocimientos[^:]{0,30}|inglés|ingles)\s*:)|\b(?:valorable|deseable|se\s+valorar[áa])", re.I)
+VALORABLE = re.compile(r"valorabl|deseabl|se\s+valorar", re.I)
+VIÑETA = re.compile(r"^\s*([-*•·]?)\s*")
+ROTULO_SUELTO = re.compile(r"^[^:]{1,40}:")
+# Rótulos de rama del formulario de ePreselec: «Rama - Título» («Industrial - Grado en …») y, al principio
+# de la lista, la rama suelta («Informática, Grado en …»). No nombran el título (y «Aeronáutica» delante de
+# «Grado en Gestión … del Transporte Aéreo» lo falsearía). Tras un título, la misma palabra puede ser su
+# especialidad («Grado en Ingeniería Industrial, Telecomunicaciones»): se queda.
+_RAMAS = r"(?:aeron[áa]utica|civil y urbanismo|industria(?:l)?|inform[áa]tica|telecomunicaciones|grados|fp/ciclo formativo)"
+RAMA_FORMULARIO = re.compile(
+    rf"(?:(?<=^)|(?<=[,;\n]))\s*{_RAMAS}\s*[-–]\s*|^(?:\s*{_RAMAS}\s*(?:[,;\n]|$))+|^\s*industria\s+(?=ingenier)", re.I)
+
+
+def _valor(text: str) -> str:
+    return TITULACION_FIN.split(text)[0].strip()
+
+
+def titulacion_exigida(requisitos: str) -> str | None:
+    """Texto literal de la titulación exigida dentro de «Requisitos», o None si no la rotula."""
+    lines = requisitos.split("\n")
+    for i, line in enumerate(lines):
+        label = TITULACION_ROTULO.search(line) or TITULACION_SIN_ROTULO.match(line)
+        if not label or VALORABLE.search(line[:label.start()]):  # «Valorable formación: …» no es exigido
+            continue
+        own = VIÑETA.match(line).group(1)
+        value = _valor(line[label.end():])
+        parts, bullet = ([value] if value else []), None
+        for following in lines[i + 1:]:
+            mark = VIÑETA.match(following)
+            body = following[mark.end():]
+            if ROTULO_SUELTO.match(body) or VALORABLE.match(body):  # otro requisito
+                break
+            if not parts and bullet is None and not mark.group(1):  # «Titulación:» y el título debajo
+                parts.append(_valor(body))
+                break
+            if not mark.group(1) or mark.group(1) == own or (bullet and mark.group(1) != bullet):
+                break
+            bullet = mark.group(1)
+            parts.append(_valor(body))
+        return "\n".join(p for p in parts if p) or None
+    loose = [_valor(line[m.end():]) for line in lines if (m := TITULO_SUELTO.match(line))]
+    return "\n".join(p for p in loose if p) or None
+
+
 class InecoSource(Source):
     id = "ineco"
     name = "Ineco"
@@ -434,6 +491,18 @@ class InecoSource(Source):
         if detail is None:
             raise SourceLayoutError(f"Ineco (ePreselec): ?Id_Oferta= no devuelve la ficha {offer.ref}")
         return detail
+
+    def titulacion(self, offer: dict) -> titulaciones.Requisito:
+        # Ofertas de ePreselec: la línea «Titulación:» de «Requisitos» (lo valorable va en el mismo texto,
+        # con «valorable»/«deseable», y el lector común lo aparta). Se lee sin los rótulos de rama del
+        # formulario; lo publicado es el literal.
+        if not offer.get("sections"):
+            return titulaciones.Requisito(titulaciones.NO_CONSTA, "sin_ficha")
+        requisitos = titulaciones.apartado(offer, "Requisitos")
+        exigido = titulacion_exigida(requisitos) if requisitos else None
+        if not exigido:
+            return titulaciones.Requisito(titulaciones.NO_CONSTA, "sin_apartado")
+        return titulaciones.lee(RAMA_FORMULARIO.sub(" ", exigido))._replace(exigido=exigido)
 
     def list_announcements(self, http: Client, now: datetime | None = None) -> list[Announcement]:
         today = (now or datetime.now(MADRID)).astimezone(MADRID).date()
