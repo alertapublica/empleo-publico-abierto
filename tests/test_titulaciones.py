@@ -185,6 +185,15 @@ class Vocabulario(unittest.TestCase):
         self.assertEqual(req.sin_clave, ("gestion y administracion publica",))
         self.assertEqual(req.parcial, ())
 
+    def test_sin_clave_solo_nombres_de_especialidad(self):
+        # el resto de un título ya reconocido pierde la conjunción; las condiciones y oraciones de relativo no cuentan
+        self.assertEqual(T.lee("Licenciatura o Grado + Máster Universitario en Arqueología o en Geografía e Historia (MECES 3)").sin_clave,
+                         ("historia",))
+        self.assertEqual(T.lee("Grado en Ingeniería (que incluya en el plan de estudios al menos una materia del ámbito de "
+                               "electricidad, energía y/o instalaciones)").sin_clave, ())
+        self.assertEqual(T.lee("FP II o CFGS en especializaciones que permitan el desarrollo del puesto de delineante de conformidad "
+                               "con la normativa legal de aplicación al mismo (FPII/CFGS rama de Edificación y/o Obra civil)").sin_clave, ())
+
     def test_claves_y_expresiones(self):
         self.assertFalse(set(T.TITULACIONES) & set(T.FP_FAMILIAS))
         for key, (_, langs) in {**T.TITULACIONES, **T.FP_FAMILIAS}.items():

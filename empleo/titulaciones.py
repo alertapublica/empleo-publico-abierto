@@ -495,7 +495,7 @@ TECNICA = re.compile(r"ingenier|enginyer|enxe|arquitect")
 SIN_ESPECIALIDAD = re.compile(r"licenci|llicenci|diplom|ingenier|enginyer|enxe")
 MECES3_SIN_MASTER = re.compile(r"veterinari|farmaci|medicina|odontolog|arquitectura")  # grados que son MECES 3
 # palabras que no nombran una especialidad (para `sin_clave`)
-VACIAS = set("""de del la el los las lo en a al con para por que su sus un una como segun al menos mas
+VACIAS = set("""de del la el los las lo en a al y e i con para por que su sus un una como segun al menos mas
     ingenieria ingenierias ingeniero ingeniera ingenieros ing ciencia ciencias grado grados master licenciatura titulacion titulaciones
     oficial oficiales universitario universitaria universitarios universitarias superior superiores tecnica tecnico tecnicas tecnicos
     especialidad especialidades especializaciones rama ramas campo campos estudio estudios ambito ambitos area areas familia familias
@@ -503,6 +503,7 @@ VACIAS = set("""de del la el los las lo en a al con para por que su sus un una c
     habilitante profesion regulada nivel ruct incluida incluidas incluya plan planes materia requiera itinerario afin afines similar
     similares otras otros""".split())
 PARTE = re.compile(r"[,;/\n:().«»\"“”]|\s[-–]\s|\b(?:o|u)\b")
+CORTE = re.compile(ALARMA.pattern + r"|\bque\b")  # desde aquí el texto pone condiciones, no nombra especialidades
 
 GENDER = re.compile(r"(?<=\w)\s?/\s?(?:a|as|o|os|ora|oras|ra|na|es)\b")
 ESO_LITERAL = re.compile(r"\bE\.?\s?S\.?\s?O\b\.?")
@@ -660,7 +661,7 @@ def lee(texto: str) -> Requisito:
             if rx.search(rest):
                 found.append(key)
                 rest = _blank(rx, rest)
-        missing += _sin_clave(rest) if vocabulary else []
+        missing += _sin_clave(CORTE.split(rest, maxsplit=1)[0]) if vocabulary else []
     for start, end, _ in titles:
         text = text[:start] + " " * (end - start) + text[end:]
     alarms = sorted(set(ALARMA.findall(text)))
