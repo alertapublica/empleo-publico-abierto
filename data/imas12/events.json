@@ -170,5 +170,10 @@
   "before": "2026-11-12",
   "kind": "deadline_changed",
   "offer": "imas12:37"
+ },
+ {
+  "at": "2026-11-17T10:07:28+00:00",
+  "kind": "closed",
+  "offer": "imas12:37"
  }
 ]

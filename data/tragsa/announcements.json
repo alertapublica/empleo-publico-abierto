@@ -827,6 +827,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-especifica-estudios-sociologicos-estadisticos-tragsatec/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:e1ed71f4eb9a": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-17T10:07:28+00:00",
+  "location": null,
+  "process": "Tasa de reposición 2025-2026",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación de la relación de personas colaboradoras del Órgano de Selección para la realización de la prueba oral técnico-profesional del proceso selectivo de la convocatoria de las tasas de reposición ordinaria de los años 2025 y 2026 (TRO 25-26) de la empresa Tragsatec.",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
+  "via": "tasa"
+ },
  "tragsa:f679252dfb46": {
   "access": "libre",
   "apply_url": null,
