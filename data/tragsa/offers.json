@@ -12152,22 +12152,22 @@
  "58404": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58404",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "58404",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-10",
-  "deadline_time": "23:59",
+  "deadline": "2026-11-25",
+  "deadline_time": null,
   "department": "Toledo",
   "detail_ok": true,
-  "detail_version": 2,
+  "detail_version": 3,
   "family": "Técnicos Titulados",
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58404",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
-  "location": "Varios",
-  "missed_runs": 1,
+  "listed_deadline": "2026-11-25",
+  "location": "Albacete",
+  "missed_runs": 0,
   "opens_on": "2026-10-26",
   "parent_ref": null,
   "place": null,
@@ -12178,7 +12178,7 @@
   "region": "Castilla-La Mancha",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 6 Ingenieros/as de Montes para deslindes en Castilla - La Mancha</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 6 Ingenieros/as de Montes para deslindes en Castilla - La Mancha.<br/><br/>En relación al proceso publicado el pasado 26/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -12233,14 +12233,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada con una duración estimada de 29 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción.  <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 26/10/2026 hasta el próximo 10/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada con una duración estimada de 29 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción.  <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingenieros/as de Montes - Deslindes (Castilla - La Mancha)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58404"
  },
@@ -14051,7 +14051,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-30",
   "location": "València/Valencia",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": "Valencia",
@@ -27372,6 +27372,103 @@
   "title": "Ingeniero/a Técnico/a o Graduado/a en Ingeniería – Obras (Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58737"
  },
+ "58739": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58739",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58739",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Valencia",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Obra",
+  "first_seen": "2026-11-17T13:37:30+00:00",
+  "id": "tragsa:58739",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Valencia",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-17",
+  "ref": "58739",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar dos capataces/as - Obras (Valencia) en València/Valencia</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: Paterna (con desplazamientos por la provincia de Valencia)</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Organizar y programar con el encargado/a los trabajos a realizar, siendo responsable de la marcha de la obra, e informar de forma inmediata de cualquier anomalía que surja.</li><li>Interpretar planos, hacer mediciones y replanteos.</li><li>Controlar los rendimientos de la maquinaria y del personal de obra, así como cumplimentar y visar los partes necesarios respecto al personal y la maquinaria.</li><li>Adiestrar a su equipo en las tareas a realizar, incluyendo el uso de maquinaria forestal (motosierra y desbrozadora).</li><li>Cumplir y velar por el cumplimiento de la normativa en materia de seguridad, calidad y señalización de obra, siendo responsable de informar al personal de nueva incorporación sobre el empleo de los equipos individuales y las medidas de seguridad aplicables en la obra.</li><li>Comprobar que se lleva a cabo el correcto almacenamiento de material y las tareas de limpieza.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso y/o formación de al menos 2000 horas en la rama forestal/agraria</li><li>Curso de PRL 60 horas o 50 horas habilitante a recurso preventivo.</li><li>Formación complementaria relacionada con la Gestión de Conflictos.</li><li>Formación relacionada con trabajos en alturas.</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 1 año de experiencia en gestión de equipos de trabajo en obra, servicios o logística (experiencia con contrato laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Experiencia previa con contrato laboral y/o académico como formador/a de grupos de personal laboral o cursos de formador de formadores.</li><li>Conocimiento y manejo de aplicaciones, nivel usuario, paquete Office: (Word, Excel, Drive, Access). (Se comprobará durante el proceso de selección)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso y/o formación de al menos 2000 horas en la rama forestal/agraria</li><li>Curso de PRL 60 horas o 50 horas habilitante a recurso preventivo.</li><li>Formación complementaria relacionada con la Gestión de Conflictos.</li><li>Formación relacionada con trabajos en alturas.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso y/o formación de al menos 2000 horas en la rama forestal/agraria</li><li>Curso de PRL 60 horas o 50 horas habilitante a recurso preventivo.</li><li>Formación complementaria relacionada con la Gestión de Conflictos.</li><li>Formación relacionada con trabajos en alturas.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 1 año de experiencia en gestión de equipos de trabajo en obra, servicios o logística (experiencia con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia previa con contrato laboral y/o académico como formador/a de grupos de personal laboral o cursos de formador de formadores.</li><li>Conocimiento y manejo de aplicaciones, nivel usuario, paquete Office: (Word, Excel, Drive, Access). (Se comprobará durante el proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE: <br/>Se ofrece contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada. <br/><br/>Jornada completa: 37,5 horas semanales. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Capataces/as - Obras (Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58739"
+ },
  "58742": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58742",
   "category": "Específica",
@@ -28610,6 +28707,180 @@
   "status": "open",
   "title": "Técnico/a - Trabajos de regulación catastral (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58808"
+ },
+ "58838": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58838",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58838",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Municipios MENRRED",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-17T13:37:30+00:00",
+  "id": "tragsa:58838",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Paterna, Valencia",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58838",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Administrativo/a -Obra MENRRED MUNICIPIOS (Paterna, Valencia) en València/Valencia</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: Paterna (Valencia)</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestionar documentos de Prevención de Riesgos Laborales (PRL), cursos de formación, certificados de formación e información y entrega del Equipo de Protección Individual (EPI).</li><li>Recopilar y cotejar con los albaranes las facturas recibidas, así como su posterior grabación en PeopleSoft.</li><li>Apoyar en la redacción y gestión de expedientes de lictaciones y Acuerdos Marco de obra</li><li>Solicitar y gestionar el alquiler de vehículos de obra, incluyendo la gestión del contrato, así como su pedido y correspondiente grabación de partes de vehículos en SIDO.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) + Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia académica o/ y laboral de al menos 6 meses realizando tareas administrativas (Para acreditar dicho requisito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) + Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) + Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia académica o/ y laboral de al menos 6 meses realizando tareas administrativas (Para acreditar dicho requisito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Otros Factores Meritorios<ul><li>Experiencia académica o/ y laboral superior a la requerida realizando tareas administrativas (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral entre 6 meses y 2 años realizando tareas administrativas en empresas del sector de la construcción (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 1 año en puestos administrativos en el sector público (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Experiencia académica o/ y laboral superior a la requerida realizando tareas administrativas (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral entre 6 meses y 2 años realizando tareas administrativas en empresas del sector de la construcción (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 1 año en puestos administrativos en el sector público (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>Observaciones:<br/><br/>Contrato de sustitución para cubrir temporalmente 1 puesto de Administrativo/a en Tragsa hasta que finalice el proceso de selección de Tasa para su cobertura definitiva. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la persona seleccionada.<br/><br/>- Jornada a tiempo completo: 37,5 Horas/Semana. <br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a -Obra MENRRED MUNICIPIOS (Paterna, Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58838"
+ },
+ "58840": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58840",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58840",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Municipios MENRRED",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-17T13:37:30+00:00",
+  "id": "tragsa:58840",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Paterna, Valencia",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58840",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Administrativo/a Especialista- Apoyo Obra MENRRED MUNICIPIOS (Paterna, Valencia) en València/Valencia</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: Paterna (Valencia)</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestionar documentos de Prevención de Riesgos Laborales (PRL), cursos de formación, certificados de formación e información y entrega del Equipo de Protección Individual (EPI).</li><li>Manejar la plataforma de Prevención para la gestión, consulta y posterior recalamación de documentación necesaria para la entrada de empresas a obras.</li><li>Guardar y archivar toda la documentación generada y grabarla en bases de datos, responsabilizándose de su fiabilidad y congruencia con la normativa interna de la empresa.</li><li>Tramitar y grabar contratos menores de proveedores en la aplicación de PeopleSoft.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia académica o/ y laboral de al menos 6 meses realizando tareas administrativas (Para acreditar dicho requisito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia académica o/ y laboral de al menos 6 meses realizando tareas administrativas (Para acreditar dicho requisito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Otros Factores Meritorios<ul><li>Experiencia académica o/ y laboral superior a la requerida realizando tareas administrativas (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 2 años realizando tareas administrativas en empresas del sector de la construcción (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 1 año en puestos administrativos en el sector público (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Experiencia académica o/ y laboral superior a la requerida realizando tareas administrativas (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 2 años realizando tareas administrativas en empresas del sector de la construcción (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li><li>Experiencia académica o/ y laboral de entre 6 meses y 1 año en puestos administrativos en el sector público (Para acreditar dicho mérito será necesario que adjunte Informe de Vidal Laboral y/o Contrato Laboral para justificar dicha experiencia)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>Observaciones:<br/><br/>Contrato de sustitución para cubrir temporalmente 1 puesto de Administrativo/a Especialista en Tragsa hasta que finalice el proceso de selección de Tasa para su cobertura definitiva. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la persona seleccionada.<br/><br/>- Jornada a tiempo completo: 37,5 Horas/Semana. <br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a Especialista- Apoyo Obra MENRRED MUNICIPIOS (Paterna, Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58840"
  },
  "58843": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58843",
