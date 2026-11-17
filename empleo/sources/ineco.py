@@ -37,7 +37,8 @@ Experts: tasa de reposición ordinaria
 
 La tabla de cada bloque es la relación de puestos: referencia, gerencia, dirección, subdirección, puesto,
 reserva para personas con discapacidad, vacantes y anexo específico (PDF). Cada fila es una `Plaza` del
-proceso, con el estado y el plazo de su bloque (`parse_places`).
+proceso, con el estado y el plazo de su bloque (`parse_places`). Del anexo de cada plaza en marcha se leen
+la titulación y la ubicación, literales (`parse_annex`), unos pocos por lectura (`annexes_per_read`).
 
 Un proceso por sección de comunicados. Su estado sale de las cabeceras de sus bloques: abierto si
 alguno está en plazo, finalizado si todos dicen «RESUELTO», en curso si no. Una cabecera con otro
@@ -54,6 +55,7 @@ from bs4 import BeautifulSoup
 from ..dates import clock, spanish_date
 from ..http import Client
 from ..model import MADRID, Announcement, ListedOffer, OfferDetail, Plaza, SourceLayoutError, selection_system
+from ..pdftext import Fragment, fragments, text_in
 from ..sanitize import sanitize
 from .base import Source
 
@@ -299,6 +301,47 @@ def parse_places(html: str, page: str, today: date) -> list[Plaza]:
     return places
 
 
+# Anexo específico de cada puesto: una ficha en forma de formulario. Arriba, una fila de casillas con su
+# rótulo («UBICACIÓN»…) y su valor debajo; en «2.- REQUISITOS», dos columnas: «2.1. - TITULACIÓN ACADÉMICA»
+# a la izquierda y «2.2.-OTROS REQUISITOS» a la derecha, cada una con su texto debajo hasta «3.- PROCESO
+# SELECTIVO». El texto extraído en orden mezcla las casillas: se lee por posición (pdftext.fragments).
+DEGREE_LABEL = re.compile(r"^2\.1\.?\s*-?\s*TITULACI[ÓO]N", re.I)
+OTHER_LABEL = re.compile(r"^2\.2\.?\s*-?\s*OTROS REQUISITOS", re.I)
+PHASES_LABEL = re.compile(r"^3\.-")
+LOCATION_LABEL = re.compile(r"^UBICACI[ÓO]N$", re.I)
+DESCRIPTION_LABEL = re.compile(r"^1\.14\.?-")
+BOX_NUMBER = re.compile(r"^1\.\d")  # «1.12.-», número de casilla encima de su rótulo
+HEADER_BAND = 12  # puntos: los rótulos de la fila de casillas ocupan dos o tres líneas
+
+
+def _first(found: list[Fragment], pattern: re.Pattern, what: str) -> Fragment:
+    hit = next((f for f in found if pattern.match(f.text)), None)
+    if hit is None:
+        raise SourceLayoutError(f"{what}: sin «{pattern.pattern}» (¿otra plantilla?)")
+    return hit
+
+
+def parse_annex(data: bytes, what: str) -> dict:
+    """Titulación exigida y ubicación de un anexo específico, literales («preferiblemente…» incluido: si es
+    requisito o mérito lo dice el texto, no se clasifica aquí)."""
+    found = fragments(data, what)
+    degree, other = _first(found, DEGREE_LABEL, what), _first(found, OTHER_LABEL, what)
+    phases = next((f for f in found if f.page == degree.page and f.y < degree.y and PHASES_LABEL.match(f.text)), None)
+    split = (degree.x + other.x) / 2  # las dos columnas de requisitos
+    degree_text = text_in(found, degree.page, 0, split, degree.y, phases.y if phases else 0)
+
+    label = _first(found, LOCATION_LABEL, what)
+    header = [f for f in found if f.page == label.page and abs(f.y - label.y) <= HEADER_BAND
+              and not BOX_NUMBER.match(f.text)]
+    before = [f.x for f in header if f.x < label.x - 10]
+    after = [f.x for f in header if f.x > label.x + 10]
+    description = next((f for f in found if f.page == label.page and DESCRIPTION_LABEL.match(f.text)), None)
+    location = text_in(found, label.page, (max(before) + label.x) / 2 if before else 0,
+                       (label.x + min(after)) / 2 if after else 10_000,
+                       min(f.y for f in header), description.y if description else 0)
+    return {"degree": degree_text or None, "location": location or None}
+
+
 def offer_url(ref: str) -> str:
     return f"{EPRESELEC}?Id_Oferta={ref}"
 
@@ -366,6 +409,7 @@ class InecoSource(Source):
     homepage = "https://www.ineco.com/ineco/talento/ofertas-de-empleo-publico"
     title_code = re.compile(r"(?P<code>\d{5})\s*-?\s*(?P<title>\S.*)")
     delay = 5.0  # fichas pesadas (el listado entero cada vez) tras Imperva: sin prisa
+    annexes_per_read = 10  # anexos de plazas por lectura (People Experts, sin Imperva): ~50 s con la pausa
 
     def __init__(self):
         self._fichas = 0  # fichas pedidas en esta lectura
@@ -403,3 +447,6 @@ class InecoSource(Source):
     def list_places(self, http: Client) -> list[Plaza]:
         """La relación de puestos viene en las mismas páginas que los comunicados: sin peticiones nuevas."""
         return self._places
+
+    def fetch_annex(self, http: Client, place: dict) -> dict | None:
+        return parse_annex(http.get_bytes(place["annex_url"]), f"Ineco, anexo {place['code']}")

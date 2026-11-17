@@ -209,6 +209,46 @@ class Plazas(unittest.TestCase):
         self.assertEqual(len(calls), 2)
 
 
+class Anexos(unittest.TestCase):
+    """Anexos específicos reales (16/11/2026): la titulación y la ubicación, por su posición en el formulario."""
+
+    def annex(self, name):
+        return ineco.parse_annex((FIXTURES / name).read_bytes(), name)
+
+    def test_titulacion_literal_de_su_columna(self):
+        self.assertEqual(self.annex("ineco-tro26-ipa-001-anexo.pdf"),
+                         {"degree": "Titulación Universitaria Media y/o Superior en: Ingeniería.", "location": "Madrid"})
+
+    def test_preferiblemente_se_queda_tal_cual(self):
+        self.assertEqual(self.annex("ineco-tro26-opt-001-anexo.pdf")["degree"],
+                         "Titulación Universitaria Media y/o Superior: Preferiblemente en Psicología, Pedagogía, "
+                         "Derecho o Relaciones Laborales.")
+        # Sin la columna de «otros requisitos» al lado (experiencia, Excel, SAP).
+        self.assertEqual(self.annex("ineco-tre26-opa-002-anexo.pdf")["degree"],
+                         "Titulación Universitaria Media y/o Superior preferiblemente en Derecho, ADE, Económicas, "
+                         "Ciencias del Trabajo, Relaciones Laborales.")
+
+    def test_la_ubicacion_es_la_de_su_casilla(self):
+        # La denominación dice «(expatriado a Perú)»: la ubicación es la de la casilla, sin deducir nada.
+        self.assertEqual(self.annex("ineco-tro26-ipa-001-anexo.pdf")["location"], "Madrid")
+
+    def test_pdf_sin_texto_u_otra_plantilla(self):
+        from io import BytesIO
+        from pypdf import PdfWriter
+        writer, buffer = PdfWriter(), BytesIO()
+        writer.add_blank_page(595, 842)
+        writer.write(buffer)
+        with self.assertRaisesRegex(SourceLayoutError, "no tiene texto"):
+            ineco.parse_annex(buffer.getvalue(), "x")
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_annex(b"no es un pdf", "x")
+
+    def test_la_fuente_descarga_el_anexo_de_la_plaza(self):
+        http = type("H", (), {"get_bytes": lambda self, url: (FIXTURES / "ineco-tro26-ipa-001-anexo.pdf").read_bytes()})()
+        self.assertEqual(ineco.InecoSource().fetch_annex(http, {"annex_url": "u", "code": "TRO26-IPA-001"})["location"],
+                         "Madrid")
+
+
 # Páginas reales de ePreselec del 16/11/2026, leídas desde un Worker de Cloudflare y recortadas: 7 de las
 # 197 ofertas y 3 de los ~700 trozos de __VIEWSTATE. La ficha de la 28942 es la respuesta a un postback, que
 # es la misma página que da `?Id_Oferta=` (comprobado con Chromium).
