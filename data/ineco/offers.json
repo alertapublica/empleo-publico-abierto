@@ -4094,7 +4094,7 @@
  "3287910": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287910",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-17T10:37:29+00:00",
   "code": "28189",
   "company": "Ineco",
   "contract": null,
@@ -4111,7 +4111,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Málaga",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": "Antequera",
@@ -4149,7 +4149,7 @@
   ],
   "source": "ineco",
   "source_title": "28189 - Técnico/a de infra y vía (Antequera)",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de infra y vía (Antequera)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3287910"
  },
@@ -6078,7 +6078,7 @@
  "3316044": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316044",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-17T10:37:29+00:00",
   "code": "28528",
   "company": "Ineco",
   "contract": null,
@@ -6095,7 +6095,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Ourense",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -6133,7 +6133,7 @@
   ],
   "source": "ineco",
   "source_title": "28528 - Técnico/a para aplicación del MCS, Riegos y Puestas en Servicio",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a para aplicación del MCS, Riegos y Puestas en Servicio",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3316044"
  },

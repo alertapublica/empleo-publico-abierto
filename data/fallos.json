@@ -1,12 +1,12 @@
 {
- "galiciasur": {
-  "desde": "2026-11-17T10:07:28+00:00",
+ "sepi": {
+  "desde": "2026-11-17T10:37:29+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "lafe": {
-  "desde": "2026-11-17T08:07:25+00:00",
-  "lecturas": 5,
+ "ua": {
+  "desde": "2026-11-17T10:37:29+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
