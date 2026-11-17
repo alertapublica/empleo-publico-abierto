@@ -432,10 +432,10 @@
   "deadline": "2026-11-24",
   "deadline_rule": null,
   "deadline_time": null,
-  "department": null,
+  "department": "Desar.Rural/Política Forestal",
   "detail_ok": true,
   "detail_version": 3,
-  "family": null,
+  "family": "Técnicos Titulados",
   "first_seen": "2026-11-17T12:37:24+00:00",
   "id": "tragsa:56477",
   "kind": "temporal",
@@ -445,9 +445,9 @@
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
-  "portal_tries": 0,
+  "portal_tries": 1,
   "positions": 1,
-  "published_on": null,
+  "published_on": "2026-11-17",
   "ref": "56477",
   "region": "Comunidad de Madrid",
   "sections": [
@@ -4896,6 +4896,108 @@
   "status": "closed",
   "title": "Ingeniero/a o Licenciado/a o Graduado/a + Máster Oficial - Análisis de productos agroalimentarios por RMN (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57966"
+ },
+ "57978": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57978",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57978",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Desar.Rural/Política Forestal",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T13:07:29+00:00",
+  "id": "tragsa:57978",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "57978",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Diplomado/a o Graduado/a para prestar apoyo a la gestión y justificación de subvenciones en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Revisión de la documentación justificativa de subvenciones, incluyendo la evaluación de los gastos subvencionables y la valoración de los importes a reintegrar.</li><li>Grabación y gestión de datos en las herramientas habilitadas.</li><li>Comprobación y verificación del cumplimiento de los requisitos y obligaciones de justificación establecidos en la normativa y reglamentos aplicables.</li><li>Identificación y registro de incidencias en la documentación revisada.</li><li>Apoyo en la elaboración de informes sobre la revisión de la documentación justificativa.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Grado en Ciencias Políticas o Economía o Administración y Dirección de Empresas o Contabilidad o Finanzas o Derecho o Sociología; o Diplomatura/Grado en Gestión y Administración Pública o Ciencias Empresariales (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Manejo de nivel medio o superior de Microsoft Office Excel (tablas dinámicas, series de datos). (Se comprobará en valoración técnica).</li><li>Manejo de nivel medio o superior de Microsoft Office Word (estilos, bordes y revisión de documentos, imágenes, color, tablas, elementos de dibujos, secciones y crear listas y esquemas). (Se comprobará en valoración técnica).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Grado en Ciencias Políticas o Economía o Administración y Dirección de Empresas o Contabilidad o Finanzas o Derecho o Sociología; o Diplomatura/Grado en Gestión y Administración Pública o Ciencias Empresariales (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Grado en Ciencias Políticas o Economía o Administración y Dirección de Empresas o Contabilidad o Finanzas o Derecho o Sociología; o Diplomatura/Grado en Gestión y Administración Pública o Ciencias Empresariales (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Manejo de nivel medio o superior de Microsoft Office Excel (tablas dinámicas, series de datos). (Se comprobará en valoración técnica).</li><li>Manejo de nivel medio o superior de Microsoft Office Word (estilos, bordes y revisión de documentos, imágenes, color, tablas, elementos de dibujos, secciones y crear listas y esquemas). (Se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en materia de igualdad de oportunidades entre mujeres y hombres de al menos 50 horas.</li><li>Formación en contabilidad pública de al menos 20 horas.</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en la revisión y validación de documentación económica (facturas, nóminas y otros justificantes) para la justificación de subvenciones (experiencia académica y/o con contrato laboral).</li></ul>Otros Factores Meritorios<ul><li>Conocimientos de la legislación vigente en subvenciones. (Se comprobará en valoración técnica).</li><li>Manejo de nivel avanzado de Microsoft Office Word (autoformatos de tablas, alineación de celdas, autoajustar tablas, notas a pie de documentos, crear correspondencias, etc. ). (Se comprobará en valoración técnica).</li><li>Manejo de nivel avanzado de Microsoft Office Excel (funciones condicionales, de búsqueda y referencia, macros, trabajo con series de datos extensas, etc.). (Se comprobará en valoración técnica).</li><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en materia de igualdad de oportunidades entre mujeres y hombres de al menos 50 horas.</li><li>Formación en contabilidad pública de al menos 20 horas.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en materia de igualdad de oportunidades entre mujeres y hombres de al menos 50 horas.</li><li>Formación en contabilidad pública de al menos 20 horas.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en la revisión y validación de documentación económica (facturas, nóminas y otros justificantes) para la justificación de subvenciones (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos de la legislación vigente en subvenciones. (Se comprobará en valoración técnica).</li><li>Manejo de nivel avanzado de Microsoft Office Word (autoformatos de tablas, alineación de celdas, autoajustar tablas, notas a pie de documentos, crear correspondencias, etc. ). (Se comprobará en valoración técnica).</li><li>Manejo de nivel avanzado de Microsoft Office Excel (funciones condicionales, de búsqueda y referencia, macros, trabajo con series de datos extensas, etc.). (Se comprobará en valoración técnica).</li><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/as seleccionada/s. <br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Diplomado/a o Graduado/a - Gestión y justificación de subvenciones (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57978"
  },
  "57987": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57987",
@@ -10239,22 +10341,22 @@
  "58269": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58269",
   "category": "Específica",
-  "closed_at": "2026-11-12T05:07:26+00:00",
+  "closed_at": null,
   "code": "58269",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-11",
+  "deadline": "2026-11-30",
   "deadline_time": null,
   "department": "Islas Baleares",
   "detail_ok": true,
-  "detail_version": 2,
+  "detail_version": 3,
   "family": "Técnicos Titulados",
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58269",
   "kind": "temporal",
-  "listed_deadline": "2026-11-11",
+  "listed_deadline": "2026-11-30",
   "location": "Mallorca",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Mallorca",
@@ -10265,7 +10367,7 @@
   "region": "Illes Balears",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Ingeniero/a o Graduado/a + Máster de Montes - Obras (Mallorca)</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Ingeniero/a o Graduado/a + Máster de Montes - Obras (Mallorca) en Mallorca. En relación al proceso publicado el pasado 27/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 30/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -10325,14 +10427,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 21710/2026 hasta el próximo 11/11/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE: <br/>Se ofrece contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/>Jornada Completa: 37,5 horas semanales. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>SE OFRECE: <br/>Se ofrece contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/>Jornada Completa: 37,5 horas semanales. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a o Graduado/a + Máster de Montes - Obras (Mallorca)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58269"
  },
@@ -13949,7 +14051,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-30",
   "location": "València/Valencia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": "Valencia",
@@ -25718,6 +25820,103 @@
   "title": "Licenciado/a o Graduado/a + Máster Oficial - Apoyo en contratación (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58674"
  },
+ "58675": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58675",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58675",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sevilla",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T13:07:29+00:00",
+  "id": "tragsa:58675",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Sevilla",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Sevilla",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58675",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Arquitecto/a Técnico/a o Graduado/a en Ingeniería de la Edificación - Redacción de proyectos y estudios de seguridad y salud en Sevilla</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sevilla</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Desarrollo de Proyectos Básicos y de Ejecución.</li><li>Redacción de Pliegos y Presupuestos.</li><li>Elaboración de Estudios de Seguridad y Salud.</li><li>Apoyo técnico a la Dirección de Ejecución y a la Coordinación de Seguridad y Salud.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado Universitario en Ingeniería de la Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir B en vigor y válido en España (Adjuntar).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado Universitario en Ingeniería de la Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado Universitario en Ingeniería de la Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir B en vigor y válido en España (Adjuntar).</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formacion en software tipo PRESTO y/o ARQUÍMEDES (Adjuntar acreditación).</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 4 años de experiencia en desarrollo de proyectos básicos y de ejecución para la administración pública (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en desarrollo de proyectos básicos y de ejecución de edificios públicos (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en asistencia técnica a la dirección de ejecución (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo)</li><li>Desde 1 año Hasta 4 años de experiencia en el uso de programas de medición, tipo PRESTO (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en redacción de Estudios y/o Estudios Básicos de Seguridad y Salud (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formacion en software tipo PRESTO y/o ARQUÍMEDES (Adjuntar acreditación).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formacion en software tipo PRESTO y/o ARQUÍMEDES (Adjuntar acreditación).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 4 años de experiencia en desarrollo de proyectos básicos y de ejecución para la administración pública (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en desarrollo de proyectos básicos y de ejecución de edificios públicos (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en asistencia técnica a la dirección de ejecución (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo)</li><li>Desde 1 año Hasta 4 años de experiencia en el uso de programas de medición, tipo PRESTO (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li><li>Desde 1 año Hasta 4 años de experiencia en redacción de Estudios y/o Estudios Básicos de Seguridad y Salud (reflejar en CV y acreditar mediante Vida laboral o contrato de trabajo).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>- Contrato temporal por sustitución con una duración estimada de 4 meses, en función del hecho causante.<br/><br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitecto/a Técnico/a o Graduado/a en Ingeniería de la Edificación - Redacción de proyectos y estudios de seguridad y salud (Sevilla)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58675"
+ },
  "58677": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58677",
   "category": "Específica",
@@ -26874,6 +27073,103 @@
   "title": "Licenciado/a o Graduado/a en Veterinaria - Saneamiento ganadero (Talavera de la Reina)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58723"
  },
+ "58726": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58726",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58726",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Cantabria",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T13:07:29+00:00",
+  "id": "tragsa:58726",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Comunidad de Cantabria",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Santander",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58726",
+  "region": "Cantabria",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Montes o Licenciado/a o Graduado/a + Máster Oficial en Biología, Ciencias Ambientales y/o Ciencias del Mar para prestar apoyo en tareas de redacción de informes sobre afecciones en zonas fluviales en Santander.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Cantabria</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaboración de informes de evaluación de afecciones a las Zonas Especiales de Conservación Fluviales</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Licenciatura, Ingeniería o Grado + Máster Oficial relacionado con las funciones del puesto (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Ingeniería de Montes, Biología, Ciencias Ambientales o Ciencias del Mar.</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Licenciatura, Ingeniería o Grado + Máster Oficial relacionado con las funciones del puesto (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Ingeniería de Montes, Biología, Ciencias Ambientales o Ciencias del Mar.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Licenciatura, Ingeniería o Grado + Máster Oficial relacionado con las funciones del puesto (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Ingeniería de Montes, Biología, Ciencias Ambientales o Ciencias del Mar.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso de ArcGIS o QGIS de, al menos, 60 horas</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios y/o especies incluidos en la Red Natura 2000</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios fluviales o sobre ecología fluvial y especies piscícolas</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 3 años de experiencia en trabajos sobre la elaboración o seguimiento de planes de gestión de espacios fluviales incluidos en la Red Natura 2000 (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 6 meses Hasta 3 años de experiencia en trabajos sobre la elaboración y seguimiento de planes de gestión de espacios o especies (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 3 años de experiencia en gestión de expedientes administrativos relacionadas con afecciones espacios de la Red Natura 2000 (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso de ArcGIS o QGIS de, al menos, 60 horas</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios y/o especies incluidos en la Red Natura 2000</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios fluviales o sobre ecología fluvial y especies piscícolas</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso de ArcGIS o QGIS de, al menos, 60 horas</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios y/o especies incluidos en la Red Natura 2000</li><li>Curso sobre elaboración y seguimiento de planes de gestión de espacios fluviales o sobre ecología fluvial y especies piscícolas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 3 años de experiencia en trabajos sobre la elaboración o seguimiento de planes de gestión de espacios fluviales incluidos en la Red Natura 2000 (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 6 meses Hasta 3 años de experiencia en trabajos sobre la elaboración y seguimiento de planes de gestión de espacios o especies (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 3 años de experiencia en gestión de expedientes administrativos relacionadas con afecciones espacios de la Red Natura 2000 (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados. En este supuesto, se ofrecerá un contrato de duración estimada de 6 meses, con posibilidad de prórroga por otros 6 meses, si procede.<br/>- Jornada completa<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a de Montes o Licenciado/a o Graduado/a + Máster Oficial en Biología, Ciencias Ambientales y/o Ciencias del Mar - Redacción de informes sobre afecciones en zonas fluviales (Santander)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58726"
+ },
  "58728": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58728",
   "category": "Específica",
@@ -27439,10 +27735,10 @@
   "deadline": "2026-11-24",
   "deadline_rule": null,
   "deadline_time": "23:59",
-  "department": null,
+  "department": "Pesca y Asuntos Marítimos",
   "detail_ok": true,
   "detail_version": 3,
-  "family": null,
+  "family": "Otros",
   "first_seen": "2026-11-17T12:37:24+00:00",
   "id": "tragsa:58752",
   "kind": "temporal",
@@ -27452,9 +27748,9 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 0,
+  "portal_tries": 1,
   "positions": 1,
-  "published_on": null,
+  "published_on": "2026-11-17",
   "ref": "58752",
   "region": "Sin ubicación",
   "sections": [
@@ -28326,10 +28622,10 @@
   "deadline": "2026-12-01",
   "deadline_rule": null,
   "deadline_time": "23:59",
-  "department": null,
+  "department": "Valencia",
   "detail_ok": true,
   "detail_version": 3,
-  "family": null,
+  "family": "Técnicos Titulados",
   "first_seen": "2026-11-17T12:37:24+00:00",
   "id": "tragsa:58843",
   "kind": "temporal",
@@ -28339,9 +28635,9 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": "Valencia",
-  "portal_tries": 0,
+  "portal_tries": 1,
   "positions": 2,
-  "published_on": null,
+  "published_on": "2026-11-17",
   "ref": "58843",
   "region": "Comunitat Valenciana",
   "sections": [

@@ -63,5 +63,72 @@
   "status": "open",
   "title": "Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) · “Investigación clínica traslacional para el tratamiento de enfermedades dermatológicas del Servicio de Dermatología del Complexo Hospitalario Universitario de Pontevedra”",
   "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315"
+ },
+ "317": {
+  "apply_url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/317",
+  "category": null,
+  "closed_at": null,
+  "code": "28/26",
+  "company": "Fundación Pública Galega de Investigación Biomédica Galicia Sur",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T13:07:29+00:00",
+  "id": "galiciasur:317",
+  "kind": null,
+  "listed_deadline": "2026-11-30",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "317",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2.4 Titulado/a Grado II. Personal de Apoyo a la Investigación.</p><p>- TITULACIÓN REQUERIDA: Licenciatura o Grado en Informática (menos de 300 ECTS)</p><p>- PROYECTO: “ESPACIO DE DATOS”</p>",
+    "level": 2,
+    "title": "Oferta de empleo (REF: 28/26)"
+   },
+   {
+    "html": "<p>- Hasta fin de proyecto/financiamiento.</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>Licenciatura o Grado en Informática  (menos de 300 ECTS).</p>\n<p>* Las ofertas que no cumplan con todos los requisitos imprescindibles quedarán automáticamente descartadas.</p>",
+    "level": 2,
+    "title": "Requisitos imprescindibles"
+   },
+   {
+    "html": "<p>-Formación complementaria relacionada con las funciones del puesto: (hasta 50 h: 5 puntos); (51-150 h: 10 puntos); (151-300 h: 15 puntos); (301-600 h: 25 puntos); ( más de 600 h: 35 puntos).</p><p>-Conocimiento del idioma inglés: (B1:5 puntos); (B2 o superior: 10 puntos).</p><p>-Experiencia laboral con las funciones del puesto: (De 1-6 meses: 5 puntos; de 7-12 meses: 15 puntos; 13-18 meses: 20 puntos; 19-24 meses: 30 puntos; más de 24 meses: 40 puntos ).</p><p>**Ver bases de la convocatoria para más información.</p>",
+    "level": 2,
+    "title": "Requisitos valorables"
+   },
+   {
+    "html": "<p>- Contrato indefinido científico-técnico.</p><p>- Duración: 8 meses/fin de financiación.</p><p>−Jornada: 30 horas. semanal de lunes a viernes.</p><p>−Salario anual : 19.063,46€ Brutos incluidas dos pagadas extras más objetivos.</p><p>−Centro de trabajo:  Vigo y Pontevedra.</p><p>GRUPO DE INVESTIGACIÓN: MICROBIOLOGÍA /IDARA/PLATAFORMA IA</p><p>La persona contratada se encargará de las siguientes tareas:</p><p>- Anonimización de conjuntos de datos sensibles.</p><p>- Integración e interoperatividad con los Espacios Europeos Comunes de Datos.</p><p>- Diseño y desarrollo de la arquitectura de Software.</p><p>- Creación de plataformas de acceso para usuarios.</p><p>- Diseño y desarrollo de pipelines de análisis de datos.</p><p>- Pruebas de usabilidad, experiencia de usuario, seguridad y rendimiento de las soluciones de Software.</p><p>**Ver bases de la convocatoria para más información.</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.fundacionbiomedica.es/file/ofertatrabajo/317/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "galiciasur",
+  "source_title": "1.2.4 Titulado/a Grado II. Personal de Apoyo a la Investigación. (REF: 28/26)",
+  "status": "open",
+  "title": "Titulado/a Grado II. Personal de Apoyo a la Investigación. · “ESPACIO DE DATOS”",
+  "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/317"
  }
 }
