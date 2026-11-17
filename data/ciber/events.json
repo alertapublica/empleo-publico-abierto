@@ -55,5 +55,15 @@
   "before": "2026-11-15",
   "kind": "deadline_changed",
   "offer": "ciber:3921"
+ },
+ {
+  "at": "2026-11-17T05:07:26+00:00",
+  "kind": "closed",
+  "offer": "ciber:3902"
+ },
+ {
+  "at": "2026-11-17T05:07:26+00:00",
+  "kind": "closed",
+  "offer": "ciber:3921"
  }
 ]

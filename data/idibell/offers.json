@@ -140,7 +140,7 @@
  "2284": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2284",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-17T05:07:26+00:00",
   "code": "26-143_SS_VN",
   "company": "IDIBELL",
   "contract": "Permanent linked to a project",
@@ -155,7 +155,7 @@
   "kind": null,
   "listed_deadline": "2026-11-16",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-23",
   "parent_ref": null,
   "place": null,
@@ -179,7 +179,7 @@
   ],
   "source": "idibell",
   "source_title": "26-143_SS_VN - Study Coordinator for Cancer Clinical Trials",
-  "status": "open",
+  "status": "closed",
   "title": "Study Coordinator for Cancer Clinical Trials",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2284"
  },

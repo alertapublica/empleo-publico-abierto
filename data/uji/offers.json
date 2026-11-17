@@ -2,7 +2,7 @@
  "3588": {
   "apply_url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3588&pConcurso=1&pCategoria=14",
   "category": "Personal investigador júnior",
-  "closed_at": null,
+  "closed_at": "2026-11-17T05:07:26+00:00",
   "code": "23198",
   "company": "Universitat Jaume I",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-16",
   "location": "Castelló de la Plana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-03",
   "parent_ref": null,
   "place": null,
@@ -37,7 +37,7 @@
   ],
   "source": "uji",
   "source_title": "23198 plaça de personal investigador júnior per col·laborar en el projecte d’investigació: “26I183 REDUCCIÓ GUIADA DE MLPS SOBREPARAMETRIZATS PER A UNA INFERÈNCIA EFICIENT EN TRANSFORMERS (GROVER)”, dirigit per Manuel Francisco Dolz Zaragozá del Departament d'Enginyeria i Ciència dels Computadors. Grup d’investigació: Arquitectures i Computació d'Altes Prestacions.",
-  "status": "open",
+  "status": "closed",
   "title": "Personal investigador júnior · 26I183 Reducció guiada de mlps sobreparametrizats per a una inferència eficient en transformers (GROVER)",
   "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3588&pConcurso=1&pCategoria=14"
  },

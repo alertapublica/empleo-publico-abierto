@@ -35,7 +35,7 @@
  "18553": {
   "apply_url": "https://fisevi.com/titulacion-minima-diplomado-o-grado-en-ciencias-o-ciencias-de-la-salud-nivel-2-meces-grado-minimo-ref-299-26-huvr/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-17T05:07:26+00:00",
   "code": "299/26 HUVR",
   "company": "FISEVI",
   "contract": null,
@@ -50,7 +50,7 @@
   "kind": null,
   "listed_deadline": "2026-11-16",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -62,7 +62,7 @@
   "sections": [],
   "source": "fisevi",
   "source_title": "Titulación mínima: Diplomado o Grado en Ciencias o Ciencias de la Salud (NIVEL 2 MECES: GRADO, mínimo). REF: 299/26 HUVR",
-  "status": "open",
+  "status": "closed",
   "title": "Titulación mínima: Diplomado o Grado en Ciencias o Ciencias de la Salud (NIVEL 2 MECES: GRADO, mínimo).",
   "url": "https://fisevi.com/titulacion-minima-diplomado-o-grado-en-ciencias-o-ciencias-de-la-salud-nivel-2-meces-grado-minimo-ref-299-26-huvr/"
  },
