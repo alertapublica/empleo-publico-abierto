@@ -10551,7 +10551,7 @@
  "58327": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58327",
   "category": "Específica",
-  "closed_at": "2026-11-17T06:07:25+00:00",
+  "closed_at": null,
   "code": "58327",
   "company": "Tragsatec",
   "contract": null,
@@ -10564,9 +10564,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58327",
   "kind": "temporal",
-  "listed_deadline": "2026-11-16",
+  "listed_deadline": "2026-11-17",
   "location": "Comunidad de Navarra",
-  "missed_runs": 3,
+  "missed_runs": 0,
   "opens_on": "2026-10-20",
   "parent_ref": null,
   "place": "Pamplona",
@@ -10634,7 +10634,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Técnico/a_Mantenimiento Electricidad/Electrónica_Estaciones Meteorológicas (Navarra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58327"
  },
@@ -18980,6 +18980,118 @@
   "status": "open",
   "title": "Primer/a Oficial/a de Máquinas (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58544"
+ },
+ "58546": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58546",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58546",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-20",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Pesca y Asuntos Marítimos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Otros",
+  "first_seen": "2026-11-17T07:37:29+00:00",
+  "id": "tragsa:58546",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-20",
+  "location": "Embarcado/a en Buque Oceanográfico",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-29",
+  "ref": "58546",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Segundo/a Oficial/a de Puente de la Marina Mercante en Buque Oceanográfico<br/><br/>En relación al proceso publicado el pasado 29/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 20/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Embarcado/a en Buque Oceanográfico</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Preparar la documentación para despachos de entrada/salida de puerto</li><li>En dependencia directa de el/la Primer/a Oficial/a, apoyar a la gestión de información necesaria (cartas náuticas, avisos a navegantes, tablas, etc.)</li><li>Participar en los ejercicios de abandono y contra incendios, asumiendo y comprendiendo claramente sus funciones de acuerdo con los planes establecidos</li><li>Mantener actualizadas las cartas náuticas y publicaciones</li><li>Participar en los trabajos de mantenimiento de acuerdo con las instrucciones recibidas de el/la Primer/a Oficial/a</li><li>Realizar la maniobra de atraque/desatraque de popa</li><li>Realizar el mantenimiento de los botiquines</li><li>Manejar las maquinillas hidrográficas</li><li>Manejar los pórticos de popa y lateral</li><li>Asegurar que la guardia se mantiene de acuerdo con lo dispuesto por SOLAS (Safety of Life at Sea), STCW (Standards of Training, Certification and Watchkeeping for Seafarers), MARPOL (Marine Pollution), y cualquier otra normativa aplicable</li><li>Establecer el plan de viaje con la aprobación del/la capitán/a</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la Tarjeta profesional de Piloto/a de Primera Clase de la Marina Mercante sin limitación (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés, Nivel Mínimo B1 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia con contrato laboral en buques de más de 1600 GT</li></ul>Otros Requisitos Imprescindibles<ul><li>Certificado médico ISM (se comprobará en valoración técnica)</li><li>Certificado embarcaciones de supervivencia y botes de rescate no rápidos (se comprobará en valoración técnica)</li><li>Certificado avanzado de lucha contraincendios (se comprobará en valoración técnica)</li><li>Formación sanitaria específica avanzada (se comprobará en valoración técnica)</li><li>Certificado de formación básica en seguridad (se comprobará en valoración técnica)</li><li>Certificado oficial de protección del buque (se comprobará en valoración técnica)</li><li>Documento de identidad del marino/a (DIM), libreta de inscripción marítima o certificado de embarque (se comprobará en valoración técnica)</li><li>Curso básico de posicionamiento dinámico (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Sistema de Información y visualización y cartas electrónicas SIVCE/ECDIS (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Radar y de Ayudas de Punteo de Radar Automáticas RADAR/ARPA (se comprobará en valoración técnica)</li><li>Título operador/a General del Sistema Mundial de Socorro y Seguridad Marítima GMDSS (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la Tarjeta profesional de Piloto/a de Primera Clase de la Marina Mercante sin limitación (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés, Nivel Mínimo B1 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la Tarjeta profesional de Piloto/a de Primera Clase de la Marina Mercante sin limitación (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Inglés, Nivel Mínimo B1 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia con contrato laboral en buques de más de 1600 GT</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Certificado médico ISM (se comprobará en valoración técnica)</li><li>Certificado embarcaciones de supervivencia y botes de rescate no rápidos (se comprobará en valoración técnica)</li><li>Certificado avanzado de lucha contraincendios (se comprobará en valoración técnica)</li><li>Formación sanitaria específica avanzada (se comprobará en valoración técnica)</li><li>Certificado de formación básica en seguridad (se comprobará en valoración técnica)</li><li>Certificado oficial de protección del buque (se comprobará en valoración técnica)</li><li>Documento de identidad del marino/a (DIM), libreta de inscripción marítima o certificado de embarque (se comprobará en valoración técnica)</li><li>Curso básico de posicionamiento dinámico (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Sistema de Información y visualización y cartas electrónicas SIVCE/ECDIS (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Radar y de Ayudas de Punteo de Radar Automáticas RADAR/ARPA (se comprobará en valoración técnica)</li><li>Título operador/a General del Sistema Mundial de Socorro y Seguridad Marítima GMDSS (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificado ECDIS FURUNO mod. FMD-3100/3200/3300 (se comprobará en valoración técnica)</li><li>Certificado Manual Internacional de Servicios Aeronáuticos y Marítimos de Búsqueda y Salvamento IAMSAR (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada en Seguridad, Medioambiente y Prevención de Riesgos Laborales PRL (se comprobará en valoración técnica)</li><li>Certificado botes de rescate rápidos (se comprobará en valoración técnica)</li><li>Certificado buques de pasaje (se comprobará en valoración técnica)</li><li>Certificado de Gestión de Recursos del Puente o Gestión del Equipo del Puente BRM/BTM (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques que operan aguas polares (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques regidos código IGF (se comprobará en valoración técnica)</li><li>Certificado de Operador/a de Posicionamiento Dinámico (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés Nivel: B2</li></ul>Otros Factores Meritorios<ul><li>Al menos 3 años de experiencia con contrato laboral en buques de más de 1600 GT</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificado ECDIS FURUNO mod. FMD-3100/3200/3300 (se comprobará en valoración técnica)</li><li>Certificado Manual Internacional de Servicios Aeronáuticos y Marítimos de Búsqueda y Salvamento IAMSAR (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada en Seguridad, Medioambiente y Prevención de Riesgos Laborales PRL (se comprobará en valoración técnica)</li><li>Certificado botes de rescate rápidos (se comprobará en valoración técnica)</li><li>Certificado buques de pasaje (se comprobará en valoración técnica)</li><li>Certificado de Gestión de Recursos del Puente o Gestión del Equipo del Puente BRM/BTM (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques que operan aguas polares (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques regidos código IGF (se comprobará en valoración técnica)</li><li>Certificado de Operador/a de Posicionamiento Dinámico (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificado ECDIS FURUNO mod. FMD-3100/3200/3300 (se comprobará en valoración técnica)</li><li>Certificado Manual Internacional de Servicios Aeronáuticos y Marítimos de Búsqueda y Salvamento IAMSAR (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada en Seguridad, Medioambiente y Prevención de Riesgos Laborales PRL (se comprobará en valoración técnica)</li><li>Certificado botes de rescate rápidos (se comprobará en valoración técnica)</li><li>Certificado buques de pasaje (se comprobará en valoración técnica)</li><li>Certificado de Gestión de Recursos del Puente o Gestión del Equipo del Puente BRM/BTM (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques que operan aguas polares (se comprobará en valoración técnica)</li><li>Certificado de formación avanzada de buques regidos código IGF (se comprobará en valoración técnica)</li><li>Certificado de Operador/a de Posicionamiento Dinámico (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Inglés Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Al menos 3 años de experiencia con contrato laboral en buques de más de 1600 GT</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada por sustitución  con una duración estimada de 2 meses, en función del hecho causante.<br/><br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 29/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 20/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Segundo/a Oficial/a de Puente de la Marina Mercante (Buque Oceanográfico)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58546"
  },
  "58550": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58550",
