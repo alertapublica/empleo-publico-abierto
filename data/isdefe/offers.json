@@ -1308,5 +1308,47 @@
   "status": "open",
   "title": "Ingeniero/a de sistemas de información logísticos",
   "url": "https://seleccionisdefe.es/convocatoria-2642"
+ },
+ "2643": {
+  "apply_url": "https://seleccionisdefe.es/registro-2643",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00208 (3)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-23",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T12:07:45+00:00",
+  "id": "isdefe:2643",
+  "kind": null,
+  "listed_deadline": "2026-11-23",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-17",
+  "ref": "2643",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Consultor/a de apoyo a la SETID en seguridad digital en Madrid.</strong></p><p><strong>Titulaciones </strong></p><p>Ingeniería en telecomunicaciones, industriales, informática; licenciatura/grado en derecho, económicas o ADE</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>Definición de requisitos técnicos y consultoría sobre seguridad digital.</li>\n<li>Apoyo al análisis técnico jurídico de la legislación nacional y europea relacionada con la seguridad digital.</li>\n<li>Apoyo a la elaboración de pliegos para los procesos de contratación relacionados con la seguridad digital.</li>\n<li>Apoyo a la gestión técnica y económica de proyectos, planificación y seguimiento.</li>\n<li>Evaluación de riesgos.</li>\n<li>Revisión, evaluación y preparación de documentación, informes técnicos y material de apoyo.</li>\n<li>Apoyo a la planificación de actuaciones.</li>\n<li>Apoyo a la elaboración de indicadores de seguimiento de los proyectos y cuadros de mando.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Entre 2 y 4 años de experiencia.</li>\n<li>Experiencia en:\r\n\t<ul>\n<li>Análisis técnico jurídico de la regulación del sector de telecomunicaciones en general y del entorno de la seguridad digital en particiular.</li>\n<li>Planificación y gestión de la ejecución de proyectos.</li>\n<li>Apoyo  a  la  gestión  de  calidad,  gestión  de  documentación  y  seguimiento  de  planes  y actuaciones.</li>\n<li>Seguimiento de hitos de proyectos y presentación de informes de su estado.</li>\n</ul>\n</li>\n<li>Conocimientos en\r\n\t<ul>\n<li>Legislación sobre Seguridad Digital.</li>\n<li>ENS y los organismos involucrados en el mismo.</li>\n<li>Legislación de contratación del sector público.</li>\n</ul>\n</li>\n<li>Nivel de inglés 700 TOEIC (reading, listening, speaking).</li>\n</ul><p>*A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa.</p><p><strong>Se ofrece:</strong> CONTRATO INDEFINIDO</p><p><a href=\"https://seleccionisdefe.es/registro_datos_personales-2643\">INCRÍBETE</a></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Consultor/a de apoyo a la SETID en seguridad digital (2026-T00208) (3)",
+  "status": "open",
+  "title": "Consultor/a de apoyo a la SETID en seguridad digital",
+  "url": "https://seleccionisdefe.es/convocatoria-2643"
  }
 }
