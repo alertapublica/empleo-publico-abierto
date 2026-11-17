@@ -23,7 +23,7 @@ await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
 const base = `http://127.0.0.1:${server.address().port}/`;
 
 const offers = await readdir(join(ROOT, "ofertas"));
-const paths = ["", "investigacion/", "becas/", "organismos/", "organismos/tragsa/", "anuncios/", "historico/", "avisos/", "acerca/", "accesibilidad/", "datos/", `ofertas/${offers[0]}/`];
+const paths = ["", "investigacion/", "becas/", "organismos/", "organismos/tragsa/", "anuncios/", "anuncios/plazas/", "historico/", "avisos/", "acerca/", "accesibilidad/", "datos/", `ofertas/${offers[0]}/`];
 const browser = await chromium.launch(
   process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH, args: ["--no-sandbox"] } : {},
 );

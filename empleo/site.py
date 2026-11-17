@@ -1052,7 +1052,9 @@ def via_of(notice: dict) -> str:
     return notice.get("via") or process_type(notice["process"])
 
 
-def process_card(notices: list[dict], names: dict, today: date, root: str, feed: bool = True, level: int = 2) -> str:
+def process_card(notices: list[dict], names: dict, today: date, root: str, feed: bool = True, level: int = 2,
+                 places: int = 0) -> str:
+    """`places`: cuántos puestos de su relación de puestos están en «Plazas» (anuncios/plazas/)."""
     latest = notices[0]
     name = humane_caps(latest["process"])
     state = latest.get("state", "curso")
@@ -1073,6 +1075,9 @@ def process_card(notices: list[dict], names: dict, today: date, root: str, feed:
         rows = "".join(f"<li>{notice_link(n)}</li>" for n in notices[1:])
         count = "1 comunicado anterior" if len(notices) == 2 else f"{len(notices) - 1} comunicados anteriores"
         older = f'<details class="comunicados"><summary>Ver {count}</summary><ol>{rows}</ol></details>'
+    seats = (f'<p class="dato"><a href="{root}anuncios/plazas/?proceso={process_id(notices)}">'
+             f'Ver {"el puesto convocado" if places == 1 else f"los {places} puestos convocados"}</a></p>'
+             if places else "")
     rss = (f'<p class="dato proceso-acciones"><a href="{root}feeds/proceso-{process_id(notices)}.xml">'
            f'Avisos de este proceso por RSS</a></p>') if feed else ""
     search = plain_search({
@@ -1084,8 +1089,102 @@ def process_card(notices: list[dict], names: dict, today: date, root: str, feed:
 <p class="dato">{e(' · '.join(f for f in facts if f))}</p>
 {status}
 <p>Último comunicado. {notice_link(latest)}</p>
-{older}{rss}
+{older}{seats}{rss}
 </li>"""
+
+
+def place_process_id(place: dict) -> str:
+    """El `id` del proceso de una plaza: el mismo que `process_id` de sus comunicados."""
+    return hashlib.sha1(f"{place['source']}|{place['process']}".encode()).hexdigest()[:10]
+
+
+def live_places(places: list[dict]) -> list[dict]:
+    """Las plazas de bloques en marcha: primero las de inscripción abierta, después por proceso y bloque."""
+    found = [p for p in places if p.get("state", "curso") in LIVE_STATES]
+    return sorted(found, key=lambda p: (p.get("state") != "abierto", p["source"], p["process"], p.get("block") or "",
+                                        p["code"]))
+
+
+def place_card(place: dict, names: dict, today: date) -> str:
+    state = place.get("state", "curso")
+    unit = [place.get(key) for key in ("unit", "direction", "subdirection") if place.get(key)]
+    facts = [names.get(place["source"], ""), *unit]
+    numbers = [f"Vacantes: {place['positions']}" if place.get("positions") is not None else "",
+               f"Reservadas para personas con discapacidad: {place['reserved']}" if place.get("reserved") else ""]
+    extra = [f"Titulación: {e(place['degree'])}" if place.get("degree") else "",
+             f"Ubicación: {e(place['location'])}" if place.get("location") else ""]
+    if state == "abierto":
+        status = (f'<p class="plazo"><strong>Inscripción abierta.</strong> {deadline_text(place, today)} · '
+                  f'<a href="{e(place["apply_url"] or place["url"])}">Inscribirse en la plataforma oficial</a></p>')
+    else:
+        status = f'<p class="dato">Situación: {e(STATES[state])}</p>'
+    annex = (f' · <a href="{e(place["annex_url"])}">Anexo específico del puesto (PDF)</a>'
+             if place.get("annex_url") else "")
+    block = f"{e(humane_caps(place['block']))} · " if place.get("block") else ""
+    search = plain_search({"title": " ".join(filter(None, [place["title"], place["process"], *unit,
+                                                          place.get("degree"), place.get("location")])),
+                           "code": place["code"], "company": names.get(place["source"], "")})
+    return f"""<li data-texto="{e(search)}" data-organismo="{e(place['source'])}" data-situacion="{e(state)}" data-proceso="{place_process_id(place)}" data-unidad="{e(place.get('unit') or '')}">
+<h2>{e(place['code'])} · {e(place['title'])}</h2>
+<p class="dato">{e(' · '.join(f for f in facts if f))}</p>
+{f'<p class="dato">{" · ".join(f for f in numbers if f)}</p>' if any(numbers) else ""}{f'<p>{" · ".join(f for f in extra if f)}</p>' if any(extra) else ""}
+{status}
+<p class="dato">{block}<a href="{e(place['url'])}">{e(humane_caps(place['process']))}</a>{annex}</p>
+</li>"""
+
+
+def places_page(places: list[dict], checked: str, sources: dict, today: date) -> str:
+    """Plazas de los procesos con relación de puestos (tasas de reposición), con buscador y filtros."""
+    names = {s.id: s.name for s in sources.values()}
+    found = live_places(places)
+    cards = "\n".join(place_card(p, names, today) for p in found)
+    processes = {place_process_id(p): humane_caps(p["process"]) for p in found}
+    states = {p.get("state", "curso") for p in found}
+    state_options = "".join(f'<option value="{s}">{e(STATES[s])}</option>' for s in LIVE_STATES if s in states)
+    state_filter = (f'<div class="campo en-linea"><label for="situacion">Situación</label>\n'
+                    f'<select id="situacion" name="situacion"><option value="">Todas</option>{state_options}</select></div>\n'
+                    if len(states) > 1 else "")
+    more = "".join([
+        select_field("proceso", "Proceso", list(processes), processes),
+        select_field("unidad", "Gerencia o unidad", [p.get("unit") for p in found], {}),
+    ])
+    opened = sum(p.get("state") == "abierto" for p in found)
+    count = "1 puesto" if len(found) == 1 else f"{len(found)} puestos"
+    status = f"{count}, {opened} con la inscripción abierta." if opened else f"{count}."
+    empty = "" if found else '<p class="nota">En este momento no hay procesos en marcha con relación de puestos.</p>'
+    body = f"""<p><a href="../">Volver a los procesos selectivos</a></p>
+<h1>Plazas de los procesos selectivos</h1>
+<p class="nota">Puestos que convocan los procesos con relación de puestos (tasas de reposición), con los datos tal como los publica cada organismo. Se inscribe en el proceso, solo mientras el bloque del puesto esté en plazo: antes, consulte las bases y el anexo específico de cada puesto en la web oficial.</p>
+{empty}
+<noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa.</p></noscript>
+<form id="filtros" class="filtros" role="search" aria-label="Buscar plazas" data-uno="puesto encontrado" data-varios="puestos encontrados" hidden>
+{search_bar("Buscar plazas por palabra", "Puesto, referencia o gerencia")}
+<div class="pastillas">
+<div class="campo en-linea"><label for="organismo">Organismo</label>
+<select id="organismo" name="organismo"><option value="">Todos</option>{options((p['source'] for p in found), names)}</select></div>
+{state_filter}{FILTERS_BUTTON if more else ""}<button type="reset" class="quitar">Quitar filtros</button></div>
+{f'<div class="panel rejilla" id="mas-filtros" hidden>{more}</div>' if more else ""}
+</form>
+{results_bar(status)}
+<ol class="ofertas" id="lista-ofertas">
+{cards}
+</ol>"""
+    return page("Plazas de los procesos selectivos", body, "../../", "anuncios", checked=checked,
+                description="Puestos convocados en las tasas de reposición y otros procesos con relación de "
+                            "puestos de los organismos incluidos en este portal.")
+
+
+def public_places(places: list[dict]) -> list[dict]:
+    """Las plazas en la API (plazas.json): todas, en marcha y terminadas."""
+    return [{
+        "id": f"{p['source']}:{p['code']}", "organismo": p["source"], "proceso": p["process"],
+        "proceso_id": place_process_id(p), "codigo": p["code"], "puesto": p["title"], "bloque": p.get("block"),
+        "estado": p.get("state", "curso"), "plazo_fin": p.get("deadline"), "plazo_hora": p.get("deadline_time"),
+        "gerencia": p.get("unit"), "direccion": p.get("direction"), "subdireccion": p.get("subdirection"),
+        "vacantes": p.get("positions"), "reserva_discapacidad": p.get("reserved"), "ubicacion": p.get("location"),
+        "titulacion": p.get("degree"), "url": p["url"], "url_inscripcion": p.get("apply_url"),
+        "url_anexo": p.get("annex_url"), "detectado": p.get("first_seen"),
+    } for p in sorted(places, key=lambda p: (p["source"], p["process"], p.get("block") or "", p["code"]))]
 
 
 def select_field(name: str, label: str, values: list, labels: dict) -> str:
@@ -1101,12 +1200,13 @@ def is_live(notices: list[dict]) -> bool:
     return notices[0].get("state", "curso") in LIVE_STATES
 
 
-def announcements_page(items: list[dict], checked: str, sources: dict, today: date) -> str:
+def announcements_page(items: list[dict], checked: str, sources: dict, today: date, places: list[dict] = ()) -> str:
     names = {s.id: s.name for s in sources.values()}
+    seats = Counter(place_process_id(p) for p in live_places(places))
     groups = process_groups(items)
     live = [g for g in groups if is_live(g)]
     finished = len(groups) - len(live)
-    cards = "\n".join(process_card(g, names, today, "../") for g in live)
+    cards = "\n".join(process_card(g, names, today, "../", places=seats[process_id(g)]) for g in live)
     latest = [g[0] for g in live]
     more = "".join([
         select_field("acceso", "Tipo de acceso", [n.get("access") for n in latest], ACCESS),
@@ -1127,9 +1227,13 @@ def announcements_page(items: list[dict], checked: str, sources: dict, today: da
     closed_link = (f'<p><a href="../historico/procesos/">Ver {finished} procesos finalizados o sin novedades</a>.</p>'
                    if finished else "")
     empty = "" if live else '<p class="nota">En este momento no hay procesos en marcha.</p>'
+    total = sum(seats.values())
+    seats_link = (f'<p>Puestos que convocan los procesos con relación de puestos (tasas de reposición): '
+                  f'<a href="plazas/">ver {"el puesto" if total == 1 else f"los {total} puestos"} en Plazas</a>.</p>\n'
+                  if total else "")
     body = f"""<h1>Anuncios de procesos selectivos</h1>
 <p class="nota">Cada proceso agrupa sus comunicados y enlaza a la página o al documento oficial correspondiente. Este portal muestra solo los títulos: las relaciones de personas candidatas deben consultarse en la web oficial del organismo.</p>
-{empty}
+{seats_link}{empty}
 <noscript><p class="nota">Los filtros requieren JavaScript. Sin él, puede consultar la lista completa.</p></noscript>
 <form id="filtros" class="filtros" role="search" aria-label="Buscar procesos" data-uno="proceso encontrado" data-varios="procesos encontrados" hidden>
 {search_bar("Buscar procesos por palabra", "Puesto u organismo")}
@@ -1567,6 +1671,20 @@ PROCESS_FIELDS = [
     (("url",), "Página o documento oficial del proceso."),
     (("comunicados",), "Comunicados del proceso, del más reciente al más antiguo. Cada uno tiene <code>fecha</code>, la que publica el organismo (<code>AAAA-MM-DD</code>), o <code>null</code> si no publica ninguna; <code>titulo</code>, literal; <code>url</code>, su documento o, si el organismo no publica uno propio para cada comunicado, la página del proceso; y <code>detectado</code>, el momento (ISO 8601) en que este portal lo detectó, o su primera lectura del organismo si el comunicado ya estaba publicado. Los que no tienen fecha se ordenan por el momento en que se detectaron; los que ya estaban publicados en la primera lectura del organismo van al final, en el orden de la web oficial, y no figuran en novedades.json porque no se sabe cuándo se publicaron. No incluye relaciones de personas."),
 ]
+PLACE_FIELDS = [
+    (("id",), "Identificador estable: la clave del organismo, dos puntos y la referencia del puesto."),
+    (("organismo",), "Clave del organismo (<code>organismos</code> en listas.json)."),
+    (("proceso", "proceso_id"), "Nombre del proceso al que pertenece el puesto y su <code>id</code> en procesos.json."),
+    (("codigo", "puesto"), "Referencia y denominación del puesto, literales."),
+    (("bloque",), "Bloque o tanda de la convocatoria, literal; <code>null</code> si el organismo no los usa."),
+    (("estado",), "Situación del bloque del puesto, con las mismas claves que <code>estado</code> en procesos.json: <code>abierto</code> mientras su bloque está en plazo."),
+    (("plazo_fin", "plazo_hora"), "Fin de la inscripción del bloque y su hora, solo mientras está abierta."),
+    (("gerencia", "direccion", "subdireccion"), "Unidad del puesto, literal; <code>null</code> si el organismo no la indica."),
+    (("vacantes", "reserva_discapacidad"), "Número de vacantes y, de ellas, las reservadas para personas con discapacidad; <code>null</code> si no consta."),
+    (("ubicacion", "titulacion"), "Ubicación y titulación exigida, literales, cuando se leen del anexo del puesto; si no, <code>null</code>."),
+    (("url", "url_inscripcion", "url_anexo"), "Página oficial con la relación de puestos, dónde inscribirse mientras el bloque está abierto y anexo específico del puesto (PDF)."),
+    (("detectado",), "Momento (ISO 8601) en que este portal detectó el puesto."),
+]
 NEWS_FIELDS = [
     (("id",), "Identificador estable: la misma novedad conserva siempre el mismo <code>id</code>, de modo que puede avisarse una sola vez."),
     (("fecha",), "Momento (ISO 8601) en que este portal detectó la novedad. En los comunicados es su <code>detectado</code> de procesos.json."),
@@ -1614,6 +1732,7 @@ def code_example(unix: str, windows: str, js: str) -> str:
 OPEN_DATA_FILES = (  # (fichero, apartado de sus campos, contenido)
     ("ofertas.json", "ofertas", "Todas las ofertas, abiertas y cerradas, también las becas (<code>tipo_contrato</code> <code>beca</code>) y las ofertas en el extranjero (<code>comunidad</code> <code>Extranjero</code>)."),
     ("procesos.json", "procesos", "Todos los procesos selectivos, en marcha y terminados, con sus comunicados por fases."),
+    ("plazas.json", "plazas", "Los puestos que convocan los procesos con relación de puestos (tasas de reposición), en marcha y terminados."),
     ("novedades.json", "novedades", f"Las ofertas y los comunicados nuevos de los últimos {NEWS_DAYS} días. Es el fichero más adecuado para crear avisos propios."),
     ("listas.json", "listas", "El nombre de cada clave que usan los demás ficheros: comunidades autónomas, provincias, municipios, organismos, áreas, tipos de contrato…"),
 )
@@ -1703,6 +1822,11 @@ const galicia = datos.novedades.filter(n =&gt; n.tipo === "oferta" &amp;&amp; n.
 <p>Campos de cada proceso:</p>
 {field_table(PROCESS_FIELDS, "Campos de cada proceso en procesos.json")}
 </section>
+<section class="campos-fichero" aria-labelledby="plazas">
+<h3 id="plazas">Plazas (plazas.json)</h3>
+<p>El campo <code>plazas</code> contiene los puestos de la relación de puestos de los procesos que la publican (tasas de reposición), en marcha y terminados, con el texto de la web oficial. Se inscribe en el proceso, no en el puesto, y solo mientras su bloque está en plazo. Campos de cada plaza:</p>
+{field_table(PLACE_FIELDS, "Campos de cada plaza en plazas.json")}
+</section>
 <section class="campos-fichero" aria-labelledby="novedades">
 <h3 id="novedades">Novedades (novedades.json)</h3>
 <p>El campo <code>dias</code> indica el periodo que abarca el fichero ({NEWS_DAYS} días), y <code>novedades</code> contiene, de la más reciente a la más antigua, las ofertas nuevas o publicadas de nuevo que siguen abiertas y los comunicados nuevos de los procesos:</p>
@@ -1756,6 +1880,11 @@ def load_all(data: Path) -> tuple[dict, list, list]:
         events += store.load(folder / "events.json", [])
         announcements += list(store.load(folder / "announcements.json", {}).values())
     return offers, events, announcements
+
+
+def load_places(data: Path) -> list[dict]:
+    """Las plazas guardadas (relación de puestos de los procesos) de las fuentes activas."""
+    return [record for source in ACTIVE for record in store.load(data / source.id / "plazas.json", {}).values()]
 
 
 def news(offers: dict, events: list, announcements: list, sources: dict, base_url: str,
@@ -1911,7 +2040,9 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
             source, open_offers, today, checked, [g for g in live if g[0]["source"] == source.id], TELEGRAM_BOT))
     for offer in offers.values():
         put(offer_path(offer), offer_page(offer, sources, now, checked, base_url))
-    put("anuncios/", announcements_page(announcements, checked, sources, today))
+    places = load_places(data)
+    put("anuncios/", announcements_page(announcements, checked, sources, today, places))
+    put("anuncios/plazas/", places_page(places, checked, sources, today))
     put("historico/", history_page(closed, checked, sum(not is_live(g) for g in groups)))
     put("historico/procesos/", closed_processes_page(announcements, checked, sources, today))
     put("acerca/", about_page(sources, checked, TELEGRAM_BOT, base_url, bool(CORREO_SITEKEY)))
@@ -1995,13 +2126,16 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     found = processes(announcements)
     live_count = sum(p["estado"] in LIVE_STATES for p in found)
     api("procesos.json", f"{amount(len(found), 'proceso')}, {live_count} en marcha", procesos=found)
+    seats = public_places(places)
+    api("plazas.json", f"{amount(len(seats), 'plaza')}, {sum(p['estado'] == 'abierto' for p in seats)} con la "
+        f"inscripción abierta", plazas=seats)
     named = lists(sources, {o["municipio"] for o in public if o["municipio"]}, {o["pais"] for o in public if o["pais"]})
     api("listas.json", amount(len(named), "lista"), **named)
     generated = now.astimezone(MADRID)
     put("datos/", open_data_page(checked, files, f"{long_date(generated.date().isoformat())} a las {generated:%H:%M}",
                                  base_url))
     pages = (
-        [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
+        [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/", "anuncios/plazas/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
         # Las cerradas, y las de plazo vencido aún sin cerrar, siguen publicadas, pero no se anuncian.
         + [offer_path(o) for o in open_offers if not expired(o, now)]

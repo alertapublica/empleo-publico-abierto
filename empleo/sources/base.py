@@ -5,7 +5,7 @@ import re
 from abc import ABC, abstractmethod
 
 from ..http import DEFAULT_DELAY, Client
-from ..model import Announcement, ListedOffer, OfferDetail
+from ..model import Announcement, ListedOffer, OfferDetail, Plaza
 
 
 class Source(ABC):
@@ -66,4 +66,9 @@ class Source(ABC):
         return {}
 
     def list_announcements(self, http: Client) -> list[Announcement]:
+        return []
+
+    def list_places(self, http: Client) -> list[Plaza]:
+        """Puestos de la relación de puestos de sus procesos. Se pide después de `list_announcements`,
+        así que puede reutilizar lo que esa lectura ya descargó."""
         return []

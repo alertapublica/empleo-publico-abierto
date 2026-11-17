@@ -35,6 +35,10 @@ Experts: tasa de reposición ordinaria
   proceso es la convocatoria, no el bloque.
 - «Listados …»: relaciones de personas. No se leen.
 
+La tabla de cada bloque es la relación de puestos: referencia, gerencia, dirección, subdirección, puesto,
+reserva para personas con discapacidad, vacantes y anexo específico (PDF). Cada fila es una `Plaza` del
+proceso, con el estado y el plazo de su bloque (`parse_places`).
+
 Un proceso por sección de comunicados. Su estado sale de las cabeceras de sus bloques: abierto si
 alguno está en plazo, finalizado si todos dicen «RESUELTO», en curso si no. Una cabecera con otro
 rótulo es un cambio de la página. Acceso libre: «Podrá optar cualquier persona que cumpla con lo
@@ -49,7 +53,7 @@ from bs4 import BeautifulSoup
 
 from ..dates import clock, spanish_date
 from ..http import Client
-from ..model import MADRID, Announcement, ListedOffer, OfferDetail, SourceLayoutError, selection_system
+from ..model import MADRID, Announcement, ListedOffer, OfferDetail, Plaza, SourceLayoutError, selection_system
 from ..sanitize import sanitize
 from .base import Source
 
@@ -107,26 +111,32 @@ def _deadline(label: str, today: date) -> tuple[str, str | None]:
     return closest.isoformat(), clock(hour)
 
 
+def _block(anchor, today: date) -> tuple[str, dict]:
+    """Convocatoria («TRO26») y estado de un bloque, por su cabecera."""
+    label = _text(anchor)
+    found = HEADER.match(label)
+    if not found:
+        raise SourceLayoutError(f"Ineco: cabecera de bloque inesperada «{label}»")
+    status = found.group(2).strip()
+    upper = status.upper()
+    if upper == "RESUELTO":
+        block = {"state": "finalizado"}
+    elif upper.startswith("EN PROCESO DE RESOLUCI"):
+        block = {"state": "curso"}
+    elif upper.startswith("INSCRIPCI"):
+        deadline, hour = _deadline(status, today)
+        block = {"state": "abierto", "deadline": deadline, "deadline_time": hour}
+    else:
+        raise SourceLayoutError(f"Ineco: estado de bloque desconocido «{status}»")
+    return found.group(1), block
+
+
 def block_states(soup: BeautifulSoup, today: date) -> dict[str, list[dict]]:
     """Bloques de cada convocatoria (clave sin espacios ni guiones) con su estado."""
     blocks: dict[str, list[dict]] = {}
     for anchor in soup.select(".panel-title a"):
-        label = _text(anchor)
-        found = HEADER.match(label)
-        if not found:
-            raise SourceLayoutError(f"Ineco: cabecera de bloque inesperada «{label}»")
-        status = found.group(2).strip()
-        upper = status.upper()
-        if upper == "RESUELTO":
-            block = {"state": "finalizado"}
-        elif upper.startswith("EN PROCESO DE RESOLUCI"):
-            block = {"state": "curso"}
-        elif upper.startswith("INSCRIPCI"):
-            deadline, hour = _deadline(status, today)
-            block = {"state": "abierto", "deadline": deadline, "deadline_time": hour}
-        else:
-            raise SourceLayoutError(f"Ineco: estado de bloque desconocido «{status}»")
-        blocks.setdefault(_key(found.group(1)), []).append(block)
+        code, block = _block(anchor, today)
+        blocks.setdefault(_key(code), []).append(block)
     return blocks
 
 
@@ -217,6 +227,78 @@ def parse_page(html: str, page: str, today: date) -> list[Announcement]:
     return items
 
 
+def _process_of(code: str, sections: list[str]) -> str | None:
+    """Convocatoria de comunicados a la que pertenece un bloque: la misma («TRO26») o, para las repescas
+    numeradas («TR-REPESCA 2»), la que las reúne («TR-REPESCA»), como en `_blocks_of`."""
+    key = _key(code)
+    for section in sections:
+        name = _key(section)
+        if key == name or (not name[-1].isdigit() and key.startswith(name)):
+            return process_name(section)
+    return None
+
+
+def _cell(value: str) -> str | None:
+    """Celda literal; «-» o vacía, sin dato."""
+    return None if value in ("", "-") else value
+
+
+def _number(value: str) -> int | None:
+    return int(value) if value.isdigit() else None
+
+
+# Columnas de la relación de puestos («Puesto» en la ordinaria, «Puesto Agregado» en la específica).
+COLUMNS = {"referencia": "code", "gerencia": "unit", "dirección": "direction", "subdirección": "subdirection",
+           "puesto": "title", "puesto agregado": "title", "vacantes": "positions"}
+
+
+def parse_places(html: str, page: str, today: date) -> list[Plaza]:
+    """Puestos de la relación de puestos de cada bloque, con el estado y el plazo del bloque.
+
+    Solo los de convocatorias con comunicados (los procesos que se publican); una convocatoria nueva sin
+    comunicados aún no tiene proceso, y sus puestos quedan para la lectura en que lo tenga.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    sections = [found.group(1) for heading in soup.select("section[id^=section-] h2")
+                if (found := COMUNICADOS.match(_text(heading)))]
+    places = []
+    for panel in soup.select(".panel"):
+        anchor = panel.select_one(".panel-title a")
+        if anchor is None:
+            continue
+        code, block = _block(anchor, today)
+        process = _process_of(code, sections)
+        if process is None:
+            continue
+        if block["state"] == "abierto" and block["deadline"] < today.isoformat():
+            block = {"state": "curso"}  # la cabecera aún no lo ha cambiado
+        label = _text(anchor).split("(")[0].strip(" .–-")
+        rows = panel.select("table tr")
+        if not rows:
+            raise SourceLayoutError(f"Ineco: bloque sin relación de puestos «{label}»")
+        names = [_text(cell).lower() for cell in rows[0].select("th, td")]
+        reserved = next((i for i, name in enumerate(names) if name.startswith("reserva")), None)
+        if "referencia" not in names or "vacantes" not in names or reserved is None:
+            raise SourceLayoutError(f"Ineco: columnas inesperadas en «{label}»: {names}")
+        for row in rows[1:]:
+            cells = [_text(cell) for cell in row.select("td")]
+            if not any(cells):
+                continue
+            values = {COLUMNS[name]: cells[i] for i, name in enumerate(names) if name in COLUMNS and i < len(cells)}
+            if not values.get("code") or not values.get("title"):
+                raise SourceLayoutError(f"Ineco: puesto sin referencia o sin denominación en «{label}»")
+            annex = next((a["href"] for a in row.select("a[href]") if a["href"].lower().endswith(".pdf")), None)
+            places.append(Plaza(
+                process=process, code=values["code"], title=values["title"], url=page, block=label,
+                state=block["state"], deadline=block.get("deadline"), deadline_time=block.get("deadline_time"),
+                apply_url=page if block["state"] == "abierto" else None,
+                unit=_cell(values.get("unit", "")), direction=_cell(values.get("direction", "")),
+                subdirection=_cell(values.get("subdirection", "")), positions=_number(values.get("positions", "")),
+                reserved=_number(cells[reserved]) if reserved < len(cells) else None, annex_url=annex,
+            ))
+    return places
+
+
 def offer_url(ref: str) -> str:
     return f"{EPRESELEC}?Id_Oferta={ref}"
 
@@ -288,6 +370,7 @@ class InecoSource(Source):
     def __init__(self):
         self._fichas = 0  # fichas pedidas en esta lectura
         self._blocked = False  # Imperva ya ha pedido captcha en esta lectura
+        self._places: list[Plaza] = []  # relación de puestos de la última lectura de People Experts
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
         self._fichas, self._blocked = 0, False
@@ -310,4 +393,13 @@ class InecoSource(Source):
 
     def list_announcements(self, http: Client, now: datetime | None = None) -> list[Announcement]:
         today = (now or datetime.now(MADRID)).astimezone(MADRID).date()
-        return [item for page in PAGES for item in parse_page(http.get(page), page, today)]
+        items, self._places = [], []
+        for page in PAGES:
+            html = http.get(page)
+            items += parse_page(html, page, today)
+            self._places += parse_places(html, page, today)
+        return items
+
+    def list_places(self, http: Client) -> list[Plaza]:
+        """La relación de puestos viene en las mismas páginas que los comunicados: sin peticiones nuevas."""
+        return self._places

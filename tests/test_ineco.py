@@ -157,6 +157,58 @@ class Fuente(unittest.TestCase):
         self.assertEqual(len({i.process for i in items}), 6)
 
 
+class Plazas(unittest.TestCase):
+    """La relación de puestos de cada bloque: un puesto por fila, con el estado y el plazo de su bloque."""
+
+    def places(self, name="ineco-ordinaria-junio.html", today=date(2026, 6, 7), page=ineco.ORDINARIA):
+        return {p.code: p for p in ineco.parse_places(fixture(name), page, today)}
+
+    def test_fila_literal_con_anexo(self):
+        place = self.places()["TRO26-ECE-011"]
+        self.assertEqual((place.process, place.title, place.block),
+                         ("Tasa de reposición ordinaria 2026 (TRO26)", "Experto/a 2", "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO"))
+        self.assertEqual((place.unit, place.direction, place.subdirection, place.positions, place.reserved),
+                         ("G. SUBVENCIONES EN INFRAESTRUCTURAS", "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
+                          "SUBD. ECONOMÍA, PLANIFICACIÓN Y MEDIO AMBIENTE", 1, 0))
+        self.assertEqual(place.annex_url, "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-011.pdf")
+
+    def test_estado_y_plazo_del_bloque(self):
+        places = self.places()
+        self.assertEqual((places["TRO26-ECE-011"].state, places["TRO26-ECE-011"].deadline,
+                          places["TRO26-ECE-011"].deadline_time, places["TRO26-ECE-011"].apply_url),
+                         ("abierto", "2026-06-12", "11:59", ineco.ORDINARIA))
+        self.assertEqual((places["TRO26-ECE-003"].state, places["TRO26-ECE-003"].apply_url), ("curso", None))
+        self.assertEqual(places["TRO26-XO-002"].state, "finalizado")
+        self.assertEqual(self.places(today=date(2026, 6, 13))["TRO26-ECE-011"].state, "curso")  # cabecera atrasada
+
+    def test_repescas_con_su_proceso_y_guiones_sin_dato(self):
+        places = self.places("ineco-especifica.html", TODAY, ineco.ESPECIFICA)
+        repesca = places["TR-R2-EC-001"]
+        self.assertEqual(repesca.process, "Repesca de tasas de reposición (TR-REPESCA)")
+        self.assertEqual((repesca.unit, repesca.subdirection), (None, None))  # «-» en la tabla
+        self.assertIsNone(places["TRE24-EXO-001"].reserved)
+        self.assertEqual(places["TRE24-R-ECS-001"].process, "Tasa de reposición específica 2024 (TRE24)")
+        self.assertEqual(places["TR23-EXO-003"].positions, 4)
+        # Cada plaza es de un proceso que existe (los mismos nombres que los comunicados).
+        procesos = {i.process for i in ineco.parse_page(fixture("ineco-especifica.html"), ineco.ESPECIFICA, TODAY)}
+        self.assertLessEqual({p.process for p in places.values()}, procesos)
+
+    def test_columnas_inesperadas_detienen_la_fuente(self):
+        html = fixture("ineco-ordinaria.html").replace(">Vacantes<", ">Plazas<")
+        with self.assertRaises(SourceLayoutError):
+            ineco.parse_places(html, ineco.ORDINARIA, TODAY)
+
+    def test_sin_peticiones_nuevas(self):
+        http = FakeHttp()
+        calls = []
+        get = http.get
+        http.get = lambda url: calls.append(url) or get(url)
+        source = ineco.InecoSource()
+        source.list_announcements(http, now=datetime(2026, 11, 16, 12, tzinfo=timezone.utc))
+        self.assertEqual(len(source.list_places(http)), 28)
+        self.assertEqual(len(calls), 2)
+
+
 # Páginas reales de ePreselec del 16/11/2026, leídas desde un Worker de Cloudflare y recortadas: 7 de las
 # 197 ofertas y 3 de los ~700 trozos de __VIEWSTATE. La ficha de la 28942 es la respuesta a un postback, que
 # es la misma página que da `?Id_Oferta=` (comprobado con Chromium).

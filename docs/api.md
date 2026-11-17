@@ -2,12 +2,13 @@
 
 JSON estático en GitHub Pages (`https://alertapublica.es/api/…`), regenerado en cada publicación, es decir, tras cada lectura: cada 30 minutos entre semana de 6:00 a 19:00 y menos el resto (horario en [worker](worker.md); la web lo publica desde `SCHEDULE`, `empleo/site.py`). Se puede leer desde cualquier web (CORS abierto) sin clave.
 
-Hay cuatro ficheros:
+Hay cinco ficheros:
 
 | Fichero | Contenido |
 |---|---|
 | `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio, y país (ISO 3166-1). Las becas (`tipo_contrato` `beca`) van en todos los ficheros; en la web, solo en Becas (`site.is_grant`). Un puesto fuera de España lleva `comunidad` «Extranjero» (`regions.ABROAD`), `ccaa` `null` y su `pais` |
 | `procesos.json` | Comunicados de procesos selectivos |
+| `plazas.json` | Puestos de la relación de puestos de los procesos que la publican (tasas de reposición: `Source.list_places`, hoy Ineco), con el estado y el plazo de su bloque; `proceso_id` es el `id` del proceso en `procesos.json`. En la web, en `anuncios/plazas/` |
 | `novedades.json` | Novedades de los últimos 14 días (lo usa el worker de avisos). Cada oferta lleva `tipo_contrato` y `extranjero` (bool): los avisos solo mandan becas y puestos en el extranjero a quien los pide |
 | `listas.json` | Nombre legible de cada clave |
 
