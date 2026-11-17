@@ -503,6 +503,7 @@ PROFESION = re.compile(r"titulaci\w+ que (?:habilit\w+|d[ae]n? acceso)")  # nomb
 ESPECIALIDAD_DE = re.compile(r"\s*(?:en|de)\s+")
 TECNICA = re.compile(r"ingenier|enginyer|enxe|arquitect")
 SIN_ESPECIALIDAD = re.compile(r"licenci|llicenci|diplom|ingenier|enginyer|enxe")
+ING_CUALQUIERA = re.compile(r"[\s(]*(?:(?:en|de|d'|da) )?(?:cualquier|qualsevol|calquera) (?:rama|especialidad|branca|especialitat|especialidade)\b")
 MECES3_SIN_MASTER = re.compile(r"veterinari|farmaci|medicina|odontolog|arquitectura")  # grados que son MECES 3
 # palabras que no nombran una especialidad (para `sin_clave`)
 VACIAS = set("""de del la el los las lo en a al y e i con para por que su sus un una como segun al menos mas
@@ -709,6 +710,9 @@ def lee(texto: str) -> Requisito:
             found += [key for key in ("arquitectura_tecnica", "arquitectura") if UNI_RX[key].match(source, start)]
         named = _blank(CORTE, segment(k))
         spans: list[tuple[int, int]] = []
+        if source[start:end].startswith(("ingenier", "enginyer", "enxe")) and ING_CUALQUIERA.match(named):
+            found.append("cualquier_ingenieria")  # «Ingeniería en cualquier especialidad»: el título se lleva «Ingeniería»
+            spans.append(ING_CUALQUIERA.match(named).span())
         for key, rx in vocabulary.items():  # sobre el texto entero, para que las excepciones vean lo que sigue
             hits = [m.span() for m in rx.finditer(named) if not any(a < m.end() and m.start() < b for a, b in spans)
                     and (vocabulary is FP_RX or _cabeza(named, m.start()))]  # (la FP nombra ciclos a medias)

@@ -245,6 +245,13 @@ class Vocabulario(unittest.TestCase):
             self.assertEqual(T.lee(texto).titulaciones, ("derecho",), texto)
         self.assertEqual(T.lee("Grado en cualquier ingeniería").titulaciones, ("cualquier_ingenieria",))
 
+    def test_ingenieria_en_cualquier_especialidad(self):
+        # «Ingeniería» es el título y se queda fuera del texto de especialidades: no es «cualquier titulación»
+        for texto in ("Ingeniería en cualquier especialidad", "Ingeniería Superior de cualquier rama",
+                      "Ingeniería (cualquier especialidad)", "Enginyeria en qualsevol especialitat"):
+            self.assertEqual(T.lee(texto).titulaciones, ("cualquier_ingenieria",), texto)
+        self.assertEqual(T.lee("Licenciatura en cualquier especialidad").titulaciones, ("cualquier_universitaria",))
+
     def test_ciclos_de_informatica(self):
         for texto in ("Formación Profesional - Sistemas y Redes", "Formación Profesional en Inteligencia Artificial y Big Data"):
             self.assertEqual(T.lee(texto).titulaciones, ("fp-informatica",), texto)
