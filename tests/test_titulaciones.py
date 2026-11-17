@@ -48,14 +48,15 @@ class Vias(unittest.TestCase):
             self.assertEqual(vias(texto), esperado, texto)
 
     def test_grado_o_grado_mas_master_deja_el_primero_solo(self):
+        # (un «2 o 3» de todo el grupo no dice qué nivel es de cada vía: no se reparte)
         self.assertEqual(
             vias("Posees la titulación de Licenciatura o Diplomatura o Grado o Grado + Máster (nivel 2 MECES o 3 MECES) en"
                  " Administración y Dirección de Empresas" + H),
-            "titulo_superior@23 | titulo_medio@23 | grado@23 | grado+master@23")
+            "titulo_superior | titulo_medio | grado | grado+master")
         self.assertEqual(
             vias("Disponer de la titulación de Ingeniería, Ingeniería Técnica, Arquitectura, Arquitectura Técnica, Grado o Grado +"
                  " Máster Oficial en ramas de la Ingeniería y/o Arquitectura (Nivel 2 o 3 MECES)" + H),
-            "titulo_superior@23 | titulo_medio@23 | grado@23 | grado+master@23")
+            "titulo_superior | titulo_medio | grado | grado+master")
 
     def test_cada_marca_de_meces_cierra_su_grupo(self):
         self.assertEqual(
@@ -75,7 +76,7 @@ class Vias(unittest.TestCase):
             "Ingeniería o Grado + Máster Habilitante (nivel 3 MECES)" + H + " en:\n- Ingeniería de Montes\n- Ingeniería Agrónoma":
                 "titulo_superior@3 | grado+master@3",
             "Posees alguna de las siguientes titulaciones (nivel 2 o 3 MECES)" + H + ":\n- Arquitectura / Arquitectura Técnica /"
-            " Grado en Arquitectura\n- Ingeniería Técnica / Ingeniería Superior": "titulo_superior@23 | titulo_medio@23 | grado@23",
+            " Grado en Arquitectura\n- Ingeniería Técnica / Ingeniería Superior": "titulo_superior | titulo_medio | grado",
             "(Licenciatura/Ingeniería o Grado+Máster universitario MECES 3) en Ingeniería Informática o de Telecomunicaciones.":
                 "titulo_superior@3 | grado+master@3",
         }
@@ -101,11 +102,22 @@ class Vias(unittest.TestCase):
             "Poseer la titulación oficial de FPGB, FPI o CFGM o FP II o CFGS" + H + " o conocimientos apropiados a los cometidos"
             " desempeñados.": "fp_basica | fp_medio | fp_superior | experiencia",
             "Posees la titulación de Graduado en ESO o EGB/Graduado Escolar o BUP/COU o Bachillerato.": "eso | bachillerato",
-            "Doctor/a en Psicologia Clínica o afines.": "doctorado",
         }
         for texto, esperado in casos.items():
             self.assertEqual(vias(texto), esperado, texto)
             self.assertEqual(T.lee(texto).parcial, (), texto)
+
+    def test_la_experiencia_solo_es_via_si_hay_titulo_delante(self):
+        texto = ("Posees la titulación de Titulación o conocimientos adquiridos en el desempeño de su profesión equivalentes a títulos"
+                 " universitarios de primer ciclo (NIVEL 2 MECES), completada con una experiencia dilatada en su sector profesional")
+        self.assertEqual(vias(texto), "")
+        self.assertIn("sin título académico reconocido", T.lee(texto).parcial)
+
+    def test_master_tras_especialidades_avisa(self):
+        # «Diplomatura en X o Grado + Máster»: ¿la diplomatura va con máster? No se sabe; con barra, sí
+        req = T.lee("Diplomatura en Biología o Grado + Máster Oficial en Biología (nivel 3 MECES)")
+        self.assertIn("«+ Máster»: no se sabe a qué títulos se suma", req.parcial)
+        self.assertEqual(T.lee("Ingeniería o Ingeniería técnica o Grado en Ingeniería + Máster Oficial (Nivel MECES 3)").parcial, ())
 
     def test_no_exigida_solo_si_lo_dice(self):
         self.assertEqual(T.lee("Titulación no exigida.")._asdict()["estado"], "no_exigida")
@@ -188,11 +200,51 @@ class Vocabulario(unittest.TestCase):
     def test_sin_clave_solo_nombres_de_especialidad(self):
         # el resto de un título ya reconocido pierde la conjunción; las condiciones y oraciones de relativo no cuentan
         self.assertEqual(T.lee("Licenciatura o Grado + Máster Universitario en Arqueología o en Geografía e Historia (MECES 3)").sin_clave,
-                         ("historia",))
+                         ())  # un nombre con clave no deja restos («e Historia»)
         self.assertEqual(T.lee("Grado en Ingeniería (que incluya en el plan de estudios al menos una materia del ámbito de "
                                "electricidad, energía y/o instalaciones)").sin_clave, ())
         self.assertEqual(T.lee("FP II o CFGS en especializaciones que permitan el desarrollo del puesto de delineante de conformidad "
                                "con la normativa legal de aplicación al mismo (FPII/CFGS rama de Edificación y/o Obra civil)").sin_clave, ())
+
+    def test_la_clave_empieza_el_nombre(self):
+        # un nombre dentro de otro no lo menciona: dar menos antes que meter la oferta en un filtro que no le toca
+        casos = {
+            "Grado en Ingeniería Química Industrial": ("quimica",),
+            "Grado + Máster en Bioinformática para las Ciencias de la Salud o Bioinformática y Bioestadística": ("informatica",),
+            "Grado + Máster en Bioinformática y Análisis de Datos Biomédicos o Bioinformática y Biología Computacional":
+                ("informatica", "biologia"),
+            "Grado en Ingeniería de Tecnologías de Telecomunicación": ("teleco",),
+            "Doble Grado en Derecho y ADE": ("economia", "derecho"),
+            "Grado en Ciencias de la Actividad Física y del Deporte": ("deporte",),
+            # (títulos oficiales del RUCT: el complemento con «de» o «en» sí nombra la disciplina; el adjetivo, no)
+            "Grado en Ingeniería Electrónica de Telecomunicación": ("teleco",),
+            "Máster Universitario en Cuidados de Enfermería Intensiva": ("enfermeria",),
+            "Máster Universitario en Investigación en Ingeniería Industrial": ("industrial",),
+            "Máster Universitario en Intervención Psicológica en Niños y Adolescentes": ("psicologia",),
+            "Máster Universitario en Física Médica": ("fisica",),  # (física, no medicina)
+            "Máster Universitario en Responsabilidad Civil": (),
+            "Máster Universitario en Investigación en Educación Física y Salud": (),
+            "Grado en Arquitectura Naval": ("naval",),
+            "Máster Universitario en Arquitectura de Software": ("informatica",),
+        }
+        for texto, esperado in casos.items():
+            self.assertEqual(T.lee(texto).titulaciones, esperado, texto)
+
+    def test_alias_que_nombran_otro_titulo(self):
+        for texto in ("Grado en Náutica y Transporte Marítimo", "Grado en Ciencias Jurídicas de las Administraciones Públicas",
+                      "Grado en Ingeniería Geológica", "Grado en Ingeniería Biomédica"):
+            self.assertEqual(T.lee(texto).titulaciones, (), texto)
+
+    def test_las_condiciones_no_nombran_especialidades(self):
+        self.assertEqual(T.lee("Grado en Biología con al menos 2 años de experiencia en el sector agrario").titulaciones, ("biologia",))
+        self.assertEqual(T.lee("Grado en Derecho, valorándose conocimientos de informática").titulaciones, ("derecho",))
+        # (la condición acaba con su frase: lo que va entre paréntesis después sí cuenta)
+        self.assertEqual(T.lee("FP II o CFGS, FP I o CFGM en especializaciones que permitan el desarrollo del puesto de delineante de"
+                               " conformidad con la normativa legal de aplicación al mismo (rama de Edificación y/o Obra civil)").titulaciones,
+                         ("fp-edificacion",))
+        req = T.lee("Doctor/a en Psicologia Clínica o afines.")
+        self.assertEqual((vias("Doctor/a en Psicologia Clínica o afines."), req.titulaciones, req.parcial),
+                         ("doctorado", ("psicologia",), ("sin leer: afines",)))
 
     def test_claves_y_expresiones(self):
         self.assertFalse(set(T.TITULACIONES) & set(T.FP_FAMILIAS))

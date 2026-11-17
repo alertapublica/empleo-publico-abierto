@@ -26,6 +26,12 @@ Lectura de la frase (`lee`), sobre el texto normalizado:
   habilitación o cualquier palabra de ALARMA sin leer dejan la lectura en parcial.
 - El MECES escrito tiene que casar con la vía (un grado solo con MECES 3, salvo los que lo son, o
   una licenciatura con MECES 2 delatan una lectura mala): si no casa, parcial.
+  Un «nivel 2 o 3» escrito para varias vías no se reparte (no dice cuál es cuál).
+- Menciones: ante la duda, ninguna (mejor no salir en un filtro que salir en uno que no toca). Una
+  clave cuenta si nombra la especialidad: al empezar su nombre o como complemento con «de» o «en»
+  («Cuidados de Enfermería»); no si es adjetivo de otro nombre («Química Industrial», «Física
+  Médica»), si va tras otra preposición o dentro de otra palabra, ni dentro de una condición
+  («que incluya…», «valorándose…», «o afines», hasta el final de su frase).
 No se calculan mínimos ni equivalencias: «Licenciatura» no se convierte en máster.
 
 Nada de esto se publica todavía. `python -m empleo.titulaciones informe [fuente…]` da el resumen por
@@ -82,6 +88,10 @@ class Requisito(NamedTuple):
 SIN_LECTOR = Requisito(NO_CONSTA, "sin_lector")
 
 # ------------------------------------------------------------------------- vocabulario universitario
+# (cada idioma va en su alternativa, pero todas se buscan en todos los textos: una excepción que solo
+# lleve la española la salta la catalana. «Arquitectura» no es «Arquitectura Naval» ni la «de Software»)
+_ARQ_ANTES = r"(?<!ingenieria de la )(?<!ingenieria de )(?<!ingenieria y )(?<!enginyeria i )(?<!enxenaria e )"
+_ARQ_DESPUES = r"(?! tecnic)(?! naval)(?! (de|del|de la|d'|da) (software|programari|sistemas|sistemes|soluciones|solucions|datos|dades|computadores|red|redes|xarxes|la informacion|informacio))"
 # clave: (nombre, {idioma: expresión}) sobre el texto normalizado (minúsculas, sin tildes ni «/a»).
 TITULACIONES = {
     "caminos": ("Ingeniería civil, de caminos y obras públicas", {
@@ -92,16 +102,16 @@ TITULACIONES = {
         "en": r"civil engineering"}),
     "industrial": ("Ingeniería industrial", {
         "es": r"\bindustrial\w*|tecnologias industriales|ingenieria (\w+ )?(mecanica|electrica|electronica|energetica|de la energia|de materiales|"
-              r"en automatica|nuclear|de organizacion)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial|"
+              r"en automatica|nuclear|de organizacion)(?! de (tele)?comunicaci)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial|"
               r"energias renovables",
-        "ca": r"\bindustrials?\b|enginyeria (mecanica|electrica|electronica|de l'energia|de materials)",
+        "ca": r"\bindustrials?\b|enginyeria (mecanica|electrica|electronica|de l'energia|de materials)(?! de (tele)?comunicaci)",
         "gl": r"enxenaria (mecanica|electrica|electronica|da enerxia)",
         "eu": r"industria ingeniaritza|ingeniaritza (mekaniko|elektriko|elektroniko)\w*",
         "en": r"(mechanical|electrical|industrial|electronic|energy|nuclear) engineering"}),
     "informatica": ("Informática y ciencia de datos", {
-        "es": r"informatic\w*|del software|computacion|computadores|sistemas de informacion(?! geografica)|ciencias? de (los )?datos|inteligencia artificial|"
+        "es": r"informatic\w*|\bsoftware\b|computacion|computadores|sistemas de informacion(?! geografica)|ciencias? de (los )?datos|inteligencia artificial|"
               r"ciberseguridad|sistemas de datos|tecnologias? de la informacion(?! geografica)|bioinformatic\w*",
-        "ca": r"informatic\w*|del programari|ciencia de dades",
+        "ca": r"informatic\w*|\bprogramari\b|ciencia de dades",
         "gl": r"informatic\w*|ciencia de datos",  # (sin «comunicacion», que es de otra clave)
         "eu": r"informatika\w*",
         "en": r"computer science|computer engineering|software engineering|computing|data science|bioinformatics"}),
@@ -112,9 +122,9 @@ TITULACIONES = {
         "eu": r"telekomunikazi\w*",
         "en": r"telecommunications?"}),
     "arquitectura": ("Arquitectura", {
-        "es": r"(?<!ingenieria de la )(?<!ingenieria de )(?<!ingenieria y )(?<!enginyeria i )\barquitect(ura|o|os)\b(?! tecnic)(?! (de|del) (software|sistemas|soluciones|datos|computadores|red|redes|la informacion))",
-        "ca": r"(?<!enginyeria i )\barquitect(ura|e|es)\b(?! tecnic)",
-        "gl": r"(?<!enxenaria e )(?<!enginyeria i )(?<!ingenieria y )\barquitectura\b(?! tecnica)",
+        "es": _ARQ_ANTES + r"\barquitect(ura|o|os)\b" + _ARQ_DESPUES,
+        "ca": _ARQ_ANTES + r"\barquitect(ura|e|es)\b" + _ARQ_DESPUES,
+        "gl": _ARQ_ANTES + r"\barquitectura\b" + _ARQ_DESPUES,
         "eu": r"arkitektura\b",
         "en": r"\barchitecture degree|degree in architecture"}),
     "arquitectura_tecnica": ("Arquitectura técnica y edificación", {
@@ -142,14 +152,14 @@ TITULACIONES = {
         "eu": r"aeroespazial\w*|aeronautika\w*",
         "en": r"aerospace|aeronautic\w*"}),
     "minas": ("Ingeniería de minas", {
-        "es": r"\bminas\b|\bminer[oa]s?\b|recursos mineros|ingenieria geologica",
+        "es": r"\bminas\b|\bminer[oa]s?\b|recursos mineros",
         "ca": r"\bmines\b|enginyeria minera",
         "gl": r"\bminas\b",
         "eu": r"meatz\w*",
         "en": r"mining engineering"}),
     "naval": ("Ingeniería naval y oceánica", {
-        "es": r"\bnaval\w*|\boceanic\w*|\bnautica\b|ingenieria maritima",
-        "ca": r"\bnaval\b|\bnautica\b",
+        "es": r"arquitectura naval|\bnaval\w*|\boceanic\w*|ingenieria maritima",  # «Náutica y Transporte Marítimo» es otro título
+        "ca": r"\bnaval\b",
         "gl": r"\bnaval\b",
         "eu": r"itsas ingeniaritza",
         "en": r"naval architecture|marine engineering"}),
@@ -166,25 +176,25 @@ TITULACIONES = {
         "eu": r"\bfisika\b",
         "en": r"\bphysics\b"}),
     "matematicas": ("Matemáticas y estadística", {
-        "es": r"matematic\w*|estadistic\w*",
+        "es": r"matematic\w*|\bestadistic\w*",
         "ca": r"matematiques|estadistica",
         "gl": r"matematicas|estatistica",
         "eu": r"matematika\w*|estatistika\w*",
         "en": r"mathematics|statistics|biostatistics"}),
     "biologia": ("Biología, bioquímica y biotecnología", {
-        "es": r"biolog\w*|bioquimic\w*|biotecnolog\w*|biomedic\w*|genetica|microbiolog\w*|ciencias de la vida|biosanitari\w*|ciencias del medio ambiente natural",
-        "ca": r"biolog\w*|bioquimica|biotecnolog\w*|biomedic\w*|ciencies de la vida",
-        "gl": r"bioloxi\w*|bioquimica|biotecnoloxi\w*|biomedic\w*",
+        "es": r"biolog\w*|bioquimic\w*|biotecnolog\w*|(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )biomedic\w*|genetica|microbiolog\w*|ciencias de la vida|biosanitari\w*|ciencias del medio ambiente natural",
+        "ca": r"biolog\w*|bioquimica|biotecnolog\w*|(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )biomedic\w*|ciencies de la vida",
+        "gl": r"bioloxi\w*|bioquimica|biotecnoloxi\w*|(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )biomedic\w*",
         "eu": r"biologia\w*|biokimika\w*|bioteknologia\w*",
-        "en": r"biology|biochemistry|biotechnology|life sciences?|\blife (or|and) health|biomedic\w*|biological sciences|biosciences|genetic\w*"}),
+        "en": r"biology|biochemistry|biotechnology|life sciences?|\blife (or|and) health|(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )biomedic\w*\b(?! engineering)|biological sciences|biosciences|genetic\w*"}),
     "ambientales": ("Ciencias ambientales", {
         "es": r"ciencias (medio)?ambientales|ciencias \w+ (o|y) (medio)?ambientales|ambientologia|ingenieria ambiental|medio ?ambiente",
         "ca": r"ciencies ambientals|enginyeria ambiental|medi ambient",
         "gl": r"ciencias ambientais|medio ambiente",
         "eu": r"ingurumen zientzi\w*",
         "en": r"environmental (science|engineering)"}),
-    "geologia": ("Geología", {
-        "es": r"geolog\w*", "ca": r"geolog\w*", "gl": r"xeolox\w*", "eu": r"geologia\w*", "en": r"geology"}),
+    "geologia": ("Geología", {  # «Ingeniería Geológica» es otro título (ni Geología ni Minas)
+        "es": r"(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )geolog\w*", "ca": r"(?<!ingenieria )(?<!enginyeria )(?<!enxenaria )geolog\w*", "gl": r"xeolox\w*", "eu": r"geologia\w*", "en": r"geology"}),
     "geografia": ("Geografía y ordenación del territorio", {
         "es": r"\bgeografia\b|ordenacion del territorio", "ca": r"\bgeografia\b", "gl": r"\bxeografia\b",
         "eu": r"geografia\w*", "en": r"geography"}),
@@ -227,7 +237,7 @@ TITULACIONES = {
         "eu": r"ekonomia\w*|enpresen administrazio\w*",
         "en": r"economics|business administration|\bmba\b|finance|accounting"}),
     "derecho": ("Derecho", {
-        "es": r"\bderecho\b|ciencias juridicas", "ca": r"\bdret\b", "gl": r"\bdereito\b", "eu": r"zuzenbide\w*",
+        "es": r"\bderecho\b|ciencias juridicas(?! de las administraciones)", "ca": r"\bdret\b", "gl": r"\bdereito\b", "eu": r"zuzenbide\w*",
         "en": r"\blaw\b|\bllb\b"}),
     "laborales": ("Relaciones laborales y recursos humanos", {
         "es": r"relaciones laborales|graduado social|recursos humanos|ciencias del trabajo",
@@ -487,7 +497,7 @@ PURO_INICIO = re.compile(rf"(?:{_CONECTOR}|\b(?:de|del)\b)*")  # al empezar la f
 ROTULO = re.compile(r"(?:\s|[():\-–]|\b(?:de|del|en|la|las|el|los|oficial(?:es)?)\b)*")
 ALARMA = re.compile(r"experiencia|experience|conocimientos|tarjetas?\b|\bcarne\b|certificad\w*|\bcursos?\b|\banos\b|\bmeses\b|valora\w*|"
                     r"preferent\w*|preferib\w*|deseable\w*|titulaci\w+|\btitulos?\b|equivalent\w*|acredit\w*|que incluya\w*|plan de estudios|"
-                    r"\bcon (?:la |una )?especialidad|\bminim[oa]s?\b")
+                    r"\bcon (?:la |una )?especialidad|\bminim[oa]s?\b|\bafin\w*|\bsimilar\w*|\banalog\w*")
 NEGACION = re.compile(r"\bno (?:estar|haber|poseer|tener|disponer|hallarse)\b|\bnot (?:hold|have|be)\b")
 PROFESION = re.compile(r"titulaci\w+ que (?:habilit\w+|d[ae]n? acceso)")  # nombra la profesión, no los títulos
 ESPECIALIDAD_DE = re.compile(r"\s*(?:en|de)\s+")
@@ -502,8 +512,14 @@ VACIAS = set("""de del la el los las lo en a al y e i con para por que su sus un
     profesional profesionales alguna algunas siguientes relacionado relacionada relacionados funciones puesto habilite habiliten
     habilitante profesion regulada nivel ruct incluida incluidas incluya plan planes materia requiera itinerario afin afines similar
     similares otras otros""".split())
+# y, además, las que pueden ir delante del nombre de una especialidad sin ser otra (`_cabeza`)
+DELANTE = VACIAS | set("""doble dobles titulo titulos carrera carreras disciplina disciplinas masteres tecnologia tecnologias
+    sistemas gestion direccion les els da do das dos in of the or an field fields related science sciences engineering enginyeria
+    ciencies enxenaria grau llicenciatura cc investigacion intervencion terapia terapias tratamiento tratamientos evaluacion
+    atencion cuidados analisis""".split())
 PARTE = re.compile(r"[,;/\n:().«»\"“”]|\s[-–]\s|\b(?:o|u)\b")
-CORTE = re.compile(ALARMA.pattern + r"|\bque\b")  # desde aquí el texto pone condiciones, no nombra especialidades
+CORTE = re.compile(rf"(?:{ALARMA.pattern}|\bque\b)[^().;\n]*")  # una condición, hasta el fin de su frase: no nombra especialidades
+PIEZA = re.compile(PARTE.pattern + r"|\b(?:y|e|i|and)\b|[+&]")  # nombres de una lista
 
 GENDER = re.compile(r"(?<=\w)\s?/\s?(?:a|as|o|os|ora|oras|ra|na|es)\b")
 ESO_LITERAL = re.compile(r"\bE\.?\s?S\.?\s?O\b\.?")
@@ -541,9 +557,11 @@ def _tokens(body: str) -> tuple[list[tuple[int, int, str, tuple[int, ...], str]]
     return sorted(tokens), body
 
 
-def _sumandos(vias: list[dict], text: str) -> list[dict]:
+def _sumandos(vias: list[dict], text: str) -> tuple[list[dict], bool]:
     """Vías a las que se suma un «+ Máster»: la anterior y, hacia atrás, las de primer ciclo que la
-    preceden seguidas («Diplomatura/Grado + Máster»). «Grado o Grado + Máster»: el primero va solo."""
+    preceden seguidas («Diplomatura/Grado + Máster»). «Grado o Grado + Máster»: el primero va solo.
+    Si entre dos títulos de primer ciclo hay especialidades y no una barra («Diplomatura en X o Grado +
+    Máster»), no se sabe si el máster va con los dos: se ata solo a los seguidos y se avisa (segundo valor)."""
     bound = [vias[-1]]
     for earlier in reversed(vias[:-1]):
         later = bound[-1]
@@ -553,20 +571,48 @@ def _sumandos(vias: list[dict], text: str) -> list[dict]:
             break
         if "/" not in between and any(earlier["palabra"] == b["palabra"] for b in bound):
             break
+        if "/" not in between and not PURO.fullmatch(between):
+            return bound, True
         bound.append(earlier)
-    return bound
+    return bound, False
 
 
-def _sin_clave(text: str) -> list[str]:
-    out = []
-    for part in PARTE.split(text):
-        words = re.findall(r"[a-z']+", part)
-        while words and words[0] in VACIAS:
-            words.pop(0)
-        while words and words[-1] in VACIAS:
-            words.pop()
-        if any(len(w) >= 4 and w not in VACIAS for w in words):
-            out.append(" ".join(words))
+def _cabeza(text: str, pos: int) -> bool:
+    """La coincidencia nombra la especialidad: empieza el nombre (delante, en su trozo de la lista, solo
+    hay palabras genéricas: «Ingeniería de …») o es su complemento con «de» o «en» («Cuidados de
+    Enfermería», «Redes de Telecomunicación»). No la nombra si es adjetivo de otro nombre («Química
+    Industrial», «Física Médica»), si va tras otra preposición («Bioinformática para las Ciencias de la
+    Salud») o si es media palabra («bioestadística»)."""
+    if pos and text[pos - 1].isalnum():
+        return False
+    words = re.findall(r"[a-z']+", PIEZA.split(text[:pos])[-1])
+    if all(w in DELANTE for w in words):
+        return True
+    while words and words[-1] in DELANTE and words[-1] not in PREPOSICIONES:  # «… en Ingeniería Industrial»
+        words.pop()
+    return not words or words[-1] in COMPLEMENTO
+
+
+COMPLEMENTO = {"de", "del", "en", "do", "da", "dos", "das", "in", "of"}  # «Cuidados de Enfermería»
+PREPOSICIONES = COMPLEMENTO | {"para", "por", "a", "al", "con", "segun", "como", "sin", "sobre", "entre", "per", "amb", "for", "with",
+                               "to", "on"}
+
+
+def _sin_clave(text: str, spans: list[tuple[int, int]]) -> list[str]:
+    """Nombres de la lista en los que no se ha reconocido ninguna clave (los que tienen alguna no
+    dejan restos: «Historia del Arte y Patrimonio», «Fundamentos de la Arquitectura»)."""
+    out, start = [], 0
+    for sep in [*PARTE.finditer(text), None]:
+        end = sep.start() if sep else len(text)
+        if not any(a < end and b > start for a, b in spans):
+            words = re.findall(r"[a-z']+", text[start:end])
+            while words and words[0] in VACIAS:
+                words.pop(0)
+            while words and words[-1] in VACIAS:
+                words.pop()
+            if any(len(w) >= 4 and w not in VACIAS for w in words):
+                out.append(" ".join(words))
+        start = sep.end() if sep else end
     return out
 
 
@@ -592,8 +638,9 @@ def lee(texto: str) -> Requisito:
         gap = text[prev_end:start]
         if tipo == "meces":
             if len(vias) > group:
-                for via in vias[group:]:
-                    via["meces"] = levels
+                if len(levels) == 1 or len(vias) - group == 1:  # «2 o 3» para varias vías no dice cuál es cuál
+                    for via in vias[group:]:
+                        via["meces"] = levels
                 group, pending = len(vias), ()
             else:
                 pending = levels
@@ -627,13 +674,16 @@ def lee(texto: str) -> Requisito:
         summed = bool(SUMA.search(gap)) and len(vias) > group
         prev_end, at_start = end, False
         if summed and tipo == "master":
-            for via in _sumandos(vias[group:], text):
+            bound, doubtful_sum = _sumandos(vias[group:], text)
+            for via in bound:
                 via["tipos"].append("master")
+            if doubtful_sum:
+                parcial.append("«+ Máster»: no se sabe a qué títulos se suma")
             continue
         if summed:
             parcial.append("suma sin leer")
         vias.append({"tipos": [tipo], "meces": (), "palabra": word, "ini": start, "fin": end, "k": len(titles) - 1})
-    for via in vias[group:] if pending else ():
+    for via in vias[group:] if pending and (len(pending) == 1 or len(vias) - group == 1) else ():
         via["meces"] = pending
 
     def segment(k: int) -> str:
@@ -655,13 +705,16 @@ def lee(texto: str) -> Requisito:
     for k, (start, end, tipo) in enumerate(titles):
         vocabulary = UNI_RX if tipo in UNIVERSITARIOS else FP_RX if tipo in DE_FP else {}
         if not general and source[start:end].startswith(("arquitect", "aparej", "aparell")):
-            found += [key for key in ("arquitectura_tecnica", "arquitectura") if UNI_RX[key].search(source[start:end])]
-        rest = segment(k)
-        for key, rx in vocabulary.items():
-            if rx.search(rest):
+            found += [key for key in ("arquitectura_tecnica", "arquitectura") if UNI_RX[key].match(source, start)]
+        named = _blank(CORTE, segment(k))
+        spans: list[tuple[int, int]] = []
+        for key, rx in vocabulary.items():  # sobre el texto entero, para que las excepciones vean lo que sigue
+            hits = [m.span() for m in rx.finditer(named) if not any(a < m.end() and m.start() < b for a, b in spans)
+                    and (vocabulary is FP_RX or _cabeza(named, m.start()))]  # (la FP nombra ciclos a medias)
+            if hits:
                 found.append(key)
-                rest = _blank(rx, rest)
-        missing += _sin_clave(CORTE.split(rest, maxsplit=1)[0]) if vocabulary else []
+                spans += hits
+        missing += _sin_clave(named, spans) if vocabulary else []
     for start, end, _ in titles:
         text = text[:start] + " " * (end - start) + text[end:]
     alarms = sorted(set(ALARMA.findall(text)))
@@ -674,7 +727,8 @@ def lee(texto: str) -> Requisito:
     if exp:
         if any(t not in ("meces", "ing_arq") for _, _, t, _, _ in _tokens(tail)[0]):
             parcial.append("títulos tras la experiencia")
-        out.append(Via(("experiencia",)))
+        if vias:  # sin título leído delante, no es una alternativa a él («Titulación o conocimientos equivalentes…»)
+            out.append(Via(("experiencia",)))
     return Requisito(CONSTA, exigido=texto, vias=tuple(dict.fromkeys(out)), titulaciones=tuple(dict.fromkeys(found)),
                      sin_clave=tuple(dict.fromkeys(missing)), parcial=tuple(dict.fromkeys(parcial)))
 
