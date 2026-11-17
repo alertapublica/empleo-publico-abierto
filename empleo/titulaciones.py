@@ -146,7 +146,7 @@ TITULACIONES = {
         "eu": r"nekazaritza\w*",
         "en": r"agronom\w*|agricultur\w*"}),
     "aeroespacial": ("Ingeniería aeroespacial y aeronáutica", {
-        "es": r"aeroespacial|aeronautic\w*|aeroportuari\w*|transporte aereo",
+        "es": r"aeroespacial|aeronautic\w*|sistemas del transporte aereo",  # «transporte aéreo» a secas es otro campo (SIIU 1041)
         "ca": r"aeroespacial|aeronautic\w*",
         "gl": r"aeroespacial|aeronautic\w*",
         "eu": r"aeroespazial\w*|aeronautika\w*",
@@ -270,19 +270,18 @@ TITULACIONES = {
         "gl": r"actividade fisica e (do )?deporte", "eu": r"jarduera fisiko\w*", "en": r"sports? science"}),
     # genéricas: solo si la ficha lo dice
     "cualquier_ingenieria": ("Cualquier ingeniería", {
-        "es": r"cualquier ingenieria|ingenieria (superior |tecnica )?(en |de )?cualquier (rama|especialidad)|otras ingenierias?\b(?! [a-z]{4,})|ingenierias? en general",
-        "ca": r"qualsevol enginyeria|enginyeria \(qualsevol especialitat\)|altres enginyeries",
+        "es": r"cualquier ingenieria|ingenieria (superior |tecnica )?(en |de )?cualquier (rama|especialidad)|ingenierias? en general",
+        "ca": r"qualsevol enginyeria|enginyeria \(qualsevol especialitat\)",
         "gl": r"calquera enxe\w*ria",
         "eu": r"edozein ingeniaritza",
-        "en": r"any engineering|other engineering"}),
+        "en": r"any engineering"}),
     "cualquier_universitaria": ("Cualquier titulación universitaria", {
         "es": r"cualquier (titulacion|grado|licenciatura|carrera)(?! equivalente)|(?<!ingenieria \()(?<!ingenieria en )(?<!ingenieria de )cualquier (rama|especialidad|area|disciplina)|"
-              r"otr[oa]s (estudios?|titulaciones|carreras|grados|licenciaturas|formaciones) universitari(?:os|as|o|a)\b(?!\s*[-–])(?!\s*equivalent)|"
-              r"titulacion universitaria de cualquier",
-        "ca": r"qualsevol (titulacio|grau|llicenciatura|ambit|branca)|altres (estudis|titulacions) universitari\w*",
+              r"titulacion universitaria de cualquier",  # «otros estudios universitarios» no dice «cualquiera»
+        "ca": r"qualsevol (titulacio|grau|llicenciatura|ambit|branca)",
         "gl": r"calquera (titulacion|grao)",
         "eu": r"edozein (titulazio|gradu)\w*",
-        "en": r"any (degree|discipline|field)|other academic backgrounds"}),
+        "en": r"any (degree|discipline|field)"}),
     "stem": ("Titulación científica o técnica (STEM)", {
         "es": r"\bstem\b|titulacion(es)? (cientific\w*|tecnic\w*)( o tecnic\w*)?|cientifico[- ]tecnic\w*|carreras? tecnic\w*",
         "ca": r"\bstem\b|cientificotecnic\w*|cientific[oa]-tecnic\w*",
@@ -363,7 +362,7 @@ _FP = {
     "fp-informatica": ("Informática y Comunicaciones", {
         "es": r"informatica y comunicaciones|\binformatic\w*", "ca": r"informatica i comunicacions|\binformatic\w*",
         "gl": r"informatica e comunicacions|\binformatic\w*", "eu": r"informatika eta komunikazio\w*", "en": r"\bcomputing|\bit\b"},
-        "sistemas informaticos|aplicaciones informaticas|aplicaciones multiplataforma|aplicaciones web|microinformaticos|\\basir\\b|\\bdaw\\b|\\bdam\\b|\\bsmr\\b"),
+        "sistemas informaticos|sistemas y redes|inteligencia artificial y big data|aplicaciones informaticas|aplicaciones multiplataforma|aplicaciones web|microinformaticos|\\basir\\b|\\bdaw\\b|\\bdam\\b|\\bsmr\\b"),
     "fp-instalacion-mantenimiento": ("Instalación y Mantenimiento", {
         "es": r"instalacion y mantenimiento|(?<!transporte y )\bmantenimiento\b(?! de vehiculos)", "ca": r"installacio i manteniment|\bmanteniment\b",
         "gl": r"instalacion e mantemento", "eu": r"instalazio eta mantentze\w*", "en": r"maintenance"},
@@ -494,6 +493,7 @@ SUMA = re.compile(r"(?:\+|\b(?:y|e|i|con|mas|and|plus)\b)\s*(?:un |una |el |an? 
 _CONECTOR = r"\s|[,/():\-–]|\b(?:o|u|superior(?:es)?|oficial(?:es)?)\b"
 PURO = re.compile(rf"(?:{_CONECTOR})*")  # entre dos títulos de una enumeración
 PURO_INICIO = re.compile(rf"(?:{_CONECTOR}|\b(?:de|del)\b)*")  # al empezar la frase o tras un rótulo
+PURO_ROTULO = re.compile(rf"(?:{_CONECTOR}|\b(?:de|del|en)\b)*")  # tras un rótulo genérico («Titulación universitaria en Ingeniería …»)
 ROTULO = re.compile(r"(?:\s|[():\-–]|\b(?:de|del|en|la|las|el|los|oficial(?:es)?)\b)*")
 ALARMA = re.compile(r"experiencia|experience|conocimientos|tarjetas?\b|\bcarne\b|certificad\w*|\bcursos?\b|\banos\b|\bmeses\b|valora\w*|"
                     r"preferent\w*|preferib\w*|deseable\w*|titulaci\w+|\btitulos?\b|equivalent\w*|acredit\w*|que incluya\w*|plan de estudios|"
@@ -634,6 +634,7 @@ def lee(texto: str) -> Requisito:
     titles: list[tuple[int, int, str]] = []  # títulos aceptados: el texto que sigue a cada uno son sus especialidades
     group, pending = 0, ()  # primera vía a la que se refiere la próxima marca de MECES; marca que va delante
     prev_end, at_start, doubtful = 0, True, False
+    after_label = False  # lo anterior es un rótulo genérico («titulación universitaria»)
     for i, (start, end, tipo, levels, word) in enumerate(tokens):
         gap = text[prev_end:start]
         if tipo == "meces":
@@ -644,12 +645,12 @@ def lee(texto: str) -> Requisito:
                 group, pending = len(vias), ()
             else:
                 pending = levels
-            prev_end, at_start = end, True
+            prev_end, at_start, after_label = end, True, False
             continue
         if tipo.endswith("*"):
             following = [t for t in tokens[i + 1:] if t[2] != "meces"]
             if following and ROTULO.fullmatch(text[end:following[0][0]]):  # rótulo del título que sigue
-                prev_end, at_start = end, True
+                prev_end, at_start, after_label = end, True, True
                 continue
             tipo = tipo[:-1]
         if tipo == "titulo_medio" and TECNICA.match(word) and titles and titles[-1][2] in ("grado", "master") \
@@ -665,14 +666,14 @@ def lee(texto: str) -> Requisito:
             elif ";" in gap:
                 is_title = bool(PURO_INICIO.fullmatch(gap.rsplit(";", 1)[1]))
             else:
-                is_title = bool((PURO_INICIO if at_start else PURO).fullmatch(gap))
+                is_title = bool((PURO_ROTULO if after_label else PURO_INICIO if at_start else PURO).fullmatch(gap))
             if not is_title:
                 doubtful = doubtful or bool(re.search(r"\b[ou]\s*$", gap))
                 continue  # especialidad: se queda en el texto
             tipo = "titulo_superior"
         titles.append((start, end, tipo))
         summed = bool(SUMA.search(gap)) and len(vias) > group
-        prev_end, at_start = end, False
+        prev_end, at_start, after_label = end, False, False
         if summed and tipo == "master":
             bound, doubtful_sum = _sumandos(vias[group:], text)
             for via in bound:

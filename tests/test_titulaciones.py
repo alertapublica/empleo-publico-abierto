@@ -233,8 +233,27 @@ class Vocabulario(unittest.TestCase):
 
     def test_alias_que_nombran_otro_titulo(self):
         for texto in ("Grado en Náutica y Transporte Marítimo", "Grado en Ciencias Jurídicas de las Administraciones Públicas",
-                      "Grado en Ingeniería Geológica", "Grado en Ingeniería Biomédica"):
+                      "Grado en Ingeniería Geológica", "Grado en Ingeniería Biomédica",
+                      "Grado en Gestión y Operaciones del Transporte Aéreo"):
             self.assertEqual(T.lee(texto).titulaciones, (), texto)
+        self.assertEqual(T.lee("Máster en Sistemas del Transporte Aéreo").titulaciones, ("aeroespacial",))
+
+    def test_otras_no_es_cualquiera(self):
+        # «otras ingenierías», «otros estudios universitarios»: la lista sigue abierta, no admite cualquiera
+        for texto in ("Grado en Derecho, Otras Ingenierías", "Grado en Derecho, otros estudios universitarios",
+                      "Grado en Derecho, Otras Formaciones Universitarias"):
+            self.assertEqual(T.lee(texto).titulaciones, ("derecho",), texto)
+        self.assertEqual(T.lee("Grado en cualquier ingeniería").titulaciones, ("cualquier_ingenieria",))
+
+    def test_ciclos_de_informatica(self):
+        for texto in ("Formación Profesional - Sistemas y Redes", "Formación Profesional en Inteligencia Artificial y Big Data"):
+            self.assertEqual(T.lee(texto).titulaciones, ("fp-informatica",), texto)
+
+    def test_ingenieria_tras_un_rotulo_generico_con_en(self):
+        req = T.lee("Titulación universitaria en Ingeniería Industrial o Grado en Ingeniería de Telecomunicación")
+        self.assertEqual(req.titulaciones, ("industrial", "teleco"))
+        # tras la marca MECES, «en Ingeniería …» sigue siendo la especialidad del título
+        self.assertEqual(T.lee("Grado (nivel 2 MECES) en Ingeniería Forestal").vias, (T.Via(("grado",), (2,)),))
 
     def test_las_condiciones_no_nombran_especialidades(self):
         self.assertEqual(T.lee("Grado en Biología con al menos 2 años de experiencia en el sector agrario").titulaciones, ("biologia",))
