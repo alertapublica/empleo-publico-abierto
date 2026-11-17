@@ -529,5 +529,57 @@
   "status": "open",
   "title": "PRODUCTOR/A-HUELVA",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693484.html"
+ },
+ "693646": {
+  "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693646.html",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Canal Sur Radio y Televisión, S.A.",
+  "contract": "Duración determinada- obra o servicio determinado",
+  "country": null,
+  "deadline": "2026-11-21",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T12:37:24+00:00",
+  "id": "andalucia:693646",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-21",
+  "location": "SAN JUAN DE AZNALFARACHE (Sevilla)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-16",
+  "ref": "693646",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p><strong>Tipo de convocatoria:</strong> Oferta genérica SAE</p><p><strong>Titulación oficial requerida:</strong> Grado Universitario/ Licenciatura e Ingenierías/ Diplomaturas e Ingenierías Técnicas</p><p><strong>Titulación específica requerida:</strong> GRADO COMUNICACIÓN AUDIOVISUAL o equivalente</p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p>REQUISITOS IMPRESCINDIBLES:</p>\n<p>En cumplimiento de lo dispuesto en el X Convenio Colectivo de la Agencia Pública Empresarial de la Radio y Televisión de Andalucía y su sociedad filial Canal Sur Radio y Televisión S.A. y conforme a lo establecido en el Reglamento de la Mesa de Contratación, los candidatos deberán reunir los requisitos de titulación y experiencia que se especifican a continuación:</p>\n<p>* ACREDITAR DOCUMENTALMENTE COMO MÍNIMO 1 AÑO DE EXPERIENCIA EN EL PUESTO DE TRABAJO. LA\nEXPERIENCIA SE ACREDITARA MEDIANTE CONTRATOS DE TRABAJO Y/O NOMINAS EN EL PUESTO REQUERIDO Y VIDA LABORAL</p>\n<p>* GRADO COMUNICACIÓN AUDIOVISUAL o equivalente</p>\n<p>O</p>\n<p>* GRADO EN PERIODISMO o equivalente</p>\n<p>REQUISITOS A VALORAR:</p>\n<p>Conocimientos prácticos de Gestión de recursos de producción: Unidades móviles,Plató,ENG/Mochilas\nOrganización de eventos audiovisuales en directo y grabados:Programas en Plató,Retransmisiones (Unidad Móvil, Equipos ligeros, Mochilas),Viajes Internacionales,Reportajes\nGestión y organización de equipos humanos:Unidades Móviles,Programas en plató,Coberturas de Informativos\nConocimientos prácticos en gestión económica y facturación:Elaboración de Presupuestos,Control de Presupuestos,Elaboración y Gestión de Facturas\nConocimientos en aspectos contractuales:Gestión de Derechos Audiovisuales,Contratación de Servicios ,Contratación Laboral Conocimientos prácticos en aplicaciones informáticas:SAP,R/3,Inews</p>\n<p>Para cualquier reclamación y/o queja relacionada con el proceso de selección, puede dirigirse al\ncorreo habilitado al efecto registrorrhh@rtva.es\nLa contratación definitiva tendrá lugar cuando se obtenga la autorización por parte de la Junta de Andalucía para la contratación temporal del puesto ofertado</p>",
+    "level": 2,
+    "title": "Otros requisitos"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.juntadeandalucia.es/sites/default/files/2026-11/Convocatoria%20puesto%20Productor_a-San%20Juan.pdf\">Convocatoria puesto Productor_a-San Juan</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases de la oferta"
+   }
+  ],
+  "source": "andalucia",
+  "source_title": null,
+  "status": "open",
+  "title": "PRODUCTOR/A -SAN JUAN DE AZNALFARACHE",
+  "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693646.html"
  }
 }
