@@ -100,10 +100,9 @@ TITULACIONES = {
         "gl": r"camins,? canles e portos|camiños|obras publicas",
         "eu": r"ingeniaritza zibil\w*",
         "en": r"civil engineering"}),
-    "industrial": ("Ingeniería industrial", {
+    "industrial": ("Ingenierías de la rama industrial", {  # mecánica, eléctrica, electrónica, energía…
         "es": r"\bindustrial\w*|tecnologias industriales|ingenieria (\w+ )?(mecanica|electrica|electronica|energetica|de la energia|de materiales|"
-              r"en automatica|nuclear|de organizacion)(?! de (tele)?comunicaci)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial|"
-              r"energias renovables",
+              r"en automatica|nuclear|de organizacion)(?! de (tele)?comunicaci)|mecanica|electrica\b|electronica industrial|automatica|\biti\b|organizacion industrial",  # «Energías Renovables» no es de la rama (SIIU 071301)
         "ca": r"\bindustrials?\b|enginyeria (mecanica|electrica|electronica|de l'energia|de materials)(?! de (tele)?comunicaci)",
         "gl": r"enxenaria (mecanica|electrica|electronica|da enerxia)",
         "eu": r"industria ingeniaritza|ingeniaritza (mekaniko|elektriko|elektroniko)\w*",
@@ -231,8 +230,8 @@ TITULACIONES = {
         "en": r"physiotherapy|health sciences?|\bhealth (or|and) \w+ sciences|nutrition"}),
     "economia": ("Economía, ADE y empresa", {
         "es": r"\beconomi\w*|\bade\b|administracion y direccion de empresas|empresariales|finanzas|contabilidad|actuarial|"
-              r"marketing|comercio internacional",
-        "ca": r"\beconomi\w*|administracio i direccio d'empreses|empresarials|finances|marqueting",
+              r"comercio internacional",
+        "ca": r"\beconomi\w*|administracio i direccio d'empreses|empresarials|finances",
         "gl": r"\beconomi\w*|administracion e direccion de empresas|empresariais",
         "eu": r"ekonomia\w*|enpresen administrazio\w*",
         "en": r"economics|business administration|\bmba\b|finance|accounting"}),
@@ -244,9 +243,16 @@ TITULACIONES = {
         "ca": r"relacions laborals|recursos humans", "gl": r"relacions laborais",
         "eu": r"lan harreman\w*", "en": r"human resources|labou?r relations"}),
     "comunicacion": ("Periodismo y comunicación", {
-        "es": r"periodismo|\bcomunicacion\b( audiovisual| digital| corporativa)?|publicidad|ciencias de la informacion|relaciones publicas",
-        "ca": r"periodisme|\bcomunicacio\b|publicitat", "gl": r"xornalismo|\bcomunicacion\b",
+        "es": r"periodismo|\bcomunicacion\b( audiovisual| digital| corporativa)?|ciencias de la informacion",
+        "ca": r"periodisme|\bcomunicacio\b", "gl": r"xornalismo|\bcomunicacion\b",
         "eu": r"kazetaritza\w*|komunikazio\w*", "en": r"journalism|communication"}),
+    "marketing_publicidad": ("Marketing, publicidad y relaciones públicas", {  # ISCED-F 0414
+        "es": r"marketing|publicidad|relaciones publicas", "ca": r"marqueting|publicitat|relacions publiques",
+        "gl": r"marketing|publicidade|relacions publicas", "eu": r"marketin\w*|publizitate\w*",
+        "en": r"marketing|advertising|public relations"}),
+    "politica": ("Ciencias políticas y gestión pública", {  # ISCED-F 0312
+        "es": r"ciencias? politicas?", "ca": r"ciencies politiques|ciencia politica", "gl": r"ciencias? politicas?",
+        "eu": r"zientzia politiko\w*", "en": r"political science"}),
     "humanidades": ("Humanidades, filología y traducción", {
         "es": r"filolog\w*|traduccion|interpretacion|humanidades|(grado|licenciatura|diplomatura) en historia|historia del arte|"
               r"bellas artes|(informacion y )?documentacion(?! sanitaria)(?=\W*$)|biblioteconomia|archivistica|filosofia|arqueologia|"
@@ -256,12 +262,12 @@ TITULACIONES = {
         "eu": r"filologia\w*|itzulpengintza\w*",
         "en": r"philology|translation|humanities|history|archaeology"}),
     "social": ("Trabajo social, educación y sociología", {
-        "es": r"trabajo social|educacion social|\bsociolog\w*|ciencias politicas|magisterio|maestro|pedagog\w*|"
+        "es": r"trabajo social|educacion social|\bsociolog\w*|magisterio|maestro|pedagog\w*|"
               r"ciencias de la educacion|antropologia|intervencion social",
         "ca": r"treball social|educacio social|sociolog\w*|magisteri|pedagog\w*",
         "gl": r"traballo social|educacion social|socioloxi\w*",
         "eu": r"gizarte lan\w*|soziologia\w*",
-        "en": r"social work|\bsociology|political science"}),
+        "en": r"social work|\bsociology"}),
     "turismo": ("Turismo", {
         "es": r"\bturismo\b", "ca": r"\bturisme\b|empreses turistiques", "gl": r"\bturismo\b", "eu": r"turismo\w*",
         "en": r"tourism"}),

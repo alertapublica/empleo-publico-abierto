@@ -245,6 +245,17 @@ class Vocabulario(unittest.TestCase):
             self.assertEqual(T.lee(texto).titulaciones, ("derecho",), texto)
         self.assertEqual(T.lee("Grado en cualquier ingeniería").titulaciones, ("cualquier_ingenieria",))
 
+    def test_politica_y_marketing_aparte(self):
+        # ISCED-F: Ciencia política (0312) y Marketing y publicidad (0414) no son sociología, economía ni periodismo
+        self.assertEqual(T.lee("Grado en Ciencias Políticas, Marketing y Publicidad, Relaciones Públicas").titulaciones,
+                         ("marketing_publicidad", "politica"))
+        self.assertEqual(T.lee("Grado en Ciencia Política y Gestión Pública").titulaciones, ("politica",))
+        self.assertEqual(T.lee("Grado en Comunicación Audiovisual y Publicidad").titulaciones, ("comunicacion", "marketing_publicidad"))
+
+    def test_renovables_no_es_rama_industrial(self):
+        self.assertEqual(T.lee("Ingeniería de Energías Renovables").titulaciones, ())
+        self.assertEqual(T.lee("Grado en Ingeniería Mecánica").titulaciones, ("industrial",))
+
     def test_ingenieria_en_cualquier_especialidad(self):
         # «Ingeniería» es el título y se queda fuera del texto de especialidades: no es «cualquier titulación»
         for texto in ("Ingeniería en cualquier especialidad", "Ingeniería Superior de cualquier rama",
