@@ -23,7 +23,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "959",
@@ -90,7 +90,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "960",
@@ -157,7 +157,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "961",
@@ -224,7 +224,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "962",
@@ -291,7 +291,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "963",
@@ -358,7 +358,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "964",
@@ -400,5 +400,139 @@
   "status": "open",
   "title": "Titulado/a Graduado/a I",
   "url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/964"
+ },
+ "965": {
+  "apply_url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/965",
+  "category": null,
+  "closed_at": null,
+  "code": "108/2026",
+  "company": "Fundación Instituto de Investigación Sanitaria de Santiago de Compostela",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-26",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T11:37:37+00:00",
+  "id": "idis:965",
+  "kind": null,
+  "listed_deadline": "2026-11-26",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "965",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2 4 Titulado/a Graduado/a II</p><p>- TITULACIÓN REQUERIDA: Estar en posesión de un título de Grado universitario de menos de 300 ETCS en el ámbito de las Ciencias o Ciencias de la Salud.</p><p>- PROYECTO: Automatización de Informes Clínicos con IA Generativa: Proyecto Piloto y Hoja de Ruta para su Implantación en la Sanidad Española. Expediente:FCT-25-22742</p>",
+    "level": 2,
+    "title": "Oferta de empleo"
+   },
+   {
+    "html": "<p>- Contrato indefinido de actividades científico-técnicas a jornada parcial e 26 horas semanales (Lunes a jueves de 9:00h a 15:30h) Salario bruto anual: 16.470,19€</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>Accede a las BASES para conocer el ANEXO I, donde se detalla el baremo de valoración de méritos</p><p>IMPORTANTE: El Tribunal valorará los méritos acreditados documentalmente en el momento de la inscripción.</p><p>Una vez publicado el Baremo provisional se abre un plazo de dos días para alegaciones, el cual tiene por objeto solicitar la revisión de la valoración realizada por el Tribunal sobre los méritos y documentación aportados dentro del plazo de presentación de candidaturas, sin constituir un nuevo plazo para ampliar o completar la información presentada inicialmente.</p>\n<p>*Para poder valorar los Méritos se debe adjuntar la documentación que los acredite</p>",
+    "level": 2,
+    "title": "Méritos"
+   },
+   {
+    "html": "<p>De acuerdo al punto 3.1 b de las bases de la convocatoria, las TITULACIONES REQUERIDAS se tendrán que poder verificar.</p><p>La verificación deberá ser a través de un Código Seguro de Verificación (CSV), para lo cual las posibles formas serían:</p><p>•\tPresentar el documento con Código Seguro de Verificación (CSV) o Código de Verificación Electrónica (CVE)</p><p>•\tPresentar el documento obtenido a través de Mi Carpeta Ciudadana</p><p>•\tAportando una copia compulsada del título.</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p>Proyecto FCT-25-22742 financiado con fondos de la Fundación Española para la Ciencia y la Tecnología, F.S.P. - Ministerio de Ciencia, Innovación y Universidades en el marco de la convocatoria “Fomento de la cultura de la innovación pública 2025”.</p>\r\n\r\n<p>Grupo de investigación: 060 – Grupo de Hematología Computacional y Genómica</p>\r\n\r\n<p>Ubicación del puesto: Hematología. Banco de Sangre, planta -3. Hospital Clínico Universitario</p>",
+    "level": 2,
+    "title": "Otros datos"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.idisantiago.es/file/ofertatrabajo/965/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idis",
+  "source_title": "1.2 4 Titulado/a Graduado/a II",
+  "status": "open",
+  "title": "Titulado/a Graduado/a II · Automatización de Informes Clínicos con IA Generativa: Proyecto Piloto y Hoja de Ruta para su Implantación en la Sanidad Española. Expediente:FCT-25-22742",
+  "url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/965"
+ },
+ "966": {
+  "apply_url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/966",
+  "category": null,
+  "closed_at": null,
+  "code": "109/2026",
+  "company": "Fundación Instituto de Investigación Sanitaria de Santiago de Compostela",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-26",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T11:37:37+00:00",
+  "id": "idis:966",
+  "kind": null,
+  "listed_deadline": "2026-11-26",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "966",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2.3 Titulado/a graduado/a I</p><p>- TITULACIÓN REQUERIDA: Estar en posesión de un título universitario de Licenciatura, de un título de Grado universitario de más de 300 créditos ECTS o de un título de Grado universitario de hasta 300 créditos ECTS o de Diplomatura universitaria, estos dos últimos complementados con un título oficial de Máster universitario en la rama de Ciencias o de Ciencias de la Salud.</p><p>- Realización de actividades científico-técnicas (ver funciones en las BASES)</p>",
+    "level": 2,
+    "title": "Oferta de empleo"
+   },
+   {
+    "html": "<p>- Contrato indefinido de actividades científico-técnicas a jornada completa. Salario bruto anual estimado: 27.546,91€ calculado conforme al presupuesto disponible para la contratación y sujeto a posibles ajustes derivados de los costes laborales aplicables en la fecha de formalización del contrato.</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>Accede a las BASES para conocer el ANEXO I, donde se detalla el baremo de valoración de méritos</p><p>IMPORTANTE: El Tribunal valorará los méritos acreditados documentalmente en el momento de la inscripción.</p><p>Una vez publicado el Baremo provisional se abre un plazo de dos días para alegaciones, el cual tiene por objeto solicitar la revisión de la valoración realizada por el Tribunal sobre los méritos y documentación aportados dentro del plazo de presentación de candidaturas, sin constituir un nuevo plazo para ampliar o completar la información presentada inicialmente.</p>\n<p>*Para poder valorar los Méritos se debe adjuntar la documentación que los acredite</p>",
+    "level": 2,
+    "title": "Méritos"
+   },
+   {
+    "html": "<p>De acuerdo al punto 3.1 b de las bases de la convocatoria, las TITULACIONES REQUERIDAS se tendrán que poder verificar.</p><p>La verificación deberá ser a través de un Código Seguro de Verificación (CSV), para lo cual las posibles formas serían:</p><p>•\tPresentar el documento con Código Seguro de Verificación (CSV) o Código de Verificación Electrónica (CVE)</p><p>•\tPresentar el documento obtenido a través de Mi Carpeta Ciudadana</p><p>•\tAportando una copia compulsada del título.</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p>Proyecto financiado por el Instituto de Salud Carlos III (ISCIII), a través de la ayuda CP25/00066 y cofinanciado por la Unión Europea</p>\r\n\r\n<p>Grupo de investigación: C012-Metabolopatías</p>\r\n\r\n<p>Ubicación del puesto: Laboratorio de Metabolopatías del IDIS</p>",
+    "level": 2,
+    "title": "Otros datos"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.idisantiago.es/file/ofertatrabajo/966/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idis",
+  "source_title": "1.2.3 Titulado/a graduado/a I",
+  "status": "open",
+  "title": "Titulado/a graduado/a I",
+  "url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/966"
  }
 }
