@@ -3,6 +3,7 @@ import unittest
 from empleo import titulaciones as T
 from empleo.sources import ACTIVE
 from empleo.sources.ciber import CiberSource
+from empleo.sources.ineco import InecoSource
 from empleo.sources.tragsa import TragsaSource
 
 H = " (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)"
@@ -282,8 +283,54 @@ class Fuentes(unittest.TestCase):
         req = CiberSource().titulacion(oferta)
         self.assertEqual((req.vias, req.titulaciones), ((T.Via(("doctorado",)),), ("medicina",)))
 
+    def ineco(self, requisitos: str) -> T.Requisito:
+        html = "<p>" + "<br/>".join(requisitos.split("\n")) + "</p>"
+        return InecoSource().titulacion({"sections": [seccion("Funciones", 2, "<p>Obras</p>"), seccion("Requisitos", 2, html)]})
+
+    def test_ineco_renglon_titulacion_hasta_el_siguiente_rotulo(self):
+        req = self.ineco("Experiencia en: obra ferroviaria\nTitulación: Licenciatura en Biología, Licenciatura en Geología.\n"
+                         "Programas: MS Word - Usuario")
+        self.assertEqual(req.exigido, "Licenciatura en Biología, Licenciatura en Geología.")
+        self.assertEqual(req.titulaciones, ("biologia", "geologia"))
+        # en el mismo renglón que otro rótulo, o cortado por «//» o por «Programas:»
+        self.assertEqual(self.ineco("- Años de experiencia: Más de 5 años. Titulación: Grado en Ingeniería Informática - Otros.").exigido,
+                         "Grado en Ingeniería Informática - Otros.")
+        self.assertEqual(self.ineco("Experiencia en: X // Titulación: Grado en Ingeniería Civil //").exigido, "Grado en Ingeniería Civil")
+        self.assertEqual(self.ineco("Titulación: Grado en Ingeniería Mecánica  Programas: MS Word").exigido, "Grado en Ingeniería Mecánica")
+
+    def test_ineco_lista_debajo_del_rotulo(self):
+        # con otra viñeta que la del rótulo: es la lista; con la misma, otro requisito
+        req = self.ineco("*Años de experiencia: 2\n*Titulación:\n- Ingeniería de Montes\n- Licenciatura en Ciencias Ambientales\n"
+                         "*Programas:\n- MS Word")
+        self.assertEqual(req.exigido, "Ingeniería de Montes\nLicenciatura en Ciencias Ambientales")
+        self.assertEqual(self.ineco("- Titulación: Formación Profesional, Otros.\n- Se requieren más de 5 años de experiencia.").exigido,
+                         "Formación Profesional, Otros.")
+        self.assertEqual(self.ineco("Titulación:\nIngeniero de Caminos, Canales y Puertos.\nOffice").exigido,
+                         "Ingeniero de Caminos, Canales y Puertos.")
+        # renglón suelto sin viñeta tras el valor: no se sabe si sigue la lista
+        self.assertEqual(self.ineco("Titulación: Ingeniería Informática\nFormación Profesional en Informática.").exigido,
+                         "Ingeniería Informática")
+
+    def test_ineco_rotulos_de_rama_del_formulario_no_nombran(self):
+        req = self.ineco("Titulación: Aeronáutica - Master en Ingeniería,Otros estudios universitarios - Licenciatura en Derecho")
+        self.assertEqual(req.exigido, "Aeronáutica - Master en Ingeniería,Otros estudios universitarios - Licenciatura en Derecho")  # literal
+        self.assertEqual(req.titulaciones, ("derecho",))
+        self.assertEqual(self.ineco("Titulación: Industria Ingeniería Industrial , Máster en Ingeniería Industrial").titulaciones,
+                         ("industrial",))
+        self.assertEqual(self.ineco("Titulación: Informática, Ingeniería Informática.").titulaciones, ("informatica",))
+
+    def test_ineco_sin_rotulo(self):
+        self.assertEqual(self.ineco("- Grado en Ingeniería Aeroespacial o Grado en Física\n- Al menos 1 año de experiencia").exigido,
+                         "Grado en Ingeniería Aeroespacial o Grado en Física")
+        self.assertEqual(self.ineco("- Titulación de Ingeniería Técnica Industrial, con especialización en Mecánica.").exigido,
+                         "Titulación de Ingeniería Técnica Industrial, con especialización en Mecánica.")
+        self.assertEqual(self.ineco("- Experiencia en laboratorio\n- Acreditación nivel 2"), T.Requisito(T.NO_CONSTA, "sin_apartado"))
+        self.assertEqual(self.ineco("*Titulación:\n- Titulación no exigida, valorable formación universitaria en Ingeniería Civil").estado,
+                         T.NO_EXIGIDA)
+        self.assertEqual(InecoSource().titulacion({"sections": []}), T.Requisito(T.NO_CONSTA, "sin_ficha"))
+
     def test_sin_lector_no_consta(self):
-        sin_lector = [s for s in ACTIVE if s.id not in ("tragsa", "ciber")]
+        sin_lector = [s for s in ACTIVE if s.id not in ("tragsa", "ciber", "ineco")]
         self.assertTrue(sin_lector)
         for source in sin_lector:
             self.assertIs(source.titulacion({"sections": [seccion("Titulación", 2, "<p>Grado en Derecho</p>")]}), T.SIN_LECTOR)
