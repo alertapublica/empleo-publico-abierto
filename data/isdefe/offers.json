@@ -77,6 +77,48 @@
   "title": "Ingeniero/a de operaciones de Sistemas GNSS Seguros",
   "url": "https://seleccionisdefe.es/convocatoria-2610"
  },
+ "2611": {
+  "apply_url": "https://seleccionisdefe.es/registro-2611",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00285 (2)",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "country": null,
+  "deadline": "2026-11-23",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T09:07:45+00:00",
+  "id": "isdefe:2611",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-23",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-07-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-17",
+  "ref": "2611",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Consultor/a para la Transformación Digital del ET</strong></p><p><strong>Titulaciones </strong></p><p>Titulaciones universitarias STEM.</p><p><strong>Funciones habituales:</strong></p><p>-.Apoyo en la elaboración y difusión de propuestas, planes, iniciativas de mejora y automatización de procesos<br/>\r\n- Participación en seminarios y reuniones de Grupos de Trabajo nacionales e internacionales en el ámbito de la TD del ET.<br/>\r\n- Colaboración en la toma de requisitos y elaboración de especificaciones técnico-operativas. Elaboración de pliegos de prescripciones técnicas conforme a la LCSP.<br/>\r\n- Apoyo técnico en la colaboración con Universidades y proveedores tecnológicos, en actividades de innovación tecnológica y participación del ET en Grupos de investigación relacionados con la TD</p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Tener experiencia en actividades relacionadas con la descripción del puesto</p><p>Inglés. TOIEC superior 700 (reading, listening, reading)</p><p>De 5 a 12 años de experiencia laboral total.</p><p>Ofimática y herramientas colaborativas a nivel usuario, que estén relacionadas con los conocimientos específicos</p><p><strong>Requisitos Valorables</strong></p><p>Se valorará experiencia en técnologías para el gobierno del dato, interoperabilidad de sistemas TIC, Big<br/>\r\nData, IA, etc.</p><p>Gobernanza del Dato, Gestión por Procesos</p><p>SE OFRECE CONTRATO INDEFINIDO</p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.<br/>\r\nExcepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.<br/>\r\nEl personal interno se regirá por la política de la empresa).</em></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Consultor/a para la Transformación Digital del ET(2026-T00285) (2)",
+  "status": "open",
+  "title": "Consultor/a para la Transformación Digital del ET",
+  "url": "https://seleccionisdefe.es/convocatoria-2611"
+ },
  "2612": {
   "apply_url": "https://seleccionisdefe.es/registro-2612",
   "category": null,
