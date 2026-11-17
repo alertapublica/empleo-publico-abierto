@@ -318,12 +318,26 @@ class Fuentes(unittest.TestCase):
         self.assertEqual(self.ineco("Titulación: Industria Ingeniería Industrial , Máster en Ingeniería Industrial").titulaciones,
                          ("industrial",))
         self.assertEqual(self.ineco("Titulación: Informática, Ingeniería Informática.").titulaciones, ("informatica",))
+        # tras un título, la misma palabra es su especialidad
+        self.assertEqual(self.ineco("Titulación: Grado en Ingeniería Civil, Telecomunicaciones.").titulaciones, ("caminos", "teleco"))
+
+    def test_ineco_lo_valorable_y_otros_rotulos_no_son_exigido(self):
+        self.assertEqual(self.ineco("Titulación: Grado en Ingeniería Civil. Valorable Máster en Informática").exigido,
+                         "Grado en Ingeniería Civil.")
+        self.assertEqual(self.ineco("Valorable formación: Grado en Informática"), T.Requisito(T.NO_CONSTA, "sin_apartado"))
+        self.assertEqual(self.ineco("Titulación:\nProgramas: Máster en Informática"), T.Requisito(T.NO_CONSTA, "sin_apartado"))
+        self.assertEqual(self.ineco("Titulación: Grado en Ingeniería Civil idiomas: Grado en Informática").exigido,
+                         "Grado en Ingeniería Civil")
+        self.assertEqual(self.ineco("*Titulación:\n- Grado en Derecho\n- Valorable Máster en Informática").exigido, "Grado en Derecho")
 
     def test_ineco_sin_rotulo(self):
         self.assertEqual(self.ineco("- Grado en Ingeniería Aeroespacial o Grado en Física\n- Al menos 1 año de experiencia").exigido,
                          "Grado en Ingeniería Aeroespacial o Grado en Física")
         self.assertEqual(self.ineco("- Titulación de Ingeniería Técnica Industrial, con especialización en Mecánica.").exigido,
                          "Titulación de Ingeniería Técnica Industrial, con especialización en Mecánica.")
+        self.assertEqual(self.ineco("- Grado en Informática\n- Grado en Derecho").titulaciones, ("informatica", "derecho"))
+        self.assertEqual(self.ineco("- Profesional con titulación universitaria de Licenciatura, Ingeniería Civil o disciplinas afines.")
+                         .titulaciones, ("caminos",))
         self.assertEqual(self.ineco("- Experiencia en laboratorio\n- Acreditación nivel 2"), T.Requisito(T.NO_CONSTA, "sin_apartado"))
         self.assertEqual(self.ineco("*Titulación:\n- Titulación no exigida, valorable formación universitaria en Ingeniería Civil").estado,
                          T.NO_EXIGIDA)
