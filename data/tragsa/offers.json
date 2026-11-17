@@ -4279,6 +4279,103 @@
   "title": "Analista Proyectos Estadísticos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=57838"
  },
+ "57859": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57859",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57859",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-25",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Sistemas",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T15:07:30+00:00",
+  "id": "tragsa:57859",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-25",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-14",
+  "ref": "57859",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Administrador/a de Base de Datos SQL Server y SharePoint para un importante proyecto de la administración pública en la Comunidad de Madrid.<br/><br/>En relación al proceso publicado el pasado 14/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión y administración de los entornos Microsoft SharePoint.</li><li>Gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server.</li><li>Detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint.</li><li>Realización de pruebas de concepto para valorar nuevas funcionalidades requeridas.</li><li>Elaboración de procedimientos y manuales de operación.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en realización de pruebas de concepto para valorar nuevas funcionalidades requeridas (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Al menos 2 años de experiencia en elaboración de procedimientos y manuales de operación (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li><li>Al menos 2 años de experiencia en realización de pruebas de concepto para valorar nuevas funcionalidades requeridas (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Al menos 2 años de experiencia en elaboración de procedimientos y manuales de operación (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en Microsoft SharePoint</li></ul>Experiencia Previa<ul><li>Desde 3 años Hasta 10 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 10 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 10 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en Microsoft SharePoint</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en Microsoft SharePoint</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 años Hasta 10 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 10 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 10 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada Laboral Completa de 37,5 h semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>En relación al proceso publicado el pasado 14/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrador/a de Base de Datos SQL Server y SharePoint (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=57859"
+ },
  "57860": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57860",
   "category": "Específica",
@@ -7956,6 +8053,103 @@
   "status": "closed",
   "title": "Diplomado/a en Biblioteconomía o Graduado/a Universitario/a en Información y Documentación - Registro de Aguas (Zaragoza)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58154"
+ },
+ "58162": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58162",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58162",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Valencia MENRRED",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T15:07:30+00:00",
+  "id": "tragsa:58162",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Provincia Valencia",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-14",
+  "ref": "58162",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a Técnico/a o Graduado/a en ramas de Ingeniería  – Obras e Infraestructuras  Menrred Caminos (Provincia Valencia) en València/Valencia. En relación al proceso publicado el pasado 14/10/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 01/12/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: Paterna con desplazamientos en la Provincia de Valencia.</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo en el control de costes.</li><li>Redacción de memorias vinculadas a la Gerencia.</li><li>Participar en la planificación y programación de las actuaciones y obras , garantizando el cumplimiento de la normativa de calidad, seguridad y medio ambiente vigente.</li><li>Colaborar en las tareas de seguimiento y control de la obra, así como participar en la elaboración de los Planes de Seguridad y Salud.</li><li>Apoyo en la gestión del personal y/o equipos a su cargo.</li><li>Redacción de proyectos asociados a las obras de la Gerencia.</li><li>Realizar los trámites administrativos, incidencias y/u otras situaciones derivadas del planteamiento y ejecución de la actuación.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación universitaria acorde a ingeniería Técnica, o dentro del Plan Bolonia, Grado en ingeniería (Correspondiente a 2 MECES). (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor. (A efectos de acreditar dicho permiso, deberá aportarse copia o justificante en la solicitud).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación universitaria acorde a ingeniería Técnica, o dentro del Plan Bolonia, Grado en ingeniería (Correspondiente a 2 MECES). (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación universitaria acorde a ingeniería Técnica, o dentro del Plan Bolonia, Grado en ingeniería (Correspondiente a 2 MECES). (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor. (A efectos de acreditar dicho permiso, deberá aportarse copia o justificante en la solicitud).</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación relacionada con Prevención de Riesgos Laborales (A efectos de acreditar dicho curso, deberá aportarse justificante en la solicitud).</li><li>Formación relacionada con Obra Civil, Obra Pública, Edificación (A efectos de acreditar dicha formación, deberá aportarse justificante en la solicitud).</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 1 año de experiencia en obras del sector construcción desarrollando obras de tipo pública o civil. Experiencia con Contrato Laboral. (Es necesario que adjunte informe de vida laboral\ny/o contrato trabajo que permita acreditar la experiencia laboral).</li><li>Desde 6 meses Hasta 1 año de experiencia en haber llevado certificaciones y control de costes. (Es necesario que deba adjuntar informe vida laboral y/o contrato Laboral que permita acreditar dicha experiencia laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en haber redactado memorias valoradas. Experiencia con Contrato Laboral. (Es necesario que deba adjuntar informe vida laboral y/o contrato Laboral que\npermita acreditar dicha experiencia laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación relacionada con Prevención de Riesgos Laborales (A efectos de acreditar dicho curso, deberá aportarse justificante en la solicitud).</li><li>Formación relacionada con Obra Civil, Obra Pública, Edificación (A efectos de acreditar dicha formación, deberá aportarse justificante en la solicitud).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación relacionada con Prevención de Riesgos Laborales (A efectos de acreditar dicho curso, deberá aportarse justificante en la solicitud).</li><li>Formación relacionada con Obra Civil, Obra Pública, Edificación (A efectos de acreditar dicha formación, deberá aportarse justificante en la solicitud).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 1 año de experiencia en obras del sector construcción desarrollando obras de tipo pública o civil. Experiencia con Contrato Laboral. (Es necesario que adjunte informe de vida laboral\ny/o contrato trabajo que permita acreditar la experiencia laboral).</li><li>Desde 6 meses Hasta 1 año de experiencia en haber llevado certificaciones y control de costes. (Es necesario que deba adjuntar informe vida laboral y/o contrato Laboral que permita acreditar dicha experiencia laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en haber redactado memorias valoradas. Experiencia con Contrato Laboral. (Es necesario que deba adjuntar informe vida laboral y/o contrato Laboral que\npermita acreditar dicha experiencia laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>- Se ofrece contrato de duración determinada estimada de 3 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede. <br/><br/>- Jornada Completa: 37,5 Horas/Semana. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a Técnico/a o Graduado/a en ramas de Ingeniería – Obras e Infraestructuras Menrred Caminos (Provincia Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58162"
  },
  "58167": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58167",
@@ -25185,6 +25379,108 @@
   "title": "Ingeniero/a Montes - Especialista Restauración Forestal y Medioambiental (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58655"
  },
+ "58656": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58656",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58656",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Barcelona",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T15:07:30+00:00",
+  "id": "tragsa:58656",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Barcelona",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-17",
+  "ref": "58656",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Ingenieros/as o Graduados/as + Máster Oficial en Ingeniería – Expedientes Instalaciones Energías Renovables en Barcelona.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Barcelona</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Análisis y estudio de la documentación y estado de expedientes de instalaciones eólicas, fotovoltaicas y de instalaciones de almacenamiento.</li><li>Informes sobre la priorización de expedientes según el estado de cada uno.</li><li>Revisión y análisis técnico de información de los expedientes.</li><li>Elaboración de informes finales de cada uno de los expedientes, que incluirá los antecedentes y la tramitación realizada.</li><li>Cualquier otra función análoga que se pueda requerir en el marco del encargo, relativas a la tramitación de los expedientes de instalaciones eólicas y fotovoltaicas y de instalaciones de almacenamiento.</li><li>Elaboración del borrador de la propuesta de resolución.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Ingeniería o Grado en Ingeniería + Máster Universitario del ámbito de Ingeniería (nivel 3 MECES) (que incluya en el plan de estudios al menos una materia del ámbito de electricidad, energía y/o instalaciones), titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades.</li></ul>Otros Requisitos Imprescindibles<ul><li>Conocimientos de Catalán y/o Valenciano, Nivel Mínimo B1 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Ingeniería o Grado en Ingeniería + Máster Universitario del ámbito de Ingeniería (nivel 3 MECES) (que incluya en el plan de estudios al menos una materia del ámbito de electricidad, energía y/o instalaciones), titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Ingeniería o Grado en Ingeniería + Máster Universitario del ámbito de Ingeniería (nivel 3 MECES) (que incluya en el plan de estudios al menos una materia del ámbito de electricidad, energía y/o instalaciones), titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Conocimientos de Catalán y/o Valenciano, Nivel Mínimo B1 (el nivel será verificado durante el transcurso del proceso de Selección).</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación y/o Cursos en Instalaciones de Energías Renovables o Infraestructuras Eléctricas</li></ul>Idiomas<ul><li>Catalán Nivel: B2</li></ul>Experiencia Previa<ul><li>Desde 1 día Hasta 1 año de experiencia en trabajos relacionados con fuentes de energía renovables (académica y/o con contrato laboral)</li><li>Desde 1 día Hasta 1 año de experiencia en tramitación de expedientes (académica y/o con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación y/o Cursos en Instalaciones de Energías Renovables o Infraestructuras Eléctricas</li></ul>Idiomas<ul><li>Catalán Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación y/o Cursos en Instalaciones de Energías Renovables o Infraestructuras Eléctricas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Catalán Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Desde 1 día Hasta 1 año de experiencia en trabajos relacionados con fuentes de energía renovables (académica y/o con contrato laboral)</li><li>Desde 1 día Hasta 1 año de experiencia en tramitación de expedientes (académica y/o con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE: <br/><br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/><br/>- Jornada Laboral completa (37,5h)<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingenieros/as o Graduados/as + Máster Oficial en Ingeniería – Expedientes Instalaciones Energías Renovables (Barcelona)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58656"
+ },
  "58657": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58657",
   "category": "Específica",
@@ -29075,6 +29371,108 @@
   "status": "open",
   "title": "Técnico/a - Trabajos de regulación catastral (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58808"
+ },
+ "58809": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58809",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58809",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Ávila",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-17T15:07:30+00:00",
+  "id": "tragsa:58809",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Ávila",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Ávila",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58809",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Administrativo/a para dar apoyo en el servicio de prevención y extinción de incendios en Ávila.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Ávila</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo a la gestión del programa SIDO 2</li><li>Manejo de paquete office</li><li>Tramitación de documentos relativos a incendios forestales</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>Formación Complementaria<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>Formación Complementaria<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120hs</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>igual o superior a 2000 horas en rama administrativa</li></ul>Experiencia Previa<ul><li>Desde 1 día Hasta 2 años de experiencia en tareas administrativas (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>Otros Factores Meritorios<ul><li>Manejo de aplicaciones de gestión de bases de datos (acreditable a través de formaciones y/o experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>igual o superior a 2000 horas en rama administrativa</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>igual o superior a 2000 horas en rama administrativa</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 día Hasta 2 años de experiencia en tareas administrativas (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo de aplicaciones de gestión de bases de datos (acreditable a través de formaciones y/o experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 01/12/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece: Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede. <br/><br/>Jornada completa.<br/><br/>Horario en turnos de Lunes a Domingo, con los descansos establecidos.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a_Incendios (Ávila)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58809"
  },
  "58838": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58838",

@@ -1350,5 +1350,47 @@
   "status": "open",
   "title": "Consultor/a de apoyo a la SETID en seguridad digital",
   "url": "https://seleccionisdefe.es/convocatoria-2643"
+ },
+ "2644": {
+  "apply_url": "https://seleccionisdefe.es/registro-2644",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00064 (9)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-23",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T15:07:30+00:00",
+  "id": "isdefe:2644",
+  "kind": null,
+  "listed_deadline": "2026-11-23",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-17",
+  "ref": "2644",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Ingeniero/a Navegación Aérea.</strong></p><p><strong>Titulaciones </strong></p><p>Ingeniería aeronáutica.</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>\n<p>La persona seleccionada participará en la supervisión de la seguridad operacional en navegación aérea, prestando servicios de consultoría a la Dirección de Navegación Aérea (DNA) de Agencia Estatal de Seguridad Aérea (AESA). Participará en las siguientes materias:</p>\n<p>- Supervisión en el ámbito diseño de Espacio Aéreo (ASD/FPD).</p>\n<p>- Supervisión de cambios no funcionales en navegación aérea.</p>\n<p>- Certificación Inicial / Renovación de Proveedores de Servicios de Diseño de Procedimientos de Vuelo (FPD).</p>\n<p>- Desarrollo y seguimiento normativo en el ámbito ASD/FPD, ASM y AIS.</p>\n<p>- Certificación Inicial / Renovación de Proveedores de Servicios de Información Aeronáutica (AIS)</p>\n<p>- Inspección de control normativo para la supervisión continuada de Proveedores de Servicios de Información Aeronáutica (AIS) y Supervisión de AIP.</p>\n<p>- Supervisión y Revisión del AIP con respecto a los puntos aprobados en Ponencia. </p>\n<p>- Inspección de Control Normativo de la Gestión de Espacio Aéreo (ASM-FUA) Inspecciones EMA-AESA de los niveles FUA Estratégico, Pre-Táctico y Táctico.</p>\n<p>- Apoyo a la Inspección de control normativo para la supervisión continuada de Proveedores de Servicios de Gestión de Espacio Aéreo nivel 3 (ASM3)</p>\n</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Entre 5 y 12 años de experiencia.</li>\n<li>Al menos tres años de experiencia en los ámbitos de Navegación Aérea. Por ejemplo, en alguno de los siguientes:</li>\n</ul><p>- Tareas relacionadas con las funciones descritas para este puesto.<br/>\r\n- Tareas que hayan requerido el uso y conocimiento de la normativa española y europea en la provisión o supervisión de servicios de Navegación Aérea (Sistemas de Navegación Aérea - ANS),<br/>\r\n- Tareas que hayan requerido el uso y conocimiento de la normativa española y europea en Cielo Único Europeo (SES),</p><ul>\n<li>Ofimática</li>\n</ul><p><strong>Requisitos Valorables</strong></p><ul>\n<li>Inglés: Valorable 700 puntos en la prueba TOIEC.</li>\n<li>\n<p>Se valorará experiencia en preferiblemente en los ámbitos de Diseño de Procedimientos de Vuelo y/o Gestión de Espacio Aéreo (ASM). </p>\n</li>\n<li>\n<p>Se valorará:</p>\n</li>\n</ul><p>-Haber participado en procesos de Inspección de Proveedores de Servicios de Navegación Aérea y haber participado en los ámbitos específicos listados en las funciones habituales u ocasionales del puesto.</p><p>-Experiencia en ámbitos de: Navegación AéreSistemas de Navegación Aérea - ANS), Gestión del Tránsito Aéreo (ATM), Seguridad operacional en Navegacióin Aérea, Manejo de Normativa de Aviación Civil, Control de Tránsito Aéreo (ATC), Servicio de Información de Aeródromo (AFIS), o Formación de Control de Tránsito Aéreo.</p><p>-Estar en posesión, o próximo a finalizar, el Máster Universitario de Sistemas de Transporte Aéreo (MUSTA), estar en posesión o próximo a finalizar el Máster Universitario en Ingeniería Aeronáutica (MUIA).</p><p>-Conocimiento del REGLAMENTO (UE) 2017/373 a los proveedores de servicios de navegación aérea y su supervisión. Conocimiento de la normativa nacional y europea en el ámbito de navegación aérea. En especial Real Decreto 515/2020, RD 1133/2010.</p><p>-Certificado Curso de Diseñador de Procedimientos PANS-OPS CONVENCIONAL (UPM), o similar.<br/>\r\n-Certificado Curso de Diseñador de Procedimientos PANS-OPS PBN (UPM), o similar.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a Navegación Aérea - Inspector/a (2025-T00064) (9)",
+  "status": "open",
+  "title": "Ingeniero/a Navegación Aérea - Inspector/a",
+  "url": "https://seleccionisdefe.es/convocatoria-2644"
  }
 }
