@@ -1,17 +1,12 @@
 {
- "correos": {
-  "desde": "2026-11-17T13:37:30+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 3,
+  "lecturas": 4,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-17T13:37:30+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  }
 }

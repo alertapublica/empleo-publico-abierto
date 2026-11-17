@@ -269,6 +269,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:48dac52544a6": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-17T14:07:30+00:00",
+  "location": null,
+  "process": "Tasa de reposición específica 2026 Grupo Tragsa",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasas-reposicion-especifica-2025-2026/Paginas/tre-2026-grupo-tragsa.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación de las relaciones provisionales de personas admitidas y excluidas en la convocatoria del proceso selectivo de la tasa de reposición específica 2026 del Grupo Tragsa (Tragsa y Tragsatec).",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasas-reposicion-especifica-2025-2026/Paginas/tre-2026-grupo-tragsa.aspx",
+  "via": "tasa"
+ },
  "tragsa:4b7e75140b50": {
   "access": "libre",
   "apply_url": null,

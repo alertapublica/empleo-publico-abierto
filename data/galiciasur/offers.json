@@ -64,6 +64,73 @@
   "title": "Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) · “Investigación clínica traslacional para el tratamiento de enfermedades dermatológicas del Servicio de Dermatología del Complexo Hospitalario Universitario de Pontevedra”",
   "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315"
  },
+ "316": {
+  "apply_url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/316",
+  "category": null,
+  "closed_at": null,
+  "code": "26/26",
+  "company": "Fundación Pública Galega de Investigación Biomédica Galicia Sur",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T14:07:30+00:00",
+  "id": "galiciasur:316",
+  "kind": null,
+  "listed_deadline": "2026-11-30",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "316",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2.3 Titulado/a Grado I. Personal de Apoyo a la Investigación.</p><p>- Titulación requerida: Licenciatura o grado en Ciencias de la Salud o smiliar , con Máster en Ciencias de la Salud o similar (máis de 300 ECTS).</p><p>- PROYECTO: “Geriatric Neurosurgery: Advancing neurosurgical care of older person in south-west Europe”GENEUS (S2/4.5/F0254). Cofinanciado por el Fondo Europeo de Desenvolvimiento Regional (FEDER) de la Unión Europea al 75% en el Marco del Programa de Cooperación Transnacional INTERREG SUDOE VI-B 2021-2027.</p>",
+    "level": 2,
+    "title": "Oferta de empleo (REF: 26/26)"
+   },
+   {
+    "html": "<p>- Hasta fin de proyecto/financiamiento.</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>Licenciatura o grado en Ciencias de la Salud o simlar,  con Máster en Ciencias de la Salud o similar (máis de 300 ECTS).</p>\n<p>* Las ofertas que no cumplan con todos los requisitos imprescindibles quedarán automáticamente descartadas.</p>",
+    "level": 2,
+    "title": "Requisitos imprescindibles"
+   },
+   {
+    "html": "<p>-Formación en ensayos clínicos: (de 10 a 20 horas: 10 puntos; de 21 a 50 horas: 20 puntos; más de 51 horas: 30 puntos).</p><p>-Formación complementaria relacionada con las funciones del puesto: (de 10 a 20 horas: 5 puntos; de 21 a 50 horas: 10 puntos; más de 51 horas: 15 puntos).</p><p>-Formación en buenas prácticas de investigación: (10 puntos).</p><p>-Competencia en lengua inglesa: Nivel (B1: 2 puntos; B2: 5 puntos; C1: 8 puntos; C2: 10 puntos).</p><p>-Experiencia laboral en el desarrollo de ensayos clínicos: (10 puntos por año trabajado, hasta un máximo de 20 puntos; los periodos inferiores a un año se calcularán a prorrata por meses completos).</p><p>* Ver bases de la oferta para más información</p>",
+    "level": 2,
+    "title": "Requisitos valorables"
+   },
+   {
+    "html": "<p>- Contrato indefinido para actividades científico-técnicas a jornada completa.</p><p>- Duración: Hasta fin del proyecto/financiamiento.</p><p>−Jornada: 37,5 h. semanales de lunes a viernes.</p><p>−Salario bruto anual: 26234,84€ Bruto anual, incluidas pagas extras.</p><p>−Centro de trabajo: Complejo Hospitalario Universitario de Ourense.</p><p>La persona contratada se encargará de realizar las siguientes tareas/funciones:</p><p>− Coordinación del proyecto GENEUS en el Área Sanitaria de Ourense, Verín e O Barco de Valdeorras.</p><p>− Participación en las reuniones de coordinación del proyecto.</p><p>-- Gestión de las bases de datos del proyecto GENEUS.</p><p>-  Organización de las jornadas informativas.</p><p>-  Las relativas y que se desarrollen durante la ejecución del proyecto GENEUS</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.fundacionbiomedica.es/file/ofertatrabajo/316/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "galiciasur",
+  "source_title": "1.2.3 Titulado/a Grado I. Personal de Apoyo a la Investigación. (REF: 26/26)",
+  "status": "open",
+  "title": "Titulado/a Grado I. Personal de Apoyo a la Investigación. · “Geriatric Neurosurgery: Advancing neurosurgical care of older person in south-west Europe”GENEUS (S2/4.5/F0254). Cofinanciado por el Fondo Europeo de Desenvolvimiento Regional (FEDER) de la Unión Europea al 75% en el Marco del Programa de Cooperación Transnacional INTERREG SUDOE VI-B 2021-2027.",
+  "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/316"
+ },
  "317": {
   "apply_url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/317",
   "category": null,
@@ -88,7 +155,7 @@
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 2,
+  "portal_tries": 3,
   "positions": null,
   "published_on": null,
   "ref": "317",

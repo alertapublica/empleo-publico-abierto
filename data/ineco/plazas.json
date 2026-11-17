@@ -26493,7 +26493,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-088": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-088.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -26515,7 +26515,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-089": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-089.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -26537,7 +26537,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-090": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-090.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -26559,7 +26559,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-091": {
-  "annex_tries": 1,
+  "annex_tries": 2,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-091.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -26633,7 +26633,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-094": {
-  "annex_tries": 1,
+  "annex_tries": 2,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-094.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -26707,16 +26707,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-097": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-097.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-097.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-ECE-097",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en Ingeniería Civil o Ingeniería de Caminos, Canales y Puertos.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -26728,16 +26733,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECE-098": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-098.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-ECE-098.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-ECE-098",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en: Ingeniería Aeronáutica, Ingeniería Técnica Aeronáutica, Grado en Ingeniería Aeronáutica, Grado en Ingeniería Aeroespacial, Grado en Gestión y Operaciones del Transporte Aéreo; Máster en Ingeniería Aeronáutica, Máster en Sistemas del Transporte Aéreo; o similares.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 1,
@@ -26749,16 +26759,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECS-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECS-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en: Informática o Ingeniería de Telecomunicaciones. 3.1.- FASE DE CONCURSO DE MÉRITOS (Máximo 40 puntos) La fecha a considerar para la valoración de los méritos será la fecha de finalización del plazo de presentación de solicitudes. Los méritos se podrán acumular pudiendo obtener una puntuación máxima de 40 puntos. MÉRITO 1) EXPERIENCIA EN INECO . Periodos de tiempo trabajados en Ineco durante los 3 años anteriores a la fecha de finalización del plazo de presentación de solicitudes, con un máximo de 1.095 días (3 años), teniendo en cuenta a estos efectos los tiempos de suspensión de contrato con derecho a reserva de puesto, así como realización de prácticas extracurriculares. MÉRITO 2) EXPERIENCIA EN INECO U OTRAS EMPRESAS REALIZANDO LAS 4 FUNCIONES . Experiencia en Ineco o en otras empresas realizando las cuatro funciones expresadas en el anexo específico (a través de una relación laboral) durante los 8 años anteriores a la fecha de finalización del plazo de presentación de solicitudes, con un máximo de 1.825 días (5 años). 3.2.- FASE DE OPOSICIÓN (Máximo 60 puntos) 3.2.1.- Ejercicio 1: Test de Competencias: La puntuación máxima de esta prueba será de La prueba competencial se realizará sobre las siguientes competencias incluidas en el Mapa de Puestos de Ineco y de aplicación al puesto concreto. Competencia Capacidad de mantener una actitud de servicio para identificar, entender y dar prioridad a las necesidades del cliente interno-externo, satisfaciendo con eficacia sus necesidades, anticipándose y aportando valor a las soluciones. 1) Foco en el cliente Implica ofrecer soluciones con un alto nivel de calidad, en el plazo requerido y llevar a cabo el seguimiento del nivel de satisfacción del cliente. Capacidad de buscar la excelencia con rigurosidad y una actitud positiva, intentando hacer su trabajo del mejor modo posible y teniendo en cuenta las expectativas del receptor. Implica enfocar su trabajo hacia un estándar que 2) Orientación a la calidad supera las expectativas de manera oportuna y adecuada. Capacidad para asegurar la generación, actualización y el traspaso de información y conocimiento relativos a su área de actividad, facilitando que las personas que lo necesiten dentro de la Compañía dispongan y accedan al 3) Gestión y Transmisión del conocimiento conocimiento pertinente en el momento oportuno, garantizando así el proceso de gestión del conocimiento. Habilidad de construir relaciones eficaces, apoyándose los unos en los otros, colaborando juntos para conseguir un objetivo común, tanto a nivel funcional como inter-funcional. Implica compartir con los demás, así como demostrar 4) Trabajo en equipo generosidad realizando esfuerzos en beneficio del equipo y facilitando el avance del mismo hacia la consecución de los objetivos. Capacidad de trabajar independientemente, siguiendo las directrices generales y sin necesidad de una estrecha supervisión, asumiendo las responsabilidades de sus acciones y tomando decisiones en el ámbito de su puesto, para 5) Autonomía lo cual se basa en su propio conocimiento y/o experiencia. 3.2.2.- Ejercicio 2: Entrevista Técnica: La puntuación máxima de esta prueba será de 4.- DOCUMENTACIÓN ACREDITATIVA Documentación a presentar en el momento de la inscripción: • Copia del DNI, NIE o identificación vigente. • Copia del carné de conducir en el caso de que así se explicite en el anexo específico del puesto. • Copia del permiso de trabajo, si corresponde. • Currículum vitae, con la descripción de funciones, acreditando experiencia y realización de tareas similares a las de los puestos ofertados. • Informe de vida laboral expedido por la Tesorería General de la Seguridad Social. • Declaración responsable debidamente cumplimentada y firmada. • Titulación académica exigida en el anexo específico del puesto. • Si tuviera o ha tenido vinculación laboral directa, por contrato de puesta a disposición o realizando prácticas extracurriculares en INECO, deberá presentar el Certificado de Méritos con la información de los periodos trabajados en Ineco que podrá descargarse en la intranet Personal/Certificado Méritos o bien solicitar a través del correo admonpersonal@ineco.com indicando nombre completo, DNI/NIE y en el asunto \"Histórico de Contratación - TRE junto con su DNI/NIE\". En cualquier momento del proceso podrá ser requerida documentación acreditativa adicional según se establece en las bases de la convocatoria.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -26770,16 +26785,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECS-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECS-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior en Informática.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -26791,16 +26811,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ECS-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ECS-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ECS-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Sevilla",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
