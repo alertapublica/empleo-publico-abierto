@@ -1,17 +1,17 @@
 {
  "andalucia": {
   "desde": "2026-11-17T09:07:45+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  },
  "lafe": {
   "desde": "2026-11-17T08:07:25+00:00",
-  "lecturas": 3,
+  "lecturas": 4,
   "resultado": "error"
  },
  "veiasa": {
   "desde": "2026-11-17T09:07:45+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  }
 }

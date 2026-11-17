@@ -1,4 +1,101 @@
 {
+ "55851": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=55851",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "55851",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-23",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Ingeniería y Edificación",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-17T09:37:35+00:00",
+  "id": "tragsa:55851",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-23",
+  "location": "Sede Madrid Tragsatec",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-07-14",
+  "ref": "55851",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a técnico/a o Graduado/a en Ingeniería para proyecto de redacción de proyectos de instalaciones e informes energéticos en Madrid. <br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 23/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsatec<br/>Disponibilidad del 25% del tiempo para desplazamiento por territorio nacional</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Realización de los informes periódicos y puntuales del encargo.</li><li>Realización de los informes periódicos relacionados con los consumos energéticos en los distintos edificios del cliente.</li><li>Gestión de la documentación de prevención de riesgos laborales para apoyo a la coordinación de actividades empresariales.</li><li>Asistencia técnica a la gestión del tratamiento de residuos del cliente producidos por la actividad de mantenimiento.</li><li>Apoyo en sus tareas al coordinador y al ingeniero de apoyo técnico.</li><li>Apoyo en la redacción de proyectos de instalaciones.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Ingeniería Técnica Industrial, o Grado en Ingeniería Mecánica, o Grado en Ingeniería Eléctrica, o Grado en Ingeniería en Electrónica Industrial (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia académica y/o con contrato laboral en la realización de informes sobre consumos energéticos de edificios</li></ul>Otros Requisitos Imprescindibles<ul><li>Nivel básico o superior en Autocad (se comprobará en valoración técnica)</li><li>Nivel básico o superior en Excel (se comprobará en valoración técnica)</li><li>Nivel básico o superior en Word (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Ingeniería Técnica Industrial, o Grado en Ingeniería Mecánica, o Grado en Ingeniería Eléctrica, o Grado en Ingeniería en Electrónica Industrial (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Ingeniería Técnica Industrial, o Grado en Ingeniería Mecánica, o Grado en Ingeniería Eléctrica, o Grado en Ingeniería en Electrónica Industrial (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia académica y/o con contrato laboral en la realización de informes sobre consumos energéticos de edificios</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Nivel básico o superior en Autocad (se comprobará en valoración técnica)</li><li>Nivel básico o superior en Excel (se comprobará en valoración técnica)</li><li>Nivel básico o superior en Word (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Experiencia Previa<ul><li>Desde 9 meses Hasta 1 año de experiencia en en la realización de informes sobre consumos energéticos de un edificio (experiencia académica y/o con contrato laboral)</li></ul>Otros Factores Meritorios<ul><li>Nivel medio o superior de manejo de Cype (se comprobará en valoración técnica)</li><li>Nivel medio o superior de manejo de Dmelect (se comprobará en valoración técnica)</li><li>Conocimientos del programa Linx Sphere (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en la realización de proyectos de instalaciones</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Desde 9 meses Hasta 1 año de experiencia en en la realización de informes sobre consumos energéticos de un edificio (experiencia académica y/o con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Nivel medio o superior de manejo de Cype (se comprobará en valoración técnica)</li><li>Nivel medio o superior de manejo de Dmelect (se comprobará en valoración técnica)</li><li>Conocimientos del programa Linx Sphere (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en la realización de proyectos de instalaciones</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 23/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a técnico/a o Graduado/a en Ingeniería - Redacción de proyectos de instalaciones e informes energéticos (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=55851"
+ },
  "56154": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56154",
   "category": "Específica",
@@ -23461,6 +23558,98 @@
   "status": "open",
   "title": "Ingeniero/a Técnico/a o Graduado/a en Ingeniería, rama Forestal o Agrícola - Apoyo obras (Pontevedra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58637"
+ },
+ "58638": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58638",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58638",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Asturias",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-17T09:37:35+00:00",
+  "id": "tragsa:58638",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Comunidad de Asturias",
+  "missed_runs": 0,
+  "opens_on": "2026-11-17",
+  "parent_ref": null,
+  "place": "Oviedo",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-17",
+  "ref": "58638",
+  "region": "Asturias",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Oficial/a 2ª Administrativo/a para prestar apoyo administrativo en la gestión del proyecto en Oviedo</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Asturias<br/>Dirección: Oviedo</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo a la gestión administrativa del proyecto.</li><li>Apertura, alta, actualización y seguimiento de expedientes en la plataforma SITE.</li><li>Grabación y actualización de datos en SITE y en las bases de datos de seguimiento.</li><li>Comprobación de solicitudes y documentación administrativa.</li><li>Tramitación de comunicaciones, notificaciones, propuestas, resoluciones y traslados a las personas y entidades interesadas.</li><li>Gestión administrativa del Fondo de Mejoras: actualización de registros, gestión de datos en Access de las entidades propietarias y titulares, y comprobación de pagos.</li><li>Información a propietarios y entidades locales beneficiarias del Fondo de Mejoras.</li><li>Actualización de los datos y la documentación del Plan Anual de Aprovechamientos y generación de documentos estandarizados.</li><li>Tramitación administrativa de la información pública del Plan Anual de Aprovechamientos.</li><li>Apoyo a los expedientes derivados de subastas de pastos y madera de entidades locales, así como a expedientes de solicitud y licitación de pastos en montes patrimoniales.</li><li>Tramitación de solicitudes de aprobación de Instrumentos de Gestión Forestal, incluidos Proyectos de Ordenación y Planes Técnicos de Gestión.</li><li>Inclusión de datos de control y seguimiento técnico y estadístico en bases de datos y aplicaciones administrativas.</li><li>Edición, maquetación, digitalización, impresión, gestión y archivo de documentos.</li><li>Atención e información a propietarios, entidades locales y personas interesadas.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>FP II o CFGS en la rama administrativa (titulación homologada en España) o 12 meses de experiencia (con contrato laboral, académica o ambas) como administrativo/a</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>FP II o CFGS en la rama administrativa (titulación homologada en España) o 12 meses de experiencia (con contrato laboral, académica o ambas) como administrativo/a</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>FP II o CFGS en la rama administrativa (titulación homologada en España) o 12 meses de experiencia (con contrato laboral, académica o ambas) como administrativo/a</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en herramientas del paquete Office (Excel, Access y Word), superior a 30 horas</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 9 meses de experiencia en apoyo a gestión y tramitación de expedientes o ayudas (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en atención al público presencial o telefónica (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en manejo de bases de datos y plataformas electrónicas de gestión administrativa (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en la Administración pública central, autonómica, local o medios propios de la Administración (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en herramientas del paquete Office (Excel, Access y Word), superior a 30 horas</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en herramientas del paquete Office (Excel, Access y Word), superior a 30 horas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 9 meses de experiencia en apoyo a gestión y tramitación de expedientes o ayudas (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en atención al público presencial o telefónica (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en manejo de bases de datos y plataformas electrónicas de gestión administrativa (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 3 meses Hasta 9 meses de experiencia en la Administración pública central, autonómica, local o medios propios de la Administración (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/>- Jornada completa<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 17/11/2026 hasta el próximo 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Oficial/a 2ª Administrativo/a - Apoyo a la Gestión Forestal (Asturias)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58638"
  },
  "58639": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58639",
