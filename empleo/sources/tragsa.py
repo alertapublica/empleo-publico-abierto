@@ -20,6 +20,7 @@ from urllib.parse import parse_qs, urljoin, urlparse
 from bs4 import BeautifulSoup
 
 from ..dates import clock, latest, spanish_date
+from .. import titulaciones
 from ..http import Client
 from ..model import MADRID, Announcement, ListedOffer, OfferDetail, SourceLayoutError, selection_system
 from ..sanitize import sanitize
@@ -397,6 +398,10 @@ class TragsaSource(Source):
                     published_on=process["published_on"],
                 )
         return list(offers.values())
+
+    def titulacion(self, offer: dict) -> titulaciones.Requisito:
+        # Lo exigido es «Titulación», dentro de «Requisitos Específicos»; lo valorable va en «Méritos (Valorables)».
+        return titulaciones.de_apartado(offer, "Titulación", under="Requisitos Específicos")
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
         process = next((p for p in self._processes if p["ref"] == offer.ref), None)
