@@ -520,16 +520,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEP-007": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-007.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEP-007.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEP-007",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Licenciatura en Geología, o Grado en Geología y Máster en Ingeniería Geológica, o Máster en Geología Ambiental, o Máster en Recursos Hídricos y Medio Ambiente.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -541,16 +546,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEW-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEW-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media en Ingenieria Industrial.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -562,16 +572,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEW-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEW-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: Arquitectura Técnica, Grado en Ingeniería de Edificación, o Grado + Máster Oficial en Prevención de Riesgos Laborales.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "MADRID",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -583,16 +598,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EEW-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EEW-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EEW-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Arquitecto: Grado + Máster",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Valencia",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -604,16 +624,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-ESR-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-ESR-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-ESR-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-ESR-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en: Grado en Arquitectura, Arquitectura Técnica, o Arquitectura.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Valencia",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -625,16 +650,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EXO-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EXO-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior, preferiblemente, en: Ingeniería de Caminos Canales y Puertos, o Ingeniería Industrial, o Ingeniería Agrónoma, o Ingeniería de Telecomunicaciones.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -646,16 +676,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EXO-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EXO-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Máster en Dirección de Gestión de RRHH, Máster en Dirección de RRHH y Desarrollo del Talento, o Máster en Psicología del Trabajo y Gestión de RRHH.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -667,16 +702,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EXO-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EXO-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Licenciatura, o Grado + Máster.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -688,16 +728,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EXO-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EXO-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Licenciatura, o Grado + Máster.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
@@ -709,16 +754,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TR-R2-EXO-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/11/anexos/TR-R2-EXO-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TR-REPESCA 2 – ENERO",
   "code": "TR-R2-EXO-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: Grado en Derecho. Licenciatura en Derecho. Grado + Máster en Derecho.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Repesca de tasas de reposición (TR-REPESCA)",
   "reserved": 0,
