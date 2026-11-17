@@ -244,6 +244,17 @@ class Announcements(unittest.TestCase):
         ingest.sync_announcements(source, None, known, later + timedelta(days=30))
         self.assertEqual({r["process"]: r["state"] for r in known.values()}["Nuevo"], "retirado")
 
+    def test_sin_plazo_publicado_sigue_en_marcha_hasta_quedar_sin_novedades(self):
+        source = self.Fixed([Announcement("", "Autoridad", "T", "https://a", state="no_consta")])
+        source.stale_after_days = 30
+        known = {}
+        ingest.sync_announcements(source, None, known, NOW)
+        source.items.append(Announcement("", "Nueva", "T", "https://b", state="no_consta"))
+        ingest.sync_announcements(source, None, known, NOW + timedelta(days=1))
+        self.assertEqual({r["process"]: r["state"] for r in known.values()}["Nueva"], "no_consta")
+        ingest.sync_announcements(source, None, known, NOW + timedelta(days=31))
+        self.assertEqual({r["process"]: r["state"] for r in known.values()}["Nueva"], "retirado")
+
     def test_sin_fecha_no_se_inventa_y_lo_de_la_primera_lectura_no_es_novedad(self):
         viejo, con_fecha = Announcement("", "P", "Viejo", "https://a"), self.item("P", "Con fecha")
         known = self.sync({}, viejo, con_fecha)
