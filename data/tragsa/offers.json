@@ -10551,7 +10551,7 @@
  "58327": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58327",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-17T06:07:25+00:00",
   "code": "58327",
   "company": "Tragsatec",
   "contract": null,
@@ -10566,7 +10566,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-16",
   "location": "Comunidad de Navarra",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": "2026-10-20",
   "parent_ref": null,
   "place": "Pamplona",
@@ -10634,7 +10634,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a_Mantenimiento Electricidad/Electrónica_Estaciones Meteorológicas (Navarra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58327"
  },
