@@ -1,0 +1,60 @@
+name: Bases
+
+# Lector de bases en PDF (empleo/bases.py): qué dicen las bases de las ofertas cuya ficha apenas tiene
+# texto (teletrabajo, titulación, jornada, retribución, plazo). Solo se lanza a mano. No toca los datos ni
+# la web: el informe va al resumen de la ejecución y, con el JSON, como artefacto.
+on:
+  workflow_dispatch:
+    inputs:
+      fuentes:
+        description: "Ids de las fuentes, separados por espacios (vacío: todas)"
+        required: false
+        default: ""
+      todas:
+        description: "También las ofertas con ficha completa"
+        type: boolean
+        default: false
+      max:
+        description: "PDF como mucho"
+        required: false
+        default: "60"
+      urls:
+        description: "Bases sueltas de organismos que aún no se leen: «organismo URL», separadas por comas"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  bases:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Leer las bases (una petición por PDF, con pausa)
+        env:
+          FUENTES: ${{ inputs.fuentes }}
+          TODAS: ${{ inputs.todas }}
+          MAX: ${{ inputs.max }}
+          URLS: ${{ inputs.urls }}
+          # Worker de relay/ (salida por Madrid) para los hosts de VIA_RELAY_CF; sin clave, lectura directa.
+          RELAY_CF_CLAVE: ${{ secrets.RELAY_CF_CLAVE }}
+          RELAY_CF_URL: ${{ secrets.RELAY_CF_URL }}
+        run: |
+          args=(--max "$MAX")
+          if [ "$TODAS" = "true" ]; then args+=(--todas); fi
+          if [ -n "$URLS" ]; then printf '%s\n' "$URLS" | tr ',' '\n' > "$RUNNER_TEMP/urls.txt"; args+=(--urls "$RUNNER_TEMP/urls.txt"); fi
+          # shellcheck disable=SC2086
+          python -m empleo.bases "${args[@]}" $FUENTES > /dev/null
+          cat bases/informe.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bases
+          path: bases
+          retention-days: 30
