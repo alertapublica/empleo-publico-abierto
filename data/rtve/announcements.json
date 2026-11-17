@@ -629,6 +629,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TEITSE_BD_Listado-Candidaturas-Admitidas-Provisional_PUBLICO.pdf",
   "via": "bolsa"
  },
+ "rtve:c835cad29939": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-17T11:07:36+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Gestión – Abogado/a · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Listado Candidaturas Admitidas Definitivo",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESAB_BD_Listado-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
+  "via": "bolsa"
+ },
  "rtve:d1dd76b8469d": {
   "access": "libre",
   "apply_url": null,
@@ -665,6 +683,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/PRVIN_P3_Bolsa-de-reserva_PUBLICO.pdf",
   "via": "otro"
  },
+ "rtve:df70f5f4562a": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-17T11:07:36+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Gestión – Económica · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Listado Candidaturas Admitidas Definitivo",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESEC_BD_Listado-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
+  "via": "bolsa"
+ },
  "rtve:e352676f97eb": {
   "access": "libre",
   "apply_url": null,
@@ -699,6 +735,24 @@
   "system": null,
   "title": "Listado Candidaturas Admitidas Definitivo",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TECINFO_BD_Listado-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
+  "via": "bolsa"
+ },
+ "rtve:e46f18035aae": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-17T11:07:36+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Gestión – Comercial-audiencias · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Listado Candidaturas Admitidas Definitivo",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESCOA_BD_Listado-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
   "via": "bolsa"
  },
  "rtve:e8854d17b05f": {

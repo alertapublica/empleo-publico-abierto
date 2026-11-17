@@ -637,6 +637,48 @@
   "title": "Contratación de Enfermero/a de investigación (T3) - Unidad Mixta de Investigación en TICS Aplicadas a la Reingeniería en Procesos Sociosanitarios (ERPSS)",
   "url": "https://www.iislafe.es/es/talento/empleo/4225/contratacion-de-enfermero-a-de-investigacion-t3-unidad-mixta-de-investigacion-en-tics-aplicadas-a-la-reingenieria-en-procesos-sociosanitarios-erpss"
  },
+ "193/2026": {
+  "apply_url": "https://www.iislafe.es/es/talento/empleo/4235/contratacion-de-tecnologo-a-de-gestion-m4-nivel-1-rpt-25-area-contratacion-publica#inscripcion",
+  "category": null,
+  "closed_at": null,
+  "code": "193/2026",
+  "company": "Fundación para la Investigación del Hospital La Fe",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-17T11:07:36+00:00",
+  "id": "lafe:193/2026",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": "Valencia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-17",
+  "ref": "193/2026",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://remote.iislafe.san.gva.es/ServicioIIS/api/convocatorias/es/4235/ficheros/17708\">Bases</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "lafe",
+  "source_title": null,
+  "status": "open",
+  "title": "Contratación de Tecnólogo/a de gestión (M4) - nivel 1 (RPT 25) - Área contratación pública",
+  "url": "https://www.iislafe.es/es/talento/empleo/4235/contratacion-de-tecnologo-a-de-gestion-m4-nivel-1-rpt-25-area-contratacion-publica"
+ },
  "194/2026": {
   "apply_url": "https://www.iislafe.es/es/talento/empleo/4229/contratacion-de-personal-investigador-lider-o-senior-leading-researcher-r4-grupo-de-investigacion-biomedica-en-imagen-gibi-230#inscripcion",
   "category": null,
