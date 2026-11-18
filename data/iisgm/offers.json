@@ -374,7 +374,7 @@
   "opens_on": "2026-11-18",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 2,
+  "portal_tries": 3,
   "positions": null,
   "published_on": null,
   "ref": "139",
@@ -401,5 +401,57 @@
   "status": "open",
   "title": "ENFERMERO/A DE INVESTIGACIÓN REF. 110_2026",
   "url": "https://iisgm.com/ofertas-de-empleo/139/enfermero-a-de-investigacion-ref-110-2026"
+ },
+ "140": {
+  "apply_url": "https://iisgm.com/ofertas-de-empleo/140/study-coordinator-de-ensayos-clinicos-en-el-area-de-nefrologia-ref-112-2026",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-27",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T08:07:25+00:00",
+  "id": "iisgm:140",
+  "kind": null,
+  "listed_deadline": "2026-11-27",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "140",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p><strong>Grupo de Investigación</strong>: INFLAMACIÓN Y DAÑO VASCULAR EN LA ENFERMEDAD RENAL CRÓNICA, DIÁLISIS Y TRASPLANTE RENAL. FISIOPATOLOGÍA RENAL</p><p><strong>Área Funcional:</strong> 2</p><p><strong>Grupo Profesional:</strong> III</p><p><strong>Categoría Profesional</strong>: TITULADO/A SUPERIOR</p><p><strong>Titulación Académica Requerida: </strong>GRADO EN FARMACIA CON MÁSTER</p>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<p><strong>Para conocer el procedimiento de presentarse a la candidatura abrir el documento adjunto y seguir indicaciones</strong></p><p>LOS/AS CANDIDATOS/AS INTERESADOS EN CONCURRIR A LA PRESENTE OFERTA DE EMPLEO HAN DE INCLUIR LA SIGUIENTE DOCUMENTACIÓN EN UN ÚNICO ARCHIVO PDF y enviar a <strong><a href=\"mailto:empleofibhgm(ELIMINAR)@iisgm.com\">empleofibhgm(ELIMINAR)@iisgm.com</a></strong></p><p>-CARTA DE PRESENTACIÓN QUE JUSTIFIQUE EL INTERÉS Y EL GRADO DE ADECUACIÓN AL PERFIL REQUERIDO PARA EL PUESTO DE TRABAJO:<br/>\r\n- CV ACTUALIZADO.<br/>\r\n- FOTOCOPIA DNI.<br/>\r\n- COPIA DE LAS TITULACIONES ACADÉMICAS.<br/>\r\n- CERTIFICADOS CORRESPONDIENTES A: CURSOS REALIZADOS, NIVEL DE INGLÉS Y APLICACIONES INFORMÁTICAS.<br/>\r\n- CERTIFICADOS QUE ACREDITEN: ESTANCIAS DE COLABORACIÓN/FORMACIÓN EN CENTROS DE INVESTIGACIÓN DE RECONOCIDO PRESTIGIO INTERNACIONAL, AUTORÍA DE PUBLICACIÓN CIENTÍFICAS ASÍ COMO LA PARTICIPACIÓN EN PROYECTOS DE INVESTIGACIÓN Y PATENTES.<br/>\r\n- INFORME DE VIDA LABORAL.</p><p>ASIMISMO, EN EL MISMO ARCHIVO REQUERIDO EN EL PÁRRAFO ANTERIOR, SE PODRÁ AÑADIR AQUELLA DOCUMENTACION QUE JUSTIFQUE SALTOS PRODUCIDOS DURANTE EL DESARROLLO DE SU CARRERA PROFESIONAL (POR EJEMPLO SITUACIONES DE MATERNIDAD/PATERNIDAD, FORMACIÓN ACADÉMICA,SITUACIONES PROLONGADAS DE IT, ETC.).</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<ul><li><a href=\"https://iisgm.com/media/upload/pdf/OFERTA%20STUDY%20COORDINATOR%20DE%20EECC%20EN%20EL%20%C3%81REA%20DE%20NEFROLOG%C3%8DA%20REF.112_2026_1794989066.pdf\">OFERTA Y REQUISITOS 112_2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos relacionados"
+   }
+  ],
+  "source": "iisgm",
+  "source_title": null,
+  "status": "open",
+  "title": "STUDY COORDINATOR DE ENSAYOS CLÍNICOS EN EL ÁREA DE NEFROLOGÍA REF.112_2026",
+  "url": "https://iisgm.com/ofertas-de-empleo/140/study-coordinator-de-ensayos-clinicos-en-el-area-de-nefrologia-ref-112-2026"
  }
 }
