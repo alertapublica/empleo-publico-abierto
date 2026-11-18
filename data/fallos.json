@@ -1,37 +1,17 @@
 {
- "cesga": {
-  "desde": "2026-11-18T06:37:31+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "emasesa": {
   "desde": "2026-11-18T05:07:34+00:00",
-  "lecturas": 4,
+  "lecturas": 5,
   "resultado": "error"
  },
- "idis": {
-  "desde": "2026-11-18T06:37:31+00:00",
+ "gpex": {
+  "desde": "2026-11-18T07:07:27+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 17,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-18T06:37:31+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "udc": {
-  "desde": "2026-11-18T06:37:31+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "uvigo": {
-  "desde": "2026-11-18T06:37:31+00:00",
-  "lecturas": 1,
+  "lecturas": 18,
   "resultado": "error"
  }
 }
