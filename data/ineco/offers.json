@@ -7769,7 +7769,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": null,
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -10477,6 +10477,68 @@
   "title": "Ingeniero/a Asistencia Obra Ferroviara Despliegue CTC Ferroviario",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371800"
  },
+ "3371802": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371802",
+  "category": null,
+  "closed_at": null,
+  "code": "29014",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T11:37:26+00:00",
+  "id": "ineco:3371802",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Calatayud",
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "3371802",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>1. Inspecciones de vía para determinar el estado de los materiales (balasto, carril, sujeción, traviesas, canaleta de comunicaciones, otras instalaciones, etc)<br/>2. Inspecciones de infraestructura para determinar el estado de los activos (Terraplenes, desmontes, estructuras, túneles, caminos de servicio, cerramiento, zonas de dominio público, etc)<br/>3. Vigilancia y seguimiento de las  obras de inversión y de obras a terceros.<br/>4. Control del mantenimiento correctivo del adjudicatario del mantenimiento (Bateos, sustitución de carril, soldaduras, recargues, limpieza de cunetas, saneo de cárcavas, desbroce, descaste de conejos, etc)</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>No se requiere experiencia previa. <br/>Conocimiento a nivel usuario de programas de Microsoft Office: Word y Excel. <br/>Carné de conducir de tipo B.<br/>Titulación: Formación Profesional en Delineación, Electricidad, Mecánica o Edificación y Obra Civil, o formación similar relacionada con obras.<br/>Valorable experiencia en el sector ferroviario<br/>Valorable experiencia en logística y almacenes<br/>Valorable experiencia en tratamiento de bases de datos<br/>Valorable experiencia en mantenimiento preventivo en cualquier sector<br/>Se valorará conocimiento y/o formación en excel avanzado.<br/>El puesto requiere la realización de trabajos en horario nocturno, guardias de 24 horas y, de forma ocasional, intervenciones durante fines de semana y días festivos.<br/>Para el correcto desarrollo de las funciones del puesto, la persona seleccionada deberá obtener y superar las pruebas correspondientes a la habilitación de Piloto de Seguridad, formación que será proporcionada por Ineco. <br/>En las bases de mantenimiento se requiere la realización de trabajos en horario nocturno, guardias de 24 horas y, de forma ocasional, intervenciones durante fines de semana y días festivos. <br/>Se valorará conocimiento y/o formación en Excel avanzado. </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>• Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>• Contamos con beneficios flexibles adaptables a cada persona.<br/>• Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>• Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>• Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29014 - Técnico/a de infraestructura y vía ferroviaria (Calatayud)",
+  "status": "open",
+  "title": "Técnico/a de infraestructura y vía ferroviaria (Calatayud)",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371802"
+ },
  "3372199": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372199",
   "category": null,
@@ -12357,7 +12419,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,

@@ -359,6 +359,24 @@
   "url": "https://www.cetarsa.es/empleo-2026/",
   "via": "otro"
  },
+ "cetarsa:7c1f0d73b6ee": {
+  "access": "interna",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-17",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-18T11:37:26+00:00",
+  "location": null,
+  "process": "Técnico/a de Producción Agrícola- Clasificador/a Industrial · Promoción interna",
+  "process_url": "https://www.cetarsa.es/empleo-2026/",
+  "source": "cetarsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "El llamamiento se realizará por medios que permitan dejar constancia de su recepción, otorgándose un plazo de 10 días naturales para manifestar la aceptación. La falta de respuesta en plazo o la renuncia expresa al puesto ofertado supondrá la exclusión definitiva de la persona aspirante de la relación de aprobados a efectos de futuros llamamientos .",
+  "url": "https://www.cetarsa.es/empleo-2026/",
+  "via": "otro"
+ },
  "cetarsa:7d50998876af": {
   "access": "libre",
   "apply_url": null,
