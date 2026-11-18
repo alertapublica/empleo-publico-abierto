@@ -253,5 +253,17 @@
   "at": "2026-11-18T08:37:29+00:00",
   "kind": "new",
   "offer": "idibell:2358"
+ },
+ {
+  "at": "2026-11-18T15:07:29+00:00",
+  "kind": "reopened",
+  "offer": "idibell:2297"
+ },
+ {
+  "after": "2026-11-30",
+  "at": "2026-11-18T15:07:29+00:00",
+  "before": "2026-11-13",
+  "kind": "deadline_changed",
+  "offer": "idibell:2297"
  }
 ]

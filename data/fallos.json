@@ -1,52 +1,22 @@
 {
- "andalucia": {
-  "desde": "2026-11-18T14:37:43+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "cofivacasa": {
-  "desde": "2026-11-18T14:37:43+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "emasesa": {
   "desde": "2026-11-18T05:07:34+00:00",
-  "lecturas": 20,
+  "lecturas": 21,
   "resultado": "error"
  },
- "galiciasur": {
-  "desde": "2026-11-18T14:37:43+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "iisgm": {
-  "desde": "2026-11-18T14:37:43+00:00",
+ "fgv": {
+  "desde": "2026-11-18T15:07:29+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 33,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-18T13:07:27+00:00",
-  "lecturas": 4,
-  "resultado": "error"
- },
- "sepides": {
-  "desde": "2026-11-18T14:37:43+00:00",
-  "lecturas": 1,
+  "lecturas": 34,
   "resultado": "error"
  },
  "usc": {
   "desde": "2026-11-18T10:37:24+00:00",
-  "lecturas": 9,
-  "resultado": "error"
- },
- "veiasa": {
-  "desde": "2026-11-18T14:37:43+00:00",
-  "lecturas": 1,
+  "lecturas": 10,
   "resultado": "error"
  }
 }

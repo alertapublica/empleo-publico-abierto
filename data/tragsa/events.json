@@ -2438,5 +2438,20 @@
   "before": "2026-11-16",
   "kind": "deadline_changed",
   "offer": "tragsa:58427"
+ },
+ {
+  "at": "2026-11-18T15:07:29+00:00",
+  "kind": "new",
+  "offer": "tragsa:58841"
+ },
+ {
+  "at": "2026-11-18T15:07:29+00:00",
+  "kind": "new",
+  "offer": "tragsa:58814"
+ },
+ {
+  "at": "2026-11-18T15:07:29+00:00",
+  "kind": "new",
+  "offer": "tragsa:58136"
  }
 ]
