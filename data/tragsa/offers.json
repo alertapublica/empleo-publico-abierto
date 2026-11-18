@@ -1,4 +1,91 @@
 {
+ "53978": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=53978",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "53978",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Sistemas Gestión para las AAPP",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-18T13:07:27+00:00",
+  "id": "tragsa:53978",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-18",
+  "ref": "53978",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Jefes/as de Equipo turno de tarde - Encuestas Sociológicas (Madrid) en Comunidad de Madrid. <br/><br/>Habiendo quedado pendientes de cubrir al menos 1 posición, se amplía el plazo del 18/11/2026 hasta el 02/12/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Prestar apoyo en la coordinación y dirección del equipo de encuestadores/as.</li><li>Formación del personal.</li><li>Realizar seguimiento diario del trabajo realizado por cada uno de los encuestadores/as y el cumplimiento de su jornada laboral.</li><li>Asesorar, apoyar y resolver dudas de los encuestadores/as en la realización de las encuestas.</li><li>Realizar los controles de calidad necesarios.</li><li>Prestar apoyo en la coordinación permanente con el Jefe de Turno correspondiente, reportándole toda aquella información que se le requiera.</li><li>Atender y resolver las cuestiones laborales de toda índole que se puedan plantear (bajas, ausencias, permisos).</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o experiencia laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto con un mínimo de 12 meses.</li></ul>Otros Requisitos Imprescindibles<ul><li>Nivel usuario en navegación en Internet, Word y Excel (acreditación mediante prueba informática durante el proceso de selección).</li><li>Al menos 1 año de experiencia profesional como responsable de un equipo de trabajadores/as (acreditación mediante CV y vida laboral).</li><li>Disponibilidad de incorporación en un periodo máximo de 3 días hábiles desde la comunicación por parte de la empresa.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o experiencia laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto con un mínimo de 12 meses.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o experiencia laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto con un mínimo de 12 meses.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Nivel usuario en navegación en Internet, Word y Excel (acreditación mediante prueba informática durante el proceso de selección).</li><li>Al menos 1 año de experiencia profesional como responsable de un equipo de trabajadores/as (acreditación mediante CV y vida laboral).</li><li>Disponibilidad de incorporación en un periodo máximo de 3 días hábiles desde la comunicación por parte de la empresa.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Otros Factores Meritorios<ul><li>Experiencia profesional entre 1 día y hasta 5 años o más,  en gestión de equipos que realizan atención telefónica (se valorará en entrevista técnica)</li><li>Experiencia profesional entre 1 año y hasta 5 años o más, en gestión de equipos (tiempos de experiencia).</li><li>Experiencia profesional en gestión de equipos (número de personas) (se valorará en entrevista técnica)</li><li>Experiencia  profesional realizando las siguientes funciones (se valorará en entrevista técnica):\n- formación de personal\n- seguimiento diario del trabajo y de cumplimiento de la jornada laboral de los trabajadores/as\n- resolver dudas de los trabajadores/as en la realización de su trabajo\n- atender cuestiones laborales de toda índole que los trabajadores/as puedan plantear (bajas, ausencias, permisos) \n- realizar los controles de calidad del trabajo realizado</li><li>Formación específica en Excel (se debe acreditar adjuntando el certificado de curso/cursos realizados)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Experiencia profesional entre 1 día y hasta 5 años o más,  en gestión de equipos que realizan atención telefónica (se valorará en entrevista técnica)</li><li>Experiencia profesional entre 1 año y hasta 5 años o más, en gestión de equipos (tiempos de experiencia).</li><li>Experiencia profesional en gestión de equipos (número de personas) (se valorará en entrevista técnica)</li><li>Experiencia  profesional realizando las siguientes funciones (se valorará en entrevista técnica):\n- formación de personal\n- seguimiento diario del trabajo y de cumplimiento de la jornada laboral de los trabajadores/as\n- resolver dudas de los trabajadores/as en la realización de su trabajo\n- atender cuestiones laborales de toda índole que los trabajadores/as puedan plantear (bajas, ausencias, permisos) \n- realizar los controles de calidad del trabajo realizado</li><li>Formación específica en Excel (se debe acreditar adjuntando el certificado de curso/cursos realizados)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se Ofrece:<br/><br/>- Contrato de duración determinada estimada de 3 meses con posibilidad de prórroga 6 meses más, hasta un máximo de 9 meses en total, si procede.<br/>- Jornada laboral de Lunes a Viernes y un Sábado al mes que se indicará con la suficiente antelación.<br/>- Jornada parcial de 7 horas diarias.<br/>- Turno de tarde: horario de lunes a viernes 14:30-21:30, los sábados 9:30 a 16:30.<br/><br/>Habiendo quedado pendientes de cubrir al menos 1 posición, se amplía el plazo del 18/11/2026 hasta el 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Jefes/as de Equipo turno de tarde - Encuestas Sociológicas (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=53978"
+ },
  "55707": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=55707",
   "category": null,
@@ -9970,6 +10057,103 @@
   "title": "Administrativo/a - Contratación de Personal (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58211"
  },
+ "58230": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58230",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58230",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Desar.Rural/Política Forestal",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-18T13:07:27+00:00",
+  "id": "tragsa:58230",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "58230",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Licenciado/a o Diplomado/a/Graduado/a con Máster Oficial para prestar apoyo técnico en la gestión de Fondos Europeos en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Recoger, gestionar e introducir información de operaciones cofinanciadas en las aplicaciones informáticas.</li><li>Análisis de información de las operaciones.</li><li>Revisión de documentación y actualización de manuales de procedimientos.</li><li>Recogida y Gestión de indicadores.</li><li>Elaboración de informes.</li><li>Previsiones financieras.</li><li>Asistencia a reuniones.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Licenciatura o Diplomatura/Grado + Máster Oficial en la rama de Ciencias Sociales o Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia en materia de Fondo Social Europeo (experiencia académica y/o con contrato laboral).</li><li>Al menos 1 año de experiencia en proyectos de Igualdad de Género (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Licenciatura o Diplomatura/Grado + Máster Oficial en la rama de Ciencias Sociales o Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Licenciatura o Diplomatura/Grado + Máster Oficial en la rama de Ciencias Sociales o Jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia en materia de Fondo Social Europeo (experiencia académica y/o con contrato laboral).</li><li>Al menos 1 año de experiencia en proyectos de Igualdad de Género (experiencia académica y/o con contrato laboral).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en Igualdad de Género.</li></ul>Otros Factores Meritorios<ul><li>Experiencia académica y/o con contrato laboral de al menos 2 años en/para empresa/administración pública.</li><li>Experiencia académica y/o con contrato laboral de al menos 2 años en trabajos relacionados con el Fondo Social Europeo.</li><li>Experiencia académica y/o con contrato laboral de al menos 2 años en trabajos relacionados con Igualdad de Género.</li><li>Manejo a nivel avanzado en Access (tablas, filtros, relaciones, diseño BD, consultas de selección, agregación y de exclusión, formularios, informes). (Se comprobará en valoración técnica).</li><li>Conocimientos en auditoría contable. (Se comprobará en valoración técnica).</li><li>Manejo a nivel avanzado en Excel (funciones condicionales, de búsqueda y referencia, macros, trabajo con series de datos extensas, etc.). (Se comprobará en valoración técnica).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en Igualdad de Género.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en Igualdad de Género.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Experiencia académica y/o con contrato laboral de al menos 2 años en/para empresa/administración pública.</li><li>Experiencia académica y/o con contrato laboral de al menos 2 años en trabajos relacionados con el Fondo Social Europeo.</li><li>Experiencia académica y/o con contrato laboral de al menos 2 años en trabajos relacionados con Igualdad de Género.</li><li>Manejo a nivel avanzado en Access (tablas, filtros, relaciones, diseño BD, consultas de selección, agregación y de exclusión, formularios, informes). (Se comprobará en valoración técnica).</li><li>Conocimientos en auditoría contable. (Se comprobará en valoración técnica).</li><li>Manejo a nivel avanzado en Excel (funciones condicionales, de búsqueda y referencia, macros, trabajo con series de datos extensas, etc.). (Se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada con una  duración estimada de 13 meses,  asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación  y Resiliencia o con financiación  que provenga de Fondos de la Unión Europea. <br/>- Jornada completa. <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a o Diplomado/a/Graduado/a + Máster Oficial - Gestión de Fondos Europeos (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58230"
+ },
  "58235": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58235",
   "category": "Específica",
@@ -15530,6 +15714,108 @@
   "status": "open",
   "title": "Primer/a Oficial/a de Puente (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58457"
+ },
+ "58458": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58458",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58458",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sist.Inf. Gest.Doc.y Consult.",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-18T13:07:27+00:00",
+  "id": "tragsa:58458",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Nacional",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "58458",
+  "region": "Ámbito nacional",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Técnico/a de Sistemas para un importante proyecto de la Administración Pública en cualquier oficina del Grupo Tragsa dentro del territorio Nacional, según disponibilidad y necesidades del proyecto.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Nacional</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Soporte y administración de plataforma pública</li><li>Elaboración de documentación técnico-informática en las aplicaciones informáticas de las plataformas del cliente</li><li>Elaboración de scripts de SQL interactuando con las BBDD de la plataforma del cliente</li><li>Mantenimiento, revisión, pruebas y gestión de la plataformas utilizadas en el cliente</li><li>Apoyo en las tareas de análisis de los sistemas informáticos de las plataformas del cliente</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España)  o 6 meses de experiencia con contrato laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia con contrato laboral realizando análisis pruebas funcionales y parametrización de aplicaciones</li><li>Al menos 2 años de experiencia con contrato laboral en creación de scripts de bases de datos relacionales</li></ul>Otros Requisitos Imprescindibles<ul><li>Manejo nivel alto de Excel (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España)  o 6 meses de experiencia con contrato laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España)  o 6 meses de experiencia con contrato laboral dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia con contrato laboral realizando análisis pruebas funcionales y parametrización de aplicaciones</li><li>Al menos 2 años de experiencia con contrato laboral en creación de scripts de bases de datos relacionales</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo nivel alto de Excel (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en Microsoft</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 3 años de experiencia en administración de plataformas institucionales dentro de la Administración Pública (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en gestión de ayudas públicas (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en gestión de buzones de correo: manejo de PST, configurar cuentas, gestión de reglas de correo (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en Microsoft</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en Microsoft</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 3 años de experiencia en administración de plataformas institucionales dentro de la Administración Pública (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en gestión de ayudas públicas (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en gestión de buzones de correo: manejo de PST, configurar cuentas, gestión de reglas de correo (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales .<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>- Trabajo en cualquier oficina del Grupo Tragsa dentro del Territorio Nacional, según disponibilidad y necesidades del proyecto.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Sistemas - pruebas y scripts (Nacional)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58458"
  },
  "58459": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58459",
@@ -29726,6 +30012,108 @@
   "status": "open",
   "title": "Ingeniero/a o Ingeniero/a Técnico/a o Graduado/a o Graduado/a + Máster Oficial en Ingeniería Agricola o Agrónoma - Apoyo técnico expropiaciones y valoraciones agrarias (Cataluña)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58786"
+ },
+ "58791": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58791",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58791",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Tenerife",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-18T13:07:27+00:00",
+  "id": "tragsa:58791",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-03",
+  "location": "Sta. Cruz de Tenerife",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": "Tenerife",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "58791",
+  "region": "Canarias",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Arquitecto/a Técnico/a o Ingeniero/a en la isla de Tenerife.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sta. Cruz de Tenerife</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Recopilación información en campo del proyecto a ejecutar, análisis de la misma y elaboración de documento técnico final. Redacción de nuevos documentos técnicos que permitan la ejecución de las actuaciones contempladas, realizando nuevos cálculos estructurales, topográficos, hidráulicos o cualquier anejo que se necesario completar.</li><li>Visita de campo para verificar la realidad material, posibles cambios del terreno o cambios que supongan modificaciones o imposibilidad de ejecución.</li><li>Redacción de nuevos documentos técnicos que permitan la ejecución de las actuaciones contempladas, realizando nuevos cálculos estructurales, topográficos, hidráulicos o cualquier anejo que se necesario completar.</li><li>Elaboración de estudios que permitan ejecutar con garantías los cálculos o anejos contemplados en el apartado anterior</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación universitaria en Ingeniería Agrícola, Arquitectura Técnica/Edificación o Técnica de Obras Públicas/Civil (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir B en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación universitaria en Ingeniería Agrícola, Arquitectura Técnica/Edificación o Técnica de Obras Públicas/Civil (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación universitaria en Ingeniería Agrícola, Arquitectura Técnica/Edificación o Técnica de Obras Públicas/Civil (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir B en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en AutoCAD</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 1 año de experiencia en Supervisión de obra, estudio de licitaciones, adjudicaciones, gestión de compras, seguimiento y ejecución de obra civil con contrato laboral (se comprobará en valoración técnica)</li></ul>Otros Factores Meritorios<ul><li>Manejo de herramienta de análisis HEC-RAS (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en AutoCAD</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en AutoCAD</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 1 año de experiencia en Supervisión de obra, estudio de licitaciones, adjudicaciones, gestión de compras, seguimiento y ejecución de obra civil con contrato laboral (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo de herramienta de análisis HEC-RAS (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>-Contrato de duración determinada estimada de 6 meses con opción de prórroga hasta un total de 12 meses, si procede.<br/>-Jornada completa<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 03/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitecto/a Técnico/a o Ingeniero/a (Tenerife)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58791"
  },
  "58794": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58794",
