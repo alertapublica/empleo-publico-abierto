@@ -1,21 +1,26 @@
 {
- "andalucia": {
+ "emasesa": {
   "desde": "2026-11-18T05:07:34+00:00",
+  "lecturas": 2,
+  "resultado": "error"
+ },
+ "fgv": {
+  "desde": "2026-11-18T05:37:23+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "emasesa": {
-  "desde": "2026-11-18T05:07:34+00:00",
+ "puertos": {
+  "desde": "2026-11-18T05:37:23+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 14,
+  "lecturas": 15,
   "resultado": "error"
  },
- "veiasa": {
-  "desde": "2026-11-18T05:07:34+00:00",
+ "sepi": {
+  "desde": "2026-11-18T05:37:23+00:00",
   "lecturas": 1,
   "resultado": "error"
  }
