@@ -1,17 +1,22 @@
 {
  "emasesa": {
   "desde": "2026-11-18T05:07:34+00:00",
-  "lecturas": 7,
+  "lecturas": 8,
+  "resultado": "error"
+ },
+ "fgv": {
+  "desde": "2026-11-18T08:37:29+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "galiciasur": {
+  "desde": "2026-11-18T08:37:29+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 20,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-18T08:07:25+00:00",
-  "lecturas": 1,
+  "lecturas": 21,
   "resultado": "error"
  }
 }

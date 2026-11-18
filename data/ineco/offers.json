@@ -19,7 +19,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Lleida",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -1817,7 +1817,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -10352,6 +10352,68 @@
   "status": "open",
   "title": "Analista funcional junior",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371799"
+ },
+ "3371800": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371800",
+  "category": null,
+  "closed_at": null,
+  "code": "28077",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T08:37:29+00:00",
+  "id": "ineco:3371800",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Sevilla",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "3371800",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Apoyo en la la dirección y coordinación de la ACO:<br/>- Coordinación global de los trabajos de la Asistencia Técnica en todas las técnicas implicadas.<br/>- Organización, supervisión y seguimiento del equipo técnico de la ACO.<br/>- Distribución de tareas, control de cargas de trabajo y validación de entregables.<br/><br/>Interlocución con cliente y la Dirección de Obra:<br/>- Interlocutor principal de la ACO ante el Director del Encargo y los Directores de Obra.<br/>- Asistencia a reuniones de obra, coordinación técnica y seguimiento.<br/>- Canalización de instrucciones, delegaciones y criterios técnicos trasladados por el cliente a la ACO.<br/>- Apoyo directo a la Dirección de Obra en la interpretación del proyecto y en la resolución de incidencias.<br/> <br/>Seguimiento técnico y control de las obras:<br/>- Supervisión del cumplimiento del proyecto constructivo y de las prescripciones técnicas.<br/>- Análisis y gestión de incidencias técnicas surgidas durante la ejecución.<br/>- Coordinación de aclaraciones de proyecto, propuestas de solución y documentación asociada.<br/>- Apoyo técnico en la redacción y tramitación de modificados, precios contradictorios y trabajos no previstos.<br/> <br/>Apoyo a la planificación, control de plazos y afecciones:<br/>- Seguimiento del programa de trabajos del contratista.<br/>- Identificación temprana de desviaciones de plazo, interferencias y riesgos.<br/>- Coordinación de actuaciones entre distintas técnicas y contratos concurrentes.<br/>- Propuesta de medidas correctoras para minimizar afecciones a la explotación ferroviaria.<br/> <br/>Control documental y calidad:<br/>- Supervisión de la documentación generada por la ACO y por el contratista.<br/>- Coordinación de la elaboración del proyecto construido y documentación final de obra.<br/>- Verificación del cumplimiento de los procedimientos de calidad aplicables.<br/>- Interlocución con las áreas de calidad y seguridad del cliente cuando proceda.<br/> <br/>Seguridad y salud / medio ambiente:<br/>- Coordinación con el Coordinador de Seguridad y Salud y resto de agentes implicados.<br/>- Seguimiento del cumplimiento de los Planes de Seguridad y Salud.<br/>- Apoyo a la Dirección de Obra en la gestión de incidencias de seguridad.<br/>Vigilancia del cumplimiento de condicionantes ambientales de la obra.<br/><br/>Fase de pruebas y puesta en servicio<br/>- Responsabilidad directa de los trabajos de la ACO durante la fase de pruebas.<br/>- Coordinación de pruebas funcionales, ensayos y verificaciones.<br/>- Seguimiento de subsanaciones y cierre de incidencias previas a la puesta en servicio.<br/>- Apoyo técnico a la Dirección de Obra en recepciones y conformidades provisionales.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación: Ingeniería Técnica Industrial, Grado en Ingeniería Industrial, Grado en Ingeniería de Telecomunicación, Máster en Ingeniería de Telecomunicación.<br/>- Experiencia en: CTC, Puestos de Mando.<br/>- Años de experiencia en el puesto: 2 años<br/>- Años de experiencia global: al menos 5 años<br/>- Programas: Paquete Office - nivel usuario<br/>- Disponibilidad para viajar con frecuencia<br/>- Carnet de conducir<br/></p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "28077 - Ingeniero/a Asistencia Obra Ferroviara Despliegue CTC Ferroviario",
+  "status": "open",
+  "title": "Ingeniero/a Asistencia Obra Ferroviara Despliegue CTC Ferroviario",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371800"
  },
  "3372199": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372199",
