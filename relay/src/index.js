@@ -4,6 +4,7 @@
 //   - SEPI y EFE: no responden (SEPI) o dan 403 (EFE) a las IP de Actions.
 //   - Fundación de la Universidad de La Rioja: HTTP 429 a las IP de Actions.
 //   - Ineco (ePreselec): Imperva da 405 a un cliente sin agente de navegador; desde aquí, con él, entra.
+//   - EMASESA: timeout desde Actions desde el 2026-11-18.
 //
 //   POST|GET /?url=<codificada>   con cabeceras x-ts y x-firma
 //
@@ -23,6 +24,7 @@ export const ORIGENES = new Set([
   "https://fundacion.unirioja.es",
   // Ineco (ofertas ordinarias en ePreselec, tras Imperva): entra con agente de navegador desde Cloudflare.
   "https://ineco.epreselec.com",
+  "https://www.emasesa.com",
   // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
   "https://rrhh.uib.cat",
   "https://aps.unirioja.es",
