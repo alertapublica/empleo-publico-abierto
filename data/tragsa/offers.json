@@ -28582,6 +28582,103 @@
   "title": "Titulado/a Universitario/a - Tramitación Verificaciones y Auditoría Fondos Europeos Estructurales (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58719"
  },
+ "58722": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58722",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58722",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Valencia",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-18T16:37:31+00:00",
+  "id": "tragsa:58722",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": "Valencia",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-18",
+  "ref": "58722",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Licenciados/as o Graduados/as + Máster o Ingenieros/as o Arquitectos/as para dar apoyo a Proyectos de Emergencias en València/Valencia.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: Paterna o La Eliana con desplazamientos puntuales a otros municipios</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaboración, redacción y revisión de informes en tareas de apoyo a las necesidades de las emergencias derivadas de las consecuencias de la DANA 2024.</li><li>Elaboración de cartografía de riesgos.</li><li>Apoyo en elaboración de protocolos y/o planes de actuación municipal.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación universitaria oficial de Licenciatura, o Diplomatura o Grado + Máster Universitario, Arquitectura o Ingeniería (nivel 3 MECES) (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Experiencia en el ámbito de la protección civil o gestión de emergencias (con contrato laboral y/o académico).</li><li>Formación específica acreditada en geografía de más de 100 horas.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación universitaria oficial de Licenciatura, o Diplomatura o Grado + Máster Universitario, Arquitectura o Ingeniería (nivel 3 MECES) (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación universitaria oficial de Licenciatura, o Diplomatura o Grado + Máster Universitario, Arquitectura o Ingeniería (nivel 3 MECES) (Titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Experiencia en el ámbito de la protección civil o gestión de emergencias (con contrato laboral y/o académico).</li><li>Formación específica acreditada en geografía de más de 100 horas.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en el ámbito de protección civil o gestión de emergencias.</li></ul>Otros Factores Meritorios<ul><li>Experiencia previa en elaboración de cartografía de riesgos y de protocolos (con contrato laboral y/o académico).</li><li>Experiencia en la redacción de informes técnicos relacionados con riesgos, protocolos o emergencias (con contrato laboral y/o académico).</li><li>Experiencia en el sector público (con contrato laboral y/o académico).</li><li>Formación específica en Sistemas de Información Geográfica (SIG) superior a 50 horas.</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en el ámbito de protección civil o gestión de emergencias.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en el ámbito de protección civil o gestión de emergencias.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Experiencia previa en elaboración de cartografía de riesgos y de protocolos (con contrato laboral y/o académico).</li><li>Experiencia en la redacción de informes técnicos relacionados con riesgos, protocolos o emergencias (con contrato laboral y/o académico).</li><li>Experiencia en el sector público (con contrato laboral y/o académico).</li><li>Formación específica en Sistemas de Información Geográfica (SIG) superior a 50 horas.</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada con una duración estimada de 12 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea. <br/>- Jornada completa de 37,5h/semana.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a o Graduado/a + Máster o Ingeniero/a o Arquitecto/a - Apoyo Proyectos Emergencias (Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58722"
+ },
  "58723": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58723",
   "category": "Específica",
@@ -30512,6 +30609,118 @@
   "status": "open",
   "title": "Ingeniero/a o Ingeniero/a Técnico/a o Graduado/a o Graduado/a + Máster Oficial en Ingeniería Agricola o Agrónoma - Apoyo técnico expropiaciones y valoraciones agrarias (Cataluña)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58786"
+ },
+ "58790": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58790",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58790",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Zaragoza",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-18T16:37:31+00:00",
+  "id": "tragsa:58790",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": "Zaragoza",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "58790",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Diplomado/a o Graduado/a en Biblioteconomía o Información y Documentación para dar apoyo en la digitalización patrimonial del ámbito hídrico en Zaragoza.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Zaragoza</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo en la gestión documental y digitalización patrimonial de expedientes de títulos concesionales y otra documentación de antiguedad, incluyendo la recopilación y actualización de información en los sistemas del organismo, preparación y archivo de documentación, asistencia en el proceso de digitalización y verificación de la calidad del material digitalizado.</li></ul>",
+    "level": 3,
+    "title": "Ámbito de Actuación"
+   },
+   {
+    "html": "<ul><li>Realización de trabajos de archivo en apoyo de un proceso de digitalización patrimonial.</li><li>Selección, extracción y devolución, limpieza y preparación de la documentación a digitalizar.</li><li>Labores de conservación preventiva en función del estado de la documentación.</li><li>Grabación de datos en Gestor Documental y extracción de información mediante listados e informes.</li><li>Apoyo a la digitalización en el caso de formatos complejos y control de calidad.</li><li>Apoyo en edición de las imágenes mediante Photoshop o similar.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación de Diplomatura en Biblioteconomía y Documentación o Grado en Información y Documentación (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia en la titulación requerida (Grupos de cotización 1 y/o 2) (con contrato laboral y/o académico).</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B en vigor y válido en España.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación de Diplomatura en Biblioteconomía y Documentación o Grado en Información y Documentación (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación de Diplomatura en Biblioteconomía y Documentación o Grado en Información y Documentación (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia en la titulación requerida (Grupos de cotización 1 y/o 2) (con contrato laboral y/o académico).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B en vigor y válido en España.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Cursos y/o formación relacionada con gestión de archivos y/o bibliotecas.</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en el sector público como titulado/a (Grupos de cotización 1 y/o 2) (con contrato laboral y/o académico).</li><li>Desde 3 meses Hasta 6 meses de experiencia en trabajos documentales ligados a gestión hídrica (con contrato laboral y/o académico).</li></ul>Otros Factores Meritorios<ul><li>Cursos y/o formación específica y/o trabajos y/o experiencia en el ámbito de la conservación y patrimonio.</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Cursos y/o formación relacionada con gestión de archivos y/o bibliotecas.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Cursos y/o formación relacionada con gestión de archivos y/o bibliotecas.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en el sector público como titulado/a (Grupos de cotización 1 y/o 2) (con contrato laboral y/o académico).</li><li>Desde 3 meses Hasta 6 meses de experiencia en trabajos documentales ligados a gestión hídrica (con contrato laboral y/o académico).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Cursos y/o formación específica y/o trabajos y/o experiencia en el ámbito de la conservación y patrimonio.</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada de 9 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/s seleccionada/s.<br/>- Jornada completa de 37,5h/semana.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Diplomado/a o Graduado/a en Biblioteconomía o Información y Documentación - Digitalización Patrimonial (Zaragoza)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58790"
  },
  "58791": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58791",

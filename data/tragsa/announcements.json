@@ -881,6 +881,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:f13d9448f7b9": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-18",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-18T16:37:31+00:00",
+  "location": null,
+  "process": "Tasa de reposición específica de Estudios Sociológicos y Estadísticos de Tragsatec",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-especifica-estudios-sociologicos-estadisticos-tragsatec/Paginas/default.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación de las calificaciones provisionales de las pruebas orales técnico-profesionales del proceso selectivo para la cobertura de puestos de trabajo incluidos en la convocatoria de la tasa de reposición específica para la ejecución de los servicios de asistencia técnica para la realización de trabajos de campo de estudios de carácter sociológico y estadístico de la Empresa Tragsatec de las personas candidatas nº4027, 4121, 4231 y 4379 en los bloques 20, 49, 72, 76, 83, 103, 123, 145, 190, 194, 212, 213, 227, 249 y 268.",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-especifica-estudios-sociologicos-estadisticos-tragsatec/Paginas/default.aspx",
+  "via": "tasa"
+ },
  "tragsa:f679252dfb46": {
   "access": "libre",
   "apply_url": null,
