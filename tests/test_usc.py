@@ -104,6 +104,11 @@ class Ficha(unittest.TestCase):
         with self.assertRaises(SourceLayoutError):
             usc.parse_list(html)
 
+    def test_tres_guiones_tambien_es_sin_plazo(self):
+        # La próxima 15/2026 salió con «---» (2026-11-18); la 14/2026, con «----».
+        html = fixture("usc-convocatorias.html").replace("<dd>----</dd>", "<dd>---</dd>", 1)
+        self.assertIsNone(usc.parse_list(html)[3]["date"])
+
     def test_proxima_sin_plazo_detiene(self):
         with self.assertRaises(SourceLayoutError):
             usc.parse_ficha(fixture("usc-ficha-14-proxima.html"))
