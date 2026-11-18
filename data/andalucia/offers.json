@@ -581,5 +581,62 @@
   "status": "open",
   "title": "PRODUCTOR/A -SAN JUAN DE AZNALFARACHE",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693646.html"
+ },
+ "693967": {
+  "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693967.html",
+  "category": null,
+  "closed_at": null,
+  "code": "01-2026-52095",
+  "company": "Agencia de Emergencias de Andalucía",
+  "contract": "Duración determinada- interinidad",
+  "country": null,
+  "deadline": "2026-11-23",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T13:37:30+00:00",
+  "id": "andalucia:693967",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-23",
+  "location": "Sevilla (Sevilla)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-19",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "693967",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p><strong>Tipo de convocatoria:</strong> Oferta genérica SAE</p><p><strong>Perfil del puesto de trabajo:</strong> Perfil de soporte administrativo</p><p><strong>Titulación oficial requerida:</strong> Grados medios de FP (CFGM)/ Formación profesional de primer grado</p><p><strong>Titulación específica requerida:</strong> Rama Administrativa</p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p>Realiza tareas diversas de oficina y de apoyo administrativo de nivel básico, conforme a normas, procedimientos o instrucciones y bajo la supervisión de un/una responsable. Entre sus funciones se encuentran: atender al usuario/a interno o externo de su área de trabajo conforme a un protocolo; realizar el control de correspondencia con otras unidades organizativas o centros de trabajo de la Agencia; realizar tareas de archivo y registro de la documentación generada por la unidad organizativa donde se encuentra; realizar trámites de verificación de datos y documentos a requerimiento de técnicos, de acuerdo con instrucciones o procedimientos establecidos; registrar y actualizar la información recogida en aplicaciones corporativas u otras bases de datos de su ámbito de actuación.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Ver en la web del SAE.</p>",
+    "level": 2,
+    "title": "Otros requisitos"
+   },
+   {
+    "html": "<ul><li><a href=\"https://saempleo.es/ags/candidaturas/lista-ofertas-publicas/lista?currentPage=1&amp;pageSize=10\">Acceso web SAE</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases de la oferta"
+   }
+  ],
+  "source": "andalucia",
+  "source_title": null,
+  "status": "open",
+  "title": "AUXILIAR GESTIÓN",
+  "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693967.html"
  }
 }
