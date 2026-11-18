@@ -2,11 +2,11 @@
 
 Listado `/es/investigar-en-la-usc/convocatorias` (Drupal, 12 tarjetas por página, `?page=N`; títulos y fichas en
 gallego también en la versión en castellano). Cada tarjeta (`article.ml-notice`) trae el título, que enlaza la
-ficha, y «Plazo de presentación de la solicitud» (una fecha, «----» en la próxima convocatoria anunciada o
+ficha, y «Plazo de presentación de la solicitud» (una fecha, «----» o «---» en la próxima convocatoria anunciada o
 «Proceso cancelado»). La etiqueta «Convocatoria abierta» sigue con el plazo vencido: no se usa. El listado no va
 por fecha (la 02/2026 sale en la segunda página, entre las de 2025): se leen al menos `MIN_PAGES` páginas y se
 sigue mientras alguna tarjeta traiga una fecha de los últimos `HORIZON_DAYS` días, hasta `MAX_PAGES`. Otra cosa que
-una fecha, «----» o «Proceso cancelado» en la tarjeta detiene la fuente.
+una fecha, «----», «---» o «Proceso cancelado» en la tarjeta detiene la fuente.
 
 Son tandas («Convocatoria Pública Ordinaria 13/2026 de contratración de persoal para colaborar nas actividades e
 proxectos de investigación», 13 ordinarias y varias urgentes en 2026; la errata es del original): unas 13 plazas por
@@ -53,7 +53,7 @@ PERIOD = re.compile(r"Data publicación:\s*(\d{2}/\d{2}/\d{4})\.\s*O prazo de pr
 # Cualquier mención del fin del plazo de solicitudes en los documentos de la convocatoria (una corrección
 # que lo amplía, otra redacción): todas deben dar el mismo día que la etiqueta de la convocatoria.
 ANY_END = re.compile(r"prazo de presentación de solicitudes.*?\bata o (?:día )?(\d{2}/\d{2}/\d{4})", re.I)
-NO_DATE = {"----", "Proceso cancelado"}
+NO_DATE = {"----", "---", "Proceso cancelado"}  # «---» en la próxima 15/2026 (2026-11-18)
 SIZE = re.compile(r"\s*\[(?:pdf|docx?|odt)\s*-\s*[\d.,]+\s*[KM]B\]$", re.I)
 
 
