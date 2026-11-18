@@ -87,7 +87,7 @@ El detalle de cada una está en el docstring de su módulo. Aquí, solo lo que c
 | Fuente | Qué falta para el analizador |
 |---|---|
 | **ADIF** | Ver una oferta abierta. Liferay con HTML de servidor (`li.col-12 > div.oep-wrapper-list`). Su WAF (Akamai) da 403 si el `User-Agent` lleva la URL de GitHub o falta `Accept`; con UA corto y `Accept: text/html` da 200, también desde Actions. Procesos en curso y resueltos ya se podrían anunciar (título, fecha, estado, plazas) |
-| **EMASESA** (Sevilla) | Ver un concurso abierto. «Concursos públicos» es una tabla sin ficha por concurso (bases e inscripción por formulario POST; `robots.txt` prohíbe URL con parámetros y PDF): se detiene si algún concurso tiene la fecha fin sin vencer o si «Procesos selección» deja de decir «No hay procesos de selección». Tres concursos en septiembre y octubre de 2026 |
+| **EMASESA** (Sevilla) | Ver un concurso abierto. «Concursos públicos» es una tabla sin ficha por concurso (bases e inscripción por formulario POST; `robots.txt` prohíbe URL con parámetros y PDF): se detiene si algún concurso tiene la fecha fin sin vencer o si «Procesos selección» deja de decir «No hay procesos de selección». Tres concursos en septiembre y octubre de 2026. Por el Worker de `relay/` (`VIA_RELAY_CF`): timeout desde Actions desde el 2026-11-18 a las 05:07 UTC, 200 desde una IP doméstica |
 | **Fundación Universidad de La Rioja** | Ver una oferta abierta. Por el Worker de `relay/` (`VIA_RELAY_CF`): da HTTP 429 a las IP de Actions y también al relay de Piensa (2026-11-12); por el Worker, 200 (2026-11-15). Hoy: «No hay ofertas de empleo abiertas en este momento». Muy poco volumen |
 
 ## Siguiente tanda (T2): pendientes
