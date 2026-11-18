@@ -7504,7 +7504,7 @@
  "3335111": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3335111",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T14:07:25+00:00",
   "code": "28720",
   "company": "Ineco",
   "contract": null,
@@ -7521,7 +7521,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Toledo",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -7559,7 +7559,7 @@
   ],
   "source": "ineco",
   "source_title": "28720 - Técnico/a de Infraestructura y Vía",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Infraestructura y Vía",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3335111"
  },

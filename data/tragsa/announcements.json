@@ -125,6 +125,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026-puestos-pre-tragsatec/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:2cc4e4e28408": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-18",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-18T14:07:25+00:00",
+  "location": null,
+  "process": "Tasa de reposición 2025-2026",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación de las calificaciones provisionales de las pruebas psicotécnica y competencial celebradas el día 5 de noviembre de 2026 y de las calificaciones provisionales de méritos de las personas admitidas en el proceso selectivo en turno general para la provisión de los puestos de trabajo incluidos en la tasa de reposición ordinaria de los años 2025 y 2026 (TRO 25-26) del Grupo Tragsa (Tragsa y Tragsatec) en el cupo de reserva para personas con discapacidad que han resultado desiertos en la fase de admisión.",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026/Paginas/default.aspx",
+  "via": "tasa"
+ },
  "tragsa:2ccd0a780af2": {
   "access": "libre",
   "apply_url": null,
