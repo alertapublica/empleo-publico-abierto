@@ -201,5 +201,10 @@
   "before": "2026-11-16",
   "kind": "deadline_changed",
   "offer": "senasa:21-26"
+ },
+ {
+  "at": "2026-11-18T21:07:27+00:00",
+  "kind": "new",
+  "offer": "senasa:87-26"
  }
 ]

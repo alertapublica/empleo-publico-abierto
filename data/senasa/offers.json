@@ -281,6 +281,48 @@
   "title": "Titulado-a Superior o Titulado-a Medio o Grado. Licencias Ferroviarias",
   "url": "https://www.senasa.es/recursos/adobePDF/OfertasERP/79-26.pdf"
  },
+ "87-26": {
+  "apply_url": "https://www.senasa.es/index.php?idPag=13&lang=es-ES",
+  "category": null,
+  "closed_at": null,
+  "code": "87-26",
+  "company": "SENASA",
+  "contract": "Temporal",
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T21:07:27+00:00",
+  "id": "senasa:87-26",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-01",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-07-17",
+  "ref": "87-26",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.senasa.es/recursos/adobePDF/OfertasERP/87-26.pdf\">Convocatoria 87-26 (PDF)</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "senasa",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado-a Superior o Titulado-a Medio o Grado. SOV y Trabajos Aéreos",
+  "url": "https://www.senasa.es/recursos/adobePDF/OfertasERP/87-26.pdf"
+ },
  "93-26": {
   "apply_url": "https://www.senasa.es/index.php?idPag=13&lang=es-ES",
   "category": null,
