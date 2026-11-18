@@ -1,17 +1,17 @@
 {
  "emasesa": {
   "desde": "2026-11-18T05:07:34+00:00",
-  "lecturas": 5,
+  "lecturas": 6,
   "resultado": "error"
  },
- "gpex": {
-  "desde": "2026-11-18T07:07:27+00:00",
+ "irb": {
+  "desde": "2026-11-18T07:37:28+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-17T12:37:24+00:00",
-  "lecturas": 18,
+  "lecturas": 19,
   "resultado": "error"
  }
 }

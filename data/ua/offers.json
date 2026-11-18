@@ -404,6 +404,58 @@
   "title": "Personal investigador colaborador para colaborar con la línea de investigación financiada «PRPH2-GENT»",
   "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi91/convocatoria-i-pi-91-26.html"
  },
+ "2026-pi93": {
+  "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi93/convocatoria-i-pi-93-26.html",
+  "category": "Investigador/a Júnior",
+  "closed_at": null,
+  "code": "I-PI 93-26",
+  "company": "Universidad de Alicante",
+  "contract": "contratación indefinida",
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Instituto Universitario de Investigación en Arqueología y Patrimonio Histórico (INAPH)",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T07:37:28+00:00",
+  "id": "ua:2026-pi93",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-02",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-19",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-11-18",
+  "ref": "2026-pi93",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p><strong>RESOLUCIÓN de 11 de noviembre de 2026, del Rectorado de la Universidad de Alicante, por la que se convoca un proceso selectivo de preselección para la contratación indefinida de personal de investigación de la categoría de personal investigador júnior para colaborar con la línea de investigación financiada «Excavaciones arqueológicas submarinas en el Portitxol (Xàbia)». Referencia: I-PI 93-26</strong></p><p><strong>Primer proyecto en el que va a colaborar:</strong></p><p><strong>Proyecto Contratación de los trabajos de recuperación, documentación y conservación de los restos arqueológicos del yacimiento submarino del Cantalar del Portitxol</strong>.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p><strong>Plazas Personal Investigador Proy. Investigación</strong></p>\n<p><strong>Investigador/a Júnior</strong></p>\n<p><strong>Convocatoria I-PI 93-26</strong></p>\n<p><strong>DOGV: <a href=\"https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi93/01.-convocatoria-dogv-i-pi-93-26-es.pdf\">18/11/2026 </a> </strong></p>\n<p><strong>Euraxess</strong></p>\n<p><strong><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/baremo-2024.pdf\">Baremo</a></strong> </p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p><strong>PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 19 de noviembre al 02 de diciembre de 2026</strong></p>\n\n<p><a href=\"https://cvnet.cpd.ua.es/eadmua/Tramites/IniciarTramite?pCodigoTramite=TRAM_CONTPILAB_SOL\">Solicitud de participación</a></p>\n<p>(Debe acentuar siempre que corresponda el nombre y apellidos en la solicitud, independientemente de que escriba en letras mayúsculas)</p>\n<p>Al pinchar sobre \"Solicitud de participación\" irá al trámite de <em>Solicitud de plazas personal investigador para proyectos de investigación</em> y deberá elegir en el desplegable ‘Convocatoria’ la referencia de la convocatoria a la que quiere presentarse de entre las que tienen el plazo de presentación de solicitudes abierto.</p>\n<p>Guía de ayuda / Applicant guide</p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/guia-para-el-solicitante.pdf\">Guía para el solicitante</a></p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/guide-on-how-to-apply-for-research-staff-positions-on-research-projects.pdf\">Guide on how to apply for research staff positions</a></p>\n<p>Modelo de Currículum, de uso obligatorio (<a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/curriculum-e-adm.docx\">Word</a>, <a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/curriculum-e-adm.pdf\">Pdf</a>)</p>\n<p><strong>Muy importante </strong></p>\n<p><strong>(*) En la siguiente web puede consultar toda la información sobre traducciones de documentos en idioma extranjero aceptadas por la Universidad de Alicante: <a href=\"https://sga.ua.es/es/normativa-academica/legalizacion/legalizacion-de-documentos.html\">Traducción Oficial de Documentos</a></strong></p>",
+    "level": 2,
+    "title": "Solicitudes"
+   }
+  ],
+  "source": "ua",
+  "source_title": null,
+  "status": "open",
+  "title": "Personal investigador júnior para colaborar con la línea de investigación financiada «Excavaciones arqueológicas submarinas en el Portitxol (Xàbia)»",
+  "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi93/convocatoria-i-pi-93-26.html"
+ },
  "2026-ptgai49": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai49/convocatoria-i-ptgai-49-26.html",
   "category": "Especialista",

@@ -88,5 +88,52 @@
   "status": "open",
   "title": "Personal apoyo a la investigación",
   "url": "https://navarrabiomed.es/es/empleo/26-43-personal-apoyo-investigacion"
+ },
+ "26-44": {
+  "apply_url": "https://navarrabiomed.es/es/empleo/26-44-personal-coordinador-de-estudios",
+  "category": null,
+  "closed_at": null,
+  "code": "26-44",
+  "company": "Fundación Miguel Servet",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-18T07:37:28+00:00",
+  "id": "navarrabiomed:26-44",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": "Pamplona (Navarra)",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-18",
+  "ref": "26-44",
+  "region": "Comunidad Foral de Navarra",
+  "sections": [
+   {
+    "html": "<p>Navarrabiomed precisa contratar personal coordinador de estudios para el Servicio científico-técnico de Ensayos Clínicos. </p>\n<p>La persona seleccionada se incorporará en la Plataforma de Ensayos Clínicos de Navarrabiomed a cargo del Servicio de Oncología Médica del Hospital Universitario de Navarra<br/>\n </p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://navarrabiomed.es/sites/default/files/archivos/empleo/26-44-personal-coordinador-de-estudios.pdf\">Bases del proceso</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "navarrabiomed",
+  "source_title": "26-44 Personal coordinador de estudios",
+  "status": "open",
+  "title": "Personal coordinador de estudios",
+  "url": "https://navarrabiomed.es/es/empleo/26-44-personal-coordinador-de-estudios"
  }
 }
