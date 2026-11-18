@@ -88,5 +88,118 @@
   "at": "2026-11-17T05:07:26+00:00",
   "kind": "closed",
   "offer": "senasa:98-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "new",
+  "offer": "senasa:105-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:98-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:98-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:97-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:97-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:93-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:93-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:79-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:79-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:73-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:73-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:69-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:69-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:68-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:68-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:41-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:41-26"
+ },
+ {
+  "at": "2026-11-18T17:37:25+00:00",
+  "kind": "reopened",
+  "offer": "senasa:21-26"
+ },
+ {
+  "after": "2026-12-01",
+  "at": "2026-11-18T17:37:25+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "senasa:21-26"
  }
 ]
