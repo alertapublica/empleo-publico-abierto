@@ -109,9 +109,9 @@ FURIOJA = SentinelSource(
     empty_text="No hay ofertas de empleo abiertas en este momento",
 )
 FURIOJA.scope = "La Rioja"
-RENFE = SentinelSource(
-    id="renfe", name="Renfe", homepage="https://empleo.renfe.com/",
-    page="https://empleo.renfe.com/search/",
+RENFE = SuccessFactorsSource(
+    id="renfe", name="Renfe", host="https://empleo.renfe.com", company="Renfe",
+    categories=[(None, "/search/")],
     empty_text="no hay ninguna vacante acorde a esta categoría en período de inscripción",
 )
 

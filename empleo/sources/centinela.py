@@ -1,6 +1,6 @@
 """Fuente centinela: vigila una página vacía sin saber aún cómo será con ofertas.
 
-ADIF y Renfe no tienen hoy ninguna convocatoria abierta, así que su analizador no se puede
+ADIF no tiene hoy ninguna convocatoria abierta, así que su analizador no se puede
 escribir ni probar. Mientras siga el texto oficial de «no hay ofertas», la empresa aparece sin
 ofertas. Cuando desaparece, la ingesta de esa fuente falla a propósito: es el aviso de que hay
 algo que leer y de que ya existe el HTML real con el que escribir el analizador.

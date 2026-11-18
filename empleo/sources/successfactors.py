@@ -53,9 +53,59 @@ def _closing_date(value: str) -> str | None:
     return moment.date().isoformat()
 
 
+def _parse_tiles(soup: BeautifulSoup, tiles, base: str) -> tuple[list[dict], int]:
+    """Variante en mosaico (Renfe): `li.job-tile` con campos rotulados y «Mostrando N puesto(s)», sin fecha.
+
+    Cada campo sale repetido (escritorio y móvil): se toma el de escritorio. La siguiente página no se
+    sabe leer aún, así que si el mosaico se llena se detiene en vez de leer a medias.
+    """
+    rows = []
+    for tile in tiles.select("li.job-tile"):
+        link = tile.select_one("a.jobTitle-link")
+        match = JOB_ID.search(link["href"]) if link and link.get("href") else None
+        if not match:
+            raise SourceLayoutError("SuccessFactors: puesto del mosaico sin enlace a la oferta")
+        fields = {}
+        for field in tile.select(".sub-section-desktop .section-field"):
+            label = field.select_one(".section-label")
+            value = field.select_one("div[id$='-value']")
+            if label is not None and value is not None:
+                fields.setdefault(_clean(label.get_text(" ")), _clean(value.get_text(" ")))
+        rows.append({
+            "ref": match.group(1),
+            "title": _clean(link.get_text(" ")),
+            "url": urljoin(base, link["href"]),
+            "company": fields.get("Empresa") or None,
+            "department": fields.get("Tipo de puesto") or None,
+            "facility": None,
+            "published_on": None,
+        })
+    label = soup.select_one("#tile-search-results-label")
+    shown = re.fullmatch(r"Mostrando (\d+) puestos?", _clean(label.get_text(" "))) if label else None
+    if not shown or int(shown.group(1)) != len(rows):
+        raise SourceLayoutError("SuccessFactors: el mosaico no dice «Mostrando N puestos» o no coincide")
+    per_page = tiles.get("data-per-page", "")
+    if not per_page.isdigit() or int(per_page) <= 0:
+        raise SourceLayoutError("SuccessFactors: el mosaico no dice cuántos puestos caben por página")
+    if len(rows) >= int(per_page):
+        raise SourceLayoutError("SuccessFactors: el mosaico llena la página y la siguiente no se sabe leer")
+    return rows, len(rows)
+
+
+def _empty_notice(html: str, text: str) -> bool:
+    """Aviso propio de «sin ofertas» (Renfe): dentro de `#noresults` y sin listado de puestos en la página."""
+    soup = BeautifulSoup(html, "html.parser")
+    notice = soup.select_one("#noresults")
+    return (notice is not None and soup.select_one("ul#job-tile-list, table#searchresults") is None
+            and text in _clean(notice.get_text(" ")))
+
+
 def parse_listing(html: str, base: str) -> tuple[list[dict], int]:
     """Filas de una página de categoría y total declarado de resultados."""
     soup = BeautifulSoup(html, "html.parser")
+    tiles = soup.select_one("ul#job-tile-list")
+    if tiles is not None:
+        return _parse_tiles(soup, tiles, base)
     table = soup.select_one("table#searchresults")
     if table is None:
         # Aviso «sin resultados» de la plataforma, igual en castellano y en catalán (BSM): «A continuación,
@@ -121,9 +171,11 @@ class SuccessFactorsSource(Source):
     """`categories` son pares (tipo de contrato o None, ruta `/go/...`)."""
 
     def __init__(self, id: str, name: str, host: str, company: str,
-                 categories: list[tuple[str | None, str]], location: str | None = None) -> None:
+                 categories: list[tuple[str | None, str]], location: str | None = None,
+                 empty_text: str | None = None) -> None:
         self.id, self.name, self.company = id, name, company
         self.location = location  # si el microdato de la ficha no da la localidad (BSM pone «Selecció»)
+        self.empty_text = empty_text  # aviso propio de «sin ofertas» sin el «0» de la plataforma (Renfe)
         self.host = host.rstrip("/")
         self.homepage = f"{self.host}/"
         self.categories = categories
@@ -135,7 +187,10 @@ class SuccessFactorsSource(Source):
         total = 0
         for _ in range(MAX_PAGES):
             url = base if not found else f"{base}{len(found)}/"
-            rows, total = parse_listing(http.get(url), self.host)
+            html = http.get(url)
+            if not found and self.empty_text and _empty_notice(html, self.empty_text):
+                break
+            rows, total = parse_listing(html, self.host)
             new = [row for row in rows if row["ref"] not in found]
             if not new:
                 break
@@ -156,7 +211,7 @@ class SuccessFactorsSource(Source):
                     self._rows[row["ref"]] = {**row, "kind": kind}
         return [
             ListedOffer(
-                ref=ref, title=row["title"], company=self.company, url=row["url"],
+                ref=ref, title=row["title"], company=row.get("company") or self.company, url=row["url"],
                 apply_url=f"{self.host}/talentcommunity/apply/{ref}/?locale=es_ES",
                 kind=row["kind"],
             )
