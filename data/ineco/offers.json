@@ -12402,7 +12402,7 @@
  "3376869": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376869",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T12:37:34+00:00",
   "code": "28938",
   "company": "Ineco",
   "contract": null,
@@ -12419,7 +12419,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -12457,7 +12457,7 @@
   ],
   "source": "ineco",
   "source_title": "28938 - Asistente administrativo/a",
-  "status": "open",
+  "status": "closed",
   "title": "Asistente administrativo/a",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376869"
  },
