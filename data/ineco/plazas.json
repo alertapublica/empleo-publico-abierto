@@ -33003,7 +33003,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-111": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-111.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -33155,16 +33155,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-117": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-117.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-117.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-117",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media en: Grado en Ingeniería Civil.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33176,16 +33181,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-118": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-118.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-118.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-118",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media en: Grado en Ingeniería Civil.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33197,16 +33207,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-119": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-119.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-119.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-119",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Salamanca",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33218,6 +33233,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-120": {
+  "annex_tries": 1,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-120.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -33239,16 +33255,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-121": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-121.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-121.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-121",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33260,16 +33281,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-122": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-122.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-122.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-122",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "León",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33281,6 +33307,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-123": {
+  "annex_tries": 1,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-123.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -33302,16 +33329,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-124": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-124.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-124.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEM-124",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -33323,6 +33355,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEM-125": {
+  "annex_tries": 1,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEM-125.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",

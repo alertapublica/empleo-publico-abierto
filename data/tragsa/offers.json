@@ -28879,6 +28879,103 @@
   "title": "Técnico/a de Apoyo - Proyectos Delineación Infraestructuras Hidráulicas (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58728"
  },
+ "58731": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58731",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58731",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Coord.Prod./Act.Comercial S.I.",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-18T15:37:28+00:00",
+  "id": "tragsa:58731",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Palma Mallorca",
+  "missed_runs": 0,
+  "opens_on": "2026-11-18",
+  "parent_ref": null,
+  "place": "Palma de Mallorca",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "58731",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Programador/a Java para un importante proyecto de la Administración Pública en Palma Mallorca</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Palma Mallorca</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión de aplicaciones informáticas.</li><li>Desarrollo y mantenimiento de aplicaciones.</li><li>Apoyo técnico a usuarios/as.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia de al menos 6 meses (con contrato laboral, académica o ambas) dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollo con lenguaje Java</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en uso de SGBDR ORACLE (SQL y PL/SQL) (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia de al menos 6 meses (con contrato laboral, académica o ambas) dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia de al menos 6 meses (con contrato laboral, académica o ambas) dilatada en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollo con lenguaje Java</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en uso de SGBDR ORACLE (SQL y PL/SQL) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en Python</li></ul>Otros Factores Meritorios<ul><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en frameworks Java 2EE, Hibernate, Sttruts, EJB, JSF y/o Primefaces (se comprobará en valoración técnica)</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en HTML y/o CSS</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en el uso de XML</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en Javascript: jQuery</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en Python</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en Python</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en frameworks Java 2EE, Hibernate, Sttruts, EJB, JSF y/o Primefaces (se comprobará en valoración técnica)</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en HTML y/o CSS</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en el uso de XML</li><li>Experiencia con contrato laboral y/o académica desde 6 meses hasta 2 años en Javascript: jQuery</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada de 37,5 h semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de hasta un 50% de la jornada de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Programador/a Java (Palma de Mallorca)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58731"
+ },
  "58735": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58735",
   "category": "Específica",
@@ -30218,6 +30315,108 @@
   "status": "open",
   "title": "Graduado/a en Psicología - Selección UT2 - Contrato laboral formativo (Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58768"
+ },
+ "58776": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58776",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58776",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Ingeniería y Edificación",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-18T15:37:28+00:00",
+  "id": "tragsa:58776",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Sede Madrid Tragsatec",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-18",
+  "ref": "58776",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Arquitectos/as Técnicos/as, Ingenieros/as Técnicos/as o Graduados/as en Ingeniería para prestar apoyo en la revisión técnica alojamientos turísticos en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsatec</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Organizar y/o analizar la información disponible de alojamientos a visitar.</li><li>Recogida de información de características técnicas de alojamientos visitados.</li><li>Realización de informes técnicos sobre los resultados de las visitas.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado en Ingeniería de la Edificación o Grado en Edificación o Grado en Arquitectura Técnica o Grado en Fundamentos de Arquitectura (nivel MECES 2) o Ingeniería Técnica o Grado en Ingeniería (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Disponibilidad para realizar desplazamientos en la Comunidad de Madrid hasta un 50% del tiempo.</li><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado en Ingeniería de la Edificación o Grado en Edificación o Grado en Arquitectura Técnica o Grado en Fundamentos de Arquitectura (nivel MECES 2) o Ingeniería Técnica o Grado en Ingeniería (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Arquitectura Técnica (nivel MECES 2) o Grado en Ingeniería de la Edificación o Grado en Edificación o Grado en Arquitectura Técnica o Grado en Fundamentos de Arquitectura (nivel MECES 2) o Ingeniería Técnica o Grado en Ingeniería (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Disponibilidad para realizar desplazamientos en la Comunidad de Madrid hasta un 50% del tiempo.</li><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria acreditable en CAD (Diseño Asistido por Ordenadores)</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 6 meses de experiencia en inspección técnica y/o redacción de informes técnicos de edificios (experiencia académica y/o con contrato laboral)</li></ul>Otros Factores Meritorios<ul><li>Poseer conocimiento en mediciones de inmuebles con medidores láser (se comprobará en valoración técnica)</li><li>Poseer conocimiento de la normativa de ordenación de establecimientos hoteleros, alojamiento turístico y/o similares (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria acreditable en CAD (Diseño Asistido por Ordenadores)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria acreditable en CAD (Diseño Asistido por Ordenadores)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 6 meses de experiencia en inspección técnica y/o redacción de informes técnicos de edificios (experiencia académica y/o con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Poseer conocimiento en mediciones de inmuebles con medidores láser (se comprobará en valoración técnica)</li><li>Poseer conocimiento de la normativa de ordenación de establecimientos hoteleros, alojamiento turístico y/o similares (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>-Contrato de duración determinada estimada de 6 meses con posibilidad de prorroga por otros 6 meses, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con la tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/><br/>-Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 18/11/2026 hasta el próximo 2/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitectos/as Técnicos/as, Ingenieros/as Técnicos/as o Graduados/as en Ingeniería - Revisión técnica alojamientos turísticos (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58776"
  },
  "58786": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58786",
