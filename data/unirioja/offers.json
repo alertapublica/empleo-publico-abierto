@@ -39,5 +39,47 @@
   "status": "open",
   "title": "Técnica/o · Percepción de la igualdad de género en el alumnado universitario: implicaciones para el diseño de políticas educativas y estrategias coeducativas",
   "url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/"
+ },
+ "tau-protein": {
+  "apply_url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/",
+  "category": null,
+  "closed_at": null,
+  "code": "TAU Protein",
+  "company": "Universidad de La Rioja",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-18T09:07:30+00:00",
+  "id": "unirioja:tau-protein",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Logroño",
+  "missed_runs": 0,
+  "opens_on": "2026-11-19",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-18",
+  "ref": "tau-protein",
+  "region": "La Rioja",
+  "sections": [
+   {
+    "html": "<p>TÉCNICA/O: se convoca el proceso selectivo para la contratación como personal indefinido con cargo a financiación externa de carácter finalista del Proyecto TAU Protein, titulado: “Systematic manipulation of tau protein aggregation: bridging biochemical and pathological properties.</p><p>Investigador: Jónathan Heras Vicente.</p><p><strong>Plazo presentación de solicitudes: del 19 de noviembre al 3 de diciembre de 2026</strong></p><ul><li><a href=\"https://unirioja.sharepoint.com/:b:/r/sites/inv_publico/Documentos%20compartidos/Forms/AllItems.aspx?id=%2Fsites%2Finv%5Fpublico%2FDocumentos%20compartidos%2FContratos%5Fpersonal%2FTAUProtein%2FBor%5FTAU%2Epdf&amp;parent=%2Fsites%2Finv%5Fpublico%2FDocumentos%20compartidos%2FContratos%5Fpersonal%2FTAUProtein&amp;p=true&amp;share=cQqBr5KW%5FrFkSIqhYL3jLNTGEgUCnxpXKsRejmyUql%5F5MpabEw\">Convocatoria BOR</a><em> (18 de noviembre de 2026)</em></li><li><a href=\"https://unirioja.sharepoint.com/:w:/s/inv_publico/cQqvZFCIVuqFQrdRHTZ85dDbEgUCNSHEsPQ4RNZpK34oGgWUvg\">Impreso de solicitud</a></li></ul>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "unirioja",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnica/o · Systematic manipulation of tau protein aggregation: bridging biochemical and pathological properties",
+  "url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/"
  }
 }
