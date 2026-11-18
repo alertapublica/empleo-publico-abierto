@@ -1,3 +1,4 @@
+import re
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -128,6 +129,84 @@ class Pagination(unittest.TestCase):
         http = self.Http({base: page(1, 2, 5), base + "2/": page(1, 2, 5)})
         with self.assertRaises(SourceLayoutError):
             self.source().list_offers(http)
+
+
+class Mosaico(unittest.TestCase):
+    """Renfe: variante en mosaico de `/search/`, con la «Empresa» de cada puesto como entidad."""
+
+    class Http:
+        def __init__(self, html):
+            self.html = html
+
+        def get(self, url):
+            return self.html
+
+    def test_lee_el_puesto_real(self):
+        rows, total = sf.parse_listing(fixture("renfe-mosaico.html"), "https://empleo.renfe.com")
+        self.assertEqual((total, len(rows)), (1, 1))
+        row = rows[0]
+        self.assertEqual(row["ref"], "1377711557")
+        self.assertEqual(row["title"], "EAE26-11/3604 Técnico/a de Entrada Formador de la Escuela Técnica de Mantenimiento")
+        self.assertTrue(row["url"].startswith("https://empleo.renfe.com/job/Madrid-EAE26-113604-"))
+        self.assertEqual(row["company"], "Renfe Ingeniería y Mantenimiento")
+        self.assertEqual(row["department"], "Estructura de Apoyo")
+        self.assertIsNone(row["published_on"])
+
+    def test_la_empresa_del_puesto_es_la_entidad(self):
+        from empleo.sources import RENFE
+        [offer] = RENFE.list_offers(self.Http(fixture("renfe-mosaico.html")))
+        self.assertEqual(offer.company, "Renfe Ingeniería y Mantenimiento")
+        self.assertEqual(offer.apply_url, "https://empleo.renfe.com/talentcommunity/apply/1377711557/?locale=es_ES")
+
+    def test_pagina_vacia_real_de_renfe(self):
+        from empleo.sources import RENFE
+        self.assertEqual(RENFE.list_offers(self.Http(fixture("renfe-search.html"))), [])
+
+    def test_recuento_que_no_coincide_no_se_interpreta(self):
+        html = fixture("renfe-mosaico.html").replace("Mostrando 1 puesto", "Mostrando 2 puestos")
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(html, "https://empleo.renfe.com")
+
+    def test_mosaico_lleno_se_detiene(self):
+        html = fixture("renfe-mosaico.html").replace('data-per-page="27"', 'data-per-page="1"')
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(html, "https://empleo.renfe.com")
+
+    def test_aviso_de_vacio_junto_a_puestos_no_tapa_los_puestos(self):
+        # Si el aviso siguiera en la página (oculto) junto al mosaico, devolver [] cerraría las ofertas.
+        from empleo.sources import RENFE
+        aviso = ('<div id="noresults" style="display:none"><label>En este momento no hay ninguna vacante '
+                 'acorde a esta categoría en período de inscripción.</label></div>')
+        offers = RENFE.list_offers(self.Http(aviso + fixture("renfe-mosaico.html")))
+        self.assertEqual([o.ref for o in offers], ["1377711557"])
+
+    def test_aviso_de_vacio_fuera_de_noresults_no_vale(self):
+        from empleo.sources import RENFE
+        html = "<p>no hay ninguna vacante acorde a esta categoría en período de inscripción</p>"
+        with self.assertRaises(SourceLayoutError):
+            RENFE.list_offers(self.Http(html))
+
+    def test_dos_puestos_de_empresas_distintas(self):
+        html = fixture("renfe-mosaico.html")
+        tile = re.search(r'<li class="job-tile.*?</li>', html, re.S).group(0)
+        other = (tile.replace("1377711557", "1377711999").replace("EAE26-11/3604", "EAE26-11/3605")
+                 .replace("Renfe Ingeniería y Mantenimiento", "Renfe Viajeros"))
+        html = html.replace(tile, tile + other).replace("Mostrando 1 puesto", "Mostrando 2 puestos")
+        rows, total = sf.parse_listing(html, "https://empleo.renfe.com")
+        self.assertEqual(total, 2)
+        self.assertEqual([(r["ref"], r["company"]) for r in rows],
+                         [("1377711557", "Renfe Ingeniería y Mantenimiento"), ("1377711999", "Renfe Viajeros")])
+
+    def test_mosaico_sin_tamano_de_pagina_se_detiene(self):
+        for value in ('', 'data-per-page="x"'):
+            html = fixture("renfe-mosaico.html").replace('data-per-page="27"', value)
+            with self.assertRaises(SourceLayoutError):
+                sf.parse_listing(html, "https://empleo.renfe.com")
+
+    def test_pagina_inesperada_de_renfe_falla(self):
+        from empleo.sources import RENFE
+        with self.assertRaises(SourceLayoutError):
+            RENFE.list_offers(self.Http("<table><tr><td>Maquinista</td></tr></table>"))
 
 
 class FakeHttp:
