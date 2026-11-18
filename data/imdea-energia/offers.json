@@ -67,7 +67,7 @@
  "454": {
   "apply_url": "https://jobs.energy.imdea.org/es/offer/454",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T05:07:34+00:00",
   "code": "26.77 AT7 TEC",
   "company": "IMDEA Energía",
   "contract": "Contrato según legislación vigente",
@@ -82,7 +82,7 @@
   "kind": null,
   "listed_deadline": "2026-11-17",
   "location": "Móstoles",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -125,7 +125,7 @@
   ],
   "source": "imdea-energia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico de laboratorio para apoyo operacional y experimental general en instalaciones de procesos de alta temperatura",
   "url": "https://jobs.energy.imdea.org/es/offer/454"
  }

@@ -270,5 +270,30 @@
   "before": "2026-11-15",
   "kind": "deadline_changed",
   "offer": "idibaps:FU-346/2026"
+ },
+ {
+  "at": "2026-11-18T05:07:34+00:00",
+  "kind": "closed",
+  "offer": "idibaps:FU-340/2026"
+ },
+ {
+  "at": "2026-11-18T05:07:34+00:00",
+  "kind": "closed",
+  "offer": "idibaps:FU-341/2026"
+ },
+ {
+  "at": "2026-11-18T05:07:34+00:00",
+  "kind": "closed",
+  "offer": "idibaps:FU-342/2026"
+ },
+ {
+  "at": "2026-11-18T05:07:34+00:00",
+  "kind": "closed",
+  "offer": "idibaps:FU-343/2026"
+ },
+ {
+  "at": "2026-11-18T05:07:34+00:00",
+  "kind": "closed",
+  "offer": "idibaps:FU-344/2026"
  }
 ]

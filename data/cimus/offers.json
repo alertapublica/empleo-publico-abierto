@@ -35,7 +35,7 @@
  "5183": {
   "apply_url": "https://cimus.usc.gal/es/empleo/convocatoria-publica-ordinaria-cimus-242026-de-contratacion-de-personal-para-colaborar-en",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T05:07:34+00:00",
   "code": null,
   "company": "Universidade de Santiago de Compostela",
   "contract": null,
@@ -50,7 +50,7 @@
   "kind": null,
   "listed_deadline": "2026-11-17",
   "location": "Santiago de Compostela",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -62,7 +62,7 @@
   "sections": [],
   "source": "cimus",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria Pública Ordinaria CiMUS 24/2026 de contratación de personal para colaborar en las actividades y proyectos de investigación del CiMUS",
   "url": "https://cimus.usc.gal/es/empleo/convocatoria-publica-ordinaria-cimus-242026-de-contratacion-de-personal-para-colaborar-en"
  },

@@ -47,7 +47,7 @@
  "DO-DE-26-028": {
   "apply_url": "https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Proyectos_de_Clausura_DO-DE-26-028.pdf",
   "category": "Acceso libre",
-  "closed_at": null,
+  "closed_at": "2026-11-18T05:07:34+00:00",
   "code": "DO-DE-26-028",
   "company": "Enresa",
   "deadline": "2026-11-17",
@@ -59,7 +59,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-17",
   "location": null,
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-04",
   "parent_ref": null,
   "place": null,
@@ -82,7 +82,7 @@
   ],
   "source": "enresa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "PERSONAL TITULADO DEL DEPARTAMENTO DE PROYECTOS DE CLAUSURA",
   "url": "https://www.enresa.es/esp/empleo"
  },
