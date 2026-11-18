@@ -1,4 +1,46 @@
 {
+ "director-a-factultativo-a-polivalente-proyectos-y-obras-20261118": {
+  "apply_url": "https://www.sarga.es/ofertas-de-empleo-especifico/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "SARGA",
+  "contract": "Temporal, sustitución",
+  "country": null,
+  "deadline": "2026-11-27",
+  "deadline_rule": null,
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 2,
+  "family": null,
+  "first_seen": "2026-11-18T11:07:25+00:00",
+  "id": "sarga:director-a-factultativo-a-polivalente-proyectos-y-obras-20261118",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-27",
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-18",
+  "ref": "director-a-factultativo-a-polivalente-proyectos-y-obras-20261118",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.sarga.es/wp-content/uploads/2026/11/31882_Perfil_T1A_Polivalente.pdf\">Bases de la oferta (PDF)</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "sarga",
+  "source_title": null,
+  "status": "open",
+  "title": "DIRECTOR/A FACTULTATIVO/A POLIVALENTE PROYECTOS Y OBRAS",
+  "url": "https://www.sarga.es/wp-content/uploads/2026/11/31882_Perfil_T1A_Polivalente.pdf"
+ },
  "tecnico-a-de-asistencias-desarrollo-rural-20261030": {
   "apply_url": "https://www.sarga.es/ofertas-de-empleo-especifico/",
   "category": null,
