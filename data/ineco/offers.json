@@ -2,7 +2,7 @@
  "3085454": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3085454",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T09:37:23+00:00",
   "code": "25118",
   "company": "Ineco",
   "contract": null,
@@ -19,7 +19,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Lleida",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -57,7 +57,7 @@
   ],
   "source": "ineco",
   "source_title": "25118 - Inspector/a de infraestructura y vía",
-  "status": "open",
+  "status": "closed",
   "title": "Inspector/a de infraestructura y vía",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3085454"
  },
@@ -1800,7 +1800,7 @@
  "3244410": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244410",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-18T09:37:23+00:00",
   "code": "27353",
   "company": "Ineco",
   "contract": null,
@@ -1817,7 +1817,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -1855,7 +1855,7 @@
   ],
   "source": "ineco",
   "source_title": "27353 - Técnico/a para proyectos de innovación",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a para proyectos de innovación",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3244410"
  },
