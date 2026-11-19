@@ -39,5 +39,47 @@
   "status": "open",
   "title": "Personal técnico · Proyecto AG433",
   "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag433-personal"
+ },
+ "112625": {
+  "apply_url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag410-personal-0",
+  "category": "Personal técnico",
+  "closed_at": null,
+  "code": "AG410",
+  "company": "Universidad de León",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-19T07:37:27+00:00",
+  "id": "unileon:112625",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": "Castilla y León",
+  "missed_runs": 0,
+  "opens_on": "2026-11-19",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-19",
+  "ref": "112625",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Podrán presentarse hasta las 12:00 horas del día 2 de diciembre de 2026, a través del formulario que encontrará en el siguiente enlace: <a href=\"https://script.google.com/macros/s/AKfycbzOv6No2e1oG0VB9gEz8C6pL00rwRMVdh_r7LNMl_GMnai1RTUjSgaPiMd3lsA6eBN/exec?plaza=PL2026-002\">Formulario de Solicitud</a>.</p>\n<p>La fecha y hora de presentación será la que figure en el formulario de solicitud.</p><p>Archivos públicos:</p><ul><li><a href=\"http://www.unileon.es/files/2026-11/convocatoria_ag410_20261119.pdf\">Convocatoria (19/11/2026)</a></li></ul>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "unileon",
+  "source_title": "Convocatoria de Plaza de Personal con cargo al Proyecto AG410. Personal Técnico",
+  "status": "open",
+  "title": "Personal técnico · Proyecto AG410",
+  "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag410-personal-0"
  }
 }
