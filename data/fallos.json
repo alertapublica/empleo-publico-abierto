@@ -1,27 +1,27 @@
 {
- "andalucia": {
-  "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 2,
+ "apb": {
+  "desde": "2026-11-19T09:07:22+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 2,
+  "lecturas": 3,
+  "resultado": "error"
+ },
+ "galiciasur": {
+  "desde": "2026-11-19T09:07:22+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 2,
+  "lecturas": 3,
   "resultado": "error"
  },
  "tragsa": {
   "desde": "2026-11-19T07:37:27+00:00",
-  "lecturas": 3,
-  "resultado": "error"
- },
- "veiasa": {
-  "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 2,
+  "lecturas": 4,
   "resultado": "error"
  }
 }
