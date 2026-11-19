@@ -61,7 +61,7 @@
   "code": null,
   "company": "Autoridad Portuaria de Barcelona",
   "contract": null,
-  "deadline": "2026-11-23",
+  "deadline": "2026-12-07",
   "deadline_time": "13:00",
   "department": null,
   "detail_ok": true,
@@ -70,7 +70,7 @@
   "first_seen": "2026-11-11T10:37:23+00:00",
   "id": "apb:responsable-de-domini-public",
   "kind": "indefinido",
-  "listed_deadline": "2026-11-23",
+  "listed_deadline": "2026-12-07",
   "location": "Barcelona",
   "missed_runs": 0,
   "opens_on": null,
@@ -98,7 +98,7 @@
     "title": "Requisitos mínimos"
    },
    {
-    "html": "<p>El proceso de selección consta de las siguientes pruebas:</p><ul>\n<li>\n<p>Prueba de idiomas.</p>\n</li>\n<li>\n<p>Prueba de conocimientos teóricos y prácticos.</p>\n</li>\n<li>\n<p>Prueba para evaluar las competencias genéricas.</p>\n</li>\n<li>\n<p>Valoración de méritos.</p>\n</li>\n<li>\n<p>Entrevista final.</p>\n</li>\n</ul><p>Este contenido es un resumen de las bases de la convocatoria que solo tiene valor informativo. Las bases constituyen el <a href=\"https://seleccio.portdebarcelona.cat/documents/4840225/14062913/ES_01.+Bases_resp_Dominio_Publico.pdf/5f292e33-ff1c-2915-facc-f2123a9f5c00?t=1793010489999\">documento oficial</a> donde se desarrollan todos los aspectos de la convocatoria. El plazo para inscribirte en el proceso de selección finaliza el<strong> 23 de noviembre de 2026, a las 13:00 horas.</strong></p>",
+    "html": "<p>El proceso de selección consta de las siguientes pruebas:</p><ul>\n<li>\n<p>Prueba de idiomas.</p>\n</li>\n<li>\n<p>Prueba de conocimientos teóricos y prácticos.</p>\n</li>\n<li>\n<p>Prueba para evaluar las competencias genéricas.</p>\n</li>\n<li>\n<p>Valoración de méritos.</p>\n</li>\n<li>\n<p>Entrevista final.</p>\n</li>\n</ul><p>Este contenido es un resumen de las bases de la convocatoria que solo tiene valor informativo. Las bases constituyen el <a href=\"https://seleccio.portdebarcelona.cat/documents/4840225/14062913/ES_01.+Bases_resp_Dominio_Publico.pdf/5f292e33-ff1c-2915-facc-f2123a9f5c00?t=1793010489999\">documento oficial</a> donde se desarrollan todos los aspectos de la convocatoria. </p><p>Os hacemos llegar el <a href=\"https://seleccio.portdebarcelona.cat/documents/d/seleccio/acta_extraordinaria_ampliacion_plazo\">acta extraordinaria</a> para la presentación de solicitudes para participar en este proceso, fijando como fecha de finalización el día <strong>7 de diciembre de 2026 a las 13:00 horas. </strong></p>",
     "level": 2,
     "title": "Fases del proceso de selección"
    }

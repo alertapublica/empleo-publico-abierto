@@ -23,5 +23,12 @@
   "at": "2026-11-17T12:07:45+00:00",
   "kind": "closed",
   "offer": "apb:responsable-tecnic-de-topografia-i-hidrografia"
+ },
+ {
+  "after": "2026-12-07",
+  "at": "2026-11-19T12:07:29+00:00",
+  "before": "2026-11-23",
+  "kind": "deadline_changed",
+  "offer": "apb:responsable-de-domini-public"
  }
 ]
