@@ -274,7 +274,7 @@
   "process": "2 puestos EN LA I.N. Vandellós I",
   "process_url": "https://www.enresa.es/esp/empleo",
   "source": "enresa",
-  "state": "curso",
+  "state": "finalizado",
   "system": null,
   "title": "Plazo de candidaturas cerrado. Proceso en curso.",
   "url": "https://www.enresa.es/documentos/Convocatoria_externa_m_ltiple_I.N._Vandell_s_I.pdf",
@@ -466,6 +466,24 @@
   "system": null,
   "title": "Plazo de candidaturas cerrado. Proceso en curso.",
   "url": "https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Inversiones_Financieras.pdf",
+  "via": "otro"
+ },
+ "enresa:db12fd976687": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-19",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-19T05:07:26+00:00",
+  "location": "Vandellós I",
+  "process": "2 puestos EN LA I.N. Vandellós I",
+  "process_url": "https://www.enresa.es/esp/empleo",
+  "source": "enresa",
+  "state": "finalizado",
+  "system": null,
+  "title": "Proceso finalizado",
+  "url": "https://www.enresa.es/documentos/Convocatoria_externa_m_ltiple_I.N._Vandell_s_I.pdf",
   "via": "otro"
  },
  "enresa:df5f18b11018": {

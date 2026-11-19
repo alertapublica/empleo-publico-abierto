@@ -482,7 +482,7 @@
  "693484": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693484.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": null,
   "company": "Canal Sur Radio y Televisión, S.A.",
   "contract": "Duración determinada- interinidad",
@@ -498,7 +498,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-18",
   "location": "HUELVA (Huelva)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-14",
   "parent_ref": null,
   "place": null,
@@ -526,7 +526,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "PRODUCTOR/A-HUELVA",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693484.html"
  },

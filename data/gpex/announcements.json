@@ -17,6 +17,24 @@
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=885",
   "via": "bolsa"
  },
+ "gpex:43d198071553": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-19",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-19T05:07:26+00:00",
+  "location": null,
+  "process": "GPEX convoca una oferta de empleo para un perfil de BC26377 Personal Técnico Especialista Medio",
+  "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=891",
+  "source": "gpex",
+  "state": "curso",
+  "system": null,
+  "title": "GPEX convoca una oferta de empleo para un perfil de BC26377 Personal Técnico Especialista Medio",
+  "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=891",
+  "via": "bolsa"
+ },
  "gpex:8d8ae94590fd": {
   "access": null,
   "apply_url": null,
@@ -29,7 +47,7 @@
   "process": "GPEX convoca una oferta de empleo para un perfil de BC26366 Personal Técnico Especialista Medio",
   "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=887",
   "source": "gpex",
-  "state": "curso",
+  "state": "retirado",
   "system": null,
   "title": "GPEX convoca una oferta de empleo para un perfil de BC26366 Personal Técnico Especialista Medio",
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=887",

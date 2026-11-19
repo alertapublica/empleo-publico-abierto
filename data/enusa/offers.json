@@ -2,7 +2,7 @@
  "818-OPEUPC": {
   "apply_url": "https://www.enusa.es/trabaja-con-nosotros/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "818-OPEUPC",
   "company": "Enusa",
   "deadline": "2026-11-18",
@@ -14,7 +14,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-18",
   "location": "Juzbado",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -31,7 +31,7 @@
   ],
   "source": "enusa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "OPERARIO/A PRODUCCION CERAMICA",
   "url": "https://www.enusa.es/trabaja-con-nosotros/"
  },
@@ -190,7 +190,7 @@
  "879-TTCYCE": {
   "apply_url": "https://www.enusa.es/trabaja-con-nosotros/",
   "category": null,
-  "closed_at": "2026-11-16T15:37:26+00:00",
+  "closed_at": null,
   "code": "879-TTCYCE",
   "company": "Enusa",
   "contract": null,
@@ -205,7 +205,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-19",
   "location": "Madrid",
-  "missed_runs": 3,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -223,7 +223,7 @@
   ],
   "source": "enusa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "TECNICO/A TITULADO/A CONTROL Y COORDINACIÓN ECONÓMICA",
   "url": "https://www.enusa.es/trabaja-con-nosotros/"
  },

@@ -2,7 +2,7 @@
  "tecnic-a-de-laboratori-docencia-recerca-sala-disseccio": {
   "apply_url": "https://www.upf.edu/web/personal/ofertes-pas/-/asset_publisher/IRiYJaUWRmJS/content/tecnic-a-de-laboratori-docencia-recerca-sala-disseccio/213063326/maximized",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "LNI02/2026",
   "company": "Universitat Pompeu Fabra",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-18",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -43,7 +43,7 @@
   ],
   "source": "upf",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Tècnic/a de Laboratori (6 places): Docència, Recerca i Sala de Dissecció",
   "url": "https://www.upf.edu/web/personal/ofertes-pas/-/asset_publisher/IRiYJaUWRmJS/content/tecnic-a-de-laboratori-docencia-recerca-sala-disseccio/213063326/maximized"
  },

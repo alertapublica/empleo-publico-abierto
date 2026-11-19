@@ -2,7 +2,7 @@
  "2026-pi56": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi56/convocatoria-i-pi-56-26.html",
   "category": "Investigador/a en Formación",
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "I-PI 56-26",
   "company": "Universidad de Alicante",
   "contract": "contratación temporal",
@@ -17,7 +17,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-18",
   "location": "Comunitat Valenciana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -45,7 +45,7 @@
   ],
   "source": "ua",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Personal investigador en formación para colaborar con el proyecto «Shakespeare, arte y activismo en el siglo XXI (II): nuevas prácticas, nuevos públicos»",
   "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi56/convocatoria-i-pi-56-26.html"
  },
@@ -509,7 +509,7 @@
  "2026-ptgai53": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai53/convocatoria-i-ptgai-53-26.html",
   "category": "Tecnólogo/a superior",
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "I-PTGAI 53-26",
   "company": "Universidad de Alicante",
   "contract": "contratación indefinida",
@@ -524,7 +524,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-18",
   "location": "Comunitat Valenciana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -552,7 +552,7 @@
   ],
   "source": "ua",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Digitalización y sostenibilidad en el mercado: El Derecho Mercantil del presente»",
   "url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai53/convocatoria-i-ptgai-53-26.html"
  },

@@ -648,7 +648,7 @@
  "2303": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2303",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "26-153_SS_OM",
   "company": "IDIBELL",
   "contract": "Permanent linked to a project",
@@ -663,7 +663,7 @@
   "kind": null,
   "listed_deadline": "2026-11-18",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-04",
   "parent_ref": null,
   "place": null,
@@ -687,7 +687,7 @@
   ],
   "source": "idibell",
   "source_title": "26-153_SS_OM - Clinical Research Assistant - Difficult-to-treat infections and Use of antimicrobials",
-  "status": "open",
+  "status": "closed",
   "title": "Clinical Research Assistant - Difficult-to-treat infections and Use of antimicrobials",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2303"
  },

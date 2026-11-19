@@ -42,7 +42,7 @@
  "FU-303/2026": {
   "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8e8cadc351bc21fb87111ca431491258af084ba4.pdf",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "FU-303/2026",
   "company": "FRCB-IDIBAPS",
   "contract": null,
@@ -57,7 +57,7 @@
   "kind": null,
   "listed_deadline": "2026-11-18",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -75,7 +75,7 @@
   ],
   "source": "idibaps",
   "source_title": "[FRCB-IDIBAPS] PhD Call 2026. 5 R1 positions in biomedicine at FRCB-IDIBAPS (Convocatòria FU-303/2026)",
-  "status": "open",
+  "status": "closed",
   "title": "PhD Call 2026. 5 R1 positions in biomedicine at FRCB-IDIBAPS",
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8e8cadc351bc21fb87111ca431491258af084ba4.pdf"
  },
@@ -603,7 +603,7 @@
  "FU-345/2026": {
   "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/4666456d07a49499efc8d2fd9d804899b8c24a7f.pdf",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "FU-345/2026",
   "company": "FRCB-IDIBAPS",
   "contract": null,
@@ -618,7 +618,7 @@
   "kind": null,
   "listed_deadline": "2026-11-18",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -636,7 +636,7 @@
   ],
   "source": "idibaps",
   "source_title": "[FRCB-IDIBAPS] Study Coordinator pel grup Oncologia mèdica (Convocatòria FU-345/2026)",
-  "status": "open",
+  "status": "closed",
   "title": "Study Coordinator pel grup Oncologia mèdica",
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/4666456d07a49499efc8d2fd9d804899b8c24a7f.pdf"
  },

@@ -2,7 +2,7 @@
  "1955": {
   "apply_url": "https://sede.uvigo.gal/public/catalog-detail/27660208",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "14/26_CONC",
   "company": "Universidade de Vigo",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-18",
   "location": "Galicia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -55,7 +55,7 @@
   ],
   "source": "uvigo",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "CONCURSO PÚBLICO DE MÉRITOS 14/26 PARA A CONTRATACIÓN DE PERSOAL DE INVESTIGACIÓN",
   "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/show/1955"
  }

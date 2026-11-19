@@ -34211,7 +34211,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-008": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-008.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
@@ -34415,16 +34415,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-016": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-016.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-016.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-016",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior: 'Ingeniería Técnica de Obras Públicas o Grado en Ingeniería Civil.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34436,16 +34441,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-017": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-017.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-017.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-017",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Arquitecto: Grado + Máster",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34457,16 +34467,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-018": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-018.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-018.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-018",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Formación Profesional Superior: Técnico Superior en Proyectos de edificación, de Construcciones civiles o proyectos de obra civil.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34478,16 +34493,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-019": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-019.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-019.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-019",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior en: Licenciatura en Geología o Grado en Geología + Máster en Ingeniería Geológica.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34499,16 +34519,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-020": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-020.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-020.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-020",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior en: Ingeniería de Telecomunicación.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34520,16 +34545,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-021": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-021.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-021.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-021",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "FP Técnico Superior de Administración y Finanzas y Técnico Superior de Transporte y Logística.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Lugo",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34541,16 +34571,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-022": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-022.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-022.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-022",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación superior en Arquitectura (grado + máster) o Ingeniería de Caminos, Canales y Puertos.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -34562,16 +34597,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-023": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-023.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-023.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-023",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media en: Ingeniería Técnica en Topografía.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Asturias",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 1,
@@ -34583,16 +34623,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEP-024": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-024.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EEP-024.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EEP-024",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Arquitecto: Grado + Máster.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,

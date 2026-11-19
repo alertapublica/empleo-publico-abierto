@@ -2,7 +2,7 @@
  "3901": {
   "apply_url": "https://intranet.cientifis.com/UT/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3901",
   "category": "Titulado Superior",
-  "closed_at": null,
+  "closed_at": "2026-11-19T05:07:26+00:00",
   "code": "3391/3901",
   "company": "CIBER",
   "contract": "Indefinido",
@@ -17,7 +17,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-18",
   "location": "MADRID",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-04",
   "parent_ref": null,
   "place": null,
@@ -60,7 +60,7 @@
   ],
   "source": "ciber",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Titulado Superior · (Licenciatura/Ingeniería o Grado+Máster universitario MECES 3) en Ingeniería Informática o de Telecomunicaciones",
   "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3901"
  },
