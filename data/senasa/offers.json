@@ -164,7 +164,7 @@
  "69-26": {
   "apply_url": "https://www.senasa.es/index.php?idPag=13&lang=es-ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-19T10:37:26+00:00",
   "code": "69-26",
   "company": "SENASA",
   "contract": "Temporal",
@@ -179,7 +179,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-12-01",
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -197,7 +197,7 @@
   ],
   "source": "senasa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico-a. Licencias Ferroviarias",
   "url": "https://www.senasa.es/recursos/adobePDF/OfertasERP/69-26.pdf"
  },
