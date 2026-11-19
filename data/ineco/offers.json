@@ -12832,5 +12832,67 @@
   "status": "open",
   "title": "Inspector/a de infraestructura y vía",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3381243"
+ },
+ "3381501": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3381501",
+  "category": null,
+  "closed_at": null,
+  "code": "29092",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-19T10:07:28+00:00",
+  "id": "ineco:3381501",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-19",
+  "ref": "3381501",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Responsable técnico del Servicio de Computer Security Incident Response (CSIRT), en colaboración con otros equipos de seguridad de la empresa, en particular el SOC.<br/>- Inteligencia de amenazas utilizando diferentes técnicas y la plataforma de la empresa.<br/>- Identificación y gestión de incidentes de ciberseguridad.<br/>- Realización de análisis forense digital. Análisis de Malware y extracción de características e IOCs.<br/>- Realización de pentesting y análisis de intrusión en entornos web e infraestructura de sistemas y redes.<br/>- Implementación de reglas de detección y casos de uso en la plataforma SIEM (Splunk).</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Conocimientos de ciberseguridad a nivel general, experiencia en el sector de al menos 7 años.<br/>- Experiencia de al menos 5 años en tareas de Threat hunting (inteligencia de amenazas), incluyendo el análisis de amenazas emergentes, perfilado de actores y análisis de IOCs (indicadores de compromiso).<br/>-  Análisis forense de incidentes de seguridad (mínimo 3 años).<br/>- Pentesting - análisis de intrusión (mínimo 3 años).<br/>- Capacidades de análisis de Malware  y reversing (mínimo 3 años).<br/>- Conocimientos de monitorización mediante sistemas SIEMS (mínimo 3 años).<br/><br/>- Titulado en informática o similar. o experiencia profesional asimilable por la empresa. Mínimo 8 años de experiencia, deseable 10 años.: Formación Profesional, Sistemas y Redes, Grado en Ingeniería Informática, Ingeniería Informática.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29092 - Especialista en inteligencia de amenazas (Threat hunting)",
+  "status": "open",
+  "title": "Especialista en inteligencia de amenazas (Threat hunting)",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3381501"
  }
 }
