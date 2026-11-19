@@ -49,6 +49,58 @@
   "title": "Convocatoria del proceso selectivo para cubrir una plaza de técnico o técnica titulado medio de apoyo a la investigación, del grupo profesional B, para el proyecto «Investigación clínica y traslacional en cáncer colorrectal y cirugía oncológica avanzada» (GISE/CIRCOLO)",
   "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5109/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-medio-de-apoyo-a-la-investigacion-del-grupo-profesional-b-para-"
  },
+ "2026-56-NAHUSE": {
+  "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5112/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-investigador-o-investigadora-postdoctoral-del-grupo-profesional-a-para-el-proyecto-prd25-1",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-56-NAHUSE",
+  "company": "IdISBa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-19T09:37:31+00:00",
+  "id": "idisba:2026-56-NAHUSE",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Palma",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "2026-56-NAHUSE",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Inicio: 20/11/2026 - Fin: 03/12/2026</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<p>Núm. BOIB: 148 - 19/11/2026. <a href=\"https://www.caib.es/eboibfront/ca/2026/12362/seccio-ii-autoritats-i-personal/473\">Publicación oficial</a></p>",
+    "level": 2,
+    "title": "Publicación en el BOIB"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-56-nahuse-es-bases_1795080659.pdf\">2026-56-NAHUSE Bases</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-56-nahuse-es-anexo-ii_1795080659.pdf\">2026-56-NAHUSE Anexo II</a></li><li><a href=\"https://www.idisba.es/media/upload/pdf/boib-2026-56-nahuse-es-anexo-iii_1795080659.pdf\">2026-56-NAHUSE Anexo III</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idisba",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria del proceso selectivo para cubrir una plaza de investigador o investigadora postdoctoral, del grupo profesional A, para el proyecto «PRD25_132: ANGIOMOD. Modulació molecular de l’angiogènesi per afavorir la recuperació funcional de l’ictus: paper del gen PATJ i del miR-199a-3p en la dinàmica endotelial»",
+  "url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5112/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-investigador-o-investigadora-postdoctoral-del-grupo-profesional-a-para-el-proyecto-prd25-1"
+ },
  "2026-57-NAHUSE": {
   "apply_url": "https://www.idisba.es/es/trabajo/ofertas-de-trabajo/5111/convocatoria-del-proceso-selectivo-para-cubrir-una-plaza-de-tecnico-o-tecnica-titulado-superior-de-apoyo-a-la-investigacion-del-grupo-profesional-a-pa",
   "category": null,
