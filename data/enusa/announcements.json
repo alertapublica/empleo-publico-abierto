@@ -143,6 +143,24 @@
   "url": "https://www.enusa.es/trabaja-con-nosotros/",
   "via": "otro"
  },
+ "enusa:ac019a26e7a2": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "temporal",
+  "date": "2026-11-19",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-19T12:37:26+00:00",
+  "location": null,
+  "process": "OPERARIO/A PRODUCCION CERAMICA (818-OPEUPC)",
+  "process_url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "source": "enusa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Resultado de la revisión de requisitos mínimos",
+  "url": "https://www.enusa.es/trabaja-con-nosotros/",
+  "via": "otro"
+ },
  "enusa:d53b866da6ca": {
   "access": "libre",
   "apply_url": null,
