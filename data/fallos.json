@@ -1,21 +1,11 @@
 {
- "cofivacasa": {
-  "desde": "2026-11-19T06:37:22+00:00",
+ "sepi": {
+  "desde": "2026-11-19T07:07:23+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "galiciasur": {
-  "desde": "2026-11-19T06:37:22+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "iisgm": {
-  "desde": "2026-11-19T06:37:22+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "sepides": {
-  "desde": "2026-11-19T06:37:22+00:00",
+ "ua": {
+  "desde": "2026-11-19T07:07:23+00:00",
   "lecturas": 1,
   "resultado": "error"
  }
