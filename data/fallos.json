@@ -1,42 +1,27 @@
 {
- "andalucia": {
-  "desde": "2026-11-19T16:37:42+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 18,
+  "lecturas": 19,
   "resultado": "error"
  },
- "galiciasur": {
-  "desde": "2026-11-19T16:37:42+00:00",
+ "fgc": {
+  "desde": "2026-11-19T17:07:27+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 18,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-19T16:37:42+00:00",
-  "lecturas": 1,
+  "lecturas": 19,
   "resultado": "error"
  },
  "tragsa": {
   "desde": "2026-11-19T07:37:27+00:00",
-  "lecturas": 19,
+  "lecturas": 20,
   "resultado": "error"
  },
  "unirioja": {
   "desde": "2026-11-19T11:07:24+00:00",
-  "lecturas": 12,
-  "resultado": "error"
- },
- "veiasa": {
-  "desde": "2026-11-19T16:37:42+00:00",
-  "lecturas": 1,
+  "lecturas": 13,
   "resultado": "error"
  }
 }
