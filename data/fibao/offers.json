@@ -44,5 +44,52 @@
   "status": "open",
   "title": "Investigador/a en Formación PIGE-0009-2026",
   "url": "https://www.fibao.es/ofertas/ficha/1506/"
+ },
+ "1507": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1507/",
+  "category": null,
+  "closed_at": null,
+  "code": "92/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-29",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-19T08:37:34+00:00",
+  "id": "fibao:1507",
+  "kind": null,
+  "listed_deadline": "2026-11-29",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-19",
+  "ref": "1507",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO e ibs.GRANADA convocan un contrato de apoyo a la investigación, en régimen de concurrencia competitiva, con dedicación a tiempo parcial (15 horas semanales), para el desarrollo de actividades científico técnicas en la línea de investigación de Aplicación de la IA en dermatología: diagnóstico por imagen y biomarcadores en cáncer cutáneo y enfermedades  inmunomediadas, del grupo de ibs.GRANADA TECE19- Dermatología Clínica y Traslacional.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/92.__ctto._tecn._especialista_dermatolog%C3%ADa_huvn(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "92/2026.- Técnico/a Especialista línea investigación Dermatología, HUVN",
+  "status": "open",
+  "title": "Técnico/a Especialista línea investigación Dermatología, HUVN",
+  "url": "https://www.fibao.es/ofertas/ficha/1507/"
  }
 }
