@@ -638,5 +638,57 @@
   "status": "open",
   "title": "AUXILIAR GESTIÓN",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693967.html"
+ },
+ "694357": {
+  "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694357.html",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Fundación Pública Andaluza Parque Tecnológico de Ciencias de la Salud de Granada",
+  "contract": "Indefinido",
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T09:07:28+00:00",
+  "id": "andalucia:694357",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-04",
+  "location": "GRANADA (Granada)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-20",
+  "ref": "694357",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p><strong>Tipo de convocatoria:</strong> Oferta de empleo</p><p><strong>Titulación oficial requerida:</strong> Grados superiores de FP (CFGS)/ Formación profesional de segundo grado</p><p><strong>Titulación específica requerida:</strong> Técnico Superior en Asistencia a la Dirección o de cualquier otra titulación de Formación Profesional de Grado Superior de la familia profesional de Administración y Gestión</p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p>Bases de la oferta (Anexo I).</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.juntadeandalucia.es/sites/default/files/2026-11/BOJA26-225-00015-15158-01_00346387.pdf\">Convocatoria del proceso selectivo para la contratación del puesto de Secretaria/o de Dirección.</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases de la oferta"
+   }
+  ],
+  "source": "andalucia",
+  "source_title": null,
+  "status": "open",
+  "title": "SECRETARÍA/O DE DIRECCIÓN.",
+  "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694357.html"
  }
 }
