@@ -2608,5 +2608,278 @@
   "at": "2026-11-19T07:07:23+00:00",
   "kind": "new",
   "offer": "tragsa:58693"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:56616"
+ },
+ {
+  "after": "2026-11-23",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-17",
+  "kind": "deadline_changed",
+  "offer": "tragsa:56616"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:57074"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:56609"
+ },
+ {
+  "after": "2026-11-25",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-17",
+  "kind": "deadline_changed",
+  "offer": "tragsa:56609"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:58407"
+ },
+ {
+  "after": "2026-11-23",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "tragsa:58407"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:57934"
+ },
+ {
+  "after": "2026-11-24",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-17",
+  "kind": "deadline_changed",
+  "offer": "tragsa:57934"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:57867"
+ },
+ {
+  "after": "2026-11-24",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-17",
+  "kind": "deadline_changed",
+  "offer": "tragsa:57867"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58846"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:57658"
+ },
+ {
+  "after": "2026-11-25",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-18",
+  "kind": "deadline_changed",
+  "offer": "tragsa:57658"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:57036"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:57994"
+ },
+ {
+  "after": "2026-11-26",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "tragsa:57994"
+ },
+ {
+  "after": 4,
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": 2,
+  "kind": "positions_changed",
+  "offer": "tragsa:57994"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:58286"
+ },
+ {
+  "after": "2026-11-26",
+  "at": "2026-11-20T06:50:19+00:00",
+  "before": "2026-11-13",
+  "kind": "deadline_changed",
+  "offer": "tragsa:58286"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58842"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58870"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58813"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58830"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58828"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58764"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58686"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58688"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58706"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58774"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "new",
+  "offer": "tragsa:58811"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:56263"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:57685"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:57795"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58048"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58356"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58414"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58452"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58457"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58466"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58498"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58506"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58555"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58567"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58568"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58570"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58580"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58632"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58634"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58651"
+ },
+ {
+  "at": "2026-11-20T06:50:19+00:00",
+  "kind": "closed",
+  "offer": "tragsa:58655"
  }
 ]
