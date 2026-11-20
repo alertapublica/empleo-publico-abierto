@@ -534,5 +534,72 @@
   "status": "open",
   "title": "Titulado/a graduado/a I",
   "url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/966"
+ },
+ "967": {
+  "apply_url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/967",
+  "category": null,
+  "closed_at": null,
+  "code": "104/2026",
+  "company": "Fundación Instituto de Investigación Sanitaria de Santiago de Compostela",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-29",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T13:37:28+00:00",
+  "id": "idis:967",
+  "kind": null,
+  "listed_deadline": "2026-11-29",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "967",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>- 1.2 4 Titulado/a Graduado/a II</p><p>- TITULACIÓN REQUERIDA: Estar en posesión de un grado universitario de menos de 300 ETCS en biotecnología</p><p>- Realización de actividades científico-técnicas (ver funciones en las BASES)</p>",
+    "level": 2,
+    "title": "Oferta de empleo"
+   },
+   {
+    "html": "<p>- Contrato indefinido de actividades científico-técnicas a jornada completa. Salario bruto anual: 23.755,08€</p>",
+    "level": 2,
+    "title": "Condiciones/Duración"
+   },
+   {
+    "html": "<p>Accede a las BASES para conocer el ANEXO I, donde se detalla el baremo de valoración de méritos</p><p>IMPORTANTE: El Tribunal valorará los méritos acreditados documentalmente en el momento de la inscripción.</p><p>Una vez publicado el Baremo provisional se abre un plazo de dos días para alegaciones, el cual tiene por objeto solicitar la revisión de la valoración realizada por el Tribunal sobre los méritos y documentación aportados dentro del plazo de presentación de candidaturas, sin constituir un nuevo plazo para ampliar o completar la información presentada inicialmente.</p>\n<p>*Para poder valorar los Méritos se debe adjuntar la documentación que los acredite</p>",
+    "level": 2,
+    "title": "Méritos"
+   },
+   {
+    "html": "<p>De acuerdo al punto 3.1 b de las bases de la convocatoria, las TITULACIONES REQUERIDAS se tendrán que poder verificar.</p><p>La verificación deberá ser a través de un Código Seguro de Verificación (CSV), para lo cual las posibles formas serían:</p><p>•\tPresentar el documento con Código Seguro de Verificación (CSV) o Código de Verificación Electrónica (CVE)</p><p>•\tPresentar el documento obtenido a través de Mi Carpeta Ciudadana</p><p>•\tAportando una copia compulsada del título.</p>",
+    "level": 2,
+    "title": "Más información"
+   },
+   {
+    "html": "<p>Grupo de investigación: E034 – FarmaCHUSLab</p>\r\n\r\n<p>Ubicación del puesto: Laboratorio Nº 5 IDIS</p>",
+    "level": 2,
+    "title": "Otros datos"
+   },
+   {
+    "html": "<p><a href=\"https://empleo.idisantiago.es/file/ofertatrabajo/967/bases-oferta.pdf\">Bases de la oferta</a></p>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "idis",
+  "source_title": "1.2 4 Titulado/a Graduado/a II",
+  "status": "open",
+  "title": "Titulado/a Graduado/a II",
+  "url": "https://empleo.idisantiago.es/ofertastrabajo/inscripciones/967"
  }
 }

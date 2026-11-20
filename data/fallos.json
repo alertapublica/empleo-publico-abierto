@@ -1,27 +1,17 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 39,
+  "lecturas": 40,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 21,
-  "resultado": "error"
- },
- "fgv": {
-  "desde": "2026-11-20T13:07:25+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "galiciasur": {
-  "desde": "2026-11-20T13:07:25+00:00",
-  "lecturas": 1,
+  "lecturas": 22,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-20T12:07:25+00:00",
-  "lecturas": 3,
+  "lecturas": 4,
   "resultado": "error"
  }
 }
