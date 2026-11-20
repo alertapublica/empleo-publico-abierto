@@ -16170,11 +16170,11 @@
  "58457": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58457",
   "category": "Específica",
-  "closed_at": "2026-11-20T06:50:19+00:00",
+  "closed_at": null,
   "code": "58457",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-19",
+  "deadline": "2026-11-25",
   "deadline_time": null,
   "department": "Pesca y Asuntos Marítimos",
   "detail_ok": true,
@@ -16183,9 +16183,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58457",
   "kind": "temporal",
-  "listed_deadline": "2026-11-19",
-  "location": "Comunidad de Madrid",
-  "missed_runs": 1,
+  "listed_deadline": "2026-11-25",
+  "location": "Embarcado/a en Buque Oceanográfico",
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -16193,10 +16193,10 @@
   "positions": 1,
   "published_on": "2026-11-05",
   "ref": "58457",
-  "region": "Comunidad de Madrid",
+  "region": "Sin ubicación",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Primer/a Oficial/a de Puente para embarcar en Buque Oceanográfico.<br/><br/>En relación al proceso publicado el pasado 05/11/2026 se amplía el plazo de recepción de candidaturas desde el 11/11/2026 hasta el 19/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Primer/a Oficial/a de Puente para embarcar en Buque Oceanográfico.<br/><br/>En relación al proceso publicado el pasado 11/11/2026 se amplía el plazo de recepción de candidaturas desde el 20/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -16251,14 +16251,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada por sustitución con una duración estimada de 1 mes, en función del hecho causante.<br/><br/>- Jornada completa. <br/><br/>En relación al proceso publicado el pasado 05/11/2026 se amplía el plazo de recepción de candidaturas desde el 11/11/2026 hasta el 19/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada por sustitución con una duración estimada de 1 mes, en función del hecho causante.<br/><br/>- Jornada completa. <br/><br/>En relación al proceso publicado el pasado 11/11/2026 se amplía el plazo de recepción de candidaturas desde el 20/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Primer/a Oficial/a de Puente (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58457"
  },
@@ -31373,6 +31373,113 @@
   "status": "open",
   "title": "Oficiales/as 2ª Administrativos/as (refuerzo) - Apoyo Prestaciones Sociales (Asturias)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58758"
+ },
+ "58759": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58759",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58759",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Valencia",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-20T12:07:25+00:00",
+  "id": "tragsa:58759",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-04",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": "Valencia",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-20",
+  "ref": "58759",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Licenciado/a o Graduado/a + Máster Oficial (Plan Bolonia) en Periodismo, Ciencias de la Información o Comunicación Audiovisual - Proyectos Emergencias (Valencia) en València/Valencia</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>Dirección: La Eliana (Valencia) y/o Paterna (Valencia) con desplazamientos puntuales a otros municipios.</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Redacción de notas de prensa, artículos y textos para redes sociales</li><li>Actualización web y redes sociales en canales oficiales</li><li>Tareas de apoyo a las necesidades de gabinete de comunicación, derivadas de las consecuencias de la DANA 2024</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Licenciatura, o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Periodismo, Ciencias de la Información o Comunicación Audiovisual.</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia realizando tareas propias de su titulación (especialista en contenidos web o similar)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Licenciatura, o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Periodismo, Ciencias de la Información o Comunicación Audiovisual.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Licenciatura, o Grado + Máster Oficial (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en Periodismo, Ciencias de la Información o Comunicación Audiovisual.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia realizando tareas propias de su titulación (especialista en contenidos web o similar)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso de formación en planes emergencias</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 5 años de experiencia en redacción de notas de prensa, artículos y textos para redes sociales y actualización y/o paginas Web (laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Experiencia previa (laboral y/o académica) de al menos 3 meses realizando tareas propias de su titulación en el sector público (redacción de notas de prensa, artículos y textos para redes sociales y/o paginas Web)</li><li>Experiencia previa (laboral y/o académica) de al menos 3 meses en el ámbito de protección civil o gestión de emergencias.</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso de formación en planes emergencias</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso de formación en planes emergencias</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 5 años de experiencia en redacción de notas de prensa, artículos y textos para redes sociales y actualización y/o paginas Web (laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia previa (laboral y/o académica) de al menos 3 meses realizando tareas propias de su titulación en el sector público (redacción de notas de prensa, artículos y textos para redes sociales y/o paginas Web)</li><li>Experiencia previa (laboral y/o académica) de al menos 3 meses en el ámbito de protección civil o gestión de emergencias.</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 20/11/2026 hasta el próximo 04/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE:<br/><br/>- Contrato con una duración determinada estimada de 12 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/>- Jornada completa 37'5 horas/semana<br/>- Complemento salarial por modificación del horario: turnos y con guardias de fines de semana por si hubiera que cubrir alguna emergencia.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a o Graduado/a + Máster Oficial (Plan Bolonia) en Periodismo, Ciencias de la Información o Comunicación Audiovisual - Proyectos Emergencias (Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58759"
  },
  "58760": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58760",

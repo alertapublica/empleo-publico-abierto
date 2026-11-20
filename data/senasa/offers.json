@@ -83,6 +83,48 @@
   "title": "Titulado-a Superior o Titulado-a Medio o Grado. UAS",
   "url": "https://www.senasa.es/recursos/adobePDF/OfertasERP/106-26.pdf"
  },
+ "107-26": {
+  "apply_url": "https://www.senasa.es/index.php?idPag=13&lang=es-ES",
+  "category": null,
+  "closed_at": null,
+  "code": "107-26",
+  "company": "SENASA",
+  "contract": "Temporal",
+  "country": null,
+  "deadline": "2026-11-27",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T12:07:25+00:00",
+  "id": "senasa:107-26",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-27",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 3,
+  "published_on": "2026-11-20",
+  "ref": "107-26",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.senasa.es/recursos/adobePDF/OfertasERP/107-26.pdf\">Convocatoria 107-26 (PDF)</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "senasa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo-a. SIRU",
+  "url": "https://www.senasa.es/recursos/adobePDF/OfertasERP/107-26.pdf"
+ },
  "21-26": {
   "apply_url": "https://www.senasa.es/index.php?idPag=13&lang=es-ES",
   "category": null,

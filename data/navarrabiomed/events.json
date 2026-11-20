@@ -23,5 +23,17 @@
   "at": "2026-11-20T11:07:25+00:00",
   "kind": "closed",
   "offer": "navarrabiomed:26-43"
+ },
+ {
+  "at": "2026-11-20T12:07:25+00:00",
+  "kind": "reopened",
+  "offer": "navarrabiomed:26-43"
+ },
+ {
+  "after": "2026-11-27",
+  "at": "2026-11-20T12:07:25+00:00",
+  "before": "2026-11-20",
+  "kind": "deadline_changed",
+  "offer": "navarrabiomed:26-43"
  }
 ]

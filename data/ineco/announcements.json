@@ -265,6 +265,24 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-7",
   "via": "tasa"
  },
+ "ineco:14c39cd211d9": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-20",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-20T12:07:25+00:00",
+  "location": null,
+  "process": "Tasa de reposición específica 2026 (TRE26)",
+  "process_url": "https://inecoreposicionespecifica.people-experts.com/ineco",
+  "source": "ineco",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "PUBLICACIÓN DEL LISTADO CON LAS CALIFICACIONES PROVISIONALES OBTENIDAS EN LA FASE DE OPOSICIÓN Y VALORACIÓN PROVISIONAL DE MÉRITOS DE LAS PERSONAS CANDIDATAS ADMITIDAS EN LOS PUESTOS DEL BLOQUE 1 DE LA TASA DE REPOSICIÓN ESPECÍFICA 2026 EN LA EMPRESA INECO.",
+  "url": "https://inecoreposicionespecifica.people-experts.com/ineco#section-9",
+  "via": "tasa"
+ },
  "ineco:15f32173d171": {
   "access": "libre",
   "apply_url": null,

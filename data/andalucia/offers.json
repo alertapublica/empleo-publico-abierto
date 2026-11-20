@@ -898,5 +898,62 @@
   "status": "open",
   "title": "PRODUCTOR/A",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694417.html"
+ },
+ "694432": {
+  "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694432.html",
+  "category": null,
+  "closed_at": null,
+  "code": "01-2026-52456",
+  "company": "Agencia de Medio Ambiente y Agua de Andalucía, M.P.",
+  "contract": "Duración determinada- interinidad",
+  "country": null,
+  "deadline": "2026-11-24",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T12:07:25+00:00",
+  "id": "andalucia:694432",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-24",
+  "location": "Sevilla (Málaga)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-19",
+  "ref": "694432",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p><strong>Tipo de convocatoria:</strong> Oferta genérica SAE</p><p><strong>Perfil del puesto de trabajo:</strong> Perfil profesional especialista</p><p><strong>Titulación oficial requerida:</strong> Grado Universitario/ Licenciatura e Ingenierías/ Diplomaturas e Ingenierías Técnicas</p><p><strong>Titulación específica requerida:</strong> Grado Universitario o equivalente. Ingeniería o Ingeniería técnica industrial o química. Grado universitario o Licenciatura en ciencias químicas o ambientales.</p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p>Consultoría y trabajos técnicos relacionados con la planificación y seguimiento de la planificación de residuos y economía circular. Estos trabajos pueden incluir, entre otros: Revisión y análisis de normativa y documentación estratégica y de planificación (autonómica, nacional y europea). Redacción de documentos técnicos y administrativos. Revisión, tratamiento y valoración de datos técnicos e información ambiental. Confección de mapas. Diseño y supervisión de campañas de divulgación/comunicación. Tramitación de contratos de asistencia técnica externa. Asistencia y apoyo en grupos de participación.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Carne Conducir B. Formación Qgis, Nivel Inglés B2.\n* Experiencia acreditada en la realización de trabajos de CONSULTORÍA en materia de residuos, entendida como trabajos de evaluación de información y análisis de datos técnicos, generación de conocimiento, y redacción de informes técnicos. 6 MESES * Experiencia que acredite conocimiento en normativa de residuos (incluidos en el ámbito de aplicación de la Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular). * Disponibilidad para desplazarse por la provincia en vehículo de empresa Se valorará: * Experiencia acreditada en la elaboración de planes de residuos y su tramitación y de la gestión administrativa y técnica en la gestión de residuos en el ámbito local, supramunicipal o autonómico</p>",
+    "level": 2,
+    "title": "Otros requisitos"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.juntadeandalucia.es/sites/default/files/2026-11/01-2026-52456%20Convocatoria%20de%20la%20oferta.pdf\">Convocatoria de la oferta</a></li></ul>",
+    "level": 2,
+    "title": "Convocatoria y bases de la oferta"
+   }
+  ],
+  "source": "andalucia",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico Facultativo Consultoría (Residuos)",
+  "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694432.html"
  }
 }
