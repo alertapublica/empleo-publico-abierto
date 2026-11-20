@@ -279,7 +279,7 @@
   "source": "tragsa",
   "source_title": null,
   "status": "open",
-  "title": "Jefe/a de Brigada ELIF (Burgos)",
+  "title": "Jefe/a de Brigada ELIF_Cobertura de puestos y creación de listas de espera (Burgos)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=CTI&jobid=55752"
  },
  "55851": {
@@ -4367,6 +4367,103 @@
   "status": "closed",
   "title": "Ingeniero/a de Montes - Centro de Recuperación (Comunidad de Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57690"
+ },
+ "57694": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57694",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "57694",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Cabecera de Extremadura",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-20T08:37:30+00:00",
+  "id": "tragsa:57694",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-30",
+  "location": "Comunidad de Extremadura",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Mérida",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-09-11",
+  "ref": "57694",
+  "region": "Extremadura",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 2 Graduados/as + Máster Oficial en Derecho - Técnico/a Jurídico/a – Disciplina Urbanística y Protección de la Legalidad (Mérida) en Comunidad de Extremadura. <br/><br/>En relación al proceso publicado el pasado 11/09/2026 se amplía el plazo de recepción de candidaturas desde el 20/11/2026 hasta el 30/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Extremadura<br/>Dirección: C/ La Legua 19 Bajo<br/>Oficina del Grupo TRAGSA en Mérida</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaboración de informes jurídicos, propuestas de resolución, requerimientos, trámites de audiencia y demás documentación necesaria para la adecuada instrucción y tramitación de los procedimientos</li><li>Apoyo en la tramitación de procedimientos de restauración de la legalidad urbanística y, en su caso, de los procedimientos sancionadores vinculados a actuaciones de disciplina urbanística</li><li>Apoyo jurídico en expedientes de declaración de ruina legal y ruina inminente, en coordinación con el personal técnico responsable de las inspecciones y de la elaboración de los correspondientes informes técnicos</li><li>Análisis y tramitación de actuaciones relacionadas con el deber de conservación, órdenes de ejecución y ejecución subsidiaria</li><li>Elaboración de informes y notas jurídicas sobre las cuestiones que se planteen durante la tramitación de los expedientes, así como asesoramiento sobre la aplicación de la normativa urbanística y administrativa</li><li>Realización de las demás actuaciones de carácter jurídico necesarias para el adecuado desarrollo y seguimiento de los trabajos objeto del encargo</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Grado en Derecho + Máster Universitario Oficial en Derecho (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li><li>Carnet de conducir tipo B.</li><li>Realizar desplazamientos a Ayuntamientos.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Grado en Derecho + Máster Universitario Oficial en Derecho (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Grado en Derecho + Máster Universitario Oficial en Derecho (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li><li>Carnet de conducir tipo B.</li><li>Realizar desplazamientos a Ayuntamientos.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria de posgrado o especializada en Derecho Urbanístico. (Anexar certificado de formación)</li><li>Formación acreditada en Derecho Administrativo. (Anexar certificado de formación)</li><li>Formación acreditada en Ordenación del Territorio, Urbanismo o materias relacionadas con la protección de la legalidad urbanística. (Anexar certificado de formación)</li><li>Formación específica en la normativa urbanística y de ordenación del territorio aplicable en la Comunidad Autónoma de Extremadura, en particular en el régimen jurídico del suelo, la ordenación territorial y urbanística y los procedimientos de protección de la legalidad urbanística. (Anexar certificado de formación)</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 6 meses de experiencia en trabajos de disciplina y protección de la legalidad urbanística. (Especificar en cv)</li><li>Desde 1 mes Hasta 6 meses de experiencia en tramitación de expedientes urbanísticos en Administraciones Públicas. (Especificar en cv y anexar vida laboral)</li><li>Desde 1 mes Hasta 6 meses de experiencia en redacción de informes jurídicos en materia urbanística o administrativa. (Especificar en cv)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria de posgrado o especializada en Derecho Urbanístico. (Anexar certificado de formación)</li><li>Formación acreditada en Derecho Administrativo. (Anexar certificado de formación)</li><li>Formación acreditada en Ordenación del Territorio, Urbanismo o materias relacionadas con la protección de la legalidad urbanística. (Anexar certificado de formación)</li><li>Formación específica en la normativa urbanística y de ordenación del territorio aplicable en la Comunidad Autónoma de Extremadura, en particular en el régimen jurídico del suelo, la ordenación territorial y urbanística y los procedimientos de protección de la legalidad urbanística. (Anexar certificado de formación)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria de posgrado o especializada en Derecho Urbanístico. (Anexar certificado de formación)</li><li>Formación acreditada en Derecho Administrativo. (Anexar certificado de formación)</li><li>Formación acreditada en Ordenación del Territorio, Urbanismo o materias relacionadas con la protección de la legalidad urbanística. (Anexar certificado de formación)</li><li>Formación específica en la normativa urbanística y de ordenación del territorio aplicable en la Comunidad Autónoma de Extremadura, en particular en el régimen jurídico del suelo, la ordenación territorial y urbanística y los procedimientos de protección de la legalidad urbanística. (Anexar certificado de formación)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 6 meses de experiencia en trabajos de disciplina y protección de la legalidad urbanística. (Especificar en cv)</li><li>Desde 1 mes Hasta 6 meses de experiencia en tramitación de expedientes urbanísticos en Administraciones Públicas. (Especificar en cv y anexar vida laboral)</li><li>Desde 1 mes Hasta 6 meses de experiencia en redacción de informes jurídicos en materia urbanística o administrativa. (Especificar en cv)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>- Contrato temporal con una duración estimada de 6/12 meses y opciones de continuidad o ampliación, si procede.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 11/09/2026 se amplía el plazo de recepción de candidaturas desde el 20/11/2026 hasta el 30/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Graduados/as + Máster Oficial en Derecho - Técnico/a Jurídico/a – Disciplina Urbanística y Protección de la Legalidad (Mérida)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57694"
  },
  "57759": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57759",
