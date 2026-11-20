@@ -58,6 +58,12 @@ class Blocks(unittest.TestCase):
         block = unirioja.parse_blocks(html)[0]
         self.assertEqual((block["opens_on"], block["deadline"]), ("2026-12-20", "2027-01-03"))
 
+    def test_año_sin_de(self):
+        # «del 19 de noviembre al 3 de diciembre 2026» (bloque de SPARKS, 2026-11-19)
+        html = "<div class='bloque-texto'><p>Plazo presentación de solicitudes: del 19 de noviembre al 3 de diciembre 2026</p></div>"
+        block = unirioja.parse_blocks(html)[0]
+        self.assertEqual((block["opens_on"], block["deadline"]), ("2026-11-19", "2026-12-03"))
+
     def test_sin_bloques_sin_plazo_o_con_dos_detiene(self):
         with self.assertRaises(SourceLayoutError):
             unirioja.parse_blocks("<main><p>Nada</p></main>")

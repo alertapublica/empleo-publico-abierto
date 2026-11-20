@@ -6,10 +6,11 @@ captación de talento, por área). Cada convocatoria es un bloque (`div.bloque-t
 la más antigua y sin ficha propia: la resolución resumida, el investigador o las bases, «Plazo
 (de) presentación (de) solicitudes: del 11 de noviembre al 25 de noviembre de 2026» (también «del 9 al
 23 de junio de 2026», «del 14 al 28 noviembre de 2025» o «desde el 12 de septiembre hasta el 13 de
-octubre de 2026»; sin hora) y los documentos en SharePoint: la convocatoria del BOR (con su fecha, que
-es la de publicación), el impreso de solicitud y, después, las listas y el acta. Cada bloque que convoca
-(«se convoca», «se anuncia») o trae un plazo tiene que traer un plazo y solo uno: si no, se detiene la
-fuente. Los demás (avisos, «Convocatoria pendiente de publicación») se saltan (revisión de Codex, 51).
+octubre de 2026»; el 2026-11-19, «al 3 de diciembre 2026», sin «de»; sin hora) y los documentos en
+SharePoint: la convocatoria del BOR (con su fecha, que es la de publicación), el impreso de solicitud
+y, después, las listas y el acta. Cada bloque que convoca («se convoca», «se anuncia») o trae un plazo
+tiene que traer un plazo y solo uno: si no, se detiene la fuente. Los demás (avisos,
+«Convocatoria pendiente de publicación») se saltan (revisión de Codex, 51).
 
 Entran los bloques en plazo (decidido con el usuario el 2026-11-16, opción C). Fuera: el PDI (la página
 «PDI no permanente» y la aplicación `aps.unirioja.es/contratacionPDI` solo traen profesorado), las becas
@@ -51,7 +52,7 @@ TALENT_CATEGORY = "Contrato de investigación para la captación de talento"
 MONTH = r"[a-záéíóú]+"
 PERIOD = re.compile(
     rf"Plazo (?:de )?presentación (?:de )?solicitudes\s*:\s*(?:del|desde el)\s+(\d{{1,2}})(?:\s+de)?"
-    rf"(?:\s+({MONTH}))?(?:\s+de\s+(\d{{4}}))?\s+(?:al|hasta el)\s+(\d{{1,2}})\s+(?:de\s+)?({MONTH})\s+de\s+(\d{{4}})",
+    rf"(?:\s+({MONTH}))?(?:\s+de\s+(\d{{4}}))?\s+(?:al|hasta el)\s+(\d{{1,2}})\s+(?:de\s+)?({MONTH})\s+(?:de\s+)?(\d{{4}})",
     re.I)
 BOR = re.compile(rf"convocatoria(?: BOR)?\s*\((?:BOR\s+)?(\d{{1,2}}) de ({MONTH}) de (\d{{4}})\)", re.I)
 PROJECT = re.compile(r"^([^:]{3,40}):\s*se convoca\b.*?\bProyecto (?:de referencia )?(.+?),?\s+titulado:?\s*(.+)$")

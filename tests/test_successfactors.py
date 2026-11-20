@@ -197,6 +197,17 @@ class Mosaico(unittest.TestCase):
         self.assertEqual([(r["ref"], r["company"]) for r in rows],
                          [("1377711557", "Renfe Ingeniería y Mantenimiento"), ("1377711999", "Renfe Viajeros")])
 
+    def test_varios_puestos_dicen_mostrando_1_a_n_de_n(self):
+        # Con dos puestos (2026-11-19) la etiqueta pasa a «Mostrando 1 a 2 de 2 puestos».
+        html = fixture("renfe-mosaico.html")
+        tile = re.search(r'<li class="job-tile.*?</li>', html, re.S).group(0)
+        other = tile.replace("1377711557", "1377923957").replace("EAE26-11/3604", "EDE26-11/3603")
+        html = html.replace(tile, tile + other).replace("Mostrando 1 puesto", "Mostrando 1 a 2 de 2 puestos")
+        rows, total = sf.parse_listing(html, "https://empleo.renfe.com")
+        self.assertEqual((total, [r["ref"] for r in rows]), (2, ["1377711557", "1377923957"]))
+        with self.assertRaises(SourceLayoutError):
+            sf.parse_listing(html.replace("1 a 2 de 2 puestos", "1 a 3 de 3 puestos"), "https://empleo.renfe.com")
+
     def test_mosaico_sin_tamano_de_pagina_se_detiene(self):
         for value in ('', 'data-per-page="x"'):
             html = fixture("renfe-mosaico.html").replace('data-per-page="27"', value)

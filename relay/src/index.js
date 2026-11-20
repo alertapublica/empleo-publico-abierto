@@ -25,6 +25,7 @@ export const ORIGENES = new Set([
   // Ineco (ofertas ordinarias en ePreselec, tras Imperva): entra con agente de navegador desde Cloudflare.
   "https://ineco.epreselec.com",
   "https://www.emasesa.com",
+  "https://www.tragsa.es",
   // Universidades: solo si fallan directas (RESPALDO_CF de empleo/http.py).
   "https://rrhh.uib.cat",
   "https://aps.unirioja.es",

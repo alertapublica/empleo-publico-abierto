@@ -121,7 +121,7 @@ class RelayCloudflare(unittest.TestCase):
             headers["x-relay-set-cookies"] = json.dumps(["INTRUSA=1"])
 
         with mock.patch.object(client._opener, "open", return_value=Respuesta(b"ok")):
-            self.assertEqual(client.get("https://www.tragsa.es/"), "ok")
+            self.assertEqual(client.get("https://www.sepides.es/"), "ok")
         self.assertEqual(client._relay_cookies, {})
 
     def _directa_falla(self, opener, error):
@@ -194,7 +194,7 @@ class Directa(unittest.TestCase):
 
     def test_otros_hosts_van_directos(self):
         with mock.patch.dict("os.environ", {"RELAY_CF_CLAVE": CLAVE, "RELAY_CF_URL": "https://relay.example"}):
-            for url in ("https://www.tragsa.es/es/equipo/trabaja-con-nosotros", "https://www.sepides.es/empleo",
+            for url in ("https://tragsa.es/es/equipo", "https://www.sepides.es/empleo",
                         "https://sepi.es.example.com/", "https://sepi.es/es/empleo-publico"):
                 self.assertIsNone(http.relay_cf(url, None), url)
             self.assertIsNotNone(http.relay_cf(SEPI, None))
