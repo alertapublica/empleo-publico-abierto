@@ -11162,7 +11162,7 @@
  "3374291": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374291",
   "category": null,
-  "closed_at": "2026-11-19T13:37:26+00:00",
+  "closed_at": null,
   "code": "29048",
   "company": "Ineco",
   "contract": null,
@@ -11179,7 +11179,7 @@
   "kind": "beca",
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 3,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -11217,7 +11217,7 @@
   ],
   "source": "ineco",
   "source_title": "29048 - Beca Ingeniería Industrial",
-  "status": "closed",
+  "status": "open",
   "title": "Beca Ingeniería Industrial",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374291"
  },
