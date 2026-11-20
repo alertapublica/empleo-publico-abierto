@@ -46,6 +46,58 @@
   "title": "Técnico/a de Producción Agrícola- Clasificador/a Industrial",
   "url": "https://www.cetarsa.es/empleo-2026/"
  },
+ "82fdcbb6aa": {
+  "apply_url": "https://www.cetarsa.es/empleo-2026/",
+  "category": "Convocatoria libre",
+  "closed_at": null,
+  "code": null,
+  "company": "Cetarsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T21:07:27+00:00",
+  "id": "cetarsa:82fdcbb6aa",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-04",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "82fdcbb6aa",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Convocatoria de empleo de 10 puestos de Trabajo de Operarios/as FD en la Compañía Española de Tabaco en Rama, S.A., S.M.E. (CETARSA) – CONVOCATORIA LIBRE – Noviembre 2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li>2026-11-20: Se establece plazo de solicitudes hasta el 04 de Diciembre a las 14:00 horas del 2026 en el Centro de Trabajo de CETARSA en Talayuela</li><li>2026-11-20: ANEXO V -Declaración Responsable para la cobertura de 10 puestos de trabajo de Fijo Discontinuo de Operarios/as.</li><li>2026-11-20: ANEXO IV – Consentimiento y Derecho de Información para el proceso de Selección de Personal de la Convocatoria de 10 puestos de trabajo de Fijo Discontinuo de Operarios/as.</li><li>2026-11-20: ANEXO III – Documentación Presentación de Candidatura Convocatoria de 10 puestos de trabajo de Fijo Discontinuo de Operarios/as.</li><li>2026-11-20: Bases para la convocatoria constitución de 10 puestos de trabajo de Fijo Discontinuo de Operarios/as.</li><li>2026-11-20: Temario para la convocatoria constitución de 10 puestos de trabajo de Fijo Discontinuo de Operarios/as.</li></ul>",
+    "level": 2,
+    "title": "Documentos publicados"
+   },
+   {
+    "html": "<p>Las bases de la convocatoria, en la página oficial, explican dónde y cómo presentar la candidatura y qué tipo de contrato se ofrece.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "cetarsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Operarios/as FD",
+  "url": "https://www.cetarsa.es/empleo-2026/"
+ },
  "b4a61ab05f": {
   "apply_url": "https://www.cetarsa.es/empleo-2026/",
   "category": "Convocatoria libre",
