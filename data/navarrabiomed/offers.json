@@ -47,7 +47,7 @@
  "26-43": {
   "apply_url": "https://navarrabiomed.es/es/empleo/26-43-personal-apoyo-investigacion",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-20T11:07:25+00:00",
   "code": "26-43",
   "company": "Fundación Miguel Servet",
   "contract": null,
@@ -85,7 +85,7 @@
   ],
   "source": "navarrabiomed",
   "source_title": "26-43 Personal apoyo a la investigación",
-  "status": "open",
+  "status": "closed",
   "title": "Personal apoyo a la investigación",
   "url": "https://navarrabiomed.es/es/empleo/26-43-personal-apoyo-investigacion"
  },
