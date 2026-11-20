@@ -30,12 +30,12 @@ test("solo admite los orígenes de la lista, con su puerto y sin credenciales", 
   assert.ok(permitido(PORTAL));
   assert.ok(!permitido("https://rrhhcandidato.tragsa.es/psc/portalrh/x.GBL"));
   assert.ok(!permitido("http://rrhhcandidato.tragsa.es:8443/"));
-  assert.ok(!permitido("https://www.tragsa.es/"));
+  assert.ok(!permitido("https://www.sepides.es/"));
   assert.ok(!permitido("https://u:p@rrhhcandidato.tragsa.es:8443/"));
   assert.ok(!permitido("no es una url"));
   for (const url of ["https://www.sepi.es/es/empleo-publico", "https://agenciaefe.es/empleo-efe-temporal/",
     "https://www.agenciaefe.es/empleo-efe-indefinido/", "https://fundacion.unirioja.es/transparencia/ofertas-empleo",
-    "https://www.emasesa.com/canal-empleo-concursos-publicos/",
+    "https://www.emasesa.com/canal-empleo-concursos-publicos/", "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo",
     "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/talento/"]) {
     assert.ok(permitido(url), url);
   }
@@ -67,7 +67,7 @@ test("la firma cubre el cuerpo del POST", async () => {
 
 test("destino fuera de la lista: 400 sin pedir nada", async () => {
   const { vistas, pedir } = servidor([]);
-  assert.equal((await atender(await peticion("https://www.tragsa.es/"), env, pedir, AHORA)).status, 400);
+  assert.equal((await atender(await peticion("https://www.sepides.es/"), env, pedir, AHORA)).status, 400);
   assert.equal(vistas.length, 0);
 });
 
