@@ -48,5 +48,57 @@
   "status": "open",
   "title": "Técnico comercial de financiación",
   "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
+ },
+ "20069570": {
+  "apply_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "CESCE",
+  "contract": null,
+  "country": null,
+  "deadline": "2027-10-11",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T14:07:25+00:00",
+  "id": "cesce:20069570",
+  "kind": "indefinido",
+  "listed_deadline": "2027-10-11",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-20",
+  "ref": "20069570",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DEL 20 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE ABOGADO ASESORÍA JURÍDICA DE CUENTA PROPIA (EN EL MARCO DE LA TASA DE REPOSICIÓN ESPECÍFICA AUTORIZADA 2026)</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p>El plazo de admisión de solicitudes será desde el día 28 de septiembre hasta el día 11 de octubre, ambos incluidos.</p>",
+    "level": 2,
+    "title": "Plazo"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.cesce.es/documents/20122/20069499/Convocatoria+%28AAJCP-2026%29.pdf/f4db6bc8-fd1b-738b-cc19-0c6a8aba3ca3?t=1795183561791\">Convocatoria</a> (publicado el 20/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20069499/Anexo+I+Perfil.+Abogado+AJ+Cuenta+Propia.pdf/3c23732b-c725-397c-9288-339eab5bca64?t=1795182646593\">Anexo I. Perfil del puesto</a> (publicado el 20/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20069499/Anexo+II+Modelo+de+Solicitud-++pdf.pdf/cd11edd4-7b71-6ccf-2982-e72a7bc74d82?t=1795182647172\">Anexo II. Modelo de Solicitud - pdf</a> (publicado el 20/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20069499/Anexo+II+Modelo+de+Solicitud+-+word+cumplimentable.docx/e3828d41-dbcb-bc8c-248d-fffb3c197e97?t=1795182647883\">Anexo II. Modelo de Solicitud - word cumplimentable</a> (publicado el 20/11/2026)</li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesce",
+  "source_title": null,
+  "status": "open",
+  "title": "Abogado asesoría jurídica de cuenta propia",
+  "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
  }
 }

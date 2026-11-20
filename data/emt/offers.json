@@ -298,5 +298,57 @@
   "status": "open",
   "title": "Convocatoria 2 plazas Titulado/a Superior Dirección de Servicios de Transporte",
   "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-2-plazasTitulado-a-Superior-Direccion.aspx"
+ },
+ "Convocatoria-25-plazas-Operador-Primera-Bicimad-Ma": {
+  "apply_url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-25-plazas-Operador-Primera-Bicimad-Ma.aspx",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "EMT Madrid",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-08",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T14:07:25+00:00",
+  "id": "emt:Convocatoria-25-plazas-Operador-Primera-Bicimad-Ma",
+  "kind": null,
+  "listed_deadline": "2026-12-08",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-21",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 25,
+  "published_on": "2026-11-20",
+  "ref": "Convocatoria-25-plazas-Operador-Primera-Bicimad-Ma",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>21/11/2026 - 08/12/2026</p>",
+    "level": 2,
+    "title": "Periodo de inscripción"
+   },
+   {
+    "html": "<p>Convocatoria para proveer 25 plazas de Operador Primera Bicimad Especialidad Mantenimiento Elementos Sistema, perteneciente a la Dirección de Movilidad<br/>\r\n </p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.emtmadrid.es/getattachment/6d63eb5c-8528-47c8-9737-355e23a0169f/20261120-NV003-01-Bases-convocatoria.aspx\">1. Bases convocatoria 20-11-2026</a></li><li><a href=\"https://www.emtmadrid.es/getattachment/d19b63dc-e4a9-4ec4-96b5-c4033206fdcb/20261120-NV003-02-Indice-Temario.aspx\">2. Índice temario 20-11-2026</a></li><li><a href=\"https://www.emtmadrid.es/getattachment/9b36b9c4-4665-465d-a7e0-e808efb98da2/20261120-NV003-03-CV-Ciego-Modelo-Oficial.aspx\">3. CV Ciego modelo oficial 20-11-2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "emt",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria 25 plazas Operador Primera Bicimad Mantenimiento Elementos Sistema",
+  "url": "https://www.emtmadrid.es/Elementos-Cabecera/Enlaces-Pie-vertical/EMPRESA/Empleo/Convocatoria-25-plazas-Operador-Primera-Bicimad-Ma.aspx"
  }
 }

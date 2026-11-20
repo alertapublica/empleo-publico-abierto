@@ -845,6 +845,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026-puestos-pre-tragsatec/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:dd6d835eb7d2": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-20",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-20T14:07:25+00:00",
+  "location": null,
+  "process": "Tasa de reposición 2025-2026 puestos PRE de Tragsatec",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026-puestos-pre-tragsatec/Paginas/default.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación del nombramiento de personas colaboradoras del Órgano de Selección de las pruebas selectivas para la cobertura de los puestos de trabajo incluidos en la tasa de reposición de los años 2025 y 2026 de puestos de especial responsabilidad (puestos PRE) de Tragsatec.",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026-puestos-pre-tragsatec/Paginas/default.aspx",
+  "via": "tasa"
+ },
  "tragsa:dddcb09e8460": {
   "access": "libre",
   "apply_url": null,
