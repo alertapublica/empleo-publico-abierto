@@ -1,22 +1,32 @@
 {
+ "andalucia": {
+  "desde": "2026-11-20T11:37:37+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 35,
+  "lecturas": 36,
+  "resultado": "error"
+ },
+ "enusa": {
+  "desde": "2026-11-20T11:37:37+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 17,
+  "lecturas": 18,
   "resultado": "error"
  },
- "fgv": {
-  "desde": "2026-11-20T11:07:25+00:00",
+ "galiciasur": {
+  "desde": "2026-11-20T11:37:37+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "sepi": {
-  "desde": "2026-11-20T09:37:23+00:00",
-  "lecturas": 4,
+ "veiasa": {
+  "desde": "2026-11-20T11:37:37+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }

@@ -335,5 +335,22 @@
   "at": "2026-11-20T05:07:25+00:00",
   "kind": "closed",
   "offer": "idibaps:FU-348/2026"
+ },
+ {
+  "at": "2026-11-20T11:37:37+00:00",
+  "kind": "reopened",
+  "offer": "idibaps:FU-339/2026"
+ },
+ {
+  "after": "2026-11-25",
+  "at": "2026-11-20T11:37:37+00:00",
+  "before": "2026-11-12",
+  "kind": "deadline_changed",
+  "offer": "idibaps:FU-339/2026"
+ },
+ {
+  "at": "2026-11-20T11:37:37+00:00",
+  "kind": "new",
+  "offer": "idibaps:FU-374/2026"
  }
 ]

@@ -454,6 +454,73 @@
   "title": "Doctor · Doctorado en Biología, Biomedicina, Biotecnología, Bioquímica o áreas afines",
   "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3919"
  },
+ "3920": {
+  "apply_url": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3920",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3396/3920",
+  "company": "CIBER",
+  "contract": "Indefinido actividades científico-técnicas",
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "CIBERBBN",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T11:37:37+00:00",
+  "id": "ciber:3920",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-04",
+  "location": "E.T.S. INGENIEROS DE TELECOMUNICACIONES (UV); VALLADOLID",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3920",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Se requiere Titulado/a Superior (Licenciatura o Grado + Máster equivalente Meces 3) en Ingeniería Biomédica para incorporarse al Grupo de Ingeniería Biomédica (CIBER-BBN) en un proyecto coordinado con el Instituto de Investigación Sanitaria de Santiago de Compostela (IDIS) y el Institut de Recerca Biomèdica de Lleida (IRBLleida). El puesto se centra en la integración de datos multi-ómicos (metilación de ADN y miRNAs) e información clínica mediante técnicas de inteligencia artificial para identificar biomarcadores pronósticos de la infección por metapneumovirus humano en población pediátrica.</p><p>Este contrato está financiado por el proyecto “Caracterización multi-ómica de la respuesta del paciente pediátrico a la infección por metapneumovirus humano: identificación de biomarcadores diagnósticos y pronósticos en muestras no invasivas”, concedido en la IX Convocatoria Premios Jóvenes Investigadores y financiado por la Fundación AstraZeneca.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Preprocesado, control de calidad e integración de datos epigenómicos, de miRNAs y clínicos. Diseño, entrenamiento y validación de modelos de machine learning y deep learning para predicción de gravedad y estratificación de riesgo. Desarrollo de un prototipo de herramienta software de ayuda al diagnóstico y pronóstico, y su validación en una cohorte independiente. Participación en la redacción de artículos científicos y en la difusión de resultados en congresos.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Titulación Superior (MECES3) en Ingeniería BIomédica</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>Titulación Superior en Ingeniería Biomédica. Experiencia demostrable en el desarrollo y evaluación de modelos de machine learning y deep learning  (p. ej., XGBoost, redes neuronales convolucionales, métodos de clustering) aplicados a datos biomédicos. Experiencia en procesado y análisis de datos biomédicos de alta dimensionalidad (señales, o datos ómicos) mediante Python y librerías habituales (NumPy, pandas, scikit-learn, PyTorch o TensorFlow). Se valorará la trayectoria investigadora acreditada: publicaciones científicas en revistas indexadas (JCR), comunicaciones en congresos nacionales e internacionales y participación en proyectos de investigación competitivos.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorará estar matriculado/a en un programa de doctorado, así como conocimientos de bioinformática y técnicas de integración de datos heterogéneos. También se valorará experiencia en desarrollo de software e interfaces de usuario para herramientas clínicas, uso de entornos de computación con GPU, control de versiones (Git) y buen nivel de inglés científico.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> E.T.S. INGENIEROS DE TELECOMUNICACIONES (UV)</p><p><strong>Provincia:</strong> VALLADOLID</p><p><strong>Tipo de contrato:</strong> Indefinido actividades científico-técnicas</p><p><strong>Financiación:</strong> Fondos Externos</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · Titulación Superior (MECES3) en Ingeniería BIomédica",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3920"
+ },
  "3921": {
   "apply_url": "https://intranet.cientifis.com/CiberEHD/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3921",
   "category": "Titulado Superior",
@@ -518,5 +585,72 @@
   "status": "closed",
   "title": "Titulado Superior · Titulación Superior (MECES-3) en Biomedicina",
   "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3921"
+ },
+ "3922": {
+  "apply_url": "https://intranet.cientifis.com/CiberONC/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3922",
+  "category": "Titulado Superior",
+  "closed_at": null,
+  "code": "3395/3922",
+  "company": "CIBER",
+  "contract": "Indefinido",
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "CIBERONC",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-20T11:37:37+00:00",
+  "id": "ciber:3922",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-04",
+  "location": "MADRID",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "3922",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Se convoca una plaza para la incorporación de un/a técnico/a de apoyo a la investigación con perfil de Ingeniería Biomédica, Informática, Telecomunicaciones, Bioinformática, Matemáticas o formación en Inteligencia Artificial, Aprendizaje Automático (Machine Learning), Análisis de Datos Biomédicos, Bioinformática o Salud Digital, para colaborar en el desarrollo, implantación y coordinación de infraestructuras de datos biomédicos en proyectos nacionales de investigación en medicina personalizada en el área de oncología y salud digital.</p><p>La persona seleccionada participará en actividades relacionadas con la integración, armonización y explotación de datos clínicos, genómicos, moleculares y de imagen médica, así como en el análisis avanzado de datos biomédicos, inteligencia artificial aplicada a la salud, imagen médica y medicina personalizada, colaborando con equipos multidisciplinares formados por personal clínico, investigador y técnico perteneciente a centros sanitarios y organismos de investigación.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   },
+   {
+    "html": "<p>Se integrará al equipo de gestión del área para dar soporte en la gestión de proyectos de investigación en el área de oncología en lo relativo al trabajo con los datos de los mismos.</p><p>Las funciones específicas a desarrollar serán, entre otras:</p><p>•\tParticipar en la definición e implementación de procedimientos de integración y armonización de datos clínicos y biomédicos.</p><p>•\tColaborar en el despliegue y mantenimiento de plataformas de datos para investigación biomédica.</p><p>•\tParticipar en actividades de análisis avanzado de datos biomédicos mediante técnicas estadísticas y de aprendizaje automático.</p><p>•\tDar soporte técnico a la interoperabilidad entre sistemas de información sanitarios y plataformas de investigación.</p><p>•\tParticipar en la definición, gestión y control de calidad de modelos de datos y metadatos.</p><p>•\tColaborar en el desarrollo, validación y evaluación de algoritmos de inteligencia artificial aplicados a investigación biomédica.</p><p>•\tColaborar en actividades relacionadas con la gobernanza, seguridad y protección de datos de investigación.</p><p>•\tElaborar documentación técnica, informes de seguimiento y entregables asociados a proyectos de investigación.</p><p>•\tCoordinar actividades técnicas con hospitales, centros de investigación y entidades colaboradoras.</p><p>•\tDar soporte a grupos de investigación en el uso de infraestructuras y herramientas de gestión de datos.</p><p>•\tParticipar en reuniones técnicas y científicas nacionales e internacionales vinculadas a los proyectos de investigación de CIBERONC.</p><p>•\tColaborar en actividades de difusión, formación y transferencia de conocimiento relacionadas con los proyectos asignados.</p>",
+    "level": 2,
+    "title": "Funciones a desarrollar"
+   },
+   {
+    "html": "<p>Titulado/a superior (licenciatura o grado con máster) en Ingeniería Biomédica, Ingeniería Informática, Ingeniería de Telecomunicación, Bioinformática, Ingeniería Industrial, Matemáticas, Estadística o titulaciones equivalentes. La formación complementaria en el caso de graduados deberá estar relacionada con Bioinformática, Ciencia de Datos, Ingeniería Biomédica, Inteligencia Artificial, Salud Digital o disciplinas afines</p>",
+    "level": 2,
+    "title": "Titulación requerida"
+   },
+   {
+    "html": "<p>•\tExperiencia acreditable de al menos 1 año en proyectos de investigación, innovación o transformación digital en el ámbito biomédico, sanitario o de gestión de datos.</p><p>•\tExperiencia en proyectos de investigación biomédica.</p><p>•\tExperiencia en análisis de imagen médica.</p><p>•\tExperiencia en inteligencia artificial aplicada al ámbito sanitario.</p><p>•\tParticipación en proyectos desarrollados en hospitales, institutos de investigación biomédica o centros académicos.</p><p>•\tExperiencia en tratamiento y análisis de datos de neuroimagen, radiología o anatomía patológica digital.</p>",
+    "level": 2,
+    "title": "Experiencia requerida"
+   },
+   {
+    "html": "<p>Se valorarán los siguientes aspectos:</p><p>•\tMáster oficial relacionado con Bioinformática, Ciencia de Datos, Ingeniería Biomédica, Inteligencia Artificial, Salud Digital o disciplinas afines.</p><p>•\tFormación complementaria en interoperabilidad sanitaria, gestión de datos de investigación, medicina personalizada de precisión o tecnologías de la información aplicadas al ámbito sanitario.</p><p>•\tExperiencia en integración de datos clínicos, genómicos o de imagen médica.</p><p>•\tExperiencia en entornos hospitalarios, institutos de investigación biomédica o centros de investigación sanitaria.</p><p>•\tParticipación en proyectos competitivos nacionales o europeos.</p><p>•\tExperiencia en gestión y explotación de bases de datos biomédicas.</p><p>•\tExperiencia en proyectos de medicina personalizada, salud digital o investigación traslacional.</p><p>•\tExperiencia en coordinación de equipos multidisciplinares o proyectos multicéntricos.</p><p>•\tConocimiento del ciclo de vida de los datos de investigación biomédica y experiencia en entornos colaborativos de investigación clínica.</p><p>•\tConocimiento y experiencia en el entorno colaborativo de trabajo de la red CIBER</p><p>Conocimientos técnicos valorables</p><p>•\tEstándares de interoperabilidad sanitaria: HL7, HL7-FHIR, DICOM.</p><p>•\tModelos de datos para investigación biomédica: OMOP-CDM, CDISC o equivalentes.</p><p>•\tTerminologías y vocabularios sanitarios: SNOMED CT, ICD-10, LOINC.</p><p>•\tBases de datos relacionales y lenguaje SQL.</p><p>•\tProgramación y análisis de datos mediante Python y/o R.</p><p>•\tSistemas operativos Linux.</p><p>•\tControl de versiones mediante Git.</p><p>•\tTecnologías de virtualización y contenedores (Docker o similares).</p><p>•\tHerramientas de análisis y visualización de datos.</p><p>Conocimientos normativos</p><p>•\tReglamento General de Protección de Datos (RGPD).</p><p>•\tGobernanza de datos de investigación.</p><p>•\tPrincipios FAIR para gestión de datos científicos.</p><p>•\tAspectos éticos y regulatorios aplicables al uso secundario de datos sanitarios.</p><p>Competencias transversales</p><p>•\tCapacidad de trabajo en equipos multidisciplinares.</p><p>•\tCapacidad organizativa y de gestión documental.</p><p>•\tHabilidades de comunicación oral y escrita.</p><p>•\tCapacidad para redactar documentación técnica y científica.</p><p>•\tNivel de inglés equivalente a B2 o superior.</p><p>--------</p><p>Se ruega adjuntar a la solicitud carta de motivación y referencias.</p>",
+    "level": 2,
+    "title": "Otros conocimientos"
+   },
+   {
+    "html": "<p><strong>Centro:</strong> SIN ESPECIFICAR</p><p><strong>Provincia:</strong> MADRID</p><p><strong>Tipo de contrato:</strong> Indefinido</p><p><strong>Financiación:</strong> Subven.Nom</p><p><strong>Jornada completa:</strong> Si</p><p><strong>Horas semanales:</strong> 35,00</p><p><strong>Salario:</strong> 31.648,78 €</p>",
+    "level": 2,
+    "title": "Condiciones"
+   }
+  ],
+  "source": "ciber",
+  "source_title": null,
+  "status": "open",
+  "title": "Titulado Superior · Titulado/a superior (licenciatura o grado con máster) en Ingeniería Biomédica, Ingeniería Informática, Ingeniería de Telecomunicación, Bioinformática, Ingeniería Industrial, Matemáticas, Estadística o titulaciones equivalentes. La formación complementaria en el caso de graduados deberá estar relacionada con Bioinformática, Ciencia de Datos, Ingeniería Biomédica, Inteligencia Artificial, Salud Digital o disciplinas afines",
+  "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3922"
  }
 }
