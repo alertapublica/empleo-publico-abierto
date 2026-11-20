@@ -21932,6 +21932,108 @@
   "title": "Jefe/a de Máquinas (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58565"
  },
+ "58566": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58566",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58566",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sanidad/S.Alimentar./S.Pública",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-20T13:07:25+00:00",
+  "id": "tragsa:58566",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-04",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-20",
+  "ref": "58566",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Administrativo/a para un importante proyecto de la Administración Pública en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo administrativo.</li><li>Apoyo a la gestión de sesiones y reuniones.</li><li>Asistencia administrativa de las reuniones.</li><li>Apoyo a la gestión de cursos de formación on-line, prioritariamente la gestión de atención a consultas y otras incidencias.</li><li>Apoyo de revisión de bibliografía y formato para la realización de informes del área.</li><li>Apoyo en la gestión y organización de jornadas técnicas en el ámbito de la Salud Pública.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral y/o académica como administrativo/a de al menos 12 meses.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral y/o académica como administrativo/a de al menos 12 meses.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral y/o académica como administrativo/a de al menos 12 meses.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en Microsoft Office.</li></ul>Idiomas<ul><li>Inglés Nivel: A2</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 1 año de experiencia en tareas administrativas en la Administración Pública (experiencia con contrato laboral y/o académica).</li><li>Desde 3 meses Hasta 6 meses de experiencia en preparación, gestión y apoyo en coordinación de reuniones de trabajo (experiencia con contrato laboral y/o académica).</li><li>Desde 3 meses Hasta 6 meses de experiencia en manejo de bases de datos, actualización de datos y revisión de contenidos (experiencia con contrato laboral y/o académica).</li></ul>Otros Factores Meritorios<ul><li>Conocimientos y/o manejo a nivel usuario de Microsoft Outlook (se comprobará en valoración técnica).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en Microsoft Office.</li></ul>Idiomas<ul><li>Inglés Nivel: A2</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en Microsoft Office.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Inglés Nivel: A2</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 1 año de experiencia en tareas administrativas en la Administración Pública (experiencia con contrato laboral y/o académica).</li><li>Desde 3 meses Hasta 6 meses de experiencia en preparación, gestión y apoyo en coordinación de reuniones de trabajo (experiencia con contrato laboral y/o académica).</li><li>Desde 3 meses Hasta 6 meses de experiencia en manejo de bases de datos, actualización de datos y revisión de contenidos (experiencia con contrato laboral y/o académica).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos y/o manejo a nivel usuario de Microsoft Outlook (se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 5 meses.<br/><br/>- Jornada Completa de 37,5 horas semanales.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 20/11/2026 hasta el próximo 04/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a - Apoyo Sanidad (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58566"
+ },
  "58567": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58567",
   "category": "Específica",
@@ -27264,6 +27366,98 @@
   "status": "open",
   "title": "Licenciado/a o Graduado/a en Veterinaria - Saneamiento ganadero (Toledo)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58663"
+ },
+ "58664": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58664",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58664",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Toledo",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-20T13:07:25+00:00",
+  "id": "tragsa:58664",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "Toledo",
+  "missed_runs": 0,
+  "opens_on": "2026-11-20",
+  "parent_ref": null,
+  "place": "Toledo",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-20",
+  "ref": "58664",
+  "region": "Castilla-La Mancha",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Administrativo/a - Apoyo (Toledo)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Toledo<br/>Dirección: Calle Rio Henares, 1</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Atención al ganadero/a</li><li>Tramitación de documentación generada en saneamientos</li><li>Grabación en aplicación informática de los datos generados en las actuaciones</li><li>Gestión de la documentación, material y EPI´s en distintos proyectos</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral como administrativo/a de al menos 6 meses de experiencia</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral como administrativo/a de al menos 6 meses de experiencia</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o experiencia con contrato laboral como administrativo/a de al menos 6 meses de experiencia</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en Ofimática (asignatura o curso)</li></ul>Otros Factores Meritorios<ul><li>Carnet de conducir tipo B en vigor</li><li>Posibilidad de realizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en Ofimática (asignatura o curso)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en Ofimática (asignatura o curso)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B en vigor</li><li>Posibilidad de realizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad, ni haber formalizado previamente un contrato de esta modalidad asociado a la misma titulación por un periodo superior a 6 meses)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada de 5 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 20/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a - Apoyo (Toledo)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58664"
  },
  "58666": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58666",
