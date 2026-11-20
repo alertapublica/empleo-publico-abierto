@@ -32,6 +32,8 @@ class FakeWorker(BaseHTTPRequestHandler):
     """Hace de relay/ (Worker de Cloudflare): firma de hora, método, URL y cuerpo; cookies en cabeceras propias."""
     seen: list[dict] = []
     answers: list[int] = []  # estados forzados, en orden (522: el Worker no conectó con el destino)
+    redirect: str | None = None  # redirección fuera del origen que el Worker devuelve tal cual (login de UACloud)
+    outside: list[dict] = []  # cabeceras de lo que llega al destino de esa redirección
 
     def _answer(self, method):
         body = self.rfile.read(int(self.headers.get("Content-Length") or 0))
@@ -42,6 +44,11 @@ class FakeWorker(BaseHTTPRequestHandler):
         status = self.answers.pop(0) if self.answers else 200
         if not hmac.compare_digest(expected, self.headers["x-firma"] or ""):
             status = 403
+        if status == 200 and self.redirect:
+            self.send_response(302)
+            self.send_header("Location", self.redirect)
+            self.end_headers()
+            return
         self.send_response(status)
         if status == 200:
             # Como el Worker: la lista JSON, en orden (PAGINA cambia dentro de la misma respuesta, como en una
@@ -53,6 +60,12 @@ class FakeWorker(BaseHTTPRequestHandler):
         self.wfile.write(f"{method} {url} {body.decode()}".encode())
 
     def do_GET(self):
+        if self.path.startswith("/login"):  # el destino de la redirección, fuera del relay
+            self.outside.append({k.lower(): v for k, v in self.headers.items()})
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"login")
+            return
         self._answer("GET")
 
     def do_POST(self):
@@ -68,8 +81,8 @@ class RelayCloudflare(unittest.TestCase):
         threading.Thread(target=self.server.serve_forever, daemon=True).start()
         self.addCleanup(self.server.server_close)
         self.addCleanup(self.server.shutdown)
-        FakeWorker.seen, FakeWorker.answers = [], []
-        base = f"http://127.0.0.1:{self.server.server_port}"
+        FakeWorker.seen, FakeWorker.answers, FakeWorker.redirect, FakeWorker.outside = [], [], None, []
+        base = self.base = f"http://127.0.0.1:{self.server.server_port}"
         env = mock.patch.dict("os.environ", {"RELAY_CF_CLAVE": CLAVE, "RELAY_CF_URL": base})
         env.start()
         self.addCleanup(env.stop)
@@ -99,6 +112,25 @@ class RelayCloudflare(unittest.TestCase):
         client.post(PORTAL_TRAGSA, {"ICAction": "abajo"})
         client.get(SEPI)
         self.assertEqual([s["cookie"] for s in FakeWorker.seen], [None, None, "PAGINA=1; FIJA=1", "PAGINA=2; FIJA=1"])
+
+    def test_la_redireccion_fuera_del_origen_se_sigue_directa_sin_firma_ni_cookies_del_relay(self):
+        # Una ficha retirada de la UA lleva al login de UACloud: el Worker devuelve el 302 y el cliente lo sigue.
+        client = http.Client(delay=0)
+        client.get(SEPI)  # para que la siguiente lleve x-relay-cookie
+        FakeWorker.redirect = self.base + "/login?service=x"
+        with mock.patch.object(http, "ESQUEMAS_TRAS_RELAY", {"https", "http"}):  # el destino local es http
+            self.assertEqual(client.get(SEPI), "login")
+        self.assertEqual(FakeWorker.seen[1]["cookie"], "PAGINA=1; FIJA=1")
+        self.assertEqual(len(FakeWorker.outside), 1)
+        self.assertFalse({"x-ts", "x-firma", "x-relay-cookie"} & FakeWorker.outside[0].keys(), FakeWorker.outside[0])
+        self.assertIn("user-agent", FakeWorker.outside[0])
+
+    def test_la_redireccion_del_worker_a_http_no_se_sigue(self):
+        FakeWorker.redirect = self.base + "/login?service=x"  # el FakeWorker es http: hace de destino no https
+        with self.assertRaisesRegex(RuntimeError, "302"):
+            http.Client(delay=0).get(SEPI)
+        self.assertEqual(FakeWorker.outside, [])
+        self.assertEqual(len(FakeWorker.seen), 1)  # un 302 (< 500) no se reintenta
 
     def test_firma_nueva_en_cada_intento(self):
         FakeWorker.answers = [522]  # el Worker no conectó con SEPI: se reintenta con otra firma
