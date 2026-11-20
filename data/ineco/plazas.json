@@ -46591,7 +46591,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-028": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-028.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
@@ -46717,7 +46717,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-033": {
-  "annex_tries": 2,
+  "annex_tries": 3,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-033.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
@@ -47025,16 +47025,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-045": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-045.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-045.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-045",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 7,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47046,16 +47051,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-046": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-046.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-046.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-046",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 4,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47067,16 +47077,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-047": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-047.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-047.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-047",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47088,16 +47103,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-048": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-048.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-048.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-048",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Lleida",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47109,16 +47129,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-049": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-049.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-049.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-049",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Burgos",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47130,16 +47155,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-050": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-050.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-050.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-050",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Ourense",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47151,16 +47181,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-051": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-051.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-051.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-051",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 3,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -47172,16 +47207,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EXO-052": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-052.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-EXO-052.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-EXO-052",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 5,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
