@@ -10,7 +10,7 @@ Internet Archive de 2025 y 2026. La ficha da el mismo texto y los documentos.
 
 `sepi.es` no responde desde Actions: se lee por el Worker de `relay/`, con salida en Madrid
 (`VIA_RELAY_CF` en `http.py`). Su primera conexión desde el Worker suele dar 522 a los ~19 s; el
-reintento ya entra.
+reintento solía entrar, pero desde el 19/11 a veces fallan los tres: lleva cinco intentos.
 
 Procesos, como en EFE: mientras el plazo de candidaturas está abierto es oferta; después, proceso.
 Sus comunicados son el texto de estado del listado (enlazado a la ficha) y los documentos de la
@@ -95,6 +95,7 @@ class SepiSource(Source):
     name = "SEPI"
     homepage = PAGE
     apply_label = "Ver las bases y cómo presentar la candidatura"
+    retries = 5  # el 522 del Worker: desde el 19/11 a veces no entra ni al tercer intento
 
     def __init__(self, now: datetime | None = None) -> None:
         self._now = now  # solo para las pruebas
