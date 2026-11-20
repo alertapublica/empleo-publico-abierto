@@ -67,7 +67,10 @@ VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.
 # probar desde Actions, por si acaso); la UIB dio
 # timeout una vez y la siguiente entró directa. La UEx (vrprofesorado, rrhhinvestigacion) da 403 a Actions, al
 # Worker y al hosting de Piensa, y 200 desde una IP doméstica: no hay respaldo que sirva.
-RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es", "www.unirioja.es"}
+# La UA (ssp.ua.es) da timeouts sueltos desde Actions desde el 2026-11-17 (hasta 600 s por lectura; 0,4 s desde
+# una IP doméstica). Sus fichas retiradas redirigen al login de UACloud: el Worker devuelve esa redirección y
+# el cliente la sigue directo (_SinCabecerasRelay).
+RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es", "www.unirioja.es", "ssp.ua.es"}
 FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 
@@ -95,6 +98,18 @@ def _origin(url: str) -> str:
     return f"{parts.scheme}://{parts.hostname}" + (f":{port}" if port else "")
 
 
+class _SinCabecerasRelay(urllib.request.HTTPRedirectHandler):
+    """Al seguir una redirección que devuelve el Worker (sale de su origen), la firma y las cookies del relay
+    no van al nuevo destino."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        new = super().redirect_request(req, fp, code, msg, headers, newurl)
+        if new is not None:
+            for name in ("X-ts", "X-firma", "X-relay-cookie"):
+                new.remove_header(name)
+        return new
+
+
 class OutOfTime(BaseException):
     """Se acabó el plazo de la fuente o de la lectura. Hereda de BaseException para que ningún
     `except Exception` (una ficha mala, datos adicionales) la trague: corta la fuente entera."""
@@ -110,6 +125,7 @@ class Client:
         self._opener = urllib.request.build_opener(
             urllib.request.HTTPSHandler(context=tls_context()),
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
+            _SinCabecerasRelay(),
         )
         self.last = 0.0  # fin de la última petición (monotonic)
         self.attempts = 0  # peticiones hechas, contando reintentos (para el registro de la ingesta)

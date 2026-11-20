@@ -4,15 +4,16 @@
 //   - SEPI y EFE: no responden (SEPI) o dan 403 (EFE) a las IP de Actions.
 //   - Fundación de la Universidad de La Rioja: HTTP 429 a las IP de Actions.
 //   - Ineco (ePreselec): Imperva da 405 a un cliente sin agente de navegador; desde aquí, con él, entra.
-//   - EMASESA: timeout desde Actions desde el 2026-11-18.
+//   - EMASESA: timeout desde Actions desde el 2026-11-18. Tragsa (www): desde el 2026-11-19.
+//   - Universidad de Alicante (ssp.ua.es, solo de respaldo): timeouts sueltos desde Actions.
 //
 //   POST|GET /?url=<codificada>   con cabeceras x-ts y x-firma
 //
 // firma = HMAC-SHA256(RELAY_CLAVE, ts + "\n" + método + "\n" + url + "\n" + cuerpo); caduca a los
-// VENTANA_S segundos. Solo a los orígenes de ORIGENES; las redirecciones, solo dentro del mismo origen,
-// y las sigue él mismo con las cookies de la sesión. Las cookies van en cabeceras propias porque las del destino
-// no son de este dominio: x-relay-cookie (de entrada, como Cookie) y x-relay-set-cookies (de salida:
-// lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
+// VENTANA_S segundos. Solo a los orígenes de ORIGENES; las redirecciones dentro del mismo origen las sigue él
+// mismo con las cookies de la sesión, y las de fuera las devuelve tal cual. Las cookies van en cabeceras
+// propias porque las del destino no son de este dominio: x-relay-cookie (de entrada, como Cookie) y
+// x-relay-set-cookies (de salida: lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
 // y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
 // Cada origen tiene que estar también en VIA_RELAY_CF o RESPALDO_CF de empleo/http.py (lo comprueba tests/test_relay.py).
 
@@ -30,6 +31,7 @@ export const ORIGENES = new Set([
   "https://rrhh.uib.cat",
   "https://aps.unirioja.es",
   "https://www.unirioja.es",
+  "https://ssp.ua.es",
 ]);
 const VENTANA_S = 120;
 const MAX_SALTOS = 5;
@@ -125,8 +127,12 @@ export async function atender(req, env, pedir = fetch, ahora = Date.now()) {
     if (salto >= MAX_SALTOS) return respuesta(502, "demasiadas redirecciones", { "x-relay-error": "red" });
     destino = new URL(location, destino).href;
     // Solo dentro del mismo origen: el tarro de cookies es de una sesión con un único organismo.
+    // Fuera del origen (p. ej., una ficha retirada de la UA que lleva al login de UACloud): se devuelve la
+    // redirección tal cual y el cliente la sigue directo, sin el relay.
     if (!permitido(destino) || new URL(destino).origin !== new URL(url).origin) {
-      return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+      const salida = new Headers({ Location: destino, "x-relay-ms": String(Date.now() - t0) });
+      if (recibidas.length) salida.set("x-relay-set-cookies", JSON.stringify(recibidas));
+      return new Response(null, { status: r.status, headers: salida });
     }
     if (r.status !== 307 && r.status !== 308) {
       verbo = "GET";
