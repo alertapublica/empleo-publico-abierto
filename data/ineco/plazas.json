@@ -40427,7 +40427,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEW-115": {
-  "annex_tries": 1,
+  "annex_tries": 2,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEW-115.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -40449,7 +40449,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEW-116": {
-  "annex_tries": 1,
+  "annex_tries": 2,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEW-116.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -40523,7 +40523,7 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEW-119": {
-  "annex_tries": 1,
+  "annex_tries": 2,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEW-119.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
@@ -40649,16 +40649,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-EEW-124": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEW-124.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-EEW-124.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-EEW-124",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior en Ingeniería de Caminos, Canales y Puertos o Máster en Ingeniería de Caminos, Canales y Puertos.",
   "direction": "D. INGENIERÍA CIVIL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 1,
@@ -40670,16 +40675,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Grado en Ingeniería Aeroespacial o Máster en Ingeniería Aeronáutica o Máster en Sistemas de Transporte Aéreo.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -40691,16 +40701,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Grado en Ingeniería Aeroespacial o Máster en Ingeniería Aeronáutica o Máster en Sistemas de Transporte Aéreo.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -40712,16 +40727,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-003": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Media y/o Superior en Ingeniería Aeroespacial o en Ingeniería de Telecomunicaciones.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 3,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -40733,16 +40753,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-004": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Grado en Ingeniería del Software o Ingeniería Informática.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -40754,16 +40779,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior, preferiblemente, en Derecho, Asesoría Jurídico Laboral, Administración y Dirección de Empresas o Ciencias Económicas.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -40775,16 +40805,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-ESO-006": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-006.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-ESO-006.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-ESO-006",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Media y/o Superior en: Ingeniería de Telecomunicaciones.",
   "direction": "D. INGENIERÍA DE SISTEMAS",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,

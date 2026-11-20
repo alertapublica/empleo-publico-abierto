@@ -107,7 +107,7 @@
  "691918": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/691918.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-20T05:07:25+00:00",
   "code": null,
   "company": "Agencia Pública Andaluza de Educación",
   "contract": "Indefinido",
@@ -122,7 +122,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-19",
   "location": "Camas (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -155,7 +155,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a Medio",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/691918.html"
  },

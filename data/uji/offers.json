@@ -128,7 +128,7 @@
  "3596": {
   "apply_url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3596&pConcurso=1&pCategoria=14",
   "category": "Personal tecnòleg o gestor superior",
-  "closed_at": null,
+  "closed_at": "2026-11-20T05:07:25+00:00",
   "code": "23197",
   "company": "Universitat Jaume I",
   "contract": null,
@@ -144,7 +144,7 @@
   "kind": null,
   "listed_deadline": "2026-11-19",
   "location": "Castelló de la Plana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -163,7 +163,7 @@
   ],
   "source": "uji",
   "source_title": "23197 plaça de personal tecnòleg o gestor superior per col·laborar en el projecte d’investigació: “24I234 SUBSTAÏNABLE AND ANTIMICROBIAL MATERIALS FOR MEAT PACKAGING (MATE4MEAT)”, dirigit per Luis Cabedo Mas del Departament d'Enginyeria de Sistemes Industrials i Disseny. Grup d’investigació: Polímers i Materials Avançats.",
-  "status": "open",
+  "status": "closed",
   "title": "Personal tecnòleg o gestor superior · 24I234 Substaïnable and antimicrobial materials for meat packaging (MATE4MEAT)",
   "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3596&pConcurso=1&pCategoria=14"
  },

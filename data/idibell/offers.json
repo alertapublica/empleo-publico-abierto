@@ -694,7 +694,7 @@
  "2304": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2304",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-20T05:07:25+00:00",
   "code": "26-154_SS_RD",
   "company": "IDIBELL",
   "contract": "Permanent by project",
@@ -709,7 +709,7 @@
   "kind": null,
   "listed_deadline": "2026-11-19",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -733,7 +733,7 @@
   ],
   "source": "idibell",
   "source_title": "26-154_SS_RD Research Technician A specialist in electroencephalography",
-  "status": "open",
+  "status": "closed",
   "title": "Research Technician A specialist in electroencephalography",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2304"
  },
