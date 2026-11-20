@@ -1,37 +1,32 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 25,
+  "lecturas": 26,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 7,
-  "resultado": "error"
- },
- "fgv": {
-  "desde": "2026-11-20T06:07:29+00:00",
-  "lecturas": 1,
+  "lecturas": 8,
   "resultado": "error"
  },
  "renfe": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 25,
+  "lecturas": 26,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-19T21:07:26+00:00",
-  "lecturas": 4,
+  "lecturas": 5,
   "resultado": "error"
  },
  "tragsa": {
   "desde": "2026-11-19T07:37:27+00:00",
-  "lecturas": 26,
+  "lecturas": 27,
   "resultado": "error"
  },
  "unirioja": {
   "desde": "2026-11-19T11:07:24+00:00",
-  "lecturas": 19,
+  "lecturas": 20,
   "resultado": "error"
  }
 }
