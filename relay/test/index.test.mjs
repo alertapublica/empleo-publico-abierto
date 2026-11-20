@@ -150,6 +150,11 @@ test("no sigue redirecciones fuera del origen (las devuelve tal cual) ni sin fin
   assert.deepEqual(JSON.parse(r1.headers.get("x-relay-set-cookies")), ["S=1"]);
   assert.equal(fuera.vistas.length, 1);
   // Tampoco a otro origen de la lista: las cookies de un organismo no van a otro.
+  // A http (o ftp), no: el 502 de siempre.
+  for (const location of ["http://autentica.cpd.ua.es/cas/login", "ftp://otro.example/x"]) {
+    const plano = servidor([new Response(null, { status: 302, headers: { location } })]);
+    assert.equal((await atender(await peticion("https://ssp.ua.es/es/selecinvest/f.html"), env, plano.pedir, AHORA)).status, 502);
+  }
   const aotro = servidor([new Response(null, { status: 302, headers: { location: "https://www.sepi.es/es/empleo-publico" } })]);
   assert.equal((await atender(await peticion(PORTAL), env, aotro.pedir, AHORA)).status, 302);
   assert.equal(aotro.vistas.length, 1);

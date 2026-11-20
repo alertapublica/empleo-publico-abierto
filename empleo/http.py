@@ -98,11 +98,16 @@ def _origin(url: str) -> str:
     return f"{parts.scheme}://{parts.hostname}" + (f":{port}" if port else "")
 
 
+ESQUEMAS_TRAS_RELAY = {"https"}  # a dónde se sigue una redirección que devuelve el Worker
+
+
 class _SinCabecerasRelay(urllib.request.HTTPRedirectHandler):
     """Al seguir una redirección que devuelve el Worker (sale de su origen), la firma y las cookies del relay
-    no van al nuevo destino."""
+    no van al nuevo destino, y solo se sigue a https (el Worker tampoco devuelve otras; revisión de ChatGPT)."""
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if req.has_header("X-firma") and urllib.parse.urlsplit(newurl).scheme not in ESQUEMAS_TRAS_RELAY:
+            return None  # urllib da entonces el HTTPError de la redirección: la lectura falla sin seguirla
         new = super().redirect_request(req, fp, code, msg, headers, newurl)
         if new is not None:
             for name in ("X-ts", "X-firma", "X-relay-cookie"):

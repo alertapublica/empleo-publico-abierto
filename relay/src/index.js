@@ -11,7 +11,7 @@
 //
 // firma = HMAC-SHA256(RELAY_CLAVE, ts + "\n" + método + "\n" + url + "\n" + cuerpo); caduca a los
 // VENTANA_S segundos. Solo a los orígenes de ORIGENES; las redirecciones dentro del mismo origen las sigue él
-// mismo con las cookies de la sesión, y las de fuera las devuelve tal cual. Las cookies van en cabeceras
+// mismo con las cookies de la sesión, y las de fuera (solo a https) las devuelve tal cual. Las cookies van en cabeceras
 // propias porque las del destino no son de este dominio: x-relay-cookie (de entrada, como Cookie) y
 // x-relay-set-cookies (de salida: lista JSON con cada Set-Cookie recibido, en orden). Una cabecera propia repetida llega unida por comas,
 // y las comas también aparecen dentro de una Set-Cookie (Expires): por eso va en JSON y no repetida.
@@ -128,8 +128,11 @@ export async function atender(req, env, pedir = fetch, ahora = Date.now()) {
     destino = new URL(location, destino).href;
     // Solo dentro del mismo origen: el tarro de cookies es de una sesión con un único organismo.
     // Fuera del origen (p. ej., una ficha retirada de la UA que lleva al login de UACloud): se devuelve la
-    // redirección tal cual y el cliente la sigue directo, sin el relay.
+    // redirección tal cual y el cliente la sigue directo, sin el relay; solo a https.
     if (!permitido(destino) || new URL(destino).origin !== new URL(url).origin) {
+      if (new URL(destino).protocol !== "https:") {
+        return respuesta(502, "redirección fuera del ámbito del relay", { "x-relay-error": "red" });
+      }
       const salida = new Headers({ Location: destino, "x-relay-ms": String(Date.now() - t0) });
       if (recibidas.length) salida.set("x-relay-set-cookies", JSON.stringify(recibidas));
       return new Response(null, { status: r.status, headers: salida });

@@ -118,11 +118,19 @@ class RelayCloudflare(unittest.TestCase):
         client = http.Client(delay=0)
         client.get(SEPI)  # para que la siguiente lleve x-relay-cookie
         FakeWorker.redirect = self.base + "/login?service=x"
-        self.assertEqual(client.get(SEPI), "login")
+        with mock.patch.object(http, "ESQUEMAS_TRAS_RELAY", {"https", "http"}):  # el destino local es http
+            self.assertEqual(client.get(SEPI), "login")
         self.assertEqual(FakeWorker.seen[1]["cookie"], "PAGINA=1; FIJA=1")
         self.assertEqual(len(FakeWorker.outside), 1)
         self.assertFalse({"x-ts", "x-firma", "x-relay-cookie"} & FakeWorker.outside[0].keys(), FakeWorker.outside[0])
         self.assertIn("user-agent", FakeWorker.outside[0])
+
+    def test_la_redireccion_del_worker_a_http_no_se_sigue(self):
+        FakeWorker.redirect = self.base + "/login?service=x"  # el FakeWorker es http: hace de destino no https
+        with self.assertRaisesRegex(RuntimeError, "302"):
+            http.Client(delay=0).get(SEPI)
+        self.assertEqual(FakeWorker.outside, [])
+        self.assertEqual(len(FakeWorker.seen), 1)  # un 302 (< 500) no se reintenta
 
     def test_firma_nueva_en_cada_intento(self):
         FakeWorker.answers = [522]  # el Worker no conectó con SEPI: se reintenta con otra firma
