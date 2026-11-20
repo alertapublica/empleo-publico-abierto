@@ -54,7 +54,8 @@ def _closing_date(value: str) -> str | None:
 
 
 def _parse_tiles(soup: BeautifulSoup, tiles, base: str) -> tuple[list[dict], int]:
-    """Variante en mosaico (Renfe): `li.job-tile` con campos rotulados y «Mostrando N puesto(s)», sin fecha.
+    """Variante en mosaico (Renfe): `li.job-tile` con campos rotulados y «Mostrando N puesto(s)» (con uno) o
+    «Mostrando 1 a N de N puestos» (con varios, visto el 2026-11-19), sin fecha.
 
     Cada campo sale repetido (escritorio y móvil): se toma el de escritorio. La siguiente página no se
     sabe leer aún, así que si el mosaico se llena se detiene en vez de leer a medias.
@@ -81,7 +82,7 @@ def _parse_tiles(soup: BeautifulSoup, tiles, base: str) -> tuple[list[dict], int
             "published_on": None,
         })
     label = soup.select_one("#tile-search-results-label")
-    shown = re.fullmatch(r"Mostrando (\d+) puestos?", _clean(label.get_text(" "))) if label else None
+    shown = re.fullmatch(r"Mostrando (?:1 a \d+ de )?(\d+) puestos?", _clean(label.get_text(" "))) if label else None
     if not shown or int(shown.group(1)) != len(rows):
         raise SourceLayoutError("SuccessFactors: el mosaico no dice «Mostrando N puestos» o no coincide")
     per_page = tiles.get("data-per-page", "")
