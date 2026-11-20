@@ -19,6 +19,7 @@ class Source(ABC):
     concurrency_group: str | None = None
     scope: str = "Estatal"  # ámbito: «Estatal» o la comunidad autónoma (nombre de REGIONS)
     delay: float = DEFAULT_DELAY  # pausa entre peticiones: más si el portal la pide (Crawl-delay)
+    retries: int = 3  # intentos por petición: más si el portal (o el camino hasta él) falla a ratos
     # Procesos que la fuente nunca da por terminados: pasan a «sin novedades» a los N días de verlos,
     # y los que ya estaban en la primera lectura, desde el principio. Sin fecha, vale la de entonces.
     stale_after_days: int | None = None

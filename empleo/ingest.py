@@ -499,7 +499,7 @@ def run_group(group: list[Source], now: datetime, end: float) -> dict[str, str]:
         if previous is not None:
             wait = previous.last + max(previous.delay, source.delay) - time.monotonic()
             time.sleep(max(0.0, min(wait, end - time.monotonic())))
-        previous = Client(source.delay, deadline=min(time.monotonic() + SOURCE_BUDGET, end))
+        previous = Client(source.delay, source.retries, deadline=min(time.monotonic() + SOURCE_BUDGET, end))
         results[source.id] = run_one(source, previous, now)
     return results
 
