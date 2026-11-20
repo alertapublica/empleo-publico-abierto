@@ -30,5 +30,17 @@
   "before": "2026-11-16",
   "kind": "deadline_changed",
   "offer": "hunosa:P2026.03"
+ },
+ {
+  "at": "2026-11-20T12:37:27+00:00",
+  "kind": "reopened",
+  "offer": "hunosa:P2026.02"
+ },
+ {
+  "after": "2026-11-25",
+  "at": "2026-11-20T12:37:27+00:00",
+  "before": "2026-11-16",
+  "kind": "deadline_changed",
+  "offer": "hunosa:P2026.02"
  }
 ]
