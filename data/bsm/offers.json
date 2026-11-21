@@ -563,7 +563,7 @@
  "1368161355": {
   "apply_url": "https://creix.bsmsa.cat/talentcommunity/apply/1368161355/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": null,
   "company": "BSM",
   "contract": null,
@@ -578,7 +578,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -596,7 +596,7 @@
   ],
   "source": "bsm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Cap d'Àrea d'Operacions - Tibidabo",
   "url": "https://creix.bsmsa.cat/job/Selecci%C3%B3-Cap-d&apos;%C3%80rea-d&apos;Operacions-Tibidabo-Sele-Selecci%C3%B3/1368161355/"
  },
@@ -723,7 +723,7 @@
  "1373485055": {
   "apply_url": "https://creix.bsmsa.cat/talentcommunity/apply/1373485055/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": null,
   "company": "BSM",
   "contract": null,
@@ -738,7 +738,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -756,7 +756,7 @@
   ],
   "source": "bsm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Tècnic/a de Gestió de persones, nòmines i retribucions",
   "url": "https://creix.bsmsa.cat/job/Selecci%C3%B3-per-vacant-interna-de-T%C3%A8cnica-de-Gesti%C3%B3-de-persones%2C-n%C3%B2mines-i-retribucions-Sele-Selecci%C3%B3-p/1373485055/"
  },

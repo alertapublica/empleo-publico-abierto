@@ -355,6 +355,25 @@
   "url": "https://www.cnic.es/es/convocatoria/cardiologoa-tiempo-completo-react-para-supervision-fase-ii",
   "via": "otro"
  },
+ "cnic:b04740ef1ec1": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-21T07:07:28+00:00",
+  "location": null,
+  "position": 0,
+  "process": "Investigador/a en prácticas para el laboratorio de Fisiopatología Hematovascular (IPRAC-JJF-10.26)",
+  "process_url": "https://www.cnic.es/es/convocatoria/investigadora-practicas-para-laboratorio-fisiopatologia-hematovascular-1",
+  "source": "cnic",
+  "state": "curso",
+  "system": null,
+  "title": "En estudio de elegibilidad (2º)",
+  "url": "https://www.cnic.es/es/convocatoria/investigadora-practicas-para-laboratorio-fisiopatologia-hematovascular-1",
+  "via": "otro"
+ },
  "cnic:c581c78fdace": {
   "access": null,
   "apply_url": null,

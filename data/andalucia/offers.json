@@ -217,7 +217,7 @@
  "692221": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692221.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": "2487",
   "company": "Fundación Pública Andaluza Progreso y Salud, M.P.",
   "contract": "Indefinido",
@@ -232,7 +232,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-20",
   "location": "Granada (Granada)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-09",
   "parent_ref": null,
   "place": null,
@@ -265,7 +265,7 @@
   ],
   "source": "andalucia",
   "source_title": "Técnico/a Auxiliar en Caracterización Molecular y Cultivo Celular- 2487",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a Auxiliar en Caracterización Molecular y Cultivo Celular",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692221.html"
  },

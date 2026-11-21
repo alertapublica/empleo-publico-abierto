@@ -77,7 +77,7 @@
  "1444438033": {
   "apply_url": "https://empleo.correos.com/talentcommunity/apply/1444438033/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": null,
   "company": "Correos",
   "deadline": "2026-11-20",
@@ -88,7 +88,7 @@
   "id": "correos:1444438033",
   "kind": "practicas",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 1,
@@ -105,7 +105,7 @@
   ],
   "source": "correos",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jóvenes Talentos Correos Express 2026-2027 Selección y Formación.",
   "url": "https://empleo.correos.com/job/Madrid-J%C3%B3venes-Talentos-Correos-Express-2026-2027-Selecci%C3%B3n-y-Formaci%C3%B3n_-Madr/1444438033/"
  },

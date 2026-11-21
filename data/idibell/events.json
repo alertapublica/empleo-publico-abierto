@@ -306,5 +306,35 @@
   "before": "2026-11-23",
   "kind": "deadline_changed",
   "offer": "idibell:2288"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2294"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2314"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2315"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2317"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2318"
+ },
+ {
+  "at": "2026-11-21T07:07:28+00:00",
+  "kind": "closed",
+  "offer": "idibell:2320"
  }
 ]

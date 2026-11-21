@@ -256,7 +256,7 @@
  "2026-pi87": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi87/convocatoria-i-pi-87-26.html",
   "category": "Investigador/a en Formación",
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": "I-PI 87-26",
   "company": "Universidad de Alicante",
   "contract": "contratación temporal",
@@ -271,7 +271,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-20",
   "location": "Comunitat Valenciana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-09",
   "parent_ref": null,
   "place": null,
@@ -299,7 +299,7 @@
   ],
   "source": "ua",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Personal investigador en formación para colaborar con el proyecto «EXPLORA-TENN. Enfoques Teóricos para Expresividad en Redes Neuronales»",
   "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi87/convocatoria-i-pi-87-26.html"
  },
@@ -611,7 +611,7 @@
  "2026-ptgai55": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai55/convocatoria-i-ptgai-55-26.html",
   "category": "Tecnólogo/a superior",
-  "closed_at": null,
+  "closed_at": "2026-11-21T07:07:28+00:00",
   "code": "I-PTGAI 55-26",
   "company": "Universidad de Alicante",
   "contract": "contratación indefinida",
@@ -626,7 +626,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-20",
   "location": "Comunitat Valenciana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-09",
   "parent_ref": null,
   "place": null,
@@ -654,7 +654,7 @@
   ],
   "source": "ua",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Diseño de espacios de datos y gestión de datos abiertos»",
   "url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai55/convocatoria-i-ptgai-55-26.html"
  }
