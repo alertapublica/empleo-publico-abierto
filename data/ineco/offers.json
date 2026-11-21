@@ -11100,7 +11100,7 @@
  "3372350": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372350",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-21T13:07:26+00:00",
   "code": "28895",
   "company": "Ineco",
   "contract": null,
@@ -11117,7 +11117,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -11155,7 +11155,7 @@
   ],
   "source": "ineco",
   "source_title": "28895 - Técnico/a de soporte y automatización de Procesos",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de soporte y automatización de Procesos",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3372350"
  },
