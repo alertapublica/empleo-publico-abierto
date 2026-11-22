@@ -533,7 +533,7 @@
  "693646": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693646.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-22T07:07:24+00:00",
   "code": null,
   "company": "Canal Sur Radio y Televisión, S.A.",
   "contract": "Duración determinada- obra o servicio determinado",
@@ -550,7 +550,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-21",
   "location": "SAN JUAN DE AZNALFARACHE (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
@@ -578,7 +578,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "PRODUCTOR/A -SAN JUAN DE AZNALFARACHE",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693646.html"
  },
@@ -746,7 +746,7 @@
  "694402": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694402.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-22T07:07:24+00:00",
   "code": null,
   "company": "Canal Sur Radio y Televisión, S.A.",
   "contract": "Duración determinada- eventual por circunstancias de la producción",
@@ -763,7 +763,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-21",
   "location": "SAN JUAN DE AZNALFARACHE (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
@@ -791,7 +791,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "REALIZADOR/A- SAN JUAN DE AZNALFARACHE",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/694402.html"
  },
