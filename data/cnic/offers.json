@@ -23,7 +23,7 @@
   "opens_on": null,
   "parent_ref": null,
   "place": null,
-  "portal_tries": 3,
+  "portal_tries": 4,
   "positions": null,
   "published_on": null,
   "ref": "IP-JAC-10.26",
@@ -272,6 +272,53 @@
   "status": "open",
   "title": "Investigador/a postdoctoral para el laboratorio de Biología de linfocitos B",
   "url": "https://www.cnic.es/es/convocatoria/investigadora-postdoctoral-para-laboratorio-biologia-linfocitos-b-0"
+ },
+ "Postdoc-RFJ-11.26": {
+  "apply_url": "https://www.cnic.es/es/convocatoria/investigadora-postdoctoral-para-laboratorio-imagen-salud-cardiovascular#block-inscripcion",
+  "category": null,
+  "closed_at": null,
+  "code": "Postdoc-RFJ-11.26",
+  "company": "CNIC",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-08",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T13:07:24+00:00",
+  "id": "cnic:Postdoc-RFJ-11.26",
+  "kind": null,
+  "listed_deadline": "2026-12-08",
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "Postdoc-RFJ-11.26",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>El Centro Nacional de Investigaciones Cardiovasculares Carlos III (F.S.P.) (CNIC) ha sido concebido para desarrollar una investigación de excelencia, competitiva y de relevancia internacional en relación con las enfermedades cardiovasculares. El CNIC cuenta con un centro de investigación de 24.000 m2, ubicado en Madrid, con más de 6.000 m2 para laboratorios dotado de una infraestructura y un equipamiento de última generación.</p><p>Se convoca una plaza de Investigador/a postdoctoral para trabajar en el laboratorio de Imagen y Salud Cardiovascular, dirigido <strong>por el Dr. Rodrigo Fernández Jiménez.</strong></p><p>Más información en:</p><p><a href=\"https://www.cnic.es/es/investigacion/imagen-salud-cardiovascular\">https://www.cnic.es/es/investigacion/imagen-salud-cardiovascular</a></p><p><strong>Funciones:</strong></p><p>La persona seleccionada desarrollará investigación en epidemiología cardiovascular y prevención de la enfermedad cardiovascular, estudiando la relación de los estilos de vida, especialmente los hábitos dietéticos y el sueño, con la salud cardiometabólica y los factores de riesgo cardiovascular.</p><p>Diseñará y realizará análisis estadísticos de datos procedentes de estudios epidemiológicos y cohortes poblacionales, incluyendo la gestión y depuración de bases de datos, el análisis longitudinal, la modelización multivariable y la interpretación de resultados.</p><p>Participará en el análisis de datos de metabolómica, dirigida y no dirigida, para identificar y validar biomarcadores y firmas metabólicas asociados a patrones de estilos de vida y a resultados de salud. Asimismo, colaborará en la elaboración de publicaciones científicas, la presentación de resultados y el desarrollo de proyectos de investigación del grupo.</p><p><strong>Requerimientos imprescindibles: </strong></p><ol><li>Estar en posesión del título de Doctor/a en Ciencias de la Salud, Biomedicina, Epidemiología, Salud Pública o disciplinas afines, siempre que no hayan transcurrido más de cuatro años entre la fecha de defensa de la tesis doctoral y la fecha de formalización del contrato (el título oficial se requerirá en el momento de formalizar el contrato).</li><li>Buen dominio del inglés, demostrable mediante certificado oficial, con nivel mínimo B2.</li><li>Experiencia previa mínima de 4 años en laboratorios de investigación. (2 años y 8 meses para personas con discapacidad superior al 66% y 3 años y 4 meses para personas con discapacidad superior al 33%).</li></ol><p><strong>Requerimientos valorables: </strong></p><p>C1. Experiencia investigadora acreditada en epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de vida (especialmente alimentación y sueño) y salud cardiometabólica.</p><p>C2. Publicaciones científicas y/o estancias de investigación relacionadas con dichas áreas: epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de vida (especialmente alimentación y sueño) y salud cardiometabólica.</p><p>C3. Experiencia y/o conocimientos en análisis estadístico de estudios de cohortes y bases de datos biomédicas, incluyendo análisis longitudinales, regresión multivariable y análisis de medidas repetidas, con herramientas como R, Stata o equivalente.</p><p>C4. Experiencia en análisis de datos de metabolómica dirigida y/o no dirigida, identificación de biomarcadores y firmas metabólicas.</p><p>C5. Entrevista.</p><p>Acción positiva: se establece un índice corrector de 1,5 por cada año de experiencia en la evaluación del cómputo de años en aquellos criterios donde se evalúe la experiencia, en caso de que la persona acredite una discapacidad superior al 66% y de 1,2 en caso de que la persona acredite una discapacidad superior al 33%.</p><p><strong>Se ofrece: </strong></p><ul><li>Incorporación a un Centro de Investigación de relevancia internacional en el ámbito científico.</li><li>Acceso a una infraestructura con la tecnología más avanzada.</li><li>Integración en equipos jóvenes en un ambiente de excelencia científica.</li><li>Contrato Postdoctoral de 3 años de duración, prorrogable hasta el máximo de 6 años, de acuerdo con el artículo 22 de la Ley de la Ciencia, la Tecnología y la Innovación (texto refundido Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación), financiado con fondos internos del grupo de Imagen y Salud Cardiovascular dirigido por el Dr. Rodrigo Fernández Jiménez, siempre que la persona candidata seleccionada cumpla los requisitos legales para la formalización del contrato con arreglo a derecho.</li></ul><p><strong>Plan de selección:</strong></p><p>La RESOLUCIÓN DE LA SECRETARÍA DE ESTADO DE FUNCIÓN PÚBLICA POR LA QUE SE APRUEBAN LOS CRITERIOS DE ACTUACION COMUNES EN LOS PROCESOS SELECTIVOS DE LAS ENTIDADES DEL SECTOR PÚBLICO ESTATAL de 11 de abril de 2022, establece en el punto 6.1 que “Salvo que una normativa específica prevea el sistema selectivo de concurso, el sistema selectivo será el de concurso-oposición”</p><p>En el caso de CNIC la normativa específica aprobada por el patronato de la Fundación establece un sistema selectivo de concurso con fase de entrevista.</p><p>Se realizará una entrevista personal al menos a las 3 candidaturas que obtengan la mayor puntuación, siempre que alcancen el total de 60 puntos en la suma de los criterios evaluables (C1-C4). Se contratará a la persona candidata con puntuación más alta, siempre que alcance los 75 puntos (C1-C5).</p><p><strong>Composición de la Comisión de Selección:</strong></p><ul><li>Jefe de grupo de Imagen y Salud Cardiovascular </li><li>Investigador Postdoctoral del Grupo</li><li>Manager de la Oficina de investigación</li><li>Manager de la Oficina de investigación</li><li>Miembro de RRHH</li></ul><p>El CNIC garantiza, en su ámbito de actuación, el principio de igualdad en el acceso al empleo, no pudiendo establecer discriminación alguna, directa o indirecta, basada en motivos de origen, incluido el racial o étnico, sexo, edad, estado civil, religión o convicciones, opinión política, orientación e identidad sexual, expresión de género, características sexuales, afiliación sindical, condición social, lengua dentro del Estado y discapacidad, siempre que los trabajadores se hallasen en condiciones de aptitud para desempeñar el trabajo o empleo de que se trate.</p><p>Con la participación en el proceso de selección, la persona participante acepta que sus datos figuren en las resoluciones públicas del proceso de selección. Tales resoluciones (relación provisional de admitidos y excluidos, relación definitiva de admitidos y excluidos y resolución del proceso) se publican en la web del CNIC.</p><p>De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD), sus datos personales serán tratados por el CNIC con la finalidad de gestionar su candidatura, conservándose durante el tiempo necesario para la resolución del proceso de selección. Puede ejercer sus derechos dirigiéndose al Delegado/a de Protección de Datos del CNIC (protecciondedatoscnic.es).</p><p><strong>Criterios de puntuación:</strong></p><p><strong>C1</strong>. Experiencia investigadora acreditada en epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de vida (especialmente alimentación y sueño) y salud cardiometabólica (se evaluará en su conjunto atendiendo a la relación tiempo/especialidad). <strong>20%</strong></p><p><strong>C2</strong>. Publicaciones científicas y/o estancias de investigación relacionadas con dichas áreas: epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de vida (especialmente alimentación y sueño) y salud cardiometabólica (se evaluará en su conjunto atendiendo a la posición de autoría y calidad de las publicaciones, así como la relevancia e internacionalidad de las estancias). <strong>20%</strong></p><p><strong>C3</strong>. Experiencia y/o conocimientos en análisis estadístico de estudios de cohortes y bases de datos biomédicas, incluyendo análisis longitudinales, regresión multivariable y análisis de medidas repetidas, con herramientas como R, Stata o equivalente (se evaluará en su conjunto atendiendo a la relación tiempo/especialidad y herramientas o experiencia/conocimientos acreditados). <strong>20%</strong></p><p><strong>C4</strong>. Experiencia en análisis de datos de metabolómica dirigida y/o no dirigida, identificación de biomarcadores y firmas metabólicas (se evaluará en su conjunto atendiendo a la relación tiempo/especialidad). <strong>20%</strong></p><p><strong>C5</strong>. Entrevista. <strong>20%</strong></p>",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li>C1 - Experiencia investigadora acreditada en epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de vida y salud cardiometabólica - 20%</li><li>C2 - Publicaciones científicas y/o estancias de investigación relacionadas con dichas áreas: epidemiología cardiovascular, prevención cardiovascular y análisis de la asociación entre estilos de viday salud cardiometabólica - 20%</li><li>C3 - Experiencia y/o conocimientos en análisis estadístico de estudios de cohortes y bases de datos biomédicas - 20%</li><li>C4 - Experiencia en análisis de datos de metabolómica dirigida y/o no dirigida, identificación de biomarcadores y firmas metabólicas - 20%</li><li>C5 - Entrevista - 20%</li></ul>",
+    "level": 2,
+    "title": "Criterios de valoración"
+   }
+  ],
+  "source": "cnic",
+  "source_title": null,
+  "status": "open",
+  "title": "Investigador/a postdoctoral para el laboratorio de Imagen y Salud Cardiovascular",
+  "url": "https://www.cnic.es/es/convocatoria/investigadora-postdoctoral-para-laboratorio-imagen-salud-cardiovascular"
  },
  "TECLABII-ARR-10.26": {
   "apply_url": "https://www.cnic.es/es/convocatoria/tecnicoa-laboratorio-para-laboratorio-biologia-linfocitos-b-2#block-inscripcion",
