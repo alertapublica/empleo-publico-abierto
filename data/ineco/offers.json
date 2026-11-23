@@ -10046,7 +10046,7 @@
  "3367441": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367441",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T15:07:24+00:00",
   "code": "28963",
   "company": "Ineco",
   "contract": null,
@@ -10063,7 +10063,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -10101,7 +10101,7 @@
   ],
   "source": "ineco",
   "source_title": "28963-OB/ - Técnico/a de Edificación en Asistencia Técnica en Cliente",
-  "status": "open",
+  "status": "closed",
   "title": "OB/ - Técnico/a de Edificación en Asistencia Técnica en Cliente",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367441"
  },
