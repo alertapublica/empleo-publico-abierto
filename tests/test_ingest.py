@@ -8,7 +8,7 @@ from pathlib import Path
 
 from empleo import feeds, ingest, store
 from empleo.http import OutOfTime
-from empleo.model import Announcement, ListedOffer, OfferDetail, Plaza, SourceLayoutError
+from empleo.model import Announcement, ListedOffer, OfferDetail, SourceLayoutError
 from empleo.sources.base import Source
 
 NOW = datetime(2026, 11, 7, 12, 0, tzinfo=timezone.utc)
@@ -169,104 +169,6 @@ class PublishedDate(unittest.TestCase):
         ingest.reconcile(offers, [listed(published_on="2026-10-26")], "enusa", NOW)
         self.assertEqual(offers["1"]["published_on"], "2026-10-26")
         ingest.apply_enrichment(self.Portal([]), None, offers)
-
-
-class Places(unittest.TestCase):
-    class Fixed(Source):
-        id, name, homepage = "x", "X", "https://x"
-
-        def __init__(self, items):
-            self.items = items
-
-        def list_offers(self, http):
-            return []
-
-        def list_places(self, http):
-            return self.items
-
-    def place(self, code="A-1", **extra):
-        return Plaza("Proceso", code, "Técnico/a", "https://x/relacion", **extra)
-
-    def test_conserva_la_primera_vista_y_toma_los_datos_nuevos(self):
-        known = {}
-        ingest.sync_places(self.Fixed([self.place(positions=1)]), None, known, NOW)
-        ingest.sync_places(self.Fixed([self.place(positions=2)]), None, known, NOW + timedelta(days=1))
-        record = known["x:A-1"]
-        self.assertEqual((record["positions"], record["first_seen"], record["source"]),
-                         (2, NOW.isoformat(timespec="seconds"), "x"))
-
-    def test_la_que_desaparece_queda_sin_novedades_y_la_lectura_vacia_no_cambia_nada(self):
-        known = {}
-        ingest.sync_places(self.Fixed([self.place(), self.place("A-2"), self.place("A-3", state="finalizado")]),
-                           None, known, NOW)
-        ingest.sync_places(self.Fixed([]), None, known, NOW)
-        self.assertEqual({r["state"] for r in known.values()}, {"curso", "finalizado"})
-        ingest.sync_places(self.Fixed([self.place()]), None, known, NOW)
-        self.assertEqual({k: r["state"] for k, r in known.items()},
-                         {"x:A-1": "curso", "x:A-2": "retirado", "x:A-3": "finalizado"})
-
-    def test_cierra_a_la_hora_del_bloque(self):
-        known = {}
-        place = self.place(state="abierto", deadline="2026-11-07", deadline_time="11:59", apply_url="https://x/entrar")
-        ingest.sync_places(self.Fixed([place]), None, known, datetime(2026, 11, 7, 9, 0, tzinfo=timezone.utc))
-        self.assertEqual(known["x:A-1"]["state"], "abierto")
-        ingest.sync_places(self.Fixed([place]), None, known, datetime(2026, 11, 7, 11, 0, tzinfo=timezone.utc))
-        self.assertEqual((known["x:A-1"]["state"], known["x:A-1"]["apply_url"]), ("curso", None))
-
-    class Annexes(Fixed):
-        annexes_per_read = 2
-
-        def __init__(self, items, fail=()):
-            super().__init__(items)
-            self.read, self.fail = [], fail
-
-        def fetch_annex(self, http, place):
-            self.read.append(place["code"])
-            if place["code"] in self.fail:
-                raise SourceLayoutError("plantilla nueva")
-            return {"degree": f"Grado ({place['code']})", "location": "Madrid"}
-
-    def test_anexos_con_tope_abiertas_primero_y_una_sola_vez(self):
-        items = [self.place(f"C-{n}", annex_url=f"https://x/{n}.pdf") for n in range(3)]
-        items.append(self.place("A-9", state="abierto", deadline="2026-11-30", annex_url="https://x/9.pdf"))
-        items.append(self.place("F-1", state="finalizado", annex_url="https://x/f.pdf"))
-        source, known = self.Annexes(items), {}
-        ingest.sync_places(source, None, known, NOW)
-        ingest.read_annexes(source, None, known)
-        self.assertEqual(source.read, ["A-9", "C-0"])
-        ingest.sync_places(source, None, known, NOW)  # la lectura siguiente conserva lo leído
-        ingest.read_annexes(source, None, known)
-        ingest.read_annexes(source, None, known)
-        self.assertEqual(source.read, ["A-9", "C-0", "C-1", "C-2"])  # ni repite ni lee la de un bloque terminado
-        self.assertEqual((known["x:A-9"]["degree"], known["x:A-9"]["location"]), ("Grado (A-9)", "Madrid"))
-
-    def test_anexo_nuevo_o_version_nueva_se_relee(self):
-        source, known = self.Annexes([self.place(annex_url="https://x/1.pdf")]), {}
-        ingest.sync_places(source, None, known, NOW)
-        ingest.read_annexes(source, None, known)
-        source.items = [self.place(annex_url="https://x/1-corregido.pdf")]
-        ingest.sync_places(source, None, known, NOW)
-        self.assertIsNone(known["x:A-1"]["degree"])  # lo leído era de otro anexo
-        ingest.read_annexes(source, None, known)
-        source.annex_version = 2
-        ingest.read_annexes(source, None, known)
-        self.assertEqual(len(source.read), 3)
-
-    def test_anexo_que_falla_se_reintenta_pocas_veces(self):
-        source, known = self.Annexes([self.place(annex_url="https://x/1.pdf")], fail={"A-1"}), {}
-        ingest.sync_places(source, None, known, NOW)
-        for _ in range(5):
-            ingest.read_annexes(source, None, known)
-        self.assertEqual(len(source.read), ingest.MAX_ANNEX_TRIES)
-        self.assertIsNone(known["x:A-1"]["degree"])
-
-    def test_solo_las_fuentes_con_plazas_tienen_fichero(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            for source in (self.Fixed([]), self.Fixed([self.place()])):
-                source.id = "vacia" if not source.items else "llena"
-                ingest.run_source(source, None, Path(tmp), NOW)
-            self.assertFalse((Path(tmp) / "vacia" / "plazas.json").exists())
-            self.assertEqual(list(store.load(Path(tmp) / "llena" / "plazas.json", {})), ["llena:A-1"])
 
 
 class Announcements(unittest.TestCase):

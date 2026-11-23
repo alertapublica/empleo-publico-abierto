@@ -187,33 +187,6 @@ PROCESS_FIELDS = ("via", "access", "contract", "system", "state", "process_url",
                   "deadline_time", "location")
 
 
-@dataclass
-class Plaza:
-    """Un puesto de la relación de puestos de un proceso (tasas de reposición), con el texto de la fuente.
-
-    No es una oferta: se inscribe en el proceso, y solo mientras su bloque esté en plazo. La situación
-    (`state`, clave de STATES) y el plazo son los de su bloque.
-    """
-
-    process: str  # el mismo nombre que `Announcement.process`: une la plaza con su proceso
-    code: str  # referencia del puesto en la fuente («TRO26-ECE-011»), única en la fuente
-    title: str  # puesto, literal
-    url: str  # página oficial con la relación de puestos
-    block: str | None = None  # rótulo literal del bloque o tanda («CONVOCATORIA TRO26 - BLOQUE 3 JUNIO»)
-    state: str = "curso"
-    deadline: str | None = None  # AAAA-MM-DD, fin de la inscripción si el bloque está en plazo
-    deadline_time: str | None = None
-    apply_url: str | None = None  # dónde inscribirse, si el bloque está en plazo
-    unit: str | None = None  # gerencia o unidad, literal
-    direction: str | None = None  # dirección, literal
-    subdirection: str | None = None  # subdirección, literal
-    positions: int | None = None  # vacantes
-    reserved: int | None = None  # de ellas, reservadas para personas con discapacidad
-    annex_url: str | None = None  # anexo específico del puesto (bases, requisitos), si lo publica
-    location: str | None = None  # ubicación literal (del anexo), si se ha leído
-    degree: str | None = None  # titulación exigida, literal (del anexo), si se ha leído
-
-
 def today_madrid(now: datetime) -> str:
     return now.astimezone(MADRID).date().isoformat()
 

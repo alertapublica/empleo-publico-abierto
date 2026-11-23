@@ -35,11 +35,6 @@ Experts: tasa de reposición ordinaria
   proceso es la convocatoria, no el bloque.
 - «Listados …»: relaciones de personas. No se leen.
 
-La tabla de cada bloque es la relación de puestos: referencia, gerencia, dirección, subdirección, puesto,
-reserva para personas con discapacidad, vacantes y anexo específico (PDF). Cada fila es una `Plaza` del
-proceso, con el estado y el plazo de su bloque (`parse_places`). Del anexo de cada plaza en marcha se leen
-la titulación y la ubicación, literales (`parse_annex`), unos pocos por lectura (`annexes_per_read`).
-
 Un proceso por sección de comunicados. Su estado sale de las cabeceras de sus bloques: abierto si
 alguno está en plazo, finalizado si todos dicen «RESUELTO», en curso si no. Una cabecera con otro
 rótulo es un cambio de la página. Acceso libre: «Podrá optar cualquier persona que cumpla con lo
@@ -54,8 +49,7 @@ from bs4 import BeautifulSoup
 
 from ..dates import clock, spanish_date
 from ..http import Client
-from ..model import MADRID, Announcement, ListedOffer, OfferDetail, Plaza, SourceLayoutError, selection_system
-from ..pdftext import Fragment, fragments, text_in
+from ..model import MADRID, Announcement, ListedOffer, OfferDetail, SourceLayoutError, selection_system
 from ..sanitize import sanitize
 from .base import Source
 
@@ -229,119 +223,6 @@ def parse_page(html: str, page: str, today: date) -> list[Announcement]:
     return items
 
 
-def _process_of(code: str, sections: list[str]) -> str | None:
-    """Convocatoria de comunicados a la que pertenece un bloque: la misma («TRO26») o, para las repescas
-    numeradas («TR-REPESCA 2»), la que las reúne («TR-REPESCA»), como en `_blocks_of`."""
-    key = _key(code)
-    for section in sections:
-        name = _key(section)
-        if key == name or (not name[-1].isdigit() and key.startswith(name)):
-            return process_name(section)
-    return None
-
-
-def _cell(value: str) -> str | None:
-    """Celda literal; «-» o vacía, sin dato."""
-    return None if value in ("", "-") else value
-
-
-def _number(value: str) -> int | None:
-    return int(value) if value.isdigit() else None
-
-
-# Columnas de la relación de puestos («Puesto» en la ordinaria, «Puesto Agregado» en la específica).
-COLUMNS = {"referencia": "code", "gerencia": "unit", "dirección": "direction", "subdirección": "subdirection",
-           "puesto": "title", "puesto agregado": "title", "vacantes": "positions"}
-
-
-def parse_places(html: str, page: str, today: date) -> list[Plaza]:
-    """Puestos de la relación de puestos de cada bloque, con el estado y el plazo del bloque.
-
-    Solo los de convocatorias con comunicados (los procesos que se publican); una convocatoria nueva sin
-    comunicados aún no tiene proceso, y sus puestos quedan para la lectura en que lo tenga.
-    """
-    soup = BeautifulSoup(html, "html.parser")
-    sections = [found.group(1) for heading in soup.select("section[id^=section-] h2")
-                if (found := COMUNICADOS.match(_text(heading)))]
-    places = []
-    for panel in soup.select(".panel"):
-        anchor = panel.select_one(".panel-title a")
-        if anchor is None:
-            continue
-        code, block = _block(anchor, today)
-        process = _process_of(code, sections)
-        if process is None:
-            continue
-        if block["state"] == "abierto" and block["deadline"] < today.isoformat():
-            block = {"state": "curso"}  # la cabecera aún no lo ha cambiado
-        label = _text(anchor).split("(")[0].strip(" .–-")
-        rows = panel.select("table tr")
-        if not rows:
-            raise SourceLayoutError(f"Ineco: bloque sin relación de puestos «{label}»")
-        names = [_text(cell).lower() for cell in rows[0].select("th, td")]
-        reserved = next((i for i, name in enumerate(names) if name.startswith("reserva")), None)
-        if "referencia" not in names or "vacantes" not in names or reserved is None:
-            raise SourceLayoutError(f"Ineco: columnas inesperadas en «{label}»: {names}")
-        for row in rows[1:]:
-            cells = [_text(cell) for cell in row.select("td")]
-            if not any(cells):
-                continue
-            values = {COLUMNS[name]: cells[i] for i, name in enumerate(names) if name in COLUMNS and i < len(cells)}
-            if not values.get("code") or not values.get("title"):
-                raise SourceLayoutError(f"Ineco: puesto sin referencia o sin denominación en «{label}»")
-            annex = next((a["href"] for a in row.select("a[href]") if a["href"].lower().endswith(".pdf")), None)
-            places.append(Plaza(
-                process=process, code=values["code"], title=values["title"], url=page, block=label,
-                state=block["state"], deadline=block.get("deadline"), deadline_time=block.get("deadline_time"),
-                apply_url=page if block["state"] == "abierto" else None,
-                unit=_cell(values.get("unit", "")), direction=_cell(values.get("direction", "")),
-                subdirection=_cell(values.get("subdirection", "")), positions=_number(values.get("positions", "")),
-                reserved=_number(cells[reserved]) if reserved < len(cells) else None, annex_url=annex,
-            ))
-    return places
-
-
-# Anexo específico de cada puesto: una ficha en forma de formulario. Arriba, una fila de casillas con su
-# rótulo («UBICACIÓN»…) y su valor debajo; en «2.- REQUISITOS», dos columnas: «2.1. - TITULACIÓN ACADÉMICA»
-# a la izquierda y «2.2.-OTROS REQUISITOS» a la derecha, cada una con su texto debajo hasta «3.- PROCESO
-# SELECTIVO». El texto extraído en orden mezcla las casillas: se lee por posición (pdftext.fragments).
-DEGREE_LABEL = re.compile(r"^2\.1\.?\s*-?\s*TITULACI[ÓO]N", re.I)
-OTHER_LABEL = re.compile(r"^2\.2\.?\s*-?\s*OTROS REQUISITOS", re.I)
-PHASES_LABEL = re.compile(r"^3\.-")
-LOCATION_LABEL = re.compile(r"^UBICACI[ÓO]N$", re.I)
-DESCRIPTION_LABEL = re.compile(r"^1\.14\.?-")
-BOX_NUMBER = re.compile(r"^1\.\d")  # «1.12.-», número de casilla encima de su rótulo
-HEADER_BAND = 12  # puntos: los rótulos de la fila de casillas ocupan dos o tres líneas
-
-
-def _first(found: list[Fragment], pattern: re.Pattern, what: str) -> Fragment:
-    hit = next((f for f in found if pattern.match(f.text)), None)
-    if hit is None:
-        raise SourceLayoutError(f"{what}: sin «{pattern.pattern}» (¿otra plantilla?)")
-    return hit
-
-
-def parse_annex(data: bytes, what: str) -> dict:
-    """Titulación exigida y ubicación de un anexo específico, literales («preferiblemente…» incluido: si es
-    requisito o mérito lo dice el texto, no se clasifica aquí)."""
-    found = fragments(data, what)
-    degree, other = _first(found, DEGREE_LABEL, what), _first(found, OTHER_LABEL, what)
-    phases = next((f for f in found if f.page == degree.page and f.y < degree.y and PHASES_LABEL.match(f.text)), None)
-    split = (degree.x + other.x) / 2  # las dos columnas de requisitos
-    degree_text = text_in(found, degree.page, 0, split, degree.y, phases.y if phases else 0)
-
-    label = _first(found, LOCATION_LABEL, what)
-    header = [f for f in found if f.page == label.page and abs(f.y - label.y) <= HEADER_BAND
-              and not BOX_NUMBER.match(f.text)]
-    before = [f.x for f in header if f.x < label.x - 10]
-    after = [f.x for f in header if f.x > label.x + 10]
-    description = next((f for f in found if f.page == label.page and DESCRIPTION_LABEL.match(f.text)), None)
-    location = text_in(found, label.page, (max(before) + label.x) / 2 if before else 0,
-                       (label.x + min(after)) / 2 if after else 10_000,
-                       min(f.y for f in header), description.y if description else 0)
-    return {"degree": degree_text or None, "location": location or None}
-
-
 def offer_url(ref: str) -> str:
     return f"{EPRESELEC}?Id_Oferta={ref}"
 
@@ -409,12 +290,10 @@ class InecoSource(Source):
     homepage = "https://www.ineco.com/ineco/talento/ofertas-de-empleo-publico"
     title_code = re.compile(r"(?P<code>\d{5})\s*-?\s*(?P<title>\S.*)")
     delay = 5.0  # fichas pesadas (el listado entero cada vez) tras Imperva: sin prisa
-    annexes_per_read = 10  # anexos de plazas por lectura (People Experts, sin Imperva): ~50 s con la pausa
 
     def __init__(self):
         self._fichas = 0  # fichas pedidas en esta lectura
         self._blocked = False  # Imperva ya ha pedido captcha en esta lectura
-        self._places: list[Plaza] = []  # relación de puestos de la última lectura de People Experts
 
     def list_offers(self, http: Client) -> list[ListedOffer]:
         self._fichas, self._blocked = 0, False
@@ -437,16 +316,7 @@ class InecoSource(Source):
 
     def list_announcements(self, http: Client, now: datetime | None = None) -> list[Announcement]:
         today = (now or datetime.now(MADRID)).astimezone(MADRID).date()
-        items, self._places = [], []
+        items = []
         for page in PAGES:
-            html = http.get(page)
-            items += parse_page(html, page, today)
-            self._places += parse_places(html, page, today)
+            items += parse_page(http.get(page), page, today)
         return items
-
-    def list_places(self, http: Client) -> list[Plaza]:
-        """La relación de puestos viene en las mismas páginas que los comunicados: sin peticiones nuevas."""
-        return self._places
-
-    def fetch_annex(self, http: Client, place: dict) -> dict | None:
-        return parse_annex(http.get_bytes(place["annex_url"]), f"Ineco, anexo {place['code']}")
