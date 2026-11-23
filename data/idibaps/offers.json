@@ -1814,6 +1814,48 @@
   "title": "MD Clinical Researcher pel grup Oncologia gastrointestinal i pancreàtica",
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/5d669a49ae54f972a869bb34f596503c99f923a7.pdf"
  },
+ "FU-375/2026": {
+  "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/b30fadc6a38f83d5c299420224fdf988a8e4d425.pdf",
+  "category": null,
+  "closed_at": null,
+  "code": "FU-375/2026",
+  "company": "FRCB-IDIBAPS",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-07",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T12:37:27+00:00",
+  "id": "idibaps:FU-375/2026",
+  "kind": null,
+  "listed_deadline": "2026-12-07",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "FU-375/2026",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p><a href=\"https://www.clinicbarcelona.org/uploads/media/default/0023/75/b30fadc6a38f83d5c299420224fdf988a8e4d425.pdf\">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "idibaps",
+  "source_title": "[FRCB-IDIBAPS] Llicenciat/da Suport Recerca pel grup Malalties Metabòliques hereditàries i Malalties Musculars (Convocatòria FU-375/2026)",
+  "status": "open",
+  "title": "Llicenciat/da Suport Recerca pel grup Malalties Metabòliques hereditàries i Malalties Musculars",
+  "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/b30fadc6a38f83d5c299420224fdf988a8e4d425.pdf"
+ },
  "FU-ES-16/2026": {
   "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8a2a608c2a097e62ae27e6ff8c4fc68dbe7cf981.pdf",
   "category": null,
@@ -1853,5 +1895,47 @@
   "status": "closed",
   "title": "Administratiu/va per l´Unitat de Desenvolupament de Projectes (UDP)",
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/8a2a608c2a097e62ae27e6ff8c4fc68dbe7cf981.pdf"
+ },
+ "FU-ES-17/2026": {
+  "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/4a4fc3c2274ea39e54e41313ae0fd8bbe15db508.pdf",
+  "category": null,
+  "closed_at": null,
+  "code": "FU-ES-17/2026",
+  "company": "FRCB-IDIBAPS",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T12:37:27+00:00",
+  "id": "idibaps:FU-ES-17/2026",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "FU-ES-17/2026",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p><a href=\"https://www.clinicbarcelona.org/uploads/media/default/0023/75/4a4fc3c2274ea39e54e41313ae0fd8bbe15db508.pdf\">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "idibaps",
+  "source_title": "[FRCB-IDIBAPS] Administratiu/va per a la Unitat d´administració i gestió econòmica de Plataformes (Convocatòria FU-ES-17/2026)",
+  "status": "open",
+  "title": "Administratiu/va per a la Unitat d´administració i gestió econòmica de Plataformes",
+  "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/4a4fc3c2274ea39e54e41313ae0fd8bbe15db508.pdf"
  }
 }

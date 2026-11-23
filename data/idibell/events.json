@@ -341,5 +341,17 @@
   "at": "2026-11-23T05:07:30+00:00",
   "kind": "closed",
   "offer": "idibell:2288"
+ },
+ {
+  "at": "2026-11-23T12:37:27+00:00",
+  "kind": "new",
+  "offer": "idibell:2368"
+ },
+ {
+  "after": "2026-12-04",
+  "at": "2026-11-23T12:37:27+00:00",
+  "before": "2026-11-25",
+  "kind": "deadline_changed",
+  "offer": "idibell:2325"
  }
 ]
