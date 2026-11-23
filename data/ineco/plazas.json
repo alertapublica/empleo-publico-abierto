@@ -62763,16 +62763,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-010": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-010.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-010.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-010",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 1,
@@ -62784,16 +62789,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-011": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-011.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-011.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-011",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Ciclo Formativo de Grado Superior en Administración de Sistemas Informáticos en Red o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid NO",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62805,13 +62815,18 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-012": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-012.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-012.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-012",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
   "location": null,
@@ -62826,13 +62841,18 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-013": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-013.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-013.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-013",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
   "location": null,
@@ -62847,16 +62867,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-014": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-014.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-014.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-014",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media preferiblemente en Informática o Estadística o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 1,
@@ -62868,13 +62893,18 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-015": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-015.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECS-015.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECS-015",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
   "location": null,
@@ -62889,16 +62919,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-016": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-016.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-016.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECS-016",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior en Informática.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62910,16 +62945,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-017": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-017.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-017.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECS-017",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria media o Superior en: Informática, Telecomunicaciones o Ciencias Físicas.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62931,16 +62971,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-018": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-018.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-018.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECS-018",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Informática o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62952,16 +62997,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECS-019": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-019.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECS-019.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECS-019",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en: Informática o Telecomunicaciones.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,

@@ -43,5 +43,10 @@
   "at": "2026-11-12T05:07:26+00:00",
   "kind": "closed",
   "offer": "cnic:IPRAC-JJF-10.26"
+ },
+ {
+  "at": "2026-11-23T09:07:27+00:00",
+  "kind": "new",
+  "offer": "cnic:PREDOC-PGP-10.26"
  }
 ]

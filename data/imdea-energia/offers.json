@@ -128,5 +128,72 @@
   "status": "closed",
   "title": "Técnico de laboratorio para apoyo operacional y experimental general en instalaciones de procesos de alta temperatura",
   "url": "https://jobs.energy.imdea.org/es/offer/454"
+ },
+ "455": {
+  "apply_url": "https://jobs.energy.imdea.org/es/offer/455",
+  "category": null,
+  "closed_at": null,
+  "code": "26.78 FA5 PRE",
+  "company": "IMDEA Energía",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-08",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T09:07:27+00:00",
+  "id": "imdea-energia:455",
+  "kind": null,
+  "listed_deadline": "2026-12-08",
+  "location": "Móstoles",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-22",
+  "ref": "455",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>En IMDEA Energía trabajamos para <strong>acelerar </strong>la transición hacia un sistema energético sostenible, y lo hacemos en equipo. Si te mueve la <strong>curiosidad </strong>y quieres <strong>contribuir </strong>a la transición energética en un centro de investigación de referencia, ¡esta es tu oportunidad! ¿Te interesa hacer tu <strong>tesis doctoral</strong> en nuestro <strong>BRAIN Lab</strong>, para contribuir al desarrollo de los laboratorios inteligentes para energía?. Únete a un laboratorio inteligente <strong>pionero </strong>en robótica, automatización, software científico e IA y acelera el descubrimiento de materiales multifuncionales para la producción de NH₃ verde mediante laboratorios impulsados por IA.</p>\n<p>Buscamos un<strong> Investigador/a Predoctoral</strong> ligado al proyecto AMMON-IA con ganas de aprender y desarrollarse junto a un equipo multidisciplinar formado por áreas de ingeniería, ciencia de materiales y (foto)electróquimica.</p>\n<p>Este puesto está vinculado a la ayuda AMMON-IA (PID2025-176423OB-I00), financiada por MICIU/AEI/10.13039/501100011033.</p>\n<p><strong>Tareas principales:</strong></p>\n<p>•  Diseñar flujos robotizados para preparación, deposición, manipulación y evaluación experimental de muestras.</p>\n<p>•  Desarrollar software para el control de equipos, coordinación de experimentos, adquisición y trazabilidad de datos.</p>\n<p>•  Integrar y mejorar sistemas robóticos y estaciones paralelas de electrodeposición y evaluación electroquímica de BRAIN Lab.</p>\n<p>•  Desarrollar interfaces de hardware y software para instrumentación, sensores, actuadores y sistemas de control.</p>\n<p>•  Aplicar IA, aprendizaje automático y optimización a la planificación iterativa de experimentos.</p>\n<p>•  Validar las plataformas mediante estudios de (foto)electrodos para producir amoniaco a partir de nitrógeno o nitratos.</p>\n<p>•  Analizar resultados y contribuir a publicaciones, documentación y difusión científica.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p><strong> Requisitos obligatorios:</strong></p>\n<ul>\n<li>Máster o titulación equivalente en Robótica, Mecatrónica, Automática, Electrónica, Informática, Ingeniería Industrial, Ingeniería Química, Química, Ciencia de Materiales o áreas afines.</li>\n</ul>\n<p><strong>Otros requisitos valorables:</strong></p>\n<ul>\n<li>Inglés B2-C1</li>\n</ul>\n<p>Se valorará la experiencia demostrable mediante TFM, prácticas o proyectos en alguna de estas áreas:</p>\n<p>•  <strong>Robótica y hardware: </strong>sistemas robotizados, mecatrónica, electrónica, sensores, actuadores y control.</p>\n<p>•  <strong>Software científico:</strong> Python, integración de equipos, APIs, adquisición de datos y control de instrumentos.</p>\n<p>•<strong>  IA y datos:</strong> aprendizaje automático, optimización, diseño de experimentos y gemelos digitales.</p>\n<p><strong>•  Plataformas experimentales:</strong> automatización, alto rendimiento y validación de procedimientos.</p>\n<p><strong>•  Aplicación científica:</strong> materiales, catálisis, electroquímica, fotoelectroquímica y tecnologías energéticas.</p>\n<p>•<strong>  Soft Skils: </strong>Iniciativa, creatividad, resolución de problemas y trabajo en equipo interdisciplinar.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p><strong>Criterios de selección y puntuación (total 100 puntos)</strong></p>\n<ul>\n<li><strong>Criterio 1. Trayectoria académica y/o científico-técnica del candidato/a (hasta 50 puntos)</strong>\n<ul>\n<li><strong>1.a) Aportaciones científico-técnicas (hasta 45 puntos)</strong>: se valora el expediente académico y otros méritos curriculares, y su adecuación a las tareas a realizar según la formación y la experiencia profesional.</li>\n<li><strong>1.b) Movilidad e internacionalización (hasta 5 puntos):</strong> se valora la relevancia y el impacto en su trayectoria investigadora de las estancias en centros nacionales e internacionales y/o en el sector industrial, atendiendo al prestigio de la entidad de acogida y a la actividad desarrollada.</li>\n</ul>\n</li>\n<li><strong>Criterio 2. Adecuación de la persona candidata a las actividades de investigación a desarrollar (hasta 50 puntos)</strong>: se valora la adecuación de la persona al programa, proyecto o actividades de investigación según su formación y experiencia previas. Se tiene en cuenta el valor añadido que el proyecto supone para su carrera investigadora y el valor que aporta al centro y al equipo receptor.</li>\n</ul>",
+    "level": 2,
+    "title": "Criterios de selección"
+   },
+   {
+    "html": "<ul>\n<li><strong>Salario:</strong> 25.456,10€ bruto/anual. En base a las condiciones del proyecto AMMON-IA.</li>\n<li><strong>Duración del contrato: </strong>1 año con renovaciones anuales en función del desempeño. Máximo de 4 años. (Contrado Predoctoral)</li>\n</ul>",
+    "level": 2,
+    "title": "Condiciones"
+   },
+   {
+    "html": "<p><strong>IMDEA Energía</strong>, Móstoles, Madrid. 100% presencial</p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<ul><li>Título Oficial de Máster</li><li>Carta de Motivación</li></ul>",
+    "level": 2,
+    "title": "Documentos que hay que adjuntar"
+   }
+  ],
+  "source": "imdea-energia",
+  "source_title": null,
+  "status": "open",
+  "title": "Investigador/a predoctoral para robótica, automatización e IA para laboratorios inteligentes",
+  "url": "https://jobs.energy.imdea.org/es/offer/455"
  }
 }
