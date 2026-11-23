@@ -67,7 +67,10 @@ VIA_RELAY_CF = {"rrhhcandidato.tragsa.es", "www.sepi.es", "agenciaefe.es", "www.
 # probar desde Actions, por si acaso); la UIB dio
 # timeout una vez y la siguiente entró directa. La UEx (vrprofesorado, rrhhinvestigacion) da 403 a Actions, al
 # Worker y al hosting de Piensa, y 200 desde una IP doméstica: no hay respaldo que sirva.
-RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es", "www.unirioja.es"}
+# La UA (ssp.ua.es) da timeouts sueltos desde Actions desde el 2026-11-17 (hasta 600 s por lectura; 0,4 s desde
+# una IP doméstica). Sus fichas retiradas redirigen al login de UACloud: el Worker devuelve esa redirección y
+# el cliente la sigue directo (_SinCabecerasRelay).
+RESPALDO_CF = {"rrhh.uib.cat", "aps.unirioja.es", "www.unirioja.es", "ssp.ua.es"}
 FALLO_DIRECTO = {403, 429}  # además de 5xx: estados con los que se prueba el Worker
 
 
@@ -95,6 +98,26 @@ def _origin(url: str) -> str:
     return f"{parts.scheme}://{parts.hostname}" + (f":{port}" if port else "")
 
 
+ESQUEMAS_TRAS_RELAY = {"https"}  # a dónde se sigue una redirección que devuelve el Worker
+
+
+class _SinCabecerasRelay(urllib.request.HTTPRedirectHandler):
+    """Al seguir una redirección que devuelve el Worker (sale de su origen), la firma y las cookies del relay
+    no van al nuevo destino, y solo se sigue a https (el Worker tampoco devuelve otras; revisión de ChatGPT)."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if req.has_header("X-firma"):
+            if urllib.parse.urlsplit(newurl).scheme not in ESQUEMAS_TRAS_RELAY:
+                return None  # urllib da entonces el HTTPError de la redirección: la lectura falla sin seguirla
+            # Las cookies del destino que trae el 302 del Worker: las guarda Client._request.
+            req.relay_set_cookies = headers.get("x-relay-set-cookies")
+        new = super().redirect_request(req, fp, code, msg, headers, newurl)
+        if new is not None:
+            for name in ("X-ts", "X-firma", "X-relay-cookie"):
+                new.remove_header(name)
+        return new
+
+
 class OutOfTime(BaseException):
     """Se acabó el plazo de la fuente o de la lectura. Hereda de BaseException para que ningún
     `except Exception` (una ficha mala, datos adicionales) la trague: corta la fuente entera."""
@@ -110,6 +133,7 @@ class Client:
         self._opener = urllib.request.build_opener(
             urllib.request.HTTPSHandler(context=tls_context()),
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
+            _SinCabecerasRelay(),
         )
         self.last = 0.0  # fin de la última petición (monotonic)
         self.attempts = 0  # peticiones hechas, contando reintentos (para el registro de la ingesta)
@@ -158,7 +182,11 @@ class Client:
                 # Por operación de socket: una respuesta que llega a goteo puede pasarse algo del plazo.
                 with self._opener.open(request, timeout=min(self.timeout, left)) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
-                        for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
+                        # Si el Worker devolvió una redirección y se siguió directa, las de ese 302: la respuesta
+                        # final ya no es del Worker.
+                        raw = (request.relay_set_cookies if hasattr(request, "relay_set_cookies")
+                               else response.headers.get("x-relay-set-cookies"))
+                        for line in json.loads(raw or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
                             if name.strip():
                                 jar[name.strip()] = value.strip()

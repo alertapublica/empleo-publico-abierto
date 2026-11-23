@@ -36,7 +36,8 @@ test("solo admite los orígenes de la lista, con su puerto y sin credenciales", 
   for (const url of ["https://www.sepi.es/es/empleo-publico", "https://agenciaefe.es/empleo-efe-temporal/",
     "https://www.agenciaefe.es/empleo-efe-indefinido/", "https://fundacion.unirioja.es/transparencia/ofertas-empleo",
     "https://www.emasesa.com/canal-empleo-concursos-publicos/", "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo",
-    "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/talento/"]) {
+    "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/talento/",
+    "https://ssp.ua.es/es/selecinvest/"]) {
     assert.ok(permitido(url), url);
   }
   // sepi.es sin www no: la fuente no lo usa y desde el Worker da 522.
@@ -139,14 +140,24 @@ test("sin Set-Cookie no hay cabecera de cookies", async () => {
   assert.equal(r.headers.has("x-relay-set-cookie"), false);
 });
 
-test("no sigue redirecciones fuera del origen ni sin fin", async () => {
-  const fuera = servidor([new Response(null, { status: 302, headers: { location: "https://otro.example/" } })]);
-  assert.equal((await atender(await peticion(PORTAL), env, fuera.pedir, AHORA)).status, 502);
+test("no sigue redirecciones fuera del origen (las devuelve tal cual) ni sin fin", async () => {
+  // Una ficha retirada de la UA lleva al login de UACloud: el relay devuelve el 302 y el cliente lo sigue directo.
+  const login = "https://autentica.cpd.ua.es/cas/login?service=x";
+  const fuera = servidor([new Response(null, { status: 302, headers: [["location", login], ["set-cookie", "S=1"]] })]);
+  const r1 = await atender(await peticion("https://ssp.ua.es/es/selecinvest/f.html"), env, fuera.pedir, AHORA);
+  assert.equal(r1.status, 302);
+  assert.equal(r1.headers.get("location"), login);
+  assert.deepEqual(JSON.parse(r1.headers.get("x-relay-set-cookies")), ["S=1"]);
   assert.equal(fuera.vistas.length, 1);
   // Tampoco a otro origen de la lista: las cookies de un organismo no van a otro.
-  const otro = servidor([new Response(null, { status: 302, headers: { location: "https://www.sepi.es/es/empleo-publico" } })]);
-  assert.equal((await atender(await peticion(PORTAL), env, otro.pedir, AHORA)).status, 502);
-  assert.equal(otro.vistas.length, 1);
+  // A http (o ftp), no: el 502 de siempre.
+  for (const location of ["http://autentica.cpd.ua.es/cas/login", "ftp://otro.example/x"]) {
+    const plano = servidor([new Response(null, { status: 302, headers: { location } })]);
+    assert.equal((await atender(await peticion("https://ssp.ua.es/es/selecinvest/f.html"), env, plano.pedir, AHORA)).status, 502);
+  }
+  const aotro = servidor([new Response(null, { status: 302, headers: { location: "https://www.sepi.es/es/empleo-publico" } })]);
+  assert.equal((await atender(await peticion(PORTAL), env, aotro.pedir, AHORA)).status, 302);
+  assert.equal(aotro.vistas.length, 1);
   const bucle = servidor(Array.from({ length: 10 }, () => new Response(null, { status: 302, headers: { location: PORTAL } })));
   const r = await atender(await peticion(PORTAL), env, bucle.pedir, AHORA);
   assert.equal(r.status, 502);
