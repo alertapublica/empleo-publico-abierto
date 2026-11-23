@@ -47,6 +47,7 @@ class FakeWorker(BaseHTTPRequestHandler):
         if status == 200 and self.redirect:
             self.send_response(302)
             self.send_header("Location", self.redirect)
+            self.send_header("x-relay-set-cookies", json.dumps(["SESION=ua; path=/"]))
             self.end_headers()
             return
         self.send_response(status)
@@ -63,6 +64,7 @@ class FakeWorker(BaseHTTPRequestHandler):
         if self.path.startswith("/login"):  # el destino de la redirección, fuera del relay
             self.outside.append({k.lower(): v for k, v in self.headers.items()})
             self.send_response(200)
+            self.send_header("x-relay-set-cookies", json.dumps(["AJENA=1"]))  # no es del Worker: no cuenta
             self.end_headers()
             self.wfile.write(b"login")
             return
@@ -124,6 +126,10 @@ class RelayCloudflare(unittest.TestCase):
         self.assertEqual(len(FakeWorker.outside), 1)
         self.assertFalse({"x-ts", "x-firma", "x-relay-cookie"} & FakeWorker.outside[0].keys(), FakeWorker.outside[0])
         self.assertIn("user-agent", FakeWorker.outside[0])
+        # Las cookies del 302 se guardan; las del destino final, no.
+        FakeWorker.redirect = None
+        client.get(SEPI)
+        self.assertEqual(FakeWorker.seen[2]["cookie"], "PAGINA=1; FIJA=1; SESION=ua")
 
     def test_la_redireccion_del_worker_a_http_no_se_sigue(self):
         FakeWorker.redirect = self.base + "/login?service=x"  # el FakeWorker es http: hace de destino no https

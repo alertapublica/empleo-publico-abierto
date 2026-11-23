@@ -106,8 +106,11 @@ class _SinCabecerasRelay(urllib.request.HTTPRedirectHandler):
     no van al nuevo destino, y solo se sigue a https (el Worker tampoco devuelve otras; revisión de ChatGPT)."""
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
-        if req.has_header("X-firma") and urllib.parse.urlsplit(newurl).scheme not in ESQUEMAS_TRAS_RELAY:
-            return None  # urllib da entonces el HTTPError de la redirección: la lectura falla sin seguirla
+        if req.has_header("X-firma"):
+            if urllib.parse.urlsplit(newurl).scheme not in ESQUEMAS_TRAS_RELAY:
+                return None  # urllib da entonces el HTTPError de la redirección: la lectura falla sin seguirla
+            # Las cookies del destino que trae el 302 del Worker: las guarda Client._request.
+            req.relay_set_cookies = headers.get("x-relay-set-cookies")
         new = super().redirect_request(req, fp, code, msg, headers, newurl)
         if new is not None:
             for name in ("X-ts", "X-firma", "X-relay-cookie"):
@@ -179,7 +182,11 @@ class Client:
                 # Por operación de socket: una respuesta que llega a goteo puede pasarse algo del plazo.
                 with self._opener.open(request, timeout=min(self.timeout, left)) as response:
                     if via_cf:  # lista JSON de las Set-Cookie del destino, en orden (relay/src/index.js)
-                        for line in json.loads(response.headers.get("x-relay-set-cookies") or "[]"):
+                        # Si el Worker devolvió una redirección y se siguió directa, las de ese 302: la respuesta
+                        # final ya no es del Worker.
+                        raw = (request.relay_set_cookies if hasattr(request, "relay_set_cookies")
+                               else response.headers.get("x-relay-set-cookies"))
+                        for line in json.loads(raw or "[]"):
                             name, _, value = line.split(";")[0].partition("=")
                             if name.strip():
                                 jar[name.strip()] = value.strip()
