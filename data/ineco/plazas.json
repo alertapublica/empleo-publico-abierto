@@ -51021,16 +51021,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-TXT-005": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-TXT-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-TXT-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-TXT-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior en Ingeniería Informática.",
   "direction": null,
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -51042,16 +51047,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-XGX-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-XGX-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-XGX-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-XGX-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Grado en Derecho + Máster de acceso a la Abogacía + habilitación en colegio de abogados.",
   "direction": "SECRETARÍA GENERAL",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -51063,16 +51073,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-XPC-001": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-XPC-001.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/12/anexos/TRE26-XPC-001.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 1 JUNIO",
   "code": "TRE26-XPC-001",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior: Grado en Periodismo o Comunicación Audiovisual + Máster Universitario en Comunicación Corporativa (o similar).",
   "direction": "DIR. EJECUTIVA COORDINACIÓN CORPORATIVA",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -51084,16 +51099,21 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco"
  },
  "ineco:TRE26-XPC-002": {
+  "annex_read": [
+   "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-XPC-002.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionespecifica.people-experts.com/files/docs/13/anexos/TRE26-XPC-002.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRE26 – BLOQUE 2 SEPTIEMBRE",
   "code": "TRE26-XPC-002",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media o Superior: Grado o Licenciatura en Periodismo/Ciencias de la Información.",
   "direction": "DIR. EJECUTIVA COORDINACIÓN CORPORATIVA",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición específica 2026 (TRE26)",
   "reserved": 0,
@@ -62046,16 +62066,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-003": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-003.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-003.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-003",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior, preferiblemente, en Arquitectura/Grado de Arquitectura.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62067,16 +62092,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-004": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-004.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-004.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-004",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: preferiblemente en Ingeniería Aeroespacial/Ingeniería Aeronáutica/Gestión aeronáutica.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62088,16 +62118,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-005": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-005.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-005.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-005",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior, preferiblemente en Ciencias Ambientales, Ingeniería del Medio Natural, Ingeniería Agrónoma, Ingeniería de Montes o Biología.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62109,16 +62144,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-006": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-006.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-006.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-006",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Sin titulación requerida.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Barcelona NO",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62130,16 +62170,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-007": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-007.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-007.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-007",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior, preferiblemente en Ciencias Ambientales, Ingeniería del Medio Natural, Ingeniería Agrónoma, Ingeniería de Montes o Biología.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62151,16 +62196,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-008": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-008.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-008.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-008",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior: Grado o Licenciatura.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
