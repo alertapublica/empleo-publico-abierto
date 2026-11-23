@@ -2,7 +2,7 @@
  "315": {
   "apply_url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T08:07:24+00:00",
   "code": "25/26",
   "company": "Fundación Pública Galega de Investigación Biomédica Galicia Sur",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": null,
   "listed_deadline": "2026-11-22",
   "location": "Galicia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-12",
   "parent_ref": null,
   "place": null,
@@ -60,7 +60,7 @@
   ],
   "source": "galiciasur",
   "source_title": "1.2.4 Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) (REF: 25/26)",
-  "status": "open",
+  "status": "closed",
   "title": "Titulada/o Grado II – Personal de Apoyo a la Investigación. (Diplomatura/Grado con menos de 300 ECTS.) · “Investigación clínica traslacional para el tratamiento de enfermedades dermatológicas del Servicio de Dermatología del Complexo Hospitalario Universitario de Pontevedra”",
   "url": "https://empleo.fundacionbiomedica.es/ofertastrabajo/inscripciones/315"
  },

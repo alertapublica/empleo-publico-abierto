@@ -382,22 +382,22 @@
  "56154": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56154",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "56154",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-10",
+  "deadline": "2026-12-04",
   "deadline_time": null,
   "department": "Ingeniería y Edificación",
   "detail_ok": true,
-  "detail_version": 2,
+  "detail_version": 3,
   "family": "Técnicos Titulados",
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:56154",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
-  "location": "Varios",
-  "missed_runs": 1,
+  "listed_deadline": "2026-12-04",
+  "location": "Barcelona",
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -405,10 +405,10 @@
   "positions": 22,
   "published_on": "2026-10-26",
   "ref": "56154",
-  "region": "Varias comunidades",
+  "region": "Cataluña",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 21 Arquitectos/as Técnicos/as para prestar apoyo en asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras en varias provincias.<br/><br/>Habiendo quedado pendientes de cubrir al menos 8 posiciones, se amplía el plazo del 26/10/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 22 Arquitectos/as Técnicos/as para prestar apoyo en asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras en varias provincias. <br/><br/>Habiéndose ampliado el número de posiciones de 20 a 22 y quedado pendientes de cubrir al menos 7 posiciones, se amplía el plazo del 23/11/2026 hasta el 04/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -458,14 +458,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/><br/>- Jornada completa de 7,5 horas en horario de 7:30h a 15:00h.<br/><br/>Habiendo quedado pendientes de cubrir al menos 8 posiciones, se amplía el plazo del 26/10/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).<br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de la fecha de incorporación final y a la duración prevista del proyecto.<br/> <br/>Dichas plazas se ofertarán en base a la puntuación global del proceso, siguiendo los criterios establecidos en estas bases: cumplimiento de requisitos, valoración de méritos y fase de pruebas, así como según la posibilidad de formalizar un contrato temporal hasta la finalización del proyecto, desde la propuesta de contratación.<br/><br/>Para el ofrecimiento del puesto, se realizará un listado ordenando las candidaturas según la puntuación total obtenida en el proceso (suma de méritos y fase de pruebas). En caso de empate, a igualdad de puntuación, con el objeto de dar cumplimiento de la Norma RRH.09 para el Fomento de la incorporación de personas con discapacidad en el Grupo Tragsa, a igualdad de condiciones, se priorizarán las candidaturas de aquellas personas que cuenten con una discapacidad reconocida y acreditada igual o superior al 33%, siempre y cuando la discapacidad sea compatible con el adecuado desempeño del puesto formalizándose, cuando sea posible, una tipología de contrato acorde con dicha situación. En caso de coincidencia o no acreditar discapacidad, a igualdad de puntuación, habiendo realizado un sorteo previo para determinar el orden de prelación, será la letra \"W\" la letra del abecedario por la que comenzará el listado que marcará el orden de prelación, según el “Primer Apellido” de los aspirantes. En caso de coincidencia en primer apellido se resolverá el desempate atendiendo al “Segundo Apellido”.<br/> <br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/><br/>- Jornada completa de 7,5 horas en horario de 7:30h a 15:00h.<br/><br/>Habiéndose ampliado el número de posiciones de 20 a 22 y quedado pendientes de cubrir al menos 7 posiciones, se amplía el plazo del 23/11/2026 hasta el 04/12/2026 a las 23:59 (hora peninsular).<br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de la fecha de incorporación final y a la duración prevista del proyecto.<br/> <br/>Dichas plazas se ofertarán en base a la puntuación global del proceso, siguiendo los criterios establecidos en estas bases: cumplimiento de requisitos, valoración de méritos y fase de pruebas, así como según la posibilidad de formalizar un contrato temporal hasta la finalización del proyecto, desde la propuesta de contratación.<br/><br/>Para el ofrecimiento del puesto, se realizará un listado ordenando las candidaturas según la puntuación total obtenida en el proceso (suma de méritos y fase de pruebas). En caso de empate, a igualdad de puntuación, con el objeto de dar cumplimiento de la Norma RRH.09 para el Fomento de la incorporación de personas con discapacidad en el Grupo Tragsa, a igualdad de condiciones, se priorizarán las candidaturas de aquellas personas que cuenten con una discapacidad reconocida y acreditada igual o superior al 33%, siempre y cuando la discapacidad sea compatible con el adecuado desempeño del puesto formalizándose, cuando sea posible, una tipología de contrato acorde con dicha situación. En caso de coincidencia o no acreditar discapacidad, a igualdad de puntuación, habiendo realizado un sorteo previo para determinar el orden de prelación, será la letra \"W\" la letra del abecedario por la que comenzará el listado que marcará el orden de prelación, según el “Primer Apellido” de los aspirantes. En caso de coincidencia en primer apellido se resolverá el desempate atendiendo al “Segundo Apellido”.<br/> <br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Arquitectos/as Técnicos/as - Asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras (Varias Provincias)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56154"
  },
@@ -17251,12 +17251,12 @@
  "58477": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58477",
   "category": "Específica",
-  "closed_at": "2026-11-19T05:07:26+00:00",
+  "closed_at": null,
   "code": "58477",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-18",
-  "deadline_time": "23:59",
+  "deadline": "2026-12-09",
+  "deadline_time": null,
   "department": "Valencia",
   "detail_ok": true,
   "detail_version": 3,
@@ -17264,9 +17264,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58477",
   "kind": "temporal",
-  "listed_deadline": "2026-11-18",
+  "listed_deadline": "2026-12-09",
   "location": "València/Valencia",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": "2026-11-04",
   "parent_ref": null,
   "place": "Paterna",
@@ -17337,14 +17337,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 04/11/2026 hasta el próximo 18/11/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE:<br/><br/>- Jornada completa 37,5h.<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se amplía el plazo de inscripción hasta el 09/12/2026 a las 23:59.<br/><br/>SE OFRECE:<br/><br/>- Jornada completa 37,5h.<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Graduados/as en Ingeniería - Garantías y Autorizaciones Instalaciones Eléctricas (Valencia) (Contrato Formativo)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58477"
  },
@@ -32815,6 +32815,118 @@
   "status": "open",
   "title": "Arquitectos/as Técnicos/as, Ingenieros/as Técnicos/as o Graduados/as en Ingeniería - Revisión técnica alojamientos turísticos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58776"
+ },
+ "58778": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58778",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58778",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Valencia",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-23T08:07:24+00:00",
+  "id": "tragsa:58778",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "València/Valencia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": "Paterna, Valencia",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-23",
+  "ref": "58778",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Arquitecto/a Superior - Proyectos Emergencias (Paterna, Valencia) en València/Valencia</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>València/Valencia<br/>La Eliana (Valencia) y/o Paterna (Valencia) con desplazamientos puntuales a otros municipios.</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaboración de informes, memorias y proyectos de obra de la red de infraestructuras de Emergencias</li><li>Elaboración de informes y colaboración en la gestión de las bases aéreas de extinción de Incendios forestales</li><li>Elaboración de informes y colaboración en la gestión de la coordinación interempresarial de las infraestructuras de emergencias</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Arquitectura Superior o dentro del Plan Bolonia Grado en Arquitectura/Fundamentos de la Arquitectura (300 créditos) o Grado + Master Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia académica y/o laboral en la titulación requerida</li><li>Al menos 3 meses de experiencia laboral y/o académica en el ámbito de la protección civil o gestión de emergencias (se comprobará durante proceso de selección)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de Conducir tipo B en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Arquitectura Superior o dentro del Plan Bolonia Grado en Arquitectura/Fundamentos de la Arquitectura (300 créditos) o Grado + Master Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Arquitectura Superior o dentro del Plan Bolonia Grado en Arquitectura/Fundamentos de la Arquitectura (300 créditos) o Grado + Master Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia académica y/o laboral en la titulación requerida</li><li>Al menos 3 meses de experiencia laboral y/o académica en el ámbito de la protección civil o gestión de emergencias (se comprobará durante proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de Conducir tipo B en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria específica en programas de gestión de presupuestos de obra o CAD</li><li>Formación complementaria específica en planes emergencias</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 5 años de experiencia en la titulación requerida (académica y/o laboral)</li><li>Desde 3 meses Hasta 6 meses de experiencia en organismos organismo vinculados a la protección civil y gestión de emergencias (académica y/o laboral) (se comprobará durante el proceso de selección)</li></ul>Otros Factores Meritorios<ul><li>Experiencia académica y/o laboral en la elaboración de informes y colaboración en la gestión de las bases aéreas de extinción de Incendios forestales y/o en la coordinación interempresarial de las infraestructuras de emergencias. (se comprobará durante el proceso de selección)</li><li>Experiencia académica y/o laboral en la elaboración de informes, memorias y proyectos de obra de la red de infraestructuras de Emergencias (se comprobará durante el proceso de selección)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria específica en programas de gestión de presupuestos de obra o CAD</li><li>Formación complementaria específica en planes emergencias</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria específica en programas de gestión de presupuestos de obra o CAD</li><li>Formación complementaria específica en planes emergencias</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 5 años de experiencia en la titulación requerida (académica y/o laboral)</li><li>Desde 3 meses Hasta 6 meses de experiencia en organismos organismo vinculados a la protección civil y gestión de emergencias (académica y/o laboral) (se comprobará durante el proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia académica y/o laboral en la elaboración de informes y colaboración en la gestión de las bases aéreas de extinción de Incendios forestales y/o en la coordinación interempresarial de las infraestructuras de emergencias. (se comprobará durante el proceso de selección)</li><li>Experiencia académica y/o laboral en la elaboración de informes, memorias y proyectos de obra de la red de infraestructuras de Emergencias (se comprobará durante el proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>SE OFRECE:<br/><br/>- Contrato de duración determinada con una  duración estimada de 12 meses,  asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación  y Resiliencia o con financiación  que provenga de Fondos de la Unión Europea.  <br/><br/>- Jornada laboral completa (37,5h)<br/><br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 23/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   },
+   {
+    "html": "<ul><li>Está conforme con que la inscripción y presentación de su solicitud de empleo supone la declaración responsable del cumplimiento de los requisitos recogidos en la misma, así como la veracidad de sus respuestas y podrá ser rechazado/a en caso contrario</li></ul>",
+    "level": 3,
+    "title": "Otros Conceptos-Aspectos"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitecto/a Superior - Proyectos Emergencias (Paterna, Valencia)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58778"
  },
  "58781": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58781",

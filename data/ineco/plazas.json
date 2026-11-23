@@ -62222,13 +62222,18 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-009": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-009.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-009.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-009",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Título Oficial de Formación Profesional de Grado Superior.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
   "location": null,
@@ -62243,16 +62248,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-010": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-010.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/8/anexos/TRO26-ECE-010.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 2 ABRIL",
   "code": "TRO26-ECE-010",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior, preferiblemente en Ingeniería de Caminos, Canales y Puertos; Ingeniería Técnica de Obras Públicas; Grado en Ingeniería Civil; Máster Universitario en Ingeniería de Caminos, Canales y Puertos o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE, TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 1,
@@ -62264,16 +62274,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-011": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-011.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-011.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-011",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior en Ingeniería de Caminos, Canales y Puertos o Máster en Ingeniería de Caminos, Canales y Puertos",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62285,16 +62300,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-012": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-012.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-012.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-012",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media: Grado en Economía o Empresariales.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62306,16 +62326,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-013": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-013.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-013.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-013",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Superior en Ingeniería de Caminos, Canales y Puertos o Máster en Ingeniería de Caminos, Canales y Puertos.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62327,16 +62352,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-014": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-014.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-014.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-014",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en: Economía o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62348,16 +62378,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-015": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-015.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-015.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-015",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en: Ingeniería Civil, Ingeniería de Caminos, Canales y Puertos o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por esta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62369,16 +62404,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-016": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-016.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/9/anexos/TRO26-ECE-016.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 3 JUNIO",
   "code": "TRO26-ECE-016",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior preferiblemente en Economía o conocimientos equivalentes equiparados por la empresa y/o experiencia consolidada en el ejercicio de la actividad profesional en la empresa y reconocida por ésta.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 1,
@@ -62390,16 +62430,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-017": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/10/anexos/TRO26-ECE-017.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/10/anexos/TRO26-ECE-017.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 4 JULIO",
   "code": "TRO26-ECE-017",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
@@ -62411,16 +62456,21 @@
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco"
  },
  "ineco:TRO26-ECE-018": {
+  "annex_read": [
+   "https://inecoreposicionordinaria.people-experts.com/files/docs/10/anexos/TRO26-ECE-018.pdf",
+   1
+  ],
+  "annex_tries": 0,
   "annex_url": "https://inecoreposicionordinaria.people-experts.com/files/docs/10/anexos/TRO26-ECE-018.pdf",
   "apply_url": null,
   "block": "CONVOCATORIA TRO26 - BLOQUE 4 JULIO",
   "code": "TRO26-ECE-018",
   "deadline": null,
   "deadline_time": null,
-  "degree": null,
+  "degree": "Titulación Universitaria Media y/o Superior.",
   "direction": "D. CONSULTORÍA, MEDIO AMBIENTE Y TI",
   "first_seen": "2026-11-17T06:07:25+00:00",
-  "location": null,
+  "location": "Madrid",
   "positions": 1,
   "process": "Tasa de reposición ordinaria 2026 (TRO26)",
   "reserved": 0,
