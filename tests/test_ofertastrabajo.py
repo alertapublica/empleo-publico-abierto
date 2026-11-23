@@ -68,6 +68,11 @@ class GaliciaSur(unittest.TestCase):
         rows = ofertastrabajo.parse_galiciasur(fixture("galiciasur-publicadas.html"))
         self.assertEqual([(r["ref"], r["opens_on"], r["deadline"]) for r in rows], [("315", "2026-11-12", "2026-11-22")])
 
+    def test_plazo_cerrado_se_omite(self):
+        html = fixture("galiciasur-publicadas.html").replace(
+            "Plazo: 12/11/2026 - 22/11/2026", "Plazo de solicitud cerrado (22/11/2026)")
+        self.assertEqual(ofertastrabajo.parse_galiciasur(html), [])
+
     def test_la_referencia_sale_del_titulo(self):
         http = Http({GaliciaSurSource.page: "galiciasur-publicadas.html"})
         (offer,) = GaliciaSurSource(at(2026, 11, 12, 12, 0)).list_offers(http)

@@ -48,6 +48,7 @@ LEVEL = re.compile(r"(?:\.?\d+(?:\.+\d+)+\.?(?:\s+\d+(?:\.\d+)*\.?)?|\d+\s+\d+(?
 PROJECT = re.compile(r"(?:Proyecto(?:\s+de\s+investigaci[oó]n)?|L[ií]nea\s+de\s+investigaci[oó]n)\s*:?\s*(.+)", re.I)
 NO_DATES_IDIS = "Pendiente de publicación"
 NO_DATES_GALICIASUR = "Convocatoria resuelta"
+CLOSED_GALICIASUR = re.compile(r"Plazo de solicitud cerrado \(\d{2}/\d{2}/\d{4}\)")
 REF = re.compile(r"\s*\(REF:\s*([^)]+)\)\s*$")
 
 
@@ -118,7 +119,7 @@ def parse_galiciasur(html: str) -> list[dict]:
         state = _clean(period.get_text(" ")) if period else ""
         dates = DMY.findall(state)
         if len(dates) != 2:
-            if state == NO_DATES_GALICIASUR:
+            if state == NO_DATES_GALICIASUR or CLOSED_GALICIASUR.fullmatch(state):
                 continue
             raise SourceLayoutError(f"Galicia Sur: convocatoria sin plazo reconocible: «{state}»")
         opens, closes = ("-".join(reversed(d)) for d in dates)
