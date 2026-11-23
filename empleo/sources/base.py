@@ -5,7 +5,7 @@ import re
 from abc import ABC, abstractmethod
 
 from ..http import DEFAULT_DELAY, Client
-from ..model import Announcement, ListedOffer, OfferDetail, Plaza
+from ..model import Announcement, ListedOffer, OfferDetail
 
 
 class Source(ABC):
@@ -69,16 +69,3 @@ class Source(ABC):
     def list_announcements(self, http: Client) -> list[Announcement]:
         return []
 
-    def list_places(self, http: Client) -> list[Plaza]:
-        """Puestos de la relación de puestos de sus procesos. Se pide después de `list_announcements`,
-        así que puede reutilizar lo que esa lectura ya descargó."""
-        return []
-
-    # Anexos de las plazas (PDF): cuántos se leen como mucho en cada lectura (0: la fuente no los lee) y la
-    # versión de lo que se saca de ellos. Súbela al cambiar `fetch_annex`: el motor relee los anexos.
-    annexes_per_read: int = 0
-    annex_version: int = 1
-
-    def fetch_annex(self, http: Client, place: dict) -> dict | None:
-        """Datos literales del anexo de una plaza (`degree`, `location`), o None si no se leen."""
-        return None

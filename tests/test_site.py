@@ -89,19 +89,6 @@ class Site(unittest.TestCase):
         store.save(root / "data/tragsa/offers.json", offers)
         store.save(root / "data/tragsa/events.json", events)
         store.save(root / "data/tragsa/announcements.json", notices)
-        place = {"process": "PROCESO ABIERTO (AB-1)", "source": "tragsa", "code": "AB-1-001", "title": "Técnico/a 2",
-                 "url": "https://www.tragsa.es/relacion", "block": "CONVOCATORIA AB-1 - BLOQUE 1", "state": "abierto",
-                 "deadline": "2026-11-10", "deadline_time": "11:59", "apply_url": "https://plataforma.example/entrar",
-                 "unit": "G. MEDIO AMBIENTE", "direction": None, "subdirection": None, "positions": 2, "reserved": 1,
-                 "annex_url": "https://www.tragsa.es/AB-1-001.pdf", "location": None, "degree": None,
-                 "first_seen": "2026-11-07T00:00:00+00:00"}
-        store.save(root / "data/tragsa/plazas.json", {
-            "tragsa:AB-1-001": place,
-            "tragsa:AB-1-002": {**place, "code": "AB-1-002", "title": "Experto/a", "state": "curso", "deadline": None,
-                                "deadline_time": None, "apply_url": None, "block": "CONVOCATORIA AB-1 - BLOQUE 0",
-                                "unit": "G. PUERTOS", "reserved": 0},
-            "tragsa:VIEJA": {**place, "code": "VIEJA", "process": "Terminado", "state": "finalizado"},
-        })
         with mock.patch.object(site, "PLANNED", [{"id": "futura", "name": "Empresa futura"}]):
             cls.marks = site.build(root / "data", cls.out, BASE, NOW)
 
@@ -452,8 +439,6 @@ class Site(unittest.TestCase):
         self.assertEqual({k for p in json.loads(self.read("api/procesos.json"))["procesos"] for k in p},
                          documented(site.PROCESS_FIELDS))
         self.assertEqual({k for n in novedades["novedades"] for k in n}, documented(site.NEWS_FIELDS))
-        self.assertEqual({k for p in json.loads(self.read("api/plazas.json"))["plazas"] for k in p},
-                         documented(site.PLACE_FIELDS))
         listas = json.loads(self.read("api/listas.json"))
         self.assertEqual(set(listas) - documented(site.FILE_FIELDS), documented(site.LIST_FIELDS))
         # Las claves de cada comunicado y de cada elemento de una lista, dentro de la descripción.
@@ -465,7 +450,7 @@ class Site(unittest.TestCase):
             for key in {k for item in items for k in item} if isinstance(items, list) else ():
                 self.assertIn(f"<code>{key}</code>", described[name], (name, key))
         datos = self.read("datos/index.html")
-        self.assertEqual(datos.count('<table class="campos">'), 6)
+        self.assertEqual(datos.count('<table class="campos">'), 5)
         self.assertIn('<form id="buscar-campos"', datos)
         self.assertIn("api/ofertas.json | jq", datos)  # ejemplo con la URL absoluta de la API
         self.assertIn("(Invoke-RestMethod " + BASE + "api/ofertas.json)", datos)  # y para Windows
@@ -522,7 +507,6 @@ class Site(unittest.TestCase):
         novedades = json.loads(self.read("api/novedades.json"))["novedades"]
         records = {"ofertas.json": "5 ofertas, 4 abiertas",
                    "procesos.json": f"5 procesos, {sum(p['estado'] in site.LIVE_STATES for p in procesos)} en marcha",
-                   "plazas.json": "3 plazas, 1 con la inscripción abierta",
                    "novedades.json": f"{len(novedades)} novedades",
                    "listas.json": f"{len(site.lists({}))} listas"}
         for name, text in records.items():
@@ -530,7 +514,7 @@ class Site(unittest.TestCase):
             self.assertIn(f'<h3><a href="../api/{name}">{name}</a></h3>', datos)
             self.assertIn(f'<p class="dato">{text}<br>{site.size_label(len(raw))} · '
                           f'{site.size_label(len(gzip.compress(raw)))} comprimido</p>', datos)
-        self.assertEqual(datos.count('class="campos-de"'), 5)
+        self.assertEqual(datos.count('class="campos-de"'), 4)
         self.assertIn('<ul class="ficheros" role="list">', datos)
         self.assertIn("Registros y tamaños de la publicación del 7 de noviembre de 2026 a las 13:00.", datos)
         self.assertIn('<a href="#ofertas">Campos<span class="sr-only"> de ofertas.json</span></a>', datos)
@@ -991,33 +975,6 @@ class Site(unittest.TestCase):
         self.assertIn('Hay <a href="anuncios/?situacion=abierto">1 proceso selectivo con la inscripción abierta</a>.',
                       self.read("index.html"))
         self.assertNotIn("situacion=abierto", site.index_page([], NOW.date(), "ahora", {}))
-
-    def test_plazas_de_los_procesos_en_marcha_con_buscador(self):
-        html = self.read("anuncios/plazas/index.html")
-        self.assertIn("2 puestos, 1 con la inscripción abierta.", html)
-        self.assertNotIn("VIEJA", html)  # de un proceso terminado
-        self.assertLess(html.index("AB-1-001 · Técnico/a 2"), html.index("AB-1-002 · Experto/a"))  # abiertas primero
-        self.assertIn("Vacantes: 2 · Reservadas para personas con discapacidad: 1", html)
-        self.assertNotIn("Reservadas para personas con discapacidad: 0", html)
-        self.assertIn('<a href="https://www.tragsa.es/AB-1-001.pdf">Anexo específico del puesto (PDF)</a>', html)
-        self.assertIn('href="https://plataforma.example/entrar">Inscribirse en la plataforma oficial</a>', html)
-        self.assertIn('id="situacion"', html)
-        self.assertIn('id="unidad"', html)
-        pid = re.search(r'data-proceso="([0-9a-f]{10})"', html).group(1)
-        procesos = {p["nombre"]: p["id"] for p in json.loads(self.read("api/procesos.json"))["procesos"]}
-        self.assertEqual(pid, procesos["PROCESO ABIERTO (AB-1)"])  # el mismo id que su proceso
-        anuncios = self.read("anuncios/index.html")
-        self.assertIn(f'<a href="../anuncios/plazas/?proceso={pid}">Ver los 2 puestos convocados</a>', anuncios)
-        self.assertIn('<a href="plazas/">ver los 2 puestos en Plazas</a>', anuncios)
-        self.assertIn("anuncios/plazas/", self.read("sitemap.xml"))
-
-    def test_api_de_plazas_con_todas(self):
-        plazas = {p["id"]: p for p in json.loads(self.read("api/plazas.json"))["plazas"]}
-        self.assertEqual(set(plazas), {"tragsa:AB-1-001", "tragsa:AB-1-002", "tragsa:VIEJA"})
-        abierta = plazas["tragsa:AB-1-001"]
-        self.assertEqual((abierta["estado"], abierta["plazo_fin"], abierta["plazo_hora"], abierta["vacantes"],
-                          abierta["reserva_discapacidad"], abierta["gerencia"]),
-                         ("abierto", "2026-11-10", "11:59", 2, 1, "G. MEDIO AMBIENTE"))
 
     def test_filtros_de_anuncios_solo_con_valores_reales(self):
         html = self.read("anuncios/index.html")

@@ -2,13 +2,12 @@
 
 JSON estático en GitHub Pages (`https://alertapublica.es/api/…`), regenerado en cada publicación, es decir, tras cada lectura: cada 30 minutos entre semana de 6:00 a 19:00 y menos el resto (horario en [worker](worker.md); la web lo publica desde `SCHEDULE`, `empleo/site.py`). Se puede leer desde cualquier web (CORS abierto) sin clave.
 
-Hay cinco ficheros:
+Hay cuatro ficheros:
 
 | Fichero | Contenido |
 |---|---|
 | `ofertas.json` | Ofertas, con códigos INE de comunidad (`ccaa`), provincia y municipio, y país (ISO 3166-1). Las becas (`tipo_contrato` `beca`) van en todos los ficheros; en la web, solo en Becas (`site.is_grant`). Un puesto fuera de España lleva `comunidad` «Extranjero» (`regions.ABROAD`), `ccaa` `null` y su `pais` |
 | `procesos.json` | Comunicados de procesos selectivos |
-| `plazas.json` | Puestos de la relación de puestos de los procesos que la publican (tasas de reposición: `Source.list_places`, hoy Ineco), con el estado y el plazo de su bloque; `proceso_id` es el `id` del proceso en `procesos.json`. En la web, en `anuncios/plazas/` |
 | `novedades.json` | Novedades de los últimos 14 días (lo usa el worker de avisos). Cada oferta lleva `tipo_contrato` y `extranjero` (bool): los avisos solo mandan becas y puestos en el extranjero a quien los pide |
 | `listas.json` | Nombre legible de cada clave |
 
@@ -25,6 +24,7 @@ Los procesos llevan la ubicación que dé su fuente (`Announcement.location`: el
 - Todos los ficheros empiezan con `version` (ahora `1`), `licencia`, `documentacion` y `generado`. Dentro de una versión solo se añaden claves: renombrar o quitar una obliga a subir `API_VERSION` (`empleo/site.py`). `test_api_v1_en_castellano` fija el orden de las claves de una oferta.
 - La descripción de cada clave vive en `FILE_FIELDS`, `OFFER_FIELDS`, `PROCESS_FIELDS`, `NEWS_FIELDS` y `LIST_FIELDS` (`empleo/site.py`), que generan «Datos abiertos». `test_datos_abiertos_documenta_todas_las_claves` falla si una clave de la API (también las de cada comunicado y las de cada elemento de las listas) no está descrita ahí, y `test_api_usa_las_claves_de_listas` si un valor codificado (organismo, área, tipo de contrato, códigos INE…) no está en `listas.json`.
 - `teletrabajo`, `teletrabajo_estado` y `teletrabajo_detalle` salen de leer el texto de la ficha con reglas fijas (`empleo/teletrabajo.py`): son orientativos. `no_menciona` no significa que no haya teletrabajo; `sin` solo se da cuando la ficha lo dice. Desde el 2026-11-14 los apartados que solo enlazan documentos no cuentan para decidir si la ficha tiene texto, así que algunas ofertas pasaron de `false` a `null`.
+- `plazas.json` (los puestos de la relación de puestos de las tasas de reposición, solo de Ineco) se retiró el 2026-11-23, con la página `anuncios/plazas/` y la lectura de los anexos: daba poco frente al buscador oficial de cada organismo (la inscripción se hace allí) y obligaba a leer PDF de cada fuente. Los procesos siguen en `procesos.json`, con su estado y su enlace oficial. Los datos que había quedan en `data/ineco/plazas.json`, sin actualizar; el código, en la etiqueta `plazas-aparcadas`.
 - Un dato que la fuente no da vale `null`. Los textos van tal como los publica cada organismo, salvo en `novedades.json` y en el RSS, que pasan a minúsculas los títulos en mayúsculas (`humane_caps`) porque los usan los avisos; lo que elabora el proyecto son los códigos INE, las áreas, los perfiles de las ofertas de investigación, la detección del teletrabajo y las fechas de cierre calculadas: si una oferta trae `plazo_regla`, `plazo_fin` lo ha calculado este portal con esa regla y el calendario oficial del organismo (hoy, solo la Universidade da Coruña).
 - `ofertas.json` guarda también todas las cerradas, así que solo crece. No compensa partirlo todavía; si pasa de 2 MB (`API_SPLIT_BYTES`), `python -m empleo.site` deja un aviso en el resumen de la ejecución de Actions y toca añadir un fichero solo con las abiertas (un fichero nuevo no obliga a cambiar de versión).
 - En el RSS, la fecha de cada entrada de oferta (`pubDate`) es la de detección o la del cambio, como `fecha` en `novedades.json`; la de publicación en la fuente, si consta, va en el texto de la entrada («Publicada el…»). La ficha muestra las dos.
