@@ -34,6 +34,12 @@ TRACKED = ("title", "code", "source_title", "category", "url", "apply_url")
 # número de lecturas, para que avise igual entre semana (cada 30 min) que en fin de semana (cada 3 h).
 FAILURES = DATA / "fallos.json"
 FAILING_TOO_LONG = timedelta(hours=2)
+# Fuentes caídas por su lado durante días: se siguen leyendo y saliendo en el resumen, pero no ponen la
+# lectura en rojo. Cuando vuelvan a leerse bien, el resumen pide quitarlas de aquí.
+PAUSED = {
+    "fgc": "certificado de treballar.fgc.cat caducado el 19/11/2026",
+    "emasesa": "HTTP 403 desde el 19/11/2026 (mantenimiento)",
+}
 
 
 def _record(source_id: str, offer: ListedOffer, now: str) -> dict:
@@ -541,9 +547,13 @@ def main(ids: list[str] | None = None) -> int:
         f"{sum(result == 'bien' for result in results.values())} bien"
         + "".join(f"; {result}: {' '.join(ids)}" for result, ids in wrong.items()))
     failing = track_failures(FAILURES, results, now)
-    too_long = sorted(key for key, entry in failing.items() if failing_too_long(entry, now))
+    too_long = sorted(key for key, entry in failing.items()
+                      if key not in PAUSED and failing_too_long(entry, now))
     lines = [f"FALLA {key} desde {entry['desde']} ({entry['lecturas']} lecturas seguidas)"
+             + (f" · pausada: {PAUSED[key]}" if key in PAUSED else "")
              for key, entry in sorted(failing.items())]
+    lines += [f"PAUSADA {key} ya se lee bien: quitarla de PAUSED"
+              for key in sorted(PAUSED) if results.get(key) == "bien"]
     for line in lines:
         say(line)
     if too_long:

@@ -307,6 +307,17 @@ class Fallos(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("ROJO: más de 2 h sin leer a", err)
 
+    def test_una_fuente_pausada_no_pone_la_lectura_en_rojo(self):
+        def run(source, *_):
+            raise RuntimeError("certificate has expired")
+
+        self.path.write_text(json.dumps({"a": {"desde": "2026-11-01T05:00:00+00:00", "lecturas": 99}}))
+        with mock.patch.object(ingest, "FAILURES", self.path), mock.patch.object(ingest, "run_source", run), \
+                mock.patch.object(ingest, "PAUSED", {"a": "caducado"}), \
+                contextlib.redirect_stdout(io.StringIO()) as out, contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(ingest.main(["a"]), 0)
+        self.assertIn("pausada: caducado", out.getvalue())
+
     def test_los_fallos_van_al_resumen_de_la_ejecucion(self):
         summary = self.path.with_name("resumen.md")
 
