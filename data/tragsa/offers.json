@@ -23329,6 +23329,108 @@
   "title": "Técnicos/as - Productos fitosanitarios (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58580"
  },
+ "58581": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58581",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58581",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sevilla",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-23T16:37:23+00:00",
+  "id": "tragsa:58581",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "Sevilla",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": "Sevilla",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-23",
+  "ref": "58581",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Técnico/a, Diplomado/a o Graduado/a en Ingeniería Agrícola, Geomática o Geografía - Trabajos de campo y divulgación fitosanitaria en Sevilla</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sevilla<br/>Dirección: Oficinas grupo</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Desarrollar herramientas y funcionamiento de un sistema de toma de datos de trabajos de campo.</li><li>Crear visores.</li><li>Tratamiento de datos en post proceso.</li><li>Crear y gestionar cuadro de mandos.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posee Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado Universitario (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en el campo de estudio de Ingeniería Agrícola, Ingeniería Geomática, Geografía y Gestión del Territorio o Geografía (anexar titulación)</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia en desarrollo de herramientas y funcionamiento de un sistema de toma de datos en el campo y su visualización en aplicaciones SIG (Imprescindible reflejar en cv y adjuntar Vida Laboral actualizada o contrato de trabajo)</li><li>Al menos 1 año de experiencia en visores SIG (Imprescindible reflejar en cv y adjuntar Vida Laboral actualizada o contrato de trabajo)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carné conducir B en vigor y válido en España (Anexar)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posee Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado Universitario (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en el campo de estudio de Ingeniería Agrícola, Ingeniería Geomática, Geografía y Gestión del Territorio o Geografía (anexar titulación)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posee Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado Universitario (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) en el campo de estudio de Ingeniería Agrícola, Ingeniería Geomática, Geografía y Gestión del Territorio o Geografía (anexar titulación)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia en desarrollo de herramientas y funcionamiento de un sistema de toma de datos en el campo y su visualización en aplicaciones SIG (Imprescindible reflejar en cv y adjuntar Vida Laboral actualizada o contrato de trabajo)</li><li>Al menos 1 año de experiencia en visores SIG (Imprescindible reflejar en cv y adjuntar Vida Laboral actualizada o contrato de trabajo)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carné conducir B en vigor y válido en España (Anexar)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en Tecnología ESRI, principalmente en SURVEY123 (anexar acreditación)</li><li>Formación acreditada en Base de datos Relacionales (anexar acreditación)</li><li>Formación acreditada en Sistemas de Información Geográfica (anexar acreditación)</li><li>Formación acreditada en Lenguajes de programación (Python, R, etc) (anexar acreditación)</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 1 año de experiencia en tratamiento de datos en post proceso (reflejar en cv y anexar vida laboral actualizada o contrato de trabajo)</li><li>Desde 6 meses Hasta 1 año de experiencia en creación y/o gestión de cuadro de mandos (reflejar en cv y anexar vida laboral actualizada o contrato de trabajo)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en Tecnología ESRI, principalmente en SURVEY123 (anexar acreditación)</li><li>Formación acreditada en Base de datos Relacionales (anexar acreditación)</li><li>Formación acreditada en Sistemas de Información Geográfica (anexar acreditación)</li><li>Formación acreditada en Lenguajes de programación (Python, R, etc) (anexar acreditación)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en Tecnología ESRI, principalmente en SURVEY123 (anexar acreditación)</li><li>Formación acreditada en Base de datos Relacionales (anexar acreditación)</li><li>Formación acreditada en Sistemas de Información Geográfica (anexar acreditación)</li><li>Formación acreditada en Lenguajes de programación (Python, R, etc) (anexar acreditación)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 1 año de experiencia en tratamiento de datos en post proceso (reflejar en cv y anexar vida laboral actualizada o contrato de trabajo)</li><li>Desde 6 meses Hasta 1 año de experiencia en creación y/o gestión de cuadro de mandos (reflejar en cv y anexar vida laboral actualizada o contrato de trabajo)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>Contrato temporal con una duración estimada de 9 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resilencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 23/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a Técnico/a, Diplomado/a o Graduado/a en Ingeniería Agrícola, Geomática o Geografía - Trabajos de campo y divulgación fitosanitaria (Sevilla)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58581"
+ },
  "58586": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58586",
   "category": "Específica",
@@ -35812,6 +35914,108 @@
   "title": "Arquitecto/a - Obras (Pontevedra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58830"
  },
+ "58835": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58835",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58835",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "León",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-23T16:37:23+00:00",
+  "id": "tragsa:58835",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-08",
+  "location": "León",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": "León",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-23",
+  "ref": "58835",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Administrativos/as para dar apoyo a Recursos Humanos en León.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>León</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Elaborar, mantener y actualizar el censo de personal (fijo, temporal, fijo discontinuo, de campaña), con altas, bajas, cambios de categoría, grupo profesional y centro de trabajo.</li><li>Mantener la base de datos de personal con criterios de calidad, coherencia y trazabilidad.</li><li>Generar listados y estadísticas de plantilla bajo demanda (por centro, categoría, tipo de contrato, antigüedad, etc.).</li><li>Controlar vencimientos de contratos, periodos de prueba, prórrogas y llamamientos de personal fijo discontinuo.</li><li>Archivar y custodiar los expedientes de personal, en papel y digital, conforme a la normativa de protección de datos.</li><li>Grabar en el sistema de nóminas las variables mensuales: horas extraordinarias, pluses (peligrosidad, toxicidad, penosidad, nocturnidad, turnicidad, disponibilidad), dietas, kilometraje, guardias y retenes (incendios, por ejemplo).</li><li>Registrar incidencias: incapacidad temporal, permisos, licencias, excedencias, reducciones de jornada, ausencias y vacaciones.</li><li>Realizar verificaciones y cierre de procesos</li><li>Atender consultas del personal sobre datos, nóminas y documentación, o derivarlas a quien corresponda.</li><li>Tratar los datos personales conforme al RGPD y a la LOPDGDD, aplicando el principio de minimización.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España).</li></ul>Formación Complementaria<ul><li>de al menos 120 horas de formación acreditada en especialidad administrativa (incluida ofimática).</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España).</li></ul>Formación Complementaria<ul><li>de al menos 120 horas de formación acreditada en especialidad administrativa (incluida ofimática).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>de al menos 120 horas de formación acreditada en especialidad administrativa (incluida ofimática).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>igual o superior a 2000 horas en la rama administrativa.</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en realizando funciones como administrativo/a en el ámbito de RRHH (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li><li>Desde 6 meses Hasta 2 años de experiencia en como administrativo/a en el sector público (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>igual o superior a 2000 horas en la rama administrativa.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>igual o superior a 2000 horas en la rama administrativa.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en realizando funciones como administrativo/a en el ámbito de RRHH (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li><li>Desde 6 meses Hasta 2 años de experiencia en como administrativo/a en el sector público (acreditable a través de experiencia con contrato laboral o académica a través de contrato laboral/vida laboral/anexo de prácticas + CV)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 23/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede. <br/><br/>Jornada completa<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativos/as_Apoyo RRHH (León)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58835"
+ },
  "58836": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58836",
   "category": "Específica",
@@ -36577,6 +36781,103 @@
   "status": "open",
   "title": "Ingeniero/a Agrónomo/a o Ingeniero/a de Montes - Soporte Técnico (Mallorca)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58851"
+ },
+ "58863": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58863",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58863",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Pesca y Asuntos Marítimos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-23T16:37:23+00:00",
+  "id": "tragsa:58863",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-23",
+  "ref": "58863",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 3 Graduados/as o Ingenieros/as Técnicos/as para prestar apoyo en tareas relacionadas con productos fitosanitarios en la Comunidad de Madrid</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Control en la recogida de datos y depuración de errores</li><li>Resolución de consultas técnicas</li><li>Realización de informes</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Grado en Biología o Ciencias Ambientales o Química o Ingeniería Química (nivel MECES 2); o Ingeniería Técnica/Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural (nivel MECES 2); o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Grado en Biología o Ciencias Ambientales o Química o Ingeniería Química (nivel MECES 2); o Ingeniería Técnica/Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural (nivel MECES 2); o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Grado en Biología o Ciencias Ambientales o Química o Ingeniería Química (nivel MECES 2); o Ingeniería Técnica/Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural (nivel MECES 2); o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en Paquete Office</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en gestión de productos fitosanitarios (experiencia académica y/o con contrato laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en Empresa/Administración pública (experiencia académica y/o con contrato laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en la realización de informes (experiencia académica y/o con contrato laboral)</li></ul>Otros Factores Meritorios<ul><li>Manejo a nivel básico o superior de Excel (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en trabajos relacionados con la PAC (Política Agrícola Común) (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en Paquete Office</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en Paquete Office</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en gestión de productos fitosanitarios (experiencia académica y/o con contrato laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en Empresa/Administración pública (experiencia académica y/o con contrato laboral)</li><li>Desde 6 meses Hasta 1 año de experiencia en la realización de informes (experiencia académica y/o con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo a nivel básico o superior de Excel (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en trabajos relacionados con la PAC (Política Agrícola Común) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada con una  duración estimada de 14 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea<br/><br/>- Jornada completa<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 23/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Graduados/as o Ingenieros/as Técnicos/as - Productos fitosanitarios (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58863"
  },
  "58870": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58870",
