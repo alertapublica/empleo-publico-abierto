@@ -271,7 +271,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "SF - San Fernando",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -3316,5 +3316,47 @@
   "status": "open",
   "title": "4418 - Titulado/a Superior Junior en Gestión de Proyectos",
   "url": "https://empleo.navantia.es/job/FE-Ferrol-4418-Tituladoa-Superior-Junior-en-Gesti%C3%B3n-de-Proyectos-C/1377893055/"
+ },
+ "1378114255": {
+  "apply_url": "https://empleo.navantia.es/talentcommunity/apply/1378114255/?locale=es_ES",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Navantia",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T13:37:22+00:00",
+  "id": "navantia:1378114255",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "SF - San Fernando",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-11-23",
+  "ref": "1378114255",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>La empresa Navantia S.A., S.M.E. realiza la convocatoria indicada para su centro de San Fernando.</p>\n<p>El plazo de inscripción de candidaturas finalizará el día <strong><strong>10/12/2026</strong> a las 12:00 horas</strong>.</p>\n<p>En el siguiente enlace: <strong><a href=\"https://navantia--s-a--bas-me3356yo-pro-navantia-prod-approuter.cfapps.eu10-004.hana.ondemand.com/listadopublicaciones/index.html#//detallesOferta/attachment_229995\">Bases personal fijo: GP1/GP2 Junior</a></strong> encontrarás los requisitos de acceso, documentación a aportar (obligatoria) y otra información relevante del proceso de selección.</p>\n<p><strong>CUMPLIMENTACIÓN DE LA SOLICITUD</strong><br/>Para participar en el proceso de selección, se deberá de adjuntar en el perfil de candidato/a la siguiente documentación acreditativa:</p>\n<ul>\n<li>Currículum Vitae </li>\n<li>Vida Laboral o vida laboral negativa/informe negativo de afiliación</li>\n<li>Títulos académicos</li>\n<li>Acreditación de formación relacionada con el puesto a cubrir</li>\n</ul><strong>Principales cometidos del puesto</strong> <ul>\n<li>\nParticipar en la planificación, elaboración y seguimiento económico de proyectos, ofertas y contratos, proporcionando soporte en el análisis de costes, la preparación de presupuestos, la coordinación con áreas implicadas y la elaboración de información económica necesaria para la toma de decisiones y el desarrollo de la actividad comercial y operativa.\n</li>\n<li>\nColaborar en la planificación, preparación y control de los procesos productivos, colaborando en la definición y gestión de la información técnica necesaria para la fabricación y montaje, el mantenimiento de datos maestros, la mejora de los procesos de producción, el aseguramiento de la calidad y el seguimiento económico de las actividades bajo su ámbito de responsabilidad.\n</li>\n</ul><strong>Titulaciones solicitadas</strong> <ul>\n<li>Grados universitarios pertenecientes a los siguientes ámbitos de estudio:\n<ul>\n<li>Administración y Gestión de Empresas.</li>\n<li>Economía.</li>\n<li>Finanzas y Contabilidad.</li>\n</ul>\n</li>\n</ul>\n<p>La admisión de candidaturas se realizaría considerando las titulaciones indicadas anteriormente, de acuerdo con la clasificación CINE/ISCED 2013. <a href=\"https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU/Clasificaciones.html\">Clasificaciones estadísticas universitarias</a> </p><strong>Cursos de formación a valorar en la Fase 1 Concurso de méritos relacionados con el puesto a cubrir:</strong> <ul>\n<li>SAP S/4HANA.</li>\n<li>Power BI.</li>\n<li>Presupuestos.</li>\n<li>Gestión empresarial o proyecto de empresa.</li>\n<li>Económica-financiera.</li>\n</ul><p><strong>CONDICIONES DEL PUESTO DE TRABAJO</strong><br/>Nivel de entrada:  <br/>Junior: según tablas convenio, D4 – D3 (29.644,47 - 35.202,91€)<br/>Tipo de contrato:  Indefinido</p>\n<p>La persona seleccionada deberá prestar servicios en el régimen de jornada que resulte aplicable al puesto de trabajo adjudicado, pudiendo desarrollarse la actividad en jornada ordinaria, a turnos o en cualquiera de las modalidades de jornada especial previstas en el Convenio Colectivo vigente.</p>\n<p>En caso de que algún candidato/a tenga problemas con la plataforma, deberá enviar un correo electrónico a la dirección <strong><a href=\"mailto:rrhh_portal@navantia.es\">rrhh_portal@navantia.es</a></strong> mencionando su incidencia.</p>",
+    "level": 2,
+    "title": "Descripción de la oferta"
+   }
+  ],
+  "source": "navantia",
+  "source_title": null,
+  "status": "open",
+  "title": "4661 - 2 vacantes de Titulado/a Superior Junior para el Área de Preparación Trabajos y Presupuestos",
+  "url": "https://empleo.navantia.es/job/SF-San-Fernando-4661-2-vacantes-de-Tituladoa-Superior-Junior-para-el-%C3%81rea-de-Preparaci%C3%B3n-Trabajos-y-Presupuestos-CA/1378114255/"
  }
 }

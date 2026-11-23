@@ -91,5 +91,52 @@
   "status": "open",
   "title": "Técnico/a Especialista línea investigación Dermatología, HUVN",
   "url": "https://www.fibao.es/ofertas/ficha/1507/"
+ },
+ "1508": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1508/",
+  "category": null,
+  "closed_at": null,
+  "code": "93/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T13:37:22+00:00",
+  "id": "fibao:1508",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-23",
+  "ref": "1508",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO convoca un contrato de apoyo a la investigación, en régimen de concurrencia competitiva, con dedicación a tiempo completo, en el marco del art. 23 bis de la Ley de la Ciencia, vinculado a la línea de investigación de Documentación clínica, Codificación Sanitaria y Calidad de Datos para la Investigación en Enfermedades Raras, en el marco del proyecto “Detección y estimación de prevalencia de Enfermedades Raras en Andalucía mediante metodología de Machine Learning aplicada a la Big\r\nData del Sistema Sanitario Público Andaluz (ESPERAN-ZA)”, con nº de expediente PESD-0009-2026, financiado por la Consejería de Presidencia, Sanidad y Emergencias, según Resolución por la que se conceden subvenciones, en régimen de concurrencia competitiva, para la financiación de la Investigación, Desarrollo e Innovación (I+D+I) en Biomedicina y en Ciencias de la Salud en Andalucía, para el año 2025-FEDER, a desarrollar en el Hospital Torrecárdenas de Almería. Titulación requerida: Técnico FP Superior en Documentación y Administración Sanitarias o titulación equivalente.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/93.__ctto_t%C3%A9cnico_fp_pesd_0009_2026(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "93/2026.- Técnico/a Investigación, PESD-0009-2026, en Almería",
+  "status": "open",
+  "title": "Técnico/a Investigación, PESD-0009-2026, en Almería",
+  "url": "https://www.fibao.es/ofertas/ficha/1508/"
  }
 }

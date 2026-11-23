@@ -81,5 +81,47 @@
   "status": "open",
   "title": "Personal técnico (ANULADA) · Proyecto AG410",
   "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag410-personal-0"
+ },
+ "112641": {
+  "apply_url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ae609-personal",
+  "category": "Personal técnico",
+  "closed_at": null,
+  "code": "AE609",
+  "company": "Universidad de León",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T13:37:22+00:00",
+  "id": "unileon:112641",
+  "kind": null,
+  "listed_deadline": "2026-11-30",
+  "location": "Castilla y León",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-23",
+  "ref": "112641",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Podrán presentarse hasta las 14:00 hrs del 30/11/2026, a través del correo <a href=\"mailto:vice.investigacion@unileon.es\">vice.investigacion@unileon.es</a> en el modelo del <a href=\"https://www.unileon.es/investigadores/vicerrectorado/normativa-impresos/impresos-oficiales\">anexo III que figura en la página web</a> como impreso 17.3 - Anexo III - Solicitud y serán firmadas con firma electrónica (DNIe o Certificado)</p><p>Archivos públicos:</p><ul><li><a href=\"http://www.unileon.es/files/2026-11/convocatoria_ae609_20261123.pdf\">Convocatoria (23/11/2026)</a></li></ul>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "unileon",
+  "source_title": "Convocatoria de Plaza de Personal con cargo al Proyecto AE609. Personal Técnico",
+  "status": "open",
+  "title": "Personal técnico · Proyecto AE609",
+  "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ae609-personal"
  }
 }

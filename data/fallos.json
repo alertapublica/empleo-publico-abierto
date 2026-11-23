@@ -1,27 +1,22 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 76,
+  "lecturas": 77,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 58,
+  "lecturas": 59,
   "resultado": "error"
  },
- "ifapa": {
-  "desde": "2026-11-23T08:37:32+00:00",
-  "lecturas": 10,
+ "fgv": {
+  "desde": "2026-11-23T13:37:22+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-23T13:07:24+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "sepides": {
-  "desde": "2026-11-23T13:07:24+00:00",
-  "lecturas": 1,
-  "resultado": "error"
+  "lecturas": 2,
+  "resultado": "sin tiempo"
  }
 }
