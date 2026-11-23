@@ -4773,11 +4773,11 @@
  "57832": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57832",
   "category": "Específica",
-  "closed_at": "2026-11-18T05:07:34+00:00",
+  "closed_at": null,
   "code": "57832",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-17",
+  "deadline": "2026-11-30",
   "deadline_time": null,
   "department": "Islas Baleares",
   "detail_ok": true,
@@ -4786,9 +4786,9 @@
   "first_seen": "2026-11-11T16:07:28+00:00",
   "id": "tragsa:57832",
   "kind": "temporal",
-  "listed_deadline": "2026-11-17",
+  "listed_deadline": "2026-11-30",
   "location": "Ibiza",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Ibiza, Islas Baleares",
@@ -4799,7 +4799,7 @@
   "region": "Illes Balears",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Titulado/a Universitario/a para dar apoyo en la supervisión del mantenimiento de instalaciones industriales en Ibiza (Islas Baleares). En relación al proceso publicado el pasado 22/10/2026 se amplía el plazo de recepción de candidaturas desde el 11/11/2026 hasta el 17/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Titulado/a Universitario/a para dar apoyo en la supervisión del mantenimiento de instalaciones industriales en Ibiza (Islas Baleares). En relación al proceso publicado el pasado 11/11/2026 se amplía el plazo de recepción de candidaturas desde el 23/11/2026 hasta el 30/11/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -4866,7 +4866,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Titulado/a Universitario/a - Supervisión de mantenimiento instalaciones industriales (Ibiza, Islas Baleares)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57832"
  },
@@ -21824,6 +21824,113 @@
   "title": "Licenciatura o Grado + Máster Oficial - Comunicación y Organización de Eventos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58559"
  },
+ "58561": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58561",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58561",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Málaga",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-23T11:37:29+00:00",
+  "id": "tragsa:58561",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "Málaga",
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": "Málaga",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-23",
+  "ref": "58561",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Agente Responsable de Turno - Base Litoral del Grupo de Emergencias de Andalucía - GREA Benahavís en Málaga</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Málaga<br/>Dirección: CALLE HALCÓN MALTÉS S/N 29679 - BENAHAVÍS (MÁLAGA)</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Reparto de tareas a los agentes en los trabajos asignados a su turno, supervisando el cumplimiento de las medidas de seguridad y calidad exigibles.</li><li>Reparto de tareas de agentes en emergencias, eventos, adiestramientos y ejercicios prácticos programados, llevando al día los registros requeridos al respecto en el sistema de calidad y seguimiento del cumplimiento de las mismas.</li><li>Reparto de tareas a los agentes de su grupo relativas al mantenimiento, conservación y limpieza de los equipos, materiales, instalaciones y vehículos, llevando al día los registros requeridos al respecto en el sistema de calidad y seguimiento del cumplimiento de las mismas.</li><li>Notificar al coordinador de agentes y en su ausencia, al técnico de guardia, cualquier incidencia que detecte respecto al cumplimiento de cuadrantes de turnos y otras circunstancias relacionadas con su actividad y funciones.</li><li>Supervisión de la correcta utilización de equipos de protección individual del personal a su cargo.</li><li>Detectar las necesidades de material y formación de los agentes de su grupo y transmitirlas al coordinador de agentes.</li><li>Realizar y colaborar en las tareas de prevención que sea requerido, bien por el Gabinete Técnico o por eventos en los que participe el GREA.</li><li>Realizar cuantas funciones inherentes a su unidad y empleo le sean encomendadas por sus superiores</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Ciclo Formativo Grado Superior o FP II o Bachillerato (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia en emergencias y Protección Civil (En el caso de disponer de dicha experiencia laboral, deberá aportar documentación acreditativa que justifique el cumplimiento de la experiencia)</li><li>Al menos 6 meses de experiencia en coordinación y gestión de equipos (En el caso de disponer de dicha experiencia laboral, deberá aportar documentación acreditativa que justifique el cumplimiento de la experiencia)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carné de conducir B (Adjuntar)</li><li>Pruebas físicas: El/La candidato/a tendrá que superar las pruebas físicas requeridas para el puesto, referidas en el apartado de Observaciones “Pruebas de Evaluación de las Aptitudes físicas para el Acceso”.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Ciclo Formativo Grado Superior o FP II o Bachillerato (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Ciclo Formativo Grado Superior o FP II o Bachillerato (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia en emergencias y Protección Civil (En el caso de disponer de dicha experiencia laboral, deberá aportar documentación acreditativa que justifique el cumplimiento de la experiencia)</li><li>Al menos 6 meses de experiencia en coordinación y gestión de equipos (En el caso de disponer de dicha experiencia laboral, deberá aportar documentación acreditativa que justifique el cumplimiento de la experiencia)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carné de conducir B (Adjuntar)</li><li>Pruebas físicas: El/La candidato/a tendrá que superar las pruebas físicas requeridas para el puesto, referidas en el apartado de Observaciones “Pruebas de Evaluación de las Aptitudes físicas para el Acceso”.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso de planes de Emergencia y Protección Civil (30 horas)  (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Sistemas de información geográfica (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en redes de comunicaciones informáticas (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Trabajos en altura (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 10 años de experiencia en Protección Civil y Emergencias</li></ul>Otros Factores Meritorios<ul><li>Carné de conducir C o C+E (deberá acreditarse documentalmente en la presentación de la solicitud)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso de planes de Emergencia y Protección Civil (30 horas)  (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Sistemas de información geográfica (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en redes de comunicaciones informáticas (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Trabajos en altura (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso de planes de Emergencia y Protección Civil (30 horas)  (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Sistemas de información geográfica (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en redes de comunicaciones informáticas (100 horas) (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li><li>Formación acreditada en Trabajos en altura (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 10 años de experiencia en Protección Civil y Emergencias</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carné de conducir C o C+E (deberá acreditarse documentalmente en la presentación de la solicitud)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>SE OFRECE:<br/>Se ofrece contrato de duración determinada estimada de 4 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/><br/>- Jornada tiempo completo<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 23/11/2026 hasta el próximo 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf<br/><br/>*PRUEBAS DE EVALUACIÓN DE LAS APTITUDES FÍSICAS PARA EL ACCESO*<br/><br/>A continuación, se describen los test físicos a realizar por las personas aspirantes para el GREA, el objetivo es evaluar las aptitudes físicas de acceso al servicio. Una vez concluidas fases del proceso, los/as candidatos/as no descartados/as deberán superar las pruebas físicas de acceso al Grupo de Apoyo GREA consistentes en:<br/><br/>- ADAPTACIÓN MEDIO ACUÁTICO: 25 m + anilla en el fondo +25 m (nado libre)<br/>• FUERZA: Tracción o Dominadas en barra fija o flexión mantenida en barra.<br/>• TEST DE BARROW.<br/>• EVALUACIÓN DE RESISTENCIA: Test de Cooper. (12 minutos)</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Agente Responsable de Turno - Base Litoral del Grupo de Emergencias de Andalucía - GREA Benahavís (Málaga)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58561"
+ },
  "58564": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58564",
   "category": "Específica",
@@ -32586,6 +32693,103 @@
   "status": "open",
   "title": "Arquitectura Técnica/Superior o Ingeniería Técnica o Superior en Edificación, Civil, ICCP, Industrial, Agronomo o Montes - Apoyo Proyectos de Edificación y Obra Civil (Ibiza)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58760"
+ },
+ "58762": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58762",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58762",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Madrid",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-23T11:37:29+00:00",
+  "id": "tragsa:58762",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-09",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": "Leganés",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-23",
+  "ref": "58762",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Arquitectos/as Técnicos/as o Graduados/as en Edificación - Apoyo a obras (Comunidad de Madrid)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid<br/>Dirección: Leganés</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión de obras</li><li>Estudio de proyectos</li><li>Redacción de presupuestos y certificaciones</li><li>Control de obras</li><li>Planes de calidad</li><li>Relaciones con la Dirección facultativa y clientes</li><li>Seguimiento y control de actuaciones, planificación de las mismas, cumplimiento de normativas vigentes, manuales de operaciones</li><li>Organización de equipos de trabajo</li><li>Realizar desplazamientos puntuales fruto de su área de responsabilidad</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Arquitectura Técnica o Grado en Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B en vigor</li><li>Manejo de Presto (se comprobará en valoración técnica)</li><li>Manejo de AutoCAD, REVIT o similar  (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Arquitectura Técnica o Grado en Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Arquitectura Técnica o Grado en Edificación (nivel MECES 2) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B en vigor</li><li>Manejo de Presto (se comprobará en valoración técnica)</li><li>Manejo de AutoCAD, REVIT o similar  (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en Microsoft Project (adjuntar curso/certificado)</li><li>Formación en Prevención de Riesgos Laborales de al menos 60 horas (adjuntar curso/certificado)</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 1 año realizando funciones como técnico de obra para gestión de obras con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en estudio de proyectos con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en redacción de presupuestos y certificaciones con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en control de obras con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en elaboración de Planes de calidad con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en Organización de equipos de trabajo con contrato laboral (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en Microsoft Project (adjuntar curso/certificado)</li><li>Formación en Prevención de Riesgos Laborales de al menos 60 horas (adjuntar curso/certificado)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en Microsoft Project (adjuntar curso/certificado)</li><li>Formación en Prevención de Riesgos Laborales de al menos 60 horas (adjuntar curso/certificado)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 1 año realizando funciones como técnico de obra para gestión de obras con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en estudio de proyectos con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en redacción de presupuestos y certificaciones con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en control de obras con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en elaboración de Planes de calidad con contrato laboral (se comprobará en valoración técnica)</li><li>Desde 1 mes Hasta 1 año de experiencia en Organización de equipos de trabajo con contrato laboral (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada con una duración estimada de 12 meses,  asociado a la ejecución del encargo detallado en la publicación para el plan de <br/>Recuperación, Transformación  y Resiliencia o con financiación  que provenga de Fondos de la Unión Europea<br/><br/>- Jornada completa<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitectos/as Técnicos/as o Graduados/as en Edificación - Apoyo a obras (Comunidad de Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58762"
  },
  "58764": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58764",
