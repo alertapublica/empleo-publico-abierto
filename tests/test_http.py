@@ -33,7 +33,7 @@ def decoded(pem):
 
 
 def fake(id, delay=0.0, group=None):
-    return type("S", (), {"id": id, "delay": delay, "concurrency_group": group})()
+    return type("S", (), {"id": id, "delay": delay, "retries": 3, "concurrency_group": group})()
 
 
 def name(fields):
