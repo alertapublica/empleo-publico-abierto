@@ -100,5 +100,57 @@
   "status": "open",
   "title": "Abogado asesoría jurídica de cuenta propia",
   "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
+ },
+ "20100101": {
+  "apply_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "CESCE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-29",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T16:07:39+00:00",
+  "id": "cesce:20100101",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-29",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-23",
+  "ref": "20100101",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DEL 23 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE ANALISTA DE RIESGOS (EN EL MARCO DE LA TASA DE REPOSICIÓN AUTORIZADA 2026)</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p>El plazo de admisión de solicitudes será desde el día 23 de noviembre hasta el día 29 de noviembre, ambos incluidos.</p>",
+    "level": 2,
+    "title": "Plazo"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.cesce.es/documents/20122/20099981/Convocatoria+%28AR3+-2026%29.pdf/7da18ae7-0f92-d4ea-d57f-a99d3eb63ad5?t=1795447832213\">Convocatoria</a> (publicado el 23/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20099981/Anexo+I.+Perfil+Analista+Riesgos+%28AR3+-+2026%29.pdf/96ebe256-3555-09c0-df0f-4383034eeff4?t=1795447833002\">Anexo I. Perfil Analista Riesgos</a> (publicado el 23/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20099981/Anexo+II+Modelo+de+Solicitud+-+pdf.pdf/1a201ae0-ed4c-74b2-96f2-d16dcc1d8a4d?t=1795447834033\">Anexo II Modelo de Solicitud - pdf</a> (publicado el 23/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20099981/Anexo+II+Modelo+de+Solicitud+-+word+cumplimentable.docx/148bc004-66cd-9f56-6b8b-631a8c4dd482?t=1795447835005\">Anexo II Modelo de Solicitud - word cumplimentable</a> (publicado el 23/11/2026)</li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesce",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista de riesgos",
+  "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
  }
 }
