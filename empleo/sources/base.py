@@ -4,7 +4,6 @@ from __future__ import annotations
 import re
 from abc import ABC, abstractmethod
 
-from .. import titulaciones
 from ..http import DEFAULT_DELAY, Client
 from ..model import Announcement, ListedOffer, OfferDetail, Plaza
 
@@ -66,11 +65,6 @@ class Source(ABC):
     def enrich(self, http: Client) -> dict[str, dict]:
         """Datos extra por `ref` (published_on, location, family, department), solo para lo que falte."""
         return {}
-
-    def titulacion(self, offer: dict) -> titulaciones.Requisito:
-        """Titulación exigida, leída de los apartados guardados de la oferta (sin red). Cada fuente dice dónde
-        está la suya y qué es lo valorable; sin lector, no consta."""
-        return titulaciones.SIN_LECTOR
 
     def list_announcements(self, http: Client) -> list[Announcement]:
         return []
