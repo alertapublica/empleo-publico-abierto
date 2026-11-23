@@ -31,7 +31,6 @@ from html import escape
 from urllib.parse import parse_qs, urlencode, urlsplit
 
 from ..dates import numeric_date
-from .. import titulaciones
 from ..http import Client
 from ..model import ListedOffer, OfferDetail, SourceLayoutError, deadline_passed, today_madrid
 from .base import Source
@@ -232,10 +231,6 @@ class CiberSource(Source):
 
     def enrich(self, http: Client) -> dict[str, dict]:
         return {ref: {"department": row["Intranet"]} for ref, row in self._rows.items()}
-
-    def titulacion(self, offer: dict) -> titulaciones.Requisito:
-        # Apartado propio; lo valorable va en «Otros conocimientos».
-        return titulaciones.de_apartado(offer, "Titulación requerida")
 
     def fetch_detail(self, http: Client, offer: ListedOffer) -> OfferDetail | None:
         detail = self._details.get(offer.ref) or parse_detail(http.get(detail_url(offer.ref)), offer.ref)
