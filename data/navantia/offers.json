@@ -254,7 +254,7 @@
  "1377758055": {
   "apply_url": "https://empleo.navantia.es/talentcommunity/apply/1377758055/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T14:37:33+00:00",
   "code": null,
   "company": "Navantia",
   "contract": null,
@@ -271,7 +271,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "SF - San Fernando",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -289,7 +289,7 @@
   ],
   "source": "navantia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "4515 - 2 vacantes de Titulado/a Superior Junior para el Área de Preparación Trabajos y Presupuestos",
   "url": "https://empleo.navantia.es/job/SF-San-Fernando-4515-2-vacantes-de-Tituladoa-Superior-Junior-para-el-%C3%81rea-de-Preparaci%C3%B3n-Trabajos-y-Presupuestos-CA/1377758055/"
  },

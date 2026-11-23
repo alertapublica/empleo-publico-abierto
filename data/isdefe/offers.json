@@ -1392,5 +1392,47 @@
   "status": "open",
   "title": "Ingeniero/a Navegación Aérea - Inspector/a",
   "url": "https://seleccionisdefe.es/convocatoria-2644"
+ },
+ "2645": {
+  "apply_url": "https://seleccionisdefe.es/registro-2645",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00449 (7)",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "country": null,
+  "deadline": "2026-11-27",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T14:37:33+00:00",
+  "id": "isdefe:2645",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-27",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-23",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-23",
+  "ref": "2645",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a </p><p><strong>Ingeniero/a de estudios estratégicos del transporte aéreo</strong></p><p><strong>Titulaciones </strong></p><p>Ingeniería Aeronáutica</p><p><strong>Funciones habituales:</strong></p><p>Estudios de conectividad y evolución de precios del transporte aéreo de las regiones no peninsulares. Dichos estudios se elaborarán para el Observatorio de Conectividad y Precios del Transporte Aéreo. <br/>\r\nEstudios de coyuntura de las compañías aéreas que operan en el mercado aéreo español y estudios de coyuntura de los aeropuertos de interés general. <br/>\r\nAnálisis de la evolución y situación actual del tráfico aéreo comercial en España. <br/>\r\nEstudios sobre la situación del mercado aéreo y empresas relacionadas, que podrán estar relacionados, entre otros asuntos, con situaciones de huelga o análisis de asignación de slots. <br/>\r\nRemisión de informes y datos a organismos internacionales y nacionales <br/>\r\n   </p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Experiencia mínima de 1 año en actividades relacionadas con el ámbito aeronáutico.</p><p>MS 365</p><p>De 2 a 4 años de experiencia</p><p><strong>Requisitos Valorables</strong></p><p>Experiencia en el entorno del transporte aéreo, incluyendo aerolíneas y ámbito aeroportuario.<br/>\r\nExperiencia en el uso de Excel, Access y/o Power BI para el tratamiento y visualización de datos.</p><p>Conocimientos económicos, de funcionamiento de mercardos y de análisis estratégicos..</p><p>Inglés Valorable 700 puntos en prueba TOEIC (listening, reading)</p><p>SE OFRECE CONTRATO INDEFINIDO</p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.<br/>\r\nExcepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.<br/>\r\nEl personal interno se regirá por la política de la empresa).</em></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de estudios estratégicos del transporte aéreo (2025-T00449) (7)",
+  "status": "open",
+  "title": "Ingeniero/a de estudios estratégicos del transporte aéreo",
+  "url": "https://seleccionisdefe.es/convocatoria-2645"
  }
 }

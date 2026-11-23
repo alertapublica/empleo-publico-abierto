@@ -2916,7 +2916,7 @@
  "3269120": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269120",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T14:37:33+00:00",
   "code": "27835",
   "company": "Ineco",
   "contract": null,
@@ -2933,7 +2933,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -2971,7 +2971,7 @@
   ],
   "source": "ineco",
   "source_title": "27835 - Técnico/a de Almacenes",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Almacenes",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269120"
  },
@@ -10063,7 +10063,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -13270,7 +13270,7 @@
  "3382058": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382058",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T14:37:33+00:00",
   "code": "29114",
   "company": "Ineco",
   "contract": null,
@@ -13287,7 +13287,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -13325,7 +13325,7 @@
   ],
   "source": "ineco",
   "source_title": "29114 - Técnico/a de Relaciones Laborales y Administración de Personal",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Relaciones Laborales y Administración de Personal",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382058"
  }
