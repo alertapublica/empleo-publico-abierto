@@ -15,5 +15,10 @@
   "before": "2027-10-11",
   "kind": "deadline_changed",
   "offer": "cesce:20069570"
+ },
+ {
+  "at": "2026-11-23T05:07:30+00:00",
+  "kind": "closed",
+  "offer": "cesce:19939583"
  }
 ]

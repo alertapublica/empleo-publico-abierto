@@ -69,7 +69,7 @@
  "gc-tecnico-a-superior-en-marketing-y-comunicacion-en-practicas-internacionalizacion-y-proyectos-europeos": {
   "apply_url": "https://www.gesplan.es/ofertas_de_empleo/gc-tecnico-a-superior-en-marketing-y-comunicacion-en-practicas-internacionalizacion-y-proyectos-europeos/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T05:07:30+00:00",
   "code": null,
   "company": "GESPLAN",
   "contract": "Contrato formativo para obtención de la práctica profesional (420)",
@@ -84,7 +84,7 @@
   "kind": null,
   "listed_deadline": "2026-11-22",
   "location": "Gran Canaria",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -127,7 +127,7 @@
   ],
   "source": "gesplan",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "GC Técnico/a Superior en Marketing y Comunicación en prácticas Internacionalización y Proyectos Europeos",
   "url": "https://www.gesplan.es/ofertas_de_empleo/gc-tecnico-a-superior-en-marketing-y-comunicacion-en-practicas-internacionalizacion-y-proyectos-europeos/"
  }

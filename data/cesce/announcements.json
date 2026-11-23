@@ -132,6 +132,24 @@
   "url": "https://www.cesce.es/documents/20122/19823899/Listado+de+Admitidos+%28ADAG2-+2026%29.pdf/1e7846f8-9e12-cbe6-8e4e-26702d5df2c9?t=1793966501357",
   "via": "otro"
  },
+ "cesce:60c8c0cb96f2": {
+  "access": null,
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-10",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-23T05:07:30+00:00",
+  "location": null,
+  "process": "CONVOCATORIA DEL 10 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE TÉCNICO COMERCIAL DE FINANCIACIÓN (EN EL MARCO DE LA TASA DE REPOSICIÓN AUTORIZADA)",
+  "process_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "source": "cesce",
+  "state": "curso",
+  "system": null,
+  "title": "Convocatoria",
+  "url": "https://www.cesce.es/documents/20122/19939501/Convocatoria+%28TCF2+-2026%29.pdf/13c1d9e2-0e27-e5eb-dd3b-a484aa68e448?t=1794328970995",
+  "via": "tasa"
+ },
  "cesce:6666451678aa": {
   "access": null,
   "apply_url": null,

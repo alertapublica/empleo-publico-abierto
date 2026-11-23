@@ -280,7 +280,7 @@
  "2288": {
   "apply_url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2288",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T05:07:30+00:00",
   "code": "26-145_MS_PC",
   "company": "IDIBELL",
   "contract": "Temporary contract to cover a sick leave",
@@ -295,7 +295,7 @@
   "kind": null,
   "listed_deadline": "2026-11-22",
   "location": "Cataluña",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-10-28",
   "parent_ref": null,
   "place": null,
@@ -319,7 +319,7 @@
   ],
   "source": "idibell",
   "source_title": "26-145_MS_PC Administrative \"Finestra Unica\" - (Sick Leave Cover)",
-  "status": "open",
+  "status": "closed",
   "title": "Administrative \"Finestra Unica\" - (Sick Leave Cover)",
   "url": "https://idibell.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/2288"
  },

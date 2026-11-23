@@ -103,7 +103,7 @@
  "18571": {
   "apply_url": "https://fisevi.com/titulacion-universitaria-en-biologia-o-biomedicina-licenciatura-o-grado-master-de-la-rama-de-ciencias-o-ciencias-de-la-salud-nivel-3-meces-master-ref-298-26-ibis/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T05:07:30+00:00",
   "code": "298/26 IBiS",
   "company": "FISEVI",
   "contract": "Contrato de actividades científico-técnicas (art. 23 bis de la Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación)",
@@ -118,7 +118,7 @@
   "kind": null,
   "listed_deadline": "2026-11-22",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -130,7 +130,7 @@
   "sections": [],
   "source": "fisevi",
   "source_title": "Titulación Universitaria en Biología o Biomedicina (Licenciatura o Grado + Máster de la rama de Ciencias o Ciencias de la Salud) (NIVEL 3 MECES: MÁSTER) REF: 298/26 IBiS",
-  "status": "open",
+  "status": "closed",
   "title": "Titulación Universitaria en Biología o Biomedicina (Licenciatura o Grado + Máster de la rama de Ciencias o Ciencias de la Salud) (NIVEL 3 MECES: MÁSTER)",
   "url": "https://fisevi.com/titulacion-universitaria-en-biologia-o-biomedicina-licenciatura-o-grado-master-de-la-rama-de-ciencias-o-ciencias-de-la-salud-nivel-3-meces-master-ref-298-26-ibis/"
  },

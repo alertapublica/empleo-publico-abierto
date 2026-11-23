@@ -47,7 +47,7 @@
  "1500": {
   "apply_url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1500",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-23T05:07:30+00:00",
   "code": "2026.53",
   "company": "IDIVAL",
   "contract": null,
@@ -62,7 +62,7 @@
   "kind": null,
   "listed_deadline": "2026-11-22",
   "location": "Cantabria",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-13",
   "parent_ref": null,
   "place": null,
@@ -85,7 +85,7 @@
   ],
   "source": "idival",
   "source_title": "2026.53 Convocatoria de una plaza de Doctor/a + Inglés. Call for a Doctoral degree + English. IP Paloma González Álvarez REF GPE2025-001706-P",
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria de una plaza de Doctor/a + Inglés. Call for a Doctoral degree + English. IP Paloma González Álvarez REF GPE2025-001706-P",
   "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1500"
  },
