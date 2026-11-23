@@ -492,6 +492,24 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco#section-9",
   "via": "tasa"
  },
+ "ineco:26594f1bb032": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-23",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-23T10:07:25+00:00",
+  "location": null,
+  "process": "Tasa de reposición ordinaria 2026 (TRO26)",
+  "process_url": "https://inecoreposicionordinaria.people-experts.com/ineco",
+  "source": "ineco",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "PUBLICACIÓN DEL LISTADO ACTUALIZADO CON LAS CALIFICACIONES DEFINITIVAS OBTENIDAS EN LA FASE DE OPOSICIÓN Y VALORACIÓN DEFINITIVA DE MÉRITOS DE LAS PERSONAS CANDIDATAS ADMITIDAS EN LOS PUESTOS DEL BLOQUE 3 DE LA RELACIÓN DE PUESTOS OFERTADOS DEL PROCESO SELECTIVO GENERAL CORRESPONDIENTES A LA TASA DE REPOSICIÓN ORDINARIA 2026 EN LA EMPRESA INECO, INCLUYENDO LA RESOLUCIÓN DE LOS PUESTOS POSPUESTOS TRO26-ECE-015, TRO26-ECS-037, TRO26-ECS-040, TRO26-ECS-060, TRO26-EEM-039, TRO26-EEM-040, TRO26-EXO-033, TRO26-OPT-004, TRO26-OXT-001, TRO26-XLN-001 Y TRO26-XPC-001.",
+  "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-7",
+  "via": "tasa"
+ },
  "ineco:282e4039f2e8": {
   "access": "libre",
   "apply_url": null,
@@ -2219,6 +2237,24 @@
   "system": "concurso-oposicion",
   "title": "PUBLICACIÓN DE CORRECCIÓN DE ERRORES EN LA RELACIÓN DEFINITIVA DE PERSONAS ADMITIDAS Y EXCLUIDAS DEL BLOQUE 1 DE LA TASA DE REPOSICIÓN ORDINARIA 2025 EN LA EMPRESA INECO.",
   "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-8",
+  "via": "tasa"
+ },
+ "ineco:99f4a3778053": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-23",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-23T10:07:25+00:00",
+  "location": null,
+  "process": "Tasa de reposición ordinaria 2026 (TRO26)",
+  "process_url": "https://inecoreposicionordinaria.people-experts.com/ineco",
+  "source": "ineco",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "PUBLICACIÓN DEL LISTADO ACTUALIZADO DE PERSONAS CANDIDATAS QUE OBTIENEN PLAZA EN EL BLOQUE 3 DE LA TASA DE REPOSICIÓN ORDINARIA 2026 EN LA EMPRESA INECO, INCLUYENDO LA RESOLUCIÓN DE LOS PUESTOS POSPUESTOS TRO26-ECE-015, TRO26-ECS-037, TRO26-ECS-040, TRO26-ECS-060, TRO26-EEM-039, TRO26-EEM-040, TRO26-EXO-033, TRO26-OPT-004, TRO26-OXT-001, TRO26-XLN-001 Y TRO26-XPC-001.",
+  "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-7",
   "via": "tasa"
  },
  "ineco:9a0877680471": {
