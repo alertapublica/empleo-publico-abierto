@@ -1,4 +1,71 @@
 {
+ "ftv-gestor-a-de-recursos-emergencias": {
+  "apply_url": "https://www.gesplan.es/ofertas_de_empleo/ftv-gestor-a-de-recursos-emergencias/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "GESPLAN",
+  "contract": "Indefinido (100)",
+  "country": null,
+  "deadline": "2026-11-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-23T10:37:27+00:00",
+  "id": "gesplan:ftv-gestor-a-de-recursos-emergencias",
+  "kind": "indefinido",
+  "listed_deadline": "2026-11-30",
+  "location": "Fuerteventura",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-23",
+  "ref": "ftv-gestor-a-de-recursos-emergencias",
+  "region": "Canarias",
+  "sections": [
+   {
+    "html": "<p>Se solicita <strong>Gestores/as de Recursos </strong>para la <strong>Dirección de Emergencias </strong>en la isla de <strong>Fuerteventura.</strong></p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Los requisitos del perfil de <strong>Gestor/a de Recursos </strong>son:</p>\n<p>Formación académica (mínima requerida):</p>\n<ul>\n<li> Ciclo Superior en Coordinación de Emergencias y Protección Civil.</li>\n</ul>\n<p>Se valorarán otras titulaciones afines cuya formación guarde relación con el puesto.</p>\n<p>Formación complementaria:</p>\n<ul>\n<li>Conocimientos de ofimática e informática, especialmente Microsoft Excel y aplicaciones de gestión, así como capacidad para resolver incidencias ordinarias en los programas y equipos utilizados en el CECOPIN.</li>\n<li>Conocimiento y manejo de plataformas tecnológicas de coordinación de emergencias y sistemas de radiocomunicaciones.</li>\n<li>Conocimientos de procedimientos operativos normalizados (PO), instrucciones de trabajo (IT), protección civil, gestión de emergencias y autoprotección.</li>\n</ul>\n<p>Experiencia:</p>\n<ul>\n<li>Se valorará experiencia en centros de coordinación de emergencias, protección civil o servicios con funcionamiento continuo (24 horas al día, 7 días a la semana).</li>\n<li>Se requiere experiencia en el manejo de sistemas de comunicaciones y radiocomunicaciones, gestión y coordinación de incidencias, utilización de plataformas de gestión de emergencias y desempeño de funciones en entornos que requieran la toma de decisiones en tiempo real.</li>\n<li>Se valorará experiencia en coordinación de equipos, supervisión operativa y elaboración de informes de incidencias.</li>\n</ul>\n<p>Funciones:</p>\n<p>Las principales funciones del puesto serán las siguientes:</p>\n<ul>\n<li>Desempeñar las funciones de Gestor/a del CECOPIN cuando las necesidades del servicio lo requieran, así como asumir funciones de supervisión en un servicio operativo las 24 horas del día, los 7 días de la semana.</li>\n<li>Supervisar el funcionamiento de los puestos de Gestor/a de Emergencias y Gestor/a de Incidencias en Espacios Naturales Protegidos (ENP).</li>\n<li>Velar por la correcta aplicación de los procedimientos operativos normalizados (PO) y las instrucciones de trabajo (IT) establecidos para el servicio.</li>\n<li>Garantizar la coherencia y uniformidad en la toma de decisiones durante los distintos turnos de trabajo.</li>\n<li>Supervisar el desempeño de los gestores y la correcta utilización de las plataformas tecnológicas y herramientas de coordinación de emergencias.</li>\n<li>Coordinar internamente el servicio y actuar como enlace con los niveles superiores (CTS) para la gestión y resolución de incidencias relevantes.</li>\n<li>Elaborar informes, actas y análisis de incidencias relacionados con el funcionamiento y la actividad del servicio.</li>\n</ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>Sede en la isla de<strong> Fuerteventura.</strong></p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<p>Indefinido (100).</p>",
+    "level": 2,
+    "title": "Tipo de contrato"
+   },
+   {
+    "html": "<p>Gestores de recursos: 1.962,41 € Brutos+posibles pluses.</p>",
+    "level": 2,
+    "title": "Retribución"
+   },
+   {
+    "html": "<p>Las personas inscritas en la oferta deberán acreditar la formación y la experiencia con carácter obligatorio.</p>\n<p>Todas las candidaturas serán valoradas en igualdad de condiciones, en cumplimiento de lo dispuesto en el artículo 42 del Real Decreto Legislativo 1/2013, de 29 de noviembre, sobre los derechos de las personas con discapacidad y su inclusión social, y en la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres. En caso de detectarse situaciones de desigualdad, la empresa se reserva el derecho a aplicar medidas específicas de acción positiva, conforme a lo previsto en la legislación vigente y en su Plan de Igualdad.</p>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "gesplan",
+  "source_title": null,
+  "status": "open",
+  "title": "FTV Gestor/a de Recursos, Emergencias",
+  "url": "https://www.gesplan.es/ofertas_de_empleo/ftv-gestor-a-de-recursos-emergencias/"
+ },
  "gc-arquitecto-a-tecnico-a-proyectos-servicios-e-infraestructuras-2": {
   "apply_url": "https://www.gesplan.es/ofertas_de_empleo/gc-arquitecto-a-tecnico-a-proyectos-servicios-e-infraestructuras-2/",
   "category": null,
