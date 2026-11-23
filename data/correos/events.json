@@ -53,5 +53,29 @@
   "at": "2026-11-21T07:07:28+00:00",
   "kind": "closed",
   "offer": "correos:1444438033"
+ },
+ {
+  "at": "2026-11-23T15:37:26+00:00",
+  "kind": "reopened",
+  "offer": "correos:1413480533"
+ },
+ {
+  "after": "2026-12-07",
+  "at": "2026-11-23T15:37:26+00:00",
+  "before": "2026-11-13",
+  "kind": "deadline_changed",
+  "offer": "correos:1413480533"
+ },
+ {
+  "at": "2026-11-23T15:37:26+00:00",
+  "kind": "reopened",
+  "offer": "correos:1444438033"
+ },
+ {
+  "after": "2026-12-07",
+  "at": "2026-11-23T15:37:26+00:00",
+  "before": "2026-11-20",
+  "kind": "deadline_changed",
+  "offer": "correos:1444438033"
  }
 ]
