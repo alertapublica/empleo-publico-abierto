@@ -1,22 +1,22 @@
 {
  "ccma": {
   "desde": "2026-11-24T14:07:23+00:00",
-  "lecturas": 5,
+  "lecturas": 6,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 109,
+  "lecturas": 110,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 91,
+  "lecturas": 92,
   "resultado": "error"
  },
  "uji": {
   "desde": "2026-11-24T12:07:29+00:00",
-  "lecturas": 9,
+  "lecturas": 10,
   "resultado": "error"
  }
 }
