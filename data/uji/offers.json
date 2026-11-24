@@ -418,5 +418,48 @@
   "status": "open",
   "title": "Personal investigador predoctoral en formació (Projectes) · 26I445 Desenvolupament de nous biomaterials per al tractament de l'osteonecrosi (OSTEOPROTECT)",
   "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3607&pConcurso=1&pCategoria=14"
+ },
+ "3609": {
+  "apply_url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3609&pConcurso=1&pCategoria=14",
+  "category": "Personal investigador predoctoral en formació (Perfil 23162 Vicente Beltrán Palanques)",
+  "closed_at": null,
+  "code": null,
+  "company": "Universitat Jaume I",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T10:37:27+00:00",
+  "id": "uji:3609",
+  "kind": null,
+  "listed_deadline": "2026-12-09",
+  "location": "Castelló de la Plana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "3609",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "Data de resolució 16/11/2026\nBOE No és aplicable \nEstatNo és aplicable \n\n\n\n\nData de tancament  No és aplicable \nDOGV 24/11/2026\nResolució No és aplicable \n\n\n\nConcurs: Personal investigador predoctoral en formació (Perfil 23162 Vicente Beltrán Palanques)\n\n\nInici de presentació de sol·licituds 25/11/2026\nFi de presentació de sol·licituds 09/12/2026\nCodi Registre 23162\n\n\nTorn Lliure\nTipus de concurs Personal investigador predoctoral en formació\n\n\n\nProcediment administratiu <a href=\"http://ujiapps.uji.es/seu/cataleg/rrhh/proc-182-PAS-PI-CONTRAC/\">PI - Procés abreujat per a la contractació de personal vinculat a la investigació </a>\n\n\nResolucions\n\n\n<strong>Data Resolució     </strong>16/11/2026<strong>    Data de publicació </strong>24/11/2026<strong>    Termini  </strong>25/11/2026 - 09/12/2026\n\n<p>\nResolució de la vicerectora d'investigació de la Universitat Jaume I, per la qual es convoca una oferta pública de contractes de personal investigador predoctoral en formació, emmarcada dins de convocatòria de tramitació anticipada per a l'any 2025 del procediment de concessió d'ajudes a «Projectes de Generació de Coneixement» i a actuacions per a la formació de personal investigador predoctoral associades a aquests projectes. d'Innovació 2024-2027.\n</p>\n\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/B51ZRMXP7T2GMZTSYSV2DQPJHOELLP6Z\">CONVOCATÒRIA</a></p>\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/A7B6ZVDYOAGSYRY55S4YNTKZP2XMFHVX\">DOGV</a></p>\n\n\n\n\nFora de termini de tramitació",
+    "lang": "ca",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "uji",
+  "source_title": "CONVOCATÒRIA ÚNICA: CONTRACTES PREDOCTORALS (PROGRAMA ESTATAL FPI-AEI 2026) - COMPLEMENTÀRIA",
+  "status": "open",
+  "title": "Convocatòria única: contractes predoctorals (programa estatal fpi-aei 2026) - complementària",
+  "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3609&pConcurso=1&pCategoria=14"
  }
 }

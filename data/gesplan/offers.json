@@ -197,5 +197,139 @@
   "status": "closed",
   "title": "GC Técnico/a Superior en Marketing y Comunicación en prácticas Internacionalización y Proyectos Europeos",
   "url": "https://www.gesplan.es/ofertas_de_empleo/gc-tecnico-a-superior-en-marketing-y-comunicacion-en-practicas-internacionalizacion-y-proyectos-europeos/"
+ },
+ "tf-gc-gestor-a-operativo-a-emergencias": {
+  "apply_url": "https://www.gesplan.es/ofertas_de_empleo/tf-gc-gestor-a-operativo-a-emergencias/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "GESPLAN",
+  "contract": "Según las necesidades del proyecto",
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T10:37:27+00:00",
+  "id": "gesplan:tf-gc-gestor-a-operativo-a-emergencias",
+  "kind": null,
+  "listed_deadline": "2026-12-01",
+  "location": "Tenerife, Gran Canaria",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "tf-gc-gestor-a-operativo-a-emergencias",
+  "region": "Canarias",
+  "sections": [
+   {
+    "html": "<p>Se solicita <strong>Gestores/as Operativos/as </strong>para la <strong>Dirección de Emergencias </strong>en las islas de <strong>Tenerife y Gran Canaria.</strong></p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Los requisitos del perfil de <strong>Gestor/a Operativo/a </strong>son:</p>\n<p>Formación académica (mínima requerida):</p>\n<ul>\n<li> Ciclo Superior en Sistemas de Telecomunicaciones e Informáticos (o similar).</li>\n</ul>\n<p>Formación complementaria:</p>\n<ul>\n<li>Formación complementaria en radiocomunicaciones, redes y sitemas informáticos, aplicaciones de gestión de emergencias, operación de sistemas críticos y salas de control, protección civil y gestión operativa de incidentes.</li>\n<li>Conocimientos de ofimática e informática (Excel, Access, Word, etc), con capacidad de resolver las incidencias ordinarias que se puedan producir en los programas instalados en la sala</li>\n</ul>\n<p>Experiencia:</p>\n<ul>\n<li>Se valorará experiencia en centros de coordinación de emergencias (112), centros de control, seguridad, transporte o infraestructuras críticas.</li>\n<li>Se valorará experiencia en entornos de servicio continuo 24/7 y sistemas de alta disponibilidad.</li>\n<li>Se valorará experiencia en gestión y resolución de incidencias técnicas que puedan afectar a la continuidad del servicio.</li>\n<li>Se valorará experiencia en sistemas de grabación de comunicaciones y gestión de registros de incidentes.</li>\n</ul>\n<p>Funciones:</p>\n<p>Las principales funciones del puesto serán las siguientes:</p>\n<ul>\n<li>Conocer los principios básicos de los sistemas de telefonía, sus elementos y características principales. Ser capaz de comprender aspectos técnicos sobre infraestructuras de telefonía y soluciones técnicas asociadas a las mismas.</li>\n<li>Conocer los principios básicos de los sistemas de radiocomunicación, sus elementos y características principales (terrestial Trunked Radio, DMR, otros). Ser capaz de comprender aspectos técnicos sobre infraestructuras de radiocomunicación y soluciones técnicas asociadas a las mismas.</li>\n<li>Conocer los distintos elementos que conforman un CPD, así como la funcionalidad de cada uno de ellos. Valorar las buenas prácticas de gestión TI como instrumento fundamental para llevar a cabo una óptima gestión de los entornos tecnológicos.</li>\n<li>Diferencias los distintos entornos informáticos vinculados a los ámbitos de usuario, empresa y corporativo. Reconocer las diferencias específicas e de los entornos corporativos y sus requerimientos.</li>\n<li>Comprender los funcionamientos de la electricidad y a su ámbito normativo, Conocer los elementos necesarios para un entorno de alta disponibilidad eléctrica.</li>\n<li>Verificar el funcionamiento y estado de las herramientas tecnológicas del CECOES 112, mediante inspecciones y comprobaciones en cada turno de trabajo.</li>\n<li>Dar la primera respuesta técnica a cualquier eventualidad tecnológica del CECOES 112.</li>\n<li>Recopilar grabaciones y expedientes de incidentes de las bases de datos.</li>\n</ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>Sede en la isla de Tenerife y Gran Canaria.</p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<p>Según las necesidades del proyecto.</p>",
+    "level": 2,
+    "title": "Tipo de contrato"
+   },
+   {
+    "html": "<p>Gestores/as Operativos/as: 1.962,41 € Brutos+posibles pluses.</p>",
+    "level": 2,
+    "title": "Retribución"
+   },
+   {
+    "html": "<p>Las personas inscritas en la oferta deberán acreditar la formación y la experiencia con carácter obligatorio.</p>\n<p>Todas las candidaturas serán valoradas en igualdad de condiciones, en cumplimiento de lo dispuesto en el artículo 42 del Real Decreto Legislativo 1/2013, de 29 de noviembre, sobre los derechos de las personas con discapacidad y su inclusión social, y en la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres. En caso de detectarse situaciones de desigualdad, la empresa se reserva el derecho a aplicar medidas específicas de acción positiva, conforme a lo previsto en la legislación vigente y en su Plan de Igualdad.</p>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "gesplan",
+  "source_title": null,
+  "status": "open",
+  "title": "TF/GC Gestor/a Operativo/a, Emergencias",
+  "url": "https://www.gesplan.es/ofertas_de_empleo/tf-gc-gestor-a-operativo-a-emergencias/"
+ },
+ "tf-gc-gestor-de-recursos-emergencias": {
+  "apply_url": "https://www.gesplan.es/ofertas_de_empleo/tf-gc-gestor-de-recursos-emergencias/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "GESPLAN",
+  "contract": "Según las necesidades del proyecto",
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T10:37:27+00:00",
+  "id": "gesplan:tf-gc-gestor-de-recursos-emergencias",
+  "kind": null,
+  "listed_deadline": "2026-12-01",
+  "location": "Gran Canaria, Tenerife",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "tf-gc-gestor-de-recursos-emergencias",
+  "region": "Canarias",
+  "sections": [
+   {
+    "html": "<p>Se solicita <strong>Gestores/as de Recursos </strong>para la <strong>Dirección de Emergencias </strong>en la islas de <strong>Tenerife</strong> y <strong>Gran Canaria.</strong></p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Los requisitos del perfil de <strong>Gestor/a de Recursos </strong>son:</p>\n<p>Formación académica (mínima requerida):</p>\n<ul>\n<li> Ciclo Superior en Coordinación de Emergencias y Protección Civil.</li>\n</ul>\n<p>Formación complementaria:</p>\n<ul>\n<li>Formación relacionada con coordinación de emergencias, protección civil , movilización de recursos, comunicaciones, geolocalización y planes especiales.</li>\n<li>Conocimientos de ofimática e informática (Excel, Access, Word, etc), con capacidad de resolver las incidencias ordinarias que se puedan producir en los programas instalados en la sala.</li>\n<li>Manejo avanzado de los equipos de radiocomunicaciones</li>\n<li>Idiomas</li>\n</ul>\n<p>Experiencia:</p>\n<ul>\n<li>Se valorará experiencia en centros de coordinación de emergencias, protección civil o servicios con funcionamiento continuo (24 horas al día, 7 días a la semana).</li>\n<li>Se valorará experiencia en el manejo de sistemas de comunicaciones y radiocomunicaciones, gestión y coordinación de incidencias, utilización de plataformas de gestión de emergencias y desempeño de funciones en entornos que requieran la toma de decisiones en tiempo real.</li>\n<li>Se valorará experiencia en coordinación de equipos, supervisión operativa y elaboración de informes de incidencias.</li>\n</ul>\n<p>Funciones:</p>\n<p>Las principales funciones del puesto serán las siguientes:</p>\n<ul>\n<li>Conocer preventivamente las diferentes situaciones que pudieran originar un riesgo en materia de atención de emergencias y protección civil.</li>\n<li>Conocer el estado, disponibilidad, situación y operatividad de los recursos y medios existentes en su ámbito de Protección Civil de Canarias.</li>\n<li>Conocer el estado, disponibilidad, situación y operatividad de los recursos y medios existentes en el ámbito de la seguridad en las playas de Canarias. Ejecutar los procedimientos y tácticas operativas.</li>\n<li>Designar el medio más adecuado para dar respuesta a las demandas en el ámbito de sus funciones en el marco de Protección Civil y Seguridad en Platas, realizando un seguimiento del incidente y un registro temporal de las intervenciones coordinadas dese el Centro Coordinador de Emergencias y Seguridad.</li>\n<li>Apoyar a los Técnicos Sectoriales de Protección Civil en las labores de coordinación, realizando tareas de gestión de medios y recursos, tanto en el Centro Coordinador de Emergencias y Seguridad como en el lugar de un incidente en el que se haya establecido un puesto de mando avanzado.</li>\n<li>Apoyar a la Dirección Técnica del Plan en situación de emergencia, a nivel autonómico, de cualquier plan de Protección Civil, territorial, especial o específico.</li>\n<li>Aplicar protocolos y planes operativos correspondientes a cada tipo de demanda.<br/>\nEstablecer, gestionar y coordinar la respuesta, atendiendo al procedimiento generado según el tipo de demanda o a las indicaciones del técnico sectorial, y realizar el seguimiento de estas.</li>\n<li>Desempeñar su labor fuera del centro de trabajo si así se requiriese por circunstancias del servicio (CECOES 112).</li>\n<li>Cuantas otras sean necesarias para la correcta prestación del servicio en su turno.</li>\n</ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>Sede de Gran Canaria y Tenerife</p>",
+    "level": 2,
+    "title": "Lugar de trabajo"
+   },
+   {
+    "html": "<p>Según las necesidades del proyecto.</p>",
+    "level": 2,
+    "title": "Tipo de contrato"
+   },
+   {
+    "html": "<p>Gestores de recursos: 1.962,41 € Brutos+posibles pluses.</p>",
+    "level": 2,
+    "title": "Retribución"
+   },
+   {
+    "html": "<p>Las personas inscritas en la oferta deberán acreditar la formación y la experiencia con carácter obligatorio.</p>\n<p>Todas las candidaturas serán valoradas en igualdad de condiciones, en cumplimiento de lo dispuesto en el artículo 42 del Real Decreto Legislativo 1/2013, de 29 de noviembre, sobre los derechos de las personas con discapacidad y su inclusión social, y en la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres. En caso de detectarse situaciones de desigualdad, la empresa se reserva el derecho a aplicar medidas específicas de acción positiva, conforme a lo previsto en la legislación vigente y en su Plan de Igualdad.</p>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "gesplan",
+  "source_title": null,
+  "status": "open",
+  "title": "TF/GC Gestor/a de Recursos, Emergencias",
+  "url": "https://www.gesplan.es/ofertas_de_empleo/tf-gc-gestor-de-recursos-emergencias/"
  }
 }

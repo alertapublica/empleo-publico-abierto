@@ -18,5 +18,15 @@
   "at": "2026-11-23T10:37:27+00:00",
   "kind": "new",
   "offer": "gesplan:ftv-gestor-a-de-recursos-emergencias"
+ },
+ {
+  "at": "2026-11-24T10:37:27+00:00",
+  "kind": "new",
+  "offer": "gesplan:tf-gc-gestor-a-operativo-a-emergencias"
+ },
+ {
+  "at": "2026-11-24T10:37:27+00:00",
+  "kind": "new",
+  "offer": "gesplan:tf-gc-gestor-de-recursos-emergencias"
  }
 ]
