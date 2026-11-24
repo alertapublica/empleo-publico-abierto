@@ -18,6 +18,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/18",
   "via": "otro"
  },
+ "emacsa:24efd205f7f0": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-24",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-24T13:07:29+00:00",
+  "location": null,
+  "process": "Auxiliar Administrativo/a",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/17",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Resolución de las alegaciones a la plantilla provisional del primer ejercicio y publicación de la plantilla definitiva",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/17",
+  "via": "otro"
+ },
  "emacsa:25d992bd145b": {
   "access": null,
   "apply_url": null,

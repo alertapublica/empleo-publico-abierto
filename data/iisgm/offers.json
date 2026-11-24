@@ -252,11 +252,11 @@
  "137": {
   "apply_url": "https://iisgm.com/ofertas-de-empleo/137/tecnico-a-de-laboratorio-ref-111-2026",
   "category": null,
-  "closed_at": "2026-11-23T05:07:30+00:00",
+  "closed_at": null,
   "code": null,
   "company": "IiSGM (Instituto de Investigación Sanitaria Gregorio Marañón)",
   "contract": null,
-  "deadline": "2026-11-22",
+  "deadline": "2026-11-25",
   "deadline_time": null,
   "department": null,
   "detail_ok": true,
@@ -265,10 +265,10 @@
   "first_seen": "2026-11-13T10:07:27+00:00",
   "id": "iisgm:137",
   "kind": null,
-  "listed_deadline": "2026-11-22",
+  "listed_deadline": "2026-11-25",
   "location": "Madrid",
-  "missed_runs": 1,
-  "opens_on": "2026-11-13",
+  "missed_runs": 0,
+  "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": null,
   "portal_tries": 4,
@@ -278,7 +278,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Grupo de Investigación: Bases Neurobiológicas y Psicológicas de los Trastornos Mentales. Trastornos del<br/>\r\nNeurodesarrollo<br/>\r\nÁrea Funcional: 2<br/>\r\nGrupo Profesional: IV<br/>\r\nCategoría Profesional: TÉCNICO GRADO SUPERIOR<br/>\r\nTitulación Académica Requerida: TÉCNICO SUPERIOR EN LABORATORIO DE DIAGNÓSTICO CLÍNICO<br/>\r\nPuesto: TÉCNICO/ A DE LABORATORIO</p>",
+    "html": "<p>Grupo de Investigación: Bases Neurobiológicas y Psicológicas de los Trastornos Mentales. Trastornos del Neurodesarrollo</p><p>Área Funcional: 2</p><p>Grupo Profesional: IV</p><p>Categoría Profesional: TÉCNICO GRADO SUPERIOR</p><p>Titulación Académica Requerida: TÉCNICO SUPERIOR EN LABORATORIO DE DIAGNÓSTICO CLÍNICO</p>",
     "level": 2,
     "title": "Datos del puesto"
    },
@@ -288,14 +288,14 @@
     "title": "Requisitos"
    },
    {
-    "html": "<ul><li><a href=\"https://iisgm.com/media/upload/pdf/OFERTA%20Tecnico%20laboratorio%20REF.110_2026_1794564400.pdf\">OFERTA Y REQUISITOS 110_2026</a></li></ul>",
+    "html": "<ul><li><a href=\"https://iisgm.com/media/upload/pdf/OFERTA%20Tecnico%20laboratorio%20REF.111_2026_1794905899.pdf\">OFERTA Y REQUISITOS 111_2026</a></li></ul>",
     "level": 2,
     "title": "Documentos relacionados"
    }
   ],
   "source": "iisgm",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "TÉCNICO/A DE LABORATORIO REF.111_2026",
   "url": "https://iisgm.com/ofertas-de-empleo/137/tecnico-a-de-laboratorio-ref-111-2026"
  },

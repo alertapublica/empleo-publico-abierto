@@ -78,5 +78,17 @@
   "at": "2026-11-23T05:07:30+00:00",
   "kind": "closed",
   "offer": "iisgm:137"
+ },
+ {
+  "at": "2026-11-24T13:07:29+00:00",
+  "kind": "reopened",
+  "offer": "iisgm:137"
+ },
+ {
+  "after": "2026-11-25",
+  "at": "2026-11-24T13:07:29+00:00",
+  "before": "2026-11-22",
+  "kind": "deadline_changed",
+  "offer": "iisgm:137"
  }
 ]

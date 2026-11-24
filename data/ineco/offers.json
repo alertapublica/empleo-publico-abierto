@@ -13576,5 +13576,67 @@
   "status": "open",
   "title": "Beca Automatización Robótica de Procesos (RPA)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382456"
+ },
+ "3382584": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382584",
+  "category": null,
+  "closed_at": null,
+  "code": "29139",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T13:07:29+00:00",
+  "id": "ineco:3382584",
+  "kind": "beca",
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-24",
+  "ref": "3382584",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Registro y seguimiento de iniciativas, asegurando que la información necesaria esté completa, actualizada y trazable durante todo su ciclo de vida.<br/>- Gestión y estructuración del conocimiento generado por la Oficina: documentación, procedimientos, casos de uso, decisiones y buenas prácticas.<br/>- Apoyo al proceso de análisis y priorización de la demanda, preparando la información necesaria para facilitar la valoración y toma de decisiones.<br/>- Atención y acompañamiento a los usuarios, actuando como primer punto de contacto para orientar las solicitudes, resolver dudas sobre el proceso y facilitar la interlocución con la Oficina.<br/>- Preparación de información de seguimiento, contribuyendo a disponer de una visión actualizada de la actividad, estado de las iniciativas y principales necesidades.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación: Grado en Ingeniería y Sistemas de Datos, Grado en Economía, Grado en Empresa, Licenciatura en Económicas, Licenciatura en ADE, Licenciatura en Matemáticas, Licenciatura en Estadística.<br/>- Manejo de Excel y PowerPoint.<br/>- Interés por datos, inteligencia artificial y transformación digital.<br/>- Valorable conocimiento de Power BI, Microsoft 365, SharePoint o herramientas de gestión y seguimiento.<br/>- Capacidad analítica.<br/>- Organización y rigor.<br/>- Buen nivel de comunicación oral y escrita.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¡En INECO apostamos por el Talento Joven!<br/>Ofrecemos la oportunidad de realizar las prácticas formativas dentro de un equipo real de trabajo, donde serás mentorizado y acompañado durante todo el proceso para tu crecimiento profesional en la empresa.<br/>Ineco tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional.<br/>Formarás parte de proyectos punteros tanto nacionales como internacionales, con un plan de desarrollo y formación personalizada. Con la oportunidad de participar en programas de formación de alto valor añadido como foros de gran relevancia, además de tener polivalencia para rotar en diferentes disciplinas, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad e igualdad de oportunidades.<br/>Somos un equipo multidisciplinar de trabajo que prioriza la innovación, orientación al logro, adaptación al cambio, flexibilidad y el trabajo en equipo.<br/>¡Únete al equipo Ineco!<br/>¡Dale un impulso a tu carrera profesional!</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29139 - Beca de Gobierno del Dato e IA",
+  "status": "open",
+  "title": "Beca de Gobierno del Dato e IA",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382584"
  }
 }

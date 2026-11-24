@@ -152,5 +152,57 @@
   "status": "open",
   "title": "Analista de riesgos",
   "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
+ },
+ "20109662": {
+  "apply_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "CESCE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-06",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T13:07:29+00:00",
+  "id": "cesce:20109662",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-06",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-24",
+  "ref": "20109662",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DEL 24 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE TÉCNICO DE PRODUCTO (EN EL MARCO DE LA TASA DE REPOSICIÓN ESPECÍFICA AUTORIZADA 2026)</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p>El plazo de admisión de solicitudes será desde el día 24 de noviembre hasta el día 6 de diciembre, ambos incluidos.</p>",
+    "level": 2,
+    "title": "Plazo"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.cesce.es/documents/20122/20109437/Convocatoria+%28TP-+2026%29.pdf/09b82075-aaa5-254e-96b9-0bbdc4c8b925?t=1795524127117\">Convocatoria</a> (publicado el 24/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20109437/Anexo+I+Perfil.+T%C3%A9cnico+Producto+%28TP+-+2026%29.pdf/637fcc91-9a44-3d7f-96a3-91d6b0dd4021?t=1795525665134\">Anexo I. Perfil del puesto</a> (publicado el 24/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20109437/Anexo+II+Modelo+de+Solicitud+-+pdf.pdf/d3dc81c6-0cce-c35b-4409-fbab877aa80b?t=1795524125752\">Anexo II. Modelo de Solicitud - pdf</a> (publicado el 24/11/2026)</li><li><a href=\"https://www.cesce.es/documents/20122/20109437/Anexo+II+Modelo+de+Solicitud+-+word+cumplimentable.docx/9825bef3-fedf-aa97-2f68-a476789f5007?t=1795524126378\">Anexo II. Modelo de Solicitud - word cumplimentable</a> (publicado el 24/11/2026)</li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "cesce",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico de producto",
+  "url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce"
  }
 }
