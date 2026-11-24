@@ -945,11 +945,11 @@
  "56358": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56358",
   "category": "Específica",
-  "closed_at": "2026-11-19T05:07:26+00:00",
+  "closed_at": null,
   "code": "56358",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-18",
+  "deadline": "2026-12-09",
   "deadline_time": null,
   "department": "Ingeniería y Edificación",
   "detail_ok": true,
@@ -958,9 +958,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:56358",
   "kind": "temporal",
-  "listed_deadline": "2026-11-18",
-  "location": "Varios",
-  "missed_runs": 1,
+  "listed_deadline": "2026-12-09",
+  "location": "Barcelona",
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -968,10 +968,10 @@
   "positions": 15,
   "published_on": "2026-11-03",
   "ref": "56358",
-  "region": "Varias comunidades",
+  "region": "Cataluña",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 15 Ingenieros/as Técnico/as o Graduados/as en Ingeniería para prestar apoyo en asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras en varias provincias.<br/><br/>Habiendo quedado pendientes de cubrir al menos 9 posiciones, se amplía el plazo del 03/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 15 Ingenieros/as Técnico/as o Graduados/as en Ingeniería para prestar apoyo en asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras en varias provincias.<br/><br/>Habiendo quedado pendientes de cubrir al menos 9 posiciones, se amplía el plazo del 24/11/2026 hasta el 09/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -1021,14 +1021,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/>-Contrato de duración determinada estimada de 6 meses  con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede<br/>-Jornada de 7,5 horas en horario de 7:30  a 15:00. <br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de la fecha de incorporación final y a la duración prevista del proyecto. <br/><br/>Habiendo quedado pendientes de cubrir al menos 9 posiciones, se amplía el plazo del 03/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).<br/> <br/>Dichas plazas se ofertarán en base a la puntuación global del proceso, siguiendo los criterios establecidos en estas bases: cumplimiento de requisitos, valoración de méritos y fase de pruebas, así como según la posibilidad de formalizar un contrato temporal hasta la finalización del proyecto, desde la propuesta de contratación.<br/><br/>Para el ofrecimiento del puesto, se realizará un listado ordenando las candidaturas según la puntuación total obtenida en el proceso (suma de méritos y fase de pruebas). En caso de empate, a igualdad de puntuación, con el objeto de dar cumplimiento de la Norma RRH.09 para el Fomento de la incorporación de personas con discapacidad en el Grupo Tragsa, a igualdad de condiciones, se priorizarán las candidaturas de aquellas personas que cuenten con una discapacidad reconocida y acreditada igual o superior al 33%, siempre y cuando la discapacidad sea compatible con el adecuado desempeño del puesto formalizándose, cuando sea posible, una tipología de contrato acorde con dicha situación. En caso de coincidencia o no acreditar discapacidad, a igualdad de puntuación, habiendo realizado un sorteo previo para determinar el orden de prelación, será la letra \"B\" la letra del abecedario por la que comenzará el listado que marcará el orden de prelación, según el “Primer Apellido” de los aspirantes. En caso de coincidencia en primer apellido se resolverá el desempate atendiendo al “Segundo Apellido”.<br/> <br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción. <br/> <br/>En el caso de no obtener candidaturas suficientes para la cobertura de los puestos ofertados en la convocatoria, las personas candidatas inscritas a través de la/s republicación/es se valorarán garantizando la igualdad en el proceso y optarán únicamente a los puestos pendientes de cubrir detallados en la/s republicación/es. Para el ofrecimiento de los puestos pendientes se establecerá un orden de prelación en función del plazo de recepción de candidaturas definido para cada periodo de inscripción.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/>-Contrato de duración determinada estimada de 6 meses  con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede<br/>-Jornada de 7,5 horas en horario de 7:30  a 15:00. <br/><br/>Atendiendo a las necesidades del servicio, el periodo de contratación se determinará en función de la fecha de incorporación final y a la duración prevista del proyecto. <br/><br/>Habiendo quedado pendientes de cubrir al menos 9 posiciones, se amplía el plazo del 24/11/2026 hasta el 09/12/2026 a las 23:59 (hora peninsular).<br/> <br/>Dichas plazas se ofertarán en base a la puntuación global del proceso, siguiendo los criterios establecidos en estas bases: cumplimiento de requisitos, valoración de méritos y fase de pruebas, así como según la posibilidad de formalizar un contrato temporal hasta la finalización del proyecto, desde la propuesta de contratación.<br/><br/>Para el ofrecimiento del puesto, se realizará un listado ordenando las candidaturas según la puntuación total obtenida en el proceso (suma de méritos y fase de pruebas). En caso de empate, a igualdad de puntuación, con el objeto de dar cumplimiento de la Norma RRH.09 para el Fomento de la incorporación de personas con discapacidad en el Grupo Tragsa, a igualdad de condiciones, se priorizarán las candidaturas de aquellas personas que cuenten con una discapacidad reconocida y acreditada igual o superior al 33%, siempre y cuando la discapacidad sea compatible con el adecuado desempeño del puesto formalizándose, cuando sea posible, una tipología de contrato acorde con dicha situación. En caso de coincidencia o no acreditar discapacidad, a igualdad de puntuación, habiendo realizado un sorteo previo para determinar el orden de prelación, será la letra \"B\" la letra del abecedario por la que comenzará el listado que marcará el orden de prelación, según el “Primer Apellido” de los aspirantes. En caso de coincidencia en primer apellido se resolverá el desempate atendiendo al “Segundo Apellido”.<br/> <br/>Con las personas que superen todas las fases del proceso se conformará una Lista ordenada en base a la puntuación total obtenida. El ofrecimiento de los puestos se hará atendiendo a dicho orden de prelación global, ofertando la totalidad de los puestos pendientes por cubrir, no siendo determinante para el llamamiento la disponibilidad de ubicación indicada durante la inscripción. <br/> <br/>En el caso de no obtener candidaturas suficientes para la cobertura de los puestos ofertados en la convocatoria, las personas candidatas inscritas a través de la/s republicación/es se valorarán garantizando la igualdad en el proceso y optarán únicamente a los puestos pendientes de cubrir detallados en la/s republicación/es. Para el ofrecimiento de los puestos pendientes se establecerá un orden de prelación en función del plazo de recepción de candidaturas definido para cada periodo de inscripción.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingenieros/as Técnico/as o Graduados/as en Ingeniería - Asistencia técnica en trabajos de arquitectura, infraestructuras y seguimiento de obras (Varias Provincias)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56358"
  },
@@ -16790,6 +16790,103 @@
   "status": "closed",
   "title": "Titulado/a Universitario/a en Sector ambiental - Monitorización Insectos (Moncada, Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58453"
+ },
+ "58454": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58454",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58454",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-11-26",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Pesca y Asuntos Marítimos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Otros",
+  "first_seen": "2026-11-24T14:07:23+00:00",
+  "id": "tragsa:58454",
+  "kind": "temporal",
+  "listed_deadline": "2026-11-26",
+  "location": "Embarcado/a en Buque Oceanográfico",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-23",
+  "ref": "58454",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Capitán/a para embarcar en Buque Oceanográfico.<br/><br/>En relación al proceso publicado el pasado 23/10/2026 se amplía el plazo de recepción de candidaturas desde el 24/11/2026 hasta el 26/11/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Embarcado/a en Buque Oceanográfico</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo para dirigir, prestar apoyo y controlar todas las actividades que se realizan, siendo responsable de la seguridad del buque, tripulación, cargamento, pesca, navegación y organización del trabajo.</li><li>Se encarga de tener al día toda la certificación oficial y de tramitar la documentación necesaria que le requieran las autoridades de los países por donde navegue.</li><li>Gestionar toda la documentación (sanidad, inmigración, aduanas, etc.), comunicaciones y requisitos de entrada y salida en aguas jurisdiccionales y/o puertos.</li><li>Gestionar el funcionamiento del buque y cuidado de las personas.</li><li>Gestionar la navegación (elección de rutas, economizado de combustible, evitar temporales, estabilidad del buque).</li><li>Gestionar la manipulación y estiba de pertrechos y víveres.</li><li>Gestionar la pesca y de las actividades científicas.</li><li>Manejo de las maquinillas de pesca y las hidrográficas. Manejo de los pórticos de popa y lateral.</li><li>Asistencia a el/la Jefe/a de Campaña en las cuestiones intrínsecas del buque y de la pesca.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la Tarjeta Profesional de Patrón/a de Altura de la Marina Mercante con atribuciones de Patrón/a hasta 1600 GT (se comprobará en valoración técnica)</li></ul>Otros Requisitos Imprescindibles<ul><li>Documento de Identidad del Marino/a (DIM) o Libreta Marítima o Certificado de Embarque (se comprobará en valoración técnica)</li><li>Reconocimiento médico en vigor apto para el puesto (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Formación Básica en Seguridad (se comprobará en valoración técnica)</li><li>Certificado de suficiencia en Técnicas Avanzadas en Lucha Contra Incendios (se comprobará en valoración técnica)</li><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate no Rápidos (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Radar y de Ayudas de Punteo de Radar Automáticas APRA/ARPA (se comprobará en valoración técnica)</li><li>Formación Sanitaria Específica Avanzada en vigor (se comprobará en valoración técnica)</li><li>Certificado de Operador/a general del sistema mundial de socorro y seguridad marítima (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la Tarjeta Profesional de Patrón/a de Altura de la Marina Mercante con atribuciones de Patrón/a hasta 1600 GT (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la Tarjeta Profesional de Patrón/a de Altura de la Marina Mercante con atribuciones de Patrón/a hasta 1600 GT (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Documento de Identidad del Marino/a (DIM) o Libreta Marítima o Certificado de Embarque (se comprobará en valoración técnica)</li><li>Reconocimiento médico en vigor apto para el puesto (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Formación Básica en Seguridad (se comprobará en valoración técnica)</li><li>Certificado de suficiencia en Técnicas Avanzadas en Lucha Contra Incendios (se comprobará en valoración técnica)</li><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate no Rápidos (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Radar y de Ayudas de Punteo de Radar Automáticas APRA/ARPA (se comprobará en valoración técnica)</li><li>Formación Sanitaria Específica Avanzada en vigor (se comprobará en valoración técnica)</li><li>Certificado de Operador/a general del sistema mundial de socorro y seguridad marítima (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Curso formativo o certificado que acredite un nivel B1 en inglés</li></ul>Otros Factores Meritorios<ul><li>Experiencia con contrato laboral como Primer/a Oficial/a de Puente en buques oceanográficos</li><li>Experiencia con contrato laboral como Capitán/a en buques mercantes</li><li>Al menos 3 meses de experiencia con contrato laboral como Capitán/a en buques de pesca</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Curso formativo o certificado que acredite un nivel B1 en inglés</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Curso formativo o certificado que acredite un nivel B1 en inglés</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Experiencia con contrato laboral como Primer/a Oficial/a de Puente en buques oceanográficos</li><li>Experiencia con contrato laboral como Capitán/a en buques mercantes</li><li>Al menos 3 meses de experiencia con contrato laboral como Capitán/a en buques de pesca</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada por sustitución con una duración estimada de 2 meses, en función del hecho causante.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 23/10/2026 se amplía el plazo de recepción de candidaturas desde el 24/11/2026 hasta el 26/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Capitán/a (Buque Oceanográfico)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58454"
  },
  "58457": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58457",
