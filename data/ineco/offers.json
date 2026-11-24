@@ -13328,5 +13328,129 @@
   "status": "open",
   "title": "Técnico/a de Relaciones Laborales y Administración de Personal",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382058"
+ },
+ "3382455": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382455",
+  "category": null,
+  "closed_at": null,
+  "code": "29124",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T09:37:29+00:00",
+  "id": "ineco:3382455",
+  "kind": "beca",
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-24",
+  "ref": "3382455",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Participación y apoyo en el diseño y desarrollo de soluciones IoT y sistemas electrónicos conectados, colaborando en la integración de sensores, dispositivos, microcontroladores y sistemas de adquisición de datos. <br/>- Apoyo en la programación y configuración de sistemas embebidos, automatización e instrumentación, así como en la integración de dispositivos con plataformas software para la adquisición, procesamiento y explotación de información. <br/>- Participación en pruebas, prototipado y validación de soluciones tecnológicas aplicadas a entornos industriales y de infraestructuras.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Estar cursando una titulación universitaria relacionada con electrónica, automatización, telecomunicaciones, informática industrial, sistemas embebidos o ámbitos equivalentes. Grados: Ingeniería Técnica Industrial, Grado en Diseño Industrial, Grado en Electrónica y Automática, Grado en Ingeniería Eléctrica, Grado en Ingeniería Industrial, Grado en Ingeniería Mecánica, Ingeniería Industrial, Ingeniería Técnica Industrial; Master: Master en Automática y Robótica, Master en Ingeniería Eléctrica, Master en Ingeniería Industrial, Master en Ingeniería Mecánica y Otros.<br/>- Conocimientos de programación en C y/o C++.<br/>- Conocimientos de electrónica analógica y digital, instrumentación y sistemas de adquisición de datos.<br/>- Conocimientos básicos de microcontroladores y sistemas embebidos.<br/>- Conocimientos básicos de automatización y control industrial.<br/>- Conocimientos de sistemas Linux.<br/>- Interés por tecnologías IoT, sensorización, sistemas conectados, comunicaciones y tratamiento de información procedente de dispositivos.<br/>- Capacidad de aprendizaje, razonamiento técnico y trabajo en equipo.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¡En INECO apostamos por el Talento Joven!<br/>Ofrecemos la oportunidad de realizar las prácticas formativas dentro de un equipo real de trabajo, donde serás mentorizado y acompañado durante todo el proceso para tu crecimiento profesional en la empresa.<br/>Ineco tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional.<br/>Formarás parte de proyectos punteros tanto nacionales como internacionales, con un plan de desarrollo y formación personalizada. Con la oportunidad de participar en programas de formación de alto valor añadido como foros de gran relevancia, además de tener polivalencia para rotar en diferentes disciplinas, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad e igualdad de oportunidades.<br/>Somos un equipo multidisciplinar de trabajo que prioriza la innovación, orientación al logro, adaptación al cambio, flexibilidad y el trabajo en equipo.<br/>¡Únete al equipo Ineco!<br/>¡Dale un impulso a tu carrera profesional!</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29124 - Beca en IoT y Sistemas Electrónicos Conectados",
+  "status": "open",
+  "title": "Beca en IoT y Sistemas Electrónicos Conectados",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382455"
+ },
+ "3382456": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382456",
+  "category": null,
+  "closed_at": null,
+  "code": "29126",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T09:37:29+00:00",
+  "id": "ineco:3382456",
+  "kind": "beca",
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-24",
+  "ref": "3382456",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Aprendizaje y utilización de herramientas de automatización robótica de procesos (RPA). <br/>- Participación en el análisis y optimización de procesos susceptibles de automatización, diseño y desarrollo de soluciones RPA, realización de pruebas y resolución de incidencias. <br/>- Apoyo en la identificación de nuevas oportunidades de automatización y en la documentación de los procesos y soluciones desarrolladas.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Estar cursando una titulación universitaria o formación profesional relacionada con Informática, Ingeniería del Software, Telecomunicaciones, Matemáticas o ámbitos afines. Formación Profesional: Desarrollo de Aplicaciones Multiplataforma, Informática y Desarrollo de Aplicaciones Web; Grado en Ingeniería de Computadores, Grado en Ingeniería Informática, Grado en Ingeniería y Sistemas de Datos; Ingeniería Informática, Ingeniería técnica Informática; Master en Desarrollo, Master en Ingeniería del Software y Otros.<br/>- Conocimientos básicos de programación y lógica de programación.<br/>- Conocimientos básicos de bases de datos y tratamiento de información.<br/>- Capacidad de análisis y resolución de problemas.<br/>- Interés por la automatización de procesos, RPA e Inteligencia Artificial aplicada a la automatización.<br/>- Capacidad de aprendizaje y trabajo en equipo.<br/>- No se requiere experiencia previa, aunque se valorará el conocimiento de herramientas de automatización.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¡En INECO apostamos por el Talento Joven!<br/>Ofrecemos la oportunidad de realizar las prácticas formativas dentro de un equipo real de trabajo, donde serás mentorizado y acompañado durante todo el proceso para tu crecimiento profesional en la empresa.<br/>Ineco tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional.<br/>Formarás parte de proyectos punteros tanto nacionales como internacionales, con un plan de desarrollo y formación personalizada. Con la oportunidad de participar en programas de formación de alto valor añadido como foros de gran relevancia, además de tener polivalencia para rotar en diferentes disciplinas, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad e igualdad de oportunidades.<br/>Somos un equipo multidisciplinar de trabajo que prioriza la innovación, orientación al logro, adaptación al cambio, flexibilidad y el trabajo en equipo.<br/>¡Únete al equipo Ineco!<br/>¡Dale un impulso a tu carrera profesional!</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29126 - Beca Automatización Robótica de Procesos (RPA)",
+  "status": "open",
+  "title": "Beca Automatización Robótica de Procesos (RPA)",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382456"
  }
 }
