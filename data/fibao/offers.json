@@ -138,5 +138,52 @@
   "status": "open",
   "title": "Técnico/a Investigación, PESD-0009-2026, en Almería",
   "url": "https://www.fibao.es/ofertas/ficha/1508/"
+ },
+ "1509": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1509/",
+  "category": null,
+  "closed_at": null,
+  "code": "94/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T14:37:28+00:00",
+  "id": "fibao:1509",
+  "kind": null,
+  "listed_deadline": "2026-12-04",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "1509",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO e ibs.GRANADA convocan un contrato de apoyo a la investigación, en régimen de concurrencia competitiva, con dedicación a tiempo completo, vinculado al proyecto de investigación titulado “APLICACIÓN CLÍNICA DE MUCOSA PALATINA ARTIFICIAL HUMANA COMO TERAPIA AVANZADA EN NIÑOS CON FISURA PALATINA”, con nº de expediente PEMP-0017-2026, financiado por la Consejería de Presidencia, Sanidad y Emergencias, según Resolución de la Dirección General de  Investigación, Innovación y Formación por la que se conceden subvenciones, en régimen de concurrencia competitiva, para la financiación de la investigación, desarrollo e innovación (I+D+I) en biomedicina y en ciencias de la salud en Andalucía, para\r\nel año 2025-FEDER. Titulación requerida: Licenciatura o Grado en Biotecnología</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/94.__ctto_invest._formac._pemp_0017_2026(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "94/2026.- Investigador/a en formación PEMP-0017-2026",
+  "status": "open",
+  "title": "Investigador/a en formación PEMP-0017-2026",
+  "url": "https://www.fibao.es/ofertas/ficha/1509/"
  }
 }

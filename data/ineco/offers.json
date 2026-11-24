@@ -12092,7 +12092,7 @@
  "3374423": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374423",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T14:37:28+00:00",
   "code": "29013",
   "company": "Ineco",
   "contract": null,
@@ -12109,7 +12109,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Vizcaya",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -12147,7 +12147,7 @@
   ],
   "source": "ineco",
   "source_title": "29013 - Técnico/a de Edificación en Asistencia Técnica en Cliente",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Edificación en Asistencia Técnica en Cliente",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3374423"
  },
