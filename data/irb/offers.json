@@ -202,7 +202,7 @@
  "8615040": {
   "apply_url": "https://recruitment.irbbarcelona.org/jobs/8615040-research-assistant-ref-lab-26-17",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T05:07:24+00:00",
   "code": "LAB/26/17",
   "company": "IRB Barcelona",
   "contract": null,
@@ -217,7 +217,7 @@
   "kind": null,
   "listed_deadline": "2026-11-23",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -235,7 +235,7 @@
   ],
   "source": "irb",
   "source_title": "Research Assistant (Ref. LAB/26/17)",
-  "status": "open",
+  "status": "closed",
   "title": "Research Assistant",
   "url": "https://recruitment.irbbarcelona.org/jobs/8615040-research-assistant-ref-lab-26-17"
  },

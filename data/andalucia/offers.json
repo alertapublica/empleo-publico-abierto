@@ -585,7 +585,7 @@
  "693967": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693967.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T05:07:24+00:00",
   "code": "01-2026-52095",
   "company": "Agencia de Emergencias de Andalucía",
   "contract": "Duración determinada- interinidad",
@@ -602,7 +602,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-23",
   "location": "Sevilla (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-19",
   "parent_ref": null,
   "place": null,
@@ -635,7 +635,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "AUXILIAR GESTIÓN",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/693967.html"
  },

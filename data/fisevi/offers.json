@@ -173,7 +173,7 @@
  "18589": {
   "apply_url": "https://fisevi.com/grado-en-nutricion-humana-y-dietetica-nivel-2-meces-grado-ref-301-26-huvm/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T05:07:24+00:00",
   "code": "301/26 HUVM",
   "company": "FISEVI",
   "contract": "Contrato indefinido de actividades científico-técnicas (art. 23 bis de la Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación)",
@@ -190,7 +190,7 @@
   "kind": null,
   "listed_deadline": "2026-11-23",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -202,14 +202,14 @@
   "sections": [],
   "source": "fisevi",
   "source_title": "Grado en Nutrición Humana y Dietética (NIVEL 2 MECES: GRADO) REF: 301/26 HUVM",
-  "status": "open",
+  "status": "closed",
   "title": "Grado en Nutrición Humana y Dietética (NIVEL 2 MECES: GRADO)",
   "url": "https://fisevi.com/grado-en-nutricion-humana-y-dietetica-nivel-2-meces-grado-ref-301-26-huvm/"
  },
  "18590": {
   "apply_url": "https://fisevi.com/licenciatura-o-grado-en-biologia-bioquimica-biotecnologia-o-farmacia-nivel-2-meces-grado-minimo-ref-302-26-ibis/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T05:07:24+00:00",
   "code": "302/26 IBiS",
   "company": "FISEVI",
   "contract": "Contrato indefinido de actividades científico-técnicas (art. 23 bis de la Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación)",
@@ -226,7 +226,7 @@
   "kind": null,
   "listed_deadline": "2026-11-23",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -238,7 +238,7 @@
   "sections": [],
   "source": "fisevi",
   "source_title": "Licenciatura o Grado en Biología, Bioquímica, Biotecnología o Farmacia (NIVEL 2 MECES: GRADO, mínimo) REF: 302/26 IBiS",
-  "status": "open",
+  "status": "closed",
   "title": "Licenciatura o Grado en Biología, Bioquímica, Biotecnología o Farmacia (NIVEL 2 MECES: GRADO, mínimo)",
   "url": "https://fisevi.com/licenciatura-o-grado-en-biologia-bioquimica-biotecnologia-o-farmacia-nivel-2-meces-grado-minimo-ref-302-26-ibis/"
  }

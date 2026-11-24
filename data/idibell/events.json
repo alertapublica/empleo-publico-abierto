@@ -353,5 +353,15 @@
   "before": "2026-11-25",
   "kind": "deadline_changed",
   "offer": "idibell:2325"
+ },
+ {
+  "at": "2026-11-24T05:07:24+00:00",
+  "kind": "closed",
+  "offer": "idibell:2321"
+ },
+ {
+  "at": "2026-11-24T05:07:24+00:00",
+  "kind": "closed",
+  "offer": "idibell:2322"
  }
 ]
