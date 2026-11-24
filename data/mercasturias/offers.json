@@ -1,1 +1,49 @@
-{}
+{
+ "https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf": {
+  "apply_url": "https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Mercasturias",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T11:37:37+00:00",
+  "id": "mercasturias:https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-10",
+  "location": "Llanera",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf",
+  "region": "Asturias",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf\">Cobertura de puesto de trabajo Operario/a de limpieza, jardinería y conservación</a> (publicado el 24/11/2026)</li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   },
+   {
+    "html": "<p>Las bases, en la web oficial, explican cómo presentar la candidatura (por correo electrónico) y qué documentación acompañar.</p>",
+    "level": 2,
+    "title": "Cómo presentar la candidatura"
+   }
+  ],
+  "source": "mercasturias",
+  "source_title": null,
+  "status": "open",
+  "title": "Operario/a de limpieza, jardinería y conservación",
+  "url": "https://mercasturias.com/ofertas_empleo/BASES_DE_LA_CONVOCATORIA_DEL_PROCESO_SELECTIVO_DICIEMBRE_2026.pdf"
+ }
+}
