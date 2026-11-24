@@ -112,6 +112,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/17",
   "via": "otro"
  },
+ "emacsa:6134c5d9a921": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-24",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-24T13:37:27+00:00",
+  "location": null,
+  "process": "Titulado/a de Grado Medio del área de operaciones",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/18",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Celebración del ejercicio teórico del proceso selectivo",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/18",
+  "via": "otro"
+ },
  "emacsa:63b3a1aa3e4d": {
   "access": null,
   "apply_url": null,

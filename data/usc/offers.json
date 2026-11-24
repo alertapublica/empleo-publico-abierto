@@ -1,1 +1,51 @@
-{}
+{
+ "convocatoria-publica-ordinaria-142026-contratracion-persoal-colaborar-actividades-proxectos-investigacion": {
+  "apply_url": "https://sede.usc.es/formularios/solicitudes/contratacion.htm",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Universidade de Santiago de Compostela",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T13:37:27+00:00",
+  "id": "usc:convocatoria-publica-ordinaria-142026-contratracion-persoal-colaborar-actividades-proxectos-investigacion",
+  "kind": null,
+  "listed_deadline": "2026-12-01",
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "convocatoria-publica-ordinaria-142026-contratracion-persoal-colaborar-actividades-proxectos-investigacion",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>O obxecto da presente convocatoria é a selección de persoal para colaborar nas actividades e proxectos de investigación que figuran no anexo da presente convocatoria.</p>\n\n<p>O persoal contratado colaborará e traballará especifica e unicamente na actividade ou proxecto de investigación para o que é contratado, que é de carácter finalista e en todo caso non estrutural, mediante o financiamento externo a través da participación en convocatorias públicas ou privadas, subscrición de convenios, concesión de subvencións, etc., sen prexuízo do establecido na Lei 53/1984, do 26 de decembro, de incompatibilidades do persoal ao Servizo das administracións públicas.</p>\n\n<p>A forma de provisión será a de concurso de méritos, a través da valoración dos criterios de baremación establecidos para cada praza.</p>",
+    "lang": "gl",
+    "level": 2,
+    "title": "La convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://assets.usc.gal/sites/default/files/rd/2026-11/convocatoria-14-2026.pdf\">Convocatoria ordinaria. Data publicación: 24/11/2026. O prazo de presentación de solicitudes dende o 25/11/2026 ata o 01/12/2026</a></li></ul>",
+    "lang": "gl",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "usc",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria Pública Ordinaria 14/2026 de contratración de persoal para colaborar nas actividades e proxectos de investigación",
+  "url": "https://www.usc.gal/gl/investigar-na-usc/convocatorias/convocatoria-publica-ordinaria-142026-contratracion-persoal-colaborar-actividades-proxectos-investigacion"
+ }
+}
