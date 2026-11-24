@@ -35,5 +35,12 @@
   "at": "2026-11-20T11:07:25+00:00",
   "kind": "closed",
   "offer": "apb:responsable-tecnic-en-sostenibilitat-ambiental"
+ },
+ {
+  "after": "2026-12-10",
+  "at": "2026-11-24T16:07:29+00:00",
+  "before": "2026-11-25",
+  "kind": "deadline_changed",
+  "offer": "apb:responsable-d-ordenacio-i-gestio-grafica-del-domini-public"
  }
 ]
