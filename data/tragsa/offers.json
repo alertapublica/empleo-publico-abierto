@@ -19647,12 +19647,12 @@
  "58514": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58514",
   "category": "Específica",
-  "closed_at": "2026-11-19T05:07:26+00:00",
+  "closed_at": null,
   "code": "58514",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-18",
-  "deadline_time": "23:59",
+  "deadline": "2026-12-10",
+  "deadline_time": null,
   "department": "Cádiz",
   "detail_ok": true,
   "detail_version": 3,
@@ -19660,9 +19660,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58514",
   "kind": "temporal",
-  "listed_deadline": "2026-11-18",
+  "listed_deadline": "2026-12-10",
   "location": "Ceuta",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": "2026-11-04",
   "parent_ref": null,
   "place": "Ceuta",
@@ -19673,7 +19673,7 @@
   "region": "Ceuta",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para obras en Ceuta.</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Ingeniero/a de Caminos, Canales y Puertos - Obras (Ceuta) en Ceuta. En relación al proceso publicado el pasado 04/11/2026 se amplía el plazo de recepción de candidaturas desde el 24/11/2026 hasta el 10/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -19733,14 +19733,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>SE OFRECE:<br/><br/>Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/><br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 04/11/2026 hasta el próximo 18/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf.</li></ul>",
+    "html": "<ul><li>SE OFRECE:<br/><br/>Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/><br/><br/> En relación al proceso publicado el pasado 04/11/2026 se amplía el plazo de recepción de candidaturas desde el 24/11/2026 hasta el 10/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf.</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Caminos, Canales y Puertos - Obras (Ceuta)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58514"
  },
