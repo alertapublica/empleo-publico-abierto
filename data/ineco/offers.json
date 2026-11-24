@@ -4156,7 +4156,7 @@
  "3283219": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3283219",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-24T11:07:27+00:00",
   "code": "28126",
   "company": "Ineco",
   "contract": null,
@@ -4173,7 +4173,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Málaga",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -4211,7 +4211,7 @@
   ],
   "source": "ineco",
   "source_title": "28126 - Técnico/a Experto/a en Semiconductores",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a Experto/a en Semiconductores",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3283219"
  },

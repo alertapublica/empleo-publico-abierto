@@ -1,16 +1,16 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 98,
+  "lecturas": 99,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 80,
+  "lecturas": 81,
   "resultado": "error"
  },
- "fgv": {
-  "desde": "2026-11-24T10:37:27+00:00",
+ "sepi": {
+  "desde": "2026-11-24T11:07:27+00:00",
   "lecturas": 1,
   "resultado": "error"
  }
