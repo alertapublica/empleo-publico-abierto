@@ -181,5 +181,52 @@
   "status": "open",
   "title": "Tècnic/a Jurídic/a Protecció de Dades",
   "url": "https://www.tmb.cat/ca/w/oferta-10246-tecnic-jur%C3%ADdic-protecci%C3%B3-dades"
+ },
+ "10254": {
+  "apply_url": "https://www.tmb.cat/ca/w/oferta-10254-operaris-material-mobil",
+  "category": null,
+  "closed_at": null,
+  "code": "10254",
+  "company": "TMB",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-24T06:37:24+00:00",
+  "id": "tmb:10254",
+  "kind": null,
+  "listed_deadline": "2026-12-04",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 7,
+  "published_on": null,
+  "ref": "10254",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p><strong>Convocatòria</strong>: realització d’un procés de selecció per oposició, per a la cobertura de <strong>7 places + 20 reserves d’operaris/àries de material mòbil</strong>, amb categoria d’operari de manteniment de material mòbil, de la direcció de Material Mòbil adscrita a la Direcció Xarxa de Metro de Barcelona.</p>\n<p>Fins que es faci efectiva la vacant indefinida, a la persona que hagi estat seleccionada per aquesta plaça de reserva, se li podrà oferir un contracte per a cobrir necessitats temporals.</p>\n<p><strong>Requisits de participació:</strong></p>\n<ul>\n<li><strong>Titulació acadèmica</strong>:  titulació mínima, oficial i finalitzada <strong>FPII/Cicle Formatiu Grau Superior</strong> en les següents famílies professionals: \n<ul>\n<li>Electricitat i electrònica. </li>\n<li>Instal·lació i manteniment. </li>\n<li>Fabricació Mecànica. </li>\n<li>Transport i manteniment de vehicles </li>\n</ul>\n</li>\n</ul>\n\n<p><strong>O bé:</strong></p>\n<p> el CFGM en tècnic en manteniment de material rodant ferroviari (finalitzat i homologat) i una experiència mínima de <strong>6 mesos</strong> en tasques de manteniment fins a la data de recepció de candidatures.</p>\n<ul>\n<li> Disposar de <strong>carnet de conduir, permís B</strong>: mínim </li>\n</ul>\n<p><strong>Documents per a la inscripció (tot en un únic document PDF):</strong></p>\n<ul>\n<li>Document d’identitat</li>\n<li>Currículum Vitae actualitzat amb el detall de l’experiència professional </li>\n<li>Fotocòpia de la titulació acadèmica requerida.</li>\n<li>Fotocòpia del carnet de conduir permís B</li>\n</ul>",
+    "level": 2,
+    "title": "Descripció"
+   },
+   {
+    "html": "<p><a href=\"https://www.tmb.cat/documents/20182/2104427/Bases+Operaris+MM+10254.pdf/652c662d-6dea-1038-3fb3-62322b7ad999?t=1795450109025\">Bases de la convocatoria (PDF)</a></p>",
+    "level": 2,
+    "title": "Bases de la convocatòria"
+   }
+  ],
+  "source": "tmb",
+  "source_title": null,
+  "status": "open",
+  "title": "Oferta 10254 Operaris/es Material Mòbil",
+  "url": "https://www.tmb.cat/ca/w/oferta-10254-operaris-material-mobil"
  }
 }
