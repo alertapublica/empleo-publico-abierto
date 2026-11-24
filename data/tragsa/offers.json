@@ -34413,6 +34413,98 @@
   "title": "Ingeniería Superior o Grado/Ingeniería técnica + Máster – Proyectos Emergencia (Paterna, Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58782"
  },
+ "58784": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58784",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58784",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sevilla",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-24T07:07:24+00:00",
+  "id": "tragsa:58784",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-10",
+  "location": "Sevilla",
+  "missed_runs": 0,
+  "opens_on": "2026-11-24",
+  "parent_ref": null,
+  "place": "Sevilla",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-24",
+  "ref": "58784",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Licenciado/a en Derecho o Graduado/a con Máster Oficial en Derecho o Derecho Administrativo y de la Administración Pública - Apoyo jurídico promoción sostenibilidad en Sevilla.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sevilla</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo técnico a la tramitación administrativa de nuevas actuaciones de promoción de la sostenibilidad, incluyendo la redacción de Pliegos de Cláusulas Administrativas, memorias e informes de precios.</li><li>Identificación de financiación europea para la ejecución de dichas iniciativas, asegurando su alineación normativa para la justificación de la elegibilidad.</li><li>Apoyo jurídico-administrativo en la gestión y resolución de subvenciones cofinanciadas con fondos europeos.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Licenciatura en Derecho o Grado + Máster Universitario en Derecho o en Derecho Administrativo y de la Administración Pública (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaria General de Universidades).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Licenciatura en Derecho o Grado + Máster Universitario en Derecho o en Derecho Administrativo y de la Administración Pública (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaria General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Licenciatura en Derecho o Grado + Máster Universitario en Derecho o en Derecho Administrativo y de la Administración Pública (Nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaria General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en materias relacionadas con el sector público (procedimiento administrativo, contratos del sector público, auditoría pública, etc) acreditada igual o superior a 300 horas. (Anexar certificado de formación)</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 5 años de experiencia en trabajos relacionados con la programación, el seguimiento, la gestión de actuaciones cofinanciadas con fondos europeos en el ámbito de la Administración Pública. (Especificar en cv y anexar vida laboral)</li><li>Desde 6 meses Hasta 5 años de experiencia en trabajos relacionados con la tramitación de expedientes de contratación pública o subvenciones en el ámbito de la Administración Ambiental Pública. (Especificar en cv y anexar vida laboral)</li><li>Desde 6 meses Hasta 3 años de experiencia en tramitación, gestión y seguimiento de subvenciones. (Especificar en cv)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en materias relacionadas con el sector público (procedimiento administrativo, contratos del sector público, auditoría pública, etc) acreditada igual o superior a 300 horas. (Anexar certificado de formación)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en materias relacionadas con el sector público (procedimiento administrativo, contratos del sector público, auditoría pública, etc) acreditada igual o superior a 300 horas. (Anexar certificado de formación)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 5 años de experiencia en trabajos relacionados con la programación, el seguimiento, la gestión de actuaciones cofinanciadas con fondos europeos en el ámbito de la Administración Pública. (Especificar en cv y anexar vida laboral)</li><li>Desde 6 meses Hasta 5 años de experiencia en trabajos relacionados con la tramitación de expedientes de contratación pública o subvenciones en el ámbito de la Administración Ambiental Pública. (Especificar en cv y anexar vida laboral)</li><li>Desde 6 meses Hasta 3 años de experiencia en tramitación, gestión y seguimiento de subvenciones. (Especificar en cv)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>- Contrato de duración determinada con una duración estimada de 12 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resilencia o con financiación que provenga de Fondos de la Unión Europea. <br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 24/11/2026 hasta el próximo 10/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a en Derecho o Graduado/a con Máster Oficial en Derecho o Derecho Administrativo y de la Administración Pública - Apoyo jurídico promoción sostenibilidad (Sevilla)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58784"
+ },
  "58786": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58786",
   "category": "Específica",
