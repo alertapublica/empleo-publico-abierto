@@ -1,22 +1,82 @@
 {
  "ccma": {
   "desde": "2026-11-24T14:07:23+00:00",
-  "lecturas": 12,
+  "lecturas": 13,
+  "resultado": "error"
+ },
+ "cetarsa": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "cimus": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "ciqus": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "cofivacasa": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 116,
+  "lecturas": 117,
+  "resultado": "error"
+ },
+ "etsa": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 98,
+  "lecturas": 99,
+  "resultado": "error"
+ },
+ "fgv": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "fisevi": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "gesplan": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "iisgm": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepi": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepides": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "uji": {
   "desde": "2026-11-24T12:07:29+00:00",
-  "lecturas": 16,
+  "lecturas": 17,
+  "resultado": "error"
+ },
+ "uvigo": {
+  "desde": "2026-11-25T06:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
