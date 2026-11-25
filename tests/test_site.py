@@ -262,24 +262,35 @@ class Site(unittest.TestCase):
         self.assertIn('href="../datos/"', acerca)
         self.assertIn('href="../datos/"', self.read("avisos/index.html"))
 
-    def test_menu_con_acerca_y_accesibilidad_en_el_pie(self):
+    def test_menu_corto_y_procesos_y_acerca_en_el_pie(self):
         html = self.read("index.html")
         nav = html.split('id="nav-principal"')[1].split("</nav>")[0]
-        self.assertEqual(nav.count("<li>"), 7)
-        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Investigación, Becas y Procesos tras Ofertas; Histórico, en el pie
-        self.assertEqual(labels, ["Ofertas", "Investigación", "Becas", "Procesos", "Organismos", "Avisos", "Acerca de"])
-        self.assertIn(">Procesos</a>", nav)
-        self.assertIn('<a href="acerca/">Acerca de</a>', nav)
-        self.assertIn('aria-current="page">Acerca de</a>', self.read("acerca/index.html").split("</nav>")[0])
+        self.assertEqual(nav.count("<li>"), 5)
+        labels = re.findall(r"<a [^>]*>([^<]+)</a>", nav)  # Procesos y Acerca de, en el pie (#129)
+        self.assertEqual(labels, ["Ofertas", "Investigación", "Becas", "Organismos", "Avisos"])
         # La marca enlaza a la portada con el nombre como texto (en móvil, oculto a la vista: solo el logo).
         self.assertIn(f'alt="" width="28" height="28"><span class="marca-texto">{site.SITE_NAME}</span></a>', html)
         footer = html.split('<footer')[1]
-        self.assertNotIn("Acerca de", footer)
-        self.assertIn('<a href="accesibilidad/">Accesibilidad</a>', footer)
-        self.assertIn('<a href="historico/">Histórico</a>', footer)
-        self.assertIn('aria-current="page">Histórico</a>', self.read("historico/index.html").split("<footer")[1])
-        self.assertIn('aria-current="page">Accesibilidad</a>', self.read("accesibilidad/index.html").split("<footer")[1])
-        self.assertIn("accesibilidad/", self.read("sitemap.xml"))
+        pie = footer.split('<nav class="pie" aria-label="Pie de página">')[1].split("</nav>")[0]
+        self.assertEqual(re.findall(r"<h2>([^<]+)</h2>", pie), ["Procesos y archivo", "Sobre el portal"])
+        self.assertEqual(re.findall(r"<a [^>]*>([^<]+)</a>", pie), [
+            "Procesos en marcha", "Histórico", "Acerca de", "Datos abiertos", "Accesibilidad",
+            "Aviso legal y privacidad", "Contacto", "Código fuente en GitHub"])
+        self.assertIn('<a href="anuncios/">Procesos en marcha</a>', pie)
+        self.assertIn(f'<a href="{site.REPO}">Código fuente en GitHub</a>', pie)
+        # Enlaces antes del lema y de la fecha de consulta.
+        self.assertLess(footer.index('class="pie"'), footer.index(site.DISCLAIMER))
+        for path, label in (("historico/index.html", "Histórico"), ("accesibilidad/index.html", "Accesibilidad"),
+                            ("anuncios/index.html", "Procesos en marcha"), ("acerca/index.html", "Acerca de")):
+            self.assertIn(f'aria-current="page">{label}</a>', self.read(path).split("<footer")[1])
+        # Las anclas de Acerca de no marcan la página actual.
+        acerca = self.read("acerca/index.html").split("<footer")[1]
+        self.assertEqual(acerca.count('aria-current="page"'), 1)
+        sitemap = self.read("sitemap.xml")
+        for href in ("accesibilidad/", "anuncios/", "acerca/"):
+            self.assertIn(href, sitemap)
+        self.assertNotIn("#", sitemap)
+        self.assertNotIn("github.com", sitemap)
         # Los controles van antes del menú: abierto en móvil, el foco pasa del botón a sus enlaces.
         self.assertLess(html.index('id="btn-menu"'), html.index('id="nav-principal"'))
 

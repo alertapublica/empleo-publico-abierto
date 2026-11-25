@@ -78,16 +78,25 @@ NAV = [
     ("index", "", "Ofertas"),
     ("investigacion", "investigacion/", "Investigación"),
     ("becas", "becas/", "Becas"),
-    ("anuncios", "anuncios/", "Procesos"),
     ("organismos", "organismos/", "Organismos"),
     ("avisos", "avisos/", "Avisos"),
-    ("acerca", "acerca/", "Acerca de"),
 ]
-# En el pie. Accesibilidad se enlaza también desde el diálogo de apariencia.
+# En el pie, por grupos. Los procesos en marcha casi nunca admiten inscripción: los abiertos salen en la
+# portada (#129). Sin clave, las anclas y los enlaces externos: no marcan la página actual ni van al sitemap.
+# Accesibilidad se enlaza también desde el diálogo de apariencia.
 FOOTER_NAV = [
-    ("historico", "historico/", "Histórico"),
-    ("accesibilidad", "accesibilidad/", "Accesibilidad"),
-    ("datos", "datos/", "Datos abiertos"),
+    ("Procesos y archivo", [
+        ("anuncios", "anuncios/", "Procesos en marcha"),
+        ("historico", "historico/", "Histórico"),
+    ]),
+    ("Sobre el portal", [
+        ("acerca", "acerca/", "Acerca de"),
+        ("datos", "datos/", "Datos abiertos"),
+        ("accesibilidad", "accesibilidad/", "Accesibilidad"),
+        ("", "acerca/#quien", "Aviso legal y privacidad"),
+        ("", "acerca/#contacto", "Contacto"),
+        ("", REPO, "Código fuente en GitHub"),
+    ]),
 ]
 
 
@@ -255,9 +264,13 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
         f'<li><a href="{root}{href}"{" aria-current=\"page\"" if key == current else ""}>{label}</a></li>'
         for key, href, label in NAV
     )
-    footer_links = "".join(
-        f'<a href="{root}{href}"{" aria-current=\"page\"" if key == current else ""}>{label}</a> · '
-        for key, href, label in FOOTER_NAV
+    footer_groups = "".join(
+        f'<div><h2>{title}</h2><ul>' + "".join(
+            f'<li><a href="{href if href.startswith("https:") else root + href}"'
+            f'{" aria-current=\"page\"" if key and key == current else ""}>{label}</a></li>'
+            for key, href, label in items
+        ) + "</ul></div>"
+        for title, items in FOOTER_NAV
     )
     full_title = title if title == SITE_NAME else f"{title} · {SITE_NAME}"
     stamp = f"<p>Última consulta a las webs oficiales: {e(checked)}.</p>" if checked else ""
@@ -298,9 +311,9 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 </main>
 <footer class="sitio"><div class="ancho">
 <p class="subir"><a href="#arriba">Volver arriba</a></p>
+<nav class="pie" aria-label="Pie de página">{footer_groups}</nav>
 <p>{TAGLINE}. {DISCLAIMER}</p>
 {stamp}
-<p>{footer_links}<a href="{root}acerca/#quien">Aviso legal y privacidad</a> · <a href="{REPO}">Código fuente en GitHub</a></p>
 </div></footer>
 <a class="subir-flotante" id="subir-flotante" href="#arriba" hidden><span aria-hidden="true">↑</span> Arriba</a>
 {settings_dialog(root)}
@@ -994,7 +1007,7 @@ def organism_page(source, open_offers: list[dict], today: date, checked: str,
         process_cards = "\n".join(process_card(g, names, today, root, level=3) for g in processes)
         running = f"""<section class="procesos" aria-labelledby="procesos-titulo">
 <h2 id="procesos-titulo">{running_count(len(processes)).capitalize()}</h2>
-<p class="dato">Procesos selectivos convocados y sus comunicados. <a href="{root}anuncios/?organismo={e(source.id)}">Ver en la sección Procesos</a>.</p>
+<p class="dato">Procesos selectivos convocados y sus comunicados. <a href="{root}anuncios/?organismo={e(source.id)}">Ver en Procesos en marcha</a>.</p>
 <ol class="ofertas">
 {process_cards}
 </ol>
@@ -1348,7 +1361,7 @@ def alerts_page(region_feeds: list, organism_feeds: list, checked: str, bot: str
 <li>«Ofertas que mencionan el teletrabajo» incluye las ofertas cuya ficha lo menciona. Las ofertas sin texto en la ficha no pueden comprobarse.</li>
 <li>Cada oferta aparece cuando este portal la detecta y de nuevo si cambia el plazo o el número de plazas, o si se reabre o se vuelve a publicar. Las ofertas que ya se han cerrado dejan de aparecer.</li>
 <li>Algunos organismos publican ofertas de varias entidades: bajo su nombre puede seguirse una sola de ellas.</li>
-<li>En <a href="../anuncios/">Procesos</a>, cada proceso en marcha dispone además de su propia lista.</li>
+<li>En <a href="../anuncios/">Procesos en marcha</a>, cada proceso dispone además de su propia lista.</li>
 </ul>
 <h3>Listas generales</h3>
 {feed_list([("Todas las novedades", "feed.xml"), ("Solo anuncios de procesos", "feeds/anuncios.xml"),
@@ -1428,9 +1441,9 @@ def about_page(sources: dict, checked: str, bot: str = "", base_url: str = DEFAU
 <li><strong>Sin resultados:</strong> si ninguna oferta abierta coincide, el portal ofrece buscar el mismo término en los procesos selectivos y en la otra lista de ofertas (la portada o Investigación).</li>
 <li><strong>Enlace a la búsqueda:</strong> la dirección de la página conserva la búsqueda y los filtros. Si la guarda en marcadores o la comparte, se abrirá con los mismos criterios.</li>
 </ul>
-<p>Los buscadores de <a href="../anuncios/">Procesos</a> y del <a href="../historico/">Histórico</a> funcionan del mismo modo.</p>
+<p>Los buscadores de <a href="../anuncios/">Procesos en marcha</a> y del <a href="../historico/">Histórico</a> funcionan del mismo modo.</p>
 <h2 id="guardar">Guardar ofertas y procesos</h2>
-<p>El botón «Guardar» de cada oferta o proceso lo añade a su selección. Al guardar el primero aparece el filtro «Guardadas» («Guardados» en Procesos), que muestra solo los seleccionados. Si una oferta se cierra o un proceso deja de estar en marcha, se indica en ese apartado, con su enlace y la opción de quitarlo.</p>
+<p>El botón «Guardar» de cada oferta o proceso lo añade a su selección. Al guardar el primero aparece el filtro «Guardadas» («Guardados» en Procesos en marcha), que muestra solo los seleccionados. Si una oferta se cierra o un proceso deja de estar en marcha, se indica en ese apartado, con su enlace y la opción de quitarlo.</p>
 <p>Lo guardado se conserva solo en este navegador: no se sincroniza con otros dispositivos ni navegadores y se pierde si se borran los datos de este sitio web.</p>
 <h2 id="avisos">Avisos</h2>
 <p>Muchas de estas webs no permiten suscribirse ni recibir alertas. Este portal ofrece avisos de todas ellas {via}:</p>
@@ -2001,7 +2014,8 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
     put("datos/", open_data_page(checked, files, f"{long_date(generated.date().isoformat())} a las {generated:%H:%M}",
                                  base_url))
     pages = (
-        [""] + [href for _, href, _ in NAV + FOOTER_NAV if href] + ["historico/procesos/"]
+        [""] + [href for _, href, _ in NAV if href]
+        + [href for _, items in FOOTER_NAV for key, href, _ in items if key] + ["historico/procesos/"]
         + [f"organismos/{s.id}/" for s in ACTIVE]
         # Las cerradas, y las de plazo vencido aún sin cerrar, siguen publicadas, pero no se anuncian.
         + [offer_path(o) for o in open_offers if not expired(o, now)]
