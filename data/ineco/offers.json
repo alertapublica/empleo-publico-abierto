@@ -7876,7 +7876,7 @@
  "3334175": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334175",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T09:07:29+00:00",
   "code": "28711",
   "company": "Ineco",
   "contract": null,
@@ -7893,7 +7893,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Barcelona",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -7931,7 +7931,7 @@
   ],
   "source": "ineco",
   "source_title": "28711- Técnico/a de Material Rodante Ferroviario",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Material Rodante Ferroviario",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334175"
  },
