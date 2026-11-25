@@ -10046,7 +10046,7 @@
  "3366328": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366328",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T17:37:26+00:00",
   "code": "28968",
   "company": "Ineco",
   "contract": null,
@@ -10063,7 +10063,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -10101,7 +10101,7 @@
   ],
   "source": "ineco",
   "source_title": "28968 - Técnico/a en diseño de instalaciones de suministro de energía",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a en diseño de instalaciones de suministro de energía",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3366328"
  },
