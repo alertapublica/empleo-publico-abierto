@@ -1077,8 +1077,10 @@ def process_card(notices: list[dict], names: dict, today: date, root: str, feed:
         SYSTEMS.get(latest.get("system"), ""),
     ]
     if state == "abierto":
-        status = (f'<p class="plazo"><strong>Inscripción abierta.</strong> {deadline_text(latest, today)} · '
-                  f'<a href="{e(latest["apply_url"])}">Inscribirse en la plataforma oficial</a></p>')
+        # Sin enlace de inscripción (CESCE «Abierta» sin plazo legible en el PDF) no se inventa uno.
+        apply = latest.get("apply_url")
+        link = f' · <a href="{e(apply)}">Inscribirse en la plataforma oficial</a>' if apply else ""
+        status = f'<p class="plazo"><strong>Inscripción abierta.</strong> {deadline_text(latest, today)}{link}</p>'
     else:
         status = f'<p class="dato">Situación: {e(STATES[state])}</p>'
     older = ""
