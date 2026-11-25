@@ -90,5 +90,10 @@
   "before": "2026-11-22",
   "kind": "deadline_changed",
   "offer": "iisgm:137"
+ },
+ {
+  "at": "2026-11-25T08:37:32+00:00",
+  "kind": "new",
+  "offer": "iisgm:141"
  }
 ]
