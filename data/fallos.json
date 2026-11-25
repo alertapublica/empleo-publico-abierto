@@ -1,11 +1,11 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 134,
+  "lecturas": 135,
   "resultado": "error"
  },
- "usc": {
-  "desde": "2026-11-25T15:07:28+00:00",
+ "enusa": {
+  "desde": "2026-11-25T15:37:26+00:00",
   "lecturas": 1,
   "resultado": "error"
  }

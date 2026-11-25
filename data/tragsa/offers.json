@@ -30386,11 +30386,11 @@
  "58683": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58683",
   "category": "Específica",
-  "closed_at": "2026-11-25T05:07:23+00:00",
+  "closed_at": null,
   "code": "58683",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-24",
+  "deadline": "2026-12-07",
   "deadline_time": null,
   "department": "Islas Baleares",
   "detail_ok": true,
@@ -30399,9 +30399,9 @@
   "first_seen": "2026-11-10T08:07:27+00:00",
   "id": "tragsa:58683",
   "kind": "temporal",
-  "listed_deadline": "2026-11-24",
+  "listed_deadline": "2026-12-07",
   "location": "Mallorca",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Mallorca - Baleares",
@@ -30412,7 +30412,7 @@
   "region": "Illes Balears",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 12 Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares)</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 12 Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares) en Mallorca. En relación al proceso publicado el pasado 18/11/2026 se amplía el plazo de recepción de candidaturas desde el 25/11/2026 hasta el 07/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -30462,14 +30462,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde el día 10/11/2026 hasta el próximo 24/11/2026 a las 23:59h (hora peninsular).<br/><br/>SE OFRECE:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa 37,5h <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>En relación al proceso publicado el pasado 18/11/2026 se amplía el plazo de recepción de candidaturas desde el 25/11/2026 hasta el 07/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa 37,5h <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58683"
  },
