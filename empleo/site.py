@@ -81,21 +81,22 @@ NAV = [
     ("organismos", "organismos/", "Organismos"),
     ("avisos", "avisos/", "Avisos"),
 ]
-# En el pie, por grupos. Los procesos en marcha casi nunca admiten inscripción: los abiertos salen en la
-# portada (#129). Sin clave, las anclas y los enlaces externos: no marcan la página actual ni van al sitemap.
-# Accesibilidad se enlaza también desde el diálogo de apariencia.
+# En el pie, en dos franjas (clase de la lista, enlaces): arriba y destacados, los procesos y el histórico, que
+# son contenido; debajo, lo del portal. Los procesos en marcha casi nunca admiten inscripción: los abiertos salen
+# en la portada (#129). Sin clave, las anclas y los enlaces externos: no marcan la página actual ni van al
+# sitemap. Accesibilidad se enlaza también desde el diálogo de apariencia.
 FOOTER_NAV = [
-    ("Procesos y archivo", [
+    ("pie-destacados", [
         ("anuncios", "anuncios/", "Procesos en marcha"),
         ("historico", "historico/", "Histórico"),
     ]),
-    ("Sobre el portal", [
+    ("pie-portal", [
         ("acerca", "acerca/", "Acerca de"),
         ("datos", "datos/", "Datos abiertos"),
         ("accesibilidad", "accesibilidad/", "Accesibilidad"),
         ("", "acerca/#quien", "Aviso legal y privacidad"),
         ("", "acerca/#contacto", "Contacto"),
-        ("", REPO, "Código fuente en GitHub"),
+        ("", REPO, "Código fuente"),
     ]),
 ]
 
@@ -265,15 +266,15 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
         for key, href, label in NAV
     )
     footer_groups = "".join(
-        f'<div><h2>{title}</h2><ul>' + "".join(
+        f'<ul class="{group}">' + "".join(
             f'<li><a href="{href if href.startswith("https:") else root + href}"'
             f'{" aria-current=\"page\"" if key and key == current else ""}>{label}</a></li>'
             for key, href, label in items
-        ) + "</ul></div>"
-        for title, items in FOOTER_NAV
+        ) + "</ul>"
+        for group, items in FOOTER_NAV
     )
     full_title = title if title == SITE_NAME else f"{title} · {SITE_NAME}"
-    stamp = f"<p>Última consulta a las webs oficiales: {e(checked)}.</p>" if checked else ""
+    stamp = f"<p>Última consulta: {e(checked)}.</p>" if checked else ""
     return f"""<!doctype html>
 <html lang="es">
 <head>
@@ -312,7 +313,7 @@ def page(title: str, body: str, root: str, current: str = "", description: str =
 <footer class="sitio"><div class="ancho">
 <p class="subir"><a href="#arriba">Volver arriba</a></p>
 <nav class="pie" aria-label="Pie de página">{footer_groups}</nav>
-<p>{TAGLINE}. {DISCLAIMER}</p>
+<p>{DISCLAIMER}</p>
 {stamp}
 </div></footer>
 <a class="subir-flotante" id="subir-flotante" href="#arriba" hidden><span aria-hidden="true">↑</span> Arriba</a>

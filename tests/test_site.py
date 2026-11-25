@@ -272,14 +272,18 @@ class Site(unittest.TestCase):
         self.assertIn(f'alt="" width="28" height="28"><span class="marca-texto">{site.SITE_NAME}</span></a>', html)
         footer = html.split('<footer')[1]
         pie = footer.split('<nav class="pie" aria-label="Pie de página">')[1].split("</nav>")[0]
-        self.assertEqual(re.findall(r"<h2>([^<]+)</h2>", pie), ["Procesos y archivo", "Sobre el portal"])
+        # Dos franjas sin títulos: arriba, procesos e histórico; debajo, lo del portal.
+        self.assertEqual(re.findall(r'<ul class="([^"]+)">', pie), ["pie-destacados", "pie-portal"])
         self.assertEqual(re.findall(r"<a [^>]*>([^<]+)</a>", pie), [
             "Procesos en marcha", "Histórico", "Acerca de", "Datos abiertos", "Accesibilidad",
-            "Aviso legal y privacidad", "Contacto", "Código fuente en GitHub"])
+            "Aviso legal y privacidad", "Contacto", "Código fuente"])
         self.assertIn('<a href="anuncios/">Procesos en marcha</a>', pie)
-        self.assertIn(f'<a href="{site.REPO}">Código fuente en GitHub</a>', pie)
-        # Enlaces antes del lema y de la fecha de consulta.
+        self.assertIn(f'<a href="{site.REPO}">Código fuente</a>', pie)
+        # «Volver arriba», los enlaces, el aviso y la fecha de consulta; sin el lema.
+        self.assertLess(footer.index("Volver arriba"), footer.index('class="pie"'))
         self.assertLess(footer.index('class="pie"'), footer.index(site.DISCLAIMER))
+        self.assertLess(footer.index(site.DISCLAIMER), footer.index("<p>Última consulta: "))
+        self.assertNotIn(site.TAGLINE, footer)
         for path, label in (("historico/index.html", "Histórico"), ("accesibilidad/index.html", "Accesibilidad"),
                             ("anuncios/index.html", "Procesos en marcha"), ("acerca/index.html", "Acerca de")):
             self.assertIn(f'aria-current="page">{label}</a>', self.read(path).split("<footer")[1])
