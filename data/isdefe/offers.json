@@ -1560,5 +1560,47 @@
   "status": "open",
   "title": "Ingeniero/a de administración digital para la seguridad",
   "url": "https://seleccionisdefe.es/convocatoria-2648"
+ },
+ "2649": {
+  "apply_url": "https://seleccionisdefe.es/registro-2649",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00472",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T09:37:28+00:00",
+  "id": "isdefe:2649",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-01",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-25",
+  "ref": "2649",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Isdefe selecciona un/a gerente para la <strong>gerencia de relaciones laborales</strong> para dirigir y coordinar la gestión de las relaciones laborales, garantizando el adecuado desarrollo de la negociación colectiva, la correcta aplicación de la normativa laboral y una gestión eficaz de la administración de personal, contribuyendo a la seguridad jurídica y a los objetivos de la organización</p><p><strong>Funciones habituales: </strong></p><p>-Dirigir y coordinar las áreas dependientes de la Gerencia, asegurando una gestión integrada y eficaz.<br/>\r\n-Liderar la estrategia de relaciones laborales y negociación colectiva, así como la interlocución con la Representación Legal de las Personas Trabajadoras y las organizaciones sindicales.<br/>\r\n-Garantizar la correcta interpretación y aplicación de la normativa laboral, convencional y de Seguridad Social.<br/>\r\n-Dirigir y supervisar los procesos de administración de personal, contratación, nómina y gestión de Seguridad Social.<br/>\r\n-Coordinar la planificación, seguimiento y control de la masa salarial y los costes de personal, asegurando el cumplimiento de la normativa y limitaciones aplicables.</p><p><strong>REQUISITOS DE LA CANDIDATURA SEGÚN FUNCIONES DEL PUESTO</strong></p><p><strong>Requisitos imprescindibles que debe cumplir la candidatura:</strong></p><ul>\n<li>Se requiere titulación universitaria (licenciatura/grado) en derecho.</li>\n<li>Experiencia de más de 15 años.</li>\n<li>Experiencia acreditada en:<br/>\r\n\t- Experiencia profesional mínima de 10 años en el ámbito de las RRLL, desarrollando funciones de asesoramiento jurídico laboral, negociación colectiva y/o gestión de relaciones laborales.<br/>\r\n\t-Experiencia mínima de 5 años en puestos de responsabilidad en Relaciones Laborales, con responsabilidad.<br/>\r\n\t-Experiencia en organizaciones con relaciones laborales complejas y elevada interlocución sindical.<br/>\r\n\t-Capacidad negociadora en entornos complejo.</li>\n</ul><ul>\n<li>Conocimientos sobre:</li>\n</ul><p>-Derecho del Trabajo y de la Seguridad Social.<br/>\r\n-Contratación laboral y administración de persona<br/>\r\n-Negociación colectiva y derecho sindical.<br/>\r\n-Nómina, cotización y Seguridad Social.</p><p><strong>Requisitos valorables:</strong></p><ul>\n<li>Valorables estudios de máster o posgrado en derecho laboral y/o relaciones laborales.</li>\n<li>Se valorará:</li>\n</ul><p>Experiencia en negociación de convenios o acuerdos de Empresa.<br/>\r\nExperiencia en procesos de reorganización o modificación de condiciones de trabajo.<br/>\r\nExperiencia en entidades del sector público</p><ul>\n<li>Valorable 700 puntos TOEIC<br/>\r\n\t </li>\n</ul><p><em>Buscamos una persona orientada a resultados, con solidez y criterio jurídico laboral, capaz de desenvolverse en contextos de presión y conflictividad, y con discreción para gestionar información sensible y confidencial</em></p><p><strong>Se ofrece contrato indefinido.</strong></p><p>*A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Gerencia de Relaciones Laborales (2026-T00472)",
+  "status": "open",
+  "title": "Gerencia de Relaciones Laborales",
+  "url": "https://seleccionisdefe.es/convocatoria-2649"
  }
 }

@@ -11523,11 +11523,11 @@
  "58246": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58246",
   "category": "Específica",
-  "closed_at": "2026-11-19T05:07:26+00:00",
+  "closed_at": null,
   "code": "58246",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-18",
+  "deadline": "2026-12-01",
   "deadline_time": "23:59",
   "department": "Pontevedra",
   "detail_ok": true,
@@ -11536,10 +11536,10 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58246",
   "kind": "temporal",
-  "listed_deadline": "2026-11-18",
+  "listed_deadline": "2026-12-01",
   "location": "Pontevedra",
-  "missed_runs": 1,
-  "opens_on": "2026-11-12",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
   "parent_ref": null,
   "place": "Pontevedra",
   "portal_tries": 1,
@@ -11549,7 +11549,7 @@
   "region": "Galicia",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para prestar apoyo en obras de la Gerencia de Pontevedra<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 12/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a de Caminos, Canales y Puertos para prestar apoyo en obras de la Gerencia de Pontevedra<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 25/11/2026 hasta el 01/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -11604,14 +11604,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 12/11/2026 hasta el próximo 18/11/2026  a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 01/12/2026  a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Caminos, Canales y Puertos - Obras (Pontevedra)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58246"
  },
@@ -38875,6 +38875,108 @@
   "status": "open",
   "title": "Gerente Autonómico de País Vasco en la Unidad Territorial 3 (TRAGSA). Puesto de especial responsabilidad. Personal de organigrama. Libre designación. Provisión interna y externa.",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FIG&jobid=58909"
+ },
+ "58941": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58941",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58941",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Recursos Humanos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-25T09:37:28+00:00",
+  "id": "tragsa:58941",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-11",
+  "location": "Sede Madrid Tragsa",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-25",
+  "ref": "58941",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Técnico/a de Selección de personal Senior en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsa</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión de los procesos de selección.</li><li>Publicación de ofertas de empleo en portales Web.</li><li>Reclutamiento y preselección de candidaturas.</li><li>Aplicación de pruebas competenciales.</li><li>Realización de entrevistas de selección de personal.</li><li>Elaboración de informes técnicos y apoyo técnico a los diferentes proyectos que la Unidad lleva a cabo.</li><li>Gestión de los procesos con cliente interno.</li><li>Colaboración en iniciativas de atracción de talento.</li><li>Tareas relacionadas con la selección de personal en la Gerencia de Selección del Grupo Tragsa.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Licenciatura/Grado en Psicología + Máster Oficial en Recursos Humanos (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia con contrato laboral realizando funciones de técnico/a de selección de personal.</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li><li>Disponibilidad de incorporación inmediata.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Licenciatura/Grado en Psicología + Máster Oficial en Recursos Humanos (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Licenciatura/Grado en Psicología + Máster Oficial en Recursos Humanos (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia con contrato laboral realizando funciones de técnico/a de selección de personal.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li><li>Disponibilidad de incorporación inmediata.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en herramientas de Microsoft 365.</li></ul>Otros Factores Meritorios<ul><li>Al menos 1 año de experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de puestos de perfiles de Ingeniería o IT.</li><li>Al menos 1 año de experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de perfiles del sector pesquero, agrícola y/o ganadero.</li><li>Al menos 1 año de experiencia con contrato laboral realizando funciones de técnico/a de selección de personal en empresas del sector público.</li><li>Experiencia con contrato laboral realizando procesos de selección masivos en empresas del sector privado y/o público (más de 15 puestos de un mismo perfil de manera simultánea).</li><li>Experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de puestos de perfiles de Internacional en empresas del sector privado y/o público.</li><li>Manejo de PSoft RRHH a nivel avanzado (se comprobará en valoración técnica).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en herramientas de Microsoft 365.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en herramientas de Microsoft 365.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de puestos de perfiles de Ingeniería o IT.</li><li>Al menos 1 año de experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de perfiles del sector pesquero, agrícola y/o ganadero.</li><li>Al menos 1 año de experiencia con contrato laboral realizando funciones de técnico/a de selección de personal en empresas del sector público.</li><li>Experiencia con contrato laboral realizando procesos de selección masivos en empresas del sector privado y/o público (más de 15 puestos de un mismo perfil de manera simultánea).</li><li>Experiencia con contrato laboral en la gestión y seguimiento de los procesos selectivos específicos para la cobertura de puestos de perfiles de Internacional en empresas del sector privado y/o público.</li><li>Manejo de PSoft RRHH a nivel avanzado (se comprobará en valoración técnica).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada no superior a 12 meses, o contrato de sustitución para cubrir temporalmente 1 puesto de Titulado/a Superior en la Gerencia de Selección de Tragsa hasta que finalice el proceso de selección de Tasa para su cobertura definitiva. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la persona seleccionada.<br/>- Jornada completa.<br/>- Flexibilidad horaria.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 11/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Selección de personal Senior (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58941"
  },
  "tasas-reposicion-especifica-2025-2026": {
   "apply_url": "https://grupotragsatre2026.iformalia.es/",

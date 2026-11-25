@@ -664,6 +664,58 @@
   "title": "Personal investigador en formación para colaborar con el proyecto «Addressing the temporal dimension of virus-host interactions in nature»",
   "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi94/convocatoria-i-pi-94-26.html"
  },
+ "2026-pi95": {
+  "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi95/convocatoria-i-pi-95-26.html",
+  "category": "Investigador/a Júnior",
+  "closed_at": null,
+  "code": "I-PI 95-26",
+  "company": "Universidad de Alicante",
+  "contract": "contratación indefinida",
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Departamento de Fisiología, Genética y Microbiología",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T09:37:28+00:00",
+  "id": "ua:2026-pi95",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-10",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-11-25",
+  "ref": "2026-pi95",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p><strong>RESOLUCIÓN de 18 de noviembre de 2026, del Rectorado de la Universidad de Alicante, por la que se convoca un proceso selectivo para la contratación indefinida de personal de investigación de la categoría de personal investigador júnior para colaborar con la línea de investigación financiada «Ecología microbiana molecular DFGM». Referencia: I-PI 95-26 </strong></p><p><strong>Primer proyecto en el que va a colaborar:</strong></p><p><strong>Proyecto CIPROM/2026/75 financiado por la Conselleria de Educación, Cultura y Universidades </strong></p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p><strong>Plazas Personal Investigador Proy. Investigación</strong></p>\n<p><strong>Investigador/a Júnior</strong></p>\n<p><strong>Convocatoria I-PI 95-26</strong></p>\n<p><strong>DOGV: <a href=\"https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi95/01.-convocatoria-dogv-i-pi-95-26.pdf\">25/11/2026</a>  </strong></p>\n<p><strong>Euraxess</strong></p>\n<p><strong><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/baremo-2024.pdf\">Baremo</a></strong> </p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p><strong>PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 26 de novembre al 10 de desembre de 2026</strong></p>\n\n<p><a href=\"https://cvnet.cpd.ua.es/eadmua/Tramites/IniciarTramite?pCodigoTramite=TRAM_CONTPILAB_SOL\">Solicitud de participación</a></p>\n<p>(Debe acentuar siempre que corresponda el nombre y apellidos en la solicitud, independientemente de que escriba en letras mayúsculas)</p>\n<p>Al pinchar sobre \"Solicitud de participación\" irá al trámite de <em>Solicitud de plazas personal investigador para proyectos de investigación</em> y deberá elegir en el desplegable ‘Convocatoria’ la referencia de la convocatoria a la que quiere presentarse de entre las que tienen el plazo de presentación de solicitudes abierto.</p>\n<p>Guía de ayuda / Applicant guide</p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/guia-para-el-solicitante.pdf\">Guía para el solicitante</a></p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/guide-on-how-to-apply-for-research-staff-positions-on-research-projects.pdf\">Guide on how to apply for research staff positions</a></p>\n<p>Modelo de Currículum, de uso obligatorio (<a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/curriculum-e-adm.docx\">Word</a>, <a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-investigador-para-proyectos-investigacion/curriculum-e-adm.pdf\">Pdf</a>)</p>\n<p><strong>Muy importante </strong></p>\n<p><strong>(*) En la siguiente web puede consultar toda la información sobre traducciones de documentos en idioma extranjero aceptadas por la Universidad de Alicante: <a href=\"https://sga.ua.es/es/normativa-academica/legalizacion/legalizacion-de-documentos.html\">Traducción Oficial de Documentos</a></strong></p>",
+    "level": 2,
+    "title": "Solicitudes"
+   }
+  ],
+  "source": "ua",
+  "source_title": null,
+  "status": "open",
+  "title": "Personal investigador júnior para colaborar con la línea de investigación financiada «Ecología microbiana molecular DFGM»",
+  "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi95/convocatoria-i-pi-95-26.html"
+ },
  "2026-pi96": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi96/convocatoria-i-pi-96-26.html",
   "category": "Investigador/a Colaborador/a",
@@ -969,5 +1021,57 @@
   "status": "open",
   "title": "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Productividad, Riesgo y Políticas Macroeconómicas»",
   "url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai58/convocatoria-i-ptgai-58-26.html"
+ },
+ "2026-ptgai62": {
+  "apply_url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai62/convocatoria-i-ptgai-62-26.html",
+  "category": "Tecnólogo/a superior",
+  "closed_at": null,
+  "code": "I-PTGAI 62-26",
+  "company": "Universidad de Alicante",
+  "contract": "contratación indefinida",
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Instituto Universitario de Investigación Informática",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T09:37:28+00:00",
+  "id": "ua:2026-ptgai62",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-10",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-11-25",
+  "ref": "2026-ptgai62",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p><strong>RESOLUCIÓN de 18 de noviembre de 2026, del Rectorado de la Universidad de Alicante, por la que se convoca un proceso selectivo para la contratación indefinida de personal de investigación de la categoría de personal tecnólogo superior para colaborar con la línea de investigación financiada «Teledetección con Radar». Referencia: I-PTGAI 62-26 </strong></p><p><strong>Primer proyecto en el que va a colaborar:</strong></p><p><strong>Proyecto 4000152470/26/NL/FFi financiado por la Agencia Espacial Europea.</strong></p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<p><strong>Plazas Personal Técnico Proy. Investigación</strong></p>\n<p><strong>Tecnólogo/a superior</strong></p>\n<p><strong>Convocatoria I-PTGAI 62-26</strong></p>\n<p><strong>DOGV: <a href=\"https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai62/01.-convocatoria-dogv-i-ptgai-62-26-cas.pdf\">25/11/2026</a> </strong></p>\n<p><strong>Euraxess</strong></p>",
+    "level": 2,
+    "title": "Datos de la convocatoria"
+   },
+   {
+    "html": "<p><strong>PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 26 de noviembre al 10 de diciembre de 2026</strong></p>\n\n<p><a href=\"https://cvnet.cpd.ua.es/eadmua/Tramites/IniciarTramite?pCodigoTramite=TRAM_CONTPROINV_SOL\">Solicitud de participación</a></p>\n<p>(Debe acentuar siempre que corresponda el nombre y apellidos en la solicitud, independientemente de que escriba en letras mayúsculas)</p>\n<p>Al pinchar sobre \"Solicitud de participación\" irá al trámite de <em>Solicitud de plazas personal técnico para proyectos de investigación</em> y deberá elegir en el desplegable ‘Convocatoria’ la referencia de la convocatoria a la que quiere presentarse de entre las que tienen el plazo de presentación de solicitudes abierto.</p>\n<p>Guía de ayuda / Applicant guide</p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-tecnico-para-proyectos-investigacion/guia-solicitante.pdf\">Guía para el solicitante</a></p>\n<p><a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-tecnico-para-proyectos-investigacion/guide-on-how-to-apply-for-technical-staff-positions-on-research-projects.pdf\">Guide on how to apply for technical staff positions</a></p>\n<p>Modelo de Currículum (<a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-tecnico-para-proyectos-investigacion/modelo-curriculum.doc\">Word</a>, <a href=\"https://ssp.ua.es/es/selecinvest/documentos/plazas-personal-tecnico-para-proyectos-investigacion/modelo-de-curriculum.pdf\">Pdf</a>)</p>",
+    "level": 2,
+    "title": "Solicitudes"
+   }
+  ],
+  "source": "ua",
+  "source_title": null,
+  "status": "open",
+  "title": "Personal tecnólogo superior para colaborar con la línea de investigación financiada «Teledetección con Radar»",
+  "url": "https://ssp.ua.es/es/selecinvest/04-personal-tecnico/2026/ptgai62/convocatoria-i-ptgai-62-26.html"
  }
 }

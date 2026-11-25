@@ -1,57 +1,37 @@
 {
- "ccma": {
-  "desde": "2026-11-24T14:07:23+00:00",
-  "lecturas": 19,
+ "bsm": {
+  "desde": "2026-11-25T09:37:28+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
- "cetarsa": {
-  "desde": "2026-11-25T07:07:27+00:00",
-  "lecturas": 5,
-  "resultado": "error"
- },
- "cimus": {
-  "desde": "2026-11-25T08:37:32+00:00",
-  "lecturas": 2,
-  "resultado": "error"
- },
- "ciqus": {
-  "desde": "2026-11-25T09:07:29+00:00",
+ "correos": {
+  "desde": "2026-11-25T09:37:28+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 123,
-  "resultado": "error"
- },
- "etsa": {
-  "desde": "2026-11-25T07:07:27+00:00",
-  "lecturas": 5,
+  "lecturas": 124,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 105,
+  "lecturas": 106,
   "resultado": "error"
  },
- "idis": {
-  "desde": "2026-11-25T08:37:32+00:00",
-  "lecturas": 2,
-  "resultado": "error"
- },
- "ua": {
-  "desde": "2026-11-25T08:37:32+00:00",
-  "lecturas": 2,
-  "resultado": "error"
- },
- "uco": {
-  "desde": "2026-11-25T09:07:29+00:00",
+ "gesplan": {
+  "desde": "2026-11-25T09:37:28+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "uji": {
-  "desde": "2026-11-24T12:07:29+00:00",
-  "lecturas": 23,
+ "navantia": {
+  "desde": "2026-11-25T09:37:28+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "renfe": {
+  "desde": "2026-11-25T09:37:28+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }

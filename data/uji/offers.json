@@ -461,5 +461,48 @@
   "status": "open",
   "title": "Convocatòria única: contractes predoctorals (programa estatal fpi-aei 2026) - complementària",
   "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3609&pConcurso=1&pCategoria=14"
+ },
+ "3610": {
+  "apply_url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3610&pConcurso=1&pCategoria=14",
+  "category": "Personal tecnòleg o gestor superior",
+  "closed_at": null,
+  "code": "23232",
+  "company": "Universitat Jaume I",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-09",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T09:37:28+00:00",
+  "id": "uji:3610",
+  "kind": null,
+  "listed_deadline": "2026-12-09",
+  "location": "Castelló de la Plana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "3610",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "Data de resolució 16/11/2026\nBOE No és aplicable \nEstatNo és aplicable \n\n\n\n\nData de tancament  No és aplicable \nDOGV 24/11/2026\nResolució No és aplicable \n\n\n\nConcurs: Personal tecnòleg o gestor superior\n\n\nInici de presentació de sol·licituds 25/11/2026\nFi de presentació de sol·licituds 10/12/2026\nCodi Registre 23232\n\n\nTorn Lliure\nTipus de concurs Personal tecnòleg o gestor superior\n\n\n\nProcediment administratiu <a href=\"http://ujiapps.uji.es/seu/cataleg/rrhh/proc-182-PAS-PI-CONTRAC/\">PI - Procés abreujat per a la contractació de personal vinculat a la investigació </a>\n\n\nResolucions\n\n\n<strong>Data Resolució     </strong>16/11/2026<strong>    Data de publicació </strong>24/11/2026<strong>    Termini  </strong>25/11/2026 - 09/12/2026\n\n<p>\nRESOLUCIÓ de la vicerectora d’Investigació de la Universitat Jaume I, per la qual es convoca un procés selectiu per a una plaça de personal tecnòleg o gestor superior per col·laborar en el projecte d’investigació: “21I373 PPSI-MIGUEL GONZÁLEZ GUZMÁN: INCREMENT DE LA TOLERÀNCIA DE LES PLANTES A LA COMBINACIÓ D'ESTRESOS”, dirigit per Miguel González Guzmán del Departament de Biologia, Bioquímica i Ciències Naturals. Grup d’investigació: Integració genètica i metabòlica de la interacció de factors biòtics i abiòtics.\n</p>\n\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/VBPYRI4IUEEQ8SRKAOZVYRCZXFBSWR3N\">CONVOCATÒRIA</a></p>\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/VXPT9DYIVIHFY4LTXWEFRY0JPEMUDDVY\">DOGV</a></p>\n\n\n\n\n<a href=\"https://ujiapps.uji.es/reg/rest/publicacion/solicitud_generica?procedimientoId=182&amp;procedimientoNombre=PI%20-%20Proc%C3%A9s%20abreujat%20per%20a%20la%20contractaci%C3%B3%20de%20personal%20vinculat%20a%20la%20investigaci%C3%B3%20&amp;codigoAsunto=23232&amp;destino=Servicio de Recursos Humanos\">Tramitar</a>\n<a href=\"https://e-ujier.uji.es/pls/www/!gri_www.euji23690\">Consultar documentació.</a>",
+    "lang": "ca",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "uji",
+  "source_title": "23232 plaça de personal tecnòleg o gestor superior per col·laborar en el projecte d’investigació: “21I373 PPSI-MIGUEL GONZÁLEZ GUZMÁN: INCREMENT DE LA TOLERÀNCIA DE LES PLANTES...”, dirigit per Miguel González Guzmán del Departament de Biologia, Bioquímica i Ciències Naturals. Grup d’investigació: Integració genètica i metabòlica",
+  "status": "open",
+  "title": "Personal tecnòleg o gestor superior · 21I373 Ppsi-miguel gonzález guzmán: increment de la tolerància de les plantes...",
+  "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3610&pConcurso=1&pCategoria=14"
  }
 }
