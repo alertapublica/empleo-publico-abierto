@@ -324,14 +324,16 @@ dl.ficha dd { margin: 0; }
   h1 { font-size: 1.6rem; }
 }
 .texto-oficial li { margin-bottom: 0.25rem; }
-footer.sitio { border-top: 1px solid var(--line); color: var(--muted); padding: 1.2rem 0 2.5rem; font-size: 0.9rem; }
+/* Abajo, sitio para el botón flotante «Arriba», que si no tapa la última línea. */
+footer.sitio { border-top: 1px solid var(--line); color: var(--muted); padding: 0.8rem 0 5rem; font-size: 0.9rem; }
 footer.sitio a { color: inherit; }
-footer.sitio p { margin: 0.4rem 0; }
-/* Enlaces del pie por grupos: en columnas si caben; cada enlace, un objetivo táctil de 44 px. */
-nav.pie { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.5rem 2rem; margin: 0.5rem 0 1rem; }
-nav.pie h2 { font-size: 0.9rem; margin: 0.5rem 0 0.1rem; }
-nav.pie ul { list-style: none; padding: 0; margin: 0; }
+footer.sitio p { margin: 0.3rem 0; max-width: 70ch; }
+/* Enlaces del pie en dos franjas que se reparten en filas; cada enlace, un objetivo táctil de 44 px. */
+nav.pie { margin: 0 0 0.6rem; }
+nav.pie ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; column-gap: 1.2rem; }
 nav.pie a { display: inline-flex; align-items: center; min-height: 44px; }
+nav.pie .pie-destacados { column-gap: 2rem; margin-bottom: 0.3rem; border-bottom: 1px solid var(--line); }
+nav.pie .pie-destacados a { font-weight: 700; font-size: 1.05rem; color: var(--accent); }
 nav.pie a[aria-current="page"] { font-weight: 700; color: var(--ink); }
 
 /* Ayudas de lectura de «Aa». */
@@ -419,7 +421,17 @@ button.copiar { min-height: 36px; padding: 0.1rem 0.6rem; font-size: 0.85rem; bo
 .sin-ofertas-grupo > summary .dato { font-weight: 400; }
 
 /* «Volver arriba» en el pie: lleva a la cabecera, con el tamaño mínimo de un objetivo táctil. */
-footer.sitio .subir a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--accent); }
+footer.sitio .subir { margin: 0; }
+footer.sitio .subir a { display: inline-flex; align-items: center; min-height: 44px; }
+/* En pantalla ancha, a la derecha de la franja de procesos; el texto no llega al botón flotante. */
+@media (min-width: 48em) {
+  footer.sitio { padding-bottom: 1.5rem; }
+  footer.sitio > .ancho { display: grid; grid-template-columns: 1fr auto; }
+  footer.sitio > .ancho > * { grid-column: 1 / -1; }
+  footer.sitio .subir { grid-row: 1; grid-column: 2; position: relative; z-index: 1; }
+  nav.pie { grid-row: 1; }
+  nav.pie .pie-destacados { padding-right: 9rem; }
+}
 
 /* Botón flotante «Arriba» (con JS, tras bajar un poco). Abajo a la derecha, sin tapar el texto central. */
 .subir-flotante {
