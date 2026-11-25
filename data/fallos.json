@@ -1,37 +1,62 @@
 {
  "ccma": {
   "desde": "2026-11-24T14:07:23+00:00",
-  "lecturas": 14,
+  "lecturas": 15,
+  "resultado": "error"
+ },
+ "cetarsa": {
+  "desde": "2026-11-25T07:07:27+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "cimus": {
+  "desde": "2026-11-25T07:07:27+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "ciqus": {
+  "desde": "2026-11-25T07:07:27+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 118,
+  "lecturas": 119,
   "resultado": "error"
  },
- "enusa": {
-  "desde": "2026-11-25T06:37:23+00:00",
+ "etsa": {
+  "desde": "2026-11-25T07:07:27+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 100,
+  "lecturas": 101,
   "resultado": "error"
  },
- "idisna": {
-  "desde": "2026-11-25T06:37:23+00:00",
+ "fgv": {
+  "desde": "2026-11-25T07:07:27+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "gesplan": {
+  "desde": "2026-11-25T07:07:27+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "idis": {
+  "desde": "2026-11-25T07:07:27+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-25T06:07:25+00:00",
-  "lecturas": 2,
+  "lecturas": 3,
   "resultado": "error"
  },
  "uji": {
   "desde": "2026-11-24T12:07:29+00:00",
-  "lecturas": 18,
+  "lecturas": 19,
   "resultado": "error"
  }
 }
