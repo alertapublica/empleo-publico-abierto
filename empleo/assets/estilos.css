@@ -327,6 +327,12 @@ dl.ficha dd { margin: 0; }
 footer.sitio { border-top: 1px solid var(--line); color: var(--muted); padding: 1.2rem 0 2.5rem; font-size: 0.9rem; }
 footer.sitio a { color: inherit; }
 footer.sitio p { margin: 0.4rem 0; }
+/* Enlaces del pie por grupos: en columnas si caben; cada enlace, un objetivo táctil de 44 px. */
+nav.pie { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.5rem 2rem; margin: 0.5rem 0 1rem; }
+nav.pie h2 { font-size: 0.9rem; margin: 0.5rem 0 0.1rem; }
+nav.pie ul { list-style: none; padding: 0; margin: 0; }
+nav.pie a { display: inline-flex; align-items: center; min-height: 44px; }
+nav.pie a[aria-current="page"] { font-weight: 700; color: var(--ink); }
 
 /* Ayudas de lectura de «Aa». */
 /* Justificar: el texto del contenido (las líneas cortas no cambian; tablas, código y tarjetas, tampoco). */
