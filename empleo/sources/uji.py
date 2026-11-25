@@ -23,7 +23,9 @@ en curso y 10 en plazo de solicitudes (las otras tres, en subsanación).
 La ficha (la del primer concurso) trae la «Data de resolució», el DOGV, el concurso («Concurs: Personal
 investigador júnior») con «Inici/Fi de presentació de sol·licituds» (año entero), el «Codi Registre» (el número
 del título) y las resoluciones con su «Data de publicació», su «Termini» y sus PDF. Plazo = el del concurso, que
-debe coincidir con el «Termini» de la resolución «per la qual es convoca» (si no, o si hay varios, se detiene);
+debe coincidir con el «Termini» de la resolución «per la qual es convoca»; si empiezan el mismo día y acaban con
+`CLOSE_DAYS` días o menos de diferencia, vale el que acaba antes (la 3610 el 2026-11-25: concurso hasta el 10/12,
+resolución hasta el 09/12; decisión del usuario); si no, o si hay varios, se detiene;
 una resolución que amplía o modifica el plazo también detiene (sin casos vistos: revisar a mano). Publicación =
 la primera «Data de publicació» (o la del DOGV). Se copia entera, en valenciano (`lang="ca"`).
 
@@ -45,7 +47,7 @@ usuario). Sondeo de Codex (encargo 52) y HTML del 2026-11-16.
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from urllib.parse import parse_qs, urljoin, urlparse
 
 from bs4 import BeautifulSoup
@@ -70,6 +72,7 @@ TITLE = re.compile(r"^(?P<registry>\d+) plaça de (?P<category>.+?) per col·lab
                    r"[“«\"](?:(?P<code>\S*\d\S*)\s+)?(?P<name>[^“”«»\"]+)[”»\"]\s*(?:,\s*dirigit per\b|\.\s)")
 DAY = r"\d{2}/\d{2}/\d{4}"
 CONVENES = re.compile(r"\bes convoca\b")
+CLOSE_DAYS = 3
 EXTENDS = re.compile(r"(?i)\bampli\w*\b.{0,60}\btermini\b|\btermini\b.{0,60}\bampli\w*\b|\bmodifica\w*\b.{0,60}\btermini\b")
 REGISTRY = re.compile(r"^(\d+)\s+")
 CODES = re.compile(r"\S*\d\S*")
@@ -175,12 +178,16 @@ def parse_ficha(html: str) -> dict:
             periods.add(termini.groups())
         if EXTENDS.search(said):
             raise SourceLayoutError(f"UJI: «{title}» tiene una resolución que amplía o cambia el plazo: {said[:160]!r}")
-    if len(periods) != 1:
-        raise SourceLayoutError(f"UJI: «{title}» no trae un plazo de solicitudes y solo uno ({sorted(periods)})")
     try:
-        first, last = (numeric_date(day) for day in periods.pop())
+        dated = sorted((numeric_date(a), numeric_date(b)) for a, b in periods)
     except ValueError as error:
         raise SourceLayoutError(f"UJI: fecha imposible en la ficha de «{title}» ({error})") from error
+    if len(dated) == 2 and dated[0][0] == dated[1][0] and \
+            (date.fromisoformat(dated[1][1]) - date.fromisoformat(dated[0][1])).days <= CLOSE_DAYS:
+        dated = dated[:1]  # el concurso y la resolución no coinciden por poco: el que acaba antes
+    if len(dated) != 1:
+        raise SourceLayoutError(f"UJI: «{title}» no trae un plazo de solicitudes y solo uno ({sorted(periods)})")
+    first, last = dated[0]
     if first > last:
         raise SourceLayoutError(f"UJI: plazo al revés en la ficha de «{title}» ({first} > {last})")
     published = [numeric_date(day) for day in re.findall(rf"Data de publicació ({DAY})", text)]

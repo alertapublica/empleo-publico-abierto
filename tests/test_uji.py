@@ -135,6 +135,15 @@ class List(unittest.TestCase):
         other = FICHA.replace("Termini  </strong>13/11/2026", "Termini  </strong>14/11/2026")
         with self.assertRaisesRegex(SourceLayoutError, "solo uno"):
             uji.parse_ficha(other)
+        far = FICHA.replace("13/11/2026 - 26/11/2026", "13/11/2026 - 22/11/2026")
+        with self.assertRaisesRegex(SourceLayoutError, "solo uno"):
+            uji.parse_ficha(far)
+
+    def test_ficha_con_plazos_que_acaban_casi_igual_vale_el_mas_temprano(self):
+        # La 3610 el 2026-11-25: concurso 25/11–10/12, resolución que convoca 25/11–09/12.
+        for end, deadline in (("25/11/2026", "2026-11-25"), ("29/11/2026", "2026-11-26")):
+            ficha = uji.parse_ficha(FICHA.replace("13/11/2026 - 26/11/2026", f"13/11/2026 - {end}"))
+            self.assertEqual((ficha["opens_on"], ficha["deadline"]), ("2026-11-13", deadline))
         extended = FICHA.replace("per la qual es convoca un procés selectiu",
                                  "per la qual s'amplia el termini de presentació del procés selectiu", 1)
         with self.assertRaisesRegex(SourceLayoutError, "amplía o cambia"):

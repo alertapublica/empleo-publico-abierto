@@ -1,7 +1,7 @@
 """FGC (Ferrocarrils de la Generalitat de Catalunya), en SAP SuccessFactors.
 
 A diferencia de Correos y Navantia, el listado (`/go/CONVOCATORIES/814602/`) usa tarjetas y no
-una tabla. Cada tarjeta trae «Termini presentació» (último día, DD/MM/AAAA) y «Tipus de
+una tabla. Cada tarjeta trae «Termini presentació» (último día, DD/MM/AAAA; alguna, DD/MM/AA) y «Tipus de
 Contracte», que es el mismo en todas («Durada determinada / Indefinit») y se guarda literal.
 
 El plazo es el de la tarjeta, que coincide con el «Termini de presentació» de las bases. El
@@ -30,7 +30,7 @@ MAX_PAGES = 10
 EMPTY_TEXT = "no hi ha posicions obertes"
 SHOWING = re.compile(r"mostrant\s+(\d+)\s+a\s+(\d+)\s+de\s+(\d+)", re.I)
 JOB_ID = re.compile(r"/(\d+)/?$")
-DATE = re.compile(r"\d\d/\d\d/\d{4}")
+DATE = re.compile(r"\d\d/\d\d/(?:\d\d)?\d\d")
 DEADLINE_LABEL = "Termini presentació"
 CONTRACT_LABEL = "Tipus de Contracte"
 
@@ -70,7 +70,7 @@ def parse_tiles(html: str) -> tuple[list[dict], int]:
             "ref": job.group(1),
             "title": _text(link),
             "url": urljoin(HOST, link["href"]),
-            "deadline": numeric_date(deadline),
+            "deadline": numeric_date(deadline if len(deadline) == 10 else f"{deadline[:6]}20{deadline[6:]}"),
             "contract": fields.get(CONTRACT_LABEL) or None,
         })
     return entries, int(total.group(3))

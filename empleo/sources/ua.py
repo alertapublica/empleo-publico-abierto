@@ -10,7 +10,8 @@ de su última resolución.
 
 La ficha trae la resolución de la convocatoria («…para la contratación temporal/indefinida…», de
 donde sale el contrato), la categoría, el enlace a las bases en el DOGV y la pestaña «Solicitudes» con
-«PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 09 al 20 de noviembre de 2026» (sin hora). El plazo se abre
+«PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 09 al 20 de noviembre de 2026» (sin hora; alguna, con los meses en
+valenciano: «Del 26 de novembre al 10 de desembre de 2026»). El plazo se abre
 al día siguiente de la publicación y dura unas dos semanas, así que solo se abren las fichas
 publicadas en los últimos `HORIZON_DAYS` días (decidido con el usuario el 2026-11-15). La pestaña
 «Resoluciones» (listas de personas) no se lee. Las fichas antiguas redirigen al login de UACloud: se
@@ -25,7 +26,7 @@ from datetime import datetime, timedelta, timezone
 
 from bs4 import BeautifulSoup
 
-from ..dates import numeric_date, spanish_date
+from ..dates import MONTHS, numeric_date, spanish_date
 from ..http import Client
 from ..model import MADRID, ListedOffer, OfferDetail, SourceLayoutError, deadline_passed
 from ..sanitize import sanitize
@@ -42,8 +43,9 @@ FICHA = re.compile(r"^https://ssp\.ua\.es/es/selecinvest/0[34]-[a-z-]+/(\d{4})/(
 CODE = re.compile(r"^Convocatoria\s+(I-[A-Z]+\s+\d+-\d+)$")
 DAY = re.compile(r"\d{2}/\d{2}/\d{4}")
 PERIOD = re.compile(
-    r"PLAZO DE PRESENTACI[ÓO]N DE SOLICITUDES:\s*Del\s+(\d{1,2})(?:\s+de\s+([a-záéíóú]+))?(?:\s+de\s+(\d{4}))?"
-    r"\s+al\s+(\d{1,2})\s+de\s+([a-záéíóú]+)\s+de\s+(\d{4})", re.I)
+    r"PLAZO DE PRESENTACI[ÓO]N DE SOLICITUDES:\s*Del\s+(\d{1,2})(?:\s+(?:de\s+|d['’])([a-záéíóúç]+))?(?:\s+de\s+(\d{4}))?"
+    r"\s+al\s+(\d{1,2})\s+(?:de\s+|d['’])([a-záéíóúç]+)\s+de\s+(\d{4})", re.I)
+VALENCIAN = "gener febrer març abril maig juny juliol agost setembre octubre novembre desembre".split()
 CONTRACT = re.compile(r"contrataci[óo]n (temporal|indefinida)", re.I)
 KINDS = {"temporal": "temporal", "indefinida": "indefinido"}
 
@@ -76,11 +78,17 @@ def parse_list(html: str) -> list[dict]:
     return found
 
 
+def _month(name: str | None) -> str | None:
+    """El mes en castellano («novembre» → «noviembre»)."""
+    return MONTHS[VALENCIAN.index(name.lower())] if name and name.lower() in VALENCIAN else name
+
+
 def _period(text: str) -> tuple[str, str]:
     """Inicio y fin del plazo. Si la pestaña da más de uno (una reapertura), el que acaba más tarde."""
     periods = []
     for found in PERIOD.finditer(text):
         first_day, first_month, first_year, last_day, last_month, last_year = found.groups()
+        first_month, last_month = _month(first_month), _month(last_month)
         last = spanish_date(last_day, last_month, last_year)
         first = spanish_date(first_day, first_month or last_month, first_year or last_year)
         if first and last and first > last and not first_year:  # «Del 22 de diciembre al 9 de enero de 2027»
