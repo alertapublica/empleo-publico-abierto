@@ -3,6 +3,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from bs4 import BeautifulSoup
+
 from empleo.model import SourceLayoutError
 from empleo.sources import uji
 
@@ -144,6 +146,17 @@ class List(unittest.TestCase):
         for end, deadline in (("25/11/2026", "2026-11-25"), ("29/11/2026", "2026-11-26")):
             ficha = uji.parse_ficha(FICHA.replace("13/11/2026 - 26/11/2026", f"13/11/2026 - {end}"))
             self.assertEqual((ficha["opens_on"], ficha["deadline"]), ("2026-11-13", deadline))
+
+    def test_plazos_casi_iguales_con_dos_resoluciones_que_convocan_detiene(self):
+        # La tolerancia es para el concurso frente a una sola resolución, no para tres plazos.
+        html = FICHA.replace("13/11/2026 - 26/11/2026", "13/11/2026 - 25/11/2026")
+        soup = BeautifulSoup(html, "html.parser")
+        resolution = next(p for p in soup.select("p.tao-ar-texto") if uji.CONVENES.search(p.get_text(" ")))
+        head = resolution.find_previous_sibling("div")
+        copy = BeautifulSoup(str(head).replace("25/11/2026", "26/11/2026") + str(resolution), "html.parser")
+        resolution.insert_after(copy)
+        with self.assertRaisesRegex(SourceLayoutError, "solo uno"):
+            uji.parse_ficha(str(soup))
         extended = FICHA.replace("per la qual es convoca un procés selectiu",
                                  "per la qual s'amplia el termini de presentació del procés selectiu", 1)
         with self.assertRaisesRegex(SourceLayoutError, "amplía o cambia"):

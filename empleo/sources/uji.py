@@ -168,21 +168,23 @@ def parse_ficha(html: str) -> dict:
     title = _clean(heading.get_text(" "))[:90]
     text = _clean(body.get_text(" "))
     # El de los concursos (todos el mismo) y, si está, el «Termini» de la resolución que convoca.
-    periods = set(re.findall(rf"Inici de presentació de sol·licituds ({DAY}) Fi de presentació de sol·licituds ({DAY})",
-                             text))
+    contests = set(re.findall(rf"Inici de presentació de sol·licituds ({DAY}) Fi de presentació de sol·licituds ({DAY})",
+                              text))
+    periods, convening = set(contests), 0
     for resolution in body.select("p.tao-ar-texto"):
         said = _clean(resolution.get_text(" "))
         head = resolution.find_previous_sibling("div")
         termini = re.search(rf"Termini ({DAY}) - ({DAY})", _clean(head.get_text(" "))) if head else None
         if termini and CONVENES.search(said):
             periods.add(termini.groups())
+            convening += 1
         if EXTENDS.search(said):
             raise SourceLayoutError(f"UJI: «{title}» tiene una resolución que amplía o cambia el plazo: {said[:160]!r}")
     try:
         dated = sorted((numeric_date(a), numeric_date(b)) for a, b in periods)
     except ValueError as error:
         raise SourceLayoutError(f"UJI: fecha imposible en la ficha de «{title}» ({error})") from error
-    if len(dated) == 2 and dated[0][0] == dated[1][0] and \
+    if len(dated) == 2 and len(contests) == 1 and convening == 1 and dated[0][0] == dated[1][0] and \
             (date.fromisoformat(dated[1][1]) - date.fromisoformat(dated[0][1])).days <= CLOSE_DAYS:
         dated = dated[:1]  # el concurso y la resolución no coinciden por poco: el que acaba antes
     if len(dated) != 1:
