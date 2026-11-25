@@ -4594,22 +4594,22 @@
  "57690": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57690",
   "category": "Específica",
-  "closed_at": "2026-11-11T05:07:29+00:00",
+  "closed_at": null,
   "code": "57690",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-10",
+  "deadline": "2026-12-01",
   "deadline_time": null,
   "department": "Madrid",
   "detail_ok": true,
-  "detail_version": 2,
+  "detail_version": 3,
   "family": "Técnicos Titulados",
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:57690",
   "kind": "temporal",
-  "listed_deadline": "2026-11-10",
+  "listed_deadline": "2026-12-01",
   "location": "Comunidad de Madrid",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -4620,7 +4620,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Montes para dar apoyo  un Centro de Recuperación en Soto de Viñuelas , Comunidad de Madrid.<br/><br/>En relación al proceso publicado el pasado 22/10/2026 se amplía el plazo de recepción de candidaturas desde el 04/11/2026 hasta el 10/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a de Montes para dar apoyo  un Centro de Recuperación en Soto de Viñuelas , Comunidad de Madrid.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 25/11/2026 hasta el 01/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -4687,7 +4687,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a de Montes - Centro de Recuperación (Comunidad de Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57690"
  },
@@ -39809,6 +39809,108 @@
   "title": "Técnico/a de Apoyo - Mantenimiento Animalario (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58884"
  },
+ "58891": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58891",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58891",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Islas Baleares",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-25T13:07:33+00:00",
+  "id": "tragsa:58891",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-10",
+  "location": "Colonia de Sant Jordi (Mallorca), desplazamientos puntuales por toda la isla de Mallorca",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-25",
+  "ref": "58891",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Licenciado/a o Graduado/a (300 créditos) o Graduado/a + Máster Oficial en Veterinaria, Biología, Biología Marina, Ciencias del Mar o Ciencias Ambientales - Apoyo coordinación Acuaristas (Baleares) en Mallorca</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Colonia de Sant Jordi (Mallorca), desplazamientos puntuales por toda la isla de Mallorca</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Coordinación del equipo de acuaristas. Organización de trabajos diarios</li><li>Organización y supervisión de los trabajos de analítica de agua y toma de datos de parámetros de la colección de acuarios. Corrección de las anomalías detectadas si las hubiese.</li><li>Organización y supervisión de los trabajos de comprobación diarios del funcionamiento de los equipos de filtración de los acuarios</li><li>Revisión y actualización de los protocolos de rutina diaria según evolución de necesidades</li><li>Gestión de cuadrantes de trabajo del equipo de acuaristas</li><li>Actualizar datos en tablas de alimentación, cargas biológicas, inventarios de alimento, y materiales</li><li>Definir los trabajos semanales a realizar en la limpieza de acuarios por el equipo de buceadores.</li><li>Apoyo en los proyectos de conservación marina, sobre todo en la organización de la toma de datos y la actualización de la información almacenada</li><li>Atención de emergencias fuera de horario habitual de trabajo, por averías o incidentes en los acuarios.</li><li>Realización de pedidos y recogida de materiales.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Licenciatura, Grado (300 créditos) o Grado + Master Oficial (nivel 3 MECES) en Veterinaria, Biología, Biología Marina, Ciencias del Mar o Ciencias Ambientales (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia trabajando en acuarios de acceso público o instalaciones acuícolas (con contrato laboral y/o académica)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Licenciatura, Grado (300 créditos) o Grado + Master Oficial (nivel 3 MECES) en Veterinaria, Biología, Biología Marina, Ciencias del Mar o Ciencias Ambientales (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Licenciatura, Grado (300 créditos) o Grado + Master Oficial (nivel 3 MECES) en Veterinaria, Biología, Biología Marina, Ciencias del Mar o Ciencias Ambientales (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia trabajando en acuarios de acceso público o instalaciones acuícolas (con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Titulación de buceo, al menos PADI Open Water o equivalente</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 4 años de experiencia en acuarios de acceso público o instalaciones acuícolas (con contrato laboral y/o académica)</li><li>Desde 1 mes Hasta 2 años de experiencia en supervisión de equipos destinados al cuidado y mantenimiento de acuarios de acceso público o instalaciones acuícolas (personal directamente a su cargo) (con contrato laboral y/o académica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Titulación de buceo, al menos PADI Open Water o equivalente</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Titulación de buceo, al menos PADI Open Water o equivalente</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 4 años de experiencia en acuarios de acceso público o instalaciones acuícolas (con contrato laboral y/o académica)</li><li>Desde 1 mes Hasta 2 años de experiencia en supervisión de equipos destinados al cuidado y mantenimiento de acuarios de acceso público o instalaciones acuícolas (personal directamente a su cargo) (con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>SE OFRECE:<br/>Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa: 37'5 horas/semana.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 10/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a o Graduado/a (300 créditos) o Graduado/a + Máster Oficial en Veterinaria, Biología, Biología Marina, Ciencias del Mar o Ciencias Ambientales - Apoyo coordinación Acuaristas (Baleares)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58891"
+ },
  "58909": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58909",
   "category": "Específica",
@@ -39875,6 +39977,108 @@
   "status": "open",
   "title": "Gerente Autonómico de País Vasco en la Unidad Territorial 3 (TRAGSA). Puesto de especial responsabilidad. Personal de organigrama. Libre designación. Provisión interna y externa.",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FIG&jobid=58909"
+ },
+ "58921": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58921",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58921",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Barcelona",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Obra",
+  "first_seen": "2026-11-25T13:07:33+00:00",
+  "id": "tragsa:58921",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-02",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": "Girona y Barcelona",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-25",
+  "ref": "58921",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 3 Capataces/zas Forestales - Trabajos emergencia de reparación de cauces (Girona y Barcelona)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Barcelona</li><li>Girona</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Organizar y preparar los trabajos en conjunto con el Técnico/Jefe/a de actuación, siendo responsable de la marcha de la actuación e informando de manera inmediata de cualquier incidencia que surja</li><li>Interpretar planos, hacer mediciones y replanteos</li><li>Controlar los rendimientos de cuadrillas y maquinaria, así como visar y cumplimentar los partes necesarios respecto al personal y maquinaria</li><li>Adiestrar al personal en las tareas a realizar. Organizar y coordinar los equipos humanos en la realización de las tareas específicas</li><li>Cumplir y velar por el cumplimiento de la normativa en materia de seguridad y calidad de los trabajos, siendo responsable de inofrmar al personal sobre el empleo de equipos individuales y las medidas de seguridad de aplicación en la actuación</li><li>Comprobar que se lleva a cabo el correcto almacenamiento de material y las tareas de limpieza, así como otras tareas análogas que puedan surgir en el desarrollo de los procesos productivos</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>Otros Requisitos Imprescindibles<ul><li>Permiso de conducción B en vigor en España</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Bachiller o BUP o COU o FP I o CFGM o FP II o CFGS (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Permiso de conducción B en vigor en España</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación específica en PRL en el ámbito forestal (mínimo 50 horas)</li><li>Carnet de motoserrista europeo</li><li>Formación académica acreditable en el ámbito forestal (mínimo 130 horas)</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 1 año realizando funciones como capataz en actuaciones de reparación, mantenimiento y/o conservación de cauces (con contrato laboral) (se comprobará en valoración técnica)</li></ul>Otros Factores Meritorios<ul><li>Conocimientos de Catalán B1 o superior (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación específica en PRL en el ámbito forestal (mínimo 50 horas)</li><li>Carnet de motoserrista europeo</li><li>Formación académica acreditable en el ámbito forestal (mínimo 130 horas)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación específica en PRL en el ámbito forestal (mínimo 50 horas)</li><li>Carnet de motoserrista europeo</li><li>Formación académica acreditable en el ámbito forestal (mínimo 130 horas)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 1 año realizando funciones como capataz en actuaciones de reparación, mantenimiento y/o conservación de cauces (con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos de Catalán B1 o superior (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 02/12/2026  a las 23:59 (hora peninsular).<br/><br/>SE OFRECE:<br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/><br/>- Jornada completa 37,5h<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Capataces/zas Forestales - Trabajos emergencia de reparación de cauces (Girona y Barcelona)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58921"
  },
  "58941": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58941",
