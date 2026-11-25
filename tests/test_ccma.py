@@ -14,14 +14,14 @@ def fixture(name):
 
 
 class Http:
-    def __init__(self, index="ccma-index.html"):
-        self.index, self.urls = index, []
+    def __init__(self, index="ccma-index.html", ficha=None):
+        self.index, self.ficha, self.urls = index, ficha, []
 
     def get(self, url):
         self.urls.append(url)
         if url == ccma.PAGE:
             return self.index if self.index.startswith("<") else fixture(self.index)
-        return fixture("ccma-convocatoria.html")
+        return self.ficha or fixture("ccma-convocatoria.html")
 
 
 def at(*args):
@@ -72,6 +72,16 @@ class Ccma(unittest.TestCase):
                      fixture("ccma-index.html").replace("Concurs públic / promoció interna", "Borsa de treball")):
             with self.assertRaises(SourceLayoutError):
                 ccma.CcmaSource(at(2026, 11, 12, 12, 0)).list_offers(Http(page))
+
+    def test_ambito_desconocido_en_un_proceso_interno_se_salta(self):
+        # El 2026-11-25: «Àmbit: Nivell H» y la ficha «Procés de selecció intern d’un/a Productor/a…».
+        page = fixture("ccma-index.html").replace("Concurs públic / promoció interna", "Nivell H")
+        ficha = fixture("ccma-convocatoria.html").replace(
+            "CONVOCATÒRIA DE CONCURS CONJUNT DE PROMOCIÓ INTERNA I PÚBLIC D'ENGINYER/A",
+            "Procés de selecció intern d’un/a ENGINYER/A")
+        http = Http(page, ficha)
+        self.assertEqual(ccma.CcmaSource(at(2026, 11, 12, 12, 0)).list_offers(http), [])
+        self.assertEqual(http.urls, [ccma.PAGE, FICHA])
 
     def test_lista_vacia_de_verdad(self):
         page = ('<h2 data-testid="seccio-processos">Processos de selecció oberts</h2>'

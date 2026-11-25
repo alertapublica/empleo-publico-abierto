@@ -33,6 +33,10 @@ class Lectura(unittest.TestCase):
         entries, _ = fgc.parse_tiles(fixture("fgc-convocatories.html"))
         self.assertEqual(entries[3]["deadline"], "2026-11-06")
 
+    def test_plazo_con_anyo_de_dos_cifras(self):
+        entries, _ = fgc.parse_tiles(fixture("fgc-convocatories.html").replace("13/11/2026", "13/11/26"))
+        self.assertEqual(entries[0]["deadline"], "2026-11-13")
+
     def test_sin_convocatorias(self):
         html = "<p>Actualment no hi ha posicions obertes que coincideixin.</p>"
         self.assertEqual(fgc.parse_tiles(html), ([], 0))

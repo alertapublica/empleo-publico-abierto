@@ -94,6 +94,12 @@ class Ficha(unittest.TestCase):
         self.assertEqual(ua._period("PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 22 de diciembre de 2026 al 9 de enero de 2027"),
                          ("2026-12-22", "2027-01-09"))
 
+    def test_plazo_con_los_meses_en_valenciano(self):
+        self.assertEqual(ua._period("PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 26 de novembre al 10 de desembre de 2026"),
+                         ("2026-11-26", "2026-12-10"))
+        self.assertEqual(ua._period("PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 20 de març al 3 d'abril de 2027"),
+                         ("2027-03-20", "2027-04-03"))
+
     def test_con_dos_plazos_vale_el_que_acaba_mas_tarde(self):
         text = ("PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 27 de octubre al 7 de noviembre de 2026. "
                 "NUEVO PLAZO DE PRESENTACIÓN DE SOLICITUDES: Del 12 al 25 de noviembre de 2026")

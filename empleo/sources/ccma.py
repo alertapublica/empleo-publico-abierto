@@ -9,7 +9,8 @@ convocatoria entera en `div.descripcioConvocatoria`, en catalán; el último dí
 
 Es oferta el proceso con el fin del periodo sin vencer y con un ámbito abierto al público («Concurs
 públic», también «Concurs públic / promoció interna»); los de solo promoción interna no se leen y un
-ámbito ausente o desconocido detiene la fuente. La hora solo vale si la ficha da la misma fecha
+ámbito ausente o desconocido detiene la fuente, salvo que la ficha empiece por «Procés de selecció intern»
+(el 2026-11-25, un proceso interno con «Àmbit: Nivell H»): se salta. La hora solo vale si la ficha da la misma fecha
 completa (también «d'octubre», con apóstrofo). Sin
 tarjetas, la lista tiene que estar vacía de verdad: si no, la fuente se detiene. Las bases se
 descargan con el formulario JSF: solo se enlaza la ficha.
@@ -31,6 +32,7 @@ SITE = "https://seleccio.3cat.cat"
 PAGE = SITE + "/seleccio/index.jsf"
 PUBLIC = re.compile(r"públic|extern", re.I)
 INTERNAL = re.compile(r"(?:promoció\s+)?intern[ao]?", re.I)
+INTERNAL_FICHA = re.compile(r"Procés de selecció intern\b", re.I)
 MONTHS = "gener febrer març abril maig juny juliol agost setembre octubre novembre desembre".split()
 DMY = re.compile(r"(\d{2})/(\d{2})/(\d{4})")
 LAST_DAY = re.compile(
@@ -71,6 +73,12 @@ def parse_list(html: str) -> list[dict]:
             "scope": _field(card, "Àmbit"), "company": _field(card, "Empresa"),
         })
     return found
+
+
+def internal_ficha(html: str) -> bool:
+    """La ficha empieza por «Procés de selecció intern…»."""
+    content = BeautifulSoup(html, "html.parser").select_one("div.descripcioConvocatoria")
+    return content is not None and INTERNAL_FICHA.match(_clean(content.get_text(" "))) is not None
 
 
 def parse_ficha(html: str, deadline: str) -> dict:
@@ -124,7 +132,7 @@ class CcmaSource(Source):
             if not row["scope"]:
                 raise SourceLayoutError(f"3Cat: «{row['title']}» sin «Àmbit»")
             if not PUBLIC.search(row["scope"]):
-                if INTERNAL.fullmatch(row["scope"]):
+                if INTERNAL.fullmatch(row["scope"]) or internal_ficha(http.get(row["url"])):
                     continue
                 raise SourceLayoutError(f"3Cat: ámbito desconocido «{row['scope']}» en «{row['title']}»")
             if deadline_passed(row["deadline"], None, now):

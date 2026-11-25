@@ -37,7 +37,6 @@ FAILING_TOO_LONG = timedelta(hours=2)
 # Fuentes caídas por su lado durante días: se siguen leyendo y saliendo en el resumen, pero no ponen la
 # lectura en rojo. Cuando vuelvan a leerse bien, el resumen pide quitarlas de aquí.
 PAUSED = {
-    "fgc": "certificado de treballar.fgc.cat caducado el 19/11/2026",
     "emasesa": "HTTP 403 desde el 19/11/2026 (mantenimiento)",
 }
 
