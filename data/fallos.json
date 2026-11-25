@@ -1,27 +1,22 @@
 {
  "ccma": {
   "desde": "2026-11-24T14:07:23+00:00",
-  "lecturas": 11,
+  "lecturas": 12,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 115,
+  "lecturas": 116,
   "resultado": "error"
  },
  "fgc": {
   "desde": "2026-11-19T17:07:27+00:00",
-  "lecturas": 97,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-25T05:07:23+00:00",
-  "lecturas": 1,
+  "lecturas": 98,
   "resultado": "error"
  },
  "uji": {
   "desde": "2026-11-24T12:07:29+00:00",
-  "lecturas": 15,
+  "lecturas": 16,
   "resultado": "error"
  }
 }
