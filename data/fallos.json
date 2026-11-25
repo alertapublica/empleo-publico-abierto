@@ -1,17 +1,7 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 126,
-  "resultado": "error"
- },
- "gesplan": {
-  "desde": "2026-11-25T09:37:28+00:00",
-  "lecturas": 3,
-  "resultado": "error"
- },
- "sepi": {
-  "desde": "2026-11-25T10:07:26+00:00",
-  "lecturas": 2,
+  "lecturas": 127,
   "resultado": "error"
  }
 }
