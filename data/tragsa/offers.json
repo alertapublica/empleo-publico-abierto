@@ -12827,6 +12827,103 @@
   "title": "Diplomado/a y/o Graduado/a - Contratación y Asuntos Generales (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58287"
  },
+ "58305": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58305",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58305",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Sistemas",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "id": "tragsa:58305",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-03",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-10-20",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-10-20",
+  "ref": "58305",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Administrador/a de Base de Datos SQL Server y SharePoint para prestar apoyo en un importante proyecto de la Administración Pública en la Comunidad de Madrid.<br/><br/>En relación al proceso publicado el pasado 20/10/2026 se amplía el plazo de recepción de candidaturas desde el 25/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión y administración de los entornos Microsoft SharePoint.</li><li>Gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server.</li><li>Detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint.</li><li>Realización de pruebas de concepto para valorar nuevas funcionalidades requeridas.</li><li>Elaboración de procedimientos y manuales de operación.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia con contrato laboral en gestión y administración de los entornos Microsoft SharePoint</li><li>Al menos 2 años de experiencia con contrato laboral en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server</li><li>Al menos 2 años de experiencia con contrato laboral en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint</li><li>Al menos 2 años de experiencia con contrato laboral en realización de pruebas de concepto para valorar nuevas funcionalidades requeridas (se comprobará en valoración técnica)</li><li>Al menos 2 años de experiencia con contrato laboral en elaboración de procedimientos y manuales de operación (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia con contrato laboral en gestión y administración de los entornos Microsoft SharePoint</li><li>Al menos 2 años de experiencia con contrato laboral en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server</li><li>Al menos 2 años de experiencia con contrato laboral en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint</li><li>Al menos 2 años de experiencia con contrato laboral en realización de pruebas de concepto para valorar nuevas funcionalidades requeridas (se comprobará en valoración técnica)</li><li>Al menos 2 años de experiencia con contrato laboral en elaboración de procedimientos y manuales de operación (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en Microsoft SharePoint</li></ul>Experiencia Previa<ul><li>Desde 3 años Hasta 5 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 5 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 5 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en Microsoft SharePoint</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en Microsoft SharePoint</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 años Hasta 5 años de experiencia en gestión y administración de los entornos Microsoft SharePoint (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 5 años de experiencia en gestión y administración de la infraestructura que soporta las aplicaciones corporativas basadas en Microsoft SQL Server, Microsoft SharePoint y Microsoft Internet Information Server (experiencia con contrato laboral)</li><li>Desde 3 años Hasta 5 años de experiencia en detección, análisis y resolución de incidencias en los entornos Microsoft SQL Server y Microsoft SharePoint (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de sustitución para cubrir temporalmente 1 puesto de Administrador/a en la Gerencia de Sistemas hasta que finalice el proceso de selección de Tasa para su cobertura definitiva o contrato de duración determinada no superior a 9 meses, si procede.<br/><br/>- Jornada Laboral Completa de 37,5 h semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 20/10/2026 hasta el próximo 04/11/2026 a las 23:59 (hora peninsular).<br/><br/>En relación al proceso publicado el pasado 20/10/2026 se amplía el plazo de recepción de candidaturas desde el 25/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrador/a de Base de Datos SQL Server y SharePoint (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58305"
+ },
  "58307": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58307",
   "category": "Específica",
@@ -37374,6 +37471,98 @@
   "title": "Arquitecto/a Técnico/a o Ingeniero/a Técnico/a de Obras Públicas o Ingeniero/a Técnico/a Industrial (Tenerife)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58814"
  },
+ "58815": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58815",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58815",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Fuerteventura",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "id": "tragsa:58815",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-11",
+  "location": "Fuerteventura",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": "Fuerteventura",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-25",
+  "ref": "58815",
+  "region": "Canarias",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a Agrónomo/a, de Caminos, Canales y Puertos o Industrial en la isla de Fuerteventura.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Fuerteventura</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo en actividades de obra, su planificación y programación, así como la organización de medios y equipos asignados</li><li>Gestión documental y redacción de informes, así como la realización de replanteos y mediciones de obra</li><li>Gestiones con empresas colaboradoras, subcontratas y suministradores, así como el cumplimiento de procedimientos de compras/pedidos de materiales.</li><li>Asegurar el cumplimiento de los planes de seguridad y salud, calidad y gestión de residuos</li><li>Realizar desplazamientos puntuales fruto de su área de responsabilidad</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Ingeniería de Caminos, Canales y Puertos o Ingeniería Agrónoma (NIVEL 3MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Ingeniería de Caminos, Canales y Puertos o Ingeniería Agrónoma (NIVEL 3MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Ingeniería de Caminos, Canales y Puertos o Ingeniería Agrónoma (NIVEL 3MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en Presto</li><li>Formación acreditada en Prevención de Riesgos Laborales</li><li>Formación en AutoCAD</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en Presto</li><li>Formación acreditada en Prevención de Riesgos Laborales</li><li>Formación en AutoCAD</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en Presto</li><li>Formación acreditada en Prevención de Riesgos Laborales</li><li>Formación en AutoCAD</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada estimada 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/>- Jornada completa .<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 11/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a Agrónomo/a, de Caminos, Canales y Puertos o Industrial (Fuerteventura)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58815"
+ },
  "58816": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58816",
   "category": "Específica",
@@ -39609,6 +39798,113 @@
   "status": "open",
   "title": "Capataz/a- Obras Reconstrucción de Daños MENRRED MUNICIPIOS (Provincia Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58870"
+ },
+ "58871": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58871",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58871",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Zaragoza",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "id": "tragsa:58871",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-10",
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": "Zaragoza",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-25",
+  "ref": "58871",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Licenciado/a o Graduado/a + Máster Oficial Derecho -Apoyo a la Dinamización y al Cumplimiento del ENS en Aplicaciones Informáticas (Zaragoza)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Zaragoza</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Interpretación de normativa y apoyo jurídico en la implementación de procedimientos asociados al desarrollo de aplicaciones informáticas relativas al sector hídrico</li><li>Dinamización y preparación de documentación o requerimientos relacionados con Esquema Nacional de Seguridad (ENS), protección de datos y  otras normas en relación con los desarrollos de aplicaciones informáticas</li><li>Apoyo en los planes de pruebas funcionales de aplicaciones informáticas, validación de funcionalidades, detección de incidencias y formulación de propuestas de mejora.</li><li>Apoyo en la redacción y preparación de manuales para el desarrollo de las aplicaciones y atención a usuarios</li><li>Apoyo en la elaboración de indicadores de uso y parámetros estadísticos relacionados con las aplicaciones informáticas para cuadros de mando</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Disponer de la titulación universitaria oficial de Licenciatura o Grado + Máster del campo de estudio de Derecho y especialidades jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia (con contrato laboral y/o académico) en el ámbito de su titulación.</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B en vigor y válido en España.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Disponer de la titulación universitaria oficial de Licenciatura o Grado + Máster del campo de estudio de Derecho y especialidades jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Disponer de la titulación universitaria oficial de Licenciatura o Grado + Máster del campo de estudio de Derecho y especialidades jurídicas (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia (con contrato laboral y/o académico) en el ámbito de su titulación.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B en vigor y válido en España.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Cursos y/o formación relacionada con el Esquema Nacional de Seguridad (ENS) (mínimo 20 horas) (Adjuntar curso)</li><li>Formación asociada a metodologías de análisis de datos y/o evaluación de impacto (Adjuntar curso)</li></ul>Experiencia Previa<ul><li>Desde 6 meses Hasta 2 años de experiencia en trabajos relacionados con uso de aplicaciones y plataformas informáticas del sector público (con contrato laboral y/o académico).</li><li>Desde 6 meses Hasta 2 años de experiencia en trabajos relacionados con procedimientos y expedientes desde el ámbito jurídico (con contrato laboral y/o académico).</li></ul>Otros Factores Meritorios<ul><li>Al menos 6 meses de experiencia aplicando normativa relacionada con protección de datos y/o seguridad de la información y/o con la aplicación del Esquema Nacional de Seguridad (ENS) (con contrato laboral y/o académico) (Se valorará durante el proceso de Selección)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Cursos y/o formación relacionada con el Esquema Nacional de Seguridad (ENS) (mínimo 20 horas) (Adjuntar curso)</li><li>Formación asociada a metodologías de análisis de datos y/o evaluación de impacto (Adjuntar curso)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Cursos y/o formación relacionada con el Esquema Nacional de Seguridad (ENS) (mínimo 20 horas) (Adjuntar curso)</li><li>Formación asociada a metodologías de análisis de datos y/o evaluación de impacto (Adjuntar curso)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 2 años de experiencia en trabajos relacionados con uso de aplicaciones y plataformas informáticas del sector público (con contrato laboral y/o académico).</li><li>Desde 6 meses Hasta 2 años de experiencia en trabajos relacionados con procedimientos y expedientes desde el ámbito jurídico (con contrato laboral y/o académico).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia aplicando normativa relacionada con protección de datos y/o seguridad de la información y/o con la aplicación del Esquema Nacional de Seguridad (ENS) (con contrato laboral y/o académico) (Se valorará durante el proceso de Selección)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 10/12/2026 a las 23:59 (hora peninsular).<br/><br/>Se ofrece:<br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede. <br/>- Jornada completa de 37,5h/semana. <br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Licenciado/a o Graduado/a + Máster Oficial Derecho -Apoyo a la Dinamización y al Cumplimiento del ENS en Aplicaciones Informáticas (Zaragoza)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58871"
  },
  "58883": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58883",

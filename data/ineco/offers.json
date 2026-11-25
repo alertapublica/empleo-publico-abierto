@@ -312,7 +312,7 @@
  "3136926": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136926",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T13:37:28+00:00",
   "code": "25923",
   "company": "Ineco",
   "contract": null,
@@ -329,7 +329,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Lleida",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -367,7 +367,7 @@
   ],
   "source": "ineco",
   "source_title": "25923 - Auxiliar Inspección de infra y vía (Montagut)",
-  "status": "open",
+  "status": "closed",
   "title": "Auxiliar Inspección de infra y vía (Montagut)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3136926"
  },

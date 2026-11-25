@@ -1729,6 +1729,48 @@
   "title": "Coordinador/a Fondos - Seguridad Interior",
   "url": "https://seleccionisdefe.es/convocatoria-2653"
  },
+ "2654": {
+  "apply_url": "https://seleccionisdefe.es/registro-2654",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00376",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "id": "isdefe:2654",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-01",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-25",
+  "ref": "2654",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar Ingeniero/a Comunicaciones </p><p><strong>Titulaciones </strong></p><p>Titulación STEM, preferiblemente grado en ingeniería de telecomunicaciones</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>Apoyo a la planificación</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>Menos de 2 años</p><p>Conocimientos en:</p><ul>\n<li>Conocimientos de infraestructuras de telecomunicaciones.·    </li>\n<li>Conocimientos de sistemas de telecomunicaciones·    </li>\n<li>Conocimentos de Redes LAN/WAN</li>\n</ul><p><strong>Requisitos valorables: </strong></p><ul>\n<li>Diseño e implantación de servicios y redes inalámbricas. implantación de redes WAN/LAN  </li>\n</ul><p><strong>Inglés valorable 700 TOEIC</strong></p><p><strong>SE OFRECE CONTRATO INDEFINIDO</strong><br/>\r\n </p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a Comunicaciones (2026-T00376)",
+  "status": "open",
+  "title": "Ingeniero/a Comunicaciones",
+  "url": "https://seleccionisdefe.es/convocatoria-2654"
+ },
  "2655": {
   "apply_url": "https://seleccionisdefe.es/registro-2655",
   "category": null,
@@ -2022,5 +2064,47 @@
   "status": "open",
   "title": "Ingeniero/a de Plataformas Aéreas de Ala Rotatoria en AIX-EN-PROVENCE (FRANCIA)",
   "url": "https://seleccionisdefe.es/convocatoria-2661"
+ },
+ "2662": {
+  "apply_url": "https://seleccionisdefe.es/registro-2662",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00481 (10)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-01",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "id": "isdefe:2662",
+  "kind": null,
+  "listed_deadline": "2026-12-01",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-25",
+  "ref": "2662",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, selecciona un/a Técnico/a de mantenimiento en sistemas electrónicos y de radiofrecuencia para NASA en <strong>Robledo de Chavela.</strong></p><p><strong>Funciones habituales:</strong></p><p>Instalación y mantenimiento de equipos electrónicos y sistemas de refrigeracion de ciclo cerrado. </p><p><strong>Requisitos imprescindibles que debe cumplimentar el/la candidato/a: </strong></p><p>» Titulación: Técnico superior en mantenimiento electrónico o técnico superior en sistemas de telecomunicaciones e informáticos.</p><p>» Experiencia: menos de 4 años de experiencia total.</p><p><strong>Requisitos valorables:</strong></p><p>» Conocimientos en:    </p><ul>\n<li>Equipos de radiofrecuencia dedicados a las comunicaciones.</li>\n<li>Sistemas de refrigeracion de ciclo cerrado.    </li>\n</ul><p>» Otros: Ofimática básica y manejo básico en entornos Windows y Linux.</p><p>» Idiomas: Valorable 700 puntos TOEIC</p><p><!--ScriptorStartFragment--><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.<br/>\r\nExcepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.<br/>\r\nEl personal interno se regirá por la política de la empresa.)</em></p><p>Indispensable carnet de conducir y vehículo propio.</p><p><strong>Se ofrece: Contrato Indefinido.</strong></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Técnico/a de mantenimiento en sistemas electrónicos y de RF (NASA, Robledo de Chavela) (2025-T00481) (10)",
+  "status": "open",
+  "title": "Técnico/a de mantenimiento en sistemas electrónicos y de RF (NASA, Robledo de Chavela)",
+  "url": "https://seleccionisdefe.es/convocatoria-2662"
  }
 }

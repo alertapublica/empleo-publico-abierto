@@ -575,6 +575,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/PRVIN_P3_Adjudicaci%C3%B3n-bolsa-de-reserva_PUBLICO.pdf",
   "via": "otro"
  },
+ "rtve:bb74c6d7a410": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-25",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-25T13:37:28+00:00",
+  "location": null,
+  "process": "Convocatoria 1/2022 · Ingeniería técnica – Industrial · Proceso Libre",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Listado definitivo rectificativo de adjudicacion de plazas P3",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/INGT-IND_P3_Listado-definitivo-rectificativo-de-adjudicacion-de-plazas-P3_PUBLICO.pdf",
+  "via": "otro"
+ },
  "rtve:c12bcf43d051": {
   "access": "libre",
   "apply_url": null,
