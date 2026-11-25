@@ -36885,6 +36885,98 @@
   "title": "Arquitecto/a Técnico/a o Graduado/a en Edificación (Cuenca)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58803"
  },
+ "58805": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58805",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58805",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Recursos Humanos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-25T14:07:25+00:00",
+  "id": "tragsa:58805",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-11",
+  "location": "Sede Madrid Tragsa",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-25",
+  "ref": "58805",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Administrativo/a para dar apoyo en la Gerencia de Organización y Compensación en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsa<br/>Dirección: Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Colaborar en los procesos de elaboración de las nóminas mensuales de las empresas del Grupo, mediante la grabación y revisión de datos variables, entre otros, dietas, kilometraje, partes de incapacidad temporal, conceptos de devengo variables, etc., así como, en la preparación y gestión de finiquitos, recopilando la información necesaria para su elaboración, revisión y puesta a disposición de los interesados.</li><li>Gestión documental, física y digital.</li><li>Gestión de las ayudas de comedor, incluyendo la tramitación de altas, bajas y modificaciones de personas trabajadoras en el sistema. Gestión de tarjetas, cargas de los devengos, generados en cumplimiento de los procedimientos internos, y procesos de facturación asociadas.</li><li>Atención a los/las trabajadores/as del Grupo, en reclamaciones o solicitudes de información, en las materias de su actividad, y su seguimiento,</li><li>Elaboración y gestión de informes y documentos propios de la Gerencia que se puedan requerir.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en administración de personal (Contratación, Nóminas y/o Seguros Sociales)</li><li>Formación complementaria de al menos 2000h en Administración y Finanzas</li></ul>Otros Factores Meritorios<ul><li>Manejo a nivel medio o superior de Microsoft Office (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en el uso de GPCN, People Soft y/o Kelio (se comprobará en valoración técnica)</li><li>Al menos 1 año de experiencia académica y/o con contrato laboral en el área compensación en RRHH</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en administración de personal (Contratación, Nóminas y/o Seguros Sociales)</li><li>Formación complementaria de al menos 2000h en Administración y Finanzas</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en administración de personal (Contratación, Nóminas y/o Seguros Sociales)</li><li>Formación complementaria de al menos 2000h en Administración y Finanzas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Manejo a nivel medio o superior de Microsoft Office (se comprobará en valoración técnica)</li><li>Experiencia académica y/o con contrato laboral en el uso de GPCN, People Soft y/o Kelio (se comprobará en valoración técnica)</li><li>Al menos 1 año de experiencia académica y/o con contrato laboral en el área compensación en RRHH</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede. <br/>- Jornada completa <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 25/11/2026 hasta el próximo 11/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a - Gerencia Organización y Compensación (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58805"
+ },
  "58808": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58808",
   "category": "Específica",
