@@ -42,5 +42,15 @@
   "before": "2026-11-16",
   "kind": "deadline_changed",
   "offer": "hunosa:P2026.02"
+ },
+ {
+  "at": "2026-11-25T16:09:11+00:00",
+  "kind": "closed",
+  "offer": "hunosa:P2026.02"
+ },
+ {
+  "at": "2026-11-25T16:09:11+00:00",
+  "kind": "closed",
+  "offer": "hunosa:P2026.03"
  }
 ]
