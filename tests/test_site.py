@@ -978,6 +978,15 @@ class Site(unittest.TestCase):
         self.assertIn("Inscripción abierta", html)
         self.assertIn("https://plataforma.example/entrar", html)
 
+    def test_inscripcion_abierta_sin_plazo_ni_enlace_no_rompe_la_tarjeta(self):
+        # CESCE: la web dice «Abierta» y el PDF no deja leer el plazo.
+        notice = {"source": "cesce", "process": "Convocatoria X", "title": "Convocatoria", "date": "2026-11-20",
+                  "url": "https://cesce.example/convocatoria.pdf", "process_url": "https://cesce.example/",
+                  "state": "abierto", "deadline": None, "apply_url": None}
+        html = site.process_card([notice], {"cesce": "CESCE"}, NOW.date(), "")
+        self.assertIn("<strong>Inscripción abierta.</strong> Plazo: no consta</p>", html)
+        self.assertNotIn("Inscribirse en la plataforma oficial", html)
+
     def test_filtro_de_situacion_de_los_procesos_en_marcha(self):
         html = self.read("anuncios/index.html")
         self.assertIn('<select id="situacion" name="situacion"><option value="">Todas</option>'
