@@ -459,7 +459,7 @@
  "55752": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=55752",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "55752",
   "company": "Tragsa",
   "contract": null,
@@ -476,7 +476,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Burgos",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-20",
   "parent_ref": null,
   "place": "Burgos",
@@ -499,7 +499,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jefe/a de Brigada ELIF_Cobertura de puestos y creación de listas de espera (Burgos)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=CTI&jobid=55752"
  },
@@ -1035,7 +1035,7 @@
  "56477": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56477",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "56477",
   "company": "Tragsatec",
   "contract": null,
@@ -1052,7 +1052,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Comunidad de Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
@@ -1140,7 +1140,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Ingeniero/a Caminos, Canales y Puertos – Apoyo a Redes de Transportes - Carreteras, Ferrocarriles, Puertos y Aeropuertos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56477"
  },
@@ -5388,7 +5388,7 @@
  "57860": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57860",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "57860",
   "company": "Tragsatec",
   "contract": null,
@@ -5403,7 +5403,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Sevilla",
@@ -5471,14 +5471,14 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Diplomado/a o Graduado/a en Empresariales, ADE, Económicas o Derecho - Gestión Ayudas Fondos Europeos (Sevilla)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57860"
  },
  "57867": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57867",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "57867",
   "company": "Tragsa",
   "contract": null,
@@ -5493,7 +5493,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Comunidad de La Rioja",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-09-15",
   "parent_ref": null,
   "place": null,
@@ -5571,7 +5571,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Encargado/a Técnico/a _ Obras Edificación (La Rioja)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57867"
  },
@@ -5773,7 +5773,7 @@
  "57934": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57934",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "57934",
   "company": "Tragsa",
   "contract": null,
@@ -5788,7 +5788,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Comunidad de La Rioja",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -5866,7 +5866,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Encargado/a Técnico/a _ Obras (Navarra - La Rioja)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57934"
  },
@@ -6890,7 +6890,7 @@
  "58032": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58032",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58032",
   "company": "Tragsa",
   "contract": null,
@@ -6905,7 +6905,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Cáceres",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Cáceres",
@@ -6983,7 +6983,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Encargado/a Técnico/a de Obras-(Cáceres)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58032"
  },
@@ -10351,7 +10351,7 @@
  "58193": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58193",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58193",
   "company": "Tragsatec",
   "contract": null,
@@ -10366,7 +10366,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Sevilla",
@@ -10444,7 +10444,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Diplomados/as o Graduados/as en Administración y Dirección de Empresas, Marketing e Investigación de Mercados, Marketing, Finanzas y Contabilidad o Economía y Finanzas - Apoyo a Gestión Fondos Europeos (Sevilla)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58193"
  },
@@ -11928,7 +11928,7 @@
  "58263": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58263",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58263",
   "company": "Tragsatec",
   "contract": null,
@@ -11943,7 +11943,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Sevilla",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Sevilla",
@@ -12011,7 +12011,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Oficiales/as 1ª Administrativos/as - Gestión y tramitación de expedientes de subvenciones (Sevilla)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58263"
  },
@@ -25177,7 +25177,7 @@
  "58604": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58604",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58604",
   "company": "Tragsa",
   "contract": null,
@@ -25192,7 +25192,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Ávila",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Ávila",
@@ -25265,14 +25265,14 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Ingeniería Técnica y/o Grado en Ingeniería Forestal_Obras Forestales (Ávila)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58604"
  },
  "58605": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58605",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58605",
   "company": "Tragsa",
   "contract": null,
@@ -25287,7 +25287,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Las Palmas",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Mogán, Gran Canaria",
@@ -25360,7 +25360,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Graduado/a o Licenciado/a o Graduado/a + máster universitario oficial o Ingeniero/a Superior o Ingeniero/a Técnico/a - Aguas (Mogán, Gran Canaria)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58605"
  },
@@ -25657,7 +25657,7 @@
  "58609": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58609",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58609",
   "company": "Tragsa",
   "contract": null,
@@ -25672,7 +25672,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Segovia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Segovia",
@@ -25750,14 +25750,14 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Ingeniero/a Técnico/a de Obras Públicas o Graduado/a en Ingenieria Civil_Parques Nacionales (Segovia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58609"
  },
  "58613": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58613",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58613",
   "company": "Tragsatec",
   "contract": null,
@@ -25772,7 +25772,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Zaragoza",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Zaragoza",
@@ -25855,7 +25855,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Titulado/a Universitario/a en ADE, Economía, Empresariales o Finanzas - Apoyo Económico/Financiero a Ayudas (Zaragoza)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58613"
  },
@@ -26048,6 +26048,98 @@
   "status": "open",
   "title": "Ingeniero/a de Caminos, Canales y Puertos - Oasis Palmeral (Gran Canaria)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58619"
+ },
+ "58620": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58620",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58620",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Producción/Mercados/I.Agrarias",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-25T05:07:23+00:00",
+  "id": "tragsa:58620",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-10",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-24",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-24",
+  "ref": "58620",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 2 Administrativos/as - Apoyo Tramitación de Expedientes en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Validación y cotejo de expedientes.</li><li>Colocación de expedientes físicos en armarios de archivo, incluyendo archivadores AZ a distintas alturas, con uso de banquetas o escaleras.</li><li>Movimiento de armarios móviles de archivos.</li><li>Gestión de valija (entrada y salida de gavetas de expedientes) utilizando carritos para su envío/recepción.</li><li>Inventario de fondos y escaneado de expedientes bajo demanda.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o al menos 12 meses de experiencia con contrato laboral, como administrativo/a.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o al menos 12 meses de experiencia con contrato laboral, como administrativo/a.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación de FP II o CFGS en la rama administrativa (titulación homologada en España) o al menos 12 meses de experiencia con contrato laboral, como administrativo/a.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en ofimática</li></ul>Otros Factores Meritorios<ul><li>Poseer desde 6 meses hasta 2 años de experiencia en gestión y organización de archivos físicos de gran volumen (experiencia con contrato laboral, se comprobará en la valoración técnica)</li><li>Poseer desde 6 meses hasta 2 años de experiencia en digitalización de documentos (experiencia con contrato laboral)</li><li>Poseer desde 6 meses hasta 2 años de experiencia en gestión de inventario de fondos (experiencia con contrato laboral, se comprobará en la valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en ofimática</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en ofimática</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Poseer desde 6 meses hasta 2 años de experiencia en gestión y organización de archivos físicos de gran volumen (experiencia con contrato laboral, se comprobará en la valoración técnica)</li><li>Poseer desde 6 meses hasta 2 años de experiencia en digitalización de documentos (experiencia con contrato laboral)</li><li>Poseer desde 6 meses hasta 2 años de experiencia en gestión de inventario de fondos (experiencia con contrato laboral, se comprobará en la valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/> <br/>- Contrato de duración determinada con una duración estimada de 5 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada Completa de 37,50 h semanales.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 24/11/2026 hasta el próximo 10/12/2026 a las 23:59h (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativos/as - Apoyo Tramitación de Expedientes (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58620"
  },
  "58625": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58625",
@@ -26759,7 +26851,7 @@
  "58636": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58636",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58636",
   "company": "Tragsatec",
   "contract": null,
@@ -26774,7 +26866,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "València/Valencia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Paterna, Valencia",
@@ -26857,7 +26949,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Diplomados/as o Graduados/as en Ciencias Empresariales o ADE - Gestión y seguimiento proyectos DANA (Paterna, Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58636"
  },
@@ -28702,7 +28794,7 @@
  "58661": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58661",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58661",
   "company": "Tragsa",
   "contract": null,
@@ -28717,7 +28809,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Ávila",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "Ávila",
@@ -28795,7 +28887,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Administrativo/a_Incendios (Ávila)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58661"
  },
@@ -29998,7 +30090,7 @@
  "58683": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58683",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58683",
   "company": "Tragsa",
   "contract": null,
@@ -30013,7 +30105,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Mallorca",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": "Mallorca - Baleares",
@@ -30081,7 +30173,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Oficial/a Especialista - Apoyo Obras (Mallorca - Baleares)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58683"
  },
@@ -30811,7 +30903,7 @@
  "58703": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58703",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58703",
   "company": "Tragsatec",
   "contract": null,
@@ -30826,7 +30918,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "València/Valencia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": "València/Valencia",
@@ -30894,7 +30986,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Licenciado/a o Graduado/a + Máster o Ingeniero/a o Arquitecto/a - Apoyo Coordinación Proyectos Emergencias (València/Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58703"
  },
@@ -31701,7 +31793,7 @@
  "58719": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58719",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58719",
   "company": "Tragsatec",
   "contract": null,
@@ -31716,7 +31808,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Murcia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-10",
   "parent_ref": null,
   "place": null,
@@ -31789,7 +31881,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Titulado/a Universitario/a - Tramitación Verificaciones y Auditoría Fondos Europeos Estructurales (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58719"
  },
@@ -33343,7 +33435,7 @@
  "58752": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58752",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "58752",
   "company": "Tragsatec",
   "contract": null,
@@ -33360,7 +33452,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-24",
   "location": "Embarcado/a en Buque Oceanográfico",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
@@ -33438,7 +33530,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jefe/a de Máquinas (Buque Oceanográfico)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58752"
  },

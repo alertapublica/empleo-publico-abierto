@@ -2,7 +2,7 @@
  "DO-DE-26-017": {
   "apply_url": "https://www.enresa.es/documentos/C.E._multiple_DO-DE-26-017-018.pdf",
   "category": "Acceso libre",
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "DO-DE-26-017",
   "company": "Enresa",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-24",
   "location": null,
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -40,7 +40,7 @@
   ],
   "source": "enresa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "PERSONAL TITULADO DEL DEPARTAMENTO DE SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN",
   "url": "https://www.enresa.es/esp/empleo"
  },

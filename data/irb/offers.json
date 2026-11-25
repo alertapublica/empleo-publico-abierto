@@ -322,7 +322,7 @@
  "8699011": {
   "apply_url": "https://recruitment.irbbarcelona.org/jobs/8699011-postdoctoral-fellow-ref-pd-26-21",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": "PD/26/21",
   "company": "IRB Barcelona",
   "contract": null,
@@ -337,7 +337,7 @@
   "kind": null,
   "listed_deadline": "2026-11-24",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -355,7 +355,7 @@
   ],
   "source": "irb",
   "source_title": "Postdoctoral Fellow (Ref. PD/26/21)",
-  "status": "open",
+  "status": "closed",
   "title": "Postdoctoral Fellow",
   "url": "https://recruitment.irbbarcelona.org/jobs/8699011-postdoctoral-fellow-ref-pd-26-21"
  },

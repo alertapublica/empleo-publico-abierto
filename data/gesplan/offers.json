@@ -69,7 +69,7 @@
  "gc-arquitecto-a-tecnico-a-proyectos-servicios-e-infraestructuras-2": {
   "apply_url": "https://www.gesplan.es/ofertas_de_empleo/gc-arquitecto-a-tecnico-a-proyectos-servicios-e-infraestructuras-2/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": null,
   "company": "GESPLAN",
   "contract": "Indefinido (100)",
@@ -86,7 +86,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-24",
   "location": "Gran Canaria",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -129,7 +129,7 @@
   ],
   "source": "gesplan",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "GC Arquitecto/a Técnico/a Proyectos, Servicios e Infraestructuras",
   "url": "https://www.gesplan.es/ofertas_de_empleo/gc-arquitecto-a-tecnico-a-proyectos-servicios-e-infraestructuras-2/"
  },

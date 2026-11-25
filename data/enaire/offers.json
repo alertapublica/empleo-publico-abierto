@@ -36,5 +36,47 @@
   "status": "open",
   "title": "Convocatoria externa titulados/as niveles A y B",
   "url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0"
+ },
+ "20261124": {
+  "apply_url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "ENAIRE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-18",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T05:07:23+00:00",
+  "id": "enaire:20261124",
+  "kind": null,
+  "listed_deadline": "2026-12-18",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-24",
+  "ref": "20261124",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Las bases, las plazas y las condiciones están en la web oficial de ENAIRE, junto a esta convocatoria en el listado.</p>",
+    "level": 2,
+    "title": "Bases e inscripción"
+   }
+  ],
+  "source": "enaire",
+  "source_title": null,
+  "status": "open",
+  "title": "Convocatoria externa controladores 2026",
+  "url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0"
  }
 }

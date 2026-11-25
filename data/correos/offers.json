@@ -2,7 +2,7 @@
  "1413479333": {
   "apply_url": "https://empleo.correos.com/talentcommunity/apply/1413479333/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-25T05:07:23+00:00",
   "code": null,
   "company": "Correos",
   "contract": null,
@@ -17,7 +17,7 @@
   "kind": "practicas",
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -35,7 +35,7 @@
   ],
   "source": "correos",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Jóvenes Talentos Correos Express 2026-2027 Oficina del CIO",
   "url": "https://empleo.correos.com/job/Madrid-J%C3%B3venes-Talentos-Correos-Express-2026-2027-Oficina-del-CIO-Madr/1413479333/"
  },

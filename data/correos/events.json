@@ -89,5 +89,10 @@
   "before": "2026-11-13",
   "kind": "deadline_changed",
   "offer": "correos:1453032233"
+ },
+ {
+  "at": "2026-11-25T05:07:23+00:00",
+  "kind": "closed",
+  "offer": "correos:1413479333"
  }
 ]
