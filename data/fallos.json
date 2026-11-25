@@ -1,7 +1,12 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 128,
+  "lecturas": 129,
+  "resultado": "error"
+ },
+ "fgv": {
+  "desde": "2026-11-25T12:37:29+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
