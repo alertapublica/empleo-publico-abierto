@@ -113,6 +113,24 @@
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco#section-10",
   "via": "tasa"
  },
+ "ineco:085b5e71b779": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-25",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-25T10:07:26+00:00",
+  "location": null,
+  "process": "Tasa de reposición ordinaria 2026 (TRO26)",
+  "process_url": "https://inecoreposicionordinaria.people-experts.com/ineco",
+  "source": "ineco",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "PUESTOS DEL BLOQUE 2 DE LA TASA DE REPOSICIÓN ORDINARIA 2026 EN LA EMPRESA INECO CON PUBLICACIÓN DE RESULTADOS POSPUESTA.",
+  "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-7",
+  "via": "tasa"
+ },
  "ineco:0a685909f914": {
   "access": "libre",
   "apply_url": null,
@@ -3414,6 +3432,24 @@
   "system": "concurso-oposicion",
   "title": "PUBLICACIÓN DE LA RELACIÓN DE PERSONAS CANDIDATAS QUE OBTIENEN PLAZA EN LOS PUESTOS POSPUESTOS TR23-EEW-048, TR23-ESS-021 Y TR23-EXO-031 DEL BLOQUE 2 DE LA TASA DE REPOSICIÓN ESPECÍFICA 2023 EN LA EMPRESA INECO.",
   "url": "https://inecoreposicionespecifica.people-experts.com/ineco#section-12",
+  "via": "tasa"
+ },
+ "ineco:dc4ecc240170": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-25",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-25T10:07:26+00:00",
+  "location": null,
+  "process": "Tasa de reposición ordinaria 2026 (TRO26)",
+  "process_url": "https://inecoreposicionordinaria.people-experts.com/ineco",
+  "source": "ineco",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "PUBLICACIÓN DEL LISTADO ACTUALIZADO CON LAS CALIFICACIONES DEFINITIVAS OBTENIDAS EN LA FASE DE OPOSICIÓN Y VALORACIÓN DEFINITIVA DE MÉRITOS DE LAS PERSONAS CANDIDATAS ADMITIDAS EN LOS PUESTOS DEL BLOQUE 2 DE LA RELACIÓN DE PUESTOS OFERTADOS DEL PROCESO SELECTIVO GENERAL CORRESPONDIENTES A LA TASA DE REPOSICIÓN ORDINARIA 2026 EN LA EMPRESA INECO, INCLUYENDO LA RESOLUCIÓN DE PUESTOS POSPUESTOS, A EXCEPCIÓN DE LOS PUESTOS TRO26-ECE-003, TRO26-ECE-008, TRO26-EEM-024, TRO26-ESO-005, TRO26-ESS-002, TRO26-ESS-013, TRO26-EXO-025 Y TRO26-OPS-001.",
+  "url": "https://inecoreposicionordinaria.people-experts.com/ineco#section-7",
   "via": "tasa"
  },
  "ineco:dca270ccd7e5": {

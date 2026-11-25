@@ -409,5 +409,52 @@
   "status": "open",
   "title": "UN/A TÉCNICO/A DE GESTIÓN DE LA INVESTIGACIÓN (M3)",
   "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/888"
+ },
+ "889": {
+  "apply_url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/889",
+  "category": null,
+  "closed_at": null,
+  "code": "2026/75",
+  "company": "FISABIO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-25T10:07:26+00:00",
+  "id": "fisabio:889",
+  "kind": null,
+  "listed_deadline": "2026-12-10",
+  "location": "Comunitat Valenciana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-25",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "889",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>RECOMENDACIONES A TENER EN CUENTA ANTES DE INICIAR LA INSCRIPCION:</p><p>Lea la convocatoria poniendo especial atención en la forma y documentos a presentar. Lea las instrucciones para realizar la inscripción a través de la plataforma. Recuerde que, en caso de haber algún error, las solicitudes podrán recuperarse introduciendo el mismo usuario y contraseña que indicará al presentar la solicitud (aconsejamos que recuerde estos datos). Recuerde que el único documento que debe ir firmado digitalmente es la declaración responsable de veracidad de datos. Antes de enviar su solicitud, revise la documentación presentada, ya que su candidatura será admitida únicamente cuando se compruebe que la documentación cumple con todos los requisitos expuestos en la convocatoria. Tras enviar su solicitud, recibirá un correo con un resguardo en pdf. En caso de no recibirlo, por favor, contactad en el correo electrónico: rrhh@fisabio.es</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/DescargarDocumentoBases/889\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "fisabio",
+  "source_title": "2026/75 UN/A TÉCNICO/A DE INVESTIGACIÓN (T3)",
+  "status": "open",
+  "title": "UN/A TÉCNICO/A DE INVESTIGACIÓN (T3)",
+  "url": "https://fisabio.fundanetsuite.com/convocatoriaspropias/es/Convocatorias/VerConvocatoria/889"
  }
 }
