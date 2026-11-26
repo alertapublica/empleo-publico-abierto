@@ -11221,6 +11221,68 @@
   "title": "Ingeniero/a Asistencia Obra Ferroviara Despliegue CTC Ferroviario",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371800"
  },
+ "3371801": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371801",
+  "category": null,
+  "closed_at": null,
+  "code": "29006",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T16:37:24+00:00",
+  "id": "ineco:3371801",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Vizcaya",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "3371801",
+  "region": "País Vasco",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Inspector/a Material Rodante: Personal que lleva a cabo el seguimiento de la fabricación y la inspección de pruebas finales del material rodante.<br/>1.\tRealización de FAI y verificación de los procesos especiales de fabricación.<br/>2.\tSeguimiento de la fabricación y verificación de la aplicación de los planes de control establecidos.<br/>3.\tInspección de pruebas serie en factoría y vía.<br/>4.\tRedacción de informes de inspección y de seguimiento de fabricación.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación: Grado en Ingeniería Industrial - Grado en Ingeniería Mecánica. <br/>- Experiencia en: En control y seguimiento de la fabricación de material rodante o estructuras mecano soldadas de aluminio.<br/>- Años de experiencia en el puesto: Al menos 2 años. <br/>- Programas: MS Word - Usuario, MS Excel - Usuario. <br/>- Idiomas: Inglés - B2.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>-\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>-\tContamos con beneficios flexibles adaptables a cada persona.<br/>-\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>-\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>-\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29006 - Inspector/a de Material Rodante Irún",
+  "status": "open",
+  "title": "Inspector/a de Material Rodante Irún",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371801"
+ },
  "3371802": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3371802",
   "category": null,
@@ -13824,6 +13886,68 @@
   "status": "open",
   "title": "Beca de Gobierno del Dato e IA",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382584"
+ },
+ "3382586": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382586",
+  "category": null,
+  "closed_at": null,
+  "code": "29075",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T16:37:24+00:00",
+  "id": "ineco:3382586",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "3382586",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Buscamos un/a Técnico/a Especialista en Aeronavegabilidad Inicial y Continuada para incorporarse a proyectos vinculados al ámbito de la aeronavegabilidad, participando en actividades de inspección, supervisión y certificación relacionadas con el mantenimiento y la seguridad de las aeronaves. <br/>La persona seleccionada desarrollará funciones técnicas asociadas a los procesos normativos, operativos y de mantenimiento aeronáutico, colaborando en actuaciones relacionadas con la aeronavegabilidad inicial y continuada dentro del sector aeronáutico.<br/><br/>Funciones:<br/>- Realizar actividades de inspección y supervisión en materia de aeronavegabilidad inicial y continuada.<br/>- Analizar y aplicar los procesos técnicos, normativos y operativos asociados al mantenimiento de aeronaves.<br/>- Participar en actuaciones relacionadas con las normativas y requisitos Part M, Part 145, Part 147, Parte 66 y CAMO.<br/>- Colaborar en actividades de certificación y auditoría aeronáutica, contribuyendo al mantenimiento de los estándares de seguridad operacional.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación universitaria en el ámbito aeronáutico, preferentemente Grado en Gestión y Operaciones del Transporte Aéreo, Máster en Sistemas del Transporte Aéreo u otras titulaciones afines.<br/>- Experiencia superior a 2 años en el sector aeronáutico y al menos 1 año desempeñando funciones relacionadas con aeronavegabilidad inicial y continuada.<br/>- Valorable aportar experiencia en inspección y supervisión de organizaciones y normativa Part M, Part 145, Part 147, Parte 66 y CAMO.<br/>- Conocimientos del sector de la aeronavegabilidad y de los procesos técnicos, normativos y operativos asociados al mantenimiento y la seguridad de las aeronaves.<br/>- Conocimientos en Seguridad Operacional Aeronáutica y Certificación y Auditoría Aeronáutica.<br/>- Nivel de inglés C1.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la transparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29075- Técnico/a especialista en aeronavegabilidad inicial y continuada",
+  "status": "open",
+  "title": "Técnico/a especialista en aeronavegabilidad inicial y continuada",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382586"
  },
  "3382598": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382598",
