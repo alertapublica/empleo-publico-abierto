@@ -1,17 +1,47 @@
 {
+ "bsm": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "correos": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 157,
+  "lecturas": 158,
+  "resultado": "error"
+ },
+ "fgc": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "ibsal": {
   "desde": "2026-11-26T09:37:30+00:00",
-  "lecturas": 7,
+  "lecturas": 8,
   "resultado": "error"
  },
  "ifapa": {
   "desde": "2026-11-26T09:07:24+00:00",
-  "lecturas": 8,
+  "lecturas": 9,
+  "resultado": "error"
+ },
+ "navantia": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "renfe": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepi": {
+  "desde": "2026-11-26T13:07:29+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
