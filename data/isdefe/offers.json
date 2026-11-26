@@ -2358,5 +2358,47 @@
   "status": "open",
   "title": "Coordinador/a de proyectos CIS en Operaciones e Inteligencia",
   "url": "https://seleccionisdefe.es/convocatoria-2668"
+ },
+ "2670": {
+  "apply_url": "https://seleccionisdefe.es/registro-2670",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00432",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T09:37:30+00:00",
+  "id": "isdefe:2670",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "2670",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Auditor/a MPOA para proyecto EAU</strong>.</p><p><strong>Titulaciones:</strong></p><ul>\n<li>Grado en Ingeniería (técnica, superior, grado). </li>\n</ul><p><strong>Funciones habituales:</strong></p><ul>\n<li>Auditoría y certificación de organizaciones de producción según la normativa UAEMAR 21 G en Emiratos Árabes.</li>\n<li>Auditoría y certificación de organizaciones de producción según la normativa PERAM 21 subparte G en España.</li>\n<li>Apoyar en otras labores adicionales que pudieran solicitarse desde el cliente.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Grado en Ingeniería (técnica, superior, grado). </li>\n<li>Experiencia en entorno aeronáutico en:<br/>\r\n\t- Organizaciones de mantenimiento aprobadas según normativa145 (EASA o PERAM), y/o<br/>\r\n\t- Organizaciones de producción aprobadas según normativa 21 G (EASA o PERAM).</li>\n<li>Conocimientos en normativa aprobación organizaciones (145 y/o 21 G EASA o PERAM).</li>\n</ul><p><strong>Requisitos valorables:</strong></p><ul>\n<li>Experiencia laboral en sistemas de calidad de organizaciones aprobadas según normativa EASA o PERAM.</li>\n<li>Experiencia laboral realizando auditorías de aeronavegabilidad o calidad.</li>\n<li>Experiencia laboral en CAMOs y/o organizaciones de formación para mecánicos de mantenimiento aeronáutico</li>\n<li>Experiencia laboral en el ámbito de Defensa</li>\n<li>Experiencia laboral en proyectos internacionales</li>\n<li>Conocimientos de normativa de certificación de continuing airworthiness \r\n\t<ul>\n<li>EASA, EMAR o PERAM</li>\n<li>145, 147, 66, M o CAMO</li>\n</ul>\n</li>\n<li>Nivel de inglés: valorable 700 puntos TOEIC.</li>\n</ul><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.</em><br/>\n<em>Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.</em><br/>\n<em>El personal interno se regirá por la política de la empresa).</em></p><p><strong>Se ofrece: Contrato Indefinido.</strong></p><p><a href=\"https://seleccionisdefe.es/registro_datos_personales-2670\">INSCRÍBETE</a></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Auditor/a MPOA para proyecto EAU (2026-T00432)",
+  "status": "open",
+  "title": "Auditor/a MPOA para proyecto EAU",
+  "url": "https://seleccionisdefe.es/convocatoria-2670"
  }
 }
