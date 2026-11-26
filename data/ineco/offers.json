@@ -13701,6 +13701,68 @@
   "title": "Beca de Gobierno del Dato e IA",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382584"
  },
+ "3382986": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382986",
+  "category": null,
+  "closed_at": null,
+  "code": "29123",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T08:07:24+00:00",
+  "id": "ineco:3382986",
+  "kind": "beca",
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "3382986",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Participación y apoyo en proyectos relacionados con el análisis y explotación de datos, colaborando en la recopilación, preparación, tratamiento y análisis de información procedente de distintas fuentes. <br/>- Apoyo en la elaboración de análisis estadísticos, indicadores, cuadros de mando y visualizaciones que faciliten la interpretación de los datos y la toma de decisiones. <br/>- Colaboración en el desarrollo y evaluación de modelos analíticos y técnicas de analítica avanzada y aprendizaje automático. <br/>- Apoyo en la identificación de casos de uso y en la aplicación de soluciones basadas en datos a problemas reales de negocio y de gestión.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Titulación: Estar cursando un Grado en Análisis de Datos o titulación universitaria equivalente relacionada con analítica y ciencia de datos. Formación Profesional: Inteligencia Artificial y Big Data; Grado en Ciencias de Datos e Inteligencia Artificial, Grado en Ingeniería de Computadores, Grado en Ingeniería Informática, Grado en Ingeniería y Sistemas de Datos, Ingeniería Informática, Ingeniería técnica Informática, Master en Ciencia de Datos, Master en Desarrollo, Master en Ingeniería del Software y Otros.<br/>- Conocimientos académicos de estadística, análisis y tratamiento de datos.<br/>- Conocimientos básicos de programación aplicada al análisis de datos.<br/>- Conocimientos de tratamiento, consulta y explotación de bases de datos.<br/>- Capacidad para realizar análisis y visualización de información y comunicar los resultados obtenidos.<br/>- Interés por la analítica avanzada, Machine Learning, Inteligencia Artificial y aplicación de los datos a problemas reales.<br/>- Capacidad de aprendizaje, razonamiento analítico y trabajo en equipo.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¡En INECO apostamos por el Talento Joven!<br/>Ofrecemos la oportunidad de realizar las prácticas formativas dentro de un equipo real de trabajo, donde serás mentorizado y acompañado durante todo el proceso para tu crecimiento profesional en la empresa.<br/>Ineco tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional.<br/>Formarás parte de proyectos punteros tanto nacionales como internacionales, con un plan de desarrollo y formación personalizada. Con la oportunidad de participar en programas de formación de alto valor añadido como foros de gran relevancia, además de tener polivalencia para rotar en diferentes disciplinas, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad e igualdad de oportunidades.<br/>Somos un equipo multidisciplinar de trabajo que prioriza la innovación, orientación al logro, adaptación al cambio, flexibilidad y el trabajo en equipo.<br/>¡Únete al equipo Ineco!<br/>¡Dale un impulso a tu carrera profesional!</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29123 - Beca de Análisis de Datos y/o Business Intelligence",
+  "status": "open",
+  "title": "Beca de Análisis de Datos y/o Business Intelligence",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382986"
+ },
  "3382987": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382987",
   "category": null,
