@@ -10356,7 +10356,7 @@
  "3367444": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367444",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-26T15:07:25+00:00",
   "code": "28912",
   "company": "Ineco",
   "contract": null,
@@ -10373,7 +10373,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -10411,7 +10411,7 @@
   ],
   "source": "ineco",
   "source_title": "28912 - Técnico/a de Contratación",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a de Contratación",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3367444"
  },
