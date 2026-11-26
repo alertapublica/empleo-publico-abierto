@@ -17,6 +17,24 @@
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=885",
   "via": "bolsa"
  },
+ "gpex:2fbdd9def521": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T05:07:23+00:00",
+  "location": null,
+  "process": "GPEX convoca una oferta de empleo para un perfil de BC26383 Personal Técnico Especialista Superior",
+  "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=897",
+  "source": "gpex",
+  "state": "curso",
+  "system": null,
+  "title": "GPEX convoca una oferta de empleo para un perfil de BC26383 Personal Técnico Especialista Superior",
+  "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=897",
+  "via": "bolsa"
+ },
  "gpex:43d198071553": {
   "access": null,
   "apply_url": null,
@@ -155,7 +173,7 @@
   "process": "GPEX convoca una oferta de empleo para un perfil de BC26367 Personal Técnico Especialista Medio",
   "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=895",
   "source": "gpex",
-  "state": "curso",
+  "state": "retirado",
   "system": null,
   "title": "GPEX convoca una oferta de empleo para un perfil de BC26367 Personal Técnico Especialista Medio",
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=895",
@@ -212,6 +230,24 @@
   "system": null,
   "title": "GPEX convoca una oferta de empleo para un perfil de BC26378 Personal Técnico de Apoyo",
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=892",
+  "via": "bolsa"
+ },
+ "gpex:f418c0a7d2ed": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T05:07:23+00:00",
+  "location": null,
+  "process": "GPEX convoca una oferta de empleo para un perfil de BC26382 Personal Técnico Especialista Superior",
+  "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=896",
+  "source": "gpex",
+  "state": "curso",
+  "system": null,
+  "title": "GPEX convoca una oferta de empleo para un perfil de BC26382 Personal Técnico Especialista Superior",
+  "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=896",
   "via": "bolsa"
  },
  "gpex:fd2693be3141": {

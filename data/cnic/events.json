@@ -63,5 +63,25 @@
   "at": "2026-11-23T14:37:33+00:00",
   "kind": "new",
   "offer": "cnic:PREDOC-EL-11.26"
+ },
+ {
+  "at": "2026-11-26T05:07:23+00:00",
+  "kind": "closed",
+  "offer": "cnic:POSTDOC-DF-ARCADIA2-CM-10.26"
+ },
+ {
+  "at": "2026-11-26T05:07:23+00:00",
+  "kind": "closed",
+  "offer": "cnic:Postdoc-ARR-10.26"
+ },
+ {
+  "at": "2026-11-26T05:07:23+00:00",
+  "kind": "closed",
+  "offer": "cnic:TTSI-UVV-10.26"
+ },
+ {
+  "at": "2026-11-26T05:07:23+00:00",
+  "kind": "closed",
+  "offer": "cnic:TTSII-VF-10.26"
  }
 ]

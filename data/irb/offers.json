@@ -162,7 +162,7 @@
  "8525941": {
   "apply_url": "https://recruitment.irbbarcelona.org/jobs/8525941-postdoctoral-fellow-on-multi-omics-analyses-and-biological-data-sciences-ref-pd-26-18",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-26T05:07:23+00:00",
   "code": "PD/26/18",
   "company": "IRB Barcelona",
   "contract": null,
@@ -177,7 +177,7 @@
   "kind": null,
   "listed_deadline": "2026-11-25",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -195,7 +195,7 @@
   ],
   "source": "irb",
   "source_title": "Postdoctoral Fellow on Multi-omics Analyses and Biological Data Sciences (Ref. PD/26/18)",
-  "status": "open",
+  "status": "closed",
   "title": "Postdoctoral Fellow on Multi-omics Analyses and Biological Data Sciences",
   "url": "https://recruitment.irbbarcelona.org/jobs/8525941-postdoctoral-fellow-on-multi-omics-analyses-and-biological-data-sciences-ref-pd-26-18"
  },

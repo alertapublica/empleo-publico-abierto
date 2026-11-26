@@ -2,7 +2,7 @@
  "08-01-id26": {
   "apply_url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-26T05:07:23+00:00",
   "code": "08-01-ID26",
   "company": "Universidad de La Rioja",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-25",
   "location": "Logroño",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -36,7 +36,7 @@
   ],
   "source": "unirioja",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnica/o · Percepción de la igualdad de género en el alumnado universitario: implicaciones para el diseño de políticas educativas y estrategias coeducativas",
   "url": "https://www.unirioja.es/administracion-y-servicios/servicio-de-gestion-de-la-investigacion/contrato-cargo-a-proyectos/"
  },

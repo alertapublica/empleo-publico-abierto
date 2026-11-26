@@ -137,7 +137,7 @@
  "65478": {
   "apply_url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65478",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-26T05:07:23+00:00",
   "code": "PR.INTC.ATIDRAI26.004",
   "company": "IFAPA",
   "contract": "Contratos Específicos de I+D+F",
@@ -152,7 +152,7 @@
   "kind": null,
   "listed_deadline": "2026-11-25",
   "location": "IFAPA Centro Camino de Purchil (Granada)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-12",
   "parent_ref": null,
   "place": null,
@@ -175,7 +175,7 @@
   ],
   "source": "ifapa",
   "source_title": "Convocatoria de contratos laborales en el marco de proyectos específicos de I+D+F (BOJA 218, pág 14779) - Tit. Univ - P. Inter Transfer -",
-  "status": "open",
+  "status": "closed",
   "title": "Titulado Superior · Alianza estratégica transfronteriza para el impulso y desarrollo de redes de conocimiento de investigación, desarrollo e innovación en el sector agroalimentario (ATIDRAI_AGRO)",
   "url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65478"
  },
