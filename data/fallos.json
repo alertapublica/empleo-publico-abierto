@@ -1,7 +1,27 @@
 {
+ "cesga": {
+  "desde": "2026-11-26T06:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 144,
+  "lecturas": 145,
+  "resultado": "error"
+ },
+ "idis": {
+  "desde": "2026-11-26T06:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "udc": {
+  "desde": "2026-11-26T06:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "uvigo": {
+  "desde": "2026-11-26T06:37:26+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
