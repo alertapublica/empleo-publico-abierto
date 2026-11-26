@@ -1,22 +1,22 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 149,
+  "lecturas": 150,
   "resultado": "error"
  },
  "fgv": {
   "desde": "2026-11-26T08:37:26+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  },
- "imdea-energia": {
-  "desde": "2026-11-26T08:37:26+00:00",
+ "ifapa": {
+  "desde": "2026-11-26T09:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-26T08:37:26+00:00",
-  "lecturas": 1,
+  "lecturas": 2,
   "resultado": "error"
  }
 }
