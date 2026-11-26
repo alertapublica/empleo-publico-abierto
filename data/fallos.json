@@ -1,47 +1,17 @@
 {
- "andalucia": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "cofivacasa": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 163,
+  "lecturas": 164,
   "resultado": "error"
  },
  "ibsal": {
   "desde": "2026-11-26T09:37:30+00:00",
-  "lecturas": 13,
-  "resultado": "error"
- },
- "idisna": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
+  "lecturas": 14,
   "resultado": "error"
  },
  "ifapa": {
   "desde": "2026-11-26T09:07:24+00:00",
-  "lecturas": 14,
-  "resultado": "error"
- },
- "iisgm": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "sepides": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
- "veiasa": {
-  "desde": "2026-11-26T15:37:33+00:00",
-  "lecturas": 1,
+  "lecturas": 15,
   "resultado": "error"
  }
 }

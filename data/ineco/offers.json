@@ -13014,9 +13014,9 @@
    }
   ],
   "source": "ineco",
-  "source_title": "28929 - Técnico/a de apoyo a la seguridad operacional en estaciones de viajeros",
+  "source_title": "28929 - Técnico/a de apoyo a la seguridad operacional en estaciones de transporte para personas",
   "status": "open",
-  "title": "Técnico/a de apoyo a la seguridad operacional en estaciones de viajeros",
+  "title": "Técnico/a de apoyo a la seguridad operacional en estaciones de transporte para personas",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376866"
  },
  "3376867": {
@@ -13076,9 +13076,9 @@
    }
   ],
   "source": "ineco",
-  "source_title": "28959 - Técnico/a de apoyo a la seguridad operacional en estaciones de viajeros",
+  "source_title": "28959 - Técnico/a de apoyo a la seguridad operacional en estaciones de transporte de personas",
   "status": "open",
-  "title": "Técnico/a de apoyo a la seguridad operacional en estaciones de viajeros",
+  "title": "Técnico/a de apoyo a la seguridad operacional en estaciones de transporte de personas",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3376867"
  },
  "3376868": {
@@ -13824,6 +13824,68 @@
   "status": "open",
   "title": "Beca de Gobierno del Dato e IA",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382584"
+ },
+ "3382598": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382598",
+  "category": null,
+  "closed_at": null,
+  "code": "29081",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T16:07:26+00:00",
+  "id": "ineco:3382598",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "3382598",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>1.- Atención a las alarmas de los sistemas de supervisión, tanto de Fibra Óptica como de Suministro de Energía Eléctrica en los Parques de Telecomunicaciones y de instalaciones en las LAV.<br/>2.- Comprobación de las alarmas, para lo cual se utilizará el Sistema de Información Geográfico, para discernir entre alarmas reales a subsanar, reales no deseadas y falsas, identificando el punto de la posible avería, en los casos del SSFO.<br/>3.- Atención telefónica de las llamadas de consulta o denuncia de avería, recabando del llamante todos los datos que puedan permitir identificar el evento y punto en que se ha producido.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia en gestion de sistemas de supervision<br/>- Años de experiencia global igual o superior a 5 años - Años de experiencia en el puesto igual o superior a 1 año<br/>- Titulación: Bachillerato, BUP, COU, Formación Profesional - Otros.<br/>- Experiencia en puestos de mantenimiento informáticos.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>Oferta¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29081 - Técnico/a Centro Atencion Permamente",
+  "status": "open",
+  "title": "Técnico/a Centro Atencion Permamente",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382598"
  },
  "3382986": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382986",
