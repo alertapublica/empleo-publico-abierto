@@ -2,7 +2,7 @@
  "112604": {
   "apply_url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag433-personal",
   "category": "Personal técnico",
-  "closed_at": null,
+  "closed_at": "2026-11-26T11:07:24+00:00",
   "code": "AG433",
   "company": "Universidad de León",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": "Castilla y León",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-12",
   "parent_ref": null,
   "place": null,
@@ -36,7 +36,7 @@
   ],
   "source": "unileon",
   "source_title": "Convocatoria de Plaza de Personal con cargo al Proyecto AG433. Personal Técnico",
-  "status": "open",
+  "status": "closed",
   "title": "Personal técnico · Proyecto AG433",
   "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag433-personal"
  },
