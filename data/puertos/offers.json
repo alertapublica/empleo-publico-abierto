@@ -1,4 +1,46 @@
 {
+ "jefea-de-division-de-accesibilidad-terrestre": {
+  "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/jefea-de-division-de-accesibilidad-terrestre",
+  "category": "Fuera de Convenio",
+  "closed_at": null,
+  "code": null,
+  "company": "Puertos del Estado",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-29",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T10:37:27+00:00",
+  "id": "puertos:jefea-de-division-de-accesibilidad-terrestre",
+  "kind": null,
+  "listed_deadline": "2026-12-29",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "jefea-de-division-de-accesibilidad-terrestre",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.puertos.es/system/files/2026-11/report_Bases%20Jefe%20de%20Divisi%C3%B3n%20de%20Accesibilidad%20Terrestre.pdf\">Bases de la convocatoria - 26/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/report_Fe%20de%20Publicaci%C3%B3n%20_%20Jefe%20Divisi%C3%B3n%20Accesibilidad%20Terrestre.pdf\">Fe de Publicación - 26/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/ANEXO%20III.%20MODELO%20DE%20SOLICITUD%20DE%20PARTICIPACI%C3%93N%20EN%20PROCESOS%20SELECTIVOS.pdf\">ANEXO III. MODELO SOLICITUD PARTICIPACIÓN</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/ANEXO%20IV.%20MODELO%20DE%20RELACI%C3%93N%20DE%20M%C3%89RITOS.pdf\">ANEXO IV. MODELO RELACIÓN MÉRITOS</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/ANEXO%20V.%20MODELO%20DECLARACI%C3%93N%20JURADA.pdf\">ANEXO V. MODELO DECLARACIÓN JURADA</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "puertos",
+  "source_title": null,
+  "status": "open",
+  "title": "Jefe/a de División de Accesibilidad Terrestre",
+  "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/jefea-de-division-de-accesibilidad-terrestre"
+ },
  "responsable-de-estadistica": {
   "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica",
   "category": "Dentro de Convenio",
