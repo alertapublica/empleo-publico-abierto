@@ -30485,6 +30485,108 @@
   "title": "Ingeniero/a o Licenciado/a o Graduado/a + Máster Oficial - Bioinformática (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58678"
  },
+ "58679": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58679",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58679",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "S.Información Geográfica",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-26T15:37:33+00:00",
+  "id": "tragsa:58679",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-14",
+  "location": "Sede Madrid Tragsatec",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "58679",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista programador/a especialista en SIG marino para un importante proyecto en la Administración Pública en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsatec</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Diseñar procesos SIG en el ámbito marino de manera autónoma.</li><li>Crear tablas y documentación de aplicaciones SIG previas a su programación para dar respuesta a las necesidades del cliente.</li><li>Programar el desarrollo de las aplicaciones SIG en distintos lenguajes informáticos, según especificaciones.</li><li>Realizar la interpretación de aplicaciones SIG desarrolladas por terceros/as.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollos relacionados con tratamiento de información geográfica con lenguaje Python</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en tratamiento SIG ámbito marino y costero (se comprobará en la prueba oral técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer titulación oficial de Licenciatura, Ingeniería, Arquitectura, Grado + Máster Oficial,  Diplomatura, Ingeniería Técnica, Arquitectura Técnica o Grado (nivel 2 o 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o conocimientos y/o experiencia (con contrato laboral, académica o ambas) consolidada y acreditada en el ejercicio de la actividad profesional que ejerza en la empresa y reconocida por ésta.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral y/o académica en desarrollos relacionados con tratamiento de información geográfica con lenguaje Python</li><li>Al menos 1 año de experiencia con contrato laboral y/o académica en tratamiento SIG ámbito marino y costero (se comprobará en la prueba oral técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en Sistemas de Información Geográfica</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 2 años de experiencia en redacción y organización de documentación técnica en desarrollos informáticos (experiencia con contrato laboral y/o académica) (se comprobará en la prueba oral técnica)</li><li>Desde 3 meses Hasta 2 años de experiencia en personalización de plugin de QGIS (experiencia con contrato laboral y/o académica)</li><li>Desde 3 meses Hasta 2 años de experiencia en implementación de aplicaciones SIG para recogida de datos en campo (experiencia con contrato laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Experiencia desde 15 meses hasta 24 meses con contrato laboral y/o académica en desarrollos relacionados con tratamiento de información geográfica con lenguaje Python</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en Sistemas de Información Geográfica</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en Sistemas de Información Geográfica</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 2 años de experiencia en redacción y organización de documentación técnica en desarrollos informáticos (experiencia con contrato laboral y/o académica) (se comprobará en la prueba oral técnica)</li><li>Desde 3 meses Hasta 2 años de experiencia en personalización de plugin de QGIS (experiencia con contrato laboral y/o académica)</li><li>Desde 3 meses Hasta 2 años de experiencia en implementación de aplicaciones SIG para recogida de datos en campo (experiencia con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia desde 15 meses hasta 24 meses con contrato laboral y/o académica en desarrollos relacionados con tratamiento de información geográfica con lenguaje Python</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con la tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 26/11/2026 hasta el próximo 14/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Analista programador/a especialista en SIG marino (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58679"
+ },
  "58680": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58680",
   "category": "Específica",
