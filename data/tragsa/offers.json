@@ -11228,11 +11228,11 @@
  "58210": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58210",
   "category": "Específica",
-  "closed_at": "2026-11-19T05:07:26+00:00",
+  "closed_at": null,
   "code": "58210",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-18",
+  "deadline": "2026-12-02",
   "deadline_time": "23:59",
   "department": "La Coruña",
   "detail_ok": true,
@@ -11241,10 +11241,10 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58210",
   "kind": "temporal",
-  "listed_deadline": "2026-11-18",
+  "listed_deadline": "2026-12-02",
   "location": "Comunidad de Galicia",
-  "missed_runs": 1,
-  "opens_on": "2026-11-12",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
   "parent_ref": null,
   "place": "Santiago de Compostela",
   "portal_tries": 1,
@@ -11254,7 +11254,7 @@
   "region": "Galicia",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Agrónomo/a o Ingeniero/a de Montes para prestar apoyo en tareas de coordinación seguridad y salud en Santiago de Compostela.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 12/11/2026 hasta el 18/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Agrónomo/a o Ingeniero/a de Montes para prestar apoyo en tareas de coordinación seguridad y salud en Santiago de Compostela.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 26/11/2026 hasta el 02/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -11319,14 +11319,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 9 meses.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 12/11/2026 hasta el próximo 18/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada estimada de 9 meses.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 26/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a Agrónomo/a o Ingeniero/a de Montes - Coordinación seguridad y salud (Santiago de Compostela)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58210"
  },
@@ -39493,6 +39493,113 @@
   "title": "Arquitecto/a Técnico/a o Graduado/a en Arquitectura Técnica - Obra (Lugo)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58846"
  },
+ "58847": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58847",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58847",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Islas Baleares",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-26T12:07:30+00:00",
+  "id": "tragsa:58847",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-14",
+  "location": "Menorca",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": "Menorca",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "58847",
+  "region": "Illes Balears",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Ingeniero/a Técnico/a forestal o Graduado/a en Ingeniería Forestal y del Medio Rural - Obras Forestales (Menorca)</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Menorca<br/>Dirección: Maó con desplazamiento por toda la isla de Menorca.</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Desempeñar las funciones y trabajos propios de sus conocimientos técnicos y de la competencia de la titulación profesional. Entre las tareas a realizar destaca la coordinación y seguimiento de Trabajos de prevención de incendios forestales en y restauración forestal en Menorca . Siempre en coordinación con el jefe/a de obra y el encargado/a de la obra</li><li>Seguimiento documental de las obras para cumplir con la normativa de prevención de riesgos laborales, normativa de calidad y medio ambiente, etc.</li><li>Estimación de rendimientos para elaboración de nuevos presupuestos, redacción de proyectos, elaboración de cartografía con programas informáticos.</li><li>Elaboración de informes y planificación de actuaciones con herramientas GIS</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Ingeniería Técnica Forestal y/o Grado en Ingeniería Forestal y del Medio Rural (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Ingeniería Técnica Forestal y/o Grado en Ingeniería Forestal y del Medio Rural (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Ingeniería Técnica Forestal y/o Grado en Ingeniería Forestal y del Medio Rural (nivel 2 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Cursos y/o formación complementaria relacionada con el medio ambiente o los incendios forestales (Adjuntar Certificado)</li><li>Curso de Prevención de Riesgos Laborales (Adjuntar Certificado)</li></ul>Idiomas<ul><li>Catalán Nivel: B2</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 1 año de experiencia en el ámbito de la titulación requerida (con contrato laboral y/o académico)</li></ul>Otros Factores Meritorios<ul><li>Curso y/o experiencia con manejo SIG y Presto (se comprobará durante el proceso de selección).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Cursos y/o formación complementaria relacionada con el medio ambiente o los incendios forestales (Adjuntar Certificado)</li><li>Curso de Prevención de Riesgos Laborales (Adjuntar Certificado)</li></ul>Idiomas<ul><li>Catalán Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Cursos y/o formación complementaria relacionada con el medio ambiente o los incendios forestales (Adjuntar Certificado)</li><li>Curso de Prevención de Riesgos Laborales (Adjuntar Certificado)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Catalán Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 1 año de experiencia en el ámbito de la titulación requerida (con contrato laboral y/o académico)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Curso y/o experiencia con manejo SIG y Presto (se comprobará durante el proceso de selección).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 26/11/2026 hasta el próximo 14/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE: <br/>Se ofrece contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/>- Jornada completa de 37,5h<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a Técnico/a forestal o Graduado/a en Ingeniería Forestal y del Medio Rural - Obras Forestales (Menorca)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58847"
+ },
  "58849": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58849",
   "category": "Específica",
@@ -40768,6 +40875,108 @@
   "status": "open",
   "title": "Gerente Autonómico de País Vasco en la Unidad Territorial 3 (TRAGSA). Puesto de especial responsabilidad. Personal de organigrama. Libre designación. Provisión interna y externa.",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FIG&jobid=58909"
+ },
+ "58915": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58915",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58915",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "LLeida",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-26T12:07:30+00:00",
+  "id": "tragsa:58915",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-14",
+  "location": "Lleida (Cataluña) con desplazamientos puntuales por Lleida",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "58915",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Graduado/a o Graduado/a + Máster Oficial (Plan Bolonia) en Ingeniería Civil, Obras Públicas o Caminos Canales y Puertos - Redacción de proyectos de carreteras  (Cataluña) (Contrato Formativo) en Lleida</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Lleida (Cataluña) con desplazamientos puntuales por Lleida</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Apoyo en redacción de proyectos constructivos de carreteras</li><li>Apoyo en redacción de memorias valoradas y estudios de alternativas.</li><li>Apoyo en elaboración de documentos necesarios para la tramitación de proyectos.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Grado + Máster Oficial (nivel 3 MECES) en Ingeniería de Caminos Canales y Puertos (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o Grado (nivel 2 MECES) en Ingeniería Civil u Obras Públicas (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Otros Requisitos Imprescindibles<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la prácticaprofesional asociado a la titulación requerida en la oferta (para ello no deben habertranscurrido más de 3 años desde la finalización de la titulación o 5 años en caso deacreditar certificado de discapacidad, ni haber formalizado previamente un contrato deesta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Grado + Máster Oficial (nivel 3 MECES) en Ingeniería de Caminos Canales y Puertos (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o Grado (nivel 2 MECES) en Ingeniería Civil u Obras Públicas (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Grado + Máster Oficial (nivel 3 MECES) en Ingeniería de Caminos Canales y Puertos (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades) o Grado (nivel 2 MECES) en Ingeniería Civil u Obras Públicas (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la prácticaprofesional asociado a la titulación requerida en la oferta (para ello no deben habertranscurrido más de 3 años desde la finalización de la titulación o 5 años en caso deacreditar certificado de discapacidad, ni haber formalizado previamente un contrato deesta modalidad asociado a la misma titulación por un periodo superior a 6 meses).</li><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Máster Oficial en Ingeniería de Caminos, Canales y Puertos o Ingeniería de Caminos, Canales y Puertos</li><li>Formación y/o Cursos en herramientas GIS o Autocad</li></ul>Experiencia Previa<ul><li>Desde 3 meses Hasta 1 año de experiencia en tareas propias de la titulación requerida (con contrato laboral y/o académica)</li><li>Desde 1 mes Hasta 1 año de experiencia en proyectos de obras lineales (carreteras, ferrocarriles, puentes, etc.) (con contrato laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Certificado Oficial de Catalán y/o Valenciano, al menos nivel B2 o superior</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Máster Oficial en Ingeniería de Caminos, Canales y Puertos o Ingeniería de Caminos, Canales y Puertos</li><li>Formación y/o Cursos en herramientas GIS o Autocad</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Máster Oficial en Ingeniería de Caminos, Canales y Puertos o Ingeniería de Caminos, Canales y Puertos</li><li>Formación y/o Cursos en herramientas GIS o Autocad</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 3 meses Hasta 1 año de experiencia en tareas propias de la titulación requerida (con contrato laboral y/o académica)</li><li>Desde 1 mes Hasta 1 año de experiencia en proyectos de obras lineales (carreteras, ferrocarriles, puentes, etc.) (con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Certificado Oficial de Catalán y/o Valenciano, al menos nivel B2 o superior</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>SE OFRECE: <br/>Contrato de duración determinada estimada de 6 meses con posibilidad de prorroga por otros 6 meses, si procede. En  caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe  estar  relacionada con la tareas del puesto  ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional  adecuada al nivel de estudios cursados.<br/>- Jornada completa: 37'5h/semana.<br/><br/>La oferta permanecerá abierta a inscripciones desde hoy 26/11/2026 hasta el 14/12/2026 a las 23:59h (hora peninsular).<br/><br/>La categoría de contratación se formalizará atendiendo a la máxima titulación homologada entre las requeridas que acredite el aspirante.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Graduado/a o Graduado/a + Máster Oficial (Plan Bolonia) en Ingeniería Civil, Obras Públicas o Caminos Canales y Puertos - Redacción de proyectos de carreteras (Cataluña) (Contrato Formativo)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58915"
  },
  "58921": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58921",

@@ -701,6 +701,24 @@
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasa-reposicion-2025-2026-puestos-pre-tragsatec/Paginas/default.aspx",
   "via": "tasa"
  },
+ "tragsa:c0831edc3b2d": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T12:07:30+00:00",
+  "location": null,
+  "process": "TRO 25-26. Puestos reservados para personas con discapacidad intelectual",
+  "process_url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tro-25-26-puestos-reservados-personas-discapacidad-intelectual/Paginas/default.aspx",
+  "source": "tragsa",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Publicación de las bases generales y de los perfiles profesionales del proceso selectivo para la cobertura de puestos de trabajo incluidos en el cupo de reserva para personas con discapacidad intelectual de la tasa de reposición ordinaria (TRO) de los años 2025 y 2026 del Grupo Tragsa (Tragsa y Tragsatec)",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tro-25-26-puestos-reservados-personas-discapacidad-intelectual/Paginas/default.aspx",
+  "via": "tasa"
+ },
  "tragsa:c1e85971490b": {
   "access": "libre",
   "apply_url": null,

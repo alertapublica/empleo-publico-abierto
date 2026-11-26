@@ -504,5 +504,48 @@
   "status": "open",
   "title": "Personal tecnòleg o gestor superior · 21I373 Ppsi-miguel gonzález guzmán: increment de la tolerància de les plantes...",
   "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3610&pConcurso=1&pCategoria=14"
+ },
+ "3611": {
+  "apply_url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3611&pConcurso=1&pCategoria=14",
+  "category": "Personal tecnòleg o gestor superior",
+  "closed_at": null,
+  "code": "23231",
+  "company": "Universitat Jaume I",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T12:07:30+00:00",
+  "id": "uji:3611",
+  "kind": null,
+  "listed_deadline": "2026-12-11",
+  "location": "Castelló de la Plana",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "3611",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "Data de resolució 18/11/2026\nBOE No és aplicable \nEstatNo és aplicable \n\n\n\n\nData de tancament  No és aplicable \nDOGV 26/11/2026\nResolució No és aplicable \n\n\n\nConcurs: Personal tecnòleg o gestor superior\n\n\nInici de presentació de sol·licituds 27/11/2026\nFi de presentació de sol·licituds 11/12/2026\nCodi Registre 23231\n\n\nTorn Lliure\nTipus de concurs Personal tecnòleg o gestor superior\n\n\n\nProcediment administratiu <a href=\"http://ujiapps.uji.es/seu/cataleg/rrhh/proc-182-PAS-PI-CONTRAC/\">PI - Procés abreujat per a la contractació de personal vinculat a la investigació </a>\n\n\nResolucions\n\n\n<strong>Data Resolució     </strong>18/11/2026<strong>    Data de publicació </strong>26/11/2026<strong>    Termini  </strong>27/11/2026 - 11/12/2026\n\n<p>\nRESOLUCIÓ de la vicerectora d’Investigació de la Universitat Jaume I, per la qual es convoca un procés selectiu per a una plaça de personal tecnòleg o gestor superior per col·laborar en el projecte d’investigació: “26I186 AVALUACIÓ DE L'IMPACTE EN SALUT NEUROCOGNITIVA DE L'EXPOSICIÓ A CONTAMINACIÓ ATMOSFÈRICA DURANT EL CLIMATERI (NAMASTE)”, dirigit per Juana María Delgado Saborit de la Unitat Predepartamental de Medicina. Grup d’investigació: Epidemiologia Perinatal, Salut Ambiental i Investigació Clínica.\n</p>\n\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/3AVV7YLV1S8W06FI6F2ZFTPCTG5RINJT\">CONVOCATÒRIA</a></p>\n<p><a href=\"https://ujiapps.uji.es/ade/rest/storage/MJNR76JETPEZOW4HFTNML4PWTYTYGGFP\">DOGV</a></p>\n\n\n\n\nFora de termini de tramitació",
+    "lang": "ca",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "uji",
+  "source_title": "23231 plaça de personal tecnòleg o gestor superior per col·laborar en el projecte d’investigació: “26I186 AVALUACIÓ DE L'IMPACTE EN SALUT NEUROCOGNITIVA... (NAMASTE)”, dirigit per Juana María Delgado Saborit de la Unitat Predepartamental de Medicina. Grup d’investigació: Epidemiologia Perinatal, Salut Ambiental i Investigació Clínica",
+  "status": "open",
+  "title": "Personal tecnòleg o gestor superior · 26I186 Avaluació de l'impacte en salut neurocognitiva... (NAMASTE)",
+  "url": "https://www.uji.es/seu/info-adm/tao/convocatoriesRH?pConv=3611&pConcurso=1&pCategoria=14"
  }
 }

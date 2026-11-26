@@ -2736,5 +2736,47 @@
   "status": "open",
   "title": "Consultor/a especialista en Business Intelligence",
   "url": "https://seleccionisdefe.es/convocatoria-2677"
+ },
+ "2678": {
+  "apply_url": "https://seleccionisdefe.es/registro-2678",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00467",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-02",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T12:07:30+00:00",
+  "id": "isdefe:2678",
+  "kind": null,
+  "listed_deadline": "2026-12-02",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "2678",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Técnico/a Especialista en ERP (Oracle E-Business Suite)</strong>.</p><p><strong>Titulaciones:</strong></p><ul>\n<li>Titulación STEM, preferiblemente informática. </li>\n</ul><p><strong>Funciones habituales:</strong></p><p>Mantenimiento del Sistema ERP de la compañía (E-Business Suite) en tareas como:</p><ul>\n<li>Resolución de incidencias de los usuarios.</li>\n<li>Cambios en la configuración de los módulos.</li>\n<li>Implementación de nuevas funcionalidades en el sistema.</li>\n<li>Aplicación de parches.</li>\n<li>Administración de Base de Datos Oracle.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Titulación STEM, preferiblemente informática.</li>\n<li>Experiencia entre 5 y 12 años.</li>\n<li>Experiencia en ERP E-Business Suite de Oracle.</li>\n<li>Conocimientos del sistema ERP de Oracle.</li>\n</ul><p><strong>Requisitos valorables:</strong></p><p>Experiencia en:</p><ul>\n<li>Herramientas de desarrollo de ERP Oracle (EBS)</li>\n<li>Administración de la Base de Datos Oracle.</li>\n</ul><p>Conocimientos en:</p><ul>\n<li>Modulos Financieros y de Proyectos del ERP Oracle</li>\n<li>PL/SQL.</li>\n<li>Desarrollo en ADF (Applications Developer Framework).</li>\n<li>Oracle Analytics Server (Antiguo OBIEE) incluido BI Plubisher.</li>\n<li>WEBADI.</li>\n<li>MS365 y otras tecnologías de desarrollo software. </li>\n</ul><p><strong>Se ofrece: Contrato Indefinido.</strong></p><p><a href=\"https://seleccionisdefe.es/registro_datos_personales-2678\">INSCRÍBETE</a></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Técnico/a Especialista en ERP (Oracle E-Business Suite) (2026-T00467)",
+  "status": "open",
+  "title": "Técnico/a Especialista en ERP (Oracle E-Business Suite)",
+  "url": "https://seleccionisdefe.es/convocatoria-2678"
  }
 }
