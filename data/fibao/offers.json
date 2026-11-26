@@ -185,5 +185,52 @@
   "status": "open",
   "title": "Investigador/a en formación PEMP-0017-2026",
   "url": "https://www.fibao.es/ofertas/ficha/1509/"
+ },
+ "1510": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1510/",
+  "category": null,
+  "closed_at": null,
+  "code": "95/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-06",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T11:37:26+00:00",
+  "id": "fibao:1510",
+  "kind": null,
+  "listed_deadline": "2026-12-06",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "1510",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO e ibs.GRANADA convocan un contrato de Investigación Predoctoral (Investigador/a en Formación), en régimen de\r\nconcurrencia competitiva, con dedicación a tiempo completo, vinculado a la línea de investigación del proyecto “Integración multi-ómica en biopsia líquida para la detección temprana de activación tumoral en síndrome de Li-Fraumeni pediátrico (LFS CAKUT)”, con n.º e expediente AP-40001-2026, financiado por la Fundación Mutua Madrileña. Titulación requerida: Licenciatura o Grado universitario en Biotecnología o Biomedicina.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/95.__ctto_invest._form._ap_40001_2026_fmm(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "95/2026.- Investigador/a en formación, Fundación Mutua Madrileña",
+  "status": "open",
+  "title": "Investigador/a en formación, Fundación Mutua Madrileña",
+  "url": "https://www.fibao.es/ofertas/ficha/1510/"
  }
 }

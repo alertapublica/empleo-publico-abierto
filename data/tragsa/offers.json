@@ -3999,11 +3999,11 @@
  "57658": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=57658",
   "category": "Específica",
-  "closed_at": "2026-11-26T05:07:23+00:00",
+  "closed_at": null,
   "code": "57658",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-25",
+  "deadline": "2026-12-02",
   "deadline_time": "23:59",
   "department": "Lugo",
   "detail_ok": true,
@@ -4012,10 +4012,10 @@
   "first_seen": "2026-11-13T07:07:23+00:00",
   "id": "tragsa:57658",
   "kind": "temporal",
-  "listed_deadline": "2026-11-25",
+  "listed_deadline": "2026-12-02",
   "location": "Lugo",
-  "missed_runs": 1,
-  "opens_on": "2026-11-19",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
   "parent_ref": null,
   "place": "Lugo",
   "portal_tries": 1,
@@ -4025,7 +4025,7 @@
   "region": "Galicia",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Encargado/a Técnico/a para prestar apoyo en obras de construcción gestionadas en la Gerencia de Lugo.<br/><br/>En relación al proceso publicado el pasado 13/11/2026 se amplía el plazo de recepción de candidaturas desde el 19/11/2026 hasta el 25/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Encargado/a Técnico/a para prestar apoyo en obras de construcción gestionadas en la Gerencia de Lugo.<br/><br/>En relación al proceso publicado el pasado 19/11/2026 se amplía el plazo de recepción de candidaturas desde el 26/11/2026 hasta el 02/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -4085,14 +4085,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/>-  contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 19/11/2026 hasta el próximo 25/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/>-  contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede. En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 26/11/2026 hasta el próximo 02/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Encargado/a Técnico/a (prácticas) - Edificación Civil (Lugo)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=57658"
  },
@@ -7083,6 +7083,103 @@
   "status": "closed",
   "title": "Encargado/a Técnico/a de Obras-(Cáceres)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58032"
+ },
+ "58033": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58033",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58033",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Zaragoza",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-26T11:37:26+00:00",
+  "id": "tragsa:58033",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-11",
+  "location": "Zaragoza",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": "Zaragoza",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-26",
+  "ref": "58033",
+  "region": "Aragón",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a o Graduado/a en Agricultura/Agronomía o Enología para la Asistencia técnica al sector vitícola en Zaragoza</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Zaragoza</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Dinamización e interlocución con el sector vitícola (bodegas)</li><li>Apoyo técnico para adaptar procesos, datos y sistemas en el sector vitícola al cambio de marco, y planificación de transición. en relación con la PAC 2028-2034</li><li>Comprobación y actualización de datos cartográficos con QGIS y verificación en campo</li><li>Realización de pruebas funcionales sobre programa informático en relación con sector vitícola y su adaptación a lo realmente demandado</li><li>Trabajos de apoyo en la revisión y actualización de manuales de procedimiento y de la orden de reconversión y reestructuración de viñedo, asegurando su coherencia normativa y funcional y la adaptación a aplicación informática en desarrollo sobre viñedo.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Ingeniería Técnica Agrícola, Grado en Ingeniería Agrícola, Grado en Enología (MECES 2) o anteriores + Máster relacionado con las titulaciones o Ingeniería Agrónoma (MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades</li></ul>Experiencia Previa<ul><li>Al menos 6 meses de experiencia tareas técnicas relacionadas con el sector del viñedo (académica y/o laboral) (se evaluará durante proceso de selección)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir B en vigor y válido en España</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Ingeniería Técnica Agrícola, Grado en Ingeniería Agrícola, Grado en Enología (MECES 2) o anteriores + Máster relacionado con las titulaciones o Ingeniería Agrónoma (MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Ingeniería Técnica Agrícola, Grado en Ingeniería Agrícola, Grado en Enología (MECES 2) o anteriores + Máster relacionado con las titulaciones o Ingeniería Agrónoma (MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 6 meses de experiencia tareas técnicas relacionadas con el sector del viñedo (académica y/o laboral) (se evaluará durante proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir B en vigor y válido en España</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "Experiencia Previa<ul><li>Desde 6 meses Hasta 3 años de experiencia en tareas técnicas relacionadas con la producción y seguimiento del viñedo (académica y/o laboral) (se valorará durante el proceso de selección)</li><li>Desde 6 meses Hasta 1 año de experiencia en gestión y tratamiento de información del sector vitivinícola mediante plataformas digitales (académica y/o laboral) (se evaluará durante el proceso de selección)</li><li>Desde 6 meses Hasta 1 año de experiencia en el uso de programas GIS para el tratamiento de información cartográfica catastral en el sector agrícola (académica y/o laboral) (se evaluará durante el proceso de selección)</li></ul>Otros Factores Meritorios<ul><li>Formación específica en vitivinicultura y/o producción ecológica de al menos 20 horas.</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "<ul><li>Desde 6 meses Hasta 3 años de experiencia en tareas técnicas relacionadas con la producción y seguimiento del viñedo (académica y/o laboral) (se valorará durante el proceso de selección)</li><li>Desde 6 meses Hasta 1 año de experiencia en gestión y tratamiento de información del sector vitivinícola mediante plataformas digitales (académica y/o laboral) (se evaluará durante el proceso de selección)</li><li>Desde 6 meses Hasta 1 año de experiencia en el uso de programas GIS para el tratamiento de información cartográfica catastral en el sector agrícola (académica y/o laboral) (se evaluará durante el proceso de selección)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Formación específica en vitivinicultura y/o producción ecológica de al menos 20 horas.</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 26/11/2026 hasta el próximo 11/12/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE:<br/><br/>- Contrato con una duración determinada estimada de 3 años, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada completa de 37'5h semanales<br/><br/>- La categoría de contratación se formalizará atendiendo a la máxima titulación homologada entre las requeridas que acredite el aspirante.<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingeniero/a o Graduado/a en Agricultura/Agronomía o Enología – Asistencia técnica al sector vitícola (Zaragoza)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58033"
  },
  "58034": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58034",
