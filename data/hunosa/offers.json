@@ -1,4 +1,51 @@
 {
+ "P2026.01.III": {
+  "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/11/BASES-CONVOCATORIA.JEFE-DE-PROYECTOS-EN-INGENIERIA-MINERA.P2026.01.III_.pdf",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": "P2026.01.III",
+  "company": "SADIM",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T17:07:29+00:00",
+  "id": "hunosa:P2026.01.III",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-11",
+  "location": "Langreo (Asturias)",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "P2026.01.III",
+  "region": "Asturias",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 11/12/2026</li></ul>",
+    "level": 2,
+    "title": "Datos del puesto"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.sadim.es/wp-content/uploads/sites/14/2026/11/BASES-CONVOCATORIA.JEFE-DE-PROYECTOS-EN-INGENIERIA-MINERA.P2026.01.III_.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "hunosa",
+  "source_title": null,
+  "status": "open",
+  "title": "Jefe de proyectos en ingeniería minera",
+  "url": "https://www.sadim.es/empleo/"
+ },
  "P2026.02": {
   "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/10/BASES-CONVOCATORIA.GEOLOGO-DE-EXPLORACION.P2026.02.pdf",
   "category": "Tasa de reposición",
