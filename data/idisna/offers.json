@@ -1,1 +1,44 @@
-{}
+{
+ "7749": {
+  "apply_url": "https://www.idisna.es/portal/seccion.aspx?N=7749",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "IdiSNA",
+  "contract": "Actividades científico-técnicas",
+  "country": null,
+  "deadline": "2026-12-10",
+  "deadline_rule": null,
+  "deadline_time": "12:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T14:07:26+00:00",
+  "id": "idisna:7749",
+  "kind": null,
+  "listed_deadline": "2026-12-10",
+  "location": "Navarra",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "7749",
+  "region": "Comunidad Foral de Navarra",
+  "sections": [
+   {
+    "html": "Personal de apoyo a la investigación\n<p><strong>Ref. 26-33</strong></p>\n<p><strong>Descripción del puesto:</strong></p>\n<p>IdiSNA precisa contratar personal de apoyo a la investigación para trabajar en el proyecto GN2024/48 titulado “Valoración de la medicina de precisión con biomarcadores en la predicción del riesgo de fractura: estudio de cohorte” financiado por el Departamento de Salud de Gobierno de Navarra y cuyo IP es Bernardo Abel Cedeño Veloz.</p>\n<p>Se incorporará al grupo de investigación de Investigación en Geriatría, Envejecimiento Activo y Fragilidad de IdiSNA y su centro de trabajo será el Hospital Universitario de Navarra.</p>\n<p><strong>Titulación requerida:</strong></p>\n<p>Grado en Ciencias de la Actividad Física y del Deporte</p>\n<p><strong>Tareas a desarrollar:</strong></p>\n<p>• Realización de valoraciones a personas mayores<br/>\n\t• Realización de programas de entrenamiento personalizados.<br/>\n\t• Actualización de bases de datos de investigación del estudio.<br/>\n\t• Análisis, interpretación y síntesis de los resultados obtenidos de la investigación.<br/>\n\t• Comunicación de los resultados derivados de la investigación</p>\n<p><strong>Condiciones laborales de la oferta:</strong></p>\n<ul>\n<li><strong>Jornada: </strong>Media Jornada (20 horas semanales, de 9:00h a 13:00h)</li>\n<li><strong>Modalidad de contrato: </strong>Actividades científico-técnicas.</li>\n<li><strong>Salario: </strong>11.255,90€ brutos anuales.</li>\n</ul>\n<p><strong>Fecha de publicación:</strong> 26 de noviembre de 2026<br/>\n<strong>Fecha de cierre:</strong> 10 de diciembre de 2026 a las 12:00h</p>\n<p>Más información (PDF)</p>\n<p><strong>Pasos para completar el envío de candidaturas:</strong></p>\n<p>Si desea enviar su candidatura a este proceso de selección:</p>\n<ol>\n<li>Reúna en un único archivo PDF toda la información de su CV y méritos alegados (incluyendo expediente académico de grado y máster) que desee presentar.</li>\n<li>Rellene el formulario y adjunte el archivo PDF que contiene su candidatura.</li>\n<li>Envíe el formulario y el archivo PDF vía web.</li>\n</ol>\n<p><a href=\"https://www.idisna.es/inscripcion/f3624ae6/ref-25-33-personal-de-apoyo-a-la-investigacion\">Formulario de inscripción</a></p>\n<p><em>LOPD: Con el envío de su candidatura usted confirma que ha leído y que acepta la Política de Protección de Datos Personales de IdiSNA en los términos en que está publicada en su sitio web en el siguiente enlace: <a href=\"https://www.idisna.es/recursos-y-servicios/lopd\">https://www.idisna.es/recursos-y-servicios/lopd</a></em></p>",
+    "level": 2,
+    "title": "Convocatoria"
+   }
+  ],
+  "source": "idisna",
+  "source_title": null,
+  "status": "open",
+  "title": "Ref. 26-33 Personal de apoyo a la investigación - Copia",
+  "url": "https://www.idisna.es/portal/seccion.aspx?N=7749"
+ }
+}

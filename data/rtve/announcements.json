@@ -179,6 +179,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/ENFEMP_BD_Solicitud-Medidas-Adaptativas-_-Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
   "via": "bolsa"
  },
+ "rtve:2b0903475ca7": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T14:07:26+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Técnica informática · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Solicitud 2º llamamiento _ Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TECINFO_BD_Solicitud-2%C2%BA-llamamiento-_-Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
+  "via": "bolsa"
+ },
  "rtve:2f973e9c1e19": {
   "access": null,
   "apply_url": null,
@@ -503,6 +521,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/DGRAF_P3_Adjudicaci%C3%B3n-bolsa-de-reserva-02_PUBLICO.pdf",
   "via": "otro"
  },
+ "rtve:a2f7de50329a": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T14:07:26+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Técnica informática · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TECINFO_BD_Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
+  "via": "bolsa"
+ },
  "rtve:a3393edb6c94": {
   "access": "libre",
   "apply_url": null,
@@ -825,6 +861,24 @@
   "system": null,
   "title": "Listado Rectificativo Candidaturas Admitidas Definitivo",
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TESE_BD_Listado-Rectificativo-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
+  "via": "bolsa"
+ },
+ "rtve:f5abc9d326b3": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-26T14:07:26+00:00",
+  "location": null,
+  "process": "Convocatoria Banco de Datos · Técnica informática · Banco de datos",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": null,
+  "title": "Solicitud Medidas Adaptativas _ Citación prueba teórico-práctica",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/TECINFO_BD_Solicitud-Medidas-Adaptativas-_-Citaci%C3%B3n-prueba-te%C3%B3rico-pr%C3%A1ctica_PUBLICO.pdf",
   "via": "bolsa"
  }
 }

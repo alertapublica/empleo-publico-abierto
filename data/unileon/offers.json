@@ -375,5 +375,47 @@
   "status": "open",
   "title": "Personal investigador · Proyecto AG415",
   "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-ag415-personal-0"
+ },
+ "112656": {
+  "apply_url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-i511-personal",
+  "category": "Personal investigador",
+  "closed_at": null,
+  "code": "I511",
+  "company": "Universidad de León",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": "14:00",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-26T14:07:26+00:00",
+  "id": "unileon:112656",
+  "kind": null,
+  "listed_deadline": "2026-12-15",
+  "location": "Castilla y León",
+  "missed_runs": 0,
+  "opens_on": "2026-11-26",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "112656",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>Podrán presentarse hasta las 14:00 horas del día 15 de diciembre de 2026, a través del formulario que encontrará en el siguiente enlace: <a href=\"https://script.google.com/a/macros/unileon.es/s/AKfycbzOv6No2e1oG0VB9gEz8C6pL00rwRMVdh-_r7LNMl_GMnai1RTUjSgaPiMd3lsA6eBN/exec?plaza=PL2026-008\">Formulario de Solicitud</a>.</p>\n<p>La fecha y hora de presentación será la que figure en el formulario de solicitud.</p><p>Archivos públicos:</p><ul><li><a href=\"http://www.unileon.es/files/2026-11/convocatoria_i511_20261126.pdf\">Convocatoria (26/11/2026)</a></li></ul>",
+    "level": 2,
+    "title": "La convocatoria"
+   }
+  ],
+  "source": "unileon",
+  "source_title": "Convocatoria de Plaza de Personal con cargo al Proyecto I511. Personal Investigador",
+  "status": "open",
+  "title": "Personal investigador · Proyecto I511",
+  "url": "https://www.unileon.es/convocatorias-ptgas-pdi/convocatoria-de-plaza-de-personal-con-cargo-al-proyecto-i511-personal"
  }
 }
