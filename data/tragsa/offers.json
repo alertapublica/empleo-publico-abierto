@@ -1035,12 +1035,12 @@
  "56477": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=56477",
   "category": "Específica",
-  "closed_at": "2026-11-25T05:07:23+00:00",
+  "closed_at": null,
   "code": "56477",
   "company": "Tragsatec",
   "contract": null,
   "country": null,
-  "deadline": "2026-11-24",
+  "deadline": "2026-12-03",
   "deadline_rule": null,
   "deadline_time": null,
   "department": "Desar.Rural/Política Forestal",
@@ -1050,9 +1050,9 @@
   "first_seen": "2026-11-17T12:37:24+00:00",
   "id": "tragsa:56477",
   "kind": "temporal",
-  "listed_deadline": "2026-11-24",
+  "listed_deadline": "2026-12-03",
   "location": "Comunidad de Madrid",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
@@ -1063,7 +1063,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Caminos, Canales y Puertos para prestar apoyo a las Redes de Transportes (carreteras, ferrocarriles, puertos y aeropuertos) en la Comunidad de Madrid.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 17/11/2026 hasta el 24/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a Caminos, Canales y Puertos para prestar apoyo a las Redes de Transportes (carreteras, ferrocarriles, puertos y aeropuertos) en la Comunidad de Madrid.<br/><br/>En relación al proceso publicado el pasado 17/11/2026 se amplía el plazo de recepción de candidaturas desde el 26/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -1133,14 +1133,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada con una  duración estimada de 12 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación  y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/>- Jornada completa.<br/><br/>Habiendo quedado desierta la convocatoria, se amplía el plazo del 17/11/2026 hasta el 24/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada con una  duración estimada de 12 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación  y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 17/11/2026 se amplía el plazo de recepción de candidaturas desde el 26/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a Caminos, Canales y Puertos – Apoyo a Redes de Transportes - Carreteras, Ferrocarriles, Puertos y Aeropuertos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=56477"
  },

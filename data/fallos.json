@@ -1,17 +1,37 @@
 {
+ "cesga": {
+  "desde": "2026-11-26T14:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 160,
+  "lecturas": 161,
   "resultado": "error"
  },
  "ibsal": {
   "desde": "2026-11-26T09:37:30+00:00",
-  "lecturas": 10,
+  "lecturas": 11,
+  "resultado": "error"
+ },
+ "idis": {
+  "desde": "2026-11-26T14:37:26+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
  "ifapa": {
   "desde": "2026-11-26T09:07:24+00:00",
-  "lecturas": 11,
+  "lecturas": 12,
+  "resultado": "error"
+ },
+ "udc": {
+  "desde": "2026-11-26T14:37:26+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "uvigo": {
+  "desde": "2026-11-26T14:37:26+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
