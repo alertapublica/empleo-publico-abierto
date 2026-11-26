@@ -1,22 +1,17 @@
 {
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 156,
-  "resultado": "error"
- },
- "fgv": {
-  "desde": "2026-11-26T11:37:26+00:00",
-  "lecturas": 2,
+  "lecturas": 157,
   "resultado": "error"
  },
  "ibsal": {
   "desde": "2026-11-26T09:37:30+00:00",
-  "lecturas": 6,
+  "lecturas": 7,
   "resultado": "error"
  },
  "ifapa": {
   "desde": "2026-11-26T09:07:24+00:00",
-  "lecturas": 7,
+  "lecturas": 8,
   "resultado": "error"
  }
 }
