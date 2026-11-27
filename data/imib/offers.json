@@ -169,7 +169,7 @@
  "IMIB26_C87": {
   "apply_url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2087",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T12:07:25+00:00",
   "code": "IMIB26_C87",
   "company": "FFIS",
   "contract": null,
@@ -186,7 +186,7 @@
   "kind": null,
   "listed_deadline": "2026-11-27",
   "location": "Murcia",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-19",
   "parent_ref": null,
   "place": null,
@@ -198,7 +198,7 @@
   "sections": [],
   "source": "imib",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "TÉCNICO/A GRADO DE APOYO A LA INVESTIGACIÓN",
   "url": "https://rrhh.ffis.es/rrhh/ofertaEmpleoNew.jsf?id=2087"
  }

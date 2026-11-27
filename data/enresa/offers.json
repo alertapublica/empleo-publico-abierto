@@ -86,6 +86,53 @@
   "title": "PERSONAL TITULADO DEL DEPARTAMENTO DE PROYECTOS DE CLAUSURA",
   "url": "https://www.enresa.es/esp/empleo"
  },
+ "DO-DE-26-046": {
+  "apply_url": "https://www.enresa.es/documentos/C.E.Personal_Titulado_Servicio_Mantenimiento__DO-DE-26-046_.pdf",
+  "category": "Acceso libre",
+  "closed_at": null,
+  "code": "DO-DE-26-046",
+  "company": "Enresa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:07:25+00:00",
+  "id": "enresa:DO-DE-26-046",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-14",
+  "location": "El Cabril",
+  "missed_runs": 0,
+  "opens_on": "2026-11-30",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "DO-DE-26-046",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>CONVOCATORIA DE PROCESO SELECTIVO PARA LA COBERTURA DE VACANTE DE UN PUESTO DE TRABAJO DE PERSONAL TITULADO EN EL SERVICIO DE MANTENIMIENTO EN EL C.A. EL CABRIL MEDIANTE ACCESO LIBRE EN LA EMPRESA NACIONAL DE RESIDUOS RADIACTIVOS, S.A., S.M.E. (ENRESA)</p><p>Plazo de presentación de candidaturas: del 30/11/2026 al 14/12/2026.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.enresa.es/documentos/C.E.Personal_Titulado_Servicio_Mantenimiento__DO-DE-26-046_.pdf\">Convocatoria de proceso selectivo</a></li><li><a href=\"https://www.enresa.es/documentos/Anexo_Formulario_DO-DE-26-046.docx\">Anexo Formulario de presentación de candidatura</a></li><li><a href=\"https://www.enresa.es/documentos/4.1_Anexo_Declaraci_n_de_no_estar_inhabilitado_y_de_veracidad__DO-DE-26-046_.docx\">Anexo Declaración de no estar inhabilitado y de veracidad</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "enresa",
+  "source_title": null,
+  "status": "open",
+  "title": "PERSONAL TITULADO EN EL SERVICIO DE MANTENIMIENTO EN EL C.A. EL CABRIL",
+  "url": "https://www.enresa.es/esp/empleo"
+ },
  "DO-DE-26-048": {
   "apply_url": "https://www.enresa.es/documentos/Convocatoria_Externa_P._Oficios_Servicio_de_Mantenimiento__DO-DE-26-048_.pdf",
   "category": "Acceso libre",

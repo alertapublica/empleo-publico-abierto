@@ -4855,7 +4855,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -14568,5 +14568,129 @@
   "status": "open",
   "title": "Inspector/a de infraestructura y vía",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383607"
+ },
+ "3383641": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383641",
+  "category": null,
+  "closed_at": null,
+  "code": "29083",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:07:25+00:00",
+  "id": "ineco:3383641",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3383641",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Apoyo en la gestión documental de expedientes ferroviarios<br/>Organización de la documentación electrónica según lo establecido en el Modelo de Gestión Documental aprobado por la Entidad Ferroviaria<br/>Asignación de expedientes administrativos a las diferentes áreas de la entidad en la sede electrónica y en todas las aplicaciones de intercambios registrales <br/>Aplicación de las normativas que rigen a la entidad en su ámbito de actuación, y demás normativas en Administración Digital, para redactar las notas informativas para personas jurídicas y físicas</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en gestión administrativa y económica de expedientes<br/>Años de experiencia global: Más de 2 años <br/>Años de experiencia en el puesto: 1 <br/>Titulación: Grado en Derecho, Grado en Economía ,Grado en Empresa, Licenciatura en Derecho, Licenciatura en Económicas, ADE , Otros estudios universitarios </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/><br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/><br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/><br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/><br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/><br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/><br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.<br/><br/></p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29083- Técnico/a de seguimiento de expedientes ferroviarios",
+  "status": "open",
+  "title": "Técnico/a de seguimiento de expedientes ferroviarios",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383641"
+ },
+ "3383664": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383664",
+  "category": null,
+  "closed_at": null,
+  "code": "29045",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:07:25+00:00",
+  "id": "ineco:3383664",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Murcia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3383664",
+  "region": "Región de Murcia",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Inspección de desvíos.<br/>- Apoyo a topografía<br/>- Visitas a vía<br/>- Inspecciones de vía<br/>- Informes</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: Mantenimiento ferroviario <br/>Años de experiencia: más de 2 años <br/>Titulación: Bachillerato, BUP, COU - Otros ,Formación Profesional - Otros<br/>Programas: MS Word - Usuario,MS Excel - Usuario </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.<br/> </p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29045 - Soporte Técnico de mantenimiento ferroviario",
+  "status": "open",
+  "title": "Soporte Técnico de mantenimiento ferroviario",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383664"
  }
 }

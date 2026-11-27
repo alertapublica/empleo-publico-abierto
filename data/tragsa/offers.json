@@ -506,12 +506,12 @@
  "55851": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=55851",
   "category": "Específica",
-  "closed_at": "2026-11-24T05:07:24+00:00",
+  "closed_at": null,
   "code": "55851",
   "company": "Tragsatec",
   "contract": null,
   "country": null,
-  "deadline": "2026-11-23",
+  "deadline": "2026-12-03",
   "deadline_rule": null,
   "deadline_time": null,
   "department": "Ingeniería y Edificación",
@@ -521,9 +521,9 @@
   "first_seen": "2026-11-17T09:37:35+00:00",
   "id": "tragsa:55851",
   "kind": "temporal",
-  "listed_deadline": "2026-11-23",
+  "listed_deadline": "2026-12-03",
   "location": "Sede Madrid Tragsatec",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Madrid",
@@ -534,7 +534,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a técnico/a o Graduado/a en Ingeniería para proyecto de redacción de proyectos de instalaciones e informes energéticos en Madrid. <br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 23/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Ingeniero/a técnico/a o Graduado/a en Ingeniería para proyecto de redacción de proyectos de instalaciones e informes energéticos en Madrid. <br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -589,14 +589,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 23/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/>- Jornada completa.<br/><br/>En relación al proceso publicado el pasado 14/07/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026 hasta el 03/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Ingeniero/a técnico/a o Graduado/a en Ingeniería - Redacción de proyectos de instalaciones e informes energéticos (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=55851"
  },
@@ -42284,6 +42284,103 @@
   "title": "Veterinario/a - Sanidad Animal (Alicante)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58963"
  },
+ "58965": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58965",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58965",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-16",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Jaén",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-27T12:07:25+00:00",
+  "id": "tragsa:58965",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-16",
+  "location": "Jaén",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Jaén",
+  "portal_tries": 1,
+  "positions": 3,
+  "published_on": "2026-11-27",
+  "ref": "58965",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 3 Arquitectos/as, Arquitectos/as Técnicos/as, Ingenieros/as o Ingenieros/as Técnicos/as, Graduados/as o Grado + Máster en Ingeniería Forestal, Montes, Civil, Obras Públicas, Caminos, Agrícola, Agrónoma o Edificación  - Obras en Jaén.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Jaén<br/>Dirección: Crtra de la Guardia 8</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión de obras, documentación, calidad, ejecución mediciones.</li><li>Seguimiento de Prevención de Riesgos Laborales en obras.</li><li>Gestión de compras y proveedores.</li><li>Realización de mediciones y captura de producción.</li><li>Seguimiento junto al coordinador de obras de los parámetros económicos de la actuación.</li><li>Plantear soluciones a la dirección de obra de las incidencias detectadas en obra.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación universitaria oficial de Ingeniería Superior o Técnica, Arquitectura, Arquitectura Técnica, Grado + Máster o Grado Universitario (MECES 2 o 3) en alguna de las siguientes especialidades: <br/>- Ingeniería Forestal<br/>- Ingeniería de Montes<br/>- Ingeniería Civil<br/>-Ingeniería de Obras Públicas<br/>- Ingeniería de Caminos, Canales y Puertos<br/>- Ingeniería Agrícola<br/>- Ingeniería Agrónoma <br/>- Arquitectura Técnica<br/>- Arquitectura<br/>- Grado en Edificación<br/><br/>(titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B (Válido en España y en Vigor)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación universitaria oficial de Ingeniería Superior o Técnica, Arquitectura, Arquitectura Técnica, Grado + Máster o Grado Universitario (MECES 2 o 3) en alguna de las siguientes especialidades: <br/>- Ingeniería Forestal<br/>- Ingeniería de Montes<br/>- Ingeniería Civil<br/>-Ingeniería de Obras Públicas<br/>- Ingeniería de Caminos, Canales y Puertos<br/>- Ingeniería Agrícola<br/>- Ingeniería Agrónoma <br/>- Arquitectura Técnica<br/>- Arquitectura<br/>- Grado en Edificación<br/><br/>(titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación universitaria oficial de Ingeniería Superior o Técnica, Arquitectura, Arquitectura Técnica, Grado + Máster o Grado Universitario (MECES 2 o 3) en alguna de las siguientes especialidades: <br/>- Ingeniería Forestal<br/>- Ingeniería de Montes<br/>- Ingeniería Civil<br/>-Ingeniería de Obras Públicas<br/>- Ingeniería de Caminos, Canales y Puertos<br/>- Ingeniería Agrícola<br/>- Ingeniería Agrónoma <br/>- Arquitectura Técnica<br/>- Arquitectura<br/>- Grado en Edificación<br/><br/>(titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B (Válido en España y en Vigor)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación de Posgrado en Prevención de Riesgos Laborales (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud).</li></ul>Experiencia Previa<ul><li>Desde 1 día Hasta 2 años realizando funciones como Jefe de obra en actuaciones de infraestructuras rurales/ obra civil (Dicha experiencia deberá acreditarse documentalmente en la presentación de la solicitud a través de vida laboral y cv).</li><li>Desde 1 día Hasta 2 años de experiencia en solicitud de autorizaciones para ejecución de obras a distintos organismos (carreteras, confederaciones, medio ambiente...) (Dicha experiencia deberá acreditarse documentalmente en la presentación de la solicitud a través de vida laboral y cv).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación de Posgrado en Prevención de Riesgos Laborales (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación de Posgrado en Prevención de Riesgos Laborales (Dicha formación deberá acreditarse documentalmente en la presentación de la solicitud).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 día Hasta 2 años realizando funciones como Jefe de obra en actuaciones de infraestructuras rurales/ obra civil (Dicha experiencia deberá acreditarse documentalmente en la presentación de la solicitud a través de vida laboral y cv).</li><li>Desde 1 día Hasta 2 años de experiencia en solicitud de autorizaciones para ejecución de obras a distintos organismos (carreteras, confederaciones, medio ambiente...) (Dicha experiencia deberá acreditarse documentalmente en la presentación de la solicitud a través de vida laboral y cv).</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede.<br/><br/>- Jornada Completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 16/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitectos/as, Arquitectos/as Técnicos/as, Ingenieros/as o Ingenieros/as Técnicos/as, Graduados/as o Grado + Máster en Ingeniería Forestal, Montes, Civil, Obras Públicas, Caminos, Agrícola, Agrónoma o Edificación - Obras (Jaén)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58965"
+ },
  "58966": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58966",
   "category": "Específica",
@@ -42450,7 +42547,7 @@
   "opens_on": null,
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": "2026-11-26",
   "ref": "tro-25-26-puestos-reservados-personas-discapacidad-intelectual",

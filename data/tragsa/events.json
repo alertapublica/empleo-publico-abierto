@@ -4222,5 +4222,22 @@
   "at": "2026-11-27T11:37:27+00:00",
   "kind": "new",
   "offer": "tragsa:tro-25-26-puestos-reservados-personas-discapacidad-intelectual"
+ },
+ {
+  "at": "2026-11-27T12:07:25+00:00",
+  "kind": "reopened",
+  "offer": "tragsa:55851"
+ },
+ {
+  "after": "2026-12-03",
+  "at": "2026-11-27T12:07:25+00:00",
+  "before": "2026-11-23",
+  "kind": "deadline_changed",
+  "offer": "tragsa:55851"
+ },
+ {
+  "at": "2026-11-27T12:07:25+00:00",
+  "kind": "new",
+  "offer": "tragsa:58965"
  }
 ]

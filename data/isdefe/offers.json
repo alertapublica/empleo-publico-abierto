@@ -3072,5 +3072,47 @@
   "status": "open",
   "title": "Jefatura de área de control de presupuestos y control de proyectos",
   "url": "https://seleccionisdefe.es/convocatoria-2685"
+ },
+ "2686": {
+  "apply_url": "https://seleccionisdefe.es/registro-2686",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00412 (15)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:07:25+00:00",
+  "id": "isdefe:2686",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2686",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Ingeniero/a Navegación Aérea.</strong></p><p><strong>Titulaciones </strong></p><p>Ingeniería aeronáutica.</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>\n<p>La persona seleccionada participará en la supervisión de la seguridad operacional en navegación aérea, prestando servicios de consultoría a la Dirección de Navegación Aérea (DNA) de Agencia Estatal de Seguridad Aérea (AESA). Participará en las siguientes materias:</p>\n<p>- Apoyo a la Coordinación de Seguridad de Navegación Aérea en el ámbito de la planificación y control de los procesos de supervisión existentes, desarrollo y seguimiento normativo en el ámbito ATM/ANS, seguimiento de comités y demás funciones de coordinación requeridas. </p>\n<p>- Apoyo en la elaboración y/o revisión de material guía o de referencia, así como en la realización de estudios y análisis de implantación de nueva normativa en el ámbito de la Navegación Aérea.</p>\n<p>Apoyo a los procesos de Certificación/ Renovación de Certificados de Proveedores de Servicios y Funciones de Navegación Aérea y a la supervisión para el inicio/cambio de la prestación de servicios en dependencias ATS. </p>\n</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Entre 5 y 12 años de experiencia.</li>\n<li>Al menos tres años de experiencia en los ámbitos de Navegación Aérea. Por ejemplo, en alguno de los siguientes:<br/>\r\n\t- Tareas relacionadas con las funciones descritas para este puesto.<br/>\r\n\t- Tareas que hayan requerido el uso y conocimiento de la normativa española y europea en la provisión o supervisión de servicios de Navegación Aérea (Sistemas de Navegación Aérea - ANS),<br/>\r\n\t- Tareas que hayan requerido el uso y conocimiento de la normativa española y europea en Cielo Único Europeo (SES),<br/>\r\n\t- Trabajos relacionados con U-Space.</li>\n<li>Ofimática</li>\n</ul><p><strong>Requisitos Valorables</strong></p><ul>\n<li>Inglés: Valorable 700 puntos en la prueba TOIEC.</li>\n<li>\n<p>Se valorará:<br/>\r\n\tHaber participado en los ámbitos específicos listados en las funciones habituales u ocasionales del puesto.<br/>\r\n\tHaber participado en procesos de Inspección de Proveedores de Servicios de Navegación Aérea.<br/>\r\n\tHaber participado en la elaboración de procedimientos y documentación guía relacionada con procesos aeronáuticos.</p>\n</li>\n<li>\n<p>Experiencia en ámbitos de: En general, en Navegación Aérea (Sistemas de Navegación Aérea - ANS), Soluciones para la incorporación de los UAS/drones en el espacio aéreo. Gestión del Tránsito Aéreo (ATM), Seguridad operacional en Navegacióin Aérea, Manejo de Normativa de Aviación Civil, Control de Tránsito Aéreo (ATC), Servicio de Información de Aeródromo (AFIS).</p>\n</li>\n<li>\n<p>Estar en posesión, o próximo a finalizar, el Máster Universitario de Sistemas de Transporte Aéreo (MUSTA), estar en posesión o próximo a finalizar el Máster Universitario en Ingeniería Aeronáutica (MUIA).</p>\n</li>\n<li>\n<p>Conocimiento del REGLAMENTO (UE) 2017/373 a los proveedores de servicios de navegación aérea y su supervisión. Conocimiento de la normativa nacional y europea en el ámbito de navegación aérea. En especial Real Decreto 515/2020, RD 1133/2010.</p>\n</li>\n</ul><p><strong>Se ofrece:</strong> CONTRATO INDEFINIDO</p><p><em>(A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE.</em></p><p><em>Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE.</em></p><p><em>El personal interno se regirá por la política de la empresa).</em></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a Navegación Aérea - Inspector/a (2025-T00412) (15)",
+  "status": "open",
+  "title": "Ingeniero/a Navegación Aérea - Inspector/a",
+  "url": "https://seleccionisdefe.es/convocatoria-2686"
  }
 }
