@@ -35,5 +35,10 @@
   "before": "2026-11-20",
   "kind": "deadline_changed",
   "offer": "navarrabiomed:26-43"
+ },
+ {
+  "at": "2026-11-27T11:07:23+00:00",
+  "kind": "closed",
+  "offer": "navarrabiomed:26-43"
  }
 ]

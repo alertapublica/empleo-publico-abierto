@@ -229,5 +229,52 @@
   "status": "closed",
   "title": "Convocatoria de una plaza de Técnico Superior en Anatomía Patológica y Citodiagnóstico/en Laboratorio Clínico y Biomédico.Call for a Higher Technician in Pathological Anatomy/Clinical and Biomedical Laboratory.IP Lorena García Hevia.REF PI23/00261",
   "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1503"
+ },
+ "1505": {
+  "apply_url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1505",
+  "category": null,
+  "closed_at": null,
+  "code": "2026.55",
+  "company": "IDIVAL",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-06",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T11:07:23+00:00",
+  "id": "idival:1505",
+  "kind": null,
+  "listed_deadline": "2026-12-06",
+  "location": "Cantabria",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "1505",
+  "region": "Cantabria",
+  "sections": [
+   {
+    "html": "<p>IMPORTANTE: Verifique que la dirección que proporciona es la correcta, ya que será el medio por el que nos pongamos en contacto con usted. No se evaluarán las candidaturas que no cumplan los requisitos de la oferta. Los títulos académicos otorgados por entidades extranjeras deben estar homologados en España. Es obligatorio acreditar todos los requisitos excluyentes.</p><p><br/>IMPORTANT: Verify that the address you provide is correct, as it will be the means by which we contact you. Candidates who don' t meet the requirements of the offer will not be evaluated. The Foreign titles must be homologated. It is mandatory to prove all the exclusion requirements.</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/DescargarDocumentoBases/1505\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "idival",
+  "source_title": "2026.55 Convocatoria de una plaza de Grado en Física, Química o equivalente. Call for a Degree in Physics, Chemistry or equivalent. IP Mónica López Fanarraga. REF BPF26/02 y CSI20/56",
+  "status": "open",
+  "title": "Convocatoria de una plaza de Grado en Física, Química o equivalente. Call for a Degree in Physics, Chemistry or equivalent. IP Mónica López Fanarraga. REF BPF26/02 y CSI20/56",
+  "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1505"
  }
 }
