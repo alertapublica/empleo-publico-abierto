@@ -38354,6 +38354,103 @@
   "title": "Técnico/a de Sistemas (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58818"
  },
+ "58819": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58819",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58819",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Sistemas",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-27T07:37:27+00:00",
+  "id": "tragsa:58819",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-15",
+  "location": "Sede Madrid Tragsatec",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "58819",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Técnico/a de Sistemas para prestar apoyo a un importante proyecto de la Administración en Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsatec</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Gestión, seguimiento y resolución de peticiones e incidencias relativas a instalación y configuración de aplicaciones ofimáticas, sistemas operativos, firma electrónica, redes, VPN, correo electrónico, así como usuarios y permisos.</li><li>Administración del Directorio Activo.</li><li>Instalación, montaje, configuración y soporte técnico de equipos informáticos y periféricos.</li><li>Apoyo en el mantenimiento del CPD.</li><li>Gestión y mantenimiento de infraestructuras informáticas y de comunicaciones.</li><li>Actualizaciones y modificaciones de contenidos de la Web corporativa.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia con contrato laboral de 12 meses en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia con contrato laboral en resolución de incidencias hardware y software.</li><li>Al menos 2 años de experiencia con contrato laboral en administración de Directorio Activo.</li><li>Al menos 2 años de experiencia con contrato laboral en montaje y mantenimiento de equipos informáticos y periféricos.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia con contrato laboral de 12 meses en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer una titulación oficial de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia con contrato laboral de 12 meses en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto.</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia con contrato laboral en resolución de incidencias hardware y software.</li><li>Al menos 2 años de experiencia con contrato laboral en administración de Directorio Activo.</li><li>Al menos 2 años de experiencia con contrato laboral en montaje y mantenimiento de equipos informáticos y periféricos.</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificación en Administración Microsoft MCSA o MCSE</li></ul>Experiencia Previa<ul><li>Desde 2 años Hasta 5 años de experiencia en el mantenimiento y administración de servidores (experiencia con contrato laboral, se comprobará en la prueba oral técnica)</li><li>Desde 2 años Hasta 5 años de experiencia en gestión y mantenimiento de infraestructuras informáticas y de comunicaciones (experiencia con contrato laboral,  se comprobará en la prueba oral técnica)</li><li>Desde 2 años Hasta 5 años de experiencia en actualizaciones y modificaciones de contenidos de una Web corporativa (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificación en Administración Microsoft MCSA o MCSE</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificación en Administración Microsoft MCSA o MCSE</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 2 años Hasta 5 años de experiencia en el mantenimiento y administración de servidores (experiencia con contrato laboral, se comprobará en la prueba oral técnica)</li><li>Desde 2 años Hasta 5 años de experiencia en gestión y mantenimiento de infraestructuras informáticas y de comunicaciones (experiencia con contrato laboral,  se comprobará en la prueba oral técnica)</li><li>Desde 2 años Hasta 5 años de experiencia en actualizaciones y modificaciones de contenidos de una Web corporativa (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de hasta un 50% de la jornada de trabajo a distancia por ahorro energético, a determinar por la empresa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 15/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Sistemas (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58819"
+ },
  "58823": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58823",
   "category": "Específica",
@@ -41099,6 +41196,113 @@
   "status": "open",
   "title": "Técnico/a de Apoyo - Mantenimiento Animalario (Murcia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58884"
+ },
+ "58889": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58889",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58889",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Pesca y Asuntos Marítimos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Otros",
+  "first_seen": "2026-11-27T07:37:27+00:00",
+  "id": "tragsa:58889",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-04",
+  "location": "Embarcado/a en Buque Oceanográfico",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "58889",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Segundo/a Oficial/a de Máquinas para embarcar en Buque Oceanográfico.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Embarcado/a en Buque Oceanográfico</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Efectuar las tareas de mantenimiento eléctrico.</li><li>Efectuar las tareas de mantenimiento de inyectores.</li><li>Apoyar en la coordinación de la utilización de combustible a bordo.</li><li>Participar en los trabajos de mantenimiento de acuerdo con las instrucciones recibidas de el/la Primer/a Oficial/a de Máquinas.</li><li>Realizar las revisiones de los equipos críticos asignados.</li><li>Participar en los ejercicios de abandono y contra incendios, asumiendo y comprendiendo claramente sus funciones de acuerdo con los planes establecidos.</li><li>Conocer perfectamente todos los procedimientos a seguir en caso de emergencia en las distintas operaciones y lugares del buque en los que ejercita su actividad.</li><li>Otras responsabilidades que se encuentren definidas en el Régimen Interno del barco y en los distintos procedimientos tales como: entrada en espacios cerrados, trabajos en caliente, toma de combustible, etc.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la tarjeta profesional de oficial de máquinas de primera de la Marina Mercante igual o superior a 6000Kw (se comprobará en valoración técnica)</li></ul>Experiencia Previa<ul><li>Al menos 2 años de experiencia con contrato laboral como oficial/a de máquinas en Buques de más de 1600GT</li></ul>Otros Requisitos Imprescindibles<ul><li>Documento de Identidad del Marino (DIM) o Libreta de Inscripción Marítima o Certificado de Embarque (se comprobará en valoración técnica)</li><li>Reconocimiento médico en vigor apto para el puesto (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Formación Básica en Seguridad (se comprobará en valoración técnica)</li><li>Certificado de suficiencia en Técnicas Avanzadas en Lucha Contra Incendios (se comprobará en valoración técnica)</li><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate no Rápidos (se comprobará en valoración técnica)</li><li>Formación Sanitaria Específica Inicial (se comprobará en valoración técnica)</li><li>Curso de alto voltaje (se comprobará en valoración técnica)</li><li>Certificado formación avanzada buques regidos código IGF (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la tarjeta profesional de oficial de máquinas de primera de la Marina Mercante igual o superior a 6000Kw (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la tarjeta profesional de oficial de máquinas de primera de la Marina Mercante igual o superior a 6000Kw (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 2 años de experiencia con contrato laboral como oficial/a de máquinas en Buques de más de 1600GT</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Documento de Identidad del Marino (DIM) o Libreta de Inscripción Marítima o Certificado de Embarque (se comprobará en valoración técnica)</li><li>Reconocimiento médico en vigor apto para el puesto (se comprobará en valoración técnica)</li><li>Certificado de suficiencia de Formación Básica en Seguridad (se comprobará en valoración técnica)</li><li>Certificado de suficiencia en Técnicas Avanzadas en Lucha Contra Incendios (se comprobará en valoración técnica)</li><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate no Rápidos (se comprobará en valoración técnica)</li><li>Formación Sanitaria Específica Inicial (se comprobará en valoración técnica)</li><li>Curso de alto voltaje (se comprobará en valoración técnica)</li><li>Certificado formación avanzada buques regidos código IGF (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate Rápidos (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés Nivel: B2</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 3 años de experiencia en operaciones con sistemas de tratamiento de agua de lastre (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 1 año Hasta 3 años realizando funciones como Primer/a Oficial/a  de máquinas en buques oceanográficos/offshore (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en trabajos con propulsión Diésel-Eléctrica (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate Rápidos (se comprobará en valoración técnica)</li></ul>Idiomas<ul><li>Inglés Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Certificado en Embarcaciones de Supervivencia y Botes de Rescate Rápidos (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Inglés Nivel: B2</li></ul>",
+    "level": 3,
+    "title": "Idiomas"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 3 años de experiencia en operaciones con sistemas de tratamiento de agua de lastre (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 1 año Hasta 3 años realizando funciones como Primer/a Oficial/a  de máquinas en buques oceanográficos/offshore (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 3 años de experiencia en trabajos con propulsión Diésel-Eléctrica (experiencia con contrato laboral) (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada estimada de 2 meses.<br/><br/>- Jornada completa. <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 04/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Segundo/a Oficial/a de Máquinas (Buque Oceanográfico)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58889"
  },
  "58891": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58891",

@@ -3037,6 +3037,68 @@
   "title": "Técnico/a de Almacenes",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269120"
  },
+ "3269686": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269686",
+  "category": null,
+  "closed_at": null,
+  "code": "27721",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T07:37:27+00:00",
+  "id": "ineco:3269686",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3269686",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Apoyo en actividades de seguridad operacional y factores humanos, incluyendo análisis básicos de sucesos e incidencias.<br/>- Elaboración y revisión de documentación técnica vinculada a seguridad, procedimientos y metodologías.<br/>- Colaboración en proyectos internos de mejora de la seguridad operacional.<br/>- Análisis de cambios en el sistema de navegación aérea.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación: Ingeniería Aeronáutica - Grado en Gestión y Operaciones del Trasporte Aérea - Master en Sistemas del Transporte Aéreo. <br/>- Años de experiencia en el puesto: 2 años.<br/>- Experiencia en: Conocimientos de gestión de incidentes de transito aéreo.<br/>- Idiomas: Inglés C1.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>-\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>-\tContamos con beneficios flexibles adaptables a cada persona.<br/>-\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>-\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>-\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "27721 - Técnico/a de Seguridad y Factores Humanos",
+  "status": "open",
+  "title": "Técnico/a de Seguridad y Factores Humanos",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3269686"
+ },
  "3270808": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3270808",
   "category": null,
