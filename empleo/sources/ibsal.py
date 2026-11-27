@@ -73,9 +73,11 @@ def parse_detail(html: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
     title, expiry = soup.find("h1"), soup.select_one(".awsm-job-expiration-content")
     canonical = soup.find("link", rel="canonical")
-    post = POST.search(canonical["href"]) if canonical and canonical.get("href") else None
+    # Las vigentes llevan la dirección legible en la canónica y el número de entrada en el shortlink.
+    post = next((found for link in soup.find_all("link", rel=["canonical", "shortlink"])
+                 if (found := POST.search(link.get("href", "")))), None)
     deadline = expiry_date(_text(expiry)) if expiry else None
-    if not (title and post and deadline):
+    if not (title and canonical and canonical.get("href") and post and deadline):
         raise SourceLayoutError("IBSAL: ficha sin título, identificador o fecha de caducidad")
     contract = soup.select_one(".awsm-job-specification-tipo-de-contrato .awsm-job-specification-term")
     body = soup.select_one(".awsm-job-entry-content")
