@@ -94,7 +94,7 @@
  "10244": {
   "apply_url": "https://www.tmb.cat/ca/w/oferta-10244-especialista-superior-energia-polivalent",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": "10244",
   "company": "TMB",
   "contract": null,
@@ -109,7 +109,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-26",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": null,
@@ -132,7 +132,7 @@
   ],
   "source": "tmb",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "2 places + 3 reserves d’especialista superior d’energia polivalent",
   "url": "https://www.tmb.cat/ca/w/oferta-10244-especialista-superior-energia-polivalent"
  },

@@ -162,7 +162,7 @@
  "692029": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692029.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": "46-2026",
   "company": "Fundación Pública Andaluza Progreso y Salud, M.P.",
   "contract": "Indefinido",
@@ -177,7 +177,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-26",
   "location": "Sevilla (Sevilla)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -210,7 +210,7 @@
   ],
   "source": "andalucia",
   "source_title": "Técnico/a Auxiliar Fomento de la Investigación -46-2026",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a Auxiliar Fomento de la Investigación",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692029.html"
  },

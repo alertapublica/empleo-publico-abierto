@@ -143,6 +143,24 @@
   "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=893",
   "via": "bolsa"
  },
+ "gpex:c8bc4fc5137e": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-27",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-27T05:07:25+00:00",
+  "location": null,
+  "process": "GPEX convoca una oferta de empleo para un perfil de BC26359 Personal Técnico de Gestión",
+  "process_url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=898",
+  "source": "gpex",
+  "state": "curso",
+  "system": null,
+  "title": "GPEX convoca una oferta de empleo para un perfil de BC26359 Personal Técnico de Gestión",
+  "url": "https://candidato.gpex.es/index.php?modulo=anuncios&pagina=ver.php&id_noticia=898",
+  "via": "bolsa"
+ },
  "gpex:d106f7ac1c49": {
   "access": null,
   "apply_url": null,

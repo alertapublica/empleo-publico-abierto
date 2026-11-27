@@ -107,7 +107,7 @@
   "process": "4 puestos EN EL C.T. DE Madrid (DO-DE-26-023)",
   "process_url": "https://www.enresa.es/esp/empleo",
   "source": "enresa",
-  "state": "curso",
+  "state": "finalizado",
   "system": null,
   "title": "Plazo de candidaturas cerrado. Proceso en curso.",
   "url": "https://www.enresa.es/documentos/Convocatoria_externa_4_puestos_CT_Madrid_signed.pdf",
@@ -168,7 +168,7 @@
   "via": "otro"
  },
  "enresa:5c109600f7d1": {
-  "access": "libre",
+  "access": null,
   "apply_url": null,
   "contract": "indefinido",
   "date": "2026-06-07",
@@ -319,6 +319,24 @@
   "url": "https://www.enresa.es/documentos/Convocatoria_externa_P._Titulado_Depto._Proyectos_Clausura_SMG.pdf",
   "via": "otro"
  },
+ "enresa:82928c1021ff": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-27",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-27T05:07:25+00:00",
+  "location": "Madrid",
+  "process": "4 puestos EN EL C.T. DE Madrid (DO-DE-26-023)",
+  "process_url": "https://www.enresa.es/esp/empleo",
+  "source": "enresa",
+  "state": "finalizado",
+  "system": null,
+  "title": "Proceso finalizado",
+  "url": "https://www.enresa.es/documentos/Convocatoria_externa_4_puestos_CT_Madrid_signed.pdf",
+  "via": "otro"
+ },
  "enresa:8ad6d2eb1d03": {
   "access": "libre",
   "apply_url": null,
@@ -411,7 +429,7 @@
   "via": "otro"
  },
  "enresa:c064c19f2033": {
-  "access": "libre",
+  "access": null,
   "apply_url": null,
   "contract": "indefinido",
   "date": "2026-05-30",
@@ -553,7 +571,7 @@
   "deadline_time": null,
   "first_seen": "2026-11-07T11:34:41+00:00",
   "location": null,
-  "position": 23,
+  "position": 22,
   "process": "Personal administrativo en el departamento de servicios generales (DO-DE-26-001)",
   "process_url": "https://www.enresa.es/esp/empleo",
   "source": "enresa",

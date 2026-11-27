@@ -392,7 +392,7 @@
  "3919": {
   "apply_url": "https://intranet.cientifis.com/CiberBBN/intranet/publico/convocatoria/convocatoriasSolicitantes/convocatoriasSolicitantePublico.aspx?mod=new&PRFId=3919",
   "category": "Doctor",
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": "3392/3919",
   "company": "CIBER",
   "contract": "Interinidad",
@@ -407,7 +407,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-26",
   "location": "Instituto Interuniversitario de Investigación de Reconocimiento Molecular y Desarrollo Tecnológico; VALENCIA",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-05",
   "parent_ref": null,
   "place": null,
@@ -450,7 +450,7 @@
   ],
   "source": "ciber",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Doctor · Doctorado en Biología, Biomedicina, Biotecnología, Bioquímica o áreas afines",
   "url": "https://www.ciberisciii.es/empleo/detalle-oferta?id=3919"
  },

@@ -122,7 +122,7 @@
  "1374988957": {
   "apply_url": "https://treballar.fgc.cat/talentcommunity/apply/1374988957/?locale=ca_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": null,
   "company": "Ferrocarrils de la Generalitat de Catalunya",
   "contract": "Indefinit",
@@ -137,7 +137,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": "Lleida",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -155,7 +155,7 @@
   ],
   "source": "fgc",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Tècnic/a especialitzat/ada de seguretat ferroviària FGC Mobilitat",
   "url": "https://treballar.fgc.cat/job/Barcelona%C2%A0-T%C3%A8cnica-especialitzatada-de-seguretat-ferrovi%C3%A0ria-FGC-Mobilitat/1374988957/"
  },

@@ -186,7 +186,7 @@
  "1503": {
   "apply_url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1503",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": "2026.54",
   "company": "IDIVAL",
   "contract": null,
@@ -203,7 +203,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": "Cantabria",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
@@ -226,7 +226,7 @@
   ],
   "source": "idival",
   "source_title": "2026.54 Convocatoria de una plaza de Técnico Superior en Anatomía Patológica y Citodiagnóstico/en Laboratorio Clínico y Biomédico.Call for a Higher Technician in Pathological Anatomy/Clinical and Biomedical Laboratory.IP Lorena García Hevia.REF PI23/00261",
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria de una plaza de Técnico Superior en Anatomía Patológica y Citodiagnóstico/en Laboratorio Clínico y Biomédico.Call for a Higher Technician in Pathological Anatomy/Clinical and Biomedical Laboratory.IP Lorena García Hevia.REF PI23/00261",
   "url": "https://aplicacionesidival.idival.org/ConvocatoriasPropias/es/Convocatorias/VerConvocatoria/1503"
  }

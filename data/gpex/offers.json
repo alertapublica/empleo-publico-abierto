@@ -57,5 +57,67 @@
   "status": "closed",
   "title": "Personal Técnico Medio Ambiental",
   "url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2557"
+ },
+ "2581": {
+  "apply_url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2581",
+  "category": null,
+  "closed_at": null,
+  "code": "BC26366",
+  "company": "GPEX",
+  "contract": "Cubrir plaza temporal",
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Área TIC",
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T05:07:25+00:00",
+  "id": "gpex:2581",
+  "kind": null,
+  "listed_deadline": "2026-12-04",
+  "location": "Mérida (Badajoz)",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "2581",
+  "region": "Extremadura",
+  "sections": [
+   {
+    "html": "<ul><li><strong>Emplazamiento y/o puesto de trabajo:</strong> Mérida (Badajoz)</li><li><strong>Horas semanales u horario de trabajo:</strong> 37 horas y media semanales de lunes a viernes, exceptuando cuando haya alguna emergencia</li><li><strong>Causa del contrato ofertado:</strong> Cubrir plaza temporal</li><li><strong>Retribución Bruta Anual:</strong> Según II Convenio Colectivo GPEX (Anexo III)</li><li><strong>Grupo profesional:</strong> Grupo B. Diplomatura, Arquitectura Técnica, Ingeniería Técnica o Grado correspondiente.</li><li><strong>Duración estimada del contrato:</strong> Hasta incorporación de la persona sustituida, finalización de la reserva de puesto o finalización del encargo con fecha 31/03/2027</li><li><strong>Fecha de incorporación deseada:</strong> Inmediata</li></ul>",
+    "level": 2,
+    "title": "Características del puesto"
+   },
+   {
+    "html": "<ul><li>- Apoyo técnico del Área de Intervención Operativa y del área plataforma tecnológica del Sistema Integral de Emergencias 1.1.2.<br/>\r\nExtremadura<br/><br/>\r\n- Apoyo al Jefe de Sala<br/><br/>\r\n- Comunicación con los recursos complementarios en situaciones de contingencia o situación de emergencia en las que sea<br/>\r\nnecesario<br/><br/>\r\n- Apoyo y asesoramiento técnico Plataforma Tecnológica del Centro 1.1.2. Extremadura<br/><br/>\r\n- Apoyo técnico en emergencias declaradas<br/><br/>\r\n- Apoyo técnico en operaciones de revisión y mantenimiento para el normal funcionamiento del CAUE 112.<br/><br/>\r\n- Apoyo técnico en la activación y despliegue del PMA<br/><br/>\r\n- Apoyo técnico en acciones de desarrollo y mejora de la plataforma tecnológica 1.1.2. Extremadura<br/><br/>\r\n- Elaboración de manuales de procedimiento</li></ul>",
+    "level": 2,
+    "title": "Funciones y/o tareas a desempeñar en el puesto"
+   },
+   {
+    "html": "<ul><li><strong>Titulaciones y estudios:</strong> <em>- Ingeniería Técnica en Informática de Sistemas y/o Grado equivalente<br/>- Ingeniería Técnica de Telecomunicación, especialidad en sistemas de telecomunicación y/o Grado equivalente<br/>- Ingeniería Técnica de Telecomunicación, especialidad en sistemas de telemática y/o Grado equivalente</em><br/></li><li><strong>Carnés de conducir:</strong> <em>- Tipo B</em><br/></li><li><strong>Otros:</strong>  Declaración expresa responsable\t\t\t\t\t\t\t\t</li></ul>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<ul><li><strong>Experiencia profesional:</strong> <em>- Experiencia acreditable en apoyo técnico en entornos de emergencias y seguridad pública,\r\npreferiblemente en el Sistema Integral de Emergencias 1.1.2 o similares<br/>- Experiencia acreditable en mantenimiento y operación de plataformas tecnológicas de emergencias<br/>- Experiencia acreditable en activación y despliegue de Puestos de Mando Avanzados (PMA)</em><br/></li><li>Observación: Todos los requisitos y méritos aportados por las personas candidatas deberán ser acreditados documentalmente, previa petición por GPEX, antes de la incorporación de la persona candidata seleccionada.</li></ul>",
+    "level": 2,
+    "title": "Fase de méritos"
+   },
+   {
+    "html": "<ul><li>Las personas candidatas preseleccionadas serán citadas para la realización de una o varias de las siguientes pruebas o ejercicios:<br/>\r\n- Test psicotécnico.<br/>\r\n- Examen o prueba teórica, práctica o teórico-práctica.<br/>\r\n- Redacción y/o defensa de un proyecto.<br/>\r\n- Entrevista personal y/o grupal.<br/>\r\n- Otras que así se determine.</li></ul>",
+    "level": 2,
+    "title": "Fase de conocimientos y actitudes"
+   }
+  ],
+  "source": "gpex",
+  "source_title": "BC26366 Personal Técnico Especialista Medio",
+  "status": "open",
+  "title": "Personal Técnico Especialista Medio",
+  "url": "https://candidato.gpex.es/index.php?modulo=ofertas_publico&pagina=ver.php&id_oferta=2581"
  }
 }

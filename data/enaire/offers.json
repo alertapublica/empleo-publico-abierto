@@ -2,7 +2,7 @@
  "20261107": {
   "apply_url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": null,
   "company": "ENAIRE",
   "deadline": "2026-11-26",
@@ -15,7 +15,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": null,
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -33,7 +33,7 @@
   ],
   "source": "enaire",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Convocatoria externa titulados/as niveles A y B",
   "url": "https://empleo.enaire.es/empleo/PFSrv?accion=inicio&SEDE=0"
  },

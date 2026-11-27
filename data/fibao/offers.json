@@ -2,7 +2,7 @@
  "1506": {
   "apply_url": "https://www.fibao.es/ofertas/ficha/1506/",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": "91/2026",
   "company": "FIBAO",
   "contract": null,
@@ -18,7 +18,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": "Andalucía",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -41,7 +41,7 @@
   ],
   "source": "fibao",
   "source_title": "91/2026.- Investigador/a en Formación PIGE-0009-2026",
-  "status": "open",
+  "status": "closed",
   "title": "Investigador/a en Formación PIGE-0009-2026",
   "url": "https://www.fibao.es/ofertas/ficha/1506/"
  },

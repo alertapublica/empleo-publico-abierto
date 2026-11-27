@@ -44,7 +44,7 @@
  "responsable-de-estadistica": {
   "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica",
   "category": "Dentro de Convenio",
-  "closed_at": null,
+  "closed_at": "2026-11-27T05:07:25+00:00",
   "code": null,
   "company": "Puertos del Estado",
   "deadline": "2026-11-26",
@@ -56,7 +56,7 @@
   "kind": null,
   "listed_deadline": "2026-11-26",
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "parent_ref": null,
   "place": null,
   "portal_tries": 4,
@@ -73,7 +73,7 @@
   ],
   "source": "puertos",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Responsable de Estadística",
   "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica"
  }

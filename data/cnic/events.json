@@ -83,5 +83,20 @@
   "at": "2026-11-26T05:07:23+00:00",
   "kind": "closed",
   "offer": "cnic:TTSII-VF-10.26"
+ },
+ {
+  "at": "2026-11-27T05:07:25+00:00",
+  "kind": "closed",
+  "offer": "cnic:PREDOC-MAM-10.26"
+ },
+ {
+  "at": "2026-11-27T05:07:25+00:00",
+  "kind": "closed",
+  "offer": "cnic:TECLABII-ARR-10.26"
+ },
+ {
+  "at": "2026-11-27T05:07:25+00:00",
+  "kind": "closed",
+  "offer": "cnic:TECPROYECTO-FSC-10.26"
  }
 ]

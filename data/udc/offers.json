@@ -1276,5 +1276,57 @@
   "status": "open",
   "title": "Técnico/a de Apoio á Investigación a tempo parcial · CICA",
   "url": "https://sede.udc.gal/services/electronic_board/EXP2026/012844"
+ },
+ "2026-cp-286": {
+  "apply_url": "https://sede.udc.gal/services/electronic_board/EXP2026/012935",
+  "category": null,
+  "closed_at": null,
+  "code": "2026/CP/286",
+  "company": "Universidade da Coruña",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-04",
+  "deadline_rule": "5 días hábiles a partir del día siguiente al de la publicación en el tablón de anuncios de la Sede electrónica de la UDC",
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T05:07:25+00:00",
+  "id": "udc:2026-cp-286",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Galicia",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2026-cp-286",
+  "region": "Galicia",
+  "sections": [
+   {
+    "html": "<p>GRC 2026 - PEINADOR VEIRA, CARLOS</p>",
+    "level": 2,
+    "title": "Proyecto"
+   },
+   {
+    "html": "<p>5 días hábiles a partir del día siguiente al de la publicación en el tablón de anuncios de la Sede electrónica de la UDC.</p>",
+    "level": 2,
+    "title": "Plazo de presentación"
+   },
+   {
+    "html": "<ul><li><a href=\"https://sede.udc.gal/services/electronic_board/EXP2026/012935/document?logicalId=cf2a1365-0aa0-42f4-84f8-a17f64e5f551&amp;documentCsv=1GBRHJ02JF2J0CEEUKCQGDON\">Anuncio GL [pdf]</a></li><li><a href=\"https://sede.udc.gal/services/electronic_board/EXP2026/012935/document?logicalId=90e41983-0bbf-418b-a2a1-5c6b70229b29&amp;documentCsv=0P62LU1KH9B2OI7O16RSA7PC\">Anuncio ES [pdf]</a></li></ul>",
+    "level": 2,
+    "title": "Documentos"
+   }
+  ],
+  "source": "udc",
+  "source_title": "Convoc. contratación 2026/CP/286 CICA",
+  "status": "open",
+  "title": "Técnico/a de Apoio á Investigación a tempo completo · CICA",
+  "url": "https://sede.udc.gal/services/electronic_board/EXP2026/012935"
  }
 }
