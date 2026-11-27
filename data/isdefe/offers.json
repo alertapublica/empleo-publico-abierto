@@ -2862,5 +2862,47 @@
   "status": "open",
   "title": "Técnico/a Superior de Prevención de Riesgos Laborales",
   "url": "https://seleccionisdefe.es/convocatoria-2680"
+ },
+ "2681": {
+  "apply_url": "https://seleccionisdefe.es/registro-2681",
+  "category": null,
+  "closed_at": null,
+  "code": "2025-T00056 (15)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T10:07:26+00:00",
+  "id": "isdefe:2681",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2681",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a Ingeniero/a de sistemas de apoyo al mantenimiento de sistemas relacionados con la seguridad del transporte aéreo.</p><p><strong>Titulación Requerida</strong></p><p>Ingeniería /grado/licenciatura en informatica,telecomunicaciones, fisica, matematicas, ADE,economicas o empresariales</p><p><strong>Funciones Habituales</strong></p><p>Apoyar a la gestión y coordinación del mantenimiento y evolución de sistemas TIC de soporte a los sistemas relacionados con la seguridad del transporte aéreo y  sistemas de gestión económico financiera, así como en la gestión de proyectos de sistemas de nueva construcción y en la identificación e implantación de medidas de seguridad.<br/>\r\nApoyar en la identificación de necesidades y requisitos, así como en el estudio de viabilidad y análisis de alternativas técnicas de las mismas.<br/>\r\nRealizar controles de calidad de la implantación de sistemas indicados realizados por terceros.<br/>\r\nApoyar en la coordinación de los diferentes proyectos de implantación de los sistemas indicados.<br/>\r\nApoyar en la puesta en marcha y en el soporte de los sistemas indicados.<br/>\r\nApoyar en la consultoría y operativa necesaria en los sistemas indicados. </p><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><p>» Titulación: Ingeniería /grado/licenciatura en informatica,telecomunicaciones, fisica, matematicas, ADE,economicas o empresariales</p><p>» Años de experiencia: <strong>Entre 5 y 12 años de experiencia</strong></p><p>» Tipo de experiencia:    <br/>\r\nEs imprescindible que tenga experiencia contrastada en:<br/>\r\n* Gestión de proyectos relacionados con sistemas de gestión económico finaciera, consultoría y operación en el ámbito de gestión económico financiero.<br/>\r\n* Uso de herramientas de gestión económico financiera.</p><p>Adicionalmente se valorará experiencia en:<br/>\r\n* Recursos humanos en el sector público.<br/>\r\n* Estrategia, objetivos e indicadores de cumplimiento dentro del sector público.</p><p><strong>Requisitos valorables:</strong></p><p>» Experiencia: Proyectos de gestión de sistemas relacionados con la seguridad de los sistemas de información, la seguridad en el trasporte aéreo, la gestión económico financiera, y la ingeniería de sistemas.</p><p>» Conocimientos: Ingeniería de Sistemas, Seguridad, Seguridad Transporte Aéreo, Gestión Eco-Fin<br/>\r\n </p><p><strong>Inglés</strong>: Valorable 700 puntos en prueba TOEIC</p><p><strong>Se ofrece: CONTRATO INDEFINIDO</strong></p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de Gestión Económico-Financiera en Sistemas TIC del Transporte Aéreo - (2025-T00056) (15)",
+  "status": "open",
+  "title": "Ingeniero/a de Gestión Económico-Financiera en Sistemas TIC del Transporte Aéreo -",
+  "url": "https://seleccionisdefe.es/convocatoria-2681"
  }
 }
