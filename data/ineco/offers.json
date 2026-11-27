@@ -6140,7 +6140,7 @@
  "3307671": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3307671",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T15:07:25+00:00",
   "code": "28429",
   "company": "Ineco",
   "contract": null,
@@ -6157,7 +6157,7 @@
   "kind": "beca",
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -6195,7 +6195,7 @@
   ],
   "source": "ineco",
   "source_title": "28429 - Beca en Proyectos de Ingeniería Civil",
-  "status": "open",
+  "status": "closed",
   "title": "Beca en Proyectos de Ingeniería Civil",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3307671"
  },

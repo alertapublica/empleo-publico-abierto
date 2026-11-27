@@ -326,5 +326,52 @@
   "status": "open",
   "title": "Investigador/a en formación, PECART-0004-2026",
   "url": "https://www.fibao.es/ofertas/ficha/1512/"
+ },
+ "1513": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1513/",
+  "category": null,
+  "closed_at": null,
+  "code": "98/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-07",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T15:07:25+00:00",
+  "id": "fibao:1513",
+  "kind": null,
+  "listed_deadline": "2026-12-07",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "1513",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>Contrato de investigación, en régimen de concurrencia competitiva, con dedicación a tiempo parcial (28 horas semanales), para el desarrollo de actividades científico técnicas en la línea de investigación del grupo de ibs.GRANADA MP20-Biomarcadores de Enfermedades Metabólicas y Óseas, a desarrollar en el Hospital Universitario Clínico San Cecilio. Titulación requerida: Grado Universitario en Nutrición</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/98.-_ctto_invest._endocrino_husc.pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "98/2026.- Contrato investigador/a Nutrición/Endocrino",
+  "status": "open",
+  "title": "Contrato investigador/a Nutrición/Endocrino",
+  "url": "https://www.fibao.es/ofertas/ficha/1513/"
  }
 }

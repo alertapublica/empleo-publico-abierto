@@ -1,16 +1,31 @@
 {
- "emasesa": {
-  "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 189,
+ "cofivacasa": {
+  "desde": "2026-11-27T15:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
- "galiciasur": {
-  "desde": "2026-11-27T14:37:30+00:00",
+ "emasesa": {
+  "desde": "2026-11-19T08:07:34+00:00",
+  "lecturas": 190,
+  "resultado": "error"
+ },
+ "idisba": {
+  "desde": "2026-11-27T15:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "iisgm": {
+  "desde": "2026-11-27T15:07:25+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-27T14:37:30+00:00",
+  "lecturas": 2,
+  "resultado": "error"
+ },
+ "sepides": {
+  "desde": "2026-11-27T15:07:25+00:00",
   "lecturas": 1,
   "resultado": "error"
  }
