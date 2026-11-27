@@ -49,12 +49,12 @@
  "P2026.02": {
   "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/10/BASES-CONVOCATORIA.GEOLOGO-DE-EXPLORACION.P2026.02.pdf",
   "category": "Tasa de reposición",
-  "closed_at": "2026-11-25T16:09:11+00:00",
+  "closed_at": null,
   "code": "P2026.02",
   "company": "SADIM",
   "contract": null,
-  "deadline": "2026-11-25",
-  "deadline_time": "17:00",
+  "deadline": "2026-12-02",
+  "deadline_time": null,
   "department": null,
   "detail_ok": true,
   "detail_version": 1,
@@ -62,7 +62,7 @@
   "first_seen": "2026-11-07T09:24:22+00:00",
   "id": "hunosa:P2026.02",
   "kind": "indefinido",
-  "listed_deadline": "2026-11-25",
+  "listed_deadline": "2026-12-02",
   "location": "Langreo (Asturias)",
   "missed_runs": 0,
   "opens_on": null,
@@ -75,7 +75,7 @@
   "region": "Asturias",
   "sections": [
    {
-    "html": "<ul><li><strong>Inscripción hasta:</strong> 25/11/2026</li></ul>",
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 02/12/2026</li></ul>",
     "level": 2,
     "title": "Datos del puesto"
    },
@@ -87,19 +87,19 @@
   ],
   "source": "hunosa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Geólogo de exploración",
   "url": "https://www.sadim.es/empleo/"
  },
  "P2026.03": {
   "apply_url": "https://www.sadim.es/wp-content/uploads/sites/14/2026/10/BASES-CONVOCATORIA.JEFE-DE-PROYECTOS-EN-INGENIERIA-MINERA.P2026.03.pdf",
   "category": "Tasa de reposición",
-  "closed_at": "2026-11-25T16:09:11+00:00",
+  "closed_at": null,
   "code": "P2026.03",
   "company": "SADIM",
   "contract": null,
-  "deadline": "2026-11-25",
-  "deadline_time": "17:00",
+  "deadline": "2026-12-02",
+  "deadline_time": null,
   "department": null,
   "detail_ok": true,
   "detail_version": 1,
@@ -107,7 +107,7 @@
   "first_seen": "2026-11-07T09:24:22+00:00",
   "id": "hunosa:P2026.03",
   "kind": "indefinido",
-  "listed_deadline": "2026-11-25",
+  "listed_deadline": "2026-12-02",
   "location": "Langreo (Asturias)",
   "missed_runs": 0,
   "opens_on": null,
@@ -120,7 +120,7 @@
   "region": "Asturias",
   "sections": [
    {
-    "html": "<ul><li><strong>Inscripción hasta:</strong> 25/11/2026</li></ul>",
+    "html": "<ul><li><strong>Inscripción hasta:</strong> 02/12/2026</li></ul>",
     "level": 2,
     "title": "Datos del puesto"
    },
@@ -132,7 +132,7 @@
   ],
   "source": "hunosa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Jefe de proyectos en ingeniería minera",
   "url": "https://www.sadim.es/empleo/"
  }

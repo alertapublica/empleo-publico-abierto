@@ -62,5 +62,29 @@
   "at": "2026-11-27T08:37:23+00:00",
   "kind": "closed",
   "offer": "hunosa:P2026.01.III"
+ },
+ {
+  "at": "2026-11-27T13:37:31+00:00",
+  "kind": "reopened",
+  "offer": "hunosa:P2026.02"
+ },
+ {
+  "after": "2026-12-02",
+  "at": "2026-11-27T13:37:31+00:00",
+  "before": "2026-11-25",
+  "kind": "deadline_changed",
+  "offer": "hunosa:P2026.02"
+ },
+ {
+  "at": "2026-11-27T13:37:31+00:00",
+  "kind": "reopened",
+  "offer": "hunosa:P2026.03"
+ },
+ {
+  "after": "2026-12-02",
+  "at": "2026-11-27T13:37:31+00:00",
+  "before": "2026-11-25",
+  "kind": "deadline_changed",
+  "offer": "hunosa:P2026.03"
  }
 ]
