@@ -217,6 +217,33 @@ class Process(unittest.TestCase):
         self.assertTrue(process["partial"])
         self.assertIn("bloques 5 y 7", process["notice_html"])
 
+    def test_lee_el_plazo_de_inscripcion_de_una_apertura(self):
+        # Texto de la apertura del 28/05/2026: «plazo de solicitudes» va en la frase anterior.
+        html = """<title>Tasa de reposición 2025-2026 | Tragsa</title>
+        <p>28 de mayo de 2026</p><p>Publicación de los Anexos Específicos y apertura del plazo</p>
+        <p>La Dirección de Recursos Humanos y Organización abre el plazo de solicitudes para la cobertura
+        de los puestos cuyas bases generales se publicaron el 21 de mayo de 2026. Las personas interesadas
+        pueden inscribirse a través de la página web del Grupo en nuestra plataforma de empleo desde las
+        0:00 horas del día 29 de mayo de 2026, hasta las 23:59 horas del día 12 de junio de 2026 en este
+        enlace.</p>
+        <p>25 de septiembre de 2026</p><p>Publicación de las relaciones provisionales</p>
+        <p>Las alegaciones recibidas antes de las 00:00 horas del día 25 de septiembre de 2026 y después de
+        las 23:59 horas del día 1 de octubre de 2026 se consideran extemporáneas.</p>"""
+        process = tragsa.parse_process(html, self.URL, date(2026, 6, 1))
+        self.assertEqual((process["deadline"], process["deadline_time"]), ("2026-06-12", "23:59"))
+        self.assertFalse(tragsa.parse_process(html, self.URL, date(2026, 6, 13))["open"])
+
+    def test_otros_plazos_no_reabren_la_inscripcion(self):
+        html = """<title>Tasa de reposición 2025-2026 | Tragsa</title>
+        <p>28 de mayo de 2026</p><p>Apertura del plazo</p>
+        <p>Las personas interesadas pueden inscribirse, a través de la página web del Grupo, desde las 0:00
+        horas del día 29 de mayo de 2026, hasta las 23:59 horas del día 12 de junio de 2026.</p>
+        <p>25 de septiembre de 2026</p><p>Relaciones provisionales</p>
+        <p>Las solicitudes de subsanación podrán presentarse hasta las 23:59 horas del día 1 de octubre
+        de 2026. Las personas admitidas pueden inscribirse a las pruebas desde las 00:00 horas del día
+        26 de septiembre de 2026 hasta las 14:00 horas del día 2 de octubre de 2026.</p>"""
+        self.assertFalse(tragsa.parse_process(html, self.URL, date(2026, 9, 26))["open"])
+
     def test_el_ultimo_dia_sigue_abierto_y_el_siguiente_no(self):
         self.assertTrue(self.read(date(2026, 11, 10))["open"])
         closed = self.read(date(2026, 11, 11))

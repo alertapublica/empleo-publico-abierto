@@ -58,8 +58,11 @@ MONTHS = "enero febrero marzo abril mayo junio julio agosto septiembre octubre n
 SPACES = r"[\s​\xa0]+"
 CANDIDATE_CODE = re.compile(r"\b[A-Z]{2,4}\d{6,8}\b")
 DATE_LINE = re.compile(rf"(\d{{1,2}}) de ({'|'.join(MONTHS)}) de (20\d\d)", re.I)
+# Las aperturas dicen «pueden inscribirse a través de la página web del Grupo … hasta las…» sin «plazo de
+# solicitudes» en la misma frase; se exige el «a través de» para no leer plazos de subsanación o pruebas.
 APPLICATION = re.compile(
-    r"plazo\s+de\s+(?:presentaci[óo]n\s+de\s+)?solicitudes[^.]*?hasta\s+las\s+(\d{1,2}[:.]\d{2})\s+(?:horas\s+)?"
+    r"(?:plazo\s+de\s+(?:presentaci[óo]n\s+de\s+)?solicitudes|pueden\s+inscribirse,?\s+a\s+trav[ée]s\s+de)"
+    r"[^.]*?hasta\s+las\s+(\d{1,2}[:.]\d{2})\s+(?:horas\s+)?"
     r"del\s+(?:d[íi]a\s+)?(\d{1,2})\s+de\s+([a-záéíóú]+)\s+de\s+(\d{4})", re.I)
 APPLICATION_DAYS = re.compile(r"plazo\s+de\s+presentaci[óo]n\s+de\s+solicitudes\s+de\s+(\d{1,3})\s+d[íi]as\s+naturales", re.I)
 FICHA_TERM = re.compile(r"desde\s+hoy\s+d[íi]a\s+(\d\d/\d\d/\d{4})\s+hasta\s+el\s+pr[óo]ximo\s+(\d\d/\d\d/\d{4})"
