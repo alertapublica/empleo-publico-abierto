@@ -1,7 +1,27 @@
 {
+ "cofivacasa": {
+  "desde": "2026-11-27T21:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 196,
+  "lecturas": 197,
+  "resultado": "error"
+ },
+ "iisgm": {
+  "desde": "2026-11-27T21:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "senasa": {
+  "desde": "2026-11-27T21:07:25+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepides": {
+  "desde": "2026-11-27T21:07:25+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }
