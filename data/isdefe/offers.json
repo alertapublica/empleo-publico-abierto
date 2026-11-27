@@ -2778,5 +2778,47 @@
   "status": "open",
   "title": "Técnico/a Especialista en ERP (Oracle E-Business Suite)",
   "url": "https://seleccionisdefe.es/convocatoria-2678"
+ },
+ "2679": {
+  "apply_url": "https://seleccionisdefe.es/registro-2679",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00471",
+  "company": "ISDEFE",
+  "contract": "Contrato indefinido",
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:07:28+00:00",
+  "id": "isdefe:2679",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-03",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2679",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>ISDEFE selecciona vacante de <strong>Jefatura de área de security and general services para el complejo de Robledo</strong> con responsabilidad global de la operación y requisitos de la seguridad física del Complejo de Comunicaciones espaciales de Robledo, así como la gestión organizativa, supervisión general, coordinación y seguimiento de gestión medioambiental, salud, seguridad, contratos, compras, administración, documentación y logística.</p><p><strong>Funciones habituales: </strong></p><p>- Organizar, gestionar, inspeccionar y administrar los servicios y recursos de seguridad disponibles.<br/>\r\n-Identificar, analizar y evaluar situaciones de riesgo que puedan afectar la vida y la seguridad física de las personas y los bienes.<br/>\r\n-Planificar, organizar y controlar las acciones necesarias para implementar medidas destinadas a prevenir, proteger y reducir los riesgos de cualquier naturaleza, mediante la elaboración e implementación de políticas y procedimientos de seguridad.<br/>\r\n-Supervisar el funcionamiento y el mantenimiento de los sistemas de seguridad.<br/>\r\n-Verificar que el sistema de seguridad y el servicio de seguridad contratado cumplan con los requisitos y certificaciones legales.<br/>\r\n-Validar provisionalmente las medidas de seguridad para garantizar su cumplimiento antes del proceso administrativo de verificación.<br/>\r\n-Informar a las Fuerzas y Cuerpos de Seguridad del Estado sobre cualquier circunstancia o información relevante relativa a la seguridad pública o actos delictivos.<br/>\r\nCoordinación con la NASA, el DSN y los organismos de seguridad de la Administración Pública española.<br/>\r\n-Contacto principal con las fuerzas del orden locales, los servicios de9 emergencia y los proveedores de seguridad.<br/>\r\n-Dirigir, gestionar, coordinar y supervisar el Departamento de Seguridad del Complejo y su personal.<br/>\r\n-Supervisar, coordinar y hacer el seguimiento de las secciones de Presupuestos, Compras, Administración, Documentación y Logística, asegurando su adecuado funcionamiento, la coordinación de sus actividades y su alineación con los objetivos operativos y organizativos del centro.<br/>\r\n-Esta supervisión tendrá un carácter transversal y de gestión organizativa, incluyendo el seguimiento de sus actividades, la coordinación de necesidades y recursos, la supervisión del cumplimiento de los procedimientos establecidos y la coordinación con las áreas correspondientes, sin perjuicio de las responsabilidades técnicas y operativas específicas de cada departamento.<br/>\r\n-La responsabilidad del presupuesto anual de operación del complejo AOP no corresponde a este puesto, sino al Director Ejecutivo de la Estación, pese a que la responsabilidad técnica de su gestión recae en la sección de presupuestos.</p><p><strong>REQUISITOS DEL CANDIDATO SEGÚN FUNCIONES DEL PUESTO</strong></p><p><strong>Requisitos imprescindibles que debe cumplir la candidatura:</strong></p><ul>\n<li>Se requiere titulación universitaria más máster en PRL</li>\n<li>Experiencia más de 10 años.</li>\n<li>Se requiere experiencia en seguridad y emergencias.</li>\n<li>Formación en Dirección y Gestión de Seguridad,</li>\n<li>Conocimientos específicos en Dirección y Gestión de emergencias</li>\n<li>Se requiere poseer la habilitación de director de Seguridad por el Ministerio del Interior.</li>\n</ul><p><strong>Requisitos valorables:</strong></p><ul>\n<li>Se valora ingles superior a 700 puntos TOEIC.</li>\n<li>Seguridad en el Transporte de Mercancías Peligrosas</li>\n</ul><p><em>Se busca una persona con actitud colaborativa y predisposición para el trabajo en equipo y capacidad de liderazgo y gestión de equipos en situaciones de riesgo o estrés.</em></p><p><strong>UBICACIÓN DEL PUESTO</strong>: Estacion del Complejo de Robledo.</p><p><strong>Se ofrece contrato indefinido.</strong></p><p>*A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Jefatura de área de security and general services (2026-T00471)",
+  "status": "open",
+  "title": "Jefatura de área de security and general services",
+  "url": "https://seleccionisdefe.es/convocatoria-2679"
  }
 }

@@ -12924,6 +12924,98 @@
   "title": "Diplomado/a y/o Graduado/a - Contratación y Asuntos Generales (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58287"
  },
+ "58303": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58303",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58303",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Políticas Agrarias",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-27T08:07:28+00:00",
+  "id": "tragsa:58303",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-15",
+  "location": "Comunidad de Madrid",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 5,
+  "published_on": "2026-11-27",
+  "ref": "58303",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 5 Ingenieros/as y/o Ingenieros/as Técnicos/as o Graduados/as + Máster Oficial para dar apoyo en la realización de los trabajos de desarrollo de aplicaciones informáticas FEAGA en Comunidad de Madrid</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Análisis e interpretación de reglamentación aplicable (europea y nacional).</li><li>Apoyo técnico a los/as usuarios/as y gestores/as del FEGA/CC.AA.</li><li>Elaboración de documentación técnica (especificaciones, informes técnicos y manuales de usuario).</li><li>Realización de casos de pruebas según las funcionalidades requeridas.</li><li>Análisis y explotación de datos (utilización de herramientas Excel, Access, etc.)</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Ingeniería Agrónoma y/o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola + Máster Oficial en Ingeniería Agrónoma o Agronómica y/o Ingeniería de Montes y/o Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural o Ingeniería Técnica Forestal + Máster Oficial en Ingeniería de Montes (nivel MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Ingeniería Agrónoma y/o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola + Máster Oficial en Ingeniería Agrónoma o Agronómica y/o Ingeniería de Montes y/o Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural o Ingeniería Técnica Forestal + Máster Oficial en Ingeniería de Montes (nivel MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Ingeniería Agrónoma y/o Ingeniería Técnica Agrícola o Grado en Ingeniería que habilite para la profesión de Ingeniero/a Técnico/a Agrícola + Máster Oficial en Ingeniería Agrónoma o Agronómica y/o Ingeniería de Montes y/o Grado en Ingeniería Forestal o Grado en Ingeniería Forestal y del Medio Natural o Ingeniería Técnica Forestal + Máster Oficial en Ingeniería de Montes (nivel MECES 3) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditada en Microsoft Excel</li></ul>Otros Factores Meritorios<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad)</li><li>Manejo nivel usuario o superior en Excel (se comprobará en valoración técnica)</li><li>Manejo nivel usuario o superior en Access y/o otras herramientas de análisis de datos (Power BI, Power Query, etc.) (se comprobará en valoración técnica)</li><li>Desde 6 meses hasta 3 años de experiencia en gestión de subvenciones agrícolas (experiencia con contrato laboral y/o académica)</li><li>Desde 6 meses hasta 3 años de experiencia en realización de especificaciones funcionales y pruebas de aplicaciones de subvenciones (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 6 meses hasta 3 años de experiencia en la explotación de Base de Datos (Lenguaje SQL) (experiencia con contrato laboral)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditada en Microsoft Excel</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en Microsoft Excel</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Posibilidad de formalizar un contrato formativo para la obtención de la práctica profesional asociado a la titulación requerida en la oferta (para ello no deben haber transcurrido más de 3 años desde la finalización de la titulación o 5 años en caso de acreditar certificado de discapacidad)</li><li>Manejo nivel usuario o superior en Excel (se comprobará en valoración técnica)</li><li>Manejo nivel usuario o superior en Access y/o otras herramientas de análisis de datos (Power BI, Power Query, etc.) (se comprobará en valoración técnica)</li><li>Desde 6 meses hasta 3 años de experiencia en gestión de subvenciones agrícolas (experiencia con contrato laboral y/o académica)</li><li>Desde 6 meses hasta 3 años de experiencia en realización de especificaciones funcionales y pruebas de aplicaciones de subvenciones (experiencia con contrato laboral) (se comprobará en valoración técnica)</li><li>Desde 6 meses hasta 3 años de experiencia en la explotación de Base de Datos (Lenguaje SQL) (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Contrato de duración determinada de 4 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/s seleccionada/s<br/><br/>- En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados.<br/><br/>- Jornada laboral completa 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia hasta un 50% por ahorro energético a determinar por la empresa.<br/><br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 15/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf s-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Ingenieros/as y/o Ingenieros/as Técnicos/as o Graduados/as + Máster Oficial - Gestión de aplicaciones informáticas FEAGA (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58303"
+ },
  "58305": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58305",
   "category": "Específica",
@@ -41982,6 +42074,108 @@
   "status": "open",
   "title": "Técnico/a de Selección de personal Senior (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58941"
+ },
+ "58963": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58963",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58963",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "Alicante",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-27T08:07:28+00:00",
+  "id": "tragsa:58963",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-14",
+  "location": "Alacant/Alicante",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Alicante",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "58963",
+  "region": "Comunitat Valenciana",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Veterinario/a  -  Sanidad Animal (Alicante) en Alacant/Alicante</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Alacant/Alicante</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Extracción sangre en porcino, tanto de yugular como en rabo para detección de EVP, PPC, PPA y enfermedad de Aujeszky.</li><li>Visitas inspección y encuestas en las explotaciones</li><li>Extracción de muestras de encéfalos en planta de destrucción. Tanto de bovino como de ovino/caprino (sospechosos de enfermedad de scrapie)</li><li>Sacrificio mediante T-61 de ovino / caprino / porcino / aves / conejo</li><li>Extracción de sangre en ovino/caprino/bovino/Équidos</li><li>Extracción de sangre y toma muestras hisopos en aves</li><li>Manejo del contenedor AED WM 1 de gas CO2  necesario para el sacrificio de aves</li><li>Toma muestras de ganglios de animales (bovino/caprino) positivos a tuberculosis</li><li>Colocación de transpondedor (microchip) en animales (aves, ru, eq, perros, gatos,….)</li><li>Visitas de inspección de bienestar animal en explotaciones</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la Licenciatura o Grado en Veterinaria (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la Licenciatura o Grado en Veterinaria (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la Licenciatura o Grado en Veterinaria (nivel 3 MECES) (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor.</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Cursos acreditables en paquete Office o Excel (Adjuntar Cursos).</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 3 años de experiencia en saneamiento ganadero (con contrato laboral y/o académico)</li></ul>Otros Factores Meritorios<ul><li>Conocimientos en legislación de sanidad animal (se comprobará durante el proceso de Selección).</li><li>Al menos 6 meses de experiencia en el ámbito de su titulación en el Sector Público (con contrato laboral y/o académico)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Cursos acreditables en paquete Office o Excel (Adjuntar Cursos).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Cursos acreditables en paquete Office o Excel (Adjuntar Cursos).</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 3 años de experiencia en saneamiento ganadero (con contrato laboral y/o académico)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Conocimientos en legislación de sanidad animal (se comprobará durante el proceso de Selección).</li><li>Al menos 6 meses de experiencia en el ámbito de su titulación en el Sector Público (con contrato laboral y/o académico)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 14/11/2026 a las 23:59 (hora peninsular).<br/><br/>SE OFRECE: <br/>-Contrato con una duración determinada estimada de 24 meses, asociado a la ejecución del encargo detallado en la publicación para el plan de Recuperación, Transformación y Resiliencia o con financiación que provenga de Fondos de la Unión Europea.<br/><br/>- Jornada Completa: 37,5 Horas/Semana.<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Veterinario/a - Sanidad Animal (Alicante)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58963"
  },
  "58966": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58966",

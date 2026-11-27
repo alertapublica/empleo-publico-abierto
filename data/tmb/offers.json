@@ -228,5 +228,52 @@
   "status": "open",
   "title": "Oferta 10254 Operaris/es Material Mòbil",
   "url": "https://www.tmb.cat/ca/w/oferta-10254-operaris-material-mobil"
+ },
+ "10255": {
+  "apply_url": "https://www.tmb.cat/ca/w/oferta-10255-responsable-d-arquitectura-de-dades",
+  "category": null,
+  "closed_at": null,
+  "code": "10255",
+  "company": "TMB",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:07:28+00:00",
+  "id": "tmb:10255",
+  "kind": null,
+  "listed_deadline": "2026-12-15",
+  "location": "Barcelona",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": null,
+  "ref": "10255",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Convocatòria de 2 places + 2 reserves de Responsable d’Arquitectura de Dades, amb categoria tècnic agregat I, per a la unitat de Arquitectura i Plataformes Tecnològiques.</p>\n<p>Titulació acadèmica:</p>\n<p>Disposar de titulació, finalitzada i homologada, de Enginyeria Superior i/o Tècnica, o Grau universitari en Telecomunicacions o Informàtica.</p>\n<p>Experiència professional:</p>\n<p>Experiència professional interna o externa de més de 3 anys en lloc/s del mateix àmbit fins el període de recepció de candidatures.</p>",
+    "level": 2,
+    "title": "Descripció"
+   },
+   {
+    "html": "<p><a href=\"https://www.tmb.cat/documents/20182/2108933/10255+-+Anunci+extern+Resp+Arquitectura+Dades+-+ref.+9840+3.pdf/e6508beb-c5b9-1520-2ecc-4d8804429cf8?t=1795765149398\">Bases de la convocatoria (PDF)</a></p>",
+    "level": 2,
+    "title": "Bases de la convocatòria"
+   }
+  ],
+  "source": "tmb",
+  "source_title": null,
+  "status": "open",
+  "title": "2 places + 2 reserves de Responsable d’Arquitectura de Dades",
+  "url": "https://www.tmb.cat/ca/w/oferta-10255-responsable-d-arquitectura-de-dades"
  }
 }
