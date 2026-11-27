@@ -37893,7 +37893,7 @@
  "58805": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58805",
   "category": "Específica",
-  "closed_at": null,
+  "closed_at": "2026-11-27T15:37:27+00:00",
   "code": "58805",
   "company": "Tragsa",
   "contract": null,
@@ -37910,7 +37910,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-12-11",
   "location": "Sede Madrid Tragsa",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": "2026-11-25",
   "parent_ref": null,
   "place": "Madrid",
@@ -37978,7 +37978,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Administrativo/a - Gerencia Organización y Compensación (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58805"
  },
