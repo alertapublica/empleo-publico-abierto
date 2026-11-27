@@ -4838,7 +4838,7 @@
  "3290653": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290653",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T12:37:24+00:00",
   "code": "28193",
   "company": "Ineco",
   "contract": null,
@@ -4855,7 +4855,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -4893,7 +4893,7 @@
   ],
   "source": "ineco",
   "source_title": "28193- Analista Programador/a JAVA",
-  "status": "open",
+  "status": "closed",
   "title": "Analista Programador/a JAVA",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3290653"
  },
@@ -14382,6 +14382,68 @@
   "status": "open",
   "title": "Beca Automatización Robótica de Procesos (RPA)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382987"
+ },
+ "3383595": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383595",
+  "category": null,
+  "closed_at": null,
+  "code": "29028",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:37:24+00:00",
+  "id": "ineco:3383595",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3383595",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>CONSULTORÍA</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Calcular la huella de carbono de la DGC para 2027 y años siguientes, recopilando y revisando los datos y preparando la documentación para su registro.<br/>- Realizar el seguimiento del Plan de Descarbonización, actualizar sus indicadores, evaluar el avance de las medidas y proponer ajustes del Plan cuando sea necesario.<br/>- Apoyar el cumplimiento de los compromisos de seguimiento de la Estrategia de Eficiencia Energética, analizar consumos e indicadores y elaborar los informes anuales y las evaluaciones que correspondan.<br/>- Coordinar la recogida de información con las unidades y subdirecciones de la DGC y preparar documentación y presentaciones sobre los resultados.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Experiencia en: <br/>Experiencia específica en trabajos relacionados con la descarbonización, el calculo de huella de carbono y la eficiencia energética.<br/>Años de experiencia global: se requiere de experiencia global superior a 10 años.<br/>Años de experiencia en el puesto: Se requiere una experiencia mínima de 5 años desempeñando funciones similares a las del puesto ofertado.<br/><br/>Titulación: <br/>Ingeniería Agrónoma, Grado Ingeniería de Energías Renovables, Ingeniería Ambiental, Ingeniería de Montes, Licenciatura en Biología, Licenciatura en Ciencias Ambientales, Licenciatura en Ciencias Químicas, Otros estudios universitarios.<br/><br/>Programas: <br/>MS Word - nivel usuario<br/>MS Excel - nivel usuario<br/><br/>Idiomas: nivel de inglés B2 valorable.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29028 - Experto/a en descarbonización y eficiencia energética",
+  "status": "open",
+  "title": "Experto/a en descarbonización y eficiencia energética",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383595"
  },
  "3383596": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383596",

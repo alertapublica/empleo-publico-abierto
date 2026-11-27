@@ -41,6 +41,48 @@
   "title": "Jefe/a de División de Accesibilidad Terrestre",
   "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/jefea-de-division-de-accesibilidad-terrestre"
  },
+ "responsable-de-cambio-climatico-nivel-del-mar": {
+  "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-cambio-climatico-nivel-del-mar",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Puertos del Estado",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:37:24+00:00",
+  "id": "puertos:responsable-de-cambio-climatico-nivel-del-mar",
+  "kind": null,
+  "listed_deadline": "2026-12-30",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "responsable-de-cambio-climatico-nivel-del-mar",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RNM_report_Bases.pdf\">Bases de la convocatoria - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RNM_report_Fe%20de%20publicaci%C3%B3n.pdf\">Fe de publicación - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RNM_Anexo%20III_0.pdf\">Anexo III - Modelo de solicitud de participación - 27/11/2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "puertos",
+  "source_title": null,
+  "status": "open",
+  "title": "Responsable de Cambio Climático - Nivel del Mar",
+  "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-cambio-climatico-nivel-del-mar"
+ },
  "responsable-de-estadistica": {
   "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica",
   "category": "Dentro de Convenio",

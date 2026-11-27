@@ -371,5 +371,23 @@
   "title": "Convocatoria",
   "url": "https://www.cesce.es/documents/20122/19570331/CONVOCATORIA+DE+PROCESO+DE+SELECCI%C3%93N+PARA+LA+COBERTURA+DEL+PUESTO+DE+SECRETARIO-A+GENERAL.+Cesce.pdf/1836f501-7497-977a-026a-bbd9e2249216?t=1790942459571",
   "via": "otro"
+ },
+ "cesce:f99875f1c902": {
+  "access": null,
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-27",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-27T12:37:24+00:00",
+  "location": null,
+  "process": "CONVOCATORIA DEL 10 DE NOVIEMBRE DE 2026 DE PROCESO DE SELECCIÓN PARA CONTRATACIÓN INDEFINIDA DE UN PUESTO DE TÉCNICO COMERCIAL DE FINANCIACIÓN (EN EL MARCO DE LA TASA DE REPOSICIÓN AUTORIZADA)",
+  "process_url": "https://www.cesce.es/es/corporativo/trabaja-en-cesce",
+  "source": "cesce",
+  "state": "curso",
+  "system": null,
+  "title": "Valoración fase concurso",
+  "url": "https://www.cesce.es/documents/20122/19939501/Valoraci%C3%B3n+fase+concurso+%28TCF2+-+2026%29.pdf/71488fef-af38-719d-3a96-3682b2c755c2?t=1795782544980",
+  "via": "tasa"
  }
 }

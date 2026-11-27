@@ -33,14 +33,14 @@
   "url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/75%2026%20CONVOCATORIA.pdf"
  },
  "C76/26": {
-  "apply_url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/76%2026%20CONVOCATORIA.pdf",
+  "apply_url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/76%2026%20CONVOCATORIA%20plazo%20ampliado.pdf",
   "category": null,
   "closed_at": null,
   "code": "C76/26",
   "company": "Fundación para la Investigación Biomédica del Hospital Universitario Ramón y Cajal",
   "contract": null,
   "country": null,
-  "deadline": "2026-11-29",
+  "deadline": "2026-12-11",
   "deadline_rule": null,
   "deadline_time": null,
   "department": null,
@@ -50,7 +50,7 @@
   "first_seen": "2026-11-17T08:37:23+00:00",
   "id": "irycis:C76/26",
   "kind": null,
-  "listed_deadline": "2026-11-29",
+  "listed_deadline": "2026-12-11",
   "location": "Madrid",
   "missed_runs": 0,
   "opens_on": "2026-11-16",
@@ -66,7 +66,7 @@
   "source_title": null,
   "status": "open",
   "title": "Grado o licenciatura en Derecho, Administración y Dirección de Empresas, Ciencias Económicas, Gestión y Administración Pública o titulaciones afines. Máster Universitario.",
-  "url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/76%2026%20CONVOCATORIA.pdf"
+  "url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/76%2026%20CONVOCATORIA%20plazo%20ampliado.pdf"
  },
  "C77/26": {
   "apply_url": "https://www.irycis.org/media/upload/arxius/Documentacion/Convocatorias/2026/77%2026%20CONVOCATORIA.pdf",
@@ -128,7 +128,7 @@
   "opens_on": "2026-11-27",
   "parent_ref": null,
   "place": null,
-  "portal_tries": 1,
+  "portal_tries": 2,
   "positions": null,
   "published_on": null,
   "ref": "C78/26",

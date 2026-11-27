@@ -23,5 +23,12 @@
   "at": "2026-11-27T12:07:25+00:00",
   "kind": "new",
   "offer": "irycis:C78/26"
+ },
+ {
+  "after": "2026-12-11",
+  "at": "2026-11-27T12:37:24+00:00",
+  "before": "2026-11-29",
+  "kind": "deadline_changed",
+  "offer": "irycis:C76/26"
  }
 ]

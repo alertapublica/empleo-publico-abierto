@@ -1,12 +1,22 @@
 {
- "emasesa": {
-  "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 184,
+ "cofivacasa": {
+  "desde": "2026-11-27T12:37:24+00:00",
+  "lecturas": 1,
   "resultado": "error"
  },
- "fgv": {
-  "desde": "2026-11-27T11:37:27+00:00",
-  "lecturas": 2,
+ "emasesa": {
+  "desde": "2026-11-19T08:07:34+00:00",
+  "lecturas": 185,
+  "resultado": "error"
+ },
+ "iisgm": {
+  "desde": "2026-11-27T12:37:24+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepides": {
+  "desde": "2026-11-27T12:37:24+00:00",
+  "lecturas": 1,
   "resultado": "error"
  }
 }

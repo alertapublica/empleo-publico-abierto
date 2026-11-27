@@ -521,13 +521,13 @@
   "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/33f1109b60313aff1c34a6258aaca702a1570d86.pdf"
  },
  "FU-343/2026": {
-  "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/6db1b1cf2607a944c7801de54dd8da43fe4c0ade.pdf",
+  "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/b12d3f003fbe0815dc5f15d83e8238d148692fa8.pdf",
   "category": null,
-  "closed_at": "2026-11-18T05:07:34+00:00",
+  "closed_at": null,
   "code": "FU-343/2026",
   "company": "FRCB-IDIBAPS",
   "contract": null,
-  "deadline": "2026-11-17",
+  "deadline": "2026-12-03",
   "deadline_time": null,
   "department": null,
   "detail_ok": true,
@@ -536,9 +536,9 @@
   "first_seen": "2026-11-11T10:37:23+00:00",
   "id": "idibaps:FU-343/2026",
   "kind": null,
-  "listed_deadline": "2026-11-17",
+  "listed_deadline": "2026-12-03",
   "location": "Barcelona",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -549,16 +549,16 @@
   "region": "Cataluña",
   "sections": [
    {
-    "html": "<p><a href=\"https://www.clinicbarcelona.org/uploads/media/default/0023/75/6db1b1cf2607a944c7801de54dd8da43fe4c0ade.pdf\">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>",
+    "html": "<p><a href=\"https://www.clinicbarcelona.org/uploads/media/default/0023/75/b12d3f003fbe0815dc5f15d83e8238d148692fa8.pdf\">Convocatoria en PDF</a>, con las funciones, los requisitos, el contrato y cómo presentar la candidatura.</p>",
     "level": 2,
     "title": "La convocatoria"
    }
   ],
   "source": "idibaps",
   "source_title": "[FRCB-IDIBAPS] Infermer/a pel grup Malalties cròniques del fetge: mecanismes moleculars i conseqüències clíniques (Convocatòria FU-343/2026)",
-  "status": "closed",
+  "status": "open",
   "title": "Infermer/a pel grup Malalties cròniques del fetge: mecanismes moleculars i conseqüències clíniques",
-  "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/6db1b1cf2607a944c7801de54dd8da43fe4c0ade.pdf"
+  "url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/b12d3f003fbe0815dc5f15d83e8238d148692fa8.pdf"
  },
  "FU-344/2026": {
   "apply_url": "https://www.clinicbarcelona.org/uploads/media/default/0023/75/bc7f75a472d08e3d170ad31719f1e1511db43201.pdf",

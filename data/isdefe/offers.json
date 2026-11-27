@@ -3114,5 +3114,47 @@
   "status": "open",
   "title": "Ingeniero/a Navegación Aérea - Inspector/a",
   "url": "https://seleccionisdefe.es/convocatoria-2686"
+ },
+ "2687": {
+  "apply_url": "https://seleccionisdefe.es/registro-2687",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00124 (4)",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T12:37:24+00:00",
+  "id": "isdefe:2687",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2687",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Ingeniero/a de certificación de aeronaves en Torrejón de Ardoz (Madrid)</strong></p><p><strong>Titulaciones </strong></p><p>Ingeniería aeronáutica, naval, industriales, telecomunicaciones, informática.</p><p><strong>Funciones habituales:</strong></p><ul>\n<li>Valoración e informe de Programas de Certificación y/o Calificación.</li>\n<li>Revisiones e informes de Planes de Actividades del programa de certificación y/o calificación.</li>\n<li>Colaborar con el Jefe de Programa en el seguimiento de la asignación de especialistas para cada uno de los sistemas y subsistemas afectados.</li>\n<li>Presentación de documentos de análisis del estándar de seguridad de la aeronave y la determinación de las Bases de Certificación con el seguimiento de su cumplimentación durante el proceso de Certificación y propuesta de soluciones a los problemas de interpretación de las normas y procedimientos.</li>\n<li>Control de los documentos de certificación y/o calificación de los programas de Certificación del INTA.</li>\n<li>Seguimiento del Control de la configuración de las aeronaves.</li>\n<li>Análisis de las limitaciones de operación y aeronavegabilidad.</li>\n<li>Coordinación de las actividades de certificación y/o calificación con la industria solicitante.</li>\n<li>Preparación de la Hoja de Datos y Declaración de Aeronavegabilidad correspondiente.</li>\n<li>Revisión del Estándar de Diseño de Tipo.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Menos de 4 años de experiencia.</li>\n<li>Experiencia o formación demostrable en certificación de aeronaves</li>\n<li>Experiencia o formación demostrable en certificación de RPAS</li>\n<li>Experiencia o formación demostrable en Aeronavegabilidad Continuada</li>\n<li>Ofimática</li>\n<li>Indispensable carnet de conducir y vehículo propio</li>\n<li>Estar en condiciones de obtener la habilitación personal de seguridad OTAN </li>\n</ul><p><strong>Requisitos Valorables</strong></p><ul>\n<li>Inglés Valorable 700 puntos TOEIC.</li>\n</ul><p>*A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa.</p><p><strong>Se ofrece:</strong> CONTRATO INDEFINIDO</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Ingeniero/a de certificación de aeronaves (2026-T00124) (4)",
+  "status": "open",
+  "title": "Ingeniero/a de certificación de aeronaves",
+  "url": "https://seleccionisdefe.es/convocatoria-2687"
  }
 }
