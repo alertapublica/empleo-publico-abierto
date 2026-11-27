@@ -232,5 +232,99 @@
   "status": "open",
   "title": "Investigador/a en formación, Fundación Mutua Madrileña",
   "url": "https://www.fibao.es/ofertas/ficha/1510/"
+ },
+ "1511": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1511/",
+  "category": null,
+  "closed_at": null,
+  "code": "96/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-07",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "fibao:1511",
+  "kind": null,
+  "listed_deadline": "2026-12-07",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "1511",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO convoca un contrato de apoyo a la investigación, en régimen de concurrencia competitiva, con dedicación a\r\ntiempo completo, para el desarrollo de actividades científico técnicas en la línea de investigación del proyecto titulado “Understanding and treating neuroinflammation in NEDAMSS: the role of activated astrocytes and microglia in a rare pediatric monogenic neurodegenerative disease”, con nº de expediente PEER-0024-2026, financiado por la Consejería de Presidencia, Salud y Emergencias de la Junta de Andalucía en virtud de la Resolución de la Secretaría General de Salud Pública e I+D+i en salud por la que se conceden subvenciones en régimen de concurrencia competitiva, para la financiación de la investigación, desarrollo e innovación (I+d+i) en biomedicina y en ciencias de la salud en Andalucía, para el año 2025 (Programa Andalucía FEDER 20021-2027). Dicho proyecto va a desarrollarse en el Centro Pfizer-Universidad de Granada-Junta de Andalucía de Genómica e Investigación Oncológica (GENYO). Titulación requerida: Licenciatura o Grado Universitario en Bioquímica, Biología Molecular, Biotecnología o titulaciones afines</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/96.__ctto_invest._formacion_peer_0024_2026(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "96/2026.- Investigador/a en formación, PEER-0024-2026",
+  "status": "open",
+  "title": "Investigador/a en formación, PEER-0024-2026",
+  "url": "https://www.fibao.es/ofertas/ficha/1511/"
+ },
+ "1512": {
+  "apply_url": "https://www.fibao.es/ofertas/ficha/1512/",
+  "category": null,
+  "closed_at": null,
+  "code": "97/2026",
+  "company": "FIBAO",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-07",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "fibao:1512",
+  "kind": null,
+  "listed_deadline": "2026-12-07",
+  "location": "Andalucía",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "1512",
+  "region": "Andalucía",
+  "sections": [
+   {
+    "html": "<p>FIBAO convoca un contrato de investigador en formación, en régimen de concurrencia competitiva, con dedicación\r\na tiempo completo, vinculado a la línea de investigación del proyecto titulado “Optimización de la inmunoterapia CAR para la leucemia mieloide aguda mediante el desarrollo de células CAR-NK memory like doblemente editadas como plataforma complementaria a las terapias CAR-T”, con nº de expediente PECART-0004-2026, financiado por la Consejería de Presidencia, Salud y Emergencias de la Junta de Andalucía en virtud de la Resolución de la Secretaría General de Salud Pública e I+D+i en salud por la que se conceden subvenciones en régimen de concurrencia competitiva, para la financiación de la investigación, desarrollo e innovación (I+d+i) en biomedicina y en ciencias de la salud en Andalucía, para el año 2025 (Programa Andalucía FEDER 20021-2027). Dicho proyecto va a desarrollarse en el Centro Pfizer- Universidad de Granada-Junta de Andalucía de Genómica e Investigación Oncológica (GENYO). Titulación requerida: Licenciatura o Grado Universitario en Biotecnología, Biomedicina, Biología, Bioquímica o áreas del ámbito biosanitario</p>",
+    "level": 2,
+    "title": "Convocatoria"
+   },
+   {
+    "html": "<ul><li><a href=\"https://www.fibao.es/media/uploads/97.__ctto_invest._formac._pecart_0004_2026(f).pdf\">Bases de la convocatoria</a></li></ul>",
+    "level": 2,
+    "title": "Documentación"
+   }
+  ],
+  "source": "fibao",
+  "source_title": "97/2026.- Investigador/a en formación, PECART-0004-2026",
+  "status": "open",
+  "title": "Investigador/a en formación, PECART-0004-2026",
+  "url": "https://www.fibao.es/ofertas/ficha/1512/"
  }
 }

@@ -17280,6 +17280,103 @@
   "title": "Licenciado/a o Graduado/a + Máster Oficial en Biología o Ciencias Ambientales – Apoyo técnico Cartografía Hábitats (Valencia)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58449"
  },
+ "58451": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58451",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58451",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Asturias",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "tragsa:58451",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-11",
+  "location": "Comunidad de Asturias",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Oviedo",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-27",
+  "ref": "58451",
+  "region": "Asturias",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Administrativos/as para prestar apoyo en las obras de la Gerencia de Asturias.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Comunidad de Asturias<br/>Dirección: Oviedo</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Control de albaranes y factura de la obra.</li><li>Captura de facturas en las aplicaciones de la empresa.</li><li>Captura de vehículos en las aplicaciones de la empresa.</li><li>Digitalización de documentos de la obra y subida de los mismos a las aplicaciones de la empresa.</li><li>Confección y subida a las aplicaciones de la empresa de documentos de seguridad y salud.</li><li>Confección contratos menor cuantía.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>Formación Complementaria<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120 horas</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>Formación Complementaria<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120 horas</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>ESO, EGB, Graduado Escolar o Bachiller (BUP/COU) (titulación homologada en España)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Formación acreditada en la especialidad administrativa (incluida ofimática) de al menos 120 horas</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación complementaria en la técnica administrativa de más de 2000 horas cursadas en los últimos 3 años (diferentes a las 120 horas requeridas)</li><li>Formación acreditable en Excel (mínimo 100 horas)</li><li>Formación acreditable em Access (mínimo 100 horas)</li><li>Formación acreditable en Word (mínimo 100 horas)</li></ul>Experiencia Previa<ul><li>Desde 1 día Hasta 6 meses de experiencia en trabajos administrativos diversos (experiencia laboral, académica o ambas)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación complementaria en la técnica administrativa de más de 2000 horas cursadas en los últimos 3 años (diferentes a las 120 horas requeridas)</li><li>Formación acreditable en Excel (mínimo 100 horas)</li><li>Formación acreditable em Access (mínimo 100 horas)</li><li>Formación acreditable en Word (mínimo 100 horas)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación complementaria en la técnica administrativa de más de 2000 horas cursadas en los últimos 3 años (diferentes a las 120 horas requeridas)</li><li>Formación acreditable en Excel (mínimo 100 horas)</li><li>Formación acreditable em Access (mínimo 100 horas)</li><li>Formación acreditable en Word (mínimo 100 horas)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 día Hasta 6 meses de experiencia en trabajos administrativos diversos (experiencia laboral, académica o ambas)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/>- Contrato de duración determinada de 6 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la persona seleccionada.<br/>- En caso de formalizarse un contrato en prácticas/formativo la titulación aportada por el candidato/a debe estar relacionada con las tareas del puesto ofertado, realizando actividades propias de la titulación a la que se vincula su contrato en prácticas permitiéndole obtener una práctica profesional adecuada al nivel de estudios cursados. En este supuesto, se ofrecerá un contrato de duración estimada de 6 meses, con posibilidad de prórroga por otros 6 meses, si procede.<br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 11/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 12 horas del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativos/as - Apoyo a Gerencia (Asturias)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58451"
+ },
  "58452": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58452",
   "category": "Específica",
@@ -42075,6 +42172,113 @@
   "title": "Gerente Autonómico de País Vasco en la Unidad Territorial 3 (TRAGSA). Puesto de especial responsabilidad. Personal de organigrama. Libre designación. Provisión interna y externa.",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FIG&jobid=58909"
  },
+ "58914": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58914",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58914",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-14",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": "LLeida",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos No Titulados",
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "tragsa:58914",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-14",
+  "location": "Lleida (Cataluña) con desplazamientos puntuales por Lleida",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "58914",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Técnico/a de Apoyo - Proyectos de carreteras (Cataluña) en Lleida</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li><br/>Lleida (Cataluña) con desplazamientos puntuales por Lleida</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Colaboración en documentación para proyectos de carreteras</li><li>Apoyo en redacción y maquetación de anejos y otros informes para proyectos de carreteras</li><li>Toma de datos necesarios para proyectos de carreteras y expropiaciones</li><li>Apoyo en realización de planos para proyectos de carreteras</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Posees la titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral, académica o ambas) dilatada de al menos 1 año en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia en infraestructuras, ingeniería civil o edificación, obras lineales y/o realización de planos (con contrato laboral y/o académica)</li></ul>Otros Requisitos Imprescindibles<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Posees la titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral, académica o ambas) dilatada de al menos 1 año en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Posees la titulación de Bachiller (BUP/COU), FP I o CFGM, FP II o CFGS (titulación homologada en España) o experiencia (con contrato laboral, académica o ambas) dilatada de al menos 1 año en su profesión (acorde al puesto ofertado) y/o en las funciones del puesto</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia en infraestructuras, ingeniería civil o edificación, obras lineales y/o realización de planos (con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Carnet de conducir tipo B válido en España y en vigor</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación y/o Cursos en  herramientas de Sistemas de la Información Geográfica, de al menos 40h (uno o varios acumulativos)</li><li>Formación y/o Cursos en Autocad u otros programas de trazado (Civil 3D, Microstation o Revit), de al menos 40h (uno o varios acumulativos)</li></ul>Experiencia Previa<ul><li>Desde 1 año Hasta 3 años de experiencia en ingenierías o constructoras de obra civil y/o infraestructuras (con contrato laboral y/o académica)</li><li>Desde 1 año Hasta 3 años de experiencia en realización de planos para proyectos de obras lineales (carreteras, ferrocarriles, puentes, etc.) (con contrato laboral y/o académica)</li></ul>Otros Factores Meritorios<ul><li>Experiencia previa en tareas de colaboración en proyectos de infraestructuras y/o obra civil (redacción de anejos, maquetación, toma de datos en campo, mediciones, comprobaciones de obra o vinculado a oficina técnica) (académica o con contrato laboral) (se comprobará en valoración técnica)</li><li>Certificado Oficial de Catalán y/o Valenciano, al menos nivel B2 o superior</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación y/o Cursos en  herramientas de Sistemas de la Información Geográfica, de al menos 40h (uno o varios acumulativos)</li><li>Formación y/o Cursos en Autocad u otros programas de trazado (Civil 3D, Microstation o Revit), de al menos 40h (uno o varios acumulativos)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación y/o Cursos en  herramientas de Sistemas de la Información Geográfica, de al menos 40h (uno o varios acumulativos)</li><li>Formación y/o Cursos en Autocad u otros programas de trazado (Civil 3D, Microstation o Revit), de al menos 40h (uno o varios acumulativos)</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 año Hasta 3 años de experiencia en ingenierías o constructoras de obra civil y/o infraestructuras (con contrato laboral y/o académica)</li><li>Desde 1 año Hasta 3 años de experiencia en realización de planos para proyectos de obras lineales (carreteras, ferrocarriles, puentes, etc.) (con contrato laboral y/o académica)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia previa en tareas de colaboración en proyectos de infraestructuras y/o obra civil (redacción de anejos, maquetación, toma de datos en campo, mediciones, comprobaciones de obra o vinculado a oficina técnica) (académica o con contrato laboral) (se comprobará en valoración técnica)</li><li>Certificado Oficial de Catalán y/o Valenciano, al menos nivel B2 o superior</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>SE OFRECE: <br/>Contrato de duración determinada de 9 meses aproximadamente, con opción de prórroga si procede y respetando los límites de duración máxima establecidos en la legislación laboral vigente para cada modalidad contractual. La tipología y duración del contrato será en función de la causa de la contratación, del proyecto y de las circunstancias de la/s persona/a seleccionada.<br/>- Jornada completa: 37'5h/semana<br/><br/>La oferta permanecerá abierta a inscripciones desde hoy 27/11/2026 hasta el 14/12/2026 a las 23:59h (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Técnico/a de Apoyo - Proyectos de carreteras (Cataluña)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58914"
+ },
  "58915": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58915",
   "category": "Específica",
@@ -42278,6 +42482,113 @@
   "status": "open",
   "title": "Capataces/zas Forestales - Trabajos emergencia de reparación de cauces (Girona y Barcelona)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58921"
+ },
+ "58931": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58931",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58931",
+  "company": "Tragsatec",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Ingeniería y Edificación",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Técnicos Titulados",
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "tragsa:58931",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-15",
+  "location": "Sede Madrid Tragsatec",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 2,
+  "published_on": "2026-11-27",
+  "ref": "58931",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 2 Arquitectos/as o Graduados/as + Máster Oficial en Arquitectura para prestar apoyo con la Gestión Ayudas Rehabilitación en la Comunidad de Madrid</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsatec</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Prestar apoyo técnico en la fase de admisión: Atención técnica a consultas de los/las agentes interesados/as en la convocatoria. Apoyo en la revisión y verificación de solicitudes y apoyo en la preparación de requerimientos.</li><li>Prestar apoyo técnico en la fase de evaluación: Apoyo en la revisión y análisis de la documentación. Así como en la preparación de los Informes técnicos y propuestas.</li><li>Prestar apoyo técnico en la fase de resolución: Apoyo en la preparación de propuesta de resolución provisional y final. Control y revisión de la documentación presentada por los/las solicitantes.</li><li>Prestar apoyo técnico la preparación de documentación vinculada al final de obra y comprobación de la inversión previo al abono de la subvención.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Arquitectura (nivel MECES 3) o Grado en Arquitectura (nivel MECES 3) o Grado + Máster Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>Experiencia Previa<ul><li>Al menos 1 año de experiencia con contrato laboral en edificación y/o en programas de ayudas relacionados con la edificación</li></ul>Otros Requisitos Imprescindibles<ul><li>Manejo a nivel medio o superior de Word (se comprobará en valoración técnica)</li><li>Manejo a nivel medio o superior de Excel (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior de AutoCAD (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Arquitectura (nivel MECES 3) o Grado en Arquitectura (nivel MECES 3) o Grado + Máster Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Arquitectura (nivel MECES 3) o Grado en Arquitectura (nivel MECES 3) o Grado + Máster Oficial en Arquitectura (titulación homologada en España o certificado de equivalencia emitido por la Secretaría General de Universidades)</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "<ul><li>Al menos 1 año de experiencia con contrato laboral en edificación y/o en programas de ayudas relacionados con la edificación</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Manejo a nivel medio o superior de Word (se comprobará en valoración técnica)</li><li>Manejo a nivel medio o superior de Excel (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior de AutoCAD (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Requisitos Imprescindibles"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación acreditable relacionada con accesibilidad de edificios</li></ul>Experiencia Previa<ul><li>Desde 1 mes Hasta 1 año de experiencia en gestión de ayudas y/o subvenciones (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 10 años de experiencia en redacción de proyectos de accesibilidad, de rehabilitación, de instalación de ascensores y/o de eficiencia energética (experiencia con contrato laboral)</li><li>Desde 1 mes Hasta 1 año de experiencia en la emisión de informes técnicos relacionados con la edificación (experiencia con contrato laboral)</li></ul>Otros Factores Meritorios<ul><li>Experiencia con contrato laboral de al menos 1 año como arquitecto/a trabajando para la Administración/empresa pública</li><li>Experiencia con contrato laboral en la elaboración de 2 o más Certificados de Eficiencia Energética (CEE) (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior de otras aplicaciones de Microsoft 365 complementarias a Word y Excel (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior en programas de gestión de expedientes electrónicos (se comprobará en valoración técnica)</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación acreditable relacionada con accesibilidad de edificios</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación acreditable relacionada con accesibilidad de edificios</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Desde 1 mes Hasta 1 año de experiencia en gestión de ayudas y/o subvenciones (experiencia con contrato laboral)</li><li>Desde 1 año Hasta 10 años de experiencia en redacción de proyectos de accesibilidad, de rehabilitación, de instalación de ascensores y/o de eficiencia energética (experiencia con contrato laboral)</li><li>Desde 1 mes Hasta 1 año de experiencia en la emisión de informes técnicos relacionados con la edificación (experiencia con contrato laboral)</li></ul>",
+    "level": 3,
+    "title": "Experiencia Previa"
+   },
+   {
+    "html": "<ul><li>Experiencia con contrato laboral de al menos 1 año como arquitecto/a trabajando para la Administración/empresa pública</li><li>Experiencia con contrato laboral en la elaboración de 2 o más Certificados de Eficiencia Energética (CEE) (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior de otras aplicaciones de Microsoft 365 complementarias a Word y Excel (se comprobará en valoración técnica)</li><li>Manejo a nivel básico o superior en programas de gestión de expedientes electrónicos (se comprobará en valoración técnica)</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 9 meses en total, si procede.<br/><br/>- Jornada completa.<br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 15/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Arquitectos/as o Graduados/as + Máster Oficial en Arquitectura - Gestión Ayudas Rehabilitación (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58931"
  },
  "58932": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58932",
@@ -42778,6 +43089,98 @@
   "status": "open",
   "title": "Arquitecto/a - Proyecto y ejecución de recuperación integral (Ourense)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58966"
+ },
+ "58985": {
+  "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58985",
+  "category": "Específica",
+  "closed_at": null,
+  "code": "58985",
+  "company": "Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-15",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": "Recursos Humanos",
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": "Apoyo Administrativo",
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "id": "tragsa:58985",
+  "kind": "temporal",
+  "listed_deadline": "2026-12-15",
+  "location": "Sede Madrid Tragsa",
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": "Madrid",
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "58985",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 1 Administrativo/a para dar apoyo en la Gerencia de Organización y Compensación en la Comunidad de Madrid.</p>",
+    "level": 2,
+    "title": "Proyecto/ Motivo contratación"
+   },
+   {
+    "html": "<ul><li>Sede Madrid Tragsa<br/>Dirección: Madrid</li></ul>",
+    "level": 2,
+    "title": "Lugar de Trabajo"
+   },
+   {
+    "html": "<ul><li>Colaborar en los procesos de elaboración de las nóminas mensuales de las empresas del Grupo, mediante la grabación y revisión de datos variables, entre otros, dietas, kilometraje, partes de incapacidad temporal, conceptos de devengo variables, etc., así como, en la preparación y gestión de finiquitos, recopilando la información necesaria para su elaboración, revisión y puesta a disposición de los interesados.</li><li>Gestión documental, física y digital.</li><li>Gestión de las ayudas de comedor, incluyendo la tramitación de altas, bajas y modificaciones de personas trabajadoras en el sistema. Gestión de tarjetas, cargas de los devengos, generados en cumplimiento de los procedimientos internos, y procesos de facturación asociadas.</li><li>Atención a los/las trabajadores/as del Grupo, en reclamaciones o solicitudes de información, en las materias de su actividad, y su seguimiento.</li><li>Elaboración y gestión de informes y documentos propios de la Gerencia que se puedan requerir.</li></ul>",
+    "level": 2,
+    "title": "Funciones y Tareas"
+   },
+   {
+    "html": "<p>El cumplimiento de los requisitos y/o méritos deberá justificarse mediante la realización de pruebas de valoración y/o adjuntando la documentación necesaria en el apartado “Anexos” del cuestionario de inscripción. El Grupo Tragsa se reserva la facultad de solicitar en cualquier momento del proceso los documentos acreditativos de los datos consignados en la solicitud, así como de requerir la ampliación de la información contenida en el curriculum vitae, siempre que esta sea necesaria para la acreditación de los requisitos y/o méritos detallados en la vacante ofertada.</p>FormaciónTitulación<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España).</li></ul>",
+    "level": 2,
+    "title": "Requisitos Específicos"
+   },
+   {
+    "html": "Titulación<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Poseer la titulación de Bachiller o BUP o COU o FP I o CFGM en la rama administrativa o FP II o CFGS en la rama administrativa (titulación homologada en España).</li></ul>",
+    "level": 3,
+    "title": "Titulación"
+   },
+   {
+    "html": "FormaciónFormación Complementaria<ul><li>Formación en administración de personal (Contratación, Nóminas y/o Seguros Sociales).</li><li>Formación de al menos 2000h en Administración y Gestión.</li></ul>Otros Factores Meritorios<ul><li>Manejo a nivel medio o superior de Microsoft Office. (Se comprobará en valoración técnica).</li><li>Experiencia académica y/o con contrato laboral en el uso de GPCN (Gestión de Personas y Cálculo de Nóminas), People Soft y/o Kelio. (Se comprobará en valoración técnica).</li><li>Al menos un año de experiencia académica y/o con contrato laboral en el área de compensación en Recursos Humanos (RRHH).</li></ul>",
+    "level": 2,
+    "title": "Méritos (Valorables)"
+   },
+   {
+    "html": "Formación Complementaria<ul><li>Formación en administración de personal (Contratación, Nóminas y/o Seguros Sociales).</li><li>Formación de al menos 2000h en Administración y Gestión.</li></ul>",
+    "level": 3,
+    "title": "Formación"
+   },
+   {
+    "html": "<ul><li>Formación en administración de personal (Contratación, Nóminas y/o Seguros Sociales).</li><li>Formación de al menos 2000h en Administración y Gestión.</li></ul>",
+    "level": 3,
+    "title": "Formación Complementaria"
+   },
+   {
+    "html": "<ul><li>Manejo a nivel medio o superior de Microsoft Office. (Se comprobará en valoración técnica).</li><li>Experiencia académica y/o con contrato laboral en el uso de GPCN (Gestión de Personas y Cálculo de Nóminas), People Soft y/o Kelio. (Se comprobará en valoración técnica).</li><li>Al menos un año de experiencia académica y/o con contrato laboral en el área de compensación en Recursos Humanos (RRHH).</li></ul>",
+    "level": 3,
+    "title": "Otros Factores Meritorios"
+   },
+   {
+    "html": "<ul><li>Se ofrece: <br/><br/>- Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga hasta un máximo de 12 meses en total, si procede. <br/>- Jornada completa <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 27/11/2026 hasta el próximo 15/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "level": 2,
+    "title": "Observaciones"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "Administrativo/a - Gerencia Organización y Compensación (Madrid)",
+  "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58985"
  },
  "tasas-reposicion-especifica-2025-2026": {
   "apply_url": "https://grupotragsatre2026.iformalia.es/",

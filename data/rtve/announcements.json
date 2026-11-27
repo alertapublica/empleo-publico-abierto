@@ -701,6 +701,24 @@
   "url": "https://convocatorias.rtve.es/Documentos/convocatoria-9/listados/GESAB_BD_Listado-Candidaturas-Admitidas-Definitivo_PUBLICO.pdf",
   "via": "bolsa"
  },
+ "rtve:caeb1eb9de3a": {
+  "access": "libre",
+  "apply_url": null,
+  "contract": "indefinido",
+  "date": "2026-11-27",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-27T14:07:26+00:00",
+  "location": null,
+  "process": "Convocatoria 1/2022 · Información y contenidos – Meteorología · Proceso Libre",
+  "process_url": "https://convocatorias.rtve.es/",
+  "source": "rtve",
+  "state": "curso",
+  "system": "concurso-oposicion",
+  "title": "Adjudicación bolsa de reserva 03",
+  "url": "https://convocatorias.rtve.es/Documentos/convocatoria-1/listados/IYCMET_P3_Adjudicaci%C3%B3n-bolsa-de-reserva-03_PUBLICO.pdf",
+  "via": "otro"
+ },
  "rtve:d1dd76b8469d": {
   "access": "libre",
   "apply_url": null,
