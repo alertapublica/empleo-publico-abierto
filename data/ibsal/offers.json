@@ -40,5 +40,47 @@
   "status": "open",
   "title": "Ref.45_2026. Investigador R2 Postdoctoral",
   "url": "https://ibsal.es/convocatorias/ref-45_2026-investigador-r2-postdoctoral/"
+ },
+ "30007": {
+  "apply_url": "https://ibsal.es/convocatorias/ref-46_2026-titulado-superior-en-investigacion/",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "FIBSAL",
+  "contract": "Contrato Indefinido: actividades científicas- técnicas (art 23. Bis de la ley 14/2011 LCTI)",
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T14:37:30+00:00",
+  "id": "ibsal:30007",
+  "kind": null,
+  "listed_deadline": "2026-12-11",
+  "location": "Salamanca",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": null,
+  "ref": "30007",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "Requisitos imprescindibles\n<ul>\n<li>Tener la nacionalidad española o de cualquiera de los Estados Miembros de la Unión Europea o la que en virtud de los tratados internacionales celebrados por la Unión Europea y ratificados por España sea de aplicación a la libre circulación de trabajadores. Igualmente podrán acceder a la presente convocatoria las personas extranjeras de cualquier nacionalidad con residencia legal en España y que, asimismo, dispongan de permiso de trabajo en vigor.</li>\n<li>Tener cumplidos 18 años y no exceder de la edad mínima de jubilación. En caso de titulaciones obtenidas en el extranjero, deberá solicitarse su homologación al Ministerio de Educación, Cultura y Deporte.</li>\n<li>Las personas con grado de discapacidad igual o superior al 33% podrán participar en este proceso selectivo en igualdad de condiciones con las demás personas aspirantes, debiendo ser indicada esta circunstancia en la solicitud.</li>\n<li>Estar en posesión de la titulación de <strong>Graduado con Máster o Licenciado en Ciencias de la salud.</strong></li>\n</ul>\nFunciones a desempeñar\n<ul>\n<li>Actividades relacionadas con el apoyo al Investigador/Investigadora Principal en Castilla y León en la coordinación técnica del Proyecto</li>\n<li>Colaborar en la elaboración y monitorización del cronograma de actividades.</li>\n<li>Dar apoyo a la gestión económica del programa y a la coordinación del personal técnico contratado en el marco del proyecto.</li>\n<li>Apoyar en la coordinación, organización y colaboración de agendas y actividades del personal técnico contratado para el desarrollo del proyecto en los nodos ubicados en Castilla y León (Valladolid, Salamanca y León).</li>\n<li>Colaborar en la difusión del proyecto entre la población de Castilla y León, así como la captación de participantes.</li>\n<li>Apoyar en la coordinación de la captación de participantes.</li>\n<li>Apoyar en la coordinación de la labor de recogida de datos y velar por su calidad y homogeneidad del trabajo realizado en consonancia con los protocolos y acorde con las buenas prácticas.</li>\n<li>Monitorizar el cumplimiento de las disposiciones necesarias para seguir el plan de gestión de datos.</li>\n<li>Colaborar con investigaciones de implementación que puedan ayudar al correcto desarrollo del proyecto.</li>\n<li>Redacción de informes de seguimiento y memorias anuales y finales.</li>\n<li>Colaboración con el investigador o investigadora principal en Castilla y León en todas las tareas de organización y coordinación logística del proyecto, regulatorias y todas aquellas que se deriven de la correcta implementación del proyecto.</li>\n<li>Otras propias de su categoría.</li>\n</ul>\nFicheros disponibles\n<a href=\"https://ibsal.es/wp-content/uploads/2026/11/ConvocatoriaRef.46_2026ONoviembreIIMasterIMPACTLGO.pdf\">Criterios y proceso de selección</a>",
+    "level": 2,
+    "title": "Convocatoria"
+   }
+  ],
+  "source": "ibsal",
+  "source_title": null,
+  "status": "open",
+  "title": "Ref.46_2026. Titulado Superior en Investigación",
+  "url": "https://ibsal.es/convocatorias/ref-46_2026-titulado-superior-en-investigacion/"
  }
 }
