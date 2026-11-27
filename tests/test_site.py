@@ -90,7 +90,8 @@ class Site(unittest.TestCase):
         store.save(root / "data/tragsa/events.json", events)
         store.save(root / "data/tragsa/announcements.json", notices)
         with mock.patch.object(site, "PLANNED", [{"id": "futura", "name": "Empresa futura"}]):
-            cls.marks = site.build(root / "data", cls.out, BASE, NOW)
+            cls.marks = site.build(root / "data", cls.out, BASE, NOW, manifest=root / "jobposting.json")
+        cls.manifest = json.loads((root / "jobposting.json").read_text(encoding="utf-8"))
 
     @classmethod
     def tearDownClass(cls):
@@ -139,6 +140,35 @@ class Site(unittest.TestCase):
         self.assertEqual(self.marks, {"con marcado": 2, "poco texto": 2})
         self.assertIn("application/ld+json", self.read("ofertas/tragsa-5/index.html"))
         self.assertNotIn("application/ld+json", self.read("ofertas/tragsa-1/index.html"))
+
+    def test_manifiesto_de_los_avisos_a_google(self):
+        # Fuera de la web, con todas las fichas: huella del marcado (o null) y si llevan noindex.
+        self.assertFalse((self.out / "jobposting.json").exists())
+        self.assertEqual(self.manifest["base_url"], BASE)
+        fichas = self.manifest["fichas"]
+        self.assertEqual(set(fichas), {f"{BASE}ofertas/tragsa-{n}/" for n in range(1, 6)})
+        self.assertEqual(fichas[f"{BASE}ofertas/tragsa-1/"], {"huella": None, "noindex": False})
+        # Cerrada hace 12 horas: aún sin noindex, que llega a las 48 (lo mismo que dice la página).
+        self.assertEqual(fichas[f"{BASE}ofertas/tragsa-3/"], {"huella": None, "noindex": False})
+        # A las 48 horas justas, el manifiesto y la página dicen noindex a la vez.
+        with tempfile.TemporaryDirectory() as tmp:
+            later = datetime(2026, 11, 9, tzinfo=timezone.utc)
+            site.build(Path(self.tmp.name) / "data", Path(tmp) / "_site", BASE, later, manifest=Path(tmp) / "m.json")
+            entry = json.loads((Path(tmp) / "m.json").read_text(encoding="utf-8"))["fichas"][f"{BASE}ofertas/tragsa-3/"]
+            html = (Path(tmp) / "_site/ofertas/tragsa-3/index.html").read_text(encoding="utf-8")
+        self.assertEqual(entry, {"huella": None, "noindex": True})
+        self.assertIn('<meta name="robots" content="noindex">', html)
+        sources = {s.id: s for s in site.ACTIVE}
+        marked = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',
+                                      self.read("ofertas/tragsa-5/index.html")).group(1))
+        self.assertEqual(fichas[f"{BASE}ofertas/tragsa-5/"],
+                         {"huella": site.fingerprint(marked), "noindex": False})
+        # La huella cambia con cualquier propiedad del marcado.
+        offer5 = site.jobposting(offer("5", title="Analista programador", location="Dos Hermanas (Sevilla)",
+                                       sections=[{"title": "Funciones", "level": 2, "html": RELLENO}]),
+                                 sources, BASE, NOW)
+        self.assertEqual(site.fingerprint(offer5), site.fingerprint(marked))
+        self.assertNotEqual(site.fingerprint({**offer5, "title": "Otro"}), site.fingerprint(offer5))
 
     def test_las_cerradas_salen_del_sitemap_y_a_los_dos_dias_de_los_buscadores(self):
         sitemap = self.read("sitemap.xml")

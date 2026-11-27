@@ -787,6 +787,19 @@ def jobposting(offer: dict, sources: dict, base_url: str, now: datetime) -> dict
     return data
 
 
+def stale(offer: dict, now: datetime) -> bool:
+    """Cerrada: sigue publicada (enlaces enviados, guardadas), pero a las 48 horas deja de ofrecerse a
+    los buscadores. Se comparan instantes: ni fechas de zonas distintas ni horas locales."""
+    return (offer["status"] == "closed"
+            and datetime.fromisoformat(offer["closed_at"]) + timedelta(hours=NOINDEX_HOURS) <= now)
+
+
+def fingerprint(data: dict) -> str:
+    """Huella del marcado JobPosting: cambia si cambia cualquier propiedad."""
+    text = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
 def json_ld(data: dict) -> str:
     """Bloque de datos para la cabecera. Sin «<», «>» ni «&» literales: ningún texto puede cerrar el
     <script> ni abrir un comentario, y JSON los lee igual."""
@@ -865,11 +878,8 @@ def offer_page(offer: dict, sources: dict, now: datetime, checked: str,
     ]
     description = " ".join(f"{fact}." for fact in summary if fact)
     title = offer["title"] if company.lower() in offer["title"].lower() else f"{offer['title']} – {company}"
-    # Cerrada: sigue publicada (enlaces enviados, guardadas), pero a las 48 horas deja de ofrecerse a
-    # los buscadores. Se comparan instantes: ni fechas de zonas distintas ni horas locales.
-    stale = closed and datetime.fromisoformat(offer["closed_at"]) + timedelta(hours=NOINDEX_HOURS) <= now
     marked = jobposting(offer, sources, base_url, now)
-    return page(title, body, root, description=description, checked=checked, index=not stale,
+    return page(title, body, root, description=description, checked=checked, index=not stale(offer, now),
                 head=json_ld(marked) if marked else "")
 
 
@@ -1895,8 +1905,12 @@ def public_offer(offer: dict, group: str, base_url: str) -> dict:
     }
 
 
-def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datetime | None = None) -> Counter:
-    """Genera la web en `out`. Devuelve cuántas fichas llevan marcado JobPosting y por qué no las demás."""
+def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datetime | None = None,
+          manifest: Path | None = None) -> Counter:
+    """Genera la web en `out`. Devuelve cuántas fichas llevan marcado JobPosting y por qué no las demás.
+
+    Con `manifest`, escribe ahí (fuera de la web) la huella del marcado de cada ficha y si lleva
+    `noindex`: de eso parten los avisos a Google (empleo/indexing.py)."""
     offers, events, announcements = load_all(data)
     sources = {s.id: s for s in ACTIVE}
     today = now.astimezone(MADRID).date()
@@ -2029,6 +2043,14 @@ def build(data: Path, out: Path, base_url: str, now: datetime, checked_at: datet
           + "".join(f"<url><loc>{e(base_url + p)}</loc></url>" for p in pages)
           + "</urlset>\n")
     write(out / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base_url}sitemap.xml\n")
+    if manifest:
+        entries = {}
+        for offer in offers.values():
+            marked = jobposting(offer, sources, base_url, now)
+            entries[base_url + offer_path(offer)] = {
+                "huella": fingerprint(marked) if marked else None, "noindex": stale(offer, now)}
+        write(manifest, json.dumps({"base_url": base_url, "generado": stamp, "fichas": entries},
+                                   ensure_ascii=False, indent=1))
     return Counter(jobposting_reason(o, sources, now) or "con marcado" for o in offers.values() if o["status"] == "open")
 
 
@@ -2038,7 +2060,7 @@ def main() -> None:
     checked = os.environ.get("CHECKED_AT")
     marks = build(
         Path("data"), Path("_site"), base_url, now,
-        datetime.fromisoformat(checked) if checked else None,
+        datetime.fromisoformat(checked) if checked else None, Path("jobposting.json"),
     )
     print("Web generada en _site/")
     size = Path("_site/api/ofertas.json").stat().st_size
