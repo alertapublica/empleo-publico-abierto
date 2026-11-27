@@ -76,5 +76,47 @@
   "status": "closed",
   "title": "Responsable de Estadística",
   "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-estadistica"
+ },
+ "responsable-de-sostenibilidad": {
+  "apply_url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-sostenibilidad",
+  "category": null,
+  "closed_at": null,
+  "code": null,
+  "company": "Puertos del Estado",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-30",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T10:37:24+00:00",
+  "id": "puertos:responsable-de-sostenibilidad",
+  "kind": null,
+  "listed_deadline": "2026-12-30",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": 1,
+  "published_on": null,
+  "ref": "responsable-de-sostenibilidad",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<ul><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RMS_report_Bases.pdf\">Bases de la convocatoria - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RMS_report_Fe%20de%20publicaci%C3%B3n.pdf\">Fe de publicación - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RMS_Anexo%20III.pdf\">Anexo III - Modelo de solicitud de participación - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RMS_Anexo%20IV.pdf\">Anexo IV - Modelo de relación de méritos - 27/11/2026</a></li><li><a href=\"https://www.puertos.es/system/files/2026-11/121126_OEP24DC1RMS_Anexo%20V.pdf\">Anexo V - Modelo de declaración jurada - 27/11/2026</a></li></ul>",
+    "level": 2,
+    "title": "Documentos de la convocatoria"
+   }
+  ],
+  "source": "puertos",
+  "source_title": null,
+  "status": "open",
+  "title": "Responsable de Sostenibilidad",
+  "url": "https://www.puertos.es/institucional/recursos-humanos/ofertas-de-empleo/responsable-de-sostenibilidad"
  }
 }

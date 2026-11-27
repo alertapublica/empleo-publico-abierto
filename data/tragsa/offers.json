@@ -18766,11 +18766,11 @@
  "58479": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58479",
   "category": "Específica",
-  "closed_at": "2026-11-24T05:07:24+00:00",
+  "closed_at": null,
   "code": "58479",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-23",
+  "deadline": "2026-12-09",
   "deadline_time": null,
   "department": "Cádiz",
   "detail_ok": true,
@@ -18779,9 +18779,9 @@
   "first_seen": "2026-11-09T10:23:36+00:00",
   "id": "tragsa:58479",
   "kind": "temporal",
-  "listed_deadline": "2026-11-23",
+  "listed_deadline": "2026-12-09",
   "location": "Ceuta",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Ceuta",
@@ -18852,14 +18852,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece: <br/>-Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede.<br/>-Jornada Parcial de 20 horas <br/>-Disponibilidad fines de semana y festivos <br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 9/11/2026 hasta el próximo 23/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece: <br/>-Contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede.<br/>-Jornada Parcial de 20 horas <br/>-Disponibilidad fines de semana y festivos <br/><br/>En relación al proceso publicado el pasado 09/11/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026 hasta el 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Capataz/a de Servicios - (Ceuta)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58479"
  },
@@ -20886,11 +20886,11 @@
  "58515": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58515",
   "category": "Específica",
-  "closed_at": "2026-11-24T05:07:24+00:00",
+  "closed_at": null,
   "code": "58515",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-23",
+  "deadline": "2026-12-09",
   "deadline_time": null,
   "department": "Cádiz",
   "detail_ok": true,
@@ -20899,9 +20899,9 @@
   "first_seen": "2026-11-09T10:23:36+00:00",
   "id": "tragsa:58515",
   "kind": "temporal",
-  "listed_deadline": "2026-11-23",
+  "listed_deadline": "2026-12-09",
   "location": "Ceuta",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": null,
   "parent_ref": null,
   "place": "Ceuta",
@@ -20912,7 +20912,7 @@
   "region": "Ceuta",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Capataz/a de Obras en Ceuta</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Capataz/a de Obras en Ceuta.</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -20977,14 +20977,14 @@
     "title": "Otros Factores Meritorios"
    },
    {
-    "html": "<ul><li>-Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede.<br/>-Jornada Completa <br/><br/>-El plazo de recepción de candidaturas estará abierto desde hoy día 9/11/2026 hasta el próximo 23/11/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>-Se ofrece contrato de duración determinada estimada de 6 meses con posibilidad de prórroga por otros 6 meses, si procede.<br/>-Jornada Completa <br/><br/>En relación al proceso publicado el pasado 09/11/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026 hasta el 09/12/2026 a las 23:59 (hora peninsular).<br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Capataz/a de Obras - (Ceuta)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58515"
  },

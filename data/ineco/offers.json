@@ -8186,7 +8186,7 @@
  "3334502": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334502",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T10:37:24+00:00",
   "code": "28628",
   "company": "Ineco",
   "contract": null,
@@ -8203,7 +8203,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -8241,7 +8241,7 @@
   ],
   "source": "ineco",
   "source_title": "28628 - Consultor/a Estratégico/a en Inteligencia Artificial",
-  "status": "open",
+  "status": "closed",
   "title": "Consultor/a Estratégico/a en Inteligencia Artificial",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3334502"
  },
