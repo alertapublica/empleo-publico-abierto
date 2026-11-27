@@ -8017,7 +8017,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -12585,6 +12585,68 @@
   "title": "Gerente de Operación",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375194"
  },
+ "3375445": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375445",
+  "category": null,
+  "closed_at": null,
+  "code": "29024",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:37:23+00:00",
+  "id": "ineco:3375445",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3375445",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>IT</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Técnico/a para el mantenimiento y administración de la infraestructura de sistemas en el cliente:<br/>1. Administración y explotación de sistemas Wintel/Microsoft Windows, incluyendo gestión de usuarios/as (Active Directory y GPOs),gestión de certificados entidades certificadoras y gestión de permisos NTFS.<br/>2. Administración, implantación y monitorización de entornos virtualizados VMware.<br/>3. Automatización y despliegue de aplicaciones, mediante PowerShell y Batch, sobre IIS y Apache en frontales y Tomcat en backend.<br/>4. Gestión operativa de la infraestructura, incluyendo resolución de incidencias, problemas y cambios, gestión de contraseñas y administración de recursos compartidos NetApp.<br/>5. Administración y gestión de copias de seguridad y restauración mediante Veeam Backup o resolución de incidencias, problemas y cambios, gestión de contraseñas y administración de recursos compartidos NetApp.</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Más de 5 años de experiencia en las funciones descritas.<br/><br/>Valorable:<br/>Experiencia trabajando  con herramientas Zabbix y Lansweeper<br/>Experiencia trabajando con DNS, DHCP y gestión de permisos NTFS.<br/><br/>Años de experiencia en el puesto: Más de 5 años<br/>Titulación: Ing. Informática (todas especialidades), Máster en Informática (todas especialidades), Grado Ing. Informática (todas especialidades), Formación Profesional DAM, DAW o ASIR, otros estudios de Informática, otras ingenierías, otros estudios universitarios u otras Formaciones Profesionales.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>- Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>- Contamos con beneficios flexibles adaptables a cada persona.<br/>- Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>- Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>- Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29024 - Administración de sistemas Wintel",
+  "status": "open",
+  "title": "Administración de sistemas Wintel",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375445"
+ },
  "3375685": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3375685",
   "category": null,
@@ -13969,7 +14031,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -14068,10 +14130,72 @@
    }
   ],
   "source": "ineco",
-  "source_title": "29081 - Técnico/a Centro Atencion Permamente",
+  "source_title": "29081 - Técnico/a Centro Atencion Permanente",
   "status": "open",
-  "title": "Técnico/a Centro Atencion Permamente",
+  "title": "Técnico/a Centro Atencion Permanente",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382598"
+ },
+ "3382599": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382599",
+  "category": null,
+  "closed_at": null,
+  "code": "29089",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:37:23+00:00",
+  "id": "ineco:3382599",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Madrid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3382599",
+  "region": "Comunidad de Madrid",
+  "sections": [
+   {
+    "html": "<p>SISTEMAS</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Inspector/a Material Rodante: Personal que lleva a cabo el seguimiento de la fabricación y la inspección de pruebas finales del material rodante<br/>1.\tParticipación en los procesos de licitación de la compra de material rodante ferroviario<br/>2.\tRevisión de documentación de diseño de material rodante ferroviario, llevando a cabo la inspección de pruebas tipo en origen, factoría y vía<br/>3.\tInspección de los procesos de fabricación e inspección de las pruebas serie en factoría y vía <br/>4.\tRedacción de informes técnicos y realización de ensayos relativos a cuestiones particulares relacionadas con el material rodante</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Titulación: Grado y/o Master en Ingeniería Industrial, Ingeniería Mecánica, o titulación equivalente.<br/>- Experiencia de al menos 2 años en Material rodante ferroviario <br/>- Experiencia global: mas de 2 años. <br/>- Informática: MS Word y,MS Excel, a nivel usuario <br/>- Idiomas: Inglés - B2</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>-\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>-\tContamos con beneficios flexibles adaptables a cada persona.<br/>-\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>-\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>-\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29089 - Inspector/a de Material Rodante",
+  "status": "open",
+  "title": "Inspector/a de Material Rodante",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382599"
  },
  "3382986": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382986",
@@ -14196,5 +14320,67 @@
   "status": "open",
   "title": "Beca Automatización Robótica de Procesos (RPA)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382987"
+ },
+ "3383607": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383607",
+  "category": null,
+  "closed_at": null,
+  "code": "29141",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:37:23+00:00",
+  "id": "ineco:3383607",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Lleida",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3383607",
+  "region": "Cataluña",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Inspecciones de vía para determinar el estado de los materiales (balasto, carril, sujeción, traviesas, canaleta de comunicaciones, otras instalaciones, etc.)<br/>- Inspecciones de infraestructura para determinar el estado de los activos (Terraplenes, desmontes, estructuras, túneles, caminos de servicio, cerramiento, zonas de dominio público, etc.)<br/>- Vigilancia y seguimiento de las  obras de inversión y de obras a terceros.<br/>- Control del mantenimiento correctivo del adjudicatario del mantenimiento (Bateos, sustitución de carril, soldaduras, recargues, limpieza de cunetas, saneo de cárcavas, desbroce, descaste de conejos, etc.)</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>Titulación: Bachillerato, BUP, COU, Formación Profesional (relacionado con el puesto), Otros<br/>Experiencia de al menos 5 años de manera individual o en su conjunto en:  obra civil lineal o sector industrial o en logística y almacenes o en tratamiento de bases de datos, preferentemente en obras ferroviarias, realizando funciones similares a las requeridas por el puesto.<br/>Programas: Word - Usuario, Excel - Usuario <br/>Valorable experiencia en logística y almacenes<br/>Valorable experiencia en tratamiento de bases de datos<br/>Valorable experiencia en mantenimiento preventivo en cualquier sector<br/>Valorable habilitación en seguridad de la circulación </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>•\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales<br/>•\tContamos con beneficios flexibles adaptables a cada persona.<br/>•\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>•\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>•\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la transparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29141 - Inspector/a de infraestructura y vía",
+  "status": "open",
+  "title": "Inspector/a de infraestructura y vía",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383607"
  }
 }

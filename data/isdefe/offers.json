@@ -2820,5 +2820,47 @@
   "status": "open",
   "title": "Jefatura de área de security and general services",
   "url": "https://seleccionisdefe.es/convocatoria-2679"
+ },
+ "2680": {
+  "apply_url": "https://seleccionisdefe.es/registro-2680",
+  "category": null,
+  "closed_at": null,
+  "code": "2026-T00465",
+  "company": "ISDEFE",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-03",
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T08:37:23+00:00",
+  "id": "isdefe:2680",
+  "kind": null,
+  "listed_deadline": "2026-12-03",
+  "location": null,
+  "missed_runs": 0,
+  "opens_on": "2026-11-27",
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": null,
+  "published_on": "2026-11-27",
+  "ref": "2680",
+  "region": "Sin ubicación",
+  "sections": [
+   {
+    "html": "<p>En <strong>ISDEFE</strong> - <em>(Ingeniería de Sistemas para la Defensa de España S.A., S.M.E, M.,), empresa dedicada a la Ingeniería de capital público 100% del Ministerio de Defensa -</em>, estamos buscando incorporar un/a <strong>Técnico/a Superior de Prevención de Riesgos Laborales.</strong></p><p><strong>Titulaciones </strong></p><p>Titulación universitaria mas máster en PRL, especialidades de seguridad en el trabajo higiene industrial y ergonomía y psicosociología.<br/>\r\n </p><p><strong>Funciones habituales:</strong></p><ul>\n<li>Evaluaciones iniciales y periódicas: Realizar evaluaciones de riesgos de puestos de trabajo en entornos diversos (oficinas; laboratorios; talleres de mantenimiento; centros de control e instalaciones militares o de clientes).</li>\n<li>Adaptación a nuevos proyectos: Evaluar condiciones de trabajo inéditas ante la apertura de nuevos contratos o cambios en los procesos operativos; proponiendo medidas preventivas viables y ajustadas a la operativa del cliente.</li>\n<li>Planificación de la actividad preventiva: Elaborar; implantar y realizar el seguimiento de los planes de acción derivados de las evaluaciones; priorizando las medidas según su criticidad técnica y operativa.</li>\n<li>Gestión Integral de Estudios e Intervenciones Psicosociales.  </li>\n<li>Coordinación de Actividades Empresariales (CAE) y Soporte en ClienteInterlocución técnica con clientes: Gestionar el intercambio documental y técnico con los responsables de PRL de los clientes de Defensa; desbloqueando incidencias de acceso y asegurando el cumplimiento de las normativas internas de seguridad.</li>\n<li>Visitas de seguimiento y control: Realizar desplazamientos periódicos a los centros de trabajo externos para verificar in situ las condiciones de seguridad; el cumplimiento de las medidas acordadas y resolver imprevistos técnicos sobre el terreno.</li>\n<li>Investigación de accidentes e incidentes: Analizar las causas raíz de los accidentes de trabajo e incidentes ocurridos tanto en sede propia como en instalaciones de clientes; definiendo medidas correctoras para evitar su repetición.</li>\n<li>Asesoramiento continuo: Actuar como referente técnico resolutivo para mandos intermedios y trabajadores ante cualquier duda o situación nueva en materia de seguridad y salud.</li>\n</ul><p><strong>Requisitos imprescindibles que debe cumplir el/la candidato/a:</strong></p><ul>\n<li>Entre 5 y 12 años de experiencia.</li>\n<li>Experiencia como Técnico Superior de PRL.</li>\n<li>Conocimientos sólidos y actualizados en Prevención de Riesgos Laborales y normativa de aplicación.</li>\n<li>Movilidad geográfica total y permiso de conducir(Clase B) en vigor y plena disponibilidad para viajar con frecuencia a distintos centros en territorio nacional (e internacional si el proyecto lo requiere).</li>\n</ul><p><strong>Requisitos Valorables</strong></p><p>- Experiencia demostrada en la realizacion de estudios avanzados de Ergonomía y Psicosociología Aplicada y capacidad para desarrollar con autonomía evaluaciones y estudios específicos.</p><p>- Conocimientos de sistemas de gestión de Seguridad y Salud en el Trabajo.</p><p>- Inglés valorable 700 puntos TOEIC*</p><p>- Capacidad de comunicacion e interlocucion con lso trabajadores</p><p>*A efectos de procesos de selección, la prueba TOEIC tendrá una validez de dos años desde la fecha de su última realización a través de ISDEFE. Excepcionalmente, cuando se exija un nivel mínimo de inglés, la persona podrá repetir la prueba siempre y cuando hayan transcurrido al menos tres meses desde la última convocatoria realizada por ISDEFE. El personal interno se regirá por la política de la empresa.</p>",
+    "level": 2,
+    "title": "Perfil del puesto"
+   }
+  ],
+  "source": "isdefe",
+  "source_title": "Técnico/a Superior de Prevención de Riesgos Laborales (2026-T00465)",
+  "status": "open",
+  "title": "Técnico/a Superior de Prevención de Riesgos Laborales",
+  "url": "https://seleccionisdefe.es/convocatoria-2680"
  }
 }

@@ -1,37 +1,17 @@
 {
- "cofivacasa": {
-  "desde": "2026-11-27T08:07:28+00:00",
-  "lecturas": 1,
-  "resultado": "error"
- },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 176,
-  "resultado": "error"
- },
- "fgv": {
-  "desde": "2026-11-27T08:07:28+00:00",
-  "lecturas": 1,
+  "lecturas": 177,
   "resultado": "error"
  },
  "ibsal": {
   "desde": "2026-11-26T09:37:30+00:00",
-  "lecturas": 26,
-  "resultado": "error"
- },
- "iisgm": {
-  "desde": "2026-11-27T08:07:28+00:00",
-  "lecturas": 1,
+  "lecturas": 27,
   "resultado": "error"
  },
  "sepi": {
   "desde": "2026-11-27T06:37:28+00:00",
-  "lecturas": 4,
-  "resultado": "error"
- },
- "sepides": {
-  "desde": "2026-11-27T08:07:28+00:00",
-  "lecturas": 1,
+  "lecturas": 5,
   "resultado": "error"
  }
 }
