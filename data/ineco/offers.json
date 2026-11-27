@@ -6261,6 +6261,68 @@
   "title": "Técnico/a de Gestión de Fondos Europeos",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3309143"
  },
+ "3311076": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311076",
+  "category": null,
+  "closed_at": null,
+  "code": "28461",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T09:07:32+00:00",
+  "id": "ineco:3311076",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Valladolid",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3311076",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>- Elaboración de la documentación técnica necesaria para la tramitación de Estudios de Delimitación de Tramos Urbanos.<br/>- Redacción de informes técnicos sobre expedientes de autorizaciones de accesos, estaciones de servicio, obras, instalaciones o actividades en las zonas de protección de las carreteras estatales.<br/>- Redacción de informes técnicos relativos a quejas por ruido. Recopilación de información general para definir la necesidad o no de realizar mediciones o modelizaciones y posible redacción de contestación de la queja. </p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia técnica global de alrededor de 5 años, y específica de al menos 1 año en trabajos de urbanismo.<br/>- Titulación: Arquitectura, Arquitectura Técnica, Máster en Arquitectura, Ingeniería Civil, Urbanismo o similar.<br/>- Programas: imprescindible buen manejo de Autocad <br/>- Valorable: conocimientos de QGIS, Arcgis. </p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/>Incorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.000 profesionales.<br/>Contamos con beneficios flexibles adaptables a cada persona.<br/>Formación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>Conciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>Acceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promueven el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.</p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "28461- Técnico/a urbanista",
+  "status": "open",
+  "title": "Técnico/a urbanista",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311076"
+ },
  "3311196": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3311196",
   "category": null,
@@ -8017,7 +8079,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -14031,7 +14093,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Madrid",
-  "missed_runs": 1,
+  "missed_runs": 2,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -14320,6 +14382,68 @@
   "status": "open",
   "title": "Beca Automatización Robótica de Procesos (RPA)",
   "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3382987"
+ },
+ "3383605": {
+  "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383605",
+  "category": null,
+  "closed_at": null,
+  "code": "29051",
+  "company": "Ineco",
+  "contract": null,
+  "country": "España",
+  "deadline": null,
+  "deadline_rule": null,
+  "deadline_time": null,
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 1,
+  "family": null,
+  "first_seen": "2026-11-27T09:07:32+00:00",
+  "id": "ineco:3383605",
+  "kind": null,
+  "listed_deadline": null,
+  "location": "Zamora",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 0,
+  "positions": 1,
+  "published_on": "2026-11-27",
+  "ref": "3383605",
+  "region": "Castilla y León",
+  "sections": [
+   {
+    "html": "<p>CIVIL</p>",
+    "level": 2,
+    "title": "Oficina"
+   },
+   {
+    "html": "<p>Ingeniería y consultoría de referencia en el ámbito de la movilidad sostenible y la transformación digital<br/><br/>Ineco lleva 55 años diseñando soluciones integrales, innovadoras y tecnológicas que han permitido avanzar hacia un nuevo modelo de movilidad más sostenible y más segura. Soluciones que contribuyen de manera directa en la mejora de la calidad de vida de millones de personas.<br/><br/>Con un equipo multidisciplinar de más de 6.000 profesionales, la empresa está presente en todos los continentes donde despliega su experiencia y capacidad para afrontar trabajos técnicamente complejos gracias a su conocimiento especializado y a la aplicación de la tecnología más avanzada y vanguardista.</p>",
+    "level": 2,
+    "title": "Descripción"
+   },
+   {
+    "html": "<p>Asistencia técnica a la Dirección de Obra:<br/>- Seguimiento y control de ejecución de obra (recepción de materiales, control de documentación y planos, medición de la obra ejecutada, seguimiento del plan de obra y análisis de nuevos precios).<br/>- Aseguramiento de la calidad de la obra (revisión y seguimiento de cumplimiento del plan de control de calidad y plan de ensayos).<br/>- Replanteo y control geométrico de la obra (verificación de replanteo, control geométrico y cuantitativo, estudio y propuesta de alternativas).<br/>- Consultoría de ingeniería (asistencia a reuniones, apoyo para la coordinación técnica, supervisión de planos/informes/cálculos, elaboración/supervisión de documentación gráfica, supervisión de propuestas).</p>",
+    "level": 2,
+    "title": "Funciones"
+   },
+   {
+    "html": "<p>- Experiencia como: Adjunto/a a la Dirección de Obra o Jefe/a de Unidad o Jefe/a de Obra o Jefe/a de Producción en obras de urbanización y carreteras.<br/>- Años de experiencia en el puesto: al menos 6 años.<br/>- Titulación: Ingeniería  de Caminos, Canales y Puertos, Master en Ingeniería de Caminos, Canales y Puertos.</p>",
+    "level": 2,
+    "title": "Requisitos"
+   },
+   {
+    "html": "<p>¿Qué te podemos ofrecer?<br/><br/>•\tIncorporarte a una compañía pública referente en la ingeniería y consultoría del transporte con más de 6.500 profesionales<br/>•\tContamos con beneficios flexibles adaptables a cada persona.<br/>•\tFormación continua. En INECO aportamos la formación en idiomas y la formación en las disciplinas técnicas que se requieran para desarrollar tu carrera profesional.<br/>•\tConciliación entre la vida personal y profesional. Disponemos de múltiples medidas de conciliación.<br/>•\tAcceso a numerosos descuentos y promociones exclusivos para nuestros profesionales.<br/><br/>Formar parte de una empresa como INECO se traduce en oportunidad: la diversidad de oferta con la que contamos significa que puedes desarrollar tu trayectoria profesional en el ámbito que mejor responda a tus intereses, así como ir aprendiendo en las distintas áreas de la compañía.<br/><br/>En Ineco apostamos por el talento que tiene como base entornos de trabajo retadores y estimulantes que promuevan el desarrollo personal y profesional de nuestros empleados, garantizando el cumplimiento de los principios de igualdad, mérito y capacidad, así como la trasparencia, objetividad y la igualdad de oportunidades.<br/><br/>En Ineco estamos comprometidos con la protección del medio ambiente y con la mitigación de los efectos del cambio climático y nos sumamos al reto de la Agenda 2030 y los 17 ODS.<br/><br/>Mantenemos desde el año 2008 la adhesión a los Diez Principios del Pacto Mundial de Naciones Unidas, basados en el respeto y promoción de los derechos humanos, laborales, medioambientales y de lucha contra la corrupción.<br/></p>",
+    "level": 2,
+    "title": "Se ofrece"
+   }
+  ],
+  "source": "ineco",
+  "source_title": "29051 - Jefe/a de Unidad de Asistencia Técnica de Control y Vigilancia",
+  "status": "open",
+  "title": "Jefe/a de Unidad de Asistencia Técnica de Control y Vigilancia",
+  "url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383605"
  },
  "3383607": {
   "apply_url": "https://ineco.epreselec.com/Ofertas/Ofertas.aspx?Id_Oferta=3383607",

@@ -27028,12 +27028,12 @@
  "58630": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58630",
   "category": "Específica",
-  "closed_at": "2026-11-26T05:07:23+00:00",
+  "closed_at": null,
   "code": "58630",
   "company": "Tragsatec",
   "contract": null,
-  "deadline": "2026-11-25",
-  "deadline_time": "23:59",
+  "deadline": "2026-12-14",
+  "deadline_time": null,
   "department": "Sistemas",
   "detail_ok": true,
   "detail_version": 3,
@@ -27041,9 +27041,9 @@
   "first_seen": "2026-11-11T08:37:27+00:00",
   "id": "tragsa:58630",
   "kind": "temporal",
-  "listed_deadline": "2026-11-25",
+  "listed_deadline": "2026-12-14",
   "location": "Sede Madrid Tragsa",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": "2026-11-11",
   "parent_ref": null,
   "place": "Madrid",
@@ -27054,7 +27054,7 @@
   "region": "Comunidad de Madrid",
   "sections": [
    {
-    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista SAP BTP para prestar apoyo a un importante proyecto de la Administración en Madrid.</p>",
+    "html": "<p>Tecnologías y Servicios Agrarios, S.A., S.M.E., M.P., empresa filial del GRUPO TRAGSA, especializada en la realización de actividades de ingeniería, consultoría y asistencia técnica en materias agrícolas, ganadería, forestal y medioambiental, busca incorporar 1 Analista SAP BTP para prestar apoyo a un importante proyecto de la Administración en Madrid.<br/><br/>En relación al proceso publicado el pasado 11/11/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026hasta el 14/12/226 a las 23:59h (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -27114,14 +27114,14 @@
     "title": "Experiencia Previa"
    },
    {
-    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa de hasta el 50%.<br/><br/><br/>El plazo de recepción de candidaturas estará abierto desde hoy día 11/11/2026 hasta el próximo 25/11/2026 a las 23:59 (hora peninsular).<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
+    "html": "<ul><li>Se ofrece:<br/><br/>- Contrato de duración determinada cuya tipología y duración será en función del proyecto destino según las modalidades recogidas en la legislación laboral vigente.<br/><br/>- Jornada completa de 37,5 horas semanales.<br/><br/>- Flexibilidad horaria.<br/><br/>- Posibilidad de trabajo a distancia por ahorro energético a determinar por la empresa de hasta el 50%.<br/><br/><br/>En relación al proceso publicado el pasado 11/11/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026hasta el 14/12/226 a las 23:59h (hora peninsular).<br/><br/><br/>No se admitirá ninguna solicitud que no llegue en el tiempo y forma explicitados en la convocatoria. En caso de dudas o problemas con la inscripción puede contactarnos a través del buzón de correo electrónico seleccion@tragsa.es, antes de las 23.59hs (hora peninsular) del penúltimo día laborable del plazo de recepción de candidaturas detallado en la oferta.<br/><br/>Los aspectos generales para la selección de personal eventual, de acuerdo al procedimiento ordinario en Grupo Tragsa, están publicados y accesibles en la web externa corporativa: https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Documents/bases-generales-ofertas-empleo-temporal.pdf</li></ul>",
     "level": 2,
     "title": "Observaciones"
    }
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Analista SAP BTP (Madrid)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTI&jobid=58630"
  },
