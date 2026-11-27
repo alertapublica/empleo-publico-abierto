@@ -1049,7 +1049,7 @@
  "1377684155": {
   "apply_url": "https://creix.bsmsa.cat/talentcommunity/apply/1377684155/?locale=es_ES",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-27T06:07:26+00:00",
   "code": null,
   "company": "BSM",
   "contract": null,
@@ -1066,7 +1066,7 @@
   "kind": null,
   "listed_deadline": null,
   "location": "Barcelona",
-  "missed_runs": 2,
+  "missed_runs": 3,
   "opens_on": null,
   "parent_ref": null,
   "place": null,
@@ -1084,7 +1084,7 @@
   ],
   "source": "bsm",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Encarregat/da de Client i Operacions per al Park Güell (parcial)",
   "url": "https://creix.bsmsa.cat/job/Selecci%C3%B3-per-vacant-interna-de-Encarregatda-de-Client-i-Operacions-per-al-Park-G%C3%BCell-%28parcial%29-Sele-Selecci%C3%B3-p/1377684155/"
  },

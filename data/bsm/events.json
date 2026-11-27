@@ -194,5 +194,10 @@
   "before": "2026-11-25",
   "kind": "deadline_changed",
   "offer": "bsm:1368200755"
+ },
+ {
+  "at": "2026-11-27T06:07:26+00:00",
+  "kind": "closed",
+  "offer": "bsm:1377684155"
  }
 ]
