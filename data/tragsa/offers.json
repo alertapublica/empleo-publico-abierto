@@ -15486,11 +15486,11 @@
  "58416": {
   "apply_url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/portal-empleo-acceso.aspx?jobid=58416",
   "category": "Específica",
-  "closed_at": "2026-11-27T05:07:25+00:00",
+  "closed_at": null,
   "code": "58416",
   "company": "Tragsa",
   "contract": null,
-  "deadline": "2026-11-26",
+  "deadline": "2026-12-07",
   "deadline_time": null,
   "department": "Islas Baleares",
   "detail_ok": true,
@@ -15499,9 +15499,9 @@
   "first_seen": "2026-11-06T23:24:02+00:00",
   "id": "tragsa:58416",
   "kind": "temporal",
-  "listed_deadline": "2026-11-26",
+  "listed_deadline": "2026-12-07",
   "location": "Menorca",
-  "missed_runs": 1,
+  "missed_runs": 0,
   "opens_on": "2026-11-02",
   "parent_ref": null,
   "place": "Menorca - Baleares",
@@ -15512,7 +15512,7 @@
   "region": "Illes Balears",
   "sections": [
    {
-    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Encargado/a Técnico/a - Apoyo Obras Civil (Menorca - Baleares) en Menorca. En relación al proceso publicado el pasado 12/11/2026 se amplía el plazo de recepción de candidaturas desde el 17/11/2026 hasta el 26/11/2026 a las 23:59 (hora peninsular).</p>",
+    "html": "<p>Empresa de Transformación Agraria, S.A., S.M.E., M.P., empresa matriz del GRUPO TRAGSA, especializada en trabajos relacionados con el desarrollo del medio rural y conservación de la naturaleza, busca incorporar 2 Encargado/a Técnico/a - Apoyo Obras Civil (Menorca - Baleares) en Menorca. En relación al proceso publicado el pasado 18/11/2026 se amplía el plazo de recepción de candidaturas desde el 27/11/2026 hasta el 07/12/2026 a las 23:59 (hora peninsular).</p>",
     "level": 2,
     "title": "Proyecto/ Motivo contratación"
    },
@@ -15574,7 +15574,7 @@
   ],
   "source": "tragsa",
   "source_title": null,
-  "status": "closed",
+  "status": "open",
   "title": "Encargado/a Técnico/a - Apoyo Obras Civil (Menorca - Baleares)",
   "url": "https://www.tragsa.es/_layouts/15/GrupoTragsa/ficha-oferta-empleo.aspx?tipo=FTG&jobid=58416"
  },
@@ -42425,5 +42425,47 @@
   "status": "closed",
   "title": "Tasa de reposición específica 2026 Grupo Tragsa: solo los bloques corregidos",
   "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tasas-reposicion-especifica-2025-2026/Paginas/tre-2026-grupo-tragsa.aspx"
+ },
+ "tro-25-26-puestos-reservados-personas-discapacidad-intelectual": {
+  "apply_url": "https://tragsa.talent-ecosystem.com/conv-di#section-8",
+  "category": "Tasa de reposición",
+  "closed_at": null,
+  "code": null,
+  "company": "Grupo Tragsa",
+  "contract": null,
+  "country": null,
+  "deadline": "2026-12-11",
+  "deadline_rule": null,
+  "deadline_time": "23:59",
+  "department": null,
+  "detail_ok": true,
+  "detail_version": 3,
+  "family": null,
+  "first_seen": "2026-11-27T11:37:27+00:00",
+  "id": "tragsa:tro-25-26-puestos-reservados-personas-discapacidad-intelectual",
+  "kind": "indefinido",
+  "listed_deadline": "2026-12-11",
+  "location": "Varias comunidades",
+  "missed_runs": 0,
+  "opens_on": null,
+  "parent_ref": null,
+  "place": null,
+  "portal_tries": 1,
+  "positions": null,
+  "published_on": "2026-11-26",
+  "ref": "tro-25-26-puestos-reservados-personas-discapacidad-intelectual",
+  "region": "Varias comunidades",
+  "sections": [
+   {
+    "html": "<p>\n<strong>Publicación de las bases generales y de los perfiles profesionales del proceso selectivo para la cobertura de puestos de trabajo incluidos en el cupo de reserva para personas con discapacidad intelectual de la tasa de reposición ordinaria (TRO) de los años 2025 y 2026 del Grupo Tragsa (Tragsa y Tragsatec)</strong><br/></p><p>La Dirección de Recursos Humanos y Organización ha aprobado las bases generales de la convocatoria del proceso de selección, mediante concurso-oposición, para el ingreso de personal fijo correspondiente al cupo de reserva para personas con discapacidad intelectual de las tasas de reposición ordinaria de los años 2025 y 2026 (TRO 25-26) del Grupo Tragsa (Tragsa y Tragsatec).<br/></p><p>Estas bases generales regulan los aspectos comunes del proceso de selección, si bien la concreción de la oferta de los puestos de trabajo ofertados, con sus características, funciones, requisitos de admisión y valoración de las fases de concurso y oposición, se realiza en los correspondientes Perfiles Profesionales que se pueden consultar en la plataforma de empleo en el siguiente enlace:</p><p>\n<a href=\"https://tragsa.talent-ecosystem.com/conv-di#section-8\">Ecosytem - People Experts </a><br/></p><p>Las personas interesadas pueden inscribirse a través de la página web del Grupo en nuestra plataforma de empleo desde las 0:00 horas del día 27 de noviembre de 2026, hasta las 23:59 horas del día 11 de diciembre de 2026 en dicho enlace.<br/></p><p>Es necesario que las personas interesadas en participar en dicha selección se registren en la plataforma de empleo mediante una dirección de correo electrónico.  <br/></p><p>En dicha plataforma pueden consultarse y descargarse la Convocatoria, así como los perfiles profesionales de los puestos ofertados y las instrucciones para la cumplimentación de la solicitud.<br/></p><p>La inscripción en el proceso de selección ha de realizarse exclusivamente “vía web” cumplimentando el formulario disponible en la plataforma de empleo indicada.<br/></p><p>La documentación que deba acompañar a esta solicitud se incluirá \r\n   <strong>en un solo archivo en formato pdf con un máximo de 25 megabytes. </strong>Esta documentación se presentará igualmente “vía web” en la plataforma de empleo.<br/></p><p>En la plataforma de empleo se incluye un enlace para facilitar la conversión y edición de documentos en pdf.<br/></p><p>Una vez realizado el registro en la plataforma cada persona candidata dispondrá de un espacio personal en el que además de poder gestionar sus solicitudes dispondrá de la información personalizada acerca de su progreso en el proceso de selección.<br/></p><p>En la misma plataforma puede encontrarse una selección de preguntas frecuentes (FAQ´S) en la que las personas interesadas encontrarán información acerca del proceso.<br/></p><p>La plataforma de empleo es accesible en cualquier tipo de dispositivo, incluidas tabletas y teléfonos móviles “Smartphone”.<br/></p><p>Para resolver cualquier duda o aclaración se ha habilitado la siguiente dirección de correo electrónico:<br/></p><p>\n<a href=\"mailto:tasareposiciongrupotragsaDI@people-experts.com\">tasareposiciongrupotragsaDI@people-experts.com </a><br/></p><p>Las personas que vayan a ejercer como representantes de la persona candidata, han de registrarse en la plataforma de empleo al mismo tiempo que realiza la inscripción de la persona candidata a la que representa en el apartado habilitado para ello.</p><p>\n<strong>Calendario estimativo de pruebas:</strong></p><p>El calendario orientativo de las distintas fases del proceso de selección es el siguiente:</p><p>- Prueba de conocimientos en el mes de febrero de 2027.</p><p>- Valoración de méritos en el mes de marzo de 2027.<br/></p><p>- Prueba oral y finalización del proceso de selección en el mes de abril de 2027.</p><p>\n<strong>Documentos que se publican con esta noticia:</strong></p><p>\nBases Generales del proceso selectivo mediante concurso-oposición para el ingreso de personal fijo a la tasa de reposición ordinaria de los años 2025 y 2026 (TRO 25-26) en el cupo de reserva para personas con discapacidad intelectual de la empresa Transformación Agraria S.A., S.M.E., M.P. (Tragsa) <br/></p><p>\nBases Generales del proceso selectivo mediante concurso-oposición para el ingreso de personal fijo o fijo discontinuo correspondiente a la tasa de reposición ordinaria de los años 2025 y 2026 (TRO 25-26) en el cupo de reserva para personas con discapacidad intelectual de la empresa Tecnologías y Servicios Agrarios S.A., S.M.E., M.P. (Tragsatec) <br/><br/></p>",
+    "level": 2,
+    "title": "Comunicado oficial del plazo"
+   }
+  ],
+  "source": "tragsa",
+  "source_title": null,
+  "status": "open",
+  "title": "TRO 25-26. Puestos reservados para personas con discapacidad intelectual",
+  "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-indefinido/tro-25-26-puestos-reservados-personas-discapacidad-intelectual/Paginas/default.aspx"
  }
 }
