@@ -76,6 +76,15 @@ class Ibsal(unittest.TestCase):
         self.assertEqual(job["contract"], "Contrato Indefinido: actividades científicas- técnicas "
                                           "(art 23. Bis de la ley 14/2011 LCTI)")
 
+    def test_ficha_vigente_con_canonica_legible_y_shortlink(self):
+        # Así venía la Ref.45_2026 el 27/11/2026: el número solo en el shortlink.
+        url = "https://ibsal.es/convocatorias/ref-44_2026-tecnico/"
+        html = fixture("ibsal-ficha.html").replace(
+            '<link href="https://ibsal.es/?post_type=awsm_job_openings&amp;p=28071" rel="canonical"/>',
+            f'<link rel="canonical" href="{url}"/><link rel="shortlink" href="https://ibsal.es/?p=28071"/>')
+        job = ibsal.parse_detail(html)
+        self.assertEqual((job["ref"], job["url"], job["deadline"]), ("28071", url, "2026-10-22"))
+
     def test_meses_abreviados_en_ingles_o_en_espanol(self):
         self.assertEqual(ibsal.expiry_date("22 Oct 2026"), date(2026, 10, 22))
         self.assertEqual(ibsal.expiry_date("5 Dec 2026"), date(2026, 12, 5))
