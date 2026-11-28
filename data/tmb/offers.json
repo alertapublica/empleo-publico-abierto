@@ -47,7 +47,7 @@
  "10243": {
   "apply_url": "https://www.tmb.cat/ca/w/oferta-10243-enginyer-projectes-via",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "10243",
   "company": "TMB",
   "contract": null,
@@ -64,7 +64,7 @@
   "kind": null,
   "listed_deadline": "2026-11-27",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-18",
   "parent_ref": null,
   "place": null,
@@ -87,7 +87,7 @@
   ],
   "source": "tmb",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Oferta 10243 Enginyer/a projectes via",
   "url": "https://www.tmb.cat/ca/w/oferta-10243-enginyer-projectes-via"
  },
@@ -139,7 +139,7 @@
  "10246": {
   "apply_url": "https://www.tmb.cat/ca/w/oferta-10246-tecnic-jur%C3%ADdic-protecci%C3%B3-dades",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "10246",
   "company": "TMB",
   "contract": null,
@@ -155,7 +155,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-27",
   "location": "Barcelona",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-17",
   "parent_ref": null,
   "place": null,
@@ -178,7 +178,7 @@
   ],
   "source": "tmb",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Tècnic/a Jurídic/a Protecció de Dades",
   "url": "https://www.tmb.cat/ca/w/oferta-10246-tecnic-jur%C3%ADdic-protecci%C3%B3-dades"
  },

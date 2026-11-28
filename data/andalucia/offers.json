@@ -272,7 +272,7 @@
  "692356": {
   "apply_url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692356.html",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": null,
   "company": "Sociedad Andaluza para el Desarrollo de las Telecomunicaciones, S.A.M.P. (SANDETEL)",
   "contract": "Indefinido",
@@ -287,7 +287,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-27",
   "location": "Málaga (Málaga)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-06",
   "parent_ref": null,
   "place": null,
@@ -320,7 +320,7 @@
   ],
   "source": "andalucia",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Técnico/a en el Departamento de Consultoría.",
   "url": "https://www.juntadeandalucia.es/organismos/transparencia/empleo-publico/entidades-instrumentales/ofertas-empleo/detalle/692356.html"
  },

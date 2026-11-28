@@ -182,7 +182,7 @@
  "65479": {
   "apply_url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65479",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "PR.FEMPA.DIP2023A.003",
   "company": "IFAPA",
   "contract": "Contratos Específicos de I+D+F",
@@ -197,7 +197,7 @@
   "kind": null,
   "listed_deadline": "2026-11-27",
   "location": "IFAPA Centro Agua del Pino (Cartaya - Huelva)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": null,
@@ -220,14 +220,14 @@
   ],
   "source": "ifapa",
   "source_title": "Convocatoria de contratos laborales en el marco de proyectos específicos de I+D+F (BOJA 220, pág 14781) - Tit. FP - Inv -",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico Superior · Innovación y fomento de una acuicultura de moluscos sostenible en el litoral sur atlántico andaluz (MOLUSOS)",
   "url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65479"
  },
  "65480": {
   "apply_url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65480",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "CAICEM 2025-180",
   "company": "IFAPA",
   "contract": "Contratos Específicos de I+D+F",
@@ -242,7 +242,7 @@
   "kind": null,
   "listed_deadline": "2026-11-27",
   "location": "Centro IFAPA de Málaga (sede de Churriana)",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": null,
@@ -265,7 +265,7 @@
   ],
   "source": "ifapa",
   "source_title": "Convocatoria de contratos laborales en el marco de proyectos específicos de I+D+F (BOJA 220, pág 14783) - Tit. FP - P. Inter Transfer -",
-  "status": "open",
+  "status": "closed",
   "title": "Técnico Superior · Los trips (Thysanoptera: Thripidae) como plagas emergentes en el cultivo del mango en España: Composición de especies, ecología y daños",
   "url": "https://www.juntadeandalucia.es/agriculturaypesca/ifapa/web/node/65480"
  }

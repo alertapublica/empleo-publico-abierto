@@ -52,7 +52,7 @@
  "2026-pi57": {
   "apply_url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi57/convocatoria-i-pi-57-26.html",
   "category": "Investigador/a en Formación",
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "I-PI 57-26",
   "company": "Universidad de Alicante",
   "contract": "contratación temporal",
@@ -67,7 +67,7 @@
   "kind": "temporal",
   "listed_deadline": "2026-11-27",
   "location": "Comunitat Valenciana",
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-16",
   "parent_ref": null,
   "place": null,
@@ -95,7 +95,7 @@
   ],
   "source": "ua",
   "source_title": null,
-  "status": "open",
+  "status": "closed",
   "title": "Personal investigador en formación para colaborar con el proyecto «Contribuciones de la geodesia al transporte de agua y al riesgo hidrometeorológico»",
   "url": "https://ssp.ua.es/es/selecinvest/03-personal-investigador/2026/pi57/convocatoria-i-pi-57-26.html"
  },

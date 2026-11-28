@@ -111,6 +111,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/17",
   "via": "otro"
  },
+ "emacsa:43614a0680b8": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-05",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-28T07:07:23+00:00",
+  "location": null,
+  "process": "Titulado/a de Grado Medio PRL",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/25",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Rectificación de error material en las bases",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/25",
+  "via": "otro"
+ },
  "emacsa:43a10c9ab6aa": {
   "access": null,
   "apply_url": null,
@@ -128,6 +146,24 @@
   "system": null,
   "title": "Celebración del ejercicio teórico del proceso selectivo",
   "url": "https://cuestionarios.emacsa.es/convocatoria/17",
+  "via": "otro"
+ },
+ "emacsa:4857f60feae4": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-10-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-28T07:07:23+00:00",
+  "location": null,
+  "process": "Auxiliar Técnico de Logística",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/27",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Convocatoria y bases",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/27",
   "via": "otro"
  },
  "emacsa:6134c5d9a921": {
@@ -224,6 +260,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/18",
   "via": "otro"
  },
+ "emacsa:93ada0d3bd21": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-05",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-28T07:07:23+00:00",
+  "location": null,
+  "process": "Auxiliar Técnico de Logística",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/27",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Rectificación de error material en las bases",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/27",
+  "via": "otro"
+ },
  "emacsa:942962613fec": {
   "access": null,
   "apply_url": null,
@@ -279,6 +333,24 @@
   "url": "https://cuestionarios.emacsa.es/convocatoria/18",
   "via": "otro"
  },
+ "emacsa:bc9c12c2fe9c": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-10-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-28T07:07:23+00:00",
+  "location": null,
+  "process": "Titulado/a de Grado Medio PRL",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/25",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Convocatoria y bases",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/25",
+  "via": "otro"
+ },
  "emacsa:c86338739952": {
   "access": null,
   "apply_url": null,
@@ -315,6 +387,24 @@
   "system": null,
   "title": "Rectificación de error material en las bases",
   "url": "https://cuestionarios.emacsa.es/convocatoria/18",
+  "via": "otro"
+ },
+ "emacsa:d47c20fe2264": {
+  "access": null,
+  "apply_url": null,
+  "contract": null,
+  "date": "2026-11-26",
+  "deadline": null,
+  "deadline_time": null,
+  "first_seen": "2026-11-28T07:07:23+00:00",
+  "location": null,
+  "process": "Auxiliar Técnico de Logística",
+  "process_url": "https://cuestionarios.emacsa.es/convocatoria/27",
+  "source": "emacsa",
+  "state": "curso",
+  "system": null,
+  "title": "Anuncio de la modificación del tribunal de la convocatoria",
+  "url": "https://cuestionarios.emacsa.es/convocatoria/27",
   "via": "otro"
  }
 }

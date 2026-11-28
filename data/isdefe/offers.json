@@ -1396,7 +1396,7 @@
  "2645": {
   "apply_url": "https://seleccionisdefe.es/registro-2645",
   "category": null,
-  "closed_at": null,
+  "closed_at": "2026-11-28T07:07:23+00:00",
   "code": "2025-T00449 (7)",
   "company": "ISDEFE",
   "contract": "Contrato indefinido",
@@ -1413,7 +1413,7 @@
   "kind": "indefinido",
   "listed_deadline": "2026-11-27",
   "location": null,
-  "missed_runs": 0,
+  "missed_runs": 1,
   "opens_on": "2026-11-23",
   "parent_ref": null,
   "place": null,
@@ -1431,7 +1431,7 @@
   ],
   "source": "isdefe",
   "source_title": "Ingeniero/a de estudios estratégicos del transporte aéreo (2025-T00449) (7)",
-  "status": "open",
+  "status": "closed",
   "title": "Ingeniero/a de estudios estratégicos del transporte aéreo",
   "url": "https://seleccionisdefe.es/convocatoria-2645"
  },
