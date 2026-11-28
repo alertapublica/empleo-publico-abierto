@@ -1,0 +1,756 @@
+{
+ "dia": "2026-11-28",
+ "enviados": 150,
+ "urls": {
+  "https://alertapublica.es/ofertas/tragsa-55071/": {
+   "acuse": "2026-11-28T08:26:08+00:00",
+   "huella": "6ed459a24b76cc52e2094c400a4d527c833f6132931024636239bb20f87ff45c",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-55742/": {
+   "acuse": "2026-11-28T08:26:08+00:00",
+   "huella": "d3dc5c60c27d4eb31e2dbe75a839f1e6cdceaa5bc8ed851f835a964d0f074987",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-55851/": {
+   "acuse": "2026-11-28T08:26:08+00:00",
+   "huella": "49d21a33d785f130fefbfc134d2ad86b0d8f25580cb54f9b7d450efdcbe489ed",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56154/": {
+   "acuse": "2026-11-28T08:26:08+00:00",
+   "huella": "6ec224c885913e7ed832ae3d8c39dfff080650f8336108e5521daf46c0c2e7cc",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56251/": {
+   "acuse": "2026-11-28T08:26:09+00:00",
+   "huella": "baa914ecd8ed5c3c06677fe1fe40be339fc7e822649ceb90702978658a489181",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56358/": {
+   "acuse": "2026-11-28T08:26:09+00:00",
+   "huella": "73f3933fb8ce7b98b47a8cda5816f99990647bbb39de53b649fa64925128ec49",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56477/": {
+   "acuse": "2026-11-28T08:26:09+00:00",
+   "huella": "ffc67dacb5aa1a4a12fa4966dbcf8a28a4a40e23dbef20cda3ecbf26aa1923ed",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56871/": {
+   "acuse": "2026-11-28T08:26:09+00:00",
+   "huella": "a77f4f50808ac1cd6bec272e8b3530cb5902d9cdb3a2fc9fae926272f89a1e4c",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-56992/": {
+   "acuse": "2026-11-28T08:26:10+00:00",
+   "huella": "c0dd69c6d1c646bd2ef3bf5894baf4752388beadc167ccba2fbe3e5fd3564cd7",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57658/": {
+   "acuse": "2026-11-28T08:26:10+00:00",
+   "huella": "3fb923b0793a555b6662a4551a5214f8dfc369a555aa61efc0f0b09a2085ac8b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57690/": {
+   "acuse": "2026-11-28T08:26:10+00:00",
+   "huella": "4717fed58cff1e460be9c95f81db2dd6226ba4dbc468a71d621e95bf1aeda6b3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57694/": {
+   "acuse": "2026-11-28T08:26:10+00:00",
+   "huella": "f944e29e8384f4edec0b6f09501a5cf65bac56b2d6c0a48f170b7a44eafb4651",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57713/": {
+   "acuse": "2026-11-28T08:26:10+00:00",
+   "huella": "5eab05867b9c1f1d553f1769b0888de190615448b9f8bb74fab4b214c520a8de",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57716/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "1b4e19b37f5fa03c77e3fc68cebc9360fd473ecf43f76bfa60f420d54e8feb44",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57795/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "5b6c479ab12506344d5c36d9545e137370502fca1d00eb01030a9e7c1521a264",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57832/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "bb9fbe6653bb2cab8c82129beedb2f446b95921c14693b267194b92e44820119",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-57978/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "a191f676c6629fe6a155b6cdc5eb8fbe18a7e2f7370c265dd03c08e3867f5e23",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58033/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "8c1c19e096f39d75f25372b05900bd02f32a7351d9f9b96cfd01ca865d71d606",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58077/": {
+   "acuse": "2026-11-28T08:26:11+00:00",
+   "huella": "599fcb70c18445def864f6b961553aaad0454fedead8adf5fe93a2635657ffec",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58108/": {
+   "acuse": "2026-11-28T08:26:12+00:00",
+   "huella": "0324e5c900fbb6dae301a8836df0a4a993dd914b18ba4e5f4d73117395878dba",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58110/": {
+   "acuse": "2026-11-28T08:26:12+00:00",
+   "huella": "5b9599e06e84a0ef49db0d8bd48ecf5ac9447e229253c83bc77a7dc9f69504ba",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58136/": {
+   "acuse": "2026-11-28T08:26:12+00:00",
+   "huella": "bd3f99f806ee9f3dd5d871cde17b63845b9a4fefe5b83e295cd4d32f89666b4a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58162/": {
+   "acuse": "2026-11-28T08:26:12+00:00",
+   "huella": "0d0e66d7ab8bf784423fc76b7ab4bab6e7933cf1a046bcc9f71e2b969a2aad57",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58206/": {
+   "acuse": "2026-11-28T08:26:12+00:00",
+   "huella": "290bc61c019b1c0cf5f65251e8bf4d92227bb2261f284a0255ad08259c1e7ca7",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58210/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "679caae24dc8fbb7c00360e98bd7af12ec9cd5adf50374d77b8706d3ad23f855",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58211/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "e7239bd8d7d8daf03dcddc1079c330c3c7dbd5846f3c795b1e9de22d79b33ca0",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58230/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "0aac1c4bb797224a69dd3e4aa0295e16d0a9ec1e19736f97c14878391be0e0b2",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58246/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "da8853cca940102c0bfa0636d890cffd5cae4e885afedfd7d96def4ef92d5dbe",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58269/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "b9eda17fe3a79bbea5400dc2d2b87c29c0df767bf1f22cd6fd94011eae505e0f",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58303/": {
+   "acuse": "2026-11-28T08:26:13+00:00",
+   "huella": "249dd4bb3ea656e8f5de0653ac5b21c29365a703784c96e930c91a3578da1c18",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58305/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "ee4ce993cfc470a928c45ab7a6836ec4800556a65d8b5f861d422748c840dc3d",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58317/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "088ddc8653ac474e7a30565827f099ef0bd8a78c631d4c4c7ea52b87025ae362",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58348/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "ac5a6515a59daf2c91295788b1711061e89b07c15097280e00efb24b306ad293",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58382/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "a5e950d2e77b29ac8f213869554d82b8469effdf64b7e448affaebe069acd174",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58416/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "2417c5ea557417265eabdd16031ebe0ac76865214c020545cc949217279cbe84",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58417/": {
+   "acuse": "2026-11-28T08:26:14+00:00",
+   "huella": "0a2ba1f0f4bd18a09bd7e2da64498edf9f6571046d73435ad2a9c344ceeba256",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58428/": {
+   "acuse": "2026-11-28T08:26:15+00:00",
+   "huella": "d326db87e1344f1f9e610c004a648e3eb408d23c52bef3a6bea4ca4451603ed3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58429/": {
+   "acuse": "2026-11-28T08:26:15+00:00",
+   "huella": "c74f52e08d596f51e848098348f84c8d07c02570dd36485eaff34af62013d3a0",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58449/": {
+   "acuse": "2026-11-28T08:26:15+00:00",
+   "huella": "19b407228590137cec100bcbcb32df9f7d580c04548948510c4b938f42652815",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58451/": {
+   "acuse": "2026-11-28T08:26:15+00:00",
+   "huella": "9625d0264ac9942fc127e3012769a01cfd7d792f62e3eb7d86179e76fd23e302",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58460/": {
+   "acuse": "2026-11-28T08:26:15+00:00",
+   "huella": "3a0a8c1e46788983af6cba2c817447370986936843e536a08a31d6845387a08a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58467/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "3955d514453aedfa263d1aecb78139f5742b88dca92d3d811b069e598f129b32",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58469/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "694121981a236ca9924dd34e0842c7236d70e7b659fc6409ca4c0267789278c1",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58470/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "222008f95602c86d4da429702dd22ba9eb20b5a0e26a1f4ac63980cf7b3f2e49",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58477/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "49090d756d171d4d1ba97750e678f1136ef6eeef10852123539937acb9d52c56",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58479/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "6a5cc198e16cfe1d079c739f29595a63239259f7ee50c64a05d2e58b7a263535",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58493/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "a748a276c3b6aa1b76d28dc580e51d822fd6c4f7c035c3f1e198ce7a3a0d814a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58514/": {
+   "acuse": "2026-11-28T08:26:16+00:00",
+   "huella": "6cb93c46a7650c601afde964f31931fc7eaa57148ca6cef01e7e33eb6d82f8ad",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58515/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "ec2caf2686a611ab7dda075b4c175162cf4e6a4f353f671bde04d9856c8ed4e3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58525/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "9c3eb7d248e0cf2d8f2c598d88e69bd041696f2746d735029654f0f9da35df46",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58542/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "17d036dabd11763eacd7d55c9a7e1364a37e41f7b0e123211a0d6bbba3751bcf",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58561/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "e9ddb0d956c7a2f915b2259346a8a456637855c0f38d044bbc7364687d01022a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58566/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "1611db381b699afbc8e11919ab1d1d813c9d86e31402d9f5db2fcc9e2ca11361",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58581/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "51aa84b3f36f864a7377e5fb5bb3ede749c40490103574ad2c73b129a7506249",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58587/": {
+   "acuse": "2026-11-28T08:26:17+00:00",
+   "huella": "6d8536d71201f6f1682409881abbcf47f5bdeeeb71266f8c859b12064834eae4",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58592/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "61ffa66e04019ea43881444882b012431f641af9ef738c8fa71c3750cfd0b63a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58597/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "579214306e9064c3760e4728a268db0591adeebdda8a2d2ce4d9b63003e9e451",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58620/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "788f938a5799c96c4f1ddeb1ce17458ae2a6d3f44f65099790af537e02d3c2b3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58625/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "026b130caf81eb6d3be4a073bad68aff57b968159ca63410312e210318bf623e",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58630/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "920c6254dac772ffe2c0bddc8235c9fdb1cb87f67cf33b71550b0320affdf475",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58638/": {
+   "acuse": "2026-11-28T08:26:18+00:00",
+   "huella": "d35dcce90cb3ea716ae890c7fb20eb5198888e238e97c942e9398b7a44497cd6",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58640/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "4136751d31d8b5aa43e1d0de3d66edb4dbfaffe141cebbcd7e58bbec4b92eb46",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58641/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "3b7bc5d4c297dad85316cab81a90372efa3882a5f28dc90553e702d6b154e8f0",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58642/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "dea5e98c65a66378946bc0f6227cf8085c138604edfcead89827f25dc6ca5b12",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58645/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "88a89e70b08ada9d2866b767fb6b089858b55df323e679ce4e2442ec813f61f4",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58656/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "f876d682ad70320fb0c38374112f55519a053347dcd653d43cad0a36b7adede6",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58658/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "0d7b903f4a2820c20808c54d10a30a33398991bd1c8d80a6c888180d63c1d16a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58660/": {
+   "acuse": "2026-11-28T08:26:19+00:00",
+   "huella": "0efa5fd16aed260b8362d14abd68190a96c4de285e38c9989fe1eefc7c0d3be3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58662/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "6f8eaf8f7f25fb4e47e775c8f05168ac2e924f5bd240a10583e05e8fdcb753d3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58663/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "b446891b41c1cb829201789c3ace97fefa68f2995900683e359870520486d771",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58664/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "893319e00bba4a8d81c736c272ac7b75b7053f6b41ac5823c5d1954898a28112",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58671/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "ee95f4a1e3eaf92917e483a5cd5f68d0e453436bc0f3cc0b99084e266ed6d481",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58675/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "35ad958b41a51dada20c973b2155e26912c9fc9ea38c3fc6e70b0ddc667ac007",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58677/": {
+   "acuse": "2026-11-28T08:26:20+00:00",
+   "huella": "f89ebbb6b7794940166a45b5abaf67c132e3097fc3f67447ae875e51ecc0a093",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58679/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "883389032e0b7f7907b63782d072a6a58617055765820458005769ba486788c9",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58680/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "1df1b0fd9daf8e7a850767f4f5c68e64cf191a8bef5e284a7d046b70f209870d",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58683/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "323012f7e1ef25bf14ba3660937b2b94949037bfbc1bc95cf7d5690786c17f4b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58686/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "542e493172f60e7a677398b6258ba30ce4710dfc47b4da527588624a7a6dcdba",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58688/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "bdc17332042bd50c180af8f10363d9137155a0723110693bbe8173c0bd9c2609",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58689/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "8501f05142e2e6b9af33276e87baed808e4b1d65e6e076ef430d0fd4103cf4f3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58693/": {
+   "acuse": "2026-11-28T08:26:21+00:00",
+   "huella": "ecd8790781ad76b650a336da9f6bf9e01f7b523130e3f45ce4ee4a89d9e3d6cf",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58697/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "d1b7cc69f3f2958a1fd45ee04597f58b4979619481f36cc0d40fe20c3082658b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58706/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "7f7cb181e469f7443f48f4d789b9f35f26dd0ef8fc05d5f08e8ee4287c2f6e7d",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58712/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "78dcf6d3e9c552863ba7aa4668e4b46c4c5697f43f23eb1245717a344095f1cb",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58714/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "afa566f25d4edbf7e479ff80119e326a8687605d9a2efbc46e0de22d09bdae20",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58715/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "ea1efc7fc065097d88a2c4cb8bef3dc4ba2ea2a3960f8286f357ac70c3d02ce6",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58716/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "3cefdab5975067ee3c3567c614ff58670f85fd4d509a7889afe85d908c35c3c5",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58718/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "c2c66adf87dcbe9c1613b39e39d7b8f00455f5ea10ebebb9f4c63db2f082ec78",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58720/": {
+   "acuse": "2026-11-28T08:26:22+00:00",
+   "huella": "cb3612de5a3a2b5a8430bb4f2f5bd85796625a919e0961bac63bd3a147e39a5d",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58721/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "1983b689af8211c03d1f34ad1373aa91bb517d21b78b0d934868a9e7fadd6520",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58722/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "9517a7c69d392b575f3db6d761d7a91f311df777361ae04b1fbbd7cf8de90daa",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58724/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "6a00fec7eeb55a30eb5caaba0d525767d8c18d7b727a59d901517b6199b90946",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58725/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "384dc7391c5f1a67736de98a34e64d57826ed8d7ff5d6d08d5d3185361643f47",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58726/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "fa70d3f56973a657aa01130d21a0838c0346ca06e5b6131fe721d8ebf01565f7",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58728/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "96adfca3968a1ecec047ebfe06554b5008853e4a7e4365620126568c51b7f1e3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58731/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "2ad9ae1048fcbd1a048697ae2489dcfabf75ddaedcf7cbbf2397db6c273459e0",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58734/": {
+   "acuse": "2026-11-28T08:26:23+00:00",
+   "huella": "aba70164fbcd1def1f8bcde47fd90cdbeb27125a781e0a0db529cd8f2b7641e2",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58735/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "191acfadd0347ba9de1cd4f8a09b8fcb7da624dc9ee36ab00c45a5522d113948",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58737/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "7caf268ac02536646958fc2964a3842d356b484d53672a4e4f81bf7fda623a4c",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58739/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "f2911188e57b5ac301b132fb18bca64958d983062aaee67aecf17a81341dc0c8",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58741/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "75bfc28a91b768d39ce641b24941660dc373032801540707ea91d69ecb6596d2",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58743/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "64b05bb64975bb72973e637739ee1b8b612a5c0567da38d84f4fc4b1d5066b85",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58745/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "fb50ef5d000984cec89dcaf988dc65905cdb39affa1b9fcf7129a2408c649b35",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58746/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "7033d4462a1847d55a594c53dafc9b926441be500420c05af8208b920ac82a96",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58749/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "2caa729a8c7f5a2ae937caa2ec9639a631f4a2cbe87d2979fa935798a8493465",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58759/": {
+   "acuse": "2026-11-28T08:26:24+00:00",
+   "huella": "a0585f54c50814bf5d8d4135ab032e26f657a4d9724af69783f9fb1e3d3a967b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58760/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "7ffb842f500ed9fc94c815e27f5dfd1c52fff5beb597ea245b2b582c230c5334",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58761/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "5972b2a0e05fdcda250ecd39cfec9a312c53677b2b79696582806b2917f5fdb8",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58762/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "fb2c7d096cacf42861da12e5570b2c3f1defb6024db77a4779def86bbbae5104",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58764/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "008b30bfda85cedd43a60e3daa4a9a8cf784ce2a176ceb27fc040e05c745ce8b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58766/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "ee5fb2132d940c007acd94bec87513e30b63a917afefa4fef4c9bb2128c12180",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58768/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "26f6a237f5de622a1e002a90860f736d757cc97ed6a14e5105a1841533e0b642",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58774/": {
+   "acuse": "2026-11-28T08:26:25+00:00",
+   "huella": "749fb657893e241c76c35b752d248a20e03bd25ead72582a6e2c25e6fde98265",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58776/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "8102a51aa84770e4617c714928e53e46d9e8fa608b5bdc0ac0fce71ec5afd8b3",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58777/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "6ae76e243e2fc6d278c73f580cdd0b483e48d0544d5e5e7654c982b26a86cd17",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58778/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "e291f8ade95344d887d461bb1e5d5ad7eab175fb7e8da0f81c14791dd5cdafa0",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58781/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "692e41b89ce8d53ef3b711c7e7bf0145d4e83697bf7ec2d6364537bb501baffc",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58782/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "8bb2444be6a22706e56e5435f9df409e389fbd6f1536f567d5da406f2f8485de",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58783/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "48e0fcf8ba699ef198848c1a3dfd2ad140d329bde63fb1045eb2b40e9d55516c",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58784/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "17d3b643b15b1c3d077bdc3482d69effd0a6f8661a7c5e205ff681e0e87cc9e5",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58788/": {
+   "acuse": "2026-11-28T08:26:26+00:00",
+   "huella": "7ab10d1e4f71dba4d1d35b0086fe29b466b194de8785beb8963a2b2ea7e5a9b5",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58790/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "8135898ed41d4d0f6e6c06248f88ce9535b19aaa50d22f0b2190d69fe1e9c602",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58791/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "43808265bb35ef2794485c0b558ac40fd39131c237cc3e7513db2c38ef07b9be",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58795/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "0ca4c1b9d470d0eb0cec1bdf387437698d94221df95df88899b7e6fe6980d1bd",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58798/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "67d3a5cf98be30a921cec6a901bd626df7658ab47576a1c03fd5eeb91de7ce4c",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58803/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "0174ac20abc889e049104f732ccc20e2662b3db47751c00462455e3e5b978326",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58808/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "299b9f137cba5e22c6edc1a01ec47f9f4993abe88f582121d8a2a9c5cafad9db",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58809/": {
+   "acuse": "2026-11-28T08:26:27+00:00",
+   "huella": "fa67ba37850ef52bdaaf74c652948a36256872e1ef6083dcb902b440c0de3893",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58811/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "2ec5dd11311c33e66db35147c575a0c045e6bad7aa1af7812a569bec0fe4b074",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58812/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "4765e0fdf7ced6816fdc5ef17ba4925af90b718ba0a209c968a58df7f01d6a26",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58813/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "22e4017cdf2dd430709370c2672f76d48cfe11ee56e4cde78cbb77ee0134818a",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58814/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "66b9a6a2e6056371f1e457968c117ab506ff35a678054c5d838cf4544e288d19",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58815/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "e8a7886bf984f0e8af8efcf8e9726257baa05c6ec9c96040fcfb8269d70629f9",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58816/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "9887f9bb667707f00bcbfbf601f2a0ecec27293a7b5b13d4910b40521ea68d0d",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58817/": {
+   "acuse": "2026-11-28T08:26:28+00:00",
+   "huella": "e0008df1ca83c7ba7f3d22f35b2ab4cec74afc5cb2484e9693ec05c3ea21b4f9",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58818/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "c056189d0d11d9f2fe7193830877116f78b03a5d709fdb24f225521ec1e553fc",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58819/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "293cbadc37c6d915f04ab8afd34b3eda43b36906734e649b5b66d137937934ea",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58823/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "17ab2879b75c6815fcbf37635e00e71746901bed4901b5d2e0fed16ba3f95789",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58824/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "1627380eff8b52efde8f17e7a1d10c3d71ae37f3acb51939a81d615fbc02cf04",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58825/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "ffe6bee7d5929e36822dd9dc4ab20dc9502b3279617a5645a068ea1d4ed42e91",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58826/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "ccf85b53f812bf2b3ca05a653d08495e7e2aff5362f1d79c9b528d904e960f12",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58827/": {
+   "acuse": "2026-11-28T08:26:29+00:00",
+   "huella": "382fdff6321f3d0721f2f79732cb09e100b9f93e19c7c780e9fccf97078cfb72",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58828/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "eddf7c0cce62965d779e0c5df7cf2eb363572ae01691746e3ea5845bfdc27767",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58830/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "c91f627818c6ed458f229829a13112ce0b25c53e3c16d7be92bed96d5eb92375",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58833/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "cd84f1147d3ce5ca4ba48792982196615a170960ca50757ad5b756fdde809d5b",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58835/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "76f19ccbd4d12cfb7c64fcbd409d8094a643c6328fd7300a13080a7e86038ebb",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58836/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "9129d8a6104a882ebaa909e4fe43517a6f57f378a839abe683a7a0907dd878f5",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58838/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "a6cec117780437bc10154af932dd9b149a5e4ce94dc08d66ec43187206ae4fcc",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58839/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "d16d54f086e583941089c310843b8fd15891716d08b68023bacd753bd0199617",
+   "tipo": "URL_UPDATED"
+  },
+  "https://alertapublica.es/ofertas/tragsa-58840/": {
+   "acuse": "2026-11-28T08:26:30+00:00",
+   "huella": "0f4c27c24bbefb10b70da649b52e39fdb797cff3fe131aa3c970660304c342ff",
+   "tipo": "URL_UPDATED"
+  }
+ }
+}
