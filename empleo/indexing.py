@@ -32,7 +32,7 @@ PER_RUN = 150  # tope propio de cambios y altas por ejecución; las retiradas no
 MAX_FAILS = 3  # rechazos de la misma URL antes de apartarla hasta que cambie lo que hay que avisar
 ATTEMPTS = 3  # intentos por aviso ante un 429 temporal, un 5xx o un fallo de red
 TIMEOUT = 30  # segundos por petición
-BUDGET = 15 * 60  # segundos para todo el paso (el job entero tiene 30 minutos)
+BUDGET = 15 * 60  # segundos para todo el paso (el job entero tiene 45 minutos)
 PACIFIC = ZoneInfo("America/Los_Angeles")
 UNCERTAIN = "incierta"  # huella de un alta que quizá llegó a Google sin acuse: se repite o se retira
 
