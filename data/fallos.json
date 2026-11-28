@@ -1,31 +1,51 @@
 {
- "cesga": {
-  "desde": "2026-11-28T10:07:26+00:00",
+ "bsm": {
+  "desde": "2026-11-28T13:07:24+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "cofivacasa": {
+  "desde": "2026-11-28T13:07:24+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "correos": {
+  "desde": "2026-11-28T13:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
  "emasesa": {
   "desde": "2026-11-19T08:07:34+00:00",
-  "lecturas": 199,
+  "lecturas": 200,
   "resultado": "error"
  },
  "enusa": {
   "desde": "2026-11-28T10:07:26+00:00",
+  "lecturas": 2,
+  "resultado": "error"
+ },
+ "fgc": {
+  "desde": "2026-11-28T13:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "idis": {
-  "desde": "2026-11-28T10:07:26+00:00",
+ "iisgm": {
+  "desde": "2026-11-28T13:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "udc": {
-  "desde": "2026-11-28T10:07:26+00:00",
+ "navantia": {
+  "desde": "2026-11-28T13:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  },
- "uvigo": {
-  "desde": "2026-11-28T10:07:26+00:00",
+ "renfe": {
+  "desde": "2026-11-28T13:07:24+00:00",
+  "lecturas": 1,
+  "resultado": "error"
+ },
+ "sepides": {
+  "desde": "2026-11-28T13:07:24+00:00",
   "lecturas": 1,
   "resultado": "error"
  }
