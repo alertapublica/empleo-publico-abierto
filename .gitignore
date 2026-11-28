@@ -8,3 +8,4 @@ sondeo/
 .env.*
 .dev.vars
 .wrangler/
+jobposting.json

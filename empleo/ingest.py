@@ -27,7 +27,7 @@ EXTENSION_TRIES = 3  # lecturas al día de una ficha vencida de la que no se con
 # Lectura en paralelo por servidor (docs/plan-concurrencia.md). Plazos a revisar con lo que mida el registro.
 WORKERS = 4  # grupos a la vez; INGESTA_HILOS lo cambia (con 1, en serie)
 SOURCE_BUDGET = 10 * 60  # s por fuente
-TOTAL_BUDGET = 25 * 60  # s de toda la lectura: el job tiene 30 min y luego publica (≈20 s)
+TOTAL_BUDGET = 25 * 60  # s de toda la lectura: el job tiene 45 min: luego publica (≈20 s) y avisa a Google (indexing.BUDGET)
 TRACKED = ("title", "code", "source_title", "category", "url", "apply_url")
 # Desde cuándo falla cada fuente. Los fallos sueltos de servidores ajenos (522, resets, 403 puntuales) no
 # ponen la lectura en rojo; una fuente que lleva FAILING_TOO_LONG sin leerse, sí. Por tiempo y no por
